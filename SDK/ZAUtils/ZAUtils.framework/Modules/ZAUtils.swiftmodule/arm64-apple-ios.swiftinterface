@@ -1,0 +1,405 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 effective-4.2 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -Onone -module-name ZAUtils
+import AVFoundation
+import Foundation
+import SnapKit
+import Swift
+import UIKit
+@_exported import ZAUtils
+extension Array {
+  public mutating func removeElements(_ filter: (Element) -> Swift.Bool)
+}
+extension Array where Element : Swift.Equatable {
+  public func contains(_ element: Element) -> Swift.Bool
+  public func index(of element: Element) -> Swift.Int?
+  public mutating func remove(element: Element)
+}
+extension Bool {
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension CGFloat {
+  public var quarter: CoreGraphics.CGFloat {
+    get
+  }
+  public var half: CoreGraphics.CGFloat {
+    get
+  }
+  public var Threequarter: CoreGraphics.CGFloat {
+    get
+  }
+}
+extension CGFloat {
+  public func rounded(toPlaces places: Swift.Int) -> CoreGraphics.CGFloat
+}
+extension Data {
+  public func write(fileName: Swift.String, appendIntermediateDir path: Swift.String? = nil) throws -> Foundation.URL?
+  public var mbSize: CoreGraphics.CGFloat {
+    get
+  }
+  public var sizeWithUnit: Swift.String {
+    get
+  }
+}
+extension Date {
+  public static func today() -> Foundation.Date
+  public func next(_ weekday: Foundation.Date.Weekday, considerToday: Swift.Bool = false) -> Foundation.Date
+  public func previous(_ weekday: Foundation.Date.Weekday, considerToday: Swift.Bool = false) -> Foundation.Date
+  public func get(_ direction: Foundation.Date.SearchDirection, _ weekDay: Foundation.Date.Weekday, considerToday consider: Swift.Bool = false) -> Foundation.Date
+}
+extension Date {
+  public func getWeekDaysInEnglish() -> [Swift.String]
+  public enum Weekday : Swift.String {
+    case monday
+    case tuesday
+    case wednesday
+    case thursday
+    case friday
+    case saturday
+    case sunday
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum SearchDirection {
+    case Next
+    case Previous
+    public static func == (a: Foundation.Date.SearchDirection, b: Foundation.Date.SearchDirection) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+}
+extension Date {
+  public static func string(for date: Foundation.Date, format: Swift.String? = nil) -> Swift.String
+  public func string(format: Swift.String? = nil) -> Swift.String
+  public static func date(for string: Swift.String, format: Swift.String) -> Foundation.Date?
+}
+extension Date {
+  public func getString(mode: UIKit.UIDatePicker.Mode = .date, timeZone: Foundation.TimeZone = TimeZone.current) -> Swift.String
+  public func getString(format: Swift.String) -> Swift.String
+  public func at_getLocalizedString(_ mode: UIKit.UIDatePicker.Mode = .date) -> Swift.String
+}
+extension Date {
+  public var millisecondsSince1970: Swift.Int {
+    get
+  }
+  public var randomID: Swift.String {
+    get
+  }
+}
+extension Date {
+  public func isSmallerThanGivenDateByDay(_ date: Foundation.Date) -> Swift.Bool
+  public func isEqualDay(_ date: Foundation.Date) -> Swift.Bool
+  public func isSmallerThanByMinutes(_ date: Foundation.Date) -> Swift.Bool
+}
+public typealias Email = Swift.String
+extension FileManager {
+  public static var documentDirURL: Foundation.URL? {
+    get
+  }
+}
+extension Int {
+  public var cgfloat: CoreGraphics.CGFloat {
+    get
+  }
+}
+public protocol CommonIntUtility {
+  var isNegative: Swift.Bool { get }
+  var isZero: Swift.Bool { get }
+  var string: Swift.String { get }
+}
+extension CommonIntUtility where Self : Swift.SignedInteger {
+  public var string: Swift.String {
+    get
+  }
+  public func string(maximumNumber: Swift.Int) -> Swift.String
+  public var isNegative: Swift.Bool {
+    get
+  }
+  public var isZero: Swift.Bool {
+    get
+  }
+  public var convertFileSizeWithUnit: Swift.String {
+    get
+  }
+}
+extension Int : ZAUtils.CommonIntUtility {
+}
+extension Int32 : ZAUtils.CommonIntUtility {
+}
+extension Int64 : ZAUtils.CommonIntUtility {
+}
+extension Int16 : ZAUtils.CommonIntUtility {
+}
+extension NSObject {
+  public static func performInMainThread(_ block: @escaping () -> Swift.Void)
+  public func performInMainThread(_ block: @escaping () -> Swift.Void)
+  public enum AssistImpactFeedbackStyle {
+    case medium
+    case high
+    case low
+    case success
+    case warning
+    case error
+    public static func == (a: ObjectiveC.NSObject.AssistImpactFeedbackStyle, b: ObjectiveC.NSObject.AssistImpactFeedbackStyle) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public func makeTapTick(_ style: ObjectiveC.NSObject.AssistImpactFeedbackStyle)
+  public static func makeTapTick(_ style: ObjectiveC.NSObject.AssistImpactFeedbackStyle)
+}
+postfix operator |-|
+postfix operator |=|
+infix operator |-| : DefaultPrecedence
+infix operator |=| : DefaultPrecedence
+extension UIView {
+  postfix public static func |-| (argument: UIKit.UIView)
+  public static func |-| (lhs: UIKit.UIView, rhs: UIKit.UIView)
+  public static func |-| (lhs: UIKit.UIView, padding: CoreGraphics.CGFloat)
+  postfix public static func |=| (argument: UIKit.UIView)
+  public static func |=| (lhs: UIKit.UIView, rhs: UIKit.UIView)
+}
+extension String {
+  public var isEmailID: Swift.Bool {
+    get
+  }
+  public var intValue: Swift.Int {
+    get
+  }
+  public var floatValue: CoreGraphics.CGFloat {
+    get
+  }
+  public func subString(fromIndex: Swift.Int) -> Swift.String
+  public func subString(toIndex: Swift.Int) -> Swift.String
+  public static func < (lhs: Swift.String, rhs: Swift.Int) -> Swift.String
+  public func copyInClipboard()
+  public var utf8Data: Foundation.Data? {
+    get
+  }
+  public var isoLatin1Data: Foundation.Data? {
+    get
+  }
+  public var asciiData: Foundation.Data? {
+    get
+  }
+  public func data(encode: Swift.String.Encoding) -> Foundation.Data?
+  public var splitByNewLine: [Swift.String] {
+    get
+  }
+  public var splitBySpace: [Swift.String] {
+    get
+  }
+}
+extension TimeZone {
+  public func hoursFromGMT() -> Swift.String
+  public func hoursFromGMTWithSign() -> Swift.String
+}
+extension UIBarButtonItem {
+  public var frame: CoreGraphics.CGRect {
+    get
+  }
+}
+extension UIButton {
+  @objc @IBInspectable dynamic public var disabledTitle: Swift.String {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable dynamic public var disabledTitleColor: UIKit.UIColor {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable dynamic public var paddingX: CoreGraphics.CGFloat {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable dynamic public var paddingY: CoreGraphics.CGFloat {
+    @objc get
+    @objc set(newValue)
+  }
+}
+extension UIButton {
+  public func setDefaultTitle(_ title: Swift.String, controlState states: [UIKit.UIControl.State] = [.normal, .highlighted])
+  public func setDefaultAttributtedTitle(_ title: Foundation.NSAttributedString, controlState states: [UIKit.UIControl.State] = [.normal, .highlighted])
+}
+extension UIColor {
+  public convenience init(red: Swift.Int, green: Swift.Int, blue: Swift.Int)
+  public convenience init(rgb: Swift.Int)
+}
+extension UIDevice {
+  public var isIPad: Swift.Bool {
+    get
+  }
+  public var isHighResIPad: Swift.Bool {
+    get
+  }
+  public var modelName: Swift.String {
+    get
+  }
+}
+extension UIDevice {
+  public var isIPhone5: Swift.Bool {
+    get
+  }
+  public var isMaxOrPlusDevice: Swift.Bool {
+    get
+  }
+  public enum ScreenType : Swift.String {
+    case iPhone4_4S
+    case iPhones_5_5s_5c_SE
+    case iPhones_6_6s_7_8
+    case iPhones_6Plus_6sPlus_7Plus_8Plus
+    case iPhoneXR
+    case iPhoneX_iPhoneXS
+    case iPhoneXSMax
+    case unknown
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var screenType: UIKit.UIDevice.ScreenType {
+    get
+  }
+}
+extension UIScreen {
+  public var screenSizeBasedOnOrientaion: CoreGraphics.CGSize {
+    get
+  }
+}
+extension UIImage {
+  public convenience init?(color: UIKit.UIColor, size: CoreGraphics.CGSize = CGSize(width: 1, height: 1))
+}
+extension UINavigationController {
+  public var prefersLargeTitles: Swift.Bool {
+    get
+    set(newValue)
+  }
+  public func makeTransparantNavigationBar(_ flag: Swift.Bool)
+  public func makeColorNavigationBar(color: UIKit.UIColor, hideShadowImage: Swift.Bool = true)
+}
+extension UIScrollView {
+  public func didScrollToEnd() -> Swift.Bool
+  public func tryingToViewMore(_ range: CoreGraphics.CGFloat = 50) -> Swift.Bool
+}
+extension UIScrollView {
+  public enum ATViewSide {
+    case left
+    case right
+    case bottom
+    case top
+    public static func == (a: UIKit.UIScrollView.ATViewSide, b: UIKit.UIScrollView.ATViewSide) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public func contentSize(withSafeArea side: UIKit.UIScrollView.ATViewSide) -> CoreGraphics.CGSize
+}
+extension UISearchBar {
+  public var at_searchTextField: UIKit.UITextField? {
+    get
+  }
+}
+extension UITableView {
+  public func adjustTableViewHeaderFrameIfNeeded()
+}
+extension UITableView {
+  public func scrollToLastIndexPath()
+}
+extension UITableView {
+  public var isTableEmpty: Swift.Bool {
+    get
+  }
+}
+extension UITableView {
+  public func addNoDataView(noDataView: UIKit.UIView)
+  public func removenoDataView()
+}
+extension UITextField {
+  public var leftPading: CoreGraphics.CGFloat {
+    get
+    set(newValue)
+  }
+  public var placeHolderColor: UIKit.UIColor {
+    get
+    set(newValue)
+  }
+}
+extension UIView {
+  public func makeCornerRadius(with value: CoreGraphics.CGFloat)
+  public func makeBlendEdge(withPoint: CoreGraphics.CGFloat = 06)
+  public func isBlendEdgeView(withPoint: CoreGraphics.CGFloat = 06) -> Swift.Bool
+  public var isCircle: Swift.Bool {
+    get
+    set(newValue)
+  }
+  public var isBlendEdge: Swift.Bool {
+    get
+    set(newValue)
+  }
+  public func layoutIfNeededWithAnimation()
+}
+extension UIView {
+  public var safeAreaInsets_Below11Also: UIKit.UIEdgeInsets {
+    get
+  }
+}
+extension UIView {
+  @objc @IBInspectable dynamic public var atCornerRadius: CoreGraphics.CGFloat {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable dynamic public var atBorderColor: UIKit.UIColor? {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable dynamic public var borderWidth: CoreGraphics.CGFloat {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable dynamic public var shadowRadius: CoreGraphics.CGFloat {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable dynamic public var shadowColor: UIKit.UIColor? {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable dynamic public var shadowOpacity: Swift.Float {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable dynamic public var shadowOffset: CoreGraphics.CGSize {
+    @objc get
+    @objc set(newValue)
+  }
+}
+extension UIViewController {
+  public func addChildren(viewController: UIKit.UIViewController, containerView: UIKit.UIView? = nil, isSafeArea: Swift.Bool = false)
+}
+extension UIPopoverArrowDirection {
+  public func defaultSourceRect(from view: UIKit.UIView) -> CoreGraphics.CGRect?
+  public var isVerticalDirection: Swift.Bool {
+    get
+  }
+}
+extension UIViewController {
+  @objc dynamic public func openShareSheet(_ data: [Any], popFromView view: UIKit.UIView, completionHandler completionBlock: ((Swift.Bool) -> Swift.Void)? = nil)
+  public func prepareAsPopoverController(from view: UIKit.UIView, soruceRect: CoreGraphics.CGRect?, preferedSize contentSize: CoreGraphics.CGSize = .zero, permittedArrowDirections directions: UIKit.UIPopoverArrowDirection = .down)
+  public func prepareAsPopoverController(from barButton: UIKit.UIBarButtonItem, soruceRect: CoreGraphics.CGRect?, preferedSize contentSize: CoreGraphics.CGSize = .zero, permittedArrowDirections directions: UIKit.UIPopoverArrowDirection = .down)
+  public func dismissPopoverIfExist()
+}
+extension UIViewController : UIKit.UIPopoverPresentationControllerDelegate {
+  @objc dynamic open func popoverPresentationController(_ popoverPresentationController: UIKit.UIPopoverPresentationController, willRepositionPopoverTo rect: Swift.UnsafeMutablePointer<CoreGraphics.CGRect>, in view: Swift.AutoreleasingUnsafeMutablePointer<UIKit.UIView>)
+  @objc dynamic open func prepareForPopoverPresentation(_ popoverPresentationController: UIKit.UIPopoverPresentationController)
+  @objc dynamic open func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIKit.UIPopoverPresentationController)
+}

@@ -1,0 +1,52 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target arm64-apple-ios8.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name ZAssistKit
+import Foundation
+import Reachability
+import Starscream
+import Swift
+import UIKit
+@_exported import ZAssistKit
+public enum AssistSocketErrorState : Swift.Error {
+  case nointernet
+  case writeTimeoutError
+  case invalidSSLError
+  case compressionError
+  case outputStreamWriteError
+  case protocolError
+  case upgradeError
+  case closeError
+  case connectionTimeOut
+  public static func == (a: ZAssistKit.AssistSocketErrorState, b: ZAssistKit.AssistSocketErrorState) -> Swift.Bool
+  public var hashValue: Swift.Int {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+}
+public protocol AssistSocketProtocol {
+  func didSocketConnected()
+  func didSocketDisconnected(_ error: Swift.Error?)
+  func didReceive(_ data: Foundation.Data)
+  func didReceive(_ string: Swift.String)
+}
+public class SocketHandler {
+  public var socket: Starscream.WebSocket?
+  public var delegate: ZAssistKit.AssistSocketProtocol?
+  public var timeOut: Swift.Double
+  public var reachability: Reachability.Reachability?
+  public var gateWayUrlRequest: Foundation.URLRequest!
+  public init(_ url: Foundation.URLRequest, delegate: ZAssistKit.AssistSocketProtocol?)
+  public var disableSSLCertValidation: Swift.Bool {
+    get
+    set(value)
+  }
+  public var isConnected: Swift.Bool {
+    get
+  }
+  public func start()
+  public func reset()
+  public func write(_ string: Swift.String?)
+  public func write(_ data: Foundation.Data?)
+  public func disconnect()
+  @objc deinit
+}

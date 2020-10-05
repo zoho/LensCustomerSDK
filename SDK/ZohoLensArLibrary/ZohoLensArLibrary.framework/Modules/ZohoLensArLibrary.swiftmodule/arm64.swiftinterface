@@ -1,0 +1,77 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 effective-4.1.50 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -Onone -module-name ZohoLensArLibrary
+import ARKit
+import Foundation
+import SceneKit
+import Swift
+@_exported import ZohoLensArLibrary
+public protocol ARViewDelegate : AnyObject {
+  func didChanged(_ size: CoreGraphics.CGSize)
+  func didChange(tracking state: ARKit.ARCamera.TrackingState)
+  func onVideoFrameUpdate(frameBuffer: CoreVideo.CVPixelBuffer, rotation: Swift.Int, timestamp: Swift.Int64)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ARRenderView : UIKit.UIView {
+  @objc dynamic public convenience init()
+  public convenience init(arDelegate: ZohoLensArLibrary.ARViewDelegate? = nil)
+  @objc public func resumeARSCNViewSession(isSessionStart: Swift.Bool = true, callWithDelay: Swift.Bool = false)
+  @objc public func pauseARSCNViewSession()
+  public func snapshot() -> UIKit.UIImage
+  @objc deinit
+}
+extension ARRenderView {
+  public func drawLine(withId id: Swift.String, withLineColor color: UIKit.UIColor = UIColor(red: 0.129, green: 0.639, blue: 0.356, alpha: 1), atPoint point: CoreGraphics.CGPoint)
+  public func placeArrow(atPoint originalPoint: CoreGraphics.CGPoint, withArrowColor arrowColor: UIKit.UIColor = UIColor(red: 0.129, green: 0.639, blue: 0.356, alpha: 1), isCustomer: Swift.Bool = false)
+  public func setLineWidth(widthInMetre width: Swift.Float)
+  public func drawRectangle(withId id: Swift.String, color: UIKit.UIColor = UIColor(red: 0.129, green: 0.639, blue: 0.356, alpha: 1), startPoint: CoreGraphics.CGPoint, endPoint: CoreGraphics.CGPoint)
+  public func drawEllipse(withId id: Swift.String, color: UIKit.UIColor = UIColor(red: 0.129, green: 0.639, blue: 0.356, alpha: 1), startPoint: CoreGraphics.CGPoint, endPoint: CoreGraphics.CGPoint)
+}
+extension ARRenderView {
+  public func renderPointCloud(_ flag: Swift.Bool, callback: ((Swift.Bool) -> Swift.Void)? = nil)
+  public func isRenderingPointCloud() -> Swift.Bool
+  public var isHDStreaming: Swift.Bool {
+    get
+  }
+  public func setHighResolution(_ flag: Swift.Bool, callback: ((Swift.Bool) -> Swift.Void)? = nil)
+  @available(*, deprecated, renamed: "getCustomerAnchorCount")
+  public func getAnchorCount() -> Swift.Int
+  public func getCustomerAnchorCount() -> Swift.Int
+  public func getTechnicianAnchorCount() -> Swift.Int
+  public func getMaxAnchorCount() -> Swift.Int
+  @available(*, deprecated, renamed: "removeFirstCustomerAnchor")
+  public func removeFirstAnchor(callback: ((Swift.Int) -> Swift.Void)? = nil)
+  public func removeFirstCustomerAnchor(callback: ((Swift.Int) -> Swift.Void)? = nil)
+  @available(*, deprecated, renamed: "removeLastCustomerAnchor")
+  public func removeLastAnchor(callback: ((Swift.Int) -> Swift.Void)? = nil)
+  public func removeLastCustomerAnchor(callback: ((Swift.Int) -> Swift.Void)? = nil)
+  public func removeLastTechnicianAnchor(callback: ((Swift.Int) -> Swift.Void)? = nil)
+  @available(*, deprecated, renamed: "removeAllCustomerAnchors")
+  public func removeAllAnchors(callback: ((Swift.Int) -> Swift.Void)? = nil)
+  public func removeAllCustomerAnchors(callback: ((Swift.Int) -> Swift.Void)? = nil)
+  public func removeAllTechnicianAnchors(callback: ((Swift.Int) -> Swift.Void)? = nil)
+}
+extension ARRenderView {
+  public class func checkARKitCompatibility() -> Swift.Bool
+}
+extension ARRenderView : ARKit.ARSessionDelegate {
+  @objc dynamic public func session(_ session: ARKit.ARSession, cameraDidChangeTrackingState camera: ARKit.ARCamera)
+  @objc dynamic public func session(_ session: ARKit.ARSession, didUpdate frame: ARKit.ARFrame)
+}
+public class CustomCircularArray<E> {
+  public init(ofSize size: Swift.Int)
+  public func setOverwriteCallback(_ callback: ((E, Swift.Int) -> ())?)
+  public var count: Swift.Int {
+    get
+  }
+  public var isEmpty: Swift.Bool {
+    get
+  }
+  public func clear()
+  public func get(index: Swift.Int) -> E?
+  public func popLast() -> E?
+  public func popFirst() -> E?
+  public func push(element: E)
+  public func nextIndex() -> Swift.Int
+  public func getMaxElementCount() -> Swift.Int
+  @objc deinit
+}

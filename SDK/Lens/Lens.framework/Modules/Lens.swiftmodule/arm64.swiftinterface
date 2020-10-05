@@ -1,0 +1,338 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3 (swiftlang-1200.0.29.2 clang-1200.0.30.1)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name Lens
+import ARKit
+import AVFoundation
+import CoreGraphics
+import Foundation
+@_exported import Lens
+import Swift
+import UIKit
+import WebRTC
+import ZAUtils
+import ZAssistKit
+import ZohoLensArLibrary
+public protocol OtherActionProtocol : AnyObject {
+  func onTechnicianPerform(action: Lens.TechnicianAction)
+  var isCustomerMuteVideo: Swift.Bool { get }
+}
+public protocol AnnotaionDelegate : AnyObject {
+  func onFreezeSuccess(prefered orienation: UIKit.UIInterfaceOrientationMask)
+  func onFreezeFailure()
+  func onUnfreezeImage()
+  func didReceiveAnnotation(input: Lens.DrawingInput?, isClear: Swift.Bool)
+  @available(iOS 11.0, *)
+  func didChangeInAR(tracking status: ARKit.ARCamera.TrackingState)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AudioSessionHandler : ObjectiveC.NSObject {
+  weak public var delegate: Lens.AudioSessionProtocol?
+  public convenience init(with delegate: Lens.AudioSessionProtocol)
+  public func set(_ port: AVFoundation.AVAudioSession.PortOverride, completion: @escaping (Swift.Bool) -> ())
+  @objc deinit
+}
+extension AudioSessionHandler : WebRTC.RTCAudioSessionDelegate {
+  @objc dynamic public func audioSessionDidChangeRoute(_ session: WebRTC.RTCAudioSession, reason: AVFoundation.AVAudioSession.RouteChangeReason, previousRoute: AVFoundation.AVAudioSessionRouteDescription)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class BaseParser : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class Chat : Lens.BaseParser {
+  public var clientID: Foundation.NSNumber?
+  final public let message: Swift.String?
+  public var participant: Lens.Participant?
+  final public let date: Foundation.Date
+  public init(with chatMsg: Swift.String?)
+  @objc deinit
+  @objc override dynamic public init()
+}
+public enum SessionValidationResponse {
+  case success(Lens.ConnectionParam)
+  case error(Swift.Error?)
+  public enum SessionValidationError : Swift.Error {
+    case invalidKey
+    case invalidLicence
+    case sessionExpired
+    case unknowError
+    case internalError
+    case not_allowed
+    case feature_not_available
+    case authentication_failed
+    case param_missing
+    case invalid_encapi_key
+    public static func == (a: Lens.SessionValidationResponse.SessionValidationError, b: Lens.SessionValidationResponse.SessionValidationError) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+}
+public enum AssisLensStates {
+  case socketConnected
+  case localPeerHandShakeInitated
+  case localPeerHandShakeDone
+  case remotePeerHandshakeInitated
+  case remotePeerHandshakeDone
+  case connectionCompleted
+  case disconnected(Swift.Error?)
+  public enum AssistLensDisconnectState : Swift.Error {
+    case noInternet
+    case customerEndSession
+    case technicianEndSession
+    case timeout
+    case invalid_client
+    case invalid_key
+    case session_expired
+    case localPeerHandShakeError
+    case remotePeerHandShakeError
+    case serverEndedSession
+    public static func == (a: Lens.AssisLensStates.AssistLensDisconnectState, b: Lens.AssisLensStates.AssistLensDisconnectState) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public enum SessionValidation : Swift.String {
+  case valid_session
+  case invalid_session
+  case invalid_client
+  case session_expired
+  case duplicate_client
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct ConnectionParam : Swift.Decodable {
+  public let key: Swift.String
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum TechnicianAction : Swift.String {
+  case snapshot_taken
+  case video_pause
+  case video_play
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension Data {
+  public var utf8String: Swift.String? {
+    get
+  }
+  public var asciiString: Swift.String? {
+    get
+  }
+  public var isoLatin1: Swift.String? {
+    get
+  }
+  public var jsonData: Lens.JSON? {
+    get
+  }
+}
+extension Dictionary {
+  public var jsonData: Foundation.Data? {
+    get
+  }
+}
+public struct DrawingInput {
+  public enum DrawShape : Swift.String {
+    case ellipse
+    case pencil
+    case rectangle
+    case arrow
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var id: Swift.String
+  public var annotationType: Lens.DrawingInput.DrawShape
+  public var storkeColor: UIKit.UIColor
+  public var start: CoreGraphics.CGPoint!
+  public var end: CoreGraphics.CGPoint!
+  public var fillColor: UIKit.UIColor
+  public enum FreeStyleState {
+    case start
+    case move
+    case end
+    public static func == (a: Lens.DrawingInput.FreeStyleState, b: Lens.DrawingInput.FreeStyleState) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public var freeStyleState: Lens.DrawingInput.FreeStyleState?
+  public var size: CoreGraphics.CGSize {
+    get
+  }
+  public var frame: CoreGraphics.CGRect {
+    get
+    set(newValue)
+  }
+  public var line_width: CoreGraphics.CGFloat
+}
+public class DrawingShapes {
+  final public let superShapeLayer: QuartzCore.CAShapeLayer
+  final public let view: UIKit.UIView
+  public init(with view: UIKit.UIView, within rect: CoreGraphics.CGRect)
+  public func draw(with drawParm: Lens.DrawingInput, state: Lens.DrawingInput.FreeStyleState = .start, lineDashPattern: [Foundation.NSNumber]? = nil)
+  public func clearPath(for id: Swift.String)
+  public func clearAll()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class File : Swift.Equatable {
+  public static func == (lhs: Lens.File, rhs: Lens.File) -> Swift.Bool
+  final public let chunkSize: Swift.Int
+  final public let totalSize: Swift.Int
+  final public let fileName: Swift.String
+  final public let fileID: Swift.String
+  public var isUploadCompleted: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class FreezeImageParser : Lens.BaseParser {
+  final public let imageString: Swift.String?
+  final public let total_chunks: Foundation.NSNumber?
+  final public let total_image_size: Foundation.NSNumber?
+  final public let img_id: Foundation.NSNumber?
+  final public let chunk_no: Foundation.NSNumber?
+  @objc deinit
+  @objc override dynamic public init()
+}
+public typealias JSON = [Swift.String : Any]
+public typealias JSONKey = Swift.String
+public struct JsonParser {
+  public var json: Lens.JSON
+  public init?(json: Lens.JSON?)
+  public subscript<DataType>(key: Lens.JSONKey) -> DataType? {
+    get
+  }
+  public func jsonParser(forKey key: Lens.JSONKey) -> Lens.JsonParser?
+  public func jsonParsers(forKey key: Lens.JSONKey) -> [Lens.JsonParser]?
+}
+@_hasMissingDesignatedInitializers public class Lens {
+  weak public var lensSignallingDelegate: Lens.LensSignallingProtocol?
+  weak public var chatDelegate: Lens.ChatProtocol?
+  public var participant: [Lens.Participant] {
+    get
+  }
+  public var sessionKey: Swift.String {
+    get
+  }
+  public var clientID: Swift.String? {
+    get
+  }
+  public var sys_clientID: Swift.String? {
+    get
+  }
+  public var displayName: Swift.String? {
+    get
+  }
+  public var customerEmail: Swift.String {
+    get
+  }
+  public var connectionParam: Lens.ConnectionParam {
+    get
+  }
+  @objc deinit
+}
+extension Lens {
+  @discardableResult
+  public func send(_ chat: Lens.Chat) -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers public class LensCustomer : Lens.Lens {
+  weak public var annotationDelegate: Lens.AnnotaionDelegate?
+  weak public var otherActionDelegate: Lens.OtherActionProtocol?
+  public var talkRenderView: UIKit.UIView? {
+    get
+  }
+  public var arRenderView: ZohoLensArLibrary.ARRenderView? {
+    get
+  }
+  public var videoResolution: CoreGraphics.CGSize?
+  public init?(connectionParam: Lens.ConnectionParam, name: Swift.String)
+  public static func validateSession(sessionKey key: Swift.String, base: Foundation.URL, token: Swift.String, completion: @escaping (Lens.SessionValidationResponse) -> Swift.Void)
+  public func startSession(inArMode arMode: Swift.Bool = false)
+  @objc deinit
+}
+extension LensCustomer {
+  @discardableResult
+  public func muteAudio() -> Swift.Bool
+  @discardableResult
+  public func unmuteAudio() -> Swift.Bool
+  @discardableResult
+  public func muteVideo() -> Swift.Bool
+  @discardableResult
+  public func unmuteVideo() -> Swift.Bool
+  public func closeRoom()
+}
+@objc @_hasMissingDesignatedInitializers public class Participant : Lens.BaseParser {
+  public enum Roll : Swift.String {
+    case technician
+    case customer
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Status : Swift.String {
+    case UP
+    case DOWN
+    public typealias RawValue = Swift.String
+    public init?(rawValue: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var clientId: Foundation.NSNumber?
+  public var roll: Lens.Participant.Roll?
+  public var email: Swift.String?
+  public var status: Lens.Participant.Status?
+  public var name: Swift.String? {
+    get
+  }
+  public var app_version: Swift.String?
+  public static func == (lhs: Lens.Participant, rhs: Lens.Participant) -> Swift.Bool
+  @objc deinit
+  @objc override dynamic public init()
+}
+public protocol AudioSessionProtocol : AnyObject {
+  func didChangeRoute(_ audioDescription: AVFoundation.AVAudioSessionRouteDescription, reason: AVFoundation.AVAudioSession.RouteChangeReason)
+}
+public protocol LensSignallingProtocol : AnyObject {
+  func renderingView(_ view: UIKit.UIView?)
+  func didChangeLensConnectionState(state: Lens.AssisLensStates)
+  func didChange(_ participant: Lens.Participant)
+  func onSessionValidationDone()
+}
+public protocol ChatProtocol : AnyObject {
+  func didReceive(_ chat: Lens.Chat)
+}
+public class ResolutionHandler {
+  public var videoFrame: CoreGraphics.CGRect!
+  public var videoRes: CoreGraphics.CGSize! {
+    get
+    set(value)
+  }
+  public var viewRect: CoreGraphics.CGRect
+  public init(fromView rect: CoreGraphics.CGRect)
+  public func getVideoFrame(for input: Lens.DrawingInput) -> CoreGraphics.CGRect
+  @objc deinit
+}
+public struct RoomCredential {
+}
+public struct TalkSettings {
+}

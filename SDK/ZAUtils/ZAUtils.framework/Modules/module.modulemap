@@ -1,0 +1,11 @@
+framework module ZAUtils {
+  umbrella header "ZAUtils-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module ZAUtils.Swift {
+    header "ZAUtils-Swift.h"
+    requires objc
+}
