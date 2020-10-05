@@ -50,19 +50,24 @@ Pod::Spec.new do |s|
   
   s.frameworks = 'UIKit','Foundation', 'CoreMedia'
 
-  s.source       = { :git => "https://git.csez.zohocorpin.com/igarage/ZohoAssistLens.git", :branch => 'master'}
+  s.source       = { :git => "https://github.com/zoho/LensCustomerSDK.git", :branch => 'master'}
 
   s.dependency 'GoogleWebRTC', "1.1.28913"
   s.dependency 'SnapKit', '5.0.1'
   s.dependency 'ReachabilitySwift', '4.3.0'
 
+
   s.vendored_frameworks = 'SDK/**/*.framework'
 
   s.module_name  = "LensSDK"
-
+  
   s.requires_arc = true
 
-  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/SDK/zlib' }
-
+  # s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2', 'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/CommonCryptoSwift/Sources/CCommonCrypto' }
+  # s.preserve_paths = 'Sources/CCommonCrypto/module.modulemap'
+#  live path
+    s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/LensSDK/SDK/Starscream/Starscream.framework/zlib' }
+#dev
+#   s.xcconfig = { 'HEADER_SEARCH_PATHS' => '${PODS_ROOT}/../../SDK/Starscream/Starscream.framework/zlib' }
 
 end
