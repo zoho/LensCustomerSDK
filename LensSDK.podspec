@@ -66,8 +66,8 @@ Pod::Spec.new do |s|
   # s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2', 'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/CommonCryptoSwift/Sources/CCommonCrypto' }
   # s.preserve_paths = 'Sources/CCommonCrypto/module.modulemap'
 #  live path
-    s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/LensSDK/SDK/Starscream/Starscream.framework/zlib' }
+    # s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(PODS_ROOT)/LensSDK/SDK/Starscream/Starscream.framework/zlib' }
 #dev
-#   s.xcconfig = { 'HEADER_SEARCH_PATHS' => '${PODS_ROOT}/../../SDK/Starscream/Starscream.framework/zlib' }
+#  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '${PODS_ROOT}/../../SDK/Starscream/Starscream.framework/zlib' }
 
 end
