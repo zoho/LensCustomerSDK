@@ -4,4 +4,4 @@ The Zoho Lens Software Development Kit (SDK) for iOS will help you build a custo
 
 The software development kit is a fully swiftified project. 
 
-Go through the [documentation](https://www.zoho.com/lens/resources/mobilesdk/ios/) to get started.
+Go through the [documentation](https://www.zoho.com/lens/resources/mobilesdk/ios) to get started.

@@ -184,7 +184,7 @@ public struct DrawingInput {
 }
 public class DrawingShapes {
   final public let superShapeLayer: QuartzCore.CAShapeLayer
-  final public let view: UIKit.UIView
+  weak public var view: UIKit.UIView?
   public init(with view: UIKit.UIView, within rect: CoreGraphics.CGRect)
   public func draw(with drawParm: Lens.DrawingInput, state: Lens.DrawingInput.FreeStyleState = .start, lineDashPattern: [Foundation.NSNumber]? = nil)
   public func clearPath(for id: Swift.String)
@@ -262,7 +262,7 @@ extension Lens {
     get
   }
   public var videoResolution: CoreGraphics.CGSize?
-  public init?(connectionParam: Lens.ConnectionParam, name: Swift.String)
+  public init?(connectionParam: Lens.ConnectionParam, customer email: Swift.String = "Guest")
   public static func validateSession(sessionKey key: Swift.String, base: Foundation.URL, token: Swift.String, completion: @escaping (Lens.SessionValidationResponse) -> Swift.Void)
   public func startSession(inArMode arMode: Swift.Bool = false)
   @objc deinit

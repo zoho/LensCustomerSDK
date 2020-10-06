@@ -20,8 +20,10 @@ class StreamingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        lensObject = LensCustomer.init(connectionParam: self.connectionParam, name: "email@example.com")
+        guard let lens = LensCustomer.init(connectionParam: self.connectionParam) else{
+            return
+        }
+        lensObject = lens
         lensObject?.startSession(inArMode: ARRenderView.checkARKitCompatibility())
         lensObject?.lensSignallingDelegate = self
         
