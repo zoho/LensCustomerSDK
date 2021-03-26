@@ -25,7 +25,6 @@ import ZohoLensArLibrary
   public init(connectionParam: Lens.CustomerSessionParams, name: Swift.String, email: Swift.String)
   public func startSession(inArMode arMode: Swift.Bool = false)
   public static func validateSession(sessionKey key: Swift.String, token: Swift.String, base: Foundation.URL, completion: @escaping (Lens.SessionValidationResponse) -> Swift.Void)
-  public static func validateSession(sessionKey key: Swift.String, base: Foundation.URL? = nil, completion: @escaping (Lens.SessionValidationResponse) -> Swift.Void)
   @objc deinit
 }
 extension LensCustomer {
