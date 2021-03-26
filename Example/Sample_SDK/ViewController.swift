@@ -11,7 +11,7 @@ import Lens
 class ViewController: UIViewController {
 
     @IBOutlet weak var sessionID: UITextField!
-    var param:ConnectionParam!
+    var param:CustomerSessionParams!
     override func viewDidLoad() {
         super.viewDidLoad()
         sessionID.text = "932987451"
@@ -21,10 +21,10 @@ class ViewController: UIViewController {
         
         if let id = sessionID.text {
             let token = "abc_123"
-            LensCustomer.validateSession(sessionKey: id, base: URL.init(string: "https://lens.zoho.com")!, token:token) { (validation) in
+            LensCustomer.validateSession(sessionKey: id, token: token, base: URL.init(string: "https://lens.zoho.com")!) { (validation) in
                 
                 switch validation {
-                case .success(let param):
+                case .validCustomer(let param):
                     //
                     self.param = param
                     DispatchQueue.main.async {
@@ -32,6 +32,7 @@ class ViewController: UIViewController {
                     }
                 case .error(let error):
                     print(error!)
+                default:break
                 }
                 
             }

@@ -13,16 +13,14 @@ import ZAUtils
 class StreamingViewController: UIViewController {
 
     @IBOutlet weak var exitButton: UIButton!
-    var connectionParam:ConnectionParam!
+    var connectionParam:CustomerSessionParams!
     var lensObject:LensCustomer?
     var arView:ARRenderView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        guard let lens = LensCustomer.init(connectionParam: self.connectionParam) else{
-            return
-        }
+        let lens = LensCustomer.init(connectionParam: self.connectionParam, name: "Mr.Abc", email: "abcd@example.com")
         lensObject = lens
         lensObject?.startSession(inArMode: ARRenderView.checkARKitCompatibility())
         lensObject?.lensSignallingDelegate = self
@@ -54,6 +52,14 @@ class StreamingViewController: UIViewController {
 }
 
 extension StreamingViewController:LensSignallingProtocol {
+    func onTechnicianPerform(draw shape: DrawingInput.DrawShape) {
+        
+    }
+    
+    func conference(type: ConferenceType) {
+        
+    }
+    
     
     func didChange(_ participant: Participant) {
         
