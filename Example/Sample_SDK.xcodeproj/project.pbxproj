@@ -105,7 +105,7 @@
 				C24E1C9B24B5CF9100ACE8D3 /* Sources */,
 				C24E1C9C24B5CF9100ACE8D3 /* Frameworks */,
 				C24E1C9D24B5CF9100ACE8D3 /* Resources */,
-				E862DEB23EC492F8E1B0ED47 /* [CP] Embed Pods Frameworks */,
+				F43B84D1047624A717650A48 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,7 +185,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E862DEB23EC492F8E1B0ED47 /* [CP] Embed Pods Frameworks */ = {
+		F43B84D1047624A717650A48 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -363,6 +363,17 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 7VPXG96P25;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit\"",
+					"\"${PODS_ROOT}/../../SDK/Lens\"",
+					"\"${PODS_ROOT}/../../SDK/Starscream\"",
+					"\"${PODS_ROOT}/../../SDK/ZAUtils\"",
+					"\"${PODS_ROOT}/../../SDK/ZAssistKit\"",
+					"\"${PODS_ROOT}/../../SDK/ZohoLensArLibrary\"",
+					"\"${PODS_ROOT}/GoogleWebRTC/Frameworks/frameworks\"",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift/Reachability.framework/Headers\"",
