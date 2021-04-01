@@ -53,7 +53,8 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/zoho/LensCustomerSDK.git", :branch => 'Devlopement'}
 
   s.dependency 'GoogleWebRTC', "1.1.28913"
-  s.dependency 'SnapKit', '5.0.1'
+  s.dependency 'SnapKit', '~> 4.0.0'
+
   s.dependency 'ReachabilitySwift', '4.3.0'
 
 
