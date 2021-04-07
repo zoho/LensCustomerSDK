@@ -7,20 +7,20 @@
 //
 
 import UIKit
-import Lens
+import LensSDK
 class ViewController: UIViewController {
 
     @IBOutlet weak var sessionID: UITextField!
     var param:CustomerSessionParams!
     override func viewDidLoad() {
         super.viewDidLoad()
-        sessionID.text = "932987451"
+        sessionID.text = "921187953"
     }
 
     @IBAction func start(_ sender: Any) {
         
         if let id = sessionID.text {
-            let token = "abc_123"
+            let token = "wSsVR60i8xHzB6x9yDakJexqzF5WVl7/FU55jAGouSP0Gv/C/Mc9wRCYAgemSaNJEmM4HGcboe4syxZUh2UP2twpnAoEASiF9mqRe1U4J3x1rL3olzHPXm1dkxOMKo0LxAlo"
             LensCustomer.validateSession(sessionKey: id, token: token, base: URL.init(string: "https://lens.zoho.com")!) { (validation) in
                 
                 switch validation {

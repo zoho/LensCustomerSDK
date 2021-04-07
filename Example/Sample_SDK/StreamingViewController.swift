@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import Lens
-import ZohoLensArLibrary
-import ZAUtils
+import LensSDK
+//import ZohoLensArLibrary
+//import ZAUtils
 class StreamingViewController: UIViewController {
 
     @IBOutlet weak var exitButton: UIButton!

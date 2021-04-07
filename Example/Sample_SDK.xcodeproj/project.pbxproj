@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		643E0DA679A2D9D6605903B3 /* Pods_Sample_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 435D3296769BC7478D8052B0 /* Pods_Sample_SDK.framework */; };
 		C24E1CA324B5CF9100ACE8D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E1CA224B5CF9100ACE8D3 /* AppDelegate.swift */; };
 		C24E1CA524B5CF9100ACE8D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E1CA424B5CF9100ACE8D3 /* SceneDelegate.swift */; };
 		C24E1CA724B5CF9100ACE8D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E1CA624B5CF9100ACE8D3 /* ViewController.swift */; };
@@ -15,6 +14,7 @@
 		C24E1CAC24B5CF9200ACE8D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C24E1CAB24B5CF9200ACE8D3 /* Assets.xcassets */; };
 		C24E1CAF24B5CF9200ACE8D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24E1CAD24B5CF9200ACE8D3 /* LaunchScreen.storyboard */; };
 		C2EBF52D24B73E5C00C226B8 /* StreamingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EBF52C24B73E5C00C226B8 /* StreamingViewController.swift */; };
+		ED6345F04D3473B94FCC9A24 /* Pods_Sample_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 435D3296769BC7478D8052B0 /* Pods_Sample_SDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +28,17 @@
 		C24E1CAB24B5CF9200ACE8D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C24E1CAE24B5CF9200ACE8D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C24E1CB024B5CF9200ACE8D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2958E3C261373FC00898985 /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2B86CEF2611C6BB003FE2A7 /* ZAssistKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZAssistKit.framework; sourceTree = "<group>"; };
+		C2B86CF12611C6BB003FE2A7 /* ZAUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZAUtils.framework; sourceTree = "<group>"; };
+		C2B86CF32611C6BB003FE2A7 /* ZohoLensArLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZohoLensArLibrary.framework; sourceTree = "<group>"; };
+		C2B86CF52611C6BB003FE2A7 /* Lens.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Lens.framework; sourceTree = "<group>"; };
+		C2B86CF72611C6BB003FE2A7 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Starscream.framework; sourceTree = "<group>"; };
+		C2E78F15261492C20079831B /* Lens.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lens.framework; path = ../SDK/Lens/Lens.framework; sourceTree = "<group>"; };
+		C2E78F19261492D20079831B /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = ../SDK/Starscream/Starscream.framework; sourceTree = "<group>"; };
+		C2E78F1C261492E30079831B /* ZAssistKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZAssistKit.framework; path = ../SDK/ZAssistKit/ZAssistKit.framework; sourceTree = "<group>"; };
+		C2E78F1F261492EE0079831B /* ZAUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZAUtils.framework; path = ../SDK/ZAUtils/ZAUtils.framework; sourceTree = "<group>"; };
+		C2E78F22261492F70079831B /* ZohoLensArLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZohoLensArLibrary.framework; path = ../SDK/ZohoLensArLibrary/ZohoLensArLibrary.framework; sourceTree = "<group>"; };
 		C2EBF52C24B73E5C00C226B8 /* StreamingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingViewController.swift; sourceTree = "<group>"; };
 		DE231F643B1271E0CE110F1E /* Pods-Sample_SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample_SDK.debug.xcconfig"; path = "Target Support Files/Pods-Sample_SDK/Pods-Sample_SDK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -37,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				643E0DA679A2D9D6605903B3 /* Pods_Sample_SDK.framework in Frameworks */,
+				ED6345F04D3473B94FCC9A24 /* Pods_Sample_SDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +58,13 @@
 		1272570C658EBE2C84B937D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C2E78F22261492F70079831B /* ZohoLensArLibrary.framework */,
+				C2E78F1F261492EE0079831B /* ZAUtils.framework */,
+				C2E78F1C261492E30079831B /* ZAssistKit.framework */,
+				C2E78F19261492D20079831B /* Starscream.framework */,
+				C2E78F15261492C20079831B /* Lens.framework */,
+				C2958E3C261373FC00898985 /* Reachability.framework */,
+				C2B86CED2611C6BB003FE2A7 /* SDK */,
 				435D3296769BC7478D8052B0 /* Pods_Sample_SDK.framework */,
 			);
 			name = Frameworks;
@@ -94,6 +112,59 @@
 			path = Sample_SDK;
 			sourceTree = "<group>";
 		};
+		C2B86CED2611C6BB003FE2A7 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				C2B86CEE2611C6BB003FE2A7 /* ZAssistKit */,
+				C2B86CF02611C6BB003FE2A7 /* ZAUtils */,
+				C2B86CF22611C6BB003FE2A7 /* ZohoLensArLibrary */,
+				C2B86CF42611C6BB003FE2A7 /* Lens */,
+				C2B86CF62611C6BB003FE2A7 /* Starscream */,
+			);
+			name = SDK;
+			path = Pods/LensSDK/SDK;
+			sourceTree = "<group>";
+		};
+		C2B86CEE2611C6BB003FE2A7 /* ZAssistKit */ = {
+			isa = PBXGroup;
+			children = (
+				C2B86CEF2611C6BB003FE2A7 /* ZAssistKit.framework */,
+			);
+			path = ZAssistKit;
+			sourceTree = "<group>";
+		};
+		C2B86CF02611C6BB003FE2A7 /* ZAUtils */ = {
+			isa = PBXGroup;
+			children = (
+				C2B86CF12611C6BB003FE2A7 /* ZAUtils.framework */,
+			);
+			path = ZAUtils;
+			sourceTree = "<group>";
+		};
+		C2B86CF22611C6BB003FE2A7 /* ZohoLensArLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				C2B86CF32611C6BB003FE2A7 /* ZohoLensArLibrary.framework */,
+			);
+			path = ZohoLensArLibrary;
+			sourceTree = "<group>";
+		};
+		C2B86CF42611C6BB003FE2A7 /* Lens */ = {
+			isa = PBXGroup;
+			children = (
+				C2B86CF52611C6BB003FE2A7 /* Lens.framework */,
+			);
+			path = Lens;
+			sourceTree = "<group>";
+		};
+		C2B86CF62611C6BB003FE2A7 /* Starscream */ = {
+			isa = PBXGroup;
+			children = (
+				C2B86CF72611C6BB003FE2A7 /* Starscream.framework */,
+			);
+			path = Starscream;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,7 +176,7 @@
 				C24E1C9B24B5CF9100ACE8D3 /* Sources */,
 				C24E1C9C24B5CF9100ACE8D3 /* Frameworks */,
 				C24E1C9D24B5CF9100ACE8D3 /* Resources */,
-				F43B84D1047624A717650A48 /* [CP] Embed Pods Frameworks */,
+				C35DC83D4CA936C39A1CCD24 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,7 +256,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F43B84D1047624A717650A48 /* [CP] Embed Pods Frameworks */ = {
+		C35DC83D4CA936C39A1CCD24 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -363,17 +434,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 7VPXG96P25;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift\"",
-					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit\"",
-					"\"${PODS_ROOT}/../../SDK/Lens\"",
-					"\"${PODS_ROOT}/../../SDK/Starscream\"",
-					"\"${PODS_ROOT}/../../SDK/ZAUtils\"",
-					"\"${PODS_ROOT}/../../SDK/ZAssistKit\"",
-					"\"${PODS_ROOT}/../../SDK/ZohoLensArLibrary\"",
-					"\"${PODS_ROOT}/GoogleWebRTC/Frameworks/frameworks\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift/Reachability.framework/Headers\"",
@@ -385,7 +446,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jambav.lenstest.Sample-SDK";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jambav.lenstest.Sample-SDK1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "iOS Wildcard Development Profile";
 				SWIFT_VERSION = 5.0;
@@ -402,13 +463,19 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 7VPXG96P25;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift/Reachability.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit.framework/Headers\"",
+				);
 				INFOPLIST_FILE = Sample_SDK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jambav.lenstest.Sample-SDK";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jambav.lenstest.Sample-SDK1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "iOS Wildcard Development Profile";
 				SWIFT_VERSION = 5.0;
