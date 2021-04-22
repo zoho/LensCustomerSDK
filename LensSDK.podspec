@@ -63,6 +63,9 @@ Pod::Spec.new do |s|
   s.module_name  = "LensSDK"
   
   s.requires_arc = true
+  s.swift_versions = '5.0'
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
   # s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2', 'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/CommonCryptoSwift/Sources/CCommonCrypto' }
   # s.preserve_paths = 'Sources/CCommonCrypto/module.modulemap'
