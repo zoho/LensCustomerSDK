@@ -5,11 +5,11 @@ Pod::Spec.new do |s|
   #  These will help people to find your library, and whilst it
   #  can feel like a chore to fill in it's definitely to your advantage. The
   #  summary should be tweet-length, and the description more in depth.
-  
+
   #
 
   s.name         = "LensSDK"
-  s.version      = "2.1.0"
+  s.version      = "2.1.1"
   s.summary      = "A remote support framework for Zoho Assist Lens"
 
   # This description is used to generate tags and improve search results.
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
   copies of the Software, and to permit persons to whom the Software is
   furnished to do so, subject to the following conditions:
 
-  The above copyright notice and this permission notice shall be included in allcd 
+  The above copyright notice and this permission notice shall be included in allcd
   copies or substantial portions of the Software.
 
   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
@@ -43,11 +43,11 @@ Pod::Spec.new do |s|
   SOFTWARE
   LICENSE
 }
- 
+
   s.author       = { "Kishore Kumar" => "kishorekumar.n@zohocorp.com" }
   # s.platform     = :ios, '8.0'
   s.ios.deployment_target = '11.0'
-  
+
   s.frameworks = 'UIKit','Foundation', 'CoreMedia'
 
   s.source       = { :git => "https://github.com/zoho/LensCustomerSDK.git", :branch => 'Devlopement'}
@@ -61,7 +61,7 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'SDK/**/*.framework'
 
   s.module_name  = "LensSDK"
-  
+
   s.requires_arc = true
   s.swift_versions = '5.0'
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
