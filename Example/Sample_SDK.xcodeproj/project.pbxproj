@@ -446,9 +446,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jambav.lenstest.Sample-SDK1";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jambav.assistlens;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "iOS Wildcard Development Profile";
+				PROVISIONING_PROFILE_SPECIFIER = "Lens Development";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -475,9 +475,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jambav.lenstest.Sample-SDK1";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jambav.assistlens;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "iOS Wildcard Development Profile";
+				PROVISIONING_PROFILE_SPECIFIER = "Lens Development";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

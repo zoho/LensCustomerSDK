@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		BbjxnpO/jxKPdzEN3PgTG93dCco=
+		7LBVrKjlrLlU/3waLx5zH6seP7o=
 		</data>
 		<key>Assets.scnassets/CameraSetup.scn</key>
 		<data>
-		AlIWBwqEIaLUuzRQJ/HJC27hmn8=
+		0jJsk6Zt7pU437U+WJG4Bxu/wX8=
 		</data>
 		<key>Assets.scnassets/wireframe_shader.metal</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/LensSDK-Swift.h</key>
 		<data>
-		S5eae67H91B+tcmQOxJKfU3XQtE=
+		7Hq5Vq/15r2HD0l4XGpzJZLhyqY=
 		</data>
 		<key>Headers/LensSDK.h</key>
 		<data>
@@ -26,39 +26,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		OGkHxK8aJiBFgDVERqXGf+W+XFQ=
+		CEbUPLDq2xxP33z/mJ7BVOwt+Oo=
 		</data>
 		<key>Modules/LensSDK.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		X/QU7j9HZqZ0e127+ngDgpRFtEQ=
-		</data>
-		<key>Modules/LensSDK.swiftmodule/Project/arm64.swiftsourceinfo</key>
-		<data>
-		X/QU7j9HZqZ0e127+ngDgpRFtEQ=
+		YKbtb1P26jch0sgoCOPyUlCsH4Q=
 		</data>
 		<key>Modules/LensSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		/FYW2tSDxmqyCnoRnmCvdQCzcdU=
+		A1BuC32dFhAyOzbmdN2HzTFA5q8=
 		</data>
 		<key>Modules/LensSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		4dZZ/iRJu0jNJqjZ59fvyAD8Xeg=
+		l2Ny6h8V8tC7nkvonTV9cPG+pj8=
 		</data>
 		<key>Modules/LensSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		Z+mt+fyWYNvF+n/hdxWhExllH3k=
-		</data>
-		<key>Modules/LensSDK.swiftmodule/arm64.swiftdoc</key>
-		<data>
-		/FYW2tSDxmqyCnoRnmCvdQCzcdU=
-		</data>
-		<key>Modules/LensSDK.swiftmodule/arm64.swiftinterface</key>
-		<data>
-		4dZZ/iRJu0jNJqjZ59fvyAD8Xeg=
-		</data>
-		<key>Modules/LensSDK.swiftmodule/arm64.swiftmodule</key>
-		<data>
-		Z+mt+fyWYNvF+n/hdxWhExllH3k=
+		QeJH8fWOliMP4O3NK1ymKHAXoXk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -71,14 +55,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kMSnwTzWF/l7EI67mxy6qa6V9t8RqzbEKbeX4WgJMIU=
+			2qBbJIqgUjtP9v77zqpx6Wr8YXFJieaTOwxIj+KfiEM=
 			</data>
 		</dict>
 		<key>Assets.scnassets/CameraSetup.scn</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Orxj1n7X9a8243x2eErw7wTVh5KrBUN3bZZcOrj7vPM=
+			87UJUZVFIFCVYSQs6nof3AAdD8BGmWWamx7uwixJiPA=
 			</data>
 		</dict>
 		<key>Assets.scnassets/wireframe_shader.metal</key>
@@ -92,7 +76,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eCJX2P+5jSfyTNGFAfsH9KBkOhLYLUYkPHdWfxLDNtQ=
+			8ADTUnJHlVfJoRUdsfI5b4paa7U9LT9Syz+BixcjNOw=
 			</data>
 		</dict>
 		<key>Headers/LensSDK.h</key>
@@ -106,56 +90,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pB5ELIS7iLpuEMpD8FmMY45o/V2yGbn2cwE6NoboF+g=
-			</data>
-		</dict>
-		<key>Modules/LensSDK.swiftmodule/Project/arm64.swiftsourceinfo</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			pB5ELIS7iLpuEMpD8FmMY45o/V2yGbn2cwE6NoboF+g=
+			CH01MbI/4oVBvmtWNhrAK95F94L5kWSQQTpL+7Zaql8=
 			</data>
 		</dict>
 		<key>Modules/LensSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1JwyKxPAkBR3TUtluqnUvwmsdPHUg3ZsAQrOmUxKVk8=
+			km5MzPVqqbOzn6Ss9imfTQwR/ZF7GrrW2rgCBhx3IjU=
 			</data>
 		</dict>
 		<key>Modules/LensSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KJ5AvF3oIzRszB1Gb0hsr51T+U9Hgrqf+jMy8PsjE9M=
+			m5F+duEa3HEgdRld/pYexYpYETjv8KdxSJtXur0hIO4=
 			</data>
 		</dict>
 		<key>Modules/LensSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gZfgUGirDnm2Hxnlv+neZUuqjyLeuV4bXsFy9Of+B0Q=
-			</data>
-		</dict>
-		<key>Modules/LensSDK.swiftmodule/arm64.swiftdoc</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			1JwyKxPAkBR3TUtluqnUvwmsdPHUg3ZsAQrOmUxKVk8=
-			</data>
-		</dict>
-		<key>Modules/LensSDK.swiftmodule/arm64.swiftinterface</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			KJ5AvF3oIzRszB1Gb0hsr51T+U9Hgrqf+jMy8PsjE9M=
-			</data>
-		</dict>
-		<key>Modules/LensSDK.swiftmodule/arm64.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			gZfgUGirDnm2Hxnlv+neZUuqjyLeuV4bXsFy9Of+B0Q=
+			1mGgLXkuS5+ORkUqz+cru9LPiQsDABszEca04IDB6N0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
