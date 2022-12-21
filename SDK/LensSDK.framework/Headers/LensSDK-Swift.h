@@ -228,6 +228,9 @@ SWIFT_CLASS("_TtC7LensSDK12ARRenderView")
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (void)resumeARSCNViewSessionWithIsSessionStart:(BOOL)isSessionStart callWithDelay:(BOOL)callWithDelay;
 - (void)pauseARSCNViewSession;
+- (void)pauseARSCNViewSessionForBackgroundTransition:(BOOL)forBackgroundTransition;
+- (BOOL)isARSCNViewSessionPaused SWIFT_WARN_UNUSED_RESULT;
+- (void)pauseARSCNViewSessionInHDWithSessionPauseCallback:(void (^ _Nonnull)(void))callback;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 @end
 
@@ -292,6 +295,19 @@ SWIFT_CLASS("_TtC7LensSDK17FreezeImageParser")
 
 
 
+SWIFT_CLASS("_TtC7LensSDK15ImageScrollView")
+@interface ImageScrollView : UIScrollView <UIScrollViewDelegate>
+@property (nonatomic) CGRect frame;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)layoutSubviews;
+- (void)removeFromSuperview;
+- (UIView * _Nullable)viewForZoomingInScrollView:(UIScrollView * _Nonnull)scrollView SWIFT_WARN_UNUSED_RESULT;
+- (void)scrollViewDidZoom:(UIScrollView * _Nonnull)scrollView;
+- (void)scrollViewDidEndZooming:(UIScrollView * _Nonnull)scrollView withView:(UIView * _Nullable)view atScale:(CGFloat)scale;
+@end
+
+
 /// Base class for all annotations
 SWIFT_CLASS("_TtC7LensSDK4Node")
 @interface Node : SCNNode
@@ -318,6 +334,21 @@ SWIFT_CLASS("_TtC7LensSDK11Participant")
 
 
 
+SWIFT_CLASS("_TtC7LensSDK15TalkRoomManager")
+@interface TalkRoomManager : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@protocol RTCVideoRenderer;
+
+@interface TalkRoomManager (SWIFT_EXTENSION(LensSDK)) <RTCVideoViewDelegate>
+- (void)videoView:(id <RTCVideoRenderer> _Nonnull)videoView didChangeVideoSize:(CGSize)size;
+@end
+
+
+
+
 
 @class UIColor;
 
@@ -327,6 +358,7 @@ SWIFT_CLASS("_TtC7LensSDK11Participant")
 @property (nonatomic) IBInspectable CGFloat paddingX;
 @property (nonatomic) IBInspectable CGFloat paddingY;
 @end
+
 
 
 
