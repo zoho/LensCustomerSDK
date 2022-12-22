@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name LensSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import ARKit
 import AVFoundation
 import AVKit
@@ -18,16 +19,17 @@ import UIKit
 import Vision
 import WebRTC
 import _Concurrency
+import _StringProcessing
 import zlib
 public class ResolutionHandler {
-  public var videoFrame: CoreGraphics.CGRect!
-  public var videoRes: CoreGraphics.CGSize! {
+  public var videoFrame: CoreFoundation.CGRect!
+  public var videoRes: CoreFoundation.CGSize! {
     get
     set
   }
-  public var viewRect: CoreGraphics.CGRect
-  public init(fromView rect: CoreGraphics.CGRect)
-  public func getVideoFrame(for input: LensSDK.DrawingInput) -> CoreGraphics.CGRect
+  public var viewRect: CoreFoundation.CGRect
+  public init(fromView rect: CoreFoundation.CGRect)
+  public func getVideoFrame(for input: LensSDK.DrawingInput) -> CoreFoundation.CGRect
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers public class Participant : LensSDK.BaseParser {
@@ -317,7 +319,7 @@ extension UIKit.UIDevice {
   }
 }
 extension UIKit.UIScreen {
-  @_Concurrency.MainActor(unsafe) public var screenSizeBasedOnOrientaion: CoreGraphics.CGSize {
+  @_Concurrency.MainActor(unsafe) public var screenSizeBasedOnOrientaion: CoreFoundation.CGSize {
     get
   }
 }
@@ -327,7 +329,7 @@ extension UIKit.UIViewController {
 public class DrawingShapes {
   final public let superShapeLayer: QuartzCore.CAShapeLayer
   weak public var view: UIKit.UIView?
-  public init(with view: UIKit.UIView, within rect: CoreGraphics.CGRect)
+  public init(with view: UIKit.UIView, within rect: CoreFoundation.CGRect)
   public func draw(with drawParm: LensSDK.DrawingInput, lineDashPattern: [Foundation.NSNumber]? = nil)
   public func clearPath(for id: Swift.String)
   public func clearAll()
@@ -367,7 +369,7 @@ extension UIKit.UITableView {
   @_Concurrency.MainActor(unsafe) public func removenoDataView()
 }
 extension Swift.Int {
-  public var cgfloat: CoreGraphics.CGFloat {
+  public var cgfloat: CoreFoundation.CGFloat {
     get
   }
 }
@@ -400,7 +402,7 @@ extension Swift.Int64 : LensSDK.CommonIntUtility {
 extension Swift.Int16 : LensSDK.CommonIntUtility {
 }
 extension UIKit.UIBarButtonItem {
-  @_Concurrency.MainActor(unsafe) public var frame: CoreGraphics.CGRect {
+  @_Concurrency.MainActor(unsafe) public var frame: CoreFoundation.CGRect {
     get
   }
 }
@@ -520,7 +522,7 @@ public let kDataChannnelNotify: Foundation.NSNotification.Name
   public var arRenderView: LensSDK.ARRenderView? {
     get
   }
-  public var videoResolution: CoreGraphics.CGSize?
+  public var videoResolution: CoreFoundation.CGSize?
   public var currentCanvasShape: LensSDK.CanvasBoardSettings? {
     get
   }
@@ -531,7 +533,7 @@ extension LensSDK.Lens {
   public func send(_ chat: LensSDK.Chat) -> Swift.Bool
 }
 public protocol ARViewDelegate : AnyObject {
-  func didChanged(_ size: CoreGraphics.CGSize)
+  func didChanged(_ size: CoreFoundation.CGSize)
   func didChange(tracking state: ARKit.ARCamera.TrackingState)
   func onVideoFrameUpdate(frameBuffer: CoreVideo.CVPixelBuffer, rotation: Swift.Int, timestamp: Swift.Int64)
 }
@@ -545,7 +547,7 @@ public class QRUtil {
   @objc deinit
 }
 extension UIKit.UITextField {
-  @_Concurrency.MainActor(unsafe) public var leftPading: CoreGraphics.CGFloat {
+  @_Concurrency.MainActor(unsafe) public var leftPading: CoreFoundation.CGFloat {
     get
     set
   }
@@ -566,19 +568,19 @@ extension Swift.Bool {
     get
   }
 }
-extension CoreGraphics.CGFloat {
-  public var quarter: CoreGraphics.CGFloat {
+extension CoreFoundation.CGFloat {
+  public var quarter: CoreFoundation.CGFloat {
     get
   }
-  public var half: CoreGraphics.CGFloat {
+  public var half: CoreFoundation.CGFloat {
     get
   }
-  public var Threequarter: CoreGraphics.CGFloat {
+  public var Threequarter: CoreFoundation.CGFloat {
     get
   }
 }
-extension CoreGraphics.CGFloat {
-  public func rounded(toPlaces places: Swift.Int) -> CoreGraphics.CGFloat
+extension CoreFoundation.CGFloat {
+  public func rounded(toPlaces places: Swift.Int) -> CoreFoundation.CGFloat
 }
 extension UIKit.UIImage {
   public static func getPlaneTexture() -> UIKit.UIImage?
@@ -588,7 +590,7 @@ extension UIKit.UIImage {
 }
 extension UIKit.UIScrollView {
   @_Concurrency.MainActor(unsafe) public func didScrollToEnd() -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) public func tryingToViewMore(_ range: CoreGraphics.CGFloat = 50) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func tryingToViewMore(_ range: CoreFoundation.CGFloat = 50) -> Swift.Bool
 }
 extension UIKit.UIScrollView {
   public enum ATViewSide {
@@ -599,7 +601,7 @@ extension UIKit.UIScrollView {
       get
     }
   }
-  @_Concurrency.MainActor(unsafe) public func contentSize(withSafeArea side: UIKit.UIScrollView.ATViewSide) -> CoreGraphics.CGSize
+  @_Concurrency.MainActor(unsafe) public func contentSize(withSafeArea side: UIKit.UIScrollView.ATViewSide) -> CoreFoundation.CGSize
 }
 public typealias JSON = [Swift.String : Any]
 public typealias JSONKey = Swift.String
@@ -692,7 +694,7 @@ public struct RoomCredential {
 public struct TalkSettings {
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ARRenderView : UIKit.UIView {
-  @objc convenience dynamic public init()
+  @_Concurrency.MainActor(unsafe) @objc convenience dynamic public init()
   @_Concurrency.MainActor(unsafe) convenience public init(arDelegate: LensSDK.ARViewDelegate? = nil)
   @objc @_Concurrency.MainActor(unsafe) public func resumeARSCNViewSession(isSessionStart: Swift.Bool = true, callWithDelay: Swift.Bool = false)
   @objc @_Concurrency.MainActor(unsafe) public func pauseARSCNViewSession()
@@ -705,11 +707,11 @@ public struct TalkSettings {
   @objc deinit
 }
 extension LensSDK.ARRenderView {
-  @_Concurrency.MainActor(unsafe) public func drawLine(withId id: Swift.String, withLineColor color: UIKit.UIColor = UIColor(red: 0.129, green: 0.639, blue: 0.356, alpha: 1), atPoint point: CoreGraphics.CGPoint)
-  @_Concurrency.MainActor(unsafe) public func placeArrow(withId id: Swift.String = Node.DEFAULT_USER_ID, atPoint originalPoint: CoreGraphics.CGPoint, withArrowColor arrowColor: UIKit.UIColor = UIColor(red: 0.129, green: 0.639, blue: 0.356, alpha: 1), isCustomer: Swift.Bool = false)
+  @_Concurrency.MainActor(unsafe) public func drawLine(withId id: Swift.String, withLineColor color: UIKit.UIColor = UIColor(red: 0.129, green: 0.639, blue: 0.356, alpha: 1), atPoint point: CoreFoundation.CGPoint)
+  @_Concurrency.MainActor(unsafe) public func placeArrow(withId id: Swift.String = Node.DEFAULT_USER_ID, atPoint originalPoint: CoreFoundation.CGPoint, withArrowColor arrowColor: UIKit.UIColor = UIColor(red: 0.129, green: 0.639, blue: 0.356, alpha: 1), isCustomer: Swift.Bool = false)
   @_Concurrency.MainActor(unsafe) public func setLineWidth(widthInMetre width: Swift.Float)
-  @_Concurrency.MainActor(unsafe) public func drawRectangle(withId id: Swift.String, color: UIKit.UIColor = UIColor(red: 0.129, green: 0.639, blue: 0.356, alpha: 1), startPoint: CoreGraphics.CGPoint, endPoint: CoreGraphics.CGPoint)
-  @_Concurrency.MainActor(unsafe) public func drawEllipse(withId id: Swift.String, color: UIKit.UIColor = UIColor(red: 0.129, green: 0.639, blue: 0.356, alpha: 1), startPoint: CoreGraphics.CGPoint, endPoint: CoreGraphics.CGPoint)
+  @_Concurrency.MainActor(unsafe) public func drawRectangle(withId id: Swift.String, color: UIKit.UIColor = UIColor(red: 0.129, green: 0.639, blue: 0.356, alpha: 1), startPoint: CoreFoundation.CGPoint, endPoint: CoreFoundation.CGPoint)
+  @_Concurrency.MainActor(unsafe) public func drawEllipse(withId id: Swift.String, color: UIKit.UIColor = UIColor(red: 0.129, green: 0.639, blue: 0.356, alpha: 1), startPoint: CoreFoundation.CGPoint, endPoint: CoreFoundation.CGPoint)
 }
 extension LensSDK.ARRenderView {
   @_Concurrency.MainActor(unsafe) public func renderPointCloud(_ flag: Swift.Bool, callback: ((_ flag: Swift.Bool) -> Swift.Void)? = nil)
@@ -742,7 +744,7 @@ extension LensSDK.ARRenderView {
   @_Concurrency.MainActor(unsafe) public func removeSelectedTechnicianAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
   @_Concurrency.MainActor(unsafe) public func isAnyCustomerAnchorSelected() -> Swift.Bool
   @_Concurrency.MainActor(unsafe) public func isAnyTechnicianAnchorSelected() -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) public func selectTechnicianAnchor(atPoint originalPoint: CoreGraphics.CGPoint) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func selectTechnicianAnchor(atPoint originalPoint: CoreFoundation.CGPoint) -> Swift.Bool
   @_Concurrency.MainActor(unsafe) public func setCustomerAnchorSelectionListener(custAnnotationListener: LensSDK.AnnotationSelectionListener)
   @_Concurrency.MainActor(unsafe) public func setTechnicianAnchorSelectionListener(techAnnotationListener: LensSDK.AnnotationSelectionListener)
 }
@@ -779,7 +781,7 @@ public class File : Swift.Equatable {
   @objc deinit
 }
 extension UIKit.UIImage {
-  convenience public init?(color: UIKit.UIColor, size: CoreGraphics.CGSize = CGSize(width: 1, height: 1))
+  convenience public init?(color: UIKit.UIColor, size: CoreFoundation.CGSize = CGSize(width: 1, height: 1))
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AudioSessionHandler : ObjectiveC.NSObject {
   weak public var delegate: LensSDK.AudioSessionProtocol?
@@ -864,7 +866,7 @@ extension Foundation.Date {
 }
 extension Foundation.Data {
   public func write(fileName: Swift.String, appendIntermediateDir path: Swift.String? = nil) throws -> Foundation.URL?
-  public var mbSize: CoreGraphics.CGFloat {
+  public var mbSize: CoreFoundation.CGFloat {
     get
   }
   public var sizeWithUnit: Swift.String {
@@ -884,7 +886,7 @@ extension Foundation.Data {
   @objc deinit
 }
 extension LensSDK.TalkRoomManager : WebRTC.RTCVideoViewDelegate {
-  @objc dynamic public func videoView(_ videoView: WebRTC.RTCVideoRenderer, didChangeVideoSize size: CoreGraphics.CGSize)
+  @objc dynamic public func videoView(_ videoView: WebRTC.RTCVideoRenderer, didChangeVideoSize size: CoreFoundation.CGSize)
 }
 public protocol OtherActionProtocol : AnyObject {
   func onTechnicianPerform(action: LensSDK.TechnicianAction)
@@ -1036,8 +1038,8 @@ public struct DrawingInput {
   public var id: Swift.String
   public var annotationType: LensSDK.DrawingInput.DrawShape
   public var storkeColor: UIKit.UIColor
-  public var start: CoreGraphics.CGPoint!
-  public var end: CoreGraphics.CGPoint!
+  public var start: CoreFoundation.CGPoint!
+  public var end: CoreFoundation.CGPoint!
   public var fillColor: UIKit.UIColor
   public enum FreeStyleState {
     case start, move, end
@@ -1048,14 +1050,14 @@ public struct DrawingInput {
     }
   }
   public var freeStyleState: LensSDK.DrawingInput.FreeStyleState?
-  public var size: CoreGraphics.CGSize {
+  public var size: CoreFoundation.CGSize {
     get
   }
-  public var frame: CoreGraphics.CGRect {
+  public var frame: CoreFoundation.CGRect {
     get
     set
   }
-  public var line_width: CoreGraphics.CGFloat
+  public var line_width: CoreFoundation.CGFloat
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ImageScrollView : UIKit.UIScrollView, UIKit.UIScrollViewDelegate {
   public enum ContentMode : Swift.Int {
@@ -1084,19 +1086,19 @@ public struct DrawingInput {
   @_Concurrency.MainActor(unsafe) open var imageContentMode: LensSDK.ImageScrollView.ContentMode
   @_Concurrency.MainActor(unsafe) open var initialOffset: LensSDK.ImageScrollView.Offset
   @_Concurrency.MainActor(unsafe) weak public var zoomView: UIKit.UIView?
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var frame: CoreGraphics.CGRect {
-    @_Concurrency.MainActor(unsafe) @objc get
-    @_Concurrency.MainActor(unsafe) @objc set
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var frame: CoreFoundation.CGRect {
+    @objc get
+    @objc set
   }
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
   @_Concurrency.MainActor(unsafe) public func adjustFrameToCenter()
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
-  @_Concurrency.MainActor(unsafe) open func display(image res: CoreGraphics.CGSize)
+  @_Concurrency.MainActor(unsafe) open func display(image res: CoreFoundation.CGSize)
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func removeFromSuperview()
   @_Concurrency.MainActor(unsafe) @objc public func viewForZooming(in scrollView: UIKit.UIScrollView) -> UIKit.UIView?
   @_Concurrency.MainActor(unsafe) @objc public func scrollViewDidZoom(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor(unsafe) @objc public func scrollViewDidEndZooming(_ scrollView: UIKit.UIScrollView, with view: UIKit.UIView?, atScale scale: CoreGraphics.CGFloat)
+  @_Concurrency.MainActor(unsafe) @objc public func scrollViewDidEndZooming(_ scrollView: UIKit.UIScrollView, with view: UIKit.UIView?, atScale scale: CoreFoundation.CGFloat)
 }
 public enum QRRetryMode {
   case NONE
@@ -1159,19 +1161,19 @@ public enum AssistSocketErrorState : Swift.Error {
   }
 }
 extension UIKit.UIPopoverArrowDirection {
-  public func defaultSourceRect(from view: UIKit.UIView) -> CoreGraphics.CGRect?
+  public func defaultSourceRect(from view: UIKit.UIView) -> CoreFoundation.CGRect?
   public var isVerticalDirection: Swift.Bool {
     get
   }
 }
 extension UIKit.UIViewController {
   @objc @_Concurrency.MainActor(unsafe) dynamic public func openShareSheet(_ data: [Any], popFromView view: UIKit.UIView, completionHandler completionBlock: ((Swift.Bool) -> Swift.Void)? = nil)
-  @_Concurrency.MainActor(unsafe) public func prepareAsPopoverController(from view: UIKit.UIView, soruceRect: CoreGraphics.CGRect?, preferedSize contentSize: CoreGraphics.CGSize = .zero, permittedArrowDirections directions: UIKit.UIPopoverArrowDirection = .down)
-  @_Concurrency.MainActor(unsafe) public func prepareAsPopoverController(from barButton: UIKit.UIBarButtonItem, soruceRect: CoreGraphics.CGRect?, preferedSize contentSize: CoreGraphics.CGSize = .zero, permittedArrowDirections directions: UIKit.UIPopoverArrowDirection = .down)
+  @_Concurrency.MainActor(unsafe) public func prepareAsPopoverController(from view: UIKit.UIView, soruceRect: CoreFoundation.CGRect?, preferedSize contentSize: CoreFoundation.CGSize = .zero, permittedArrowDirections directions: UIKit.UIPopoverArrowDirection = .down)
+  @_Concurrency.MainActor(unsafe) public func prepareAsPopoverController(from barButton: UIKit.UIBarButtonItem, soruceRect: CoreFoundation.CGRect?, preferedSize contentSize: CoreFoundation.CGSize = .zero, permittedArrowDirections directions: UIKit.UIPopoverArrowDirection = .down)
   @_Concurrency.MainActor(unsafe) public func dismissPopoverIfExist()
 }
 extension UIKit.UIViewController : UIKit.UIPopoverPresentationControllerDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic open func popoverPresentationController(_ popoverPresentationController: UIKit.UIPopoverPresentationController, willRepositionPopoverTo rect: Swift.UnsafeMutablePointer<CoreGraphics.CGRect>, in view: Swift.AutoreleasingUnsafeMutablePointer<UIKit.UIView>)
+  @_Concurrency.MainActor(unsafe) @objc dynamic open func popoverPresentationController(_ popoverPresentationController: UIKit.UIPopoverPresentationController, willRepositionPopoverTo rect: Swift.UnsafeMutablePointer<CoreFoundation.CGRect>, in view: Swift.AutoreleasingUnsafeMutablePointer<UIKit.UIView>)
   @_Concurrency.MainActor(unsafe) @objc dynamic open func prepareForPopoverPresentation(_ popoverPresentationController: UIKit.UIPopoverPresentationController)
   @_Concurrency.MainActor(unsafe) @objc dynamic open func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIKit.UIPopoverPresentationController)
 }
@@ -1196,7 +1198,7 @@ infix operator |=| : DefaultPrecedence
 extension UIKit.UIView {
   @_Concurrency.MainActor(unsafe) postfix public static func |-| (argument: UIKit.UIView)
   @_Concurrency.MainActor(unsafe) public static func |-| (lhs: UIKit.UIView, rhs: UIKit.UIView)
-  @_Concurrency.MainActor(unsafe) public static func |-| (lhs: UIKit.UIView, padding: CoreGraphics.CGFloat)
+  @_Concurrency.MainActor(unsafe) public static func |-| (lhs: UIKit.UIView, padding: CoreFoundation.CGFloat)
   @_Concurrency.MainActor(unsafe) postfix public static func |=| (argument: UIKit.UIView)
   @_Concurrency.MainActor(unsafe) public static func |=| (lhs: UIKit.UIView, rhs: UIKit.UIView)
 }
@@ -1232,9 +1234,9 @@ public class VMRequestSerialization {
   @objc deinit
 }
 extension UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public func makeCornerRadius(with value: CoreGraphics.CGFloat)
-  @_Concurrency.MainActor(unsafe) public func makeBlendEdge(withPoint: CoreGraphics.CGFloat = 06)
-  @_Concurrency.MainActor(unsafe) public func isBlendEdgeView(withPoint: CoreGraphics.CGFloat = 06) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func makeCornerRadius(with value: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func makeBlendEdge(withPoint: CoreFoundation.CGFloat = 06)
+  @_Concurrency.MainActor(unsafe) public func isBlendEdgeView(withPoint: CoreFoundation.CGFloat = 06) -> Swift.Bool
   @_Concurrency.MainActor(unsafe) public var isCircle: Swift.Bool {
     get
     set
@@ -1251,7 +1253,7 @@ extension UIKit.UIView {
   }
 }
 extension UIKit.UIView {
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic public var atCornerRadius: CoreGraphics.CGFloat {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic public var atCornerRadius: CoreFoundation.CGFloat {
     @objc get
     @objc set(newValue)
   }
@@ -1259,11 +1261,11 @@ extension UIKit.UIView {
     @objc get
     @objc set(newValue)
   }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic public var borderWidth: CoreGraphics.CGFloat {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic public var borderWidth: CoreFoundation.CGFloat {
     @objc get
     @objc set
   }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic public var shadowRadius: CoreGraphics.CGFloat {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic public var shadowRadius: CoreFoundation.CGFloat {
     @objc get
     @objc set
   }
@@ -1275,7 +1277,7 @@ extension UIKit.UIView {
     @objc get
     @objc set
   }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic public var shadowOffset: CoreGraphics.CGSize {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic public var shadowOffset: CoreFoundation.CGSize {
     @objc get
     @objc set
   }
@@ -1311,11 +1313,11 @@ extension UIKit.UIButton {
     @objc get
     @objc set
   }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic public var paddingX: CoreGraphics.CGFloat {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic public var paddingX: CoreFoundation.CGFloat {
     @objc get
     @objc set
   }
-  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic public var paddingY: CoreGraphics.CGFloat {
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic public var paddingY: CoreFoundation.CGFloat {
     @objc get
     @objc set
   }
@@ -1331,7 +1333,7 @@ extension Swift.String {
   public var intValue: Swift.Int {
     get
   }
-  public var floatValue: CoreGraphics.CGFloat {
+  public var floatValue: CoreFoundation.CGFloat {
     get
   }
   public func subString(fromIndex: Swift.Int) -> Swift.String

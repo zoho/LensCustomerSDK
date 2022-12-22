@@ -6,6 +6,6 @@ framework module LensSDK {
 }
 
 module LensSDK.Swift {
-    header "LensSDK-Swift.h"
-    requires objc
+  header "LensSDK-Swift.h"
+  requires objc
 }
