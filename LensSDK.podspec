@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LensSDK"
-  s.version      = "2.4.0"
+  s.version      = "2.4.1"
   s.summary      = "A remote support framework for Zoho Assist Lens"
 
   # This description is used to generate tags and improve search results.
