@@ -9,19 +9,22 @@
 import UIKit
 import LensSDK
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var sessionID: UITextField!
+    @IBOutlet weak var arSwitch: UISwitch!
+    
     var param:CustomerSessionParams!
     override func viewDidLoad() {
         super.viewDidLoad()
-        sessionID.text = "921187953"
+        sessionID.text = ""
     }
-
+    
     @IBAction func start(_ sender: Any) {
         
         if let id = sessionID.text {
-            let token = "wSsVR60i8xHzB6x9yDakJexqzF5WVl7/FU55jAGouSP0Gv/C/Mc9wRCYAgemSaNJEmM4HGcboe4syxZUh2UP2twpnAoEASiF9mqRe1U4J3x1rL3olzHPXm1dkxOMKo0LxAlo"
-            LensCustomer.validateSession(sessionKey: id, token: token, base: URL.init(string: "https://lens.zoho.com")!) { (validation) in
+            let token = "wSsVR610+ULwDawrzTb5IL9rmFwDBl3yR0V721Ck6HD7TPDL88c4n0CaV1SmTfIdEjE7EDQb8O4gyx4JhjEG2455w1tWACiF9mqRe1U4J3x1p7vplTfKWG1dkxOILIsNwwxrmA=="
+            
+            LensCustomer.validateSessionForSDK(sessionKey: id, token: token, base: URL.init(string: "https://lenslab.zoho.com")!) { (validation) in
                 
                 switch validation {
                 case .validCustomer(let param):
@@ -40,14 +43,22 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func onAREnabled(_ sender: UISwitch) {
+        //self.arSwitch = sender.isOn
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let controller = segue.destination as? StreamingViewController else {
             return
         }
         controller.connectionParam = self.param
+        controller.talkSetup.isMuteAudio = false
+        controller.isARsupport = arSwitch.isOn
+        if #available(iOS 13.0, *) {
+            controller.isModalInPresentation = true
+        } else {
+            // Fallback on earlier versions
+        }
     }
-    
-    
-
 }
 
