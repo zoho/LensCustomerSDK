@@ -50,7 +50,7 @@ Pod::Spec.new do |s|
 
   s.frameworks = 'UIKit','Foundation', 'CoreMedia'
 
-  s.source       = { :git => "https://github.com/zoho/LensCustomerSDK.git", :branch => 'Devlopement'}
+  s.source       = { :git => "https://github.com/zoho/LensCustomerSDK.git", :tag => s.version}
 
   s.dependency 'GoogleWebRTC' #, "1.1.28913"
   s.dependency 'SnapKit' #, '~> 4.0.0'

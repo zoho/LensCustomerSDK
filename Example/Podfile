@@ -7,7 +7,7 @@ target 'Sample_SDK' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   #pod "LensSDK"
-  pod 'LensSDK', :git => 'https://github.com/zoho/LensCustomerSDK.git', :branch => 'Devlopement'
+  pod 'LensSDK', :git => 'https://github.com/zoho/LensCustomerSDK.git', :branch => 'master'
   
   post_install do |installer|
     installer.pods_project.targets.each do |target|
