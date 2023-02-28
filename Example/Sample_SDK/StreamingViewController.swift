@@ -8,6 +8,28 @@
 
 import UIKit
 import LensSDK
+import ARKit
+
+class  MenuCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var title: UILabel!
+    
+    func configure(menu: Menu) {
+        self.layer.borderWidth = 2
+        self.title.text = menu.title
+    }
+}
+
+struct TalkSessionSetup {
+    var isEnableSpeaker: Bool = true
+    var isShowFrontCamera: Bool = false
+    var isOnFlashLight: Bool = false
+    var isMuteVideo: Bool = false
+    var isMuteAudio: Bool = false
+    var sys_id:String = ""
+    init() {}
+    
+}
 
 enum MenuIdentifier: String {
     case video, audio, liveText, ScanQR, swapCamera, freeze
@@ -23,8 +45,6 @@ struct Menu {
     }
 }
 
-let kDataChannnelNotify = NSNotification.Name("DataChannelMsg")
-
 class StreamingViewController: UIViewController {
     
     @IBOutlet weak var exitButton: UIButton!
@@ -37,28 +57,30 @@ class StreamingViewController: UIViewController {
     }
     var connectionParam:CustomerSessionParams!
     var lensObject:LensCustomer?
-    var arView:ARRenderView?
+    var arView:ARRenderView? {
+        didSet {
+            arView?.setAnchorStateListener(listener: self)
+            arView?.setAnchorSelectionListener(listener: self)
+        }
+    }
     let menu = [Menu(title: "Video", identifier: MenuIdentifier.video.rawValue),
                 Menu(title: "Mute Audio", identifier: MenuIdentifier.audio.rawValue),
                 Menu(title: "Freeze", identifier: MenuIdentifier.freeze.rawValue),
                 Menu(title: "Live Text", identifier: MenuIdentifier.liveText.rawValue),
                 Menu(title: "Scan(QR/Barcode)", identifier: MenuIdentifier.ScanQR.rawValue),
                 Menu(title: "Swap Camera", identifier: MenuIdentifier.swapCamera.rawValue)]
-    var talkSetup: TalkSessionSetup = TalkSessionSetup()
-    var isARsupport = true
+    internal var talkSetup: TalkSessionSetup = TalkSessionSetup()
+    internal var isARsupport = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let lens = LensCustomer.init(connectionParam: self.connectionParam, name: "Mr.Abc", email: "abcd@example.com", isARSupported: isARsupport)
         lensObject = lens
-        //lensObject?.startSession(inArMode: ARRenderView.checkARKitCompatibility())
-        lensObject?.startSession()
         lensObject?.lensSignallingDelegate = self
         lensObject?.otherActionDelegate = self
-        
-        NotificationCenter.default.addObserver(self, selector:#selector(onDataChannelMsgReceived(_:)), name: kDataChannnelNotify, object: nil)
-        
+        lensObject?.chatDelegate = self
+        lensObject?.startSession()
         if isARsupport {
             (self.view.viewWithTag(100) as? UIButton)?.isHidden = false
             (self.view.viewWithTag(101) as? UIButton)?.isHidden = false
@@ -68,24 +90,11 @@ class StreamingViewController: UIViewController {
         }
     }
     
+    
+    
     deinit {
-        NotificationCenter.default.removeObserver(self, name: kDataChannnelNotify , object: nil)
     }
     
-    @objc func onDataChannelMsgReceived(_ notification: Notification) {
-
-        DispatchQueue.main.async {
-            if self.lensObject?.signalling?.talkManager?.mediaID == "" && !(self.lensObject?.isFreezedState ?? false) {
-                //self.showLottieView(lottie: .noneScreenSharing, show: true)
-                self.noDataView.isHidden = false
-            } else {
-                self.noDataView.isHidden = true
-                //self.showLottieView(lottie: .noneScreenSharing, show: false)
-                //self.lensObject?.signalling?.sendLogsToServer(msg: "Customer : Pin page Details : Media ID received", errorState: .success)
-            }
-            //self.assistMenuCollectionView.refreshAllData()
-        }
-    }
     
     @IBAction func exit(_ sender: Any) {
         lensObject?.closeRoom()
@@ -112,24 +121,22 @@ class StreamingViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
-    
 }
 
-extension StreamingViewController:LensSignallingProtocol {
+extension StreamingViewController: LensSignallingProtocol {
     func refreshBottomMenu() {
-        
     }
     
-    func newFreezeAcknowledgement() {
-        
-    }
-    
-    func unFreezeFinalAction() {
-        
-    }
-    
-    func showFreezedImage() {
-        
+    func didChangeAR(tracking state: ARCamera.TrackingState) {
+        switch state {
+            
+        case .notAvailable: break
+            
+        case .limited(_): break
+            
+        case .normal: break
+            
+        }
     }
     
     func onScanSuccess(scanResult: ScanModel) {
@@ -141,21 +148,21 @@ extension StreamingViewController:LensSignallingProtocol {
         switch scanResult {
         case .OCR(let ocrText, _):
             DispatchQueue.main.async {
-            let alert = UIAlertController(title: "OCR Text", message: ocrText, preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { _ in
-                //Cancel Action
-            }))
-            
-            self.present(alert, animated: true, completion: nil)
+                let alert = UIAlertController(title: "OCR Text", message: ocrText, preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { _ in
+                    //Cancel Action
+                }))
+                
+                self.present(alert, animated: true, completion: nil)
             }
         case .QR(let text):
             DispatchQueue.main.async {
-            let alert = UIAlertController(title: "QR Text", message: text, preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { _ in
-                //Cancel Action
-            }))
-            
-            self.present(alert, animated: true, completion: nil)
+                let alert = UIAlertController(title: "QR Text", message: text, preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { _ in
+                    //Cancel Action
+                }))
+                
+                self.present(alert, animated: true, completion: nil)
             }
             break
         case .BARCODE(_): break
@@ -170,25 +177,16 @@ extension StreamingViewController:LensSignallingProtocol {
         DispatchQueue.main.async {
             self.loaderView.isHidden = true
             let alert = UIAlertController(title: "Error", message: scanError.errorMessage, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Close", style: UIAlertAction.Style.default, handler: { _ in
-            //Cancel Action
-        }))
-        
-        self.present(alert, animated: true, completion: nil)
+            alert.addAction(UIAlertAction(title: "Close", style: UIAlertAction.Style.default, handler: { _ in
+                //Cancel Action
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
         }
-    }
-    
-    func onTechnicianPerform(draw shape: DrawingInput.DrawShape) {
-        
-    }
-    
-    func conference(type: ConferenceType) {
-        
     }
     
     
     func didChange(_ participant: Participant) {
-        
     }
     
     func renderingView(_ view: UIView?) {
@@ -202,7 +200,6 @@ extension StreamingViewController:LensSignallingProtocol {
         self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[subview]-0-|", options: .directionLeadingToTrailing, metrics: nil, views: ["subview": renderView]))
         
         arView = self.lensObject?.arRenderView
-        
     }
     
     
@@ -234,12 +231,6 @@ extension StreamingViewController:LensSignallingProtocol {
             break
         }
     }
-    
-    func onSessionValidationDone() {
-        
-    }
-    
-    
 }
 
 
@@ -259,7 +250,7 @@ extension StreamingViewController: UICollectionViewDataSource, UICollectionViewD
         switch MenuIdentifier(rawValue: menu.identifier) {
         case .video:
             
-            if !(self.lensObject?.streamType == .up) {
+            if !(self.lensObject?.getStreamType == .up) {
                 
                 let alert = UIAlertController(title: "Share Camera", message: "By clicking Share, you request the primary technician to allow you to share your camera stream.",preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: { _ in
@@ -318,7 +309,7 @@ extension StreamingViewController: UICollectionViewDataSource, UICollectionViewD
             print("")
             
         case .ScanQR:
-            self.lensObject?.requestScanQR(retryMode: .RETRY_UNTIL_TIME_LIMIT)
+            self.lensObject?.requestQR(retryMode: .RETRY_UNTIL_TIME_LIMIT)
             DispatchQueue.main.async {
                 self.loaderView.isHidden = false
             }
@@ -326,9 +317,9 @@ extension StreamingViewController: UICollectionViewDataSource, UICollectionViewD
             
         case .swapCamera:
             if self.lensObject?.isCameraFacingFront ?? false {
-                self.lensObject?.swapToBackCameraCapturer()
+                self.lensObject?.swapToBackCamera()
             } else {
-                self.lensObject?.swapToFrontCameraCapturer()
+                self.lensObject?.swapToFrontCamera()
             }
             print("")
             
@@ -338,41 +329,44 @@ extension StreamingViewController: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: 150, height: 50)
-        }
-}
-
-
-class  MenuCollectionViewCell: UICollectionViewCell {
-    
-    @IBOutlet weak var title: UILabel!
-    
-    func configure(menu: Menu) {
-        self.layer.borderWidth = 2
-        self.title.text = menu.title
+        return CGSize(width: 150, height: 50)
     }
 }
 
-struct TalkSessionSetup {
-    var isEnableSpeaker: Bool = true
-    var isShowFrontCamera: Bool = false
-    var isOnFlashLight: Bool = false
-    var isMuteVideo: Bool = false
-    var isMuteAudio: Bool = false
-    var sys_id:String = ""
-    init() {}
-    
-}
 
 extension StreamingViewController: OtherActionProtocol {
+    func onVideoStateChanged(status: Bool) {
+        DispatchQueue.main.async {
+            if status {
+                self.noDataView.isHidden = true
+            } else {
+                self.noDataView.isHidden = false
+            }
+        }
+    }
+    
     func onTechnicianPerform(action: TechnicianAction) {
+        switch action {
+            
+        case .snapshot_taken: break
 
+        case .video_pause: break
+            
+        case .video_play: break
+            
+        case .audio_muted: break
+            
+        case .audio_unmuted: break
+            
+        @unknown default: break
+            
+        }
     }
     
     public var isARSupported: Bool {
         self.isARsupport
     }
-    public var isCustomerMuteVideo: Bool {
+    public var isCustomerVideoMuted: Bool {
         return self.talkSetup.isMuteVideo
     }
     
@@ -380,44 +374,33 @@ extension StreamingViewController: OtherActionProtocol {
         performInMainThread {
             switch action {
             case .cameraStreamRemoved:
-                //self.view.showNotificationBanner(message: String.init(format: LensContent.Notify.cameraStreamRemoved, participant?.name ?? ""), show: 4, completion: nil)
                 
                 //If feezed state, remove none streaming lottie.
                 if !(self.lensObject?.isFreezedState ?? false) {
-                    //self.container.showLottie(lottie: .noneScreenSharing)
                     self.noDataView.isHidden = false
                 } else {
-                    //self.view.dismissLottieView()
                     self.noDataView.isHidden = true
                 }
-                //self.onFlash(false)
-                self.lensObject?.signalling?.talkManager?.mediaID = ""
+                
                 self.refreshBottomMenu()
                 self.talkSetup.isMuteVideo = false
                 break
                 
             case .cameraStreamChange:
-                //self.view.showNotificationBanner(message: String.init(format: LensContent.Notify.cameraStreamChanged, participant?.name ?? ""), show: 4, completion: nil)
-                //self.view.dismissLottieView()
-                //self.onFlash(false)
                 self.refreshBottomMenu()
                 self.talkSetup.isMuteVideo = false
                 self.noDataView.isHidden = true
                 break
                 
             case .RequestApproved:
-//                if self.lensObject?.shareCameraApprovalMechanism ?? false {
-//                    //self.view.showNotificationBanner(message: LensContent.Notify.requestApproved, show: 4, completion: nil)
-//                }
+                
                 self.noDataView.isHidden = true
                 break
                 
             case .RequestRejected:
-                //self.view.showNotificationBanner(message: LensContent.Notify.requestRejected, show: 4, completion: nil)
                 break
                 
             case .RequestWaiting:
-                //self.view.showNotificationBanner(message: String.init(format: LensContent.Notify.RequestWaiting, participant?.name ?? ""), show: 4, completion: nil)
                 break
             @unknown default:
                 break
@@ -426,8 +409,36 @@ extension StreamingViewController: OtherActionProtocol {
     }
     
     func showNotificationBanner(msg: String) {
-        
+        print(msg)
     }
     
 }
 
+
+extension StreamingViewController: AnchorStateListener {
+    func onAnchorPlaced(annotationId: String, annotationColor: UIColor, annotationType: LensSDK.AnnotationType, annotationNumber: Int, triggerId: String) {
+        print("Annotation Placed : \(annotationId)")
+    }
+    
+    func onAnchorRemoved(annotationId: String) {
+        print("Annotation Removed : \(annotationId)")
+    }
+}
+
+extension StreamingViewController: AnnotationSelectionListener {
+    func onAnnotationSelected(id: String, triggerId: String) {
+        print("Annotation Selected : \(id)")
+    }
+    
+    func onAnnotationDeselected(id: String, triggerId: String) {
+        print("Annotation Deselected : \(id)")
+    }
+}
+
+extension StreamingViewController: ChatProtocol {
+    func didReceive(_ chat: LensSDK.Chat) {
+        print(chat.message as Any)
+    }
+    
+    
+}

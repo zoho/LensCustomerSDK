@@ -6,10 +6,10 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'Sample_SDK' do
   # Comment the next line if you don't want to use dynamic frameworks
 
-   use_frameworks!
-   #pod "LensSDK", "2.1.1"
-   pod 'LensSDK', :git => 'https://github.com/zoho/LensCustomerSDK.git', :branch => 'master'
-   
+  use_frameworks!
+  #pod "LensSDK"
+  pod 'LensSDK', :git => 'https://github.com/zoho/LensCustomerSDK.git', :branch => 'master'
+  
   post_install do |installer|
     installer.pods_project.targets.each do |target|
       if target.name["LensSDK"] || target.name["GoogleWebRTC"]
