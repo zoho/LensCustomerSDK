@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LensSDK"
-  s.version      = "2.1.2"
+  s.version      = "2.4.0"
   s.summary      = "A remote support framework for Zoho Assist Lens"
 
   # This description is used to generate tags and improve search results.
@@ -52,10 +52,10 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/zoho/LensCustomerSDK.git", :branch => 'Devlopement'}
 
-  s.dependency 'GoogleWebRTC', "1.1.28913"
-  s.dependency 'SnapKit', '~> 4.0.0'
+  s.dependency 'GoogleWebRTC' #, "1.1.28913"
+  s.dependency 'SnapKit' #, '~> 4.0.0'
 
-  s.dependency 'ReachabilitySwift', '4.3.0'
+  s.dependency 'ReachabilitySwift' #, '4.3.0'
 
 
   s.vendored_frameworks = 'SDK/**/*.framework'
