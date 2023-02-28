@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         if let id = sessionID.text {
             let token = "wSsVR610+ULwDawrzTb5IL9rmFwDBl3yR0V721Ck6HD7TPDL88c4n0CaV1SmTfIdEjE7EDQb8O4gyx4JhjEG2455w1tWACiF9mqRe1U4J3x1p7vplTfKWG1dkxOILIsNwwxrmA=="
             
-            LensCustomer.validateSessionForSDK(sessionKey: id, token: token, base: URL.init(string: "https://lenslab.zoho.com")!) { (validation) in
+            LensCustomer.validateSessionForSDK(sessionKey: id, token: token, base: URL.init(string: "https://lens.zoho.com")!) { (validation) in
                 
                 switch validation {
                 case .validCustomer(let param):

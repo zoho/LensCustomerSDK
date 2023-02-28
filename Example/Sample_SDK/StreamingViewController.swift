@@ -79,6 +79,7 @@ class StreamingViewController: UIViewController {
         lensObject = lens
         lensObject?.lensSignallingDelegate = self
         lensObject?.otherActionDelegate = self
+        lensObject?.chatDelegate = self
         lensObject?.startSession()
         if isARsupport {
             (self.view.viewWithTag(100) as? UIButton)?.isHidden = false
@@ -92,49 +93,6 @@ class StreamingViewController: UIViewController {
     
     
     deinit {
-        _ = self.lensObject?.getStreamType
-        _ = self.lensObject?.sessionKey
-        _ = self.lensObject?.clientID
-        _ = self.lensObject?.isFreezedState
-        _ = self.lensObject?.isCameraFacingFront
-        _ = self.lensObject?.isARSupported
-        _ = self.lensObject?.isFrontCamAvailable
-        _ = self.lensObject?.participants
-        _ = self.lensObject?.connectionParam
-        
-        self.lensObject?.startSession()
-        self.lensObject?.closeRoom()
-        self.lensObject?.muteAudio()
-        self.lensObject?.unmuteAudio()
-        self.lensObject?.requestOCR()
-        self.lensObject?.requestQR(retryMode: QRRetryMode.RETRY_UNTIL_TIME_LIMIT)
-        self.lensObject?.muteVideo()
-        self.lensObject?.unmuteVideo()
-        self.lensObject?.shareCamera()
-        self.lensObject?.stopCamera()
-        self.lensObject?.speakerOn()
-        self.lensObject?.speakerOff()
-        self.lensObject?.swapToBackCamera()
-        self.lensObject?.swapToFrontCamera()
-        self.lensObject?.send("msg")
-        
-        //Ar Rendering view relared
-        self.arView?.removeAllCustomerAnchors()
-        self.arView?.removeLastCustomerAnchor() //Undo
-        self.arView?.removeFirstCustomerAnchor()
-        self.arView?.removeSelectedCustomerAnchor()
-        self.arView?.removeNodeAnchor(annotateId: "")
-        self.arView?.updateNodeAnchor(annotateId: "", text: "msg")
-        self.arView?.deselectNodeAnchor(annotateId: "", triggerId: "")
-        self.arView?.selectNodeAnchor(annotateId: "", senderTriggerId: "")
-        self.arView?.placeArrow(atPoint: CGPoint(), triggerId: "")
-        self.arView?.drawLine(withId: "", atPoint: CGPoint(), triggerId: "", freeStyle: "") //"mouse_move", "mouse_up"
-        self.arView?.drawRectangle(withId: "", startPoint: CGPoint(), endPoint: CGPoint(), triggerId: "")
-        self.arView?.drawEllipse(withId: "", startPoint: CGPoint(), endPoint: CGPoint(), triggerId: "")
-        _ = self.arView?.getMaxAnchorCount()
-        _ = self.arView?.getCustomerAnchorCount()
-        _ = self.arView?.isAnyCustomerAnchorSelected()
-        
         
     }
     
@@ -478,3 +436,10 @@ extension StreamingViewController: AnnotationSelectionListener {
     }
 }
 
+extension StreamingViewController: ChatProtocol {
+    func didReceive(_ chat: LensSDK.Chat) {
+        print(chat.message as Any)
+    }
+    
+    
+}
