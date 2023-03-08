@@ -57,12 +57,7 @@ class StreamingViewController: UIViewController {
     }
     var connectionParam:CustomerSessionParams!
     var lensObject:LensCustomer?
-    var arView:ARRenderView? {
-        didSet {
-            arView?.setAnchorStateListener(listener: self)
-            arView?.setAnchorSelectionListener(listener: self)
-        }
-    }
+    var arView:ARRenderView?
     let menu = [Menu(title: "Video", identifier: MenuIdentifier.video.rawValue),
                 Menu(title: "Mute Audio", identifier: MenuIdentifier.audio.rawValue),
                 Menu(title: "Freeze", identifier: MenuIdentifier.freeze.rawValue),
@@ -79,6 +74,7 @@ class StreamingViewController: UIViewController {
         lensObject = lens
         lensObject?.lensSignallingDelegate = self
         lensObject?.otherActionDelegate = self
+        lensObject?.arCallback = self
         lensObject?.chatDelegate = self
         lensObject?.startSession()
         if isARsupport {
@@ -415,29 +411,31 @@ extension StreamingViewController: OtherActionProtocol {
 }
 
 
-extension StreamingViewController: AnchorStateListener {
-    func onAnchorPlaced(annotationId: String, annotationColor: UIColor, annotationType: LensSDK.AnnotationType, annotationNumber: Int, triggerId: String) {
+extension StreamingViewController: ARProtocol {
+    func onArCommentsReceived(annotationNode: LensSDK.AnnotationNotify) {
+        print("Annotation Comments Received : \(String(describing: annotationNode.notes?.first?.data))")
+    }
+    
+    func onAnchorSelectionChanged(annotationId: String, state: LensSDK.AnnotationSelection, triggerId: String) {
+        print("Annotation Selected : \(state == .ar_selected) ID: \(annotationId)")
+        
+    }
+    
+    func onAnchorPlaced(annotationId: String) {
         print("Annotation Placed : \(annotationId)")
+        print("Annotation List: \(String(describing: self.lensObject?.arNodesNotifyList))")
     }
     
     func onAnchorRemoved(annotationId: String) {
         print("Annotation Removed : \(annotationId)")
-    }
-}
-
-extension StreamingViewController: AnnotationSelectionListener {
-    func onAnnotationSelected(id: String, triggerId: String) {
-        print("Annotation Selected : \(id)")
+        print("Annotation List: \(String(describing: self.lensObject?.arNodesNotifyList))")
     }
     
-    func onAnnotationDeselected(id: String, triggerId: String) {
-        print("Annotation Deselected : \(id)")
-    }
 }
 
 extension StreamingViewController: ChatProtocol {
     func didReceive(_ chat: LensSDK.Chat) {
-        print(chat.message as Any)
+        
     }
     
     

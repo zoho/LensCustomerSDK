@@ -286,7 +286,6 @@ extension UIKit.UITextField {
   }
 }
 @_hasMissingDesignatedInitializers public class LensCustomer : LensSDK.Lens {
-  weak public var annotationDelegate: LensSDK.AnnotaionDelegate?
   weak public var otherActionDelegate: LensSDK.OtherActionProtocol?
   public var isFrontCamAvailable: Swift.Bool {
     get
@@ -339,12 +338,13 @@ public protocol OtherActionProtocol : AnyObject {
   func onShareCameraResponse(action: LensSDK.ShareCameraTechAction, participant: LensSDK.Participant?)
   func showNotificationBanner(msg: Swift.String)
   func onVideoStateChanged(status: Swift.Bool)
-}
-public protocol AnnotaionDelegate : AnyObject {
   func onFreezeSuccess()
   func onFreezeFailure()
-  func onUnfreezeImage()
+  func onUnfreezed()
   func didReceiveAnnotation(input: LensSDK.DrawingInput?, isClear: Swift.Bool)
+}
+extension LensSDK.OtherActionProtocol {
+  public func didReceiveAnnotation(input: LensSDK.DrawingInput?, isClear: Swift.Bool)
 }
 extension Swift.Bool {
   public var rawValue: Swift.String {
@@ -689,7 +689,17 @@ public enum CanvasBoardSettings : Swift.String {
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
 }
+@_hasMissingDesignatedInitializers public class AnnotaionNote : Swift.Codable {
+  public var data: Swift.String
+  final public let triggerID: Swift.String
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+}
 @_hasMissingDesignatedInitializers public class AnnotationNotify : Swift.Codable {
+  public var annotationObjectID: Swift.Int?
+  final public let triggerID: Swift.String?
+  public var notes: [LensSDK.AnnotaionNote]?
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
@@ -912,7 +922,7 @@ public class CustomCircularArray<E> {
   @_Concurrency.MainActor(unsafe) @objc public func scrollViewDidEndZooming(_ scrollView: UIKit.UIScrollView, with view: UIKit.UIView?, atScale scale: CoreFoundation.CGFloat)
 }
 public protocol AnchorStateListener {
-  func onAnchorPlaced(annotationId: Swift.String, annotationColor: UIKit.UIColor, annotationType: LensSDK.AnnotationType, annotationNumber: Swift.Int, triggerId: Swift.String)
+  func onAnchorPlaced(annotationId: Swift.String, annotationColor: UIKit.UIColor, annotationType: Swift.String, annotationNumber: Swift.Int, triggerId: Swift.String)
   func onAnchorRemoved(annotationId: Swift.String)
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AudioSessionHandler : ObjectiveC.NSObject {
@@ -1280,20 +1290,11 @@ public enum VariacType : Swift.Codable {
   case string(Swift.String)
   public init(from decoder: Swift.Decoder) throws
 }
-public protocol ArCommentsProtocol : AnyObject {
-  func onAnnotationNotesReceived(annotationNode: LensSDK.AnnotationNotify)
-  func onAnnotationNotifyNewNodeCreated()
-}
-public protocol ArCommentsUIProtocol : AnyObject {
-  func onARclearActionCompleted()
-  func onParticipantRejoined()
-}
-public protocol AnnotationSelectionProtocol : AnyObject {
-  func annotationSelected(annotationId: Swift.String, state: LensSDK.AnnotationSelection, triggerId: Swift.String)
-}
 public protocol ARProtocol : AnyObject {
-  func isAr(support enabled: Swift.Bool)
-  func didChange(ar state: LensSDK.AR_TrackingState)
+  func onArCommentsReceived(annotationNode: LensSDK.AnnotationNotify)
+  func onAnchorSelectionChanged(annotationId: Swift.String, state: LensSDK.AnnotationSelection, triggerId: Swift.String)
+  func onAnchorPlaced(annotationId: Swift.String)
+  func onAnchorRemoved(annotationId: Swift.String)
 }
 extension Swift.Array {
   public mutating func removeElements(_ filter: (Element) -> Swift.Bool)
@@ -1410,7 +1411,6 @@ public enum QRRetryMode {
   public var connectionParam: LensSDK.CommonConnectionParams {
     get
   }
-  weak public var arCallback: LensSDK.ARProtocol?
   public var isFreezedState: Swift.Bool
   public var isARSupported: Swift.Bool {
     get
@@ -1420,14 +1420,22 @@ public enum QRRetryMode {
     get
   }
   public var videoResolution: CoreFoundation.CGSize?
-  weak public var annotationSelectionProtocol: LensSDK.AnnotationSelectionProtocol?
-  weak public var arCommentsDelegate: LensSDK.ArCommentsProtocol?
-  weak public var arCommentsUIDelegate: LensSDK.ArCommentsUIProtocol?
-  public var monitorFeatureObj: [(LensSDK.MonitorFeatureEnum, LensSDK.MonitorActionEnum)] {
+  public var arNodesNotifyList: [LensSDK.AnnotationNotify] {
     get
-    set
   }
+  weak public var arDelegate: LensSDK.ARProtocol?
   @objc deinit
+}
+extension LensSDK.Lens {
+  public func onArNewNodeCreationReceived(annotationId: Swift.String)
+  public func onArNodeRemovedReceived(annotationId: Swift.String)
+  public func annotationSelected(annotationId: Swift.String, state: LensSDK.AnnotationSelection, triggerId: Swift.String)
+}
+extension LensSDK.Lens : LensSDK.AnnotationSelectionListener, LensSDK.AnchorStateListener {
+  public func onAnnotationSelected(id: Swift.String, triggerId: Swift.String)
+  public func onAnnotationDeselected(id: Swift.String, triggerId: Swift.String)
+  public func onAnchorPlaced(annotationId: Swift.String, annotationColor: UIKit.UIColor, annotationType: Swift.String, annotationNumber: Swift.Int, triggerId: Swift.String)
+  public func onAnchorRemoved(annotationId: Swift.String)
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class LineNode : LensSDK.Node {
   @_Concurrency.MainActor(unsafe) public static let LINE_NODE_NAME: Swift.String
