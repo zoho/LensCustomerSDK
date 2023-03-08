@@ -74,7 +74,7 @@ class StreamingViewController: UIViewController {
         lensObject = lens
         lensObject?.lensSignallingDelegate = self
         lensObject?.otherActionDelegate = self
-        lensObject?.arCallback = self
+        lensObject?.arDelegate = self
         lensObject?.chatDelegate = self
         lensObject?.startSession()
         if isARsupport {
@@ -331,6 +331,19 @@ extension StreamingViewController: UICollectionViewDataSource, UICollectionViewD
 
 
 extension StreamingViewController: OtherActionProtocol {
+    
+    func onFreezeSuccess() {
+       print("Freeze Success")
+    }
+    
+    func onFreezeFailure() {
+        print("Freeze Failure")
+    }
+    
+    func onUnfreezed() {
+        print("Un Freeze")
+    }
+    
     func onVideoStateChanged(status: Bool) {
         DispatchQueue.main.async {
             if status {
