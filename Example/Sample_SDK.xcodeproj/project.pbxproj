@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B281614F937451F7DB1912B /* Pods_Sample_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 064DD456DCCA610B35ACC50A /* Pods_Sample_SDK.framework */; };
 		C24E1CA324B5CF9100ACE8D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E1CA224B5CF9100ACE8D3 /* AppDelegate.swift */; };
 		C24E1CA524B5CF9100ACE8D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E1CA424B5CF9100ACE8D3 /* SceneDelegate.swift */; };
 		C24E1CA724B5CF9100ACE8D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E1CA624B5CF9100ACE8D3 /* ViewController.swift */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		064DD456DCCA610B35ACC50A /* Pods_Sample_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sample_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F3B90C32A1B44D800995D45 /* FruitBasket.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FruitBasket.xcframework; path = "../../ZohoAssistLens-master_specific_commit/native/LensSDK/framework/FruitBasket.xcframework"; sourceTree = "<group>"; };
+		7DC184E1D166726A2AB6A3AA /* Pods-Sample_SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample_SDK.release.xcconfig"; path = "Target Support Files/Pods-Sample_SDK/Pods-Sample_SDK.release.xcconfig"; sourceTree = "<group>"; };
 		C24E1C9F24B5CF9100ACE8D3 /* Sample_SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample_SDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24E1CA224B5CF9100ACE8D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C24E1CA424B5CF9100ACE8D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,7 @@
 		C2E78F1F261492EE0079831B /* ZAUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZAUtils.framework; path = ../SDK/ZAUtils/ZAUtils.framework; sourceTree = "<group>"; };
 		C2E78F22261492F70079831B /* ZohoLensArLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZohoLensArLibrary.framework; path = ../SDK/ZohoLensArLibrary/ZohoLensArLibrary.framework; sourceTree = "<group>"; };
 		C2EBF52C24B73E5C00C226B8 /* StreamingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingViewController.swift; sourceTree = "<group>"; };
+		DD1861D37DDF6CE9CB621CA1 /* Pods-Sample_SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample_SDK.debug.xcconfig"; path = "Target Support Files/Pods-Sample_SDK/Pods-Sample_SDK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B281614F937451F7DB1912B /* Pods_Sample_SDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +59,7 @@
 		1272570C658EBE2C84B937D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3F3B90C32A1B44D800995D45 /* FruitBasket.xcframework */,
 				C2E78F22261492F70079831B /* ZohoLensArLibrary.framework */,
 				C2E78F1F261492EE0079831B /* ZAUtils.framework */,
 				C2E78F1C261492E30079831B /* ZAssistKit.framework */,
@@ -60,6 +67,7 @@
 				C2E78F15261492C20079831B /* Lens.framework */,
 				C2958E3C261373FC00898985 /* Reachability.framework */,
 				C2B86CED2611C6BB003FE2A7 /* SDK */,
+				064DD456DCCA610B35ACC50A /* Pods_Sample_SDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -67,6 +75,8 @@
 		47EE2D795A743EBAC99865E2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				DD1861D37DDF6CE9CB621CA1 /* Pods-Sample_SDK.debug.xcconfig */,
+				7DC184E1D166726A2AB6A3AA /* Pods-Sample_SDK.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -164,9 +174,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C24E1CB324B5CF9200ACE8D3 /* Build configuration list for PBXNativeTarget "Sample_SDK" */;
 			buildPhases = (
+				87F96EAD425FC0433E7097A6 /* [CP] Check Pods Manifest.lock */,
 				C24E1C9B24B5CF9100ACE8D3 /* Sources */,
 				C24E1C9C24B5CF9100ACE8D3 /* Frameworks */,
 				C24E1C9D24B5CF9100ACE8D3 /* Resources */,
+				6469DC3D001BC735C1D3505A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -222,6 +234,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6469DC3D001BC735C1D3505A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sample_SDK/Pods-Sample_SDK-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sample_SDK/Pods-Sample_SDK-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sample_SDK/Pods-Sample_SDK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87F96EAD425FC0433E7097A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sample_SDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C24E1C9B24B5CF9100ACE8D3 /* Sources */ = {
@@ -312,6 +366,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-no-verify-emitted-module-interface";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -366,6 +421,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_SWIFT_FLAGS = "-no-verify-emitted-module-interface";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -375,11 +431,15 @@
 		};
 		C24E1CB424B5CF9200ACE8D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD1861D37DDF6CE9CB621CA1 /* Pods-Sample_SDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 57R8XV4SCG;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 7VPXG96P25;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
@@ -396,6 +456,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jambav.lenstest.Sample-SDK1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "iOS Wildcard Development Profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -403,11 +464,15 @@
 		};
 		C24E1CB524B5CF9200ACE8D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DC184E1D166726A2AB6A3AA /* Pods-Sample_SDK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 57R8XV4SCG;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 7VPXG96P25;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = (
@@ -424,6 +489,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jambav.lenstest.Sample-SDK1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "iOS Wildcard Development Profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

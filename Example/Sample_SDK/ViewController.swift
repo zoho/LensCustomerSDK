@@ -18,12 +18,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         sessionID.text = ""
     }
-    
+        
     @IBAction func start(_ sender: Any) {
         
         if let id = sessionID.text {
-            let token = "wSsVR610+ULwDawrzTb5IL9rmFwDBl3yR0V721Ck6HD7TPDL88c4n0CaV1SmTfIdEjE7EDQb8O4gyx4JhjEG2455w1tWACiF9mqRe1U4J3x1p7vplTfKWG1dkxOILIsNwwxrmA=="
-            
+//            let token = "wSsVR610+ULwDawrzTb5IL9rmFwDBl3yR0V721Ck6HD7TPDL88c4n0CaV1SmTfIdEjE7EDQb8O4gyx4JhjEG2455w1tWACiF9mqRe1U4J3x1p7vplTfKWG1dkxOILIsNwwxrmA=="
+            let token = "wSsVR60jrBb1Xfx7njX+db07kQgEVQikEUt1ilP06377GvuWp8dtkUDIBFX0H/lKGDRrEDIU9r17mB0D0mJcio8omwlUXSiF9mqRe1U4J3x1p7/ukj7DWm1dkxOILIoNxAVimg=="
+//            wSsVR60jrBb1Xfx7njX+db07kQgEVQikEUt1ilP06377GvuWp8dtkUDIBFX0H/lKGDRrEDIU9r17mB0D0mJcio8omwlUXSiF9mqRe1U4J3x1p7/ukj7DWm1dkxOILIoNxAVimg==
             LensCustomer.validateSessionForSDK(sessionKey: id, token: token, base: URL.init(string: "https://lens.zoho.com")!) { (validation) in
                 
                 switch validation {

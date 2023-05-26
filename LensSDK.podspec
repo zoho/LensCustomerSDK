@@ -55,9 +55,6 @@ Pod::Spec.new do |s|
   s.dependency 'GoogleWebRTC' #, "1.1.28913"
   s.dependency 'SnapKit' #, '~> 4.0.0'
 
-  s.dependency 'ReachabilitySwift' #, '4.3.0'
-
-
   s.vendored_frameworks = 'SDK/**/*.framework'
 
   s.module_name  = "LensSDK"

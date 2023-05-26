@@ -1,37 +1,27 @@
 PODS:
-  - GoogleWebRTC (1.1.31999)
-  - LensSDK (2.4.0):
+  - GoogleWebRTC (1.1.32000)
+  - LensSDK (2.4.2):
     - GoogleWebRTC
-    - ReachabilitySwift
     - SnapKit
-  - ReachabilitySwift (5.0.0)
   - SnapKit (5.6.0)
 
 DEPENDENCIES:
-  - LensSDK (from `https://github.com/zoho/LensCustomerSDK.git`, branch `Devlopement`)
+  - LensSDK (from `../LensSDK.podspec`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - GoogleWebRTC
-    - ReachabilitySwift
     - SnapKit
 
 EXTERNAL SOURCES:
   LensSDK:
-    :branch: Devlopement
-    :git: https://github.com/zoho/LensCustomerSDK.git
-
-CHECKOUT OPTIONS:
-  LensSDK:
-    :commit: 8d625bc31c132bc27f87da88e94f1e460189e458
-    :git: https://github.com/zoho/LensCustomerSDK.git
+    :path: "../LensSDK.podspec"
 
 SPEC CHECKSUMS:
-  GoogleWebRTC: b39a78c4f5cc6b0323415b9233db03a2faa7b0f0
-  LensSDK: c3c6b9e27e36516b3a2b25aec6c2356b6123755b
-  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  GoogleWebRTC: 4d261187b30512efdb711d21fa961a6adf138717
+  LensSDK: 710faa93aab9025a60302ff5228ba939f26a8dde
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 5ec372dfc5c7ec07942d826053afe89b28b03993
+PODFILE CHECKSUM: b1d0aeec2dcb2ef0cb97f10c4305ec18299a4be2
 
 COCOAPODS: 1.11.3

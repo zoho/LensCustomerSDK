@@ -120,6 +120,14 @@ class StreamingViewController: UIViewController {
 }
 
 extension StreamingViewController: LensSignallingProtocol {
+
+
+    func didChangeARState(tracking state: ARCamera.TrackingState) {
+        
+    }
+    
+    
+    
     func refreshBottomMenu() {
     }
     
