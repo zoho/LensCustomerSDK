@@ -6,8 +6,8 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'Sample_SDK' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-#  pod 'LensSDK', :git => 'https://github.com/zoho/LensCustomerSDK.git', :tag => '2.4.2'
-  pod 'LensSDK', :path => '../LensSDK.podspec'
+  pod 'LensSDK', :git => 'https://github.com/zoho/LensCustomerSDK.git', :tag => '2.4.3-beta'
+#  pod 'LensSDK', :path => '../LensSDK.podspec'
   
   post_install do |installer|
     

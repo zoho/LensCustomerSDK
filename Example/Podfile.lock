@@ -6,7 +6,7 @@ PODS:
   - SnapKit (5.6.0)
 
 DEPENDENCIES:
-  - LensSDK (from `../LensSDK.podspec`)
+  - LensSDK (from `https://github.com/zoho/LensCustomerSDK.git`, tag `2.4.3-beta`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -15,13 +15,19 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   LensSDK:
-    :path: "../LensSDK.podspec"
+    :git: https://github.com/zoho/LensCustomerSDK.git
+    :tag: 2.4.3-beta
+
+CHECKOUT OPTIONS:
+  LensSDK:
+    :git: https://github.com/zoho/LensCustomerSDK.git
+    :tag: 2.4.3-beta
 
 SPEC CHECKSUMS:
   GoogleWebRTC: 4d261187b30512efdb711d21fa961a6adf138717
   LensSDK: 710faa93aab9025a60302ff5228ba939f26a8dde
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 5217d4a73751c16314ffc0828405e24ddb37d505
+PODFILE CHECKSUM: ca43de6eda915e3058e1106b764f871c9d258699
 
 COCOAPODS: 1.11.3
