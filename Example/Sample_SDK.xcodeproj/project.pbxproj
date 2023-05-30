@@ -8,24 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		1B281614F937451F7DB1912B /* Pods_Sample_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 064DD456DCCA610B35ACC50A /* Pods_Sample_SDK.framework */; };
+		3F8575442A25CCEF0022FBD9 /* StreamingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8575412A25CCEF0022FBD9 /* StreamingView.swift */; };
+		3F8575452A25CCEF0022FBD9 /* StreamingViewControllerForSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8575422A25CCEF0022FBD9 /* StreamingViewControllerForSwiftUI.swift */; };
+		3F8575462A25CCEF0022FBD9 /* SessionJoinScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8575432A25CCEF0022FBD9 /* SessionJoinScreen.swift */; };
+		3F8575492A25CDA80022FBD9 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8575472A25CDA80022FBD9 /* InitialViewController.swift */; };
+		3F85754A2A25CDA80022FBD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F8575482A25CDA80022FBD9 /* Main.storyboard */; };
+		3F85754C2A25CDC90022FBD9 /* CustomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F85754B2A25CDC90022FBD9 /* CustomModel.swift */; };
+		3F85754D2A25CDFA0022FBD9 /* StreamingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EBF52C24B73E5C00C226B8 /* StreamingViewController.swift */; };
+		3F85754E2A25CE050022FBD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E1CA624B5CF9100ACE8D3 /* ViewController.swift */; };
 		C24E1CA324B5CF9100ACE8D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E1CA224B5CF9100ACE8D3 /* AppDelegate.swift */; };
 		C24E1CA524B5CF9100ACE8D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E1CA424B5CF9100ACE8D3 /* SceneDelegate.swift */; };
-		C24E1CA724B5CF9100ACE8D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E1CA624B5CF9100ACE8D3 /* ViewController.swift */; };
-		C24E1CAA24B5CF9100ACE8D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24E1CA824B5CF9100ACE8D3 /* Main.storyboard */; };
 		C24E1CAC24B5CF9200ACE8D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C24E1CAB24B5CF9200ACE8D3 /* Assets.xcassets */; };
 		C24E1CAF24B5CF9200ACE8D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24E1CAD24B5CF9200ACE8D3 /* LaunchScreen.storyboard */; };
-		C2EBF52D24B73E5C00C226B8 /* StreamingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EBF52C24B73E5C00C226B8 /* StreamingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		064DD456DCCA610B35ACC50A /* Pods_Sample_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sample_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3B90C32A1B44D800995D45 /* FruitBasket.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FruitBasket.xcframework; path = "../../ZohoAssistLens-master_specific_commit/native/LensSDK/framework/FruitBasket.xcframework"; sourceTree = "<group>"; };
+		3F8575412A25CCEF0022FBD9 /* StreamingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingView.swift; sourceTree = "<group>"; };
+		3F8575422A25CCEF0022FBD9 /* StreamingViewControllerForSwiftUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingViewControllerForSwiftUI.swift; sourceTree = "<group>"; };
+		3F8575432A25CCEF0022FBD9 /* SessionJoinScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionJoinScreen.swift; sourceTree = "<group>"; };
+		3F8575472A25CDA80022FBD9 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		3F8575482A25CDA80022FBD9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3F85754B2A25CDC90022FBD9 /* CustomModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomModel.swift; sourceTree = "<group>"; };
 		7DC184E1D166726A2AB6A3AA /* Pods-Sample_SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample_SDK.release.xcconfig"; path = "Target Support Files/Pods-Sample_SDK/Pods-Sample_SDK.release.xcconfig"; sourceTree = "<group>"; };
 		C24E1C9F24B5CF9100ACE8D3 /* Sample_SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample_SDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24E1CA224B5CF9100ACE8D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C24E1CA424B5CF9100ACE8D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C24E1CA624B5CF9100ACE8D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C24E1CA924B5CF9100ACE8D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C24E1CAB24B5CF9200ACE8D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C24E1CAE24B5CF9200ACE8D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C24E1CB024B5CF9200ACE8D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +82,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3F8575402A25CCEF0022FBD9 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				3F8575412A25CCEF0022FBD9 /* StreamingView.swift */,
+				3F8575422A25CCEF0022FBD9 /* StreamingViewControllerForSwiftUI.swift */,
+				3F8575432A25CCEF0022FBD9 /* SessionJoinScreen.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
 		47EE2D795A743EBAC99865E2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,12 +122,15 @@
 		C24E1CA124B5CF9100ACE8D3 /* Sample_SDK */ = {
 			isa = PBXGroup;
 			children = (
+				3F8575402A25CCEF0022FBD9 /* SwiftUI */,
 				C24E1CA224B5CF9100ACE8D3 /* AppDelegate.swift */,
 				C24E1CA424B5CF9100ACE8D3 /* SceneDelegate.swift */,
 				C24E1CA624B5CF9100ACE8D3 /* ViewController.swift */,
+				3F85754B2A25CDC90022FBD9 /* CustomModel.swift */,
+				3F8575472A25CDA80022FBD9 /* InitialViewController.swift */,
 				C2EBF52C24B73E5C00C226B8 /* StreamingViewController.swift */,
-				C24E1CA824B5CF9100ACE8D3 /* Main.storyboard */,
 				C24E1CAB24B5CF9200ACE8D3 /* Assets.xcassets */,
+				3F8575482A25CDA80022FBD9 /* Main.storyboard */,
 				C24E1CAD24B5CF9200ACE8D3 /* LaunchScreen.storyboard */,
 				C24E1CB024B5CF9200ACE8D3 /* Info.plist */,
 			);
@@ -227,9 +250,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F85754A2A25CDA80022FBD9 /* Main.storyboard in Resources */,
 				C24E1CAF24B5CF9200ACE8D3 /* LaunchScreen.storyboard in Resources */,
 				C24E1CAC24B5CF9200ACE8D3 /* Assets.xcassets in Resources */,
-				C24E1CAA24B5CF9100ACE8D3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,24 +305,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C24E1CA724B5CF9100ACE8D3 /* ViewController.swift in Sources */,
+				3F8575462A25CCEF0022FBD9 /* SessionJoinScreen.swift in Sources */,
+				3F85754D2A25CDFA0022FBD9 /* StreamingViewController.swift in Sources */,
 				C24E1CA324B5CF9100ACE8D3 /* AppDelegate.swift in Sources */,
+				3F85754E2A25CE050022FBD9 /* ViewController.swift in Sources */,
+				3F85754C2A25CDC90022FBD9 /* CustomModel.swift in Sources */,
+				3F8575452A25CCEF0022FBD9 /* StreamingViewControllerForSwiftUI.swift in Sources */,
+				3F8575492A25CDA80022FBD9 /* InitialViewController.swift in Sources */,
+				3F8575442A25CCEF0022FBD9 /* StreamingView.swift in Sources */,
 				C24E1CA524B5CF9100ACE8D3 /* SceneDelegate.swift in Sources */,
-				C2EBF52D24B73E5C00C226B8 /* StreamingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C24E1CA824B5CF9100ACE8D3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C24E1CA924B5CF9100ACE8D3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C24E1CAD24B5CF9200ACE8D3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -362,7 +382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -418,7 +438,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "-no-verify-emitted-module-interface";
@@ -448,7 +468,7 @@
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit.framework/Headers\"",
 				);
 				INFOPLIST_FILE = Sample_SDK/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -481,7 +501,7 @@
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit.framework/Headers\"",
 				);
 				INFOPLIST_FILE = Sample_SDK/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

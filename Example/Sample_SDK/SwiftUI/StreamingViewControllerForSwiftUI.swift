@@ -9,25 +9,8 @@
 import UIKit
 import LensSDK
 import ARKit
-
-enum MenuIdentifier: String {
-    case video, audio, liveText, ScanQR, swapCamera, freeze
-}
-
-struct Menu {
-    var title: String
-    var identifier: String
+class StreamingViewControllerForSwiftUI: UIViewController {
     
-    init(title: String,identifier: String ) {
-        self.title = title
-        self.identifier = identifier
-    }
-}
-
-class StreamingViewController: UIViewController {
-    
-    @IBOutlet weak var exitButton: UIButton!
-    @IBOutlet weak var menuCollectionView: UICollectionView!
     @IBOutlet weak var loaderView: UIView!
     @IBOutlet weak var noDataView: UIView!
     
@@ -37,27 +20,31 @@ class StreamingViewController: UIViewController {
     var connectionParam:CustomerSessionParams!
     var lensObject:LensCustomer?
     var arView:ARRenderView?
-    let menu = [Menu(title: "Video", identifier: MenuIdentifier.video.rawValue),
-                Menu(title: "Mute Audio", identifier: MenuIdentifier.audio.rawValue),
-                Menu(title: "Freeze", identifier: MenuIdentifier.freeze.rawValue),
-                Menu(title: "Live Text", identifier: MenuIdentifier.liveText.rawValue),
-                Menu(title: "Scan(QR/Barcode)", identifier: MenuIdentifier.ScanQR.rawValue),
-                Menu(title: "Swap Camera", identifier: MenuIdentifier.swapCamera.rawValue)]
+//    let menu = [Menu(title: "Video", identifier: MenuIdentifier.video.rawValue),
+//                Menu(title: "Mute Audio", identifier: MenuIdentifier.audio.rawValue),
+//                Menu(title: "Freeze", identifier: MenuIdentifier.freeze.rawValue),
+//                Menu(title: "Live Text", identifier: MenuIdentifier.liveText.rawValue),
+//                Menu(title: "Scan(QR/Barcode)", identifier: MenuIdentifier.ScanQR.rawValue),
+//                Menu(title: "Swap Camera", identifier: MenuIdentifier.swapCamera.rawValue)]
     internal var talkSetup: TalkSessionSetup = TalkSessionSetup()
     internal var isARsupport = true
     
-    static  func getViewcontroller(param:CustomerSessionParams,isARSupported:Bool) -> StreamingViewController {
+    static  func getViewcontroller(param:CustomerSessionParams?,isARSupported:Bool) -> StreamingViewControllerForSwiftUI {
         
-        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "streamingcontroller") as! StreamingViewController
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "streamingcontroller_swiftui") as! StreamingViewControllerForSwiftUI
       controller.connectionParam = param
       controller.talkSetup.isMuteAudio = false
       controller.isARsupport = isARSupported
-        controller.modalPresentationStyle = .fullScreen
+      controller.isModalInPresentation = true
         return controller
         
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if connectionParam == nil {
+            return
+        }
         // Do any additional setup after loading the view.
         let lens = LensCustomer.init(connectionParam: self.connectionParam, name: "Mr.Abc", email: "abcd@example.com", isARSupported: isARsupport)
         lensObject = lens
@@ -106,7 +93,7 @@ class StreamingViewController: UIViewController {
      */
 }
 
-extension StreamingViewController: LensSignallingProtocol {
+extension StreamingViewControllerForSwiftUI: LensSignallingProtocol {
     
     func refreshBottomMenu() {
     }
@@ -178,7 +165,7 @@ extension StreamingViewController: LensSignallingProtocol {
             return
         }
         noDataView.isHidden = true
-        self.view.insertSubview(renderView, belowSubview: exitButton)
+        self.view.insertSubview(renderView, at: 0)
         renderView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[subview]-0-|", options: .directionLeadingToTrailing, metrics: nil, views: ["subview": renderView]))
         self.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[subview]-0-|", options: .directionLeadingToTrailing, metrics: nil, views: ["subview": renderView]))
@@ -218,107 +205,107 @@ extension StreamingViewController: LensSignallingProtocol {
 }
 
 
-extension StreamingViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.menu.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "menuCell", for: indexPath) as! MenuCollectionViewCell
-        cell.configure(menu: self.menu[indexPath.row])
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let menu = self.menu[indexPath.row]
-        switch MenuIdentifier(rawValue: menu.identifier) {
-        case .video:
-            
-            if !(self.lensObject?.getStreamType == .up) {
-                
-                let alert = UIAlertController(title: "Share Camera", message: "By clicking Share, you request the primary technician to allow you to share your camera stream.",preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: { _ in
-                    //Cancel Action
-                }))
-                alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: {(_: UIAlertAction!) in
-                    self.lensObject?.shareCamera()
-                }))
-                self.present(alert, animated: true, completion: nil)
-            } else {
-                let alert = UIAlertController(title: "Stop Camera", message: "Would you like to stop sharing your camera stream?",preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: { _ in
-                    //Cancel Action
-                }))
-                alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: {(_: UIAlertAction!) in
-                    self.lensObject?.stopCamera()
-                }))
-                self.present(alert, animated: true, completion: nil)
-            }
-            
-            print("")
-            
-        case .audio:
-            let cell = collectionView.cellForItem(at: indexPath) as? MenuCollectionViewCell
-            //Unmute audio
-            if self.talkSetup.isMuteAudio {
-                self.lensObject?.unmuteAudio()
-                self.talkSetup.isMuteAudio = false
-                cell?.title.text = "Mute Audio"
-            } else {
-                //Mute audio
-                self.lensObject?.muteAudio()
-                self.talkSetup.isMuteAudio = true
-                cell?.title.text = "Unmute Audio"
-            }
-            
-            print("")
-        case .freeze:
-            let cell = collectionView.cellForItem(at: indexPath) as? MenuCollectionViewCell
-            if self.talkSetup.isMuteVideo {
-                self.lensObject?.unmuteVideo()
-                self.talkSetup.isMuteVideo = false
-                cell?.title.text = "Freeze"
-            } else {
-                self.lensObject?.muteVideo()
-                self.talkSetup.isMuteVideo = true
-                cell?.title.text = "Unfreeze"
-            }
-            break
-            
-        case .liveText:
-            self.lensObject?.requestOCR()
-            DispatchQueue.main.async {
-                self.loaderView.isHidden = false
-            }
-            print("")
-            
-        case .ScanQR:
-            self.lensObject?.requestQR(retryMode: .RETRY_UNTIL_TIME_LIMIT)
-            DispatchQueue.main.async {
-                self.loaderView.isHidden = false
-            }
-            break
-            
-        case .swapCamera:
-            if self.lensObject?.isCameraFacingFront ?? false {
-                self.lensObject?.swapToBackCamera()
-            } else {
-                self.lensObject?.swapToFrontCamera()
-            }
-            print("")
-            
-        default:
-            break
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 150, height: 50)
-    }
-}
+//extension StreamingViewControllerForSwiftUI: UICollectionViewDataSource, UICollectionViewDelegate {
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return self.menu.count
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "menuCell", for: indexPath) as! MenuCollectionViewCell
+//        cell.configure(menu: self.menu[indexPath.row])
+//        return cell
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let menu = self.menu[indexPath.row]
+//        switch MenuIdentifier(rawValue: menu.identifier) {
+//        case .video:
+//            
+//            if !(self.lensObject?.getStreamType == .up) {
+//                
+//                let alert = UIAlertController(title: "Share Camera", message: "By clicking Share, you request the primary technician to allow you to share your camera stream.",preferredStyle: UIAlertController.Style.alert)
+//                alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: { _ in
+//                    //Cancel Action
+//                }))
+//                alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: {(_: UIAlertAction!) in
+//                    self.lensObject?.shareCamera()
+//                }))
+//                self.present(alert, animated: true, completion: nil)
+//            } else {
+//                let alert = UIAlertController(title: "Stop Camera", message: "Would you like to stop sharing your camera stream?",preferredStyle: UIAlertController.Style.alert)
+//                alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: { _ in
+//                    //Cancel Action
+//                }))
+//                alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.default, handler: {(_: UIAlertAction!) in
+//                    self.lensObject?.stopCamera()
+//                }))
+//                self.present(alert, animated: true, completion: nil)
+//            }
+//            
+//            print("")
+//            
+//        case .audio:
+//            let cell = collectionView.cellForItem(at: indexPath) as? MenuCollectionViewCell
+//            //Unmute audio
+//            if self.talkSetup.isMuteAudio {
+//                self.lensObject?.unmuteAudio()
+//                self.talkSetup.isMuteAudio = false
+//                cell?.title.text = "Mute Audio"
+//            } else {
+//                //Mute audio
+//                self.lensObject?.muteAudio()
+//                self.talkSetup.isMuteAudio = true
+//                cell?.title.text = "Unmute Audio"
+//            }
+//            
+//            print("")
+//        case .freeze:
+//            let cell = collectionView.cellForItem(at: indexPath) as? MenuCollectionViewCell
+//            if self.talkSetup.isMuteVideo {
+//                self.lensObject?.unmuteVideo()
+//                self.talkSetup.isMuteVideo = false
+//                cell?.title.text = "Freeze"
+//            } else {
+//                self.lensObject?.muteVideo()
+//                self.talkSetup.isMuteVideo = true
+//                cell?.title.text = "Unfreeze"
+//            }
+//            break
+//            
+//        case .liveText:
+//            self.lensObject?.requestOCR()
+//            DispatchQueue.main.async {
+//                self.loaderView.isHidden = false
+//            }
+//            print("")
+//            
+//        case .ScanQR:
+//            self.lensObject?.requestQR(retryMode: .RETRY_UNTIL_TIME_LIMIT)
+//            DispatchQueue.main.async {
+//                self.loaderView.isHidden = false
+//            }
+//            break
+//            
+//        case .swapCamera:
+//            if self.lensObject?.isCameraFacingFront ?? false {
+//                self.lensObject?.swapToBackCamera()
+//            } else {
+//                self.lensObject?.swapToFrontCamera()
+//            }
+//            print("")
+//            
+//        default:
+//            break
+//        }
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: 150, height: 50)
+//    }
+//}
 
 
-extension StreamingViewController: OtherActionProtocol {
+extension StreamingViewControllerForSwiftUI: OtherActionProtocol {
     func onFreezeSuccess() {
        print("Freeze Success")
     }
@@ -410,7 +397,7 @@ extension StreamingViewController: OtherActionProtocol {
     
 }
 
-extension StreamingViewController: ARProtocol {
+extension StreamingViewControllerForSwiftUI: ARProtocol {
     func onArCommentsReceived(annotationNode: LensSDK.AnnotationNotify) {
         print("Annotation Comments Received : \(String(describing: annotationNode.notes?.first?.data))")
     }
@@ -432,7 +419,7 @@ extension StreamingViewController: ARProtocol {
     
 }
 
-extension StreamingViewController: ChatProtocol {
+extension StreamingViewControllerForSwiftUI: ChatProtocol {
     func didReceive(_ chat: LensSDK.Chat) {
         
     }
