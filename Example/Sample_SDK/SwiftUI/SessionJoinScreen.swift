@@ -7,15 +7,19 @@
 //
 
 import SwiftUI
-import LensSDK
+ 
+#if canImport(Lens)
+import Lens
+#endif
+import LensCustomerSDK
 
 /// You can get this token from lens.zoho.com -> Settings -> mobile SDK -> create token
-var token:String = "wSsVR60jrBb1Xfx7njX+db07kQgEVQikEUt1ilP06377GvuWp8dtkUDIBFX0H/lKGDRrEDIU9r17mB0D0mJcio8omwlUXSiF9mqRe1U4J3x1p7/ukj7DWm1dkxOILIoNxAVimg=="
+var token:String = "OlyO55SGPxMhzMZ/fZGf36finRz2pfEK3HRBa6Sz0mKUkHS0AR2kGcRXZnqePsMvx61NoP8PwvvyS8OIw3eY45uhVrrzqo0KeItwz2yAguFPVT4fAJBbSGcuf7P7uZipJUA="
 
 
 struct SessionJoinScreen: View {
 
-    @State private var sessionId: String = "960203606"
+    @State private var sessionId: String = "670575281"
     @State private var arModeEnabled: Bool = true
     @State private var isPresentingDetailView = false // New state to control the presentation
     @State private var param: CustomerSessionParams? = nil
@@ -68,7 +72,7 @@ struct SessionJoinScreen: View {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
         if !sessionId.isEmpty {
             isLoading = true
-            LensCustomer.validateSessionForSDK(sessionKey: sessionId, token: token, base: URL.init(string: "https://lens.zoho.com")!) {  (validation) in
+            LensCustomer.validateSessionForSDK(sessionKey: sessionId, token: token, base: URL.init(string: "https://lens.localzoho.com")!) {  (validation) in
                 isLoading = false
                 switch validation {
                 case .validCustomer(let param):
@@ -78,7 +82,9 @@ struct SessionJoinScreen: View {
                     self.isPresentingDetailView = true
                     
                 case .error(let error):
-                    print(error!)
+                    
+                    print(" validateSessionForSDK error \(error!)")
+                    
                 default:break
                 }
                 

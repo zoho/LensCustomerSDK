@@ -15,7 +15,7 @@
 		3F85754A2A25CDA80022FBD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F8575482A25CDA80022FBD9 /* Main.storyboard */; };
 		3F85754C2A25CDC90022FBD9 /* CustomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F85754B2A25CDC90022FBD9 /* CustomModel.swift */; };
 		3F85754D2A25CDFA0022FBD9 /* StreamingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EBF52C24B73E5C00C226B8 /* StreamingViewController.swift */; };
-		3F85754E2A25CE050022FBD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E1CA624B5CF9100ACE8D3 /* ViewController.swift */; };
+		3FBF369B2A9E038900177B3F /* SessionJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF369A2A9E038900177B3F /* SessionJoinViewController.swift */; };
 		C24E1CA324B5CF9100ACE8D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E1CA224B5CF9100ACE8D3 /* AppDelegate.swift */; };
 		C24E1CA524B5CF9100ACE8D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E1CA424B5CF9100ACE8D3 /* SceneDelegate.swift */; };
 		C24E1CAC24B5CF9200ACE8D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C24E1CAB24B5CF9200ACE8D3 /* Assets.xcassets */; };
@@ -31,11 +31,11 @@
 		3F8575472A25CDA80022FBD9 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		3F8575482A25CDA80022FBD9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3F85754B2A25CDC90022FBD9 /* CustomModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomModel.swift; sourceTree = "<group>"; };
+		3FBF369A2A9E038900177B3F /* SessionJoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionJoinViewController.swift; sourceTree = "<group>"; };
 		7DC184E1D166726A2AB6A3AA /* Pods-Sample_SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample_SDK.release.xcconfig"; path = "Target Support Files/Pods-Sample_SDK/Pods-Sample_SDK.release.xcconfig"; sourceTree = "<group>"; };
 		C24E1C9F24B5CF9100ACE8D3 /* Sample_SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample_SDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24E1CA224B5CF9100ACE8D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C24E1CA424B5CF9100ACE8D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C24E1CA624B5CF9100ACE8D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C24E1CAB24B5CF9200ACE8D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C24E1CAE24B5CF9200ACE8D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C24E1CB024B5CF9200ACE8D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,8 +124,8 @@
 			children = (
 				3F8575402A25CCEF0022FBD9 /* SwiftUI */,
 				C24E1CA224B5CF9100ACE8D3 /* AppDelegate.swift */,
+				3FBF369A2A9E038900177B3F /* SessionJoinViewController.swift */,
 				C24E1CA424B5CF9100ACE8D3 /* SceneDelegate.swift */,
-				C24E1CA624B5CF9100ACE8D3 /* ViewController.swift */,
 				3F85754B2A25CDC90022FBD9 /* CustomModel.swift */,
 				3F8575472A25CDA80022FBD9 /* InitialViewController.swift */,
 				C2EBF52C24B73E5C00C226B8 /* StreamingViewController.swift */,
@@ -308,9 +308,9 @@
 				3F8575462A25CCEF0022FBD9 /* SessionJoinScreen.swift in Sources */,
 				3F85754D2A25CDFA0022FBD9 /* StreamingViewController.swift in Sources */,
 				C24E1CA324B5CF9100ACE8D3 /* AppDelegate.swift in Sources */,
-				3F85754E2A25CE050022FBD9 /* ViewController.swift in Sources */,
 				3F85754C2A25CDC90022FBD9 /* CustomModel.swift in Sources */,
 				3F8575452A25CCEF0022FBD9 /* StreamingViewControllerForSwiftUI.swift in Sources */,
+				3FBF369B2A9E038900177B3F /* SessionJoinViewController.swift in Sources */,
 				3F8575492A25CDA80022FBD9 /* InitialViewController.swift in Sources */,
 				3F8575442A25CCEF0022FBD9 /* StreamingView.swift in Sources */,
 				C24E1CA524B5CF9100ACE8D3 /* SceneDelegate.swift in Sources */,

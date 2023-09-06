@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LensSDK_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sample_SDK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,8 +26,25 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SDK Token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XI4-1A-9hV">
+                                <rect key="frame" x="57" y="196" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="1gc-5i-FZn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ar Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC7-1Y-cIM">
+                                <rect key="frame" x="57" y="328" width="65" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch toolTip="AR Mode" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="AR" translatesAutoresizingMaskIntoConstraints="NO" id="wZz-oA-Trs">
+                                <rect key="frame" x="142" y="323" width="51" height="31"/>
+                            </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvE-Gv-yRc">
-                                <rect key="frame" x="157" y="190" width="100" height="36"/>
+                                <rect key="frame" x="157" y="251" width="100" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="IJH-U6-nKW"/>
                                 </constraints>
@@ -38,29 +55,25 @@
                                     <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WzU-pd-N6Y"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ar Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC7-1Y-cIM">
-                                <rect key="frame" x="136" y="272" width="86" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch toolTip="AR Mode" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="AR" translatesAutoresizingMaskIntoConstraints="NO" id="wZz-oA-Trs">
-                                <rect key="frame" x="230" y="267" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="RvE-Gv-yRc" firstAttribute="centerX" secondItem="MWn-Cd-5bh" secondAttribute="centerX" id="OLq-Do-eYm"/>
+                            <constraint firstItem="HC7-1Y-cIM" firstAttribute="leading" secondItem="XI4-1A-9hV" secondAttribute="leading" id="S2X-Ma-ahx"/>
                             <constraint firstItem="MWn-Cd-5bh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="T0x-Wp-clO"/>
-                            <constraint firstItem="RvE-Gv-yRc" firstAttribute="top" secondItem="MWn-Cd-5bh" secondAttribute="bottom" constant="14" id="pWC-5x-fQR"/>
+                            <constraint firstItem="wZz-oA-Trs" firstAttribute="top" secondItem="RvE-Gv-yRc" secondAttribute="bottom" constant="36" id="UGx-mo-uZ8"/>
+                            <constraint firstItem="RvE-Gv-yRc" firstAttribute="top" secondItem="XI4-1A-9hV" secondAttribute="bottom" constant="21" id="Vrh-PC-gck"/>
+                            <constraint firstItem="wZz-oA-Trs" firstAttribute="leading" secondItem="HC7-1Y-cIM" secondAttribute="trailing" constant="20" id="o7f-ie-v2S"/>
+                            <constraint firstItem="XI4-1A-9hV" firstAttribute="top" secondItem="MWn-Cd-5bh" secondAttribute="bottom" constant="20" id="pWC-5x-fQR"/>
+                            <constraint firstItem="XI4-1A-9hV" firstAttribute="leading" secondItem="MWn-Cd-5bh" secondAttribute="leading" id="sVU-dp-zFd"/>
                             <constraint firstItem="MWn-Cd-5bh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yVA-JT-W9y"/>
+                            <constraint firstItem="HC7-1Y-cIM" firstAttribute="top" secondItem="RvE-Gv-yRc" secondAttribute="bottom" constant="41" id="ysh-Sd-1OI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fLB-BC-zCg"/>
                     <connections>
+                        <outlet property="TokenInput" destination="XI4-1A-9hV" id="McZ-9F-OKy"/>
                         <outlet property="arSwitch" destination="wZz-oA-Trs" id="UU2-8V-fgx"/>
                         <outlet property="sessionID" destination="MWn-Cd-5bh" id="dUB-IH-fEi"/>
                     </connections>
@@ -88,7 +101,7 @@
         <!--Streaming View Controller-->
         <scene sceneID="KIE-qr-olS">
             <objects>
-                <viewController storyboardIdentifier="streamingcontroller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VCX-3J-fdx" customClass="StreamingViewController" customModule="LensSDK_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="streamingcontroller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VCX-3J-fdx" customClass="StreamingViewController" customModule="Sample_SDK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zJO-1D-BqU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,7 +151,7 @@
                                     <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="menuCell" reuseIdentifier="menuCell" id="zhv-o2-lbx" customClass="MenuCollectionViewCell" customModule="LensSDK_Sample" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="menuCell" reuseIdentifier="menuCell" id="zhv-o2-lbx" customClass="MenuCollectionViewCell" customModule="Sample_SDK" customModuleProvider="target">
                                         <rect key="frame" x="20" y="0.0" width="100" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="n3j-TK-o4Z">
@@ -265,7 +278,7 @@
         <!--Streaming View Controller for SwiftUI-->
         <scene sceneID="XTH-kH-hTN">
             <objects>
-                <viewController restorationIdentifier="streamingcontroller_swiftui" storyboardIdentifier="streamingcontroller_swiftui" id="vwv-sn-IR0" userLabel="Streaming View Controller for SwiftUI" customClass="StreamingViewControllerForSwiftUI" customModule="LensSDK_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="streamingcontroller_swiftui" storyboardIdentifier="streamingcontroller_swiftui" id="vwv-sn-IR0" userLabel="Streaming View Controller for SwiftUI" customClass="StreamingViewControllerForSwiftUI" customModule="Sample_SDK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XuE-JM-pfP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -334,7 +347,7 @@
         <!--Initial View Controller-->
         <scene sceneID="bKd-fX-BU4">
             <objects>
-                <viewController id="x8B-xr-4bX" customClass="InitialViewController" customModule="LensSDK_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="x8B-xr-4bX" customClass="InitialViewController" customModule="Sample_SDK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bu1-ZF-gn8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

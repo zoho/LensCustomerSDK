@@ -7,11 +7,15 @@
 //
 
 import SwiftUI
-import LensSDK
+ 
+#if canImport(Lens)
+import Lens
+#endif
+import LensCustomerSDK
 import ARKit
 
 enum SessionMenu: String, Identifiable  {
-    case video, audio, liveText, ScanQR, swapCamera, freeze , exit
+    case video, audio, liveText, ScanQR, swapCamera, freeze , exit , chat
     var id: String {
            return self.rawValue
        }
@@ -51,7 +55,7 @@ struct StreamingView: View {
 
 
     let sessionMenus: [SessionMenu] = [
-        .freeze,.liveText,.swapCamera,.ScanQR
+        .chat ,.freeze,.liveText,.swapCamera,.ScanQR
     ]
 
     var body: some View {
@@ -205,7 +209,10 @@ struct MyViewControllerRepresentable: UIViewControllerRepresentable {
                    lensObject?.swapToFrontCamera()
                 }
     
-    
+            case .chat:
+                
+                break
+                
             default:
                 break
             }
