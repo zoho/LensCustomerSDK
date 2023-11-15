@@ -426,6 +426,16 @@ SWIFT_CLASS("_TtC15LensCustomerSDK21ChatletViewController")
 
 
 @class WKWebView;
+@class WKNavigation;
+@class WKNavigationResponse;
+
+@interface ChatletViewController (SWIFT_EXTENSION(LensCustomerSDK))
+- (void)webView:(WKWebView * _Nonnull)webView didCommitNavigation:(WKNavigation * _Null_unspecified)navigation;
+- (void)webView:(WKWebView * _Nonnull)webView didStartProvisionalNavigation:(WKNavigation * _Null_unspecified)navigation;
+- (void)webView:(WKWebView * _Nonnull)webView didFinishNavigation:(WKNavigation * _Null_unspecified)navigation;
+- (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationResponse:(WKNavigationResponse * _Nonnull)navigationResponse decisionHandler:(void (^ _Nonnull)(WKNavigationResponsePolicy))decisionHandler;
+@end
+
 @class WKWebViewConfiguration;
 @class WKNavigationAction;
 @class WKWindowFeatures;
@@ -444,16 +454,6 @@ SWIFT_CLASS("_TtC15LensCustomerSDK21ChatletViewController")
 - (void)downloadDidFinish:(WKDownload * _Nonnull)download SWIFT_AVAILABILITY(ios,introduced=14.5);
 /// Download did failed
 - (void)download:(WKDownload * _Nonnull)download didFailWithError:(NSError * _Nonnull)error resumeData:(NSData * _Nullable)resumeData SWIFT_AVAILABILITY(ios,introduced=14.5);
-@end
-
-@class WKNavigation;
-@class WKNavigationResponse;
-
-@interface ChatletViewController (SWIFT_EXTENSION(LensCustomerSDK))
-- (void)webView:(WKWebView * _Nonnull)webView didCommitNavigation:(WKNavigation * _Null_unspecified)navigation;
-- (void)webView:(WKWebView * _Nonnull)webView didStartProvisionalNavigation:(WKNavigation * _Null_unspecified)navigation;
-- (void)webView:(WKWebView * _Nonnull)webView didFinishNavigation:(WKNavigation * _Null_unspecified)navigation;
-- (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationResponse:(WKNavigationResponse * _Nonnull)navigationResponse decisionHandler:(void (^ _Nonnull)(WKNavigationResponsePolicy))decisionHandler;
 @end
 
 
@@ -598,6 +598,8 @@ SWIFT_CLASS("_TtC15LensCustomerSDK16NotificationView") SWIFT_AVAILABILITY(ios_ap
 SWIFT_CLASS("_TtC15LensCustomerSDK11Participant")
 @interface Participant : BaseParser
 @end
+
+
 
 
 

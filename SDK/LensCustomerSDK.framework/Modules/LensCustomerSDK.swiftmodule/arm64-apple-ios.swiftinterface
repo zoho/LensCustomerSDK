@@ -139,7 +139,7 @@ public enum CustomerAction : Swift.String {
   }
 }
 public enum ConferenceType : Swift.String {
-  case nrs_conferenece, unified_conference, smart_conference
+  case nrs_conferenece, unified_conference, smart_conference, peer_to_peer
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -205,7 +205,7 @@ public enum RoleEnum : Swift.String {
 }
 public enum ScanRequestType : Swift.Equatable {
   case LOCAL
-  case REMOTE(clientId: Swift.String)
+  case REMOTE(trigger_id: Swift.String)
   public static func == (a: LensCustomerSDK.ScanRequestType, b: LensCustomerSDK.ScanRequestType) -> Swift.Bool
 }
 public enum ScanState {
@@ -309,152 +309,248 @@ extension LensCustomerSDK.ChatletViewController {
   @available(iOS 14.5, *)
   @_Concurrency.MainActor(unsafe) @objc dynamic public func download(_ download: WebKit.WKDownload, didFailWithError error: Swift.Error, resumeData: Foundation.Data?)
 }
-@objc @_hasMissingDesignatedInitializers public class Chat : LensCustomerSDK.BaseParser {
-  public var clientID: Foundation.NSNumber?
-  final public let message: Swift.String?
-  public var participant: LensCustomerSDK.Participant?
-  final public let date: Foundation.Date
-  public init(with chatMsg: Swift.String?)
-  @objc deinit
-}
 public struct LensSessionContent {
-  public struct Session {
-    public static var Invite: Swift.String
-    public static var noChat: Swift.String
-    public static var invalid_client: Swift.String
-    public static var invalid_key: Swift.String
-    public static var Nointernet: Swift.String
-    public static var oopsWrong: Swift.String
-    public static var sessionExpired: Swift.String
-    public static var timeout: Swift.String
-    public static var leaveSession: Swift.String
-    public static var planError: Swift.String
-    public static var customerJoined: Swift.String
-    public static var customerLeft: Swift.String
-    public static var exitWarning: Swift.String
-    public static var clearAnnotaionConfirmation: Swift.String
-    public static var diffLocation: Swift.String
-    public static var inviteTechnician: Swift.String
-    public static var inviteTechnicianDescription: Swift.String
-    public static var share: Swift.String
-    public static let customer_already_active_join_as_technician: Swift.String
-    public static let customer_already_active_signin_as_technician: Swift.String
-    public struct Scan {
-      public static var scanError: Swift.String
+  public enum Session : Swift.String {
+    case Invite
+    case noChat
+    case invalid_client
+    case invalid_key
+    case Nointernet
+    case oopsWrong
+    case sessionExpired
+    case timeout
+    case leaveSession
+    case planError
+    case customerJoined
+    case customerLeft
+    case exitWarning
+    case clearAnnotaionConfirmation
+    case diffLocation
+    case inviteTechnician
+    case inviteTechnicianDescription
+    case share
+    case customer_already_active_join_as_technician
+    case customer_already_active_signin_as_technician
+    public var localized: Swift.String {
+      get
     }
-  }
-  public struct Chat {
-    public static let placeHolder: Swift.String
-    public static let title: Swift.String
-    public static let loading_chat: Swift.String
-    public static let download_completed: Swift.String
-    public static let downloaded_files_can_be_viewed_in_FilesApp: Swift.String
-    public static let starting_download: Swift.String
-    public static let wait_until_previous_download_finishes: Swift.String
-    public static let download_failed: Swift.String
-    public static let download_error_description: Swift.String
-  }
-  public struct InviteUser {
-    public static var inviteCustomerTitle: Swift.String
-    public static var inviteTechnicianTitle: Swift.String
-    public static var enterCustomerid: Swift.String
-    public static var inviteCustomerDescription: Swift.String
-    public static var linkDescription: Swift.String
-    public static var invitationSentToCustomer: Swift.String
-    public static var copiedInviteLink: Swift.String
-    public struct Error {
-      public static let failed: Swift.String
-      public static var invalidEmail: Swift.String {
+    public enum Scan : Swift.String {
+      case scanError
+      public var localized: Swift.String {
+        get
+      }
+      public init?(rawValue: Swift.String)
+      public typealias RawValue = Swift.String
+      public var rawValue: Swift.String {
         get
       }
     }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
   }
-  public struct ErrorMsg {
-    public static let accessDeniedMsgForPhotos: Swift.String
+  public enum Chat : Swift.String {
+    case placeHolder
+    case title
+    case loading_chat
+    case download_completed
+    case downloaded_files_can_be_viewed_in_FilesApp
+    case starting_download
+    case wait_until_previous_download_finishes
+    case download_failed
+    case download_error_description
+    public var localized: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
   }
-  public struct Notes {
-    public static var noteUpdate: Swift.String
-    public static var noteUpdateFailed: Swift.String
-    public static var noteFetchFailed: Swift.String
+  public enum InviteUser : Swift.String {
+    case inviteCustomerTitle
+    case inviteTechnicianTitle
+    case enterCustomerid
+    case inviteCustomerDescription
+    case linkDescription
+    case invitationSentToCustomer
+    case copiedInviteLink
+    public var localized: Swift.String {
+      get
+    }
+    public enum Error : Swift.String {
+      case failed
+      public var localized: Swift.String {
+        get
+      }
+      public static func invalidEmail() -> Swift.String
+      public init?(rawValue: Swift.String)
+      public typealias RawValue = Swift.String
+      public var rawValue: Swift.String {
+        get
+      }
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
   }
-  public struct Common {
-    public static var loading: Swift.String
-    public static var connecting: Swift.String
-    public static var joining: Swift.String
-    public static var deleting: Swift.String
-    public static let invalidEmail: Swift.String
-    public static let guest: Swift.String
-    public static let exit: Swift.String
-    public static let cancel: Swift.String
-    public static let end: Swift.String
-    public static let reply: Swift.String
-    public static let send: Swift.String
-    public static let ok: Swift.String
-    public static let settings: Swift.String
-    public static let capturing: Swift.String
-    public static let wait: Swift.String
-    public static let yes: Swift.String
-    public static let no: Swift.String
-    public static let customer: Swift.String
-    public static let deny: Swift.String
-    public static let allow: Swift.String
-    public static let view_now: Swift.String
-    public static let refresh: Swift.String
-    public static let close: Swift.String
+  public enum ErrorMsg : Swift.String {
+    case accessDeniedMsgForPhotos
+    public var localized: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
   }
-  public struct ARErroMessage {
-    public static var excessiveMotion: Swift.String
-    public static var insufficientFeatures: Swift.String
-    public static var notAvailable: Swift.String
-    public static var relocalizing: Swift.String
-    public static var initializing: Swift.String
+  public enum Notes : Swift.String {
+    case noteUpdate
+    case noteUpdateFailed
+    case noteFetchFailed
+    public var localized: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
   }
-  public struct Snapshot {
-    public static var failure: Swift.String
-    public static var success: Swift.String
-    public static var deleteSuccess: Swift.String
-    public static var deleteFailure: Swift.String
-    public static var deleteConfirmation: Swift.String
-    public static var freezeSuccess: Swift.String
-    public static var freezeInprogress: Swift.String
-    public static var unfreezed: Swift.String
-    public static var streamPaused: Swift.String
-    public static var recodingEnabled: Swift.String
-    public static var recordingStopped: Swift.String
-    public static var storageExceeded: Swift.String
-    public static var recordingNotEnabled: Swift.String
-    public static var selectAll: Swift.String
-    public static var view: Swift.String
-    public static var clear: Swift.String
-    public static var screenshotDownloadFailed: Swift.String
-    public static var freezeAlert: Swift.String
-    public static var freezeAlertHeader: Swift.String
-    public static var freezeAnnotateDownstreamer: Swift.String
+  public enum Common : Swift.String {
+    case loading
+    case connecting
+    case joining
+    case deleting
+    case invalidEmail
+    case guest
+    case exit
+    case cancel
+    case end
+    case reply
+    case send
+    case ok
+    case settings
+    case capturing
+    case wait
+    case yes
+    case no
+    case customer
+    case deny
+    case allow
+    case view_now
+    case refresh
+    case close
+    public var localized: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
   }
-  public struct CustomerActionContent {
-    public static var muteAudio: Swift.String
-    public static var unmuteAudio: Swift.String
-    public static var pauseVideo: Swift.String
-    public static var resumeVideo: Swift.String
-    public static var lockDevice: Swift.String
-    public static var unlockDevice: Swift.String
+  public enum ARErroMessage : Swift.String {
+    case excessiveMotion
+    case insufficientFeatures
+    case notAvailable
+    case relocalizing
+    case initializing
+    public var localized: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
   }
-  public struct ShareCamera {
-    public static var share: Swift.String
-    public static var shareMsgDescription: Swift.String
-    public static var shareMsgDescByPrimaryTech: Swift.String
-    public static var stopShareCamera: Swift.String
-    public static var stopShareCameraDescription: Swift.String
-    public static var shareCameraTechRequestTitle: Swift.String
-    public static var shareCameraTechRequestDesc: Swift.String
-    public static var noneSharing: Swift.String
+  public enum Snapshot : Swift.String {
+    case failure
+    case success
+    case deleteSuccess
+    case deleteFailure
+    case deleteConfirmation
+    case freezeSuccess
+    case freezeInprogress
+    case unfreezed
+    case streamPaused
+    case recodingEnabled
+    case recordingStopped
+    case storageExceeded
+    case recordingNotEnabled
+    case selectAll
+    case view
+    case clear
+    case screenshotDownloadFailed
+    case freezeAlert
+    case freezeAlertHeader
+    case freezeAnnotateDownstreamer
+    public var localized: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
   }
-  public struct Flash {
-    public static var flash_title: Swift.String
-    public static var flash_light_on: Swift.String
-    public static var flash_light_off: Swift.String
-    public static var flash_light_on_failed: Swift.String
-    public static var flash_light_off_failed: Swift.String
+  public enum CustomerActionContent : Swift.String {
+    case muteAudio
+    case unmuteAudio
+    case pauseVideo
+    case resumeVideo
+    case lockDevice
+    case unlockDevice
+    public var localized: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ShareCamera : Swift.String {
+    case share
+    case shareMsgDescription
+    case shareMsgDescByPrimaryTech
+    case stopShareCamera
+    case stopShareCameraDescription
+    case shareCameraTechRequestTitle
+    case shareCameraTechRequestDesc
+    case noneSharing
+    public var localized: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Flash : Swift.String {
+    case flash_title
+    case flash_light_on
+    case flash_light_off
+    case flash_light_on_failed
+    case flash_light_off_failed
+    public var localized: Swift.String {
+      get
+    }
+    public static func flash_light_on(by_participant: Swift.String) -> Swift.String
+    public static func flash_light_off(by_participant: Swift.String) -> Swift.String
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
   }
 }
 postfix operator |-|
@@ -601,6 +697,26 @@ extension UIKit.UIScreen {
 }
 public protocol NodeStateChangeCallback {
   func onNodeDeleteRequested(node: LensCustomerSDK.Node)
+}
+@_hasMissingDesignatedInitializers public class AnnotationNotes : Swift.Codable {
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@_hasMissingDesignatedInitializers public class AnnotaionNote : Swift.Codable {
+  public var data: Swift.String
+  final public let triggerID: Swift.String
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@_hasMissingDesignatedInitializers public class AnnotationNotify : Swift.Codable {
+  public var annotationObjectID: Swift.Int?
+  final public let triggerID: Swift.String?
+  public var notes: [LensCustomerSDK.AnnotaionNote]?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
 @_Concurrency.MainActor(unsafe) public class NotificationView : UIKit.UIView {
@@ -858,9 +974,12 @@ public protocol AnimationCacheProvider {
   func clearCache()
 }
 public class SocketHandler {
+  public var socket: LensCustomerSDK.WebSocketProtocol?
   public var timeOut: Swift.Double
   public var gateWayUrlRequest: Foundation.URLRequest!
-  public init(_ url: Foundation.URLRequest)
+  final public let writeQoS: Foundation.QualityOfService
+  final public let readQoS: Foundation.QualityOfService
+  public init(_ url: Foundation.URLRequest, writeQoS: Foundation.QualityOfService, readQoS: Foundation.QualityOfService)
   public var disableSSLCertValidation: Swift.Bool {
     get
     set
@@ -874,13 +993,7 @@ public class SocketHandler {
   public func reset()
   public func write(_ string: Swift.String?)
   public func write(_ data: Foundation.Data?)
-  public func setWriteQueueQoS(qos: Foundation.QualityOfService)
   public func disconnect()
-  @objc deinit
-}
-public class DisposableObserver : Swift.Equatable {
-  public static func == (lhs: LensCustomerSDK.DisposableObserver, rhs: LensCustomerSDK.DisposableObserver) -> Swift.Bool
-  public init(value: Swift.AnyObject)
   @objc deinit
 }
 extension Swift.Bool {
@@ -893,12 +1006,6 @@ public struct Vector1D {
 }
 public struct Vector3D {
   public init(x: Swift.Double, y: Swift.Double, z: Swift.Double)
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class BaseParser : ObjectiveC.NSObject {
-  @objc override dynamic public var description: Swift.String {
-    @objc get
-  }
-  @objc deinit
 }
 public class LRUAnimationCache : LensCustomerSDK.AnimationCacheProvider {
   public init()
@@ -1044,6 +1151,14 @@ public class VMSession {
 public class VMResponseSerialization {
   public var responseType: LensCustomerSDK.VMResponseType
   public init()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class Chat : LensCustomerSDK.BaseParser {
+  public var clientID: Foundation.NSNumber?
+  final public let message: Swift.String?
+  public var participant: LensCustomerSDK.Participant?
+  final public let date: Foundation.Date
+  public init(with chatMsg: Swift.String?)
   @objc deinit
 }
 extension Swift.Array {
@@ -1499,6 +1614,20 @@ extension UIKit.UIViewController : UIKit.UIPopoverPresentationControllerDelegate
   @_Concurrency.MainActor(unsafe) @objc dynamic open func prepareForPopoverPresentation(_ popoverPresentationController: UIKit.UIPopoverPresentationController)
   @_Concurrency.MainActor(unsafe) @objc dynamic open func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIKit.UIPopoverPresentationController)
 }
+public enum FlashActionType : Swift.String {
+  case turn_On, turn_Off
+  public init(boolean: Swift.Bool)
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class FlashSupportEvent : LensCustomerSDK.BaseParser {
+  public var is_flash_supported: Swift.Bool
+  public var current_flash_status: LensCustomerSDK.FlashActionType
+  @objc deinit
+}
 extension UIKit.UITableView {
   @_Concurrency.MainActor(unsafe) public func adjustTableViewHeaderFrameIfNeeded()
 }
@@ -1609,6 +1738,52 @@ extension ObjectiveC.NSObject {
 }
 extension LensCustomerSDK.AudioSessionHandler : WebRTC.RTCAudioSessionDelegate {
   @objc dynamic public func audioSessionDidChangeRoute(_ session: WebRTC.RTCAudioSession, reason: AVFAudio.AVAudioSession.RouteChangeReason, previousRoute: AVFAudio.AVAudioSessionRouteDescription)
+}
+@objc @_hasMissingDesignatedInitializers public class Participant : LensCustomerSDK.BaseParser {
+  public enum Role : Swift.String {
+    case technician, customer, secondary_technician, external_technician
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Status : Swift.String {
+    case UP, DOWN
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ParticpantOSType : Swift.String {
+    case ios, android
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var clientId: Foundation.NSNumber?
+  final public let role: LensCustomerSDK.Participant.Role?
+  final public let email: Swift.String?
+  public var status: LensCustomerSDK.Participant.Status?
+  final public let zuid: Foundation.NSNumber?
+  public var name: Swift.String? {
+    get
+  }
+  public var time: Swift.Int?
+  public var platformType: LensCustomerSDK.Participant.ParticpantOSType?
+  final public let app_version: Swift.String?
+  public var isNewEnahcementSupported: Swift.Bool {
+    get
+  }
+  public var isSupportNewAnnoation: Swift.Bool {
+    get
+  }
+  public init(selfEmail: Swift.String?, role: LensCustomerSDK.Participant.Role, status: LensCustomerSDK.Participant.Status?, zuid: Foundation.NSNumber?, display_name: Swift.String?, app_version: Swift.String?, joiningTime: Swift.Int?)
+  public static func == (lhs: LensCustomerSDK.Participant, rhs: LensCustomerSDK.Participant) -> Swift.Bool
+  @objc deinit
 }
 @objc final public class CompatibleAnimation : ObjectiveC.NSObject {
   @objc public init(name: Swift.String, bundle: Foundation.Bundle = Bundle.main)
@@ -1939,6 +2114,11 @@ public enum AssistSocketErrorState : Swift.Error {
     get
   }
 }
+public class DisposableObserver : Swift.Equatable {
+  public static func == (lhs: LensCustomerSDK.DisposableObserver, rhs: LensCustomerSDK.DisposableObserver) -> Swift.Bool
+  public init(value: Swift.AnyObject)
+  @objc deinit
+}
 extension UIKit.UIColor {
   convenience public init(red: Swift.Int, green: Swift.Int, blue: Swift.Int)
   convenience public init(rgb: Swift.Int)
@@ -2082,25 +2262,14 @@ public protocol AssistSocketProtocol : AnyObject {
   func didReceive(_ string: Swift.String)
   var canReceiveData: Swift.Bool { get set }
 }
-@_hasMissingDesignatedInitializers public class AnnotationNotes : Swift.Codable {
-  required public init(from decoder: Swift.Decoder) throws
-  @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-}
-@_hasMissingDesignatedInitializers public class AnnotaionNote : Swift.Codable {
-  public var data: Swift.String
-  final public let triggerID: Swift.String
-  required public init(from decoder: Swift.Decoder) throws
-  @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-}
-@_hasMissingDesignatedInitializers public class AnnotationNotify : Swift.Codable {
-  public var annotationObjectID: Swift.Int?
-  final public let triggerID: Swift.String?
-  public var notes: [LensCustomerSDK.AnnotaionNote]?
-  @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+public protocol WebSocketProtocol : AnyObject {
+  var disableSSLCertValidation: Swift.Bool { get set }
+  var is_connected: Swift.Bool { get }
+  func disconnect()
+  func write(data: Foundation.Data)
+  func write(string: Swift.String)
+  func connect(websocket url: Foundation.URLRequest)
+  func lostNetwork()
 }
 extension UIKit.UITextField {
   @_Concurrency.MainActor(unsafe) public var leftPading: CoreFoundation.CGFloat {
@@ -2162,6 +2331,12 @@ extension Foundation.URL {
   public func appendParams(param: [Swift.String : Any]) -> Foundation.URL?
   public static func constructURLString(API: Swift.String, service: Swift.String, protocol protocolString: Swift.String, domain: Swift.String) -> Swift.String
   public static func constructURL(API: Swift.String, service: Swift.String, protocol protocolString: Swift.String, domain: Swift.String) -> Foundation.URL?
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class BaseParser : ObjectiveC.NSObject {
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
 }
 public protocol AnnotationSelectionListener : AnyObject {
   func onAnnotationSelected(id: Swift.String, triggerId: Swift.String)
@@ -2250,20 +2425,6 @@ public class Asset : Swift.Codable {
   @_Concurrency.MainActor(unsafe) public func createOutlineNode() -> SceneKit.SCNNode
   @objc deinit
 }
-public enum FlashActionType : Swift.String {
-  case turn_On, turn_Off
-  public init(boolean: Swift.Bool)
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class FlashSupportEvent : LensCustomerSDK.BaseParser {
-  public var is_flash_supported: Swift.Bool
-  public var current_flash_status: LensCustomerSDK.FlashActionType
-  @objc deinit
-}
 extension LensCustomerSDK.Color : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
@@ -2347,52 +2508,6 @@ public class ResolutionHandler {
   public var viewRect: CoreFoundation.CGRect
   public init(fromView rect: CoreFoundation.CGRect)
   public func getVideoFrame(for input: LensCustomerSDK.DrawingInput) -> CoreFoundation.CGRect
-  @objc deinit
-}
-@objc @_hasMissingDesignatedInitializers public class Participant : LensCustomerSDK.BaseParser {
-  public enum Role : Swift.String {
-    case technician, customer, secondary_technician, external_technician
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public enum Status : Swift.String {
-    case UP, DOWN
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public enum ParticpantOSType : Swift.String {
-    case ios, android
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public var clientId: Foundation.NSNumber?
-  final public let role: LensCustomerSDK.Participant.Role?
-  final public let email: Swift.String?
-  public var status: LensCustomerSDK.Participant.Status?
-  final public let zuid: Foundation.NSNumber?
-  public var name: Swift.String? {
-    get
-  }
-  public var time: Swift.Int?
-  public var platformType: LensCustomerSDK.Participant.ParticpantOSType?
-  final public let app_version: Swift.String?
-  public var isNewEnahcementSupported: Swift.Bool {
-    get
-  }
-  public var isSupportNewAnnoation: Swift.Bool {
-    get
-  }
-  public init(selfEmail: Swift.String?, role: LensCustomerSDK.Participant.Role, status: LensCustomerSDK.Participant.Status?, zuid: Foundation.NSNumber?, display_name: Swift.String?, app_version: Swift.String?, joiningTime: Swift.Int?)
-  public static func == (lhs: LensCustomerSDK.Participant, rhs: LensCustomerSDK.Participant) -> Swift.Bool
   @objc deinit
 }
 public struct SSLClientCertificateError : Foundation.LocalizedError {
@@ -2555,6 +2670,45 @@ extension LensCustomerSDK.AnnotationSelection : Swift.Hashable {}
 extension LensCustomerSDK.AnnotationSelection : Swift.RawRepresentable {}
 extension LensCustomerSDK.AR_TrackingState : Swift.Equatable {}
 extension LensCustomerSDK.AR_TrackingState : Swift.Hashable {}
+extension LensCustomerSDK.LensSessionContent.Session : Swift.Equatable {}
+extension LensCustomerSDK.LensSessionContent.Session : Swift.Hashable {}
+extension LensCustomerSDK.LensSessionContent.Session : Swift.RawRepresentable {}
+extension LensCustomerSDK.LensSessionContent.Session.Scan : Swift.Equatable {}
+extension LensCustomerSDK.LensSessionContent.Session.Scan : Swift.Hashable {}
+extension LensCustomerSDK.LensSessionContent.Session.Scan : Swift.RawRepresentable {}
+extension LensCustomerSDK.LensSessionContent.Chat : Swift.Equatable {}
+extension LensCustomerSDK.LensSessionContent.Chat : Swift.Hashable {}
+extension LensCustomerSDK.LensSessionContent.Chat : Swift.RawRepresentable {}
+extension LensCustomerSDK.LensSessionContent.InviteUser : Swift.Equatable {}
+extension LensCustomerSDK.LensSessionContent.InviteUser : Swift.Hashable {}
+extension LensCustomerSDK.LensSessionContent.InviteUser : Swift.RawRepresentable {}
+extension LensCustomerSDK.LensSessionContent.InviteUser.Error : Swift.Equatable {}
+extension LensCustomerSDK.LensSessionContent.InviteUser.Error : Swift.Hashable {}
+extension LensCustomerSDK.LensSessionContent.InviteUser.Error : Swift.RawRepresentable {}
+extension LensCustomerSDK.LensSessionContent.ErrorMsg : Swift.Equatable {}
+extension LensCustomerSDK.LensSessionContent.ErrorMsg : Swift.Hashable {}
+extension LensCustomerSDK.LensSessionContent.ErrorMsg : Swift.RawRepresentable {}
+extension LensCustomerSDK.LensSessionContent.Notes : Swift.Equatable {}
+extension LensCustomerSDK.LensSessionContent.Notes : Swift.Hashable {}
+extension LensCustomerSDK.LensSessionContent.Notes : Swift.RawRepresentable {}
+extension LensCustomerSDK.LensSessionContent.Common : Swift.Equatable {}
+extension LensCustomerSDK.LensSessionContent.Common : Swift.Hashable {}
+extension LensCustomerSDK.LensSessionContent.Common : Swift.RawRepresentable {}
+extension LensCustomerSDK.LensSessionContent.ARErroMessage : Swift.Equatable {}
+extension LensCustomerSDK.LensSessionContent.ARErroMessage : Swift.Hashable {}
+extension LensCustomerSDK.LensSessionContent.ARErroMessage : Swift.RawRepresentable {}
+extension LensCustomerSDK.LensSessionContent.Snapshot : Swift.Equatable {}
+extension LensCustomerSDK.LensSessionContent.Snapshot : Swift.Hashable {}
+extension LensCustomerSDK.LensSessionContent.Snapshot : Swift.RawRepresentable {}
+extension LensCustomerSDK.LensSessionContent.CustomerActionContent : Swift.Equatable {}
+extension LensCustomerSDK.LensSessionContent.CustomerActionContent : Swift.Hashable {}
+extension LensCustomerSDK.LensSessionContent.CustomerActionContent : Swift.RawRepresentable {}
+extension LensCustomerSDK.LensSessionContent.ShareCamera : Swift.Equatable {}
+extension LensCustomerSDK.LensSessionContent.ShareCamera : Swift.Hashable {}
+extension LensCustomerSDK.LensSessionContent.ShareCamera : Swift.RawRepresentable {}
+extension LensCustomerSDK.LensSessionContent.Flash : Swift.Equatable {}
+extension LensCustomerSDK.LensSessionContent.Flash : Swift.Hashable {}
+extension LensCustomerSDK.LensSessionContent.Flash : Swift.RawRepresentable {}
 extension UIKit.UIDevice.ScreenType : Swift.Equatable {}
 extension UIKit.UIDevice.ScreenType : Swift.Hashable {}
 extension UIKit.UIDevice.ScreenType : Swift.RawRepresentable {}
@@ -2592,6 +2746,18 @@ extension LensCustomerSDK.CloseCode : Swift.RawRepresentable {}
 extension LensCustomerSDK.WebSocket.OpCode : Swift.Equatable {}
 extension LensCustomerSDK.WebSocket.OpCode : Swift.Hashable {}
 extension LensCustomerSDK.WebSocket.OpCode : Swift.RawRepresentable {}
+extension LensCustomerSDK.FlashActionType : Swift.Equatable {}
+extension LensCustomerSDK.FlashActionType : Swift.Hashable {}
+extension LensCustomerSDK.FlashActionType : Swift.RawRepresentable {}
+extension LensCustomerSDK.Participant.Role : Swift.Equatable {}
+extension LensCustomerSDK.Participant.Role : Swift.Hashable {}
+extension LensCustomerSDK.Participant.Role : Swift.RawRepresentable {}
+extension LensCustomerSDK.Participant.Status : Swift.Equatable {}
+extension LensCustomerSDK.Participant.Status : Swift.Hashable {}
+extension LensCustomerSDK.Participant.Status : Swift.RawRepresentable {}
+extension LensCustomerSDK.Participant.ParticpantOSType : Swift.Equatable {}
+extension LensCustomerSDK.Participant.ParticpantOSType : Swift.Hashable {}
+extension LensCustomerSDK.Participant.ParticpantOSType : Swift.RawRepresentable {}
 extension LensCustomerSDK.LensFlashError : Swift.Equatable {}
 extension LensCustomerSDK.LensFlashError : Swift.Hashable {}
 extension LensCustomerSDK.LensFlashError : Swift.RawRepresentable {}
@@ -2621,9 +2787,6 @@ extension Foundation.Date.SearchDirection : Swift.Hashable {}
 extension LensCustomerSDK.CanvasBoardSettings : Swift.Equatable {}
 extension LensCustomerSDK.CanvasBoardSettings : Swift.Hashable {}
 extension LensCustomerSDK.CanvasBoardSettings : Swift.RawRepresentable {}
-extension LensCustomerSDK.FlashActionType : Swift.Equatable {}
-extension LensCustomerSDK.FlashActionType : Swift.Hashable {}
-extension LensCustomerSDK.FlashActionType : Swift.RawRepresentable {}
 extension LensCustomerSDK.VMHTTPMethod : Swift.Equatable {}
 extension LensCustomerSDK.VMHTTPMethod : Swift.Hashable {}
 extension LensCustomerSDK.VMHTTPMethod : Swift.RawRepresentable {}
@@ -2632,15 +2795,6 @@ extension LensCustomerSDK.VMSessionError : Swift.Hashable {}
 extension LensCustomerSDK.VMSessionError : Swift.RawRepresentable {}
 extension LensCustomerSDK.VMResponseType : Swift.Equatable {}
 extension LensCustomerSDK.VMResponseType : Swift.Hashable {}
-extension LensCustomerSDK.Participant.Role : Swift.Equatable {}
-extension LensCustomerSDK.Participant.Role : Swift.Hashable {}
-extension LensCustomerSDK.Participant.Role : Swift.RawRepresentable {}
-extension LensCustomerSDK.Participant.Status : Swift.Equatable {}
-extension LensCustomerSDK.Participant.Status : Swift.Hashable {}
-extension LensCustomerSDK.Participant.Status : Swift.RawRepresentable {}
-extension LensCustomerSDK.Participant.ParticpantOSType : Swift.Equatable {}
-extension LensCustomerSDK.Participant.ParticpantOSType : Swift.Hashable {}
-extension LensCustomerSDK.Participant.ParticpantOSType : Swift.RawRepresentable {}
 extension LensCustomerSDK.AnnotationType : Swift.Equatable {}
 extension LensCustomerSDK.AnnotationType : Swift.Hashable {}
 extension LensCustomerSDK.AnnotationType : Swift.RawRepresentable {}

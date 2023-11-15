@@ -10,7 +10,7 @@
 		</data>
 		<key>Assets.scnassets/CameraSetup.scn</key>
 		<data>
-		qPoNvJtkoTlw7wMCWBw/AKzw0+A=
+		IkN/EQi0ghlGMA0Jm3XDpyOKLfA=
 		</data>
 		<key>Assets.scnassets/wireframe_shader.metal</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/LensCustomerSDK-Swift.h</key>
 		<data>
-		TAkJ+ynbGJqtfmTq4Tzx1oAIh70=
+		M5LrhjjpisVPGPkH2D53lgoL9jw=
 		</data>
 		<key>Headers/LensCustomerSDK.h</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		nSm0r9h3SeQ+C/ocyzgDPClAjtQ=
+		TL13/fW6uE0bHuFMOCZzm4pzVgw=
 		</data>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		H+Y1jDuKk5FOogcruJBFQX2lItQ=
+		xwmUD/VqfEQB6LHZZG8v2g7msE8=
 		</data>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		H+Y1jDuKk5FOogcruJBFQX2lItQ=
+		xwmUD/VqfEQB6LHZZG8v2g7msE8=
 		</data>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		uDglUiXLIpYZI39+XLsHXMq+Rhc=
+		AR9pwuCVS0qIVZssbiTRRxZqLDM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -185,7 +185,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			X5HT7dexbZLRD9p8fwd08XmIw+JM2jMvcWiLz+yGcCM=
+			SJzL3xqc1IvDgHYF72xPRj02Z4QC+kcF7suUdDNVpkk=
 			</data>
 		</dict>
 		<key>Assets.scnassets/wireframe_shader.metal</key>
@@ -199,7 +199,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eOHXrnvfdnKcQ2eD5YEeyBIDOrTkJ0Vl2My5OSnOjbA=
+			8/bQqIcOysbxH7fMtQPg0J2DlhU1CukPBC3CFxT9pb0=
 			</data>
 		</dict>
 		<key>Headers/LensCustomerSDK.h</key>
@@ -227,14 +227,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			g4T4fjiioynRfSAEt8+RbeC71nOE+ZqZ2Cgzlw7fWQ4=
+			wm4UeE9En2hepUZRfSeXdfnseWAVgD1yEkOiEnhiQiQ=
 			</data>
 		</dict>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3Z5+osrea2UeBki+zLasTqmxuui+ssRsRTxTCXetoDg=
+			77CzCqRpRzpmE7F1PeqsMxvUZXUCoio1Kp5R9dpJz/s=
 			</data>
 		</dict>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -248,14 +248,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3Z5+osrea2UeBki+zLasTqmxuui+ssRsRTxTCXetoDg=
+			77CzCqRpRzpmE7F1PeqsMxvUZXUCoio1Kp5R9dpJz/s=
 			</data>
 		</dict>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wNhuj0uiznpZz5GsmHQdM9BLFJAOz3OD2gw2tknifvU=
+			bSidXZ2UwwItxMkX1x4Xo57PYALpucahjAT5yQ9xzpo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
