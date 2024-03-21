@@ -58,9 +58,9 @@ class StreamingViewController: UIViewController {
     static  func getViewcontroller(param:CustomerSessionParams,isARSupported:Bool) -> StreamingViewController {
         
         let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "streamingcontroller") as! StreamingViewController
-      controller.connectionParam = param
-      controller.talkSetup.isMuteAudio = false
-      controller.isARsupport = isARSupported
+        controller.connectionParam = param
+        controller.talkSetup.isMuteAudio = false
+        controller.isARsupport = isARSupported
         controller.modalPresentationStyle = .fullScreen
         return controller
         
