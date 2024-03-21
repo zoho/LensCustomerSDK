@@ -13,17 +13,19 @@ import Lens
 #endif
 import LensCustomerSDK
 
-/// You can get this token from lens.zoho.com -> Settings -> mobile SDK -> create token
-var token:String = "OlyO55SGPxMhzMZ/fZGf36finRz2pfEK3HRBa6Sz0mKUkHS0AR2kGcRXZnqePsMvx61NoP8PwvvyS8OIw3eY45uhVrrzqo0KeItwz2yAguFPVT4fAJBbSGcuf7P7uZipJUA="
-
-
 struct SessionJoinScreen: View {
 
-    @State private var sessionId: String = "670575281"
+    @State private var sessionId: String = session_Key
+    @State private var sdkToken: String = token
     @State private var arModeEnabled: Bool = true
+    
     @State private var isPresentingDetailView = false // New state to control the presentation
-    @State private var param: CustomerSessionParams? = nil
+    @State private var isErrorState = false // State used to detect SDK validation errors
     @State private var isLoading = false // New state to control the loader
+    
+    @State private var param: CustomerSessionParams? = nil
+    @State private var validationError: Error? = nil
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             TextField("Enter session ID", text: $sessionId)
@@ -31,31 +33,52 @@ struct SessionJoinScreen: View {
                 .padding()
                 .keyboardType(.numberPad)
             
+            TextField("Enter SDK Token", text: $sdkToken)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+                .keyboardType(.default)
+            
             Button(action: {
-                // Add your submit button action here
-                submitButtonTapped()
-            }) {
+                DispatchQueue.main.async {
+                    submitButtonTapped()
+                }
+            }, label: {
                 Text("Submit")
                     .foregroundColor(.white)
-                    .padding(.horizontal, 40) // Increase the right and left padding
-                    .padding(.vertical, 10) // Increase the top and bottom padding
-                    .background(
-                        RoundedRectangle(cornerRadius: 20) // Make it like a tube by using RoundedRectangle with a corner radius
-                            .fill(Color.blue)
-                    )
-            }
+                    .padding()
+                    .frame(maxWidth: .infinity)
+            })
+            .padding()
+            .background(
+                RoundedRectangle(cornerRadius: 20) // Make it like a tube by using RoundedRectangle with a corner radius
+                    .fill(Color.blue)
+            )
             
             Toggle("AR Mode", isOn: $arModeEnabled)
-                .padding(.leading)
+                .padding()
         }
         .disabled(isLoading)
         .padding()
         .fullScreenCover(isPresented: $isPresentingDetailView) {
-                    if let param = param {
-                        StreamingView(connectionParam: param,isARsupport: arModeEnabled)
-                            .edgesIgnoringSafeArea(.all)
-                    }
-                }
+            if let param = param {
+                StreamingView(connectionParam: param, isARsupport: arModeEnabled)
+                    .edgesIgnoringSafeArea(.all)
+            }
+        }
+        .alert(isPresented: $isErrorState, content: {
+            var errorMessage: String
+            if let error = validationError {
+                errorMessage = "\(error)"
+            } else {
+                errorMessage = "Error is nil"
+            }
+            return Alert(
+                title: Text("SDK Session Validation Error"),
+                message: Text(errorMessage),
+                dismissButton: .default(Text("OK"))
+            )
+        })
+        
       
         if isLoading {
             ProgressView.init {
@@ -69,33 +92,32 @@ struct SessionJoinScreen: View {
     func submitButtonTapped() {
         // Handle submit button action here
         print("Submit button tapped")
-        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
         if !sessionId.isEmpty {
             isLoading = true
-            LensCustomer.validateSessionForSDK(sessionKey: sessionId, token: token, base: URL.init(string: "https://lens.localzoho.com")!) {  (validation) in
-                isLoading = false
+            LensCustomer.validateSessionForSDK(sessionKey: sessionId, token: sdkToken, base: URL.init(string: url)!) {  (validation) in
                 switch validation {
                 case .validCustomer(let param):
-                    
-                    
                     self.param = param
+                    // Set the isPresentingDetailView to true to present the streaming view
                     self.isPresentingDetailView = true
+                    self.validationError = nil
+                    self.isErrorState = false
+                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                    break
                     
                 case .error(let error):
-                    
+                    self.param = nil
+                    self.isPresentingDetailView = false
                     print(" validateSessionForSDK error \(error!)")
+                    self.isErrorState = true
+                    self.validationError = error
+                    break
                     
                 default:break
                 }
-                
+                isLoading = false
             }
-            
         }
-        
-        
-        
-        // Set the isPresentingDetailView to true to present the detail view
-        isPresentingDetailView = true
     }
 }
 

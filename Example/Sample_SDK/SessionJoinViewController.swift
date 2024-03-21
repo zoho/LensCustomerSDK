@@ -13,16 +13,17 @@ import Lens
 #endif
 import LensCustomerSDK
 
+//Properties
+let url = "https://lens.zoho.com"
+let session_Key = ""
+/// You can get this token from lens.zoho.com -> Settings -> mobile SDK -> create token
+let token = ""
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var sessionID: UITextField!
     @IBOutlet weak var arSwitch: UISwitch!
     @IBOutlet weak var TokenInput: UITextField!
-    
-    //Properties
-    let url = "https://lens.zoho.com"
-    let session_Key = ""
-    let token = ""
     
     var param:CustomerSessionParams!
     var  default_token:String {
@@ -31,7 +32,7 @@ class ViewController: UIViewController {
             UserDefaults.standard.setValue(newValue, forKey: "sdk_token")
         }
         get{
-            return UserDefaults.standard.value(forKey:"sdk_token") as? String ?? self.token
+            return UserDefaults.standard.value(forKey:"sdk_token") as? String ?? token
         }
     }
     override func viewDidLoad() {
