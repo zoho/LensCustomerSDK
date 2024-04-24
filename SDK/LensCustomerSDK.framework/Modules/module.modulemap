@@ -1,7 +1,7 @@
 framework module LensCustomerSDK {
   umbrella header "LensCustomerSDK.h"
-
   export *
+
   module * { export * }
 }
 

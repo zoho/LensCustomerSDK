@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
 // swift-module-flags: -target arm64-apple-ios12.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name LensCustomerSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import ARKit
@@ -10,15 +10,21 @@ import CommonCrypto
 import CoreData
 import CoreFoundation
 import CoreGraphics
+import CoreImage
+import CoreMedia
 import CoreText
+import CoreVideo
+import DeveloperToolsSupport
 import Foundation
 @_exported import LensCustomerSDK
+import Metal
 import Photos
 import QuartzCore
 import SceneKit
 import Security
 import SnapKit
 import Swift
+import SwiftUI
 import SystemConfiguration
 import UIKit
 import UniformTypeIdentifiers
@@ -29,11 +35,12 @@ import WebKit
 import WebRTC
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 import zlib
 public enum SessionValidationResponse {
-  case validTechnician(LensCustomerSDK.TechnicianSessionParams)
-  case validCustomer(LensCustomerSDK.CustomerSessionParams)
-  case error(Swift.Error?)
+  case validTechnician(any LensCustomerSDK.TechnicianSessionParams)
+  case validCustomer(any LensCustomerSDK.CustomerSessionParams)
+  case error((any Swift.Error)?)
   public enum SessionValidationError : Swift.Error {
     case invalidKey
     case invalidLicence
@@ -44,6 +51,9 @@ public enum SessionValidationResponse {
     case differentOrg
     case appUpgrade
     case customer_already_active_in_session
+    case parameterMissing
+    case unauthorized
+    case userActionNotAllowed
     public static func == (a: LensCustomerSDK.SessionValidationResponse.SessionValidationError, b: LensCustomerSDK.SessionValidationResponse.SessionValidationError) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
@@ -72,9 +82,9 @@ public enum Features : Swift.String {
 }
 public enum AssisLensStates {
   case socketConnected, localPeerHandShakeInitated, localPeerHandShakeDone, remotePeerHandshakeInitated, remotePeerHandshakeDone, connectionCompleted, localIceCandidatesConnectionFailure, remoteIceCandidatesConnectionFailure
-  case disconnected(Swift.Error?)
+  case disconnected((any Swift.Error)?)
   public enum AssistLensDisconnectState : Swift.Error {
-    case noInternet, customerEndSession, technicianEndSession, timeout, invalid_client, invalid_key, session_expired, localPeerHandShakeError, remotePeerHandShakeError, serverEndedSession, openedInDifferentLocation, customer_already_active_in_session
+    case noInternet, customerEndSession, technicianEndSession, timeout, invalid_client, invalid_key, session_expired, localPeerHandShakeError, remotePeerHandShakeError, serverEndedSession, openedInDifferentLocation, customer_already_active_in_session, secTechEntryRejected
     public static func == (a: LensCustomerSDK.AssisLensStates.AssistLensDisconnectState, b: LensCustomerSDK.AssisLensStates.AssistLensDisconnectState) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
@@ -139,7 +149,7 @@ public enum CustomerAction : Swift.String {
   }
 }
 public enum ConferenceType : Swift.String {
-  case nrs_conferenece, unified_conference, smart_conference, peer_to_peer
+  case smart_conference, peer_to_peer
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -224,7 +234,7 @@ public struct ScanError : Swift.Error {
   public let errorMessage: Swift.String
 }
 public enum MonitorActionEnum : Swift.String {
-  case OPEN, UPDATE, SELECT, DESELECT, DELETE, TURN_ON, TURN_OFF
+  case OPEN, UPDATE, SELECT, DESELECT, DELETE, TURN_ON, TURN_OFF, ARROW, PENCIL, RECTANGLE, ELLIPSE, MEASUREMENT
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -232,7 +242,7 @@ public enum MonitorActionEnum : Swift.String {
   }
 }
 public enum MonitorFeatureEnum : Swift.String {
-  case AR_NOTES, OCR, QR, FLASH
+  case AR_NOTES, OCR, QR, FLASH, ANNOTATE
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -274,7 +284,7 @@ public enum AR_TrackingState {
 @objc @_Concurrency.MainActor(unsafe) open class ChatletViewController : UIKit.UIViewController, WebKit.WKDownloadDelegate, WebKit.WKNavigationDelegate, WebKit.WKUIDelegate {
   @_Concurrency.MainActor(unsafe) public var new_chat_notification: LensCustomerSDK.LensBind<Swift.Bool>
   @_Concurrency.MainActor(unsafe) public var chat_open_request: LensCustomerSDK.LensBind<Swift.Bool>
-  @_Concurrency.MainActor(unsafe) public init(connection_param: LensCustomerSDK.CommonConnectionParams)
+  @_Concurrency.MainActor(unsafe) public init(connection_param: any LensCustomerSDK.CommonConnectionParams)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
@@ -307,7 +317,15 @@ extension LensCustomerSDK.ChatletViewController {
   @available(iOS 14.5, *)
   @_Concurrency.MainActor(unsafe) @objc dynamic public func downloadDidFinish(_ download: WebKit.WKDownload)
   @available(iOS 14.5, *)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func download(_ download: WebKit.WKDownload, didFailWithError error: Swift.Error, resumeData: Foundation.Data?)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func download(_ download: WebKit.WKDownload, didFailWithError error: any Swift.Error, resumeData: Foundation.Data?)
+}
+@objc @_hasMissingDesignatedInitializers public class Chat : LensCustomerSDK.BaseParser {
+  public var clientID: Foundation.NSNumber?
+  final public let message: Swift.String?
+  public var participant: LensCustomerSDK.Participant?
+  final public let date: Foundation.Date
+  public init(with chatMsg: Swift.String?)
+  @objc deinit
 }
 public struct LensSessionContent {
   public enum Session : Swift.String {
@@ -328,9 +346,24 @@ public struct LensSessionContent {
     case diffLocation
     case inviteTechnician
     case inviteTechnicianDescription
+    case inviteInternalTechnicianDescription
+    case inviteExternalTechnicianDescription
+    case shareCopyInviteTechnician
     case share
+    case copy
     case customer_already_active_join_as_technician
     case customer_already_active_signin_as_technician
+    case secTechEntryRequestTitle
+    case secTechEntryRequestDesc
+    case secTechEntryRequestAccept
+    case secTechEntryRequestReject
+    case emailInviteFailedTitle
+    case emailInviteFailedDesc
+    case inviteeNotInOrgTitle
+    case inviteeNotInOrgDesc
+    case inviteSentSuccess
+    case shareSessionLink
+    case sessionLinkCopied
     public var localized: Swift.String {
       get
     }
@@ -570,13 +603,6 @@ extension UIKit.UIView {
   final public let animationKeypath: LensCustomerSDK.AnimationKeypath
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class LineNode : LensCustomerSDK.Node {
-  @_Concurrency.MainActor(unsafe) public static let LINE_NODE_NAME: Swift.String
-  @_Concurrency.MainActor(unsafe) public func reset()
-  @_Concurrency.MainActor(unsafe) public func addPointAndCreateVertices(sceneView: ARKit.ARSCNView, wx: Swift.Float, wy: Swift.Float, wz: Swift.Float, withInvertedTriangle isInvertedTriangle: Swift.Bool = true)
-  @_Concurrency.MainActor(unsafe) override public func createOutlineNode() -> SceneKit.SCNNode
-  @objc deinit
-}
 extension Foundation.Data {
   public var utf8String: Swift.String? {
     get
@@ -642,16 +668,19 @@ extension Swift.String {
   public func jsonStringParse() -> Any?
   public func heightWithConstrainedWidth(width: CoreFoundation.CGFloat, font: UIKit.UIFont) -> CoreFoundation.CGFloat
 }
-public protocol ARViewDelegate : AnyObject {
-  func didChanged(_ size: CoreFoundation.CGSize)
-  func didChange(tracking state: ARKit.ARCamera.TrackingState)
-  func onVideoFrameUpdate(frameBuffer: CoreVideo.CVPixelBuffer, rotation: Swift.Int, timestamp: Swift.Int64)
-}
 public protocol LensSessionProtocolDelegate {
   func flash_change(is_supported: Swift.Bool?, current_flash_status: Swift.Bool)
   func flash_change_triggered(by_participant_name: Swift.String?, isOn: Swift.Bool)
   func flash_change_failed(error_message: Swift.String, isOn: Swift.Bool)
   func chatlet_feature_status(is_enabled: Swift.Bool)
+}
+@available(iOS 11.0, *)
+@objc public protocol RecordARDelegate {
+  @objc func recorder(didEndRecording path: Foundation.URL, with noError: Swift.Bool)
+  @objc func recorder(didFailRecording error: (any Swift.Error)?, and status: Swift.String)
+  @objc optional func recorder(didCancelRecording status: Swift.String)
+  @objc optional func recorder(didUpdateRecording duration: Foundation.TimeInterval)
+  @objc func recorder(willEnterBackground status: LensCustomerSDK.RecordARStatus)
 }
 extension UIKit.UIDevice {
   @_Concurrency.MainActor(unsafe) public var isIPad: Swift.Bool {
@@ -695,28 +724,21 @@ extension UIKit.UIScreen {
     get
   }
 }
-public protocol NodeStateChangeCallback {
-  func onNodeDeleteRequested(node: LensCustomerSDK.Node)
+@objc public enum ARInputViewOrientation : Swift.Int {
+  case portrait = 1
+  case landscapeLeft = 3
+  case landscapeRight = 4
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
 }
-@_hasMissingDesignatedInitializers public class AnnotationNotes : Swift.Codable {
-  required public init(from decoder: Swift.Decoder) throws
-  @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-}
-@_hasMissingDesignatedInitializers public class AnnotaionNote : Swift.Codable {
-  public var data: Swift.String
-  final public let triggerID: Swift.String
-  required public init(from decoder: Swift.Decoder) throws
-  @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-}
-@_hasMissingDesignatedInitializers public class AnnotationNotify : Swift.Codable {
-  public var annotationObjectID: Swift.Int?
-  final public let triggerID: Swift.String?
-  public var notes: [LensCustomerSDK.AnnotaionNote]?
-  @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+public enum ARInputViewOrientationMode {
+  case auto
+  case all
+  case manual(subviews: [UIKit.UIView])
+  case disabled
 }
 @objc @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
 @_Concurrency.MainActor(unsafe) public class NotificationView : UIKit.UIView {
@@ -734,6 +756,15 @@ extension UIKit.UIView {
   @_Concurrency.MainActor(unsafe) public func showNotificationInWindow(message: Swift.String, bgColor: UIKit.UIColor? = nil, textColor: UIKit.UIColor? = nil, show duration: Foundation.TimeInterval = 4, completion: (() -> Swift.Void)? = nil)
   @_Concurrency.MainActor(unsafe) public func showNotificationBanner(message: Swift.String, bgColor: UIKit.UIColor? = nil, textColor: UIKit.UIColor? = nil, show duration: Foundation.TimeInterval = 4, completion: (() -> Swift.Void)? = nil)
   @_Concurrency.MainActor(unsafe) public func dismissNotificationView()
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class LineNode : LensCustomerSDK.Node {
+  @_Concurrency.MainActor(unsafe) public static let LINE_NODE_NAME: Swift.String
+  @_Concurrency.MainActor(unsafe) public func reset()
+  @_Concurrency.MainActor(unsafe) public func getLineVertextCameraPoint(forIndex index: Swift.Int) -> SceneKit.SCNVector3
+  @_Concurrency.MainActor(unsafe) public func getLineVertexCameraNode(forIndex index: Swift.Int) -> SceneKit.SCNNode
+  @_Concurrency.MainActor(unsafe) public func addPointAndCreateVertices(sceneView: ARKit.ARSCNView, wx: Swift.Float, wy: Swift.Float, wz: Swift.Float, withInvertedTriangle isInvertedTriangle: Swift.Bool = true)
+  @_Concurrency.MainActor(unsafe) override public func createOutlineNode() -> SceneKit.SCNNode
+  @objc deinit
 }
 extension UIKit.UIButton {
   @objc @IBInspectable @_Concurrency.MainActor(unsafe) dynamic public var disabledTitle: Swift.String {
@@ -770,9 +801,9 @@ public class Animation : Swift.Codable {
   final public let startFrame: LensCustomerSDK.AnimationFrameTime
   final public let endFrame: LensCustomerSDK.AnimationFrameTime
   final public let framerate: Swift.Double
-  required public init(from decoder: Swift.Decoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 extension Foundation.FileManager {
   public static var documentDirURL: Foundation.URL? {
@@ -849,13 +880,6 @@ public class LensBind<T> {
   public func bind(listener: LensCustomerSDK.LensBind<T>.Listener?)
   @objc deinit
 }
-extension UIKit.UIImage {
-  public static func getPlaneTexture() -> UIKit.UIImage?
-  public static func getBorderTexture() -> UIKit.UIImage?
-  public static func getBorderLineTexture() -> UIKit.UIImage?
-  public static func getCancelButtonTexture() -> UIKit.UIImage?
-  public static func getARNotesButtonTexture() -> UIKit.UIImage?
-}
 extension CoreFoundation.CGFloat {
   public var quarter: CoreFoundation.CGFloat {
     get
@@ -873,6 +897,24 @@ extension CoreFoundation.CGFloat {
 public struct RoomCredential {
 }
 public struct TalkSettings {
+}
+public struct SessionDetails : Swift.Decodable {
+  public var session_token: Swift.String?
+  public let zsoid: Swift.String
+  public let customer_join_link: Swift.String
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GatewayDetails : Swift.Decodable {
+  public let web_socket_path: Swift.String
+  public let group: Swift.String
+  public let gateway_servers: [Swift.String]
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ClientDetails : Swift.Decodable {
+  public let client_id: Swift.String
+  public let client_role: Swift.Int
+  public let client_token: Swift.String
+  public init(from decoder: any Swift.Decoder) throws
 }
 extension ObjectiveC.NSObject {
   public static func performInMainThread(_ block: @escaping () -> Swift.Void)
@@ -921,30 +963,20 @@ public protocol ChatProtocol : AnyObject {
 }
 public protocol CommonConnectionParams {
   var key: Swift.String { get }
-  var signaling_server: Swift.String { get }
-  var is_ssl_supported: Swift.Bool { get }
-  var gateway_port: Swift.Int { get }
-  var grid: Swift.String? { get }
-  var authkey: Swift.String? { get }
-  var authtype: LensCustomerSDK.VariacType? { get }
-  var gatewayPath: Swift.String? { get }
-  var clientWiseGwAuthentication: Swift.Bool? { get }
-  var clientid: Swift.String? { get }
+  var session_details: LensCustomerSDK.SessionDetails { get set }
+  var gateway_details: LensCustomerSDK.GatewayDetails { get }
+  var client_details: LensCustomerSDK.ClientDetails { get }
 }
 public protocol CustomerSessionParams : LensCustomerSDK.CommonConnectionParams {
 }
 public protocol TechnicianSessionParams : LensCustomerSDK.CommonConnectionParams {
-  var secondaryTechJoinURL: Foundation.URL? { get }
-  var customerJoinURL: Foundation.URL? { get }
-  var zuid: Swift.Int? { get }
   var isSessionHost: Swift.Bool { get }
-  var creator_zuid: Swift.String? { get }
 }
 public enum VariacType : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   case int(Swift.Int)
   case string(Swift.String)
-  public init(from decoder: Swift.Decoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public protocol ARProtocol : AnyObject {
   func onArCommentsReceived(annotationNode: LensCustomerSDK.AnnotationNotify)
@@ -953,12 +985,12 @@ public protocol ARProtocol : AnyObject {
   func onAnchorRemoved(annotationId: Swift.String)
 }
 extension LensCustomerSDK.Vector1D : Swift.Codable {
-  public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 extension LensCustomerSDK.Vector3D : Swift.Codable {
-  public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 extension LensCustomerSDK.Vector3D {
   public var pointValue: CoreFoundation.CGPoint {
@@ -974,7 +1006,6 @@ public protocol AnimationCacheProvider {
   func clearCache()
 }
 public class SocketHandler {
-  public var socket: LensCustomerSDK.WebSocketProtocol?
   public var timeOut: Swift.Double
   public var gateWayUrlRequest: Foundation.URLRequest!
   final public let writeQoS: Foundation.QualityOfService
@@ -988,12 +1019,18 @@ public class SocketHandler {
     get
   }
   public func start()
-  public func addListerner(_ object: LensCustomerSDK.AssistSocketProtocol) -> LensCustomerSDK.DisposableObserver
+  public func addListerner(_ object: any LensCustomerSDK.AssistSocketProtocol) -> LensCustomerSDK.DisposableObserver
   public func removeListerner(_ object: LensCustomerSDK.DisposableObserver)
   public func reset()
   public func write(_ string: Swift.String?)
   public func write(_ data: Foundation.Data?)
+  public func setWriteQueueQoS(qos: Foundation.QualityOfService)
   public func disconnect()
+  @objc deinit
+}
+public class DisposableObserver : Swift.Equatable {
+  public static func == (lhs: LensCustomerSDK.DisposableObserver, rhs: LensCustomerSDK.DisposableObserver) -> Swift.Bool
+  public init(value: Swift.AnyObject)
   @objc deinit
 }
 extension Swift.Bool {
@@ -1006,6 +1043,26 @@ public struct Vector1D {
 }
 public struct Vector3D {
   public init(x: Swift.Double, y: Swift.Double, z: Swift.Double)
+}
+public enum FreezeCurrentStatus {
+  case freezeRunningStream(LensCustomerSDK.FreezeCurrentStatus.FreezeBy), freezeSnapshot(LensCustomerSDK.FreezeCurrentStatus.FreezeBy), unfreeze(LensCustomerSDK.FreezeCurrentStatus.FreezeBy)
+  public enum FreezeBy {
+    case me, other
+    public static func == (a: LensCustomerSDK.FreezeCurrentStatus.FreezeBy, b: LensCustomerSDK.FreezeCurrentStatus.FreezeBy) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var isFreeze: Swift.Bool {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class BaseParser : ObjectiveC.NSObject {
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
 }
 public class LRUAnimationCache : LensCustomerSDK.AnimationCacheProvider {
   public init()
@@ -1042,7 +1099,7 @@ public enum LottieLoopMode {
     set
   }
   @_Concurrency.MainActor(unsafe) final public var backgroundBehavior: LensCustomerSDK.LottieBackgroundBehavior
-  @_Concurrency.MainActor(unsafe) final public var imageProvider: LensCustomerSDK.AnimationImageProvider {
+  @_Concurrency.MainActor(unsafe) final public var imageProvider: any LensCustomerSDK.AnimationImageProvider {
     get
     set
   }
@@ -1091,7 +1148,7 @@ public enum LottieLoopMode {
   @_Concurrency.MainActor(unsafe) final public func pause()
   @_Concurrency.MainActor(unsafe) final public func reloadImages()
   @_Concurrency.MainActor(unsafe) final public func forceDisplayUpdate()
-  @_Concurrency.MainActor(unsafe) final public func setValueProvider(_ valueProvider: LensCustomerSDK.AnyValueProvider, keypath: LensCustomerSDK.AnimationKeypath)
+  @_Concurrency.MainActor(unsafe) final public func setValueProvider(_ valueProvider: any LensCustomerSDK.AnyValueProvider, keypath: LensCustomerSDK.AnimationKeypath)
   @_Concurrency.MainActor(unsafe) final public func getValue(for keypath: LensCustomerSDK.AnimationKeypath, atFrame: LensCustomerSDK.AnimationFrameTime?) -> Any?
   @_Concurrency.MainActor(unsafe) final public func logHierarchyKeypaths()
   @_Concurrency.MainActor(unsafe) final public func addSubview(_ subview: LensCustomerSDK.AnimationSubview, forLayerAt keypath: LensCustomerSDK.AnimationKeypath)
@@ -1099,7 +1156,7 @@ public enum LottieLoopMode {
   @_Concurrency.MainActor(unsafe) final public func convert(_ point: CoreFoundation.CGPoint, toLayerAt keypath: LensCustomerSDK.AnimationKeypath?) -> CoreFoundation.CGPoint?
   @_Concurrency.MainActor(unsafe) final public func progressTime(forMarker named: Swift.String) -> LensCustomerSDK.AnimationProgressTime?
   @_Concurrency.MainActor(unsafe) final public func frameTime(forMarker named: Swift.String) -> LensCustomerSDK.AnimationFrameTime?
-  @_Concurrency.MainActor(unsafe) public init(animation: LensCustomerSDK.Animation?, imageProvider: LensCustomerSDK.AnimationImageProvider? = nil)
+  @_Concurrency.MainActor(unsafe) public init(animation: LensCustomerSDK.Animation?, imageProvider: (any LensCustomerSDK.AnimationImageProvider)? = nil)
   @_Concurrency.MainActor(unsafe) @objc dynamic public init()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
@@ -1140,7 +1197,7 @@ public protocol LottieType {
 }
 public class VMSession {
   public typealias dataSuccess = ((_ data: Foundation.Data, _ response: Foundation.HTTPURLResponse) -> Swift.Void)
-  public typealias datafailure = ((Swift.Error?) -> Swift.Void)
+  public typealias datafailure = (((any Swift.Error)?) -> Swift.Void)
   public init(config: Foundation.URLSessionConfiguration)
   public func invalidateAndCancel()
   public func dataTask(_ request: Foundation.URLRequest, success: @escaping LensCustomerSDK.VMSession.dataSuccess, failure: @escaping LensCustomerSDK.VMSession.datafailure)
@@ -1153,13 +1210,9 @@ public class VMResponseSerialization {
   public init()
   @objc deinit
 }
-@objc @_hasMissingDesignatedInitializers public class Chat : LensCustomerSDK.BaseParser {
-  public var clientID: Foundation.NSNumber?
-  final public let message: Swift.String?
-  public var participant: LensCustomerSDK.Participant?
-  final public let date: Foundation.Date
-  public init(with chatMsg: Swift.String?)
-  @objc deinit
+public protocol AnnotationSelectionListener : AnyObject {
+  func onAnnotationSelected(id: Swift.String, triggerId: Swift.String)
+  func onAnnotationDeselected(id: Swift.String, triggerId: Swift.String)
 }
 extension Swift.Array {
   public mutating func removeElements(_ filter: (Element) -> Swift.Bool)
@@ -1177,7 +1230,7 @@ final public class FloatValueProvider : LensCustomerSDK.AnyValueProvider {
   }
   public init(block: @escaping LensCustomerSDK.FloatValueProvider.CGFloatValueBlock)
   public init(_ float: CoreFoundation.CGFloat)
-  final public var valueType: Any.Type {
+  final public var valueType: any Any.Type {
     get
   }
   final public func hasUpdate(frame: CoreFoundation.CGFloat) -> Swift.Bool
@@ -1185,10 +1238,10 @@ final public class FloatValueProvider : LensCustomerSDK.AnyValueProvider {
   @objc deinit
 }
 extension LensCustomerSDK.Animation {
-  public static func named(_ name: Swift.String, bundle: Foundation.Bundle = Bundle.main, subdirectory: Swift.String? = nil, animationCache: LensCustomerSDK.AnimationCacheProvider? = nil) -> LensCustomerSDK.Animation?
-  public static func filepath(_ filepath: Swift.String, animationCache: LensCustomerSDK.AnimationCacheProvider? = nil) -> LensCustomerSDK.Animation?
+  public static func named(_ name: Swift.String, bundle: Foundation.Bundle = Bundle.main, subdirectory: Swift.String? = nil, animationCache: (any LensCustomerSDK.AnimationCacheProvider)? = nil) -> LensCustomerSDK.Animation?
+  public static func filepath(_ filepath: Swift.String, animationCache: (any LensCustomerSDK.AnimationCacheProvider)? = nil) -> LensCustomerSDK.Animation?
   public typealias DownloadClosure = (LensCustomerSDK.Animation?) -> Swift.Void
-  public static func loadedFrom(url: Foundation.URL, closure: @escaping LensCustomerSDK.Animation.DownloadClosure, animationCache: LensCustomerSDK.AnimationCacheProvider?)
+  public static func loadedFrom(url: Foundation.URL, closure: @escaping LensCustomerSDK.Animation.DownloadClosure, animationCache: (any LensCustomerSDK.AnimationCacheProvider)?)
   public func progressTime(forMarker named: Swift.String) -> LensCustomerSDK.AnimationProgressTime?
   public func frameTime(forMarker named: Swift.String) -> LensCustomerSDK.AnimationFrameTime?
   public func progressTime(forFrame frameTime: LensCustomerSDK.AnimationFrameTime) -> LensCustomerSDK.AnimationProgressTime
@@ -1232,14 +1285,11 @@ public enum SDKLensLottieType : LensCustomerSDK.LottieType {
   }
 }
 @_hasMissingDesignatedInitializers public class LensCustomer : LensCustomerSDK.Lens {
-  weak public var otherActionDelegate: LensCustomerSDK.OtherActionProtocol?
-  public var isFrontCamAvailable: Swift.Bool {
-    get
-  }
+  weak public var otherActionDelegate: (any LensCustomerSDK.OtherActionProtocol)?
   public var getStreamType: LensCustomerSDK.StreamingType? {
     get
   }
-  public init(connectionParam: LensCustomerSDK.CustomerSessionParams, name: Swift.String, email: Swift.String, isARSupported: Swift.Bool = false)
+  public init(connectionParam: any LensCustomerSDK.CustomerSessionParams, name: Swift.String, email: Swift.String, isARSupported: Swift.Bool = false)
   public func startSession()
   public static func validateSession(sessionKey key: Swift.String, base: Foundation.URL? = nil, completion: @escaping (LensCustomerSDK.SessionValidationResponse) -> Swift.Void)
   public static func validateSessionForSDK(sessionKey key: Swift.String, token: Swift.String, base: Foundation.URL, completion: @escaping (LensCustomerSDK.SessionValidationResponse) -> Swift.Void)
@@ -1272,12 +1322,8 @@ extension LensCustomerSDK.Lens : LensCustomerSDK.AudioSessionProtocol {
   final public let directory: Swift.String
   final public let width: Swift.Double
   final public let height: Swift.Double
-  override public func encode(to encoder: Swift.Encoder) throws
+  override public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
-}
-public protocol AnchorStateListener {
-  func onAnchorPlaced(annotationId: Swift.String, annotationColor: UIKit.UIColor, annotationType: Swift.String, annotationNumber: Swift.Int, triggerId: Swift.String)
-  func onAnchorRemoved(annotationId: Swift.String)
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ImageScrollView : UIKit.UIScrollView, UIKit.UIScrollViewDelegate {
   public enum ContentMode : Swift.Int {
@@ -1319,6 +1365,34 @@ public protocol AnchorStateListener {
   @_Concurrency.MainActor(unsafe) @objc public func viewForZooming(in scrollView: UIKit.UIScrollView) -> UIKit.UIView?
   @_Concurrency.MainActor(unsafe) @objc public func scrollViewDidZoom(_ scrollView: UIKit.UIScrollView)
   @_Concurrency.MainActor(unsafe) @objc public func scrollViewDidEndZooming(_ scrollView: UIKit.UIScrollView, with view: UIKit.UIView?, atScale scale: CoreFoundation.CGFloat)
+}
+public enum LensAnnotationType : Swift.String {
+  case none, measurement, rectangle, ellipse, pencil, arrow
+  public var isArrow: Swift.Bool {
+    get
+  }
+  public var isMeasurement: Swift.Bool {
+    get
+  }
+  public var isPencil: Swift.Bool {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum FreeStyleState : Swift.CustomStringConvertible {
+  case mouse_move, mouse_up
+  public var description: Swift.String {
+    get
+  }
+  public static func == (a: LensCustomerSDK.FreeStyleState, b: LensCustomerSDK.FreeStyleState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
 }
 public enum ContentType : Swift.String {
   case jsonType, formType
@@ -1380,6 +1454,83 @@ public struct DrawingInput {
 }
 infix operator +| : DefaultPrecedence
 infix operator +- : DefaultPrecedence
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ARRenderView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var sceneView: ARKit.ARSCNView!
+  @_Concurrency.MainActor(unsafe) public var selectedARTool: LensCustomerSDK.LensAnnotationType {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc convenience dynamic public init()
+  @_Concurrency.MainActor(unsafe) convenience public init(arDelegate: (any LensCustomerSDK.ARViewDelegate)? = nil, triggerId: Swift.String)
+  @objc @_Concurrency.MainActor(unsafe) public func resumeARSCNViewSession(isSessionStart: Swift.Bool = true, callWithDelay: Swift.Bool = false)
+  @objc @_Concurrency.MainActor(unsafe) public func pauseARSCNViewSession()
+  @objc @_Concurrency.MainActor(unsafe) public func pauseARSCNViewSession(forBackgroundTransition: Swift.Bool)
+  @objc @_Concurrency.MainActor(unsafe) public func isARSCNViewSessionPaused() -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func pauseARSCNViewSessionInHD(SessionPauseCallback callback: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) public func snapshot() -> UIKit.UIImage
+  @_Concurrency.MainActor(unsafe) public func getRawCameraImageBuffer() -> CoreVideo.CVPixelBuffer?
+  @_Concurrency.MainActor(unsafe) public func getRawCameraImage() -> UIKit.UIImage?
+  @objc deinit
+}
+extension LensCustomerSDK.ARRenderView {
+  @_Concurrency.MainActor(unsafe) public func updateSelectedARTool(tool: LensCustomerSDK.LensAnnotationType)
+}
+extension LensCustomerSDK.ARRenderView {
+  @_Concurrency.MainActor(unsafe) public func drawLine(withId id: Swift.String, withLineColor color: UIKit.UIColor = UIColor(red: 0.129, green: 0.639, blue: 0.356, alpha: 1), atPoint point: CoreFoundation.CGPoint, triggerId: Swift.String, freeStyle: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func placeArrow(withId id: Swift.String = Node.DEFAULT_USER_ID, atPoint originalPoint: CoreFoundation.CGPoint, withArrowColor arrowColor: UIKit.UIColor = UIColor(red: 0.129, green: 0.639, blue: 0.356, alpha: 1), triggerId: Swift.String, isCustomer: Swift.Bool = false)
+  @_Concurrency.MainActor(unsafe) public func setLineWidth(widthInMetre width: Swift.Float)
+  @_Concurrency.MainActor(unsafe) public func drawRectangle(withId id: Swift.String, color: UIKit.UIColor = UIColor(red: 0.129, green: 0.639, blue: 0.356, alpha: 1), startPoint: CoreFoundation.CGPoint, endPoint: CoreFoundation.CGPoint, triggerId: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func drawEllipse(withId id: Swift.String, color: UIKit.UIColor = UIColor(red: 0.129, green: 0.639, blue: 0.356, alpha: 1), startPoint: CoreFoundation.CGPoint, endPoint: CoreFoundation.CGPoint, triggerId: Swift.String)
+}
+extension LensCustomerSDK.ARRenderView {
+  @_Concurrency.MainActor(unsafe) public func renderPointCloud(_ flag: Swift.Bool, callback: ((_ flag: Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public func isRenderingPointCloud() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func renderPlanes(_ flag: Swift.Bool, callback: ((_ flag: Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public func isRenderingPlanes() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var isHDStreaming: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public func setHighResolution(_ flag: Swift.Bool, callback: ((_ flag: Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public func getHDSnapshot(onSnapshotAvailableCallback callback: @escaping (_ snapshotWidth: Swift.Int, _ snapshotHeight: Swift.Int, _ yBuffer: [Swift.Int], _ uBuffer: [Swift.Int], _ vBuffer: [Swift.Int]) -> Swift.Void)
+  @available(*, deprecated, renamed: "getCustomerAnchorCount")
+  @_Concurrency.MainActor(unsafe) public func getAnchorCount() -> Swift.Int
+  @_Concurrency.MainActor(unsafe) public func getCustomerAnchorCount() -> Swift.Int
+  @_Concurrency.MainActor(unsafe) public func getTechnicianAnchorCount() -> Swift.Int
+  @_Concurrency.MainActor(unsafe) public func getMaxAnchorCount() -> Swift.Int
+  @available(*, deprecated, renamed: "removeFirstCustomerAnchor")
+  @_Concurrency.MainActor(unsafe) public func removeFirstAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public func removeFirstCustomerAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  @available(*, deprecated, renamed: "removeLastCustomerAnchor")
+  @_Concurrency.MainActor(unsafe) public func removeLastAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public func removeLastCustomerAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public func removeLastTechnicianAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  @available(*, deprecated, renamed: "removeAllCustomerAnchors")
+  @_Concurrency.MainActor(unsafe) public func removeAllAnchors(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public func removeAllCustomerAnchors(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public func removeAllTechnicianAnchors(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public func removeSelectedCustomerAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public func isAnyCustomerAnchorSelected() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func isAnyTechnicianAnchorSelected() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func selectTechnicianAnchor(atPoint originalPoint: CoreFoundation.CGPoint, triggerId: Swift.String) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func setAnchorSelectionListener(listener: any LensCustomerSDK.AnnotationSelectionListener)
+  @_Concurrency.MainActor(unsafe) public func setAnchorStateListener(listener: any LensCustomerSDK.AnchorStateListener)
+  @_Concurrency.MainActor(unsafe) public func updateNodeAnchor(annotateId: Swift.String, text: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func selectNodeAnchor(annotateId: Swift.String, senderTriggerId: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func deselectNodeAnchor(annotateId: Swift.String, triggerId: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func removeNodeAnchor(annotateId: Swift.String)
+}
+extension LensCustomerSDK.ARRenderView {
+  @_Concurrency.MainActor(unsafe) public class func checkARKitCompatibility() -> Swift.Bool
+}
+extension LensCustomerSDK.ARRenderView : ARKit.ARSessionDelegate, ARKit.ARSCNViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func sessionWasInterrupted(_ session: ARKit.ARSession)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func sessionInterruptionEnded(_ session: ARKit.ARSession)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func session(_ session: ARKit.ARSession, cameraDidChangeTrackingState camera: ARKit.ARCamera)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func session(_ session: ARKit.ARSession, didFailWithError error: any Swift.Error)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func renderer(_ renderer: any SceneKit.SCNSceneRenderer, didAdd node: SceneKit.SCNNode, for anchor: ARKit.ARAnchor)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func renderer(_ renderer: any SceneKit.SCNSceneRenderer, updateAtTime time: Foundation.TimeInterval)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func renderer(_ renderer: any SceneKit.SCNSceneRenderer, didUpdate node: SceneKit.SCNNode, for anchor: ARKit.ARAnchor)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func session(_ session: ARKit.ARSession, didUpdate frame: ARKit.ARFrame)
+}
 final public class PointValueProvider : LensCustomerSDK.AnyValueProvider {
   public typealias PointValueBlock = (CoreFoundation.CGFloat) -> CoreFoundation.CGPoint
   final public var point: CoreFoundation.CGPoint {
@@ -1388,7 +1539,7 @@ final public class PointValueProvider : LensCustomerSDK.AnyValueProvider {
   }
   public init(block: @escaping LensCustomerSDK.PointValueProvider.PointValueBlock)
   public init(_ point: CoreFoundation.CGPoint)
-  final public var valueType: Any.Type {
+  final public var valueType: any Any.Type {
     get
   }
   final public func hasUpdate(frame: CoreFoundation.CGFloat) -> Swift.Bool
@@ -1464,13 +1615,13 @@ public struct WSError : Swift.Error {
   public let code: Swift.Int
 }
 public protocol WebSocketClient : AnyObject {
-  var delegate: LensCustomerSDK.WebSocketDelegate? { get set }
-  var pongDelegate: LensCustomerSDK.WebSocketPongDelegate? { get set }
+  var delegate: (any LensCustomerSDK.WebSocketDelegate)? { get set }
+  var pongDelegate: (any LensCustomerSDK.WebSocketPongDelegate)? { get set }
   var disableSSLCertValidation: Swift.Bool { get set }
   var overrideTrustHostname: Swift.Bool { get set }
   var desiredTrustHostname: Swift.String? { get set }
   var sslClientCertificate: LensCustomerSDK.SSLClientCertificate? { get set }
-  var security: LensCustomerSDK.SSLTrustValidator? { get set }
+  var security: (any LensCustomerSDK.SSLTrustValidator)? { get set }
   var enabledSSLCipherSuites: [Security.SSLCipherSuite]? { get set }
   var isConnected: Swift.Bool { get }
   func connect()
@@ -1497,20 +1648,20 @@ public struct SSLSettings {
 }
 public protocol WSStreamDelegate : AnyObject {
   func newBytesInStream()
-  func streamDidError(error: Swift.Error?)
+  func streamDidError(error: (any Swift.Error)?)
 }
 public protocol WSStream {
-  var delegate: LensCustomerSDK.WSStreamDelegate? { get set }
-  func connect(url: Foundation.URL, port: Swift.Int, timeout: Foundation.TimeInterval, ssl: LensCustomerSDK.SSLSettings, completion: @escaping ((Swift.Error?) -> Swift.Void))
+  var delegate: (any LensCustomerSDK.WSStreamDelegate)? { get set }
+  func connect(url: Foundation.URL, port: Swift.Int, timeout: Foundation.TimeInterval, ssl: LensCustomerSDK.SSLSettings, completion: @escaping (((any Swift.Error)?) -> Swift.Void))
   func write(data: Foundation.Data) -> Swift.Int
   func read() -> Foundation.Data?
   func cleanup()
   func sslTrust() -> (trust: Security.SecTrust?, domain: Swift.String?)
 }
 @objc @_inheritsConvenienceInitializers open class FoundationStream : ObjectiveC.NSObject, LensCustomerSDK.WSStream, Foundation.StreamDelegate {
-  weak public var delegate: LensCustomerSDK.WSStreamDelegate?
+  weak public var delegate: (any LensCustomerSDK.WSStreamDelegate)?
   public var enableSOCKSProxy: Swift.Bool
-  public func connect(url: Foundation.URL, port: Swift.Int, timeout: Foundation.TimeInterval, ssl: LensCustomerSDK.SSLSettings, completion: @escaping ((Swift.Error?) -> Swift.Void))
+  public func connect(url: Foundation.URL, port: Swift.Int, timeout: Foundation.TimeInterval, ssl: LensCustomerSDK.SSLSettings, completion: @escaping (((any Swift.Error)?) -> Swift.Void))
   public func write(data: Foundation.Data) -> Swift.Int
   public func read() -> Foundation.Data?
   public func cleanup()
@@ -1520,17 +1671,17 @@ public protocol WSStream {
   @objc deinit
 }
 public protocol WebSocketDelegate : AnyObject {
-  func websocketDidConnect(socket: LensCustomerSDK.WebSocketClient)
-  func websocketDidDisconnect(socket: LensCustomerSDK.WebSocketClient, error: Swift.Error?)
-  func websocketDidReceiveMessage(socket: LensCustomerSDK.WebSocketClient, text: Swift.String)
-  func websocketDidReceiveData(socket: LensCustomerSDK.WebSocketClient, data: Foundation.Data)
+  func websocketDidConnect(socket: any LensCustomerSDK.WebSocketClient)
+  func websocketDidDisconnect(socket: any LensCustomerSDK.WebSocketClient, error: (any Swift.Error)?)
+  func websocketDidReceiveMessage(socket: any LensCustomerSDK.WebSocketClient, text: Swift.String)
+  func websocketDidReceiveData(socket: any LensCustomerSDK.WebSocketClient, data: Foundation.Data)
 }
 public protocol WebSocketPongDelegate : AnyObject {
-  func websocketDidReceivePong(socket: LensCustomerSDK.WebSocketClient, data: Foundation.Data?)
+  func websocketDidReceivePong(socket: any LensCustomerSDK.WebSocketClient, data: Foundation.Data?)
 }
 public protocol WebSocketAdvancedDelegate : AnyObject {
   func websocketDidConnect(socket: LensCustomerSDK.WebSocket)
-  func websocketDidDisconnect(socket: LensCustomerSDK.WebSocket, error: Swift.Error?)
+  func websocketDidDisconnect(socket: LensCustomerSDK.WebSocket, error: (any Swift.Error)?)
   func websocketDidReceiveMessage(socket: LensCustomerSDK.WebSocket, text: Swift.String, response: LensCustomerSDK.WebSocket.WSResponse)
   func websocketDidReceiveData(socket: LensCustomerSDK.WebSocket, data: Foundation.Data, response: LensCustomerSDK.WebSocket.WSResponse)
   func websocketHttpUpgrade(socket: LensCustomerSDK.WebSocket, request: Swift.String)
@@ -1559,11 +1710,11 @@ public protocol WebSocketAdvancedDelegate : AnyObject {
     final public let firstFrame: Foundation.Date
     @objc deinit
   }
-  weak public var delegate: LensCustomerSDK.WebSocketDelegate?
-  weak public var advancedDelegate: LensCustomerSDK.WebSocketAdvancedDelegate?
-  weak public var pongDelegate: LensCustomerSDK.WebSocketPongDelegate?
+  weak public var delegate: (any LensCustomerSDK.WebSocketDelegate)?
+  weak public var advancedDelegate: (any LensCustomerSDK.WebSocketAdvancedDelegate)?
+  weak public var pongDelegate: (any LensCustomerSDK.WebSocketPongDelegate)?
   public var onConnect: (() -> Swift.Void)?
-  public var onDisconnect: ((Swift.Error?) -> Swift.Void)?
+  public var onDisconnect: (((any Swift.Error)?) -> Swift.Void)?
   public var onText: ((Swift.String) -> Swift.Void)?
   public var onData: ((Foundation.Data) -> Swift.Void)?
   public var onPong: ((Foundation.Data?) -> Swift.Void)?
@@ -1573,7 +1724,7 @@ public protocol WebSocketAdvancedDelegate : AnyObject {
   public var desiredTrustHostname: Swift.String?
   public var sslClientCertificate: LensCustomerSDK.SSLClientCertificate?
   public var enableCompression: Swift.Bool
-  public var security: LensCustomerSDK.SSLTrustValidator?
+  public var security: (any LensCustomerSDK.SSLTrustValidator)?
   public var enabledSSLCipherSuites: [Security.SSLCipherSuite]?
   public var isConnected: Swift.Bool {
     get
@@ -1583,7 +1734,7 @@ public protocol WebSocketAdvancedDelegate : AnyObject {
     get
   }
   public var respondToPingWithPong: Swift.Bool
-  public init(request: Foundation.URLRequest, protocols: [Swift.String]? = nil, stream: LensCustomerSDK.WSStream = FoundationStream())
+  public init(request: Foundation.URLRequest, protocols: [Swift.String]? = nil, stream: any LensCustomerSDK.WSStream = FoundationStream())
   convenience public init(url: Foundation.URL, protocols: [Swift.String]? = nil)
   convenience public init(url: Foundation.URL, writeQueueQOS: Foundation.QualityOfService, protocols: [Swift.String]? = nil)
   open func connect()
@@ -1593,7 +1744,7 @@ public protocol WebSocketAdvancedDelegate : AnyObject {
   open func write(ping: Foundation.Data, completion: (() -> ())? = nil)
   open func write(pong: Foundation.Data, completion: (() -> ())? = nil)
   public func newBytesInStream()
-  public func streamDidError(error: Swift.Error?)
+  public func streamDidError(error: (any Swift.Error)?)
   @objc deinit
 }
 extension UIKit.UIPopoverArrowDirection {
@@ -1614,20 +1765,6 @@ extension UIKit.UIViewController : UIKit.UIPopoverPresentationControllerDelegate
   @_Concurrency.MainActor(unsafe) @objc dynamic open func prepareForPopoverPresentation(_ popoverPresentationController: UIKit.UIPopoverPresentationController)
   @_Concurrency.MainActor(unsafe) @objc dynamic open func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIKit.UIPopoverPresentationController)
 }
-public enum FlashActionType : Swift.String {
-  case turn_On, turn_Off
-  public init(boolean: Swift.Bool)
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class FlashSupportEvent : LensCustomerSDK.BaseParser {
-  public var is_flash_supported: Swift.Bool
-  public var current_flash_status: LensCustomerSDK.FlashActionType
-  @objc deinit
-}
 extension UIKit.UITableView {
   @_Concurrency.MainActor(unsafe) public func adjustTableViewHeaderFrameIfNeeded()
 }
@@ -1643,80 +1780,11 @@ extension UIKit.UITableView {
   @_Concurrency.MainActor(unsafe) public func addNoDataView(noDataView: UIKit.UIView)
   @_Concurrency.MainActor(unsafe) public func removenoDataView()
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ARRenderView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) @objc convenience dynamic public init()
-  @_Concurrency.MainActor(unsafe) convenience public init(arDelegate: LensCustomerSDK.ARViewDelegate? = nil, triggerId: Swift.String)
-  @objc @_Concurrency.MainActor(unsafe) public func resumeARSCNViewSession(isSessionStart: Swift.Bool = true, callWithDelay: Swift.Bool = false)
-  @objc @_Concurrency.MainActor(unsafe) public func pauseARSCNViewSession()
-  @objc @_Concurrency.MainActor(unsafe) public func pauseARSCNViewSession(forBackgroundTransition: Swift.Bool)
-  @objc @_Concurrency.MainActor(unsafe) public func isARSCNViewSessionPaused() -> Swift.Bool
-  @objc @_Concurrency.MainActor(unsafe) public func pauseARSCNViewSessionInHD(SessionPauseCallback callback: @escaping () -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) public func snapshot() -> UIKit.UIImage
-  @_Concurrency.MainActor(unsafe) public func getRawCameraImageBuffer() -> CoreVideo.CVPixelBuffer?
-  @_Concurrency.MainActor(unsafe) public func getRawCameraImage() -> UIKit.UIImage?
-  @objc deinit
-}
-extension LensCustomerSDK.ARRenderView {
-  @_Concurrency.MainActor(unsafe) public func drawLine(withId id: Swift.String, withLineColor color: UIKit.UIColor = UIColor(red: 0.129, green: 0.639, blue: 0.356, alpha: 1), atPoint point: CoreFoundation.CGPoint, triggerId: Swift.String, freeStyle: Swift.String)
-  @_Concurrency.MainActor(unsafe) public func placeArrow(withId id: Swift.String? = nil, atPoint originalPoint: CoreFoundation.CGPoint, withArrowColor arrowColor: UIKit.UIColor = UIColor(red: 0.129, green: 0.639, blue: 0.356, alpha: 1), triggerId: Swift.String, isCustomer: Swift.Bool = false)
-  @_Concurrency.MainActor(unsafe) public func setLineWidth(widthInMetre width: Swift.Float)
-  @_Concurrency.MainActor(unsafe) public func drawRectangle(withId id: Swift.String, color: UIKit.UIColor = UIColor(red: 0.129, green: 0.639, blue: 0.356, alpha: 1), startPoint: CoreFoundation.CGPoint, endPoint: CoreFoundation.CGPoint, triggerId: Swift.String)
-  @_Concurrency.MainActor(unsafe) public func drawEllipse(withId id: Swift.String, color: UIKit.UIColor = UIColor(red: 0.129, green: 0.639, blue: 0.356, alpha: 1), startPoint: CoreFoundation.CGPoint, endPoint: CoreFoundation.CGPoint, triggerId: Swift.String)
-}
-extension LensCustomerSDK.ARRenderView {
-  @_Concurrency.MainActor(unsafe) public func renderPointCloud(_ flag: Swift.Bool, callback: ((_ flag: Swift.Bool) -> Swift.Void)? = nil)
-  @_Concurrency.MainActor(unsafe) public func isRenderingPointCloud() -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) public func renderPlanes(_ flag: Swift.Bool, callback: ((_ flag: Swift.Bool) -> Swift.Void)? = nil)
-  @_Concurrency.MainActor(unsafe) public func isRenderingPlanes() -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) public var isHDStreaming: Swift.Bool {
-    get
-  }
-  @_Concurrency.MainActor(unsafe) public func setHighResolution(_ flag: Swift.Bool, callback: ((_ flag: Swift.Bool) -> Swift.Void)? = nil)
-  @_Concurrency.MainActor(unsafe) public func getHDSnapshot(onSnapshotAvailableCallback callback: @escaping (_ snapshotWidth: Swift.Int, _ snapshotHeight: Swift.Int, _ yBuffer: [Swift.Int], _ uBuffer: [Swift.Int], _ vBuffer: [Swift.Int]) -> Swift.Void)
-  @available(*, deprecated, renamed: "getCustomerAnchorCount")
-  @_Concurrency.MainActor(unsafe) public func getAnchorCount() -> Swift.Int
-  @_Concurrency.MainActor(unsafe) public func getCustomerAnchorCount() -> Swift.Int
-  @_Concurrency.MainActor(unsafe) public func getTechnicianAnchorCount() -> Swift.Int
-  @_Concurrency.MainActor(unsafe) public func getMaxAnchorCount() -> Swift.Int
-  @available(*, deprecated, renamed: "removeFirstCustomerAnchor")
-  @_Concurrency.MainActor(unsafe) public func removeFirstAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
-  @_Concurrency.MainActor(unsafe) public func removeFirstCustomerAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
-  @available(*, deprecated, renamed: "removeLastCustomerAnchor")
-  @_Concurrency.MainActor(unsafe) public func removeLastAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
-  @_Concurrency.MainActor(unsafe) public func removeLastCustomerAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
-  @_Concurrency.MainActor(unsafe) public func removeLastTechnicianAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
-  @available(*, deprecated, renamed: "removeAllCustomerAnchors")
-  @_Concurrency.MainActor(unsafe) public func removeAllAnchors(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
-  @_Concurrency.MainActor(unsafe) public func removeAllCustomerAnchors(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
-  @_Concurrency.MainActor(unsafe) public func removeAllTechnicianAnchors(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
-  @_Concurrency.MainActor(unsafe) public func removeSelectedCustomerAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
-  @_Concurrency.MainActor(unsafe) public func isAnyCustomerAnchorSelected() -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) public func isAnyTechnicianAnchorSelected() -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) public func selectTechnicianAnchor(atPoint originalPoint: CoreFoundation.CGPoint, triggerId: Swift.String) -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) public func setAnchorSelectionListener(listener: LensCustomerSDK.AnnotationSelectionListener)
-  @_Concurrency.MainActor(unsafe) public func setAnchorStateListener(listener: LensCustomerSDK.AnchorStateListener)
-  @_Concurrency.MainActor(unsafe) public func updateNodeAnchor(annotateId: Swift.String, text: Swift.String)
-  @_Concurrency.MainActor(unsafe) public func selectNodeAnchor(annotateId: Swift.String, senderTriggerId: Swift.String)
-  @_Concurrency.MainActor(unsafe) public func deselectNodeAnchor(annotateId: Swift.String, triggerId: Swift.String)
-  @_Concurrency.MainActor(unsafe) public func removeNodeAnchor(annotateId: Swift.String)
-}
-extension LensCustomerSDK.ARRenderView {
-  @_Concurrency.MainActor(unsafe) public class func checkARKitCompatibility() -> Swift.Bool
-}
-extension LensCustomerSDK.ARRenderView : ARKit.ARSessionDelegate, ARKit.ARSCNViewDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func sessionWasInterrupted(_ session: ARKit.ARSession)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func sessionInterruptionEnded(_ session: ARKit.ARSession)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func session(_ session: ARKit.ARSession, cameraDidChangeTrackingState camera: ARKit.ARCamera)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func session(_ session: ARKit.ARSession, didFailWithError error: Swift.Error)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func renderer(_ renderer: SceneKit.SCNSceneRenderer, didAdd node: SceneKit.SCNNode, for anchor: ARKit.ARAnchor)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func renderer(_ renderer: SceneKit.SCNSceneRenderer, didUpdate node: SceneKit.SCNNode, for anchor: ARKit.ARAnchor)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func session(_ session: ARKit.ARSession, didUpdate frame: ARKit.ARFrame)
-}
 extension UIKit.UIView {
   @_Concurrency.MainActor(unsafe) public func showNotificationBanner(message: Swift.String, show duration: Foundation.TimeInterval = 4, completion: (() -> Swift.Void)? = nil)
 }
 extension UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) public func showLottie(lottie type: LensCustomerSDK.LottieType, onTap: ((UIKit.UIButton) -> (() -> Swift.Void)?)? = nil, lottieBackgroundColor: UIKit.UIColor = UIColor.white, subViewIndex: Swift.Int = -1, tag: Swift.Int? = 43566534)
+  @_Concurrency.MainActor(unsafe) public func showLottie(lottie type: any LensCustomerSDK.LottieType, onTap: ((UIKit.UIButton) -> (() -> Swift.Void)?)? = nil, lottieBackgroundColor: UIKit.UIColor = UIColor.white, subViewIndex: Swift.Int = -1, tag: Swift.Int? = 43566534)
   @_Concurrency.MainActor(unsafe) public func dismissLottieView()
   @_Concurrency.MainActor(unsafe) public func at_showLoader(with size: CoreFoundation.CGSize = CGSize.init(width: 100, height: 100), overViewColor: UIKit.UIColor = UIColor.black.withAlphaComponent(0.5), text: Swift.String = "", textColor: UIKit.UIColor = .white)
   @_Concurrency.MainActor(unsafe) public var at_isLoaderHidden: Swift.Bool {
@@ -1731,59 +1799,13 @@ extension ObjectiveC.NSObject {
   public func hapticErrorImpact()
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AudioSessionHandler : ObjectiveC.NSObject {
-  weak public var delegate: LensCustomerSDK.AudioSessionProtocol?
-  convenience public init(with delegate: LensCustomerSDK.AudioSessionProtocol)
+  weak public var delegate: (any LensCustomerSDK.AudioSessionProtocol)?
+  convenience public init(with delegate: any LensCustomerSDK.AudioSessionProtocol)
   public func set(_ port: AVFAudio.AVAudioSession.PortOverride, completion: @escaping (Swift.Bool) -> ())
   @objc deinit
 }
 extension LensCustomerSDK.AudioSessionHandler : WebRTC.RTCAudioSessionDelegate {
   @objc dynamic public func audioSessionDidChangeRoute(_ session: WebRTC.RTCAudioSession, reason: AVFAudio.AVAudioSession.RouteChangeReason, previousRoute: AVFAudio.AVAudioSessionRouteDescription)
-}
-@objc @_hasMissingDesignatedInitializers public class Participant : LensCustomerSDK.BaseParser {
-  public enum Role : Swift.String {
-    case technician, customer, secondary_technician, external_technician
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public enum Status : Swift.String {
-    case UP, DOWN
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public enum ParticpantOSType : Swift.String {
-    case ios, android
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public var clientId: Foundation.NSNumber?
-  final public let role: LensCustomerSDK.Participant.Role?
-  final public let email: Swift.String?
-  public var status: LensCustomerSDK.Participant.Status?
-  final public let zuid: Foundation.NSNumber?
-  public var name: Swift.String? {
-    get
-  }
-  public var time: Swift.Int?
-  public var platformType: LensCustomerSDK.Participant.ParticpantOSType?
-  final public let app_version: Swift.String?
-  public var isNewEnahcementSupported: Swift.Bool {
-    get
-  }
-  public var isSupportNewAnnoation: Swift.Bool {
-    get
-  }
-  public init(selfEmail: Swift.String?, role: LensCustomerSDK.Participant.Role, status: LensCustomerSDK.Participant.Status?, zuid: Foundation.NSNumber?, display_name: Swift.String?, app_version: Swift.String?, joiningTime: Swift.Int?)
-  public static func == (lhs: LensCustomerSDK.Participant, rhs: LensCustomerSDK.Participant) -> Swift.Bool
-  @objc deinit
 }
 @objc final public class CompatibleAnimation : ObjectiveC.NSObject {
   @objc public init(name: Swift.String, bundle: Foundation.Bundle = Bundle.main)
@@ -1933,6 +1955,66 @@ extension UIKit.UIBarButtonItem {
     get
   }
 }
+@objc public enum ARFrameMode : Swift.Int {
+  case auto
+  case aspectFit
+  case aspectFill
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ARVideoOrientation : Swift.Int {
+  case auto
+  case alwaysPortrait
+  case alwaysLandscape
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum RecordARMicrophonePermission : Swift.Int {
+  case auto
+  case manual
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum RecordARStatus : Swift.Int {
+  case unknown
+  case readyToRecord
+  case recording
+  case paused
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum RecordARMicrophoneStatus : Swift.Int {
+  case unknown
+  case enabled
+  case disabled
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum VideoResolution : CoreFoundation.CGFloat {
+  case resolution_720p
+  case resolution_480p
+  case resolution_360p
+  public init?(rawValue: CoreFoundation.CGFloat)
+  public typealias RawValue = CoreFoundation.CGFloat
+  public var rawValue: CoreFoundation.CGFloat {
+    get
+  }
+}
 @objc @_hasMissingDesignatedInitializers public class FreezeImageParser : LensCustomerSDK.BaseParser {
   final public let imageString: Swift.String?
   final public let total_chunks: Foundation.NSNumber?
@@ -1952,7 +2034,7 @@ final public class SizeValueProvider : LensCustomerSDK.AnyValueProvider {
   }
   public init(block: @escaping LensCustomerSDK.SizeValueProvider.SizeValueBlock)
   public init(_ size: CoreFoundation.CGSize)
-  final public var valueType: Any.Type {
+  final public var valueType: any Any.Type {
     get
   }
   final public func hasUpdate(frame: CoreFoundation.CGFloat) -> Swift.Bool
@@ -1967,7 +2049,7 @@ final public class ColorValueProvider : LensCustomerSDK.AnyValueProvider {
   }
   public init(block: @escaping LensCustomerSDK.ColorValueProvider.ColorValueBlock)
   public init(_ color: LensCustomerSDK.Color)
-  final public var valueType: Any.Type {
+  final public var valueType: any Any.Type {
     get
   }
   final public func hasUpdate(frame: CoreFoundation.CGFloat) -> Swift.Bool
@@ -1987,10 +2069,10 @@ extension QuartzCore.CALayer {
   public func logLayerTree(withIndent: Swift.Int = 0)
 }
 extension LensCustomerSDK.AnimationView {
-  @_Concurrency.MainActor(unsafe) convenience public init(name: Swift.String, bundle: Foundation.Bundle = Bundle.main, imageProvider: LensCustomerSDK.AnimationImageProvider? = nil, animationCache: LensCustomerSDK.AnimationCacheProvider? = LRUAnimationCache.sharedCache)
-  @_Concurrency.MainActor(unsafe) convenience public init(filePath: Swift.String, imageProvider: LensCustomerSDK.AnimationImageProvider? = nil, animationCache: LensCustomerSDK.AnimationCacheProvider? = LRUAnimationCache.sharedCache)
-  @_Concurrency.MainActor(unsafe) convenience public init(url: Foundation.URL, imageProvider: LensCustomerSDK.AnimationImageProvider? = nil, closure: @escaping LensCustomerSDK.AnimationView.DownloadClosure, animationCache: LensCustomerSDK.AnimationCacheProvider? = LRUAnimationCache.sharedCache)
-  public typealias DownloadClosure = (Swift.Error?) -> Swift.Void
+  @_Concurrency.MainActor(unsafe) convenience public init(name: Swift.String, bundle: Foundation.Bundle = Bundle.main, imageProvider: (any LensCustomerSDK.AnimationImageProvider)? = nil, animationCache: (any LensCustomerSDK.AnimationCacheProvider)? = LRUAnimationCache.sharedCache)
+  @_Concurrency.MainActor(unsafe) convenience public init(filePath: Swift.String, imageProvider: (any LensCustomerSDK.AnimationImageProvider)? = nil, animationCache: (any LensCustomerSDK.AnimationCacheProvider)? = LRUAnimationCache.sharedCache)
+  @_Concurrency.MainActor(unsafe) convenience public init(url: Foundation.URL, imageProvider: (any LensCustomerSDK.AnimationImageProvider)? = nil, closure: @escaping LensCustomerSDK.AnimationView.DownloadClosure, animationCache: (any LensCustomerSDK.AnimationCacheProvider)? = LRUAnimationCache.sharedCache)
+  public typealias DownloadClosure = ((any Swift.Error)?) -> Swift.Void
 }
 extension UIKit.UISearchBar {
   @_Concurrency.MainActor(unsafe) public var at_searchTextField: UIKit.UITextField? {
@@ -2001,7 +2083,7 @@ public class VMSessionManager {
   final public let requestSerialization: LensCustomerSDK.VMRequestSerialization
   final public let responseSerialization: LensCustomerSDK.VMResponseSerialization
   public typealias ApiSuccess = (_ data: Foundation.Data?, _ dictionary: [Swift.String : Any]?, _ response: Foundation.HTTPURLResponse) -> Swift.Void
-  public typealias ApiFailure = (Swift.Error?) -> Swift.Void
+  public typealias ApiFailure = ((any Swift.Error)?) -> Swift.Void
   public var session: LensCustomerSDK.VMSession {
     get
     set
@@ -2114,11 +2196,6 @@ public enum AssistSocketErrorState : Swift.Error {
     get
   }
 }
-public class DisposableObserver : Swift.Equatable {
-  public static func == (lhs: LensCustomerSDK.DisposableObserver, rhs: LensCustomerSDK.DisposableObserver) -> Swift.Bool
-  public init(value: Swift.AnyObject)
-  @objc deinit
-}
 extension UIKit.UIColor {
   convenience public init(red: Swift.Int, green: Swift.Int, blue: Swift.Int)
   convenience public init(rgb: Swift.Int)
@@ -2140,7 +2217,7 @@ extension LensCustomerSDK.OtherActionProtocol {
   public func didReceiveAnnotation(input: LensCustomerSDK.DrawingInput?, isClear: Swift.Bool)
 }
 public protocol AnyValueProvider {
-  var valueType: Any.Type { get }
+  var valueType: any Any.Type { get }
   func hasUpdate(frame: LensCustomerSDK.AnimationFrameTime) -> Swift.Bool
   func value(frame: LensCustomerSDK.AnimationFrameTime) -> Any
 }
@@ -2165,17 +2242,26 @@ public enum QRRetryMode {
   }
 }
 @_hasMissingDesignatedInitializers public class Lens {
-  public var lensSignallingDelegate: LensCustomerSDK.LensSignallingProtocol? {
+  public var lensSignallingDelegate: (any LensCustomerSDK.LensSignallingProtocol)? {
     get
     set
   }
   public static var isVerbose: Swift.Bool
   public var isCameraFacingFront: Swift.Bool
-  weak public var chatDelegate: LensCustomerSDK.ChatProtocol?
+  public var isFrontCamAvailable: Swift.Bool {
+    get
+  }
+  weak public var chatDelegate: (any LensCustomerSDK.ChatProtocol)?
   public var participants: [LensCustomerSDK.Participant] {
     get
   }
   public var sessionKey: Swift.String {
+    get
+  }
+  public var clientRole: Swift.Int {
+    get
+  }
+  public var clientToken: Swift.String {
     get
   }
   public var clientID: Swift.String? {
@@ -2202,7 +2288,7 @@ public enum QRRetryMode {
   public var edition: LensCustomerSDK.Edition? {
     get
   }
-  public var connectionParam: LensCustomerSDK.CommonConnectionParams {
+  public var connectionParam: any LensCustomerSDK.CommonConnectionParams {
     get
   }
   public var isFreezedState: Swift.Bool {
@@ -2213,7 +2299,7 @@ public enum QRRetryMode {
     get
     set
   }
-  public var lens_protocol_delegate: LensCustomerSDK.LensSessionProtocolDelegate?
+  public var lens_protocol_delegate: (any LensCustomerSDK.LensSessionProtocolDelegate)?
   public var arRenderView: LensCustomerSDK.ARRenderView? {
     get
   }
@@ -2221,7 +2307,7 @@ public enum QRRetryMode {
   public var arNodesNotifyList: [LensCustomerSDK.AnnotationNotify] {
     get
   }
-  weak public var arDelegate: LensCustomerSDK.ARProtocol?
+  weak public var arDelegate: (any LensCustomerSDK.ARProtocol)?
   @objc deinit
 }
 extension LensCustomerSDK.Lens {
@@ -2232,8 +2318,17 @@ extension LensCustomerSDK.Lens {
 extension LensCustomerSDK.Lens : LensCustomerSDK.AnnotationSelectionListener, LensCustomerSDK.AnchorStateListener {
   public func onAnnotationSelected(id: Swift.String, triggerId: Swift.String)
   public func onAnnotationDeselected(id: Swift.String, triggerId: Swift.String)
-  public func onAnchorPlaced(annotationId: Swift.String, annotationColor: UIKit.UIColor, annotationType: Swift.String, annotationNumber: Swift.Int, triggerId: Swift.String)
+  public func onAnchorPlaced(annotationId: Swift.String, annotationColor: UIKit.UIColor, annotationType: Swift.String, annotationNumber: Swift.Int, triggerId: Swift.String, length: Swift.String? = nil)
   public func onAnchorRemoved(annotationId: Swift.String)
+}
+public protocol ARViewDelegate : AnyObject {
+  func didChanged(_ size: CoreFoundation.CGSize)
+  func didChange(tracking state: ARKit.ARCamera.TrackingState)
+  func onVideoFrameUpdate(frameBuffer: CoreVideo.CVPixelBuffer, rotation: Swift.Int, timestamp: Swift.Int64)
+}
+@available(iOS 11.0, *)
+@objc public protocol RenderARDelegate {
+  @objc func frame(didRender buffer: CoreVideo.CVPixelBuffer, with time: CoreMedia.CMTime, using rawBuffer: CoreVideo.CVPixelBuffer)
 }
 @_hasMissingDesignatedInitializers public class VMJsonManager {
   public class func convertToDictionary(text: Swift.String) -> [Swift.String : Any]?
@@ -2243,9 +2338,13 @@ extension LensCustomerSDK.Lens : LensCustomerSDK.AnnotationSelectionListener, Le
   public class func isValid(json: Any) -> Swift.Bool
   @objc deinit
 }
+public protocol AnchorStateListener {
+  func onAnchorPlaced(annotationId: Swift.String, annotationColor: UIKit.UIColor, annotationType: Swift.String, annotationNumber: Swift.Int, triggerId: Swift.String, length: Swift.String?)
+  func onAnchorRemoved(annotationId: Swift.String)
+}
 public typealias Email = Swift.String
 extension UIKit.UITableView {
-  @_Concurrency.MainActor(unsafe) public func addBackgroundLottie(_ lottieType: LensCustomerSDK.LottieType, customView: UIKit.UIView? = nil, actionButtonConfiguration: ((UIKit.UIButton) -> (() -> Swift.Void))? = nil)
+  @_Concurrency.MainActor(unsafe) public func addBackgroundLottie(_ lottieType: any LensCustomerSDK.LottieType, customView: UIKit.UIView? = nil, actionButtonConfiguration: ((UIKit.UIButton) -> (() -> Swift.Void))? = nil)
   @_Concurrency.MainActor(unsafe) public func updateBackgroundLottie()
   @_Concurrency.MainActor(unsafe) public var isBackgroundLottiePlaying: Swift.Bool {
     get
@@ -2257,19 +2356,33 @@ extension UIKit.UIImage {
 }
 public protocol AssistSocketProtocol : AnyObject {
   func didSocketConnected()
-  func didSocketDisconnected(_ error: Swift.Error?)
+  func didSocketDisconnected(_ error: (any Swift.Error)?)
   func didReceive(_ data: Foundation.Data)
   func didReceive(_ string: Swift.String)
   var canReceiveData: Swift.Bool { get set }
 }
-public protocol WebSocketProtocol : AnyObject {
-  var disableSSLCertValidation: Swift.Bool { get set }
-  var is_connected: Swift.Bool { get }
-  func disconnect()
-  func write(data: Foundation.Data)
-  func write(string: Swift.String)
-  func connect(websocket url: Foundation.URLRequest)
-  func lostNetwork()
+public protocol NodeStateChangeCallback {
+  func onNodeDeleteRequested(node: LensCustomerSDK.Node)
+}
+@_hasMissingDesignatedInitializers public class AnnotationNotes : Swift.Codable {
+  required public init(from decoder: any Swift.Decoder) throws
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+@_hasMissingDesignatedInitializers public class AnnotaionNote : Swift.Codable {
+  public var data: Swift.String
+  final public let triggerID: Swift.String
+  required public init(from decoder: any Swift.Decoder) throws
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+@_hasMissingDesignatedInitializers public class AnnotationNotify : Swift.Codable {
+  public var annotationObjectID: Swift.Int?
+  final public let triggerID: Swift.String?
+  public var notes: [LensCustomerSDK.AnnotaionNote]?
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 extension UIKit.UITextField {
   @_Concurrency.MainActor(unsafe) public var leftPading: CoreFoundation.CGFloat {
@@ -2286,6 +2399,13 @@ extension UIKit.UITextField {
   public static func register(categories: [LensCustomerSDK.UserNotificationCategory])
   public static func schedule(notification configuration: LensCustomerSDK.UserNotificationScheduleConfiguration, completion: ((Swift.Bool) -> Swift.Void)?)
   @objc deinit
+}
+extension UIKit.UIImage {
+  public static func getPlaneTexture() -> UIKit.UIImage?
+  public static func getBorderTexture() -> UIKit.UIImage?
+  public static func getBorderLineTexture() -> UIKit.UIImage?
+  public static func getCancelButtonTexture() -> UIKit.UIImage?
+  public static func getARNotesButtonTexture() -> UIKit.UIImage?
 }
 public struct OCRData {
   public var ocrText: Swift.String
@@ -2331,16 +2451,6 @@ extension Foundation.URL {
   public func appendParams(param: [Swift.String : Any]) -> Foundation.URL?
   public static func constructURLString(API: Swift.String, service: Swift.String, protocol protocolString: Swift.String, domain: Swift.String) -> Swift.String
   public static func constructURL(API: Swift.String, service: Swift.String, protocol protocolString: Swift.String, domain: Swift.String) -> Foundation.URL?
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class BaseParser : ObjectiveC.NSObject {
-  @objc override dynamic public var description: Swift.String {
-    @objc get
-  }
-  @objc deinit
-}
-public protocol AnnotationSelectionListener : AnyObject {
-  func onAnnotationSelected(id: Swift.String, triggerId: Swift.String)
-  func onAnnotationDeselected(id: Swift.String, triggerId: Swift.String)
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class LottieView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func didMoveToWindow()
@@ -2417,20 +2527,46 @@ public enum CanvasBoardSettings : Swift.String {
   }
 }
 public class Asset : Swift.Codable {
-  required public init(from decoder: Swift.Decoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class Node : SceneKit.SCNNode {
-  @_Concurrency.MainActor(unsafe) public func createOutlineNode() -> SceneKit.SCNNode
+public enum FlashActionType : Swift.String {
+  case turn_On, turn_Off
+  public init(boolean: Swift.Bool)
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class FlashSupportEvent : LensCustomerSDK.BaseParser {
+  public var is_flash_supported: Swift.Bool
+  public var current_flash_status: LensCustomerSDK.FlashActionType
   @objc deinit
+}
+extension LensCustomerSDK.ARRenderView {
+  @_Concurrency.MainActor(unsafe) public func measurement_Trigger_Action()
+  @_Concurrency.MainActor(unsafe) public func undoLastARMeaserment()
+  @_Concurrency.MainActor(unsafe) public func undoInprogressARMeasurement()
+  @_Concurrency.MainActor(unsafe) public func undoLastCustomerAnnotation()
 }
 extension LensCustomerSDK.Color : Swift.Codable {
-  public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
 }
 public protocol AnimationImageProvider {
   func imageForAsset(asset: LensCustomerSDK.ImageAsset) -> CoreGraphics.CGImage?
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class Node : SceneKit.SCNNode {
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_USER_ID: Swift.String {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public func createOutlineNode() -> SceneKit.SCNNode
+  @objc deinit
+}
+extension LensCustomerSDK.Node : Swift.Comparable {
+  @_Concurrency.MainActor(unsafe) public static func < (lhs: LensCustomerSDK.Node, rhs: LensCustomerSDK.Node) -> Swift.Bool
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class AnimationSubview : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
@@ -2491,8 +2627,8 @@ extension LensCustomerSDK.LottieType {
   @_Concurrency.MainActor(unsafe) public var lottie: LensCustomerSDK.AnimationView? {
     get
   }
-  @_Concurrency.MainActor(unsafe) public static func instance(lottieType: LensCustomerSDK.LottieType, messageLabelConfig: ((UIKit.UILabel) -> Swift.Void)? = nil, customView: UIKit.UIView? = nil, actionButtonConfiguration: ((UIKit.UIButton) -> (() -> Swift.Void)?)? = nil) -> LensCustomerSDK.LottieMessageView
-  @_Concurrency.MainActor(unsafe) public static func instance(with lottieType: LensCustomerSDK.LottieType, withCustomMessage message: Swift.String? = nil, lineCount: Swift.Int? = -1, customView: UIKit.UIView? = nil, actionButtonConfiguration: ((UIKit.UIButton) -> (() -> Swift.Void)?)? = nil) -> LensCustomerSDK.LottieMessageView
+  @_Concurrency.MainActor(unsafe) public static func instance(lottieType: any LensCustomerSDK.LottieType, messageLabelConfig: ((UIKit.UILabel) -> Swift.Void)? = nil, customView: UIKit.UIView? = nil, actionButtonConfiguration: ((UIKit.UIButton) -> (() -> Swift.Void)?)? = nil) -> LensCustomerSDK.LottieMessageView
+  @_Concurrency.MainActor(unsafe) public static func instance(with lottieType: any LensCustomerSDK.LottieType, withCustomMessage message: Swift.String? = nil, lineCount: Swift.Int? = -1, customView: UIKit.UIView? = nil, actionButtonConfiguration: ((UIKit.UIButton) -> (() -> Swift.Void)?)? = nil) -> LensCustomerSDK.LottieMessageView
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
   @_Concurrency.MainActor(unsafe) @objc override dynamic open func awakeFromNib()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
@@ -2510,6 +2646,52 @@ public class ResolutionHandler {
   public func getVideoFrame(for input: LensCustomerSDK.DrawingInput) -> CoreFoundation.CGRect
   @objc deinit
 }
+@objc @_hasMissingDesignatedInitializers public class Participant : LensCustomerSDK.BaseParser {
+  public enum Role : Swift.String {
+    case technician, customer, secondary_technician, external_technician
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Status : Swift.String {
+    case UP, DOWN
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ParticpantOSType : Swift.String {
+    case ios, android
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var clientId: Foundation.NSNumber?
+  final public let role: LensCustomerSDK.Participant.Role?
+  final public let email: Swift.String?
+  public var status: LensCustomerSDK.Participant.Status?
+  final public let zuid: Foundation.NSNumber?
+  public var name: Swift.String? {
+    get
+  }
+  public var time: Swift.Int?
+  public var platformType: LensCustomerSDK.Participant.ParticpantOSType?
+  final public let app_version: Swift.String?
+  public var isNewEnahcementSupported: Swift.Bool {
+    get
+  }
+  public var isSupportNewAnnoation: Swift.Bool {
+    get
+  }
+  public init(selfEmail: Swift.String?, role: LensCustomerSDK.Participant.Role, status: LensCustomerSDK.Participant.Status?, zuid: Foundation.NSNumber?, display_name: Swift.String?, app_version: Swift.String?, joiningTime: Swift.Int?)
+  public static func == (lhs: LensCustomerSDK.Participant, rhs: LensCustomerSDK.Participant) -> Swift.Bool
+  @objc deinit
+}
 public struct SSLClientCertificateError : Foundation.LocalizedError {
   public var errorDescription: Swift.String?
 }
@@ -2518,6 +2700,14 @@ public class SSLClientCertificate {
   public init(identity: Security.SecIdentity, identityCertificate: Security.SecCertificate)
   convenience public init(pkcs12Url: Foundation.URL, password: Swift.String) throws
   public init(pkcs12Url: Foundation.URL, importOptions: CoreFoundation.CFDictionary) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @available(iOS 11.0, *)
+@objc public class ViewAR : ObjectiveC.NSObject {
+  @objc public static var orientation: UIKit.UIInterfaceOrientationMask {
+    @objc get
+  }
+  @objc override dynamic public init()
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class AnimatedButton : LensCustomerSDK.AnimatedControl {
@@ -2532,45 +2722,6 @@ public class SSLClientCertificate {
 }
 extension UIKit.UIColor {
   public var lottieColorValue: LensCustomerSDK.Color {
-    get
-  }
-}
-public class CustomCircularArray<E> {
-  public init(ofSize size: Swift.Int)
-  public func setOverwriteCallback(_ callback: ((E, Swift.Int) -> ())?)
-  public var count: Swift.Int {
-    get
-  }
-  public var isEmpty: Swift.Bool {
-    get
-  }
-  public func clear()
-  public func get(index: Swift.Int) -> E?
-  public func popLast() -> E?
-  public func popFirst() -> E?
-  public func push(element: E)
-  public func remove(forWhich: (E) -> Swift.Bool) -> [E?]
-  public func remove(index: Swift.Int)
-  public func nextIndex() -> Swift.Int
-  public func getMaxElementCount() -> Swift.Int
-  @objc deinit
-}
-public enum AnnotationType : Swift.String {
-  case rectangle, ellipse, pencil, arrow
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public enum FreeStyleState : Swift.CustomStringConvertible {
-  case mouse_move, mouse_up
-  public var description: Swift.String {
-    get
-  }
-  public static func == (a: LensCustomerSDK.FreeStyleState, b: LensCustomerSDK.FreeStyleState) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
     get
   }
 }
@@ -2604,6 +2755,87 @@ public class File : Swift.Equatable {
 }
 extension UIKit.UIViewController {
   @_Concurrency.MainActor(unsafe) public func addChildren(viewController: UIKit.UIViewController, containerView: UIKit.UIView? = nil, isSafeArea: Swift.Bool = false)
+}
+public class CustomCircularArray<E> {
+  public init(ofSize size: Swift.Int)
+  public func setOverwriteCallback(_ callback: ((E, Swift.Int) -> ())?)
+  public var count: Swift.Int {
+    get
+  }
+  public var isEmpty: Swift.Bool {
+    get
+  }
+  public func clear()
+  public func get(index: Swift.Int) -> E?
+  public var first: E? {
+    get
+  }
+  public var last: E? {
+    get
+  }
+  public func popLast() -> E?
+  public func popFirst() -> E?
+  public func push(element: E)
+  public func remove(forWhich: (E) -> Swift.Bool) -> [E?]
+  public func remove(index: Swift.Int)
+  public func nextIndex() -> Swift.Int
+  public func getMaxElementCount() -> Swift.Int
+  @objc deinit
+}
+@objc @available(iOS 11.0, *)
+public class ARRecorder : ObjectiveC.NSObject {
+  @objc public var delegate: (any LensCustomerSDK.RecordARDelegate)?
+  @objc public var renderAR: (any LensCustomerSDK.RenderARDelegate)?
+  @objc public var status: LensCustomerSDK.RecordARStatus {
+    get
+  }
+  @objc public var micStatus: LensCustomerSDK.RecordARMicrophoneStatus {
+    get
+  }
+  @objc public var requestMicPermission: LensCustomerSDK.RecordARMicrophonePermission {
+    @objc get
+    @objc set
+  }
+  public var videoResolution: LensCustomerSDK.VideoResolution {
+    get
+    set
+  }
+  @objc public var videoOrientation: LensCustomerSDK.ARVideoOrientation
+  @objc public var contentMode: LensCustomerSDK.ARFrameMode
+  @objc public var onlyRenderWhileRecording: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var enableAudio: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var enableMixWithOthers: Swift.Bool
+  @objc public var adjustVideoForSharing: Swift.Bool
+  @objc public var deleteCacheWhenExported: Swift.Bool
+  @objc public var enableAdjustEnvironmentLighting: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var retainTechnique: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public init(ARSceneKit: ARKit.ARSCNView)
+  @objc deinit
+  public func isVideoRecording() -> Swift.Bool
+  @objc public func record(at url: Foundation.URL? = nil)
+  @objc public func record(at url: Foundation.URL? = nil, forDuration duration: Foundation.TimeInterval, _ finished: ((_ videoPath: Foundation.URL) -> Swift.Void)? = nil)
+  @objc public func pause()
+  @objc public func stopAndExport(_ finished: ((_ videoAsset: Photos.PHAsset?, _ videoPath: Foundation.URL?, _ permissionStatus: Photos.PHAuthorizationStatus, _ exported: Swift.Bool) -> Swift.Void)? = nil)
+  @objc public func stop(_ finished: ((_ videoPath: Foundation.URL) -> Swift.Void)? = nil)
+  @objc public func cancel()
+  @objc public func export(video path: Foundation.URL, _ finished: ((_ videoAsset: Photos.PHAsset?, _ videoPath: Foundation.URL?, _ exported: Swift.Bool, _ permissionStatus: Photos.PHAuthorizationStatus) -> Swift.Void)? = nil)
+  @objc public func requestMicrophonePermission(_ finished: ((_ status: Swift.Bool) -> Swift.Void)? = nil)
+}
+@available(iOS 11.0, *)
+@objc extension LensCustomerSDK.ARRecorder {
+  @objc dynamic public func prepare(_ configuration: ARKit.ARConfiguration? = nil)
 }
 extension LensCustomerSDK.SessionValidationResponse.SessionValidationError : Swift.Equatable {}
 extension LensCustomerSDK.SessionValidationResponse.SessionValidationError : Swift.Hashable {}
@@ -2712,6 +2944,9 @@ extension LensCustomerSDK.LensSessionContent.Flash : Swift.RawRepresentable {}
 extension UIKit.UIDevice.ScreenType : Swift.Equatable {}
 extension UIKit.UIDevice.ScreenType : Swift.Hashable {}
 extension UIKit.UIDevice.ScreenType : Swift.RawRepresentable {}
+extension LensCustomerSDK.ARInputViewOrientation : Swift.Equatable {}
+extension LensCustomerSDK.ARInputViewOrientation : Swift.Hashable {}
+extension LensCustomerSDK.ARInputViewOrientation : Swift.RawRepresentable {}
 extension LensCustomerSDK.ErrorType : Swift.Equatable {}
 extension LensCustomerSDK.ErrorType : Swift.Hashable {}
 extension LensCustomerSDK.CoordinateSpace : Swift.Equatable {}
@@ -2719,6 +2954,8 @@ extension LensCustomerSDK.CoordinateSpace : Swift.Hashable {}
 extension LensCustomerSDK.CoordinateSpace : Swift.RawRepresentable {}
 extension ObjectiveC.NSObject.AssistImpactFeedbackStyle : Swift.Equatable {}
 extension ObjectiveC.NSObject.AssistImpactFeedbackStyle : Swift.Hashable {}
+extension LensCustomerSDK.FreezeCurrentStatus.FreezeBy : Swift.Equatable {}
+extension LensCustomerSDK.FreezeCurrentStatus.FreezeBy : Swift.Hashable {}
 extension LensCustomerSDK.LottieBackgroundBehavior : Swift.Equatable {}
 extension LensCustomerSDK.LottieBackgroundBehavior : Swift.Hashable {}
 extension LensCustomerSDK.LottieLoopMode : Swift.Equatable {}
@@ -2731,6 +2968,11 @@ extension LensCustomerSDK.ImageScrollView.ContentMode : Swift.RawRepresentable {
 extension LensCustomerSDK.ImageScrollView.Offset : Swift.Equatable {}
 extension LensCustomerSDK.ImageScrollView.Offset : Swift.Hashable {}
 extension LensCustomerSDK.ImageScrollView.Offset : Swift.RawRepresentable {}
+extension LensCustomerSDK.LensAnnotationType : Swift.Equatable {}
+extension LensCustomerSDK.LensAnnotationType : Swift.Hashable {}
+extension LensCustomerSDK.LensAnnotationType : Swift.RawRepresentable {}
+extension LensCustomerSDK.FreeStyleState : Swift.Equatable {}
+extension LensCustomerSDK.FreeStyleState : Swift.Hashable {}
 extension LensCustomerSDK.ContentType : Swift.Equatable {}
 extension LensCustomerSDK.ContentType : Swift.Hashable {}
 extension LensCustomerSDK.ContentType : Swift.RawRepresentable {}
@@ -2746,18 +2988,6 @@ extension LensCustomerSDK.CloseCode : Swift.RawRepresentable {}
 extension LensCustomerSDK.WebSocket.OpCode : Swift.Equatable {}
 extension LensCustomerSDK.WebSocket.OpCode : Swift.Hashable {}
 extension LensCustomerSDK.WebSocket.OpCode : Swift.RawRepresentable {}
-extension LensCustomerSDK.FlashActionType : Swift.Equatable {}
-extension LensCustomerSDK.FlashActionType : Swift.Hashable {}
-extension LensCustomerSDK.FlashActionType : Swift.RawRepresentable {}
-extension LensCustomerSDK.Participant.Role : Swift.Equatable {}
-extension LensCustomerSDK.Participant.Role : Swift.Hashable {}
-extension LensCustomerSDK.Participant.Role : Swift.RawRepresentable {}
-extension LensCustomerSDK.Participant.Status : Swift.Equatable {}
-extension LensCustomerSDK.Participant.Status : Swift.Hashable {}
-extension LensCustomerSDK.Participant.Status : Swift.RawRepresentable {}
-extension LensCustomerSDK.Participant.ParticpantOSType : Swift.Equatable {}
-extension LensCustomerSDK.Participant.ParticpantOSType : Swift.Hashable {}
-extension LensCustomerSDK.Participant.ParticpantOSType : Swift.RawRepresentable {}
 extension LensCustomerSDK.LensFlashError : Swift.Equatable {}
 extension LensCustomerSDK.LensFlashError : Swift.Hashable {}
 extension LensCustomerSDK.LensFlashError : Swift.RawRepresentable {}
@@ -2770,6 +3000,24 @@ extension LensCustomerSDK.MatteType : Swift.RawRepresentable {}
 extension LensCustomerSDK.BlendMode : Swift.Equatable {}
 extension LensCustomerSDK.BlendMode : Swift.Hashable {}
 extension LensCustomerSDK.BlendMode : Swift.RawRepresentable {}
+extension LensCustomerSDK.ARFrameMode : Swift.Equatable {}
+extension LensCustomerSDK.ARFrameMode : Swift.Hashable {}
+extension LensCustomerSDK.ARFrameMode : Swift.RawRepresentable {}
+extension LensCustomerSDK.ARVideoOrientation : Swift.Equatable {}
+extension LensCustomerSDK.ARVideoOrientation : Swift.Hashable {}
+extension LensCustomerSDK.ARVideoOrientation : Swift.RawRepresentable {}
+extension LensCustomerSDK.RecordARMicrophonePermission : Swift.Equatable {}
+extension LensCustomerSDK.RecordARMicrophonePermission : Swift.Hashable {}
+extension LensCustomerSDK.RecordARMicrophonePermission : Swift.RawRepresentable {}
+extension LensCustomerSDK.RecordARStatus : Swift.Equatable {}
+extension LensCustomerSDK.RecordARStatus : Swift.Hashable {}
+extension LensCustomerSDK.RecordARStatus : Swift.RawRepresentable {}
+extension LensCustomerSDK.RecordARMicrophoneStatus : Swift.Equatable {}
+extension LensCustomerSDK.RecordARMicrophoneStatus : Swift.Hashable {}
+extension LensCustomerSDK.RecordARMicrophoneStatus : Swift.RawRepresentable {}
+extension LensCustomerSDK.VideoResolution : Swift.Equatable {}
+extension LensCustomerSDK.VideoResolution : Swift.Hashable {}
+extension LensCustomerSDK.VideoResolution : Swift.RawRepresentable {}
 extension UIKit.UIScrollView.ATViewSide : Swift.Equatable {}
 extension UIKit.UIScrollView.ATViewSide : Swift.Hashable {}
 extension LensCustomerSDK.AssistSocketErrorState : Swift.Equatable {}
@@ -2787,6 +3035,9 @@ extension Foundation.Date.SearchDirection : Swift.Hashable {}
 extension LensCustomerSDK.CanvasBoardSettings : Swift.Equatable {}
 extension LensCustomerSDK.CanvasBoardSettings : Swift.Hashable {}
 extension LensCustomerSDK.CanvasBoardSettings : Swift.RawRepresentable {}
+extension LensCustomerSDK.FlashActionType : Swift.Equatable {}
+extension LensCustomerSDK.FlashActionType : Swift.Hashable {}
+extension LensCustomerSDK.FlashActionType : Swift.RawRepresentable {}
 extension LensCustomerSDK.VMHTTPMethod : Swift.Equatable {}
 extension LensCustomerSDK.VMHTTPMethod : Swift.Hashable {}
 extension LensCustomerSDK.VMHTTPMethod : Swift.RawRepresentable {}
@@ -2795,8 +3046,12 @@ extension LensCustomerSDK.VMSessionError : Swift.Hashable {}
 extension LensCustomerSDK.VMSessionError : Swift.RawRepresentable {}
 extension LensCustomerSDK.VMResponseType : Swift.Equatable {}
 extension LensCustomerSDK.VMResponseType : Swift.Hashable {}
-extension LensCustomerSDK.AnnotationType : Swift.Equatable {}
-extension LensCustomerSDK.AnnotationType : Swift.Hashable {}
-extension LensCustomerSDK.AnnotationType : Swift.RawRepresentable {}
-extension LensCustomerSDK.FreeStyleState : Swift.Equatable {}
-extension LensCustomerSDK.FreeStyleState : Swift.Hashable {}
+extension LensCustomerSDK.Participant.Role : Swift.Equatable {}
+extension LensCustomerSDK.Participant.Role : Swift.Hashable {}
+extension LensCustomerSDK.Participant.Role : Swift.RawRepresentable {}
+extension LensCustomerSDK.Participant.Status : Swift.Equatable {}
+extension LensCustomerSDK.Participant.Status : Swift.Hashable {}
+extension LensCustomerSDK.Participant.Status : Swift.RawRepresentable {}
+extension LensCustomerSDK.Participant.ParticpantOSType : Swift.Equatable {}
+extension LensCustomerSDK.Participant.ParticpantOSType : Swift.Hashable {}
+extension LensCustomerSDK.Participant.ParticpantOSType : Swift.RawRepresentable {}

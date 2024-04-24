@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		aqBeCFZF+uGZ3naN7egSmAiInMg=
+		WQwmOJGKyeQl4MQV+4AE4lbI5gM=
 		</data>
 		<key>Assets.scnassets/CameraSetup.scn</key>
 		<data>
-		IkN/EQi0ghlGMA0Jm3XDpyOKLfA=
+		DFubORrrZY1DTP8kqNg0emWeZ+0=
 		</data>
 		<key>Assets.scnassets/wireframe_shader.metal</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/LensCustomerSDK-Swift.h</key>
 		<data>
-		M5LrhjjpisVPGPkH2D53lgoL9jw=
+		XqOsLTOqWBNM7rBeSvh2R71L6Lk=
 		</data>
 		<key>Headers/LensCustomerSDK.h</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		IW88p2vqI0Qoau99aUgj6ulSZyQ=
+		5UGxy+ttouzo+8snnT+ySWQbFfU=
 		</data>
 		<key>LICENSE</key>
 		<data>
@@ -34,35 +34,35 @@
 		</data>
 		<key>LottieMessageView.nib</key>
 		<data>
-		iCnOxi0hWlBT/fc/U7IP4RhK6q4=
+		N3yHfoMg9xod90otf1YQLVPBYhc=
 		</data>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		TL13/fW6uE0bHuFMOCZzm4pzVgw=
+		2nONjDzNs5zuu7PVR4lLf/PTY6I=
 		</data>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		xwmUD/VqfEQB6LHZZG8v2g7msE8=
+		NY0oskSM3S50zUy257uIskz8Fik=
 		</data>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		Xp6//b6k8b+96ENRRSFVMANwYqc=
+		ZO+FlZBPb1amZNL36asnX+1IsDU=
 		</data>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		xwmUD/VqfEQB6LHZZG8v2g7msE8=
+		NY0oskSM3S50zUy257uIskz8Fik=
 		</data>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		AR9pwuCVS0qIVZssbiTRRxZqLDM=
+		ZLEAfinYLDGDKc+x4AZzVTpT/wQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		kCEEhnWAE7qw37uE71BF+9PV72I=
+		quxhO4xrsrg8qtLmdUFiitTT8lM=
 		</data>
 		<key>NotificationView.nib</key>
 		<data>
-		OYnjCMKGlJ/ub5/+8mh3/+IV16g=
+		jCoRTPwtY46SZ+jyFJQ1Ei9uORg=
 		</data>
 		<key>README.md</key>
 		<data>
@@ -178,14 +178,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ADew9/Ro9JX8o1TlyqnKIHNaW2Mw3ynC+ciSQ6SPrr4=
+			XbQMJWdlp1FSAgAYFBnP8AlpLZD7/7XWQb9gu918N7Q=
 			</data>
 		</dict>
 		<key>Assets.scnassets/CameraSetup.scn</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SJzL3xqc1IvDgHYF72xPRj02Z4QC+kcF7suUdDNVpkk=
+			qxW4OAWDUTAWnYdjQygT3vFN0+XXCIeieY+508MXB+8=
 			</data>
 		</dict>
 		<key>Assets.scnassets/wireframe_shader.metal</key>
@@ -199,7 +199,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8/bQqIcOysbxH7fMtQPg0J2DlhU1CukPBC3CFxT9pb0=
+			TBo7laPXm/9g2Rvn49kdgUThWXXXeLWehKqTsUirin8=
 			</data>
 		</dict>
 		<key>Headers/LensCustomerSDK.h</key>
@@ -220,56 +220,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			NyvlK//dowD569p0C0GB+g+jjYZBCy/RfrrnwT8zl2c=
+			z3krUQiDz0/AVskmaUMym4j+IZLpFOy7wHtA0WWcwAQ=
 			</data>
 		</dict>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wm4UeE9En2hepUZRfSeXdfnseWAVgD1yEkOiEnhiQiQ=
+			GPDRji77pAU8uNmhXdCL7z7DfjGnBduRihiWlyxj8zQ=
 			</data>
 		</dict>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			77CzCqRpRzpmE7F1PeqsMxvUZXUCoio1Kp5R9dpJz/s=
+			u2ZUfqjfjS7LxerBGxvQsKS81BxP5RrFYv+O/aoefuI=
 			</data>
 		</dict>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WO2L0iRJ0q/uOywjAp8CTGDu1mHOfOOBBQJTUft21bs=
+			whPo5PkZNLI8YpJHUXfDEpyMKYqhB1VcLYmFUear45Y=
 			</data>
 		</dict>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			77CzCqRpRzpmE7F1PeqsMxvUZXUCoio1Kp5R9dpJz/s=
+			u2ZUfqjfjS7LxerBGxvQsKS81BxP5RrFYv+O/aoefuI=
 			</data>
 		</dict>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bSidXZ2UwwItxMkX1x4Xo57PYALpucahjAT5yQ9xzpo=
+			l12A8of9Rl+Wi0UUP2QZqdZF2OSF5ClctQrn6Pi4m3A=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2wpZOGqHOkgVXMglEGnMFERT3fbDio+4MSpjpRitKIU=
+			2LIqbfuUWdF9t4ebQR7f1yoUAEXJmC4cyJwIIxgONIg=
 			</data>
 		</dict>
 		<key>NotificationView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YBeizdMWTObdFsdxUXLMwuRcX0Z1bOkPDJPIyG3+/XM=
+			e/t8yIpM3RX9nSDZhMjHBAgm+2JqdvvW+MNGr1MGvIk=
 			</data>
 		</dict>
 		<key>README.md</key>
