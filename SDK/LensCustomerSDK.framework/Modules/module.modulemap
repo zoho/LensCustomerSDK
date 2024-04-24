@@ -1,0 +1,11 @@
+framework module LensCustomerSDK {
+  umbrella header "LensCustomerSDK.h"
+  export *
+
+  module * { export * }
+}
+
+module LensCustomerSDK.Swift {
+  header "LensCustomerSDK-Swift.h"
+  requires objc
+}

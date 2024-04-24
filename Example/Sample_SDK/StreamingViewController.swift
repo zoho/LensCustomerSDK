@@ -7,11 +7,17 @@
 //
 
 import UIKit
-import LensSDK
+ 
+#if canImport(Lens)
+import Lens
+#endif
+import LensCustomerSDK
 import ARKit
-
+#if canImport(ZohoLensArLibrary)
+import ZohoLensArLibrary
+#endif
 enum MenuIdentifier: String {
-    case video, audio, liveText, ScanQR, swapCamera, freeze
+    case chat,video, audio, liveText, ScanQR, swapCamera, freeze
 }
 
 struct Menu {
@@ -31,13 +37,16 @@ class StreamingViewController: UIViewController {
     @IBOutlet weak var loaderView: UIView!
     @IBOutlet weak var noDataView: UIView!
     
+    var chatController:ChatletViewController? = nil
+    
     weak var weakSelf: UIViewController? {
         return self
     }
     var connectionParam:CustomerSessionParams!
     var lensObject:LensCustomer?
     var arView:ARRenderView?
-    let menu = [Menu(title: "Video", identifier: MenuIdentifier.video.rawValue),
+    let menu = [Menu(title: "Chat", identifier: MenuIdentifier.chat.rawValue),
+                Menu(title: "Video", identifier: MenuIdentifier.video.rawValue),
                 Menu(title: "Mute Audio", identifier: MenuIdentifier.audio.rawValue),
                 Menu(title: "Freeze", identifier: MenuIdentifier.freeze.rawValue),
                 Menu(title: "Live Text", identifier: MenuIdentifier.liveText.rawValue),
@@ -49,9 +58,9 @@ class StreamingViewController: UIViewController {
     static  func getViewcontroller(param:CustomerSessionParams,isARSupported:Bool) -> StreamingViewController {
         
         let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "streamingcontroller") as! StreamingViewController
-      controller.connectionParam = param
-      controller.talkSetup.isMuteAudio = false
-      controller.isARsupport = isARSupported
+        controller.connectionParam = param
+        controller.talkSetup.isMuteAudio = false
+        controller.isARsupport = isARSupported
         controller.modalPresentationStyle = .fullScreen
         return controller
         
@@ -66,6 +75,7 @@ class StreamingViewController: UIViewController {
         lensObject?.arDelegate = self
         lensObject?.chatDelegate = self
         lensObject?.startSession()
+        
         if isARsupport {
             (self.view.viewWithTag(100) as? UIButton)?.isHidden = false
             (self.view.viewWithTag(101) as? UIButton)?.isHidden = false
@@ -307,9 +317,37 @@ extension StreamingViewController: UICollectionViewDataSource, UICollectionViewD
             }
             print("")
             
+        case .chat:
+            if chatController == nil {
+                chatController =
+                
+                ChatletViewController.init(connection_param: connectionParam)
+                
+                chatController?.chat_open_request.bind(listener: { [weak self] is_open_requested in
+                    if is_open_requested {
+                        self?.present_chat_controller()
+                    }
+                })
+                chatController?.new_chat_notification.bind(listener: {  is_new_message_recieved in
+                    if is_new_message_recieved {
+                       // Higlight chat icon with new message badge
+                    }
+                })
+               
+            }
+            present_chat_controller()
+            print("")
+            
         default:
             break
         }
+    }
+        
+    func present_chat_controller() {
+        
+        let navigationController = UINavigationController.init(rootViewController: chatController!)
+        self.present(navigationController, animated: true)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -319,6 +357,10 @@ extension StreamingViewController: UICollectionViewDataSource, UICollectionViewD
 
 
 extension StreamingViewController: OtherActionProtocol {
+    func onFreezeSuccess(fromUpstreamer: Bool) {
+        print("Freeze Success upstreamer")
+    }
+    
     func onFreezeSuccess() {
        print("Freeze Success")
     }
@@ -411,11 +453,11 @@ extension StreamingViewController: OtherActionProtocol {
 }
 
 extension StreamingViewController: ARProtocol {
-    func onArCommentsReceived(annotationNode: LensSDK.AnnotationNotify) {
+    func onArCommentsReceived(annotationNode: AnnotationNotify) {
         print("Annotation Comments Received : \(String(describing: annotationNode.notes?.first?.data))")
     }
     
-    func onAnchorSelectionChanged(annotationId: String, state: LensSDK.AnnotationSelection, triggerId: String) {
+    func onAnchorSelectionChanged(annotationId: String, state: AnnotationSelection, triggerId: String) {
         print("Annotation Selected : \(state == .ar_selected) ID: \(annotationId)")
         
     }
@@ -433,7 +475,7 @@ extension StreamingViewController: ARProtocol {
 }
 
 extension StreamingViewController: ChatProtocol {
-    func didReceive(_ chat: LensSDK.Chat) {
+    func didReceive(_ chat: Chat) {
         
     }
     
