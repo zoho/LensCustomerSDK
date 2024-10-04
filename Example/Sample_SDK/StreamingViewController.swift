@@ -319,9 +319,7 @@ extension StreamingViewController: UICollectionViewDataSource, UICollectionViewD
             
         case .chat:
             if chatController == nil {
-                chatController =
-                
-                ChatletViewController.init(connection_param: connectionParam)
+                chatController = ChatletViewController.init(connection_param: connectionParam)
                 
                 chatController?.chat_open_request.bind(listener: { [weak self] is_open_requested in
                     if is_open_requested {

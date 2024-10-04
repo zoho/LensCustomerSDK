@@ -55,7 +55,7 @@ struct StreamingView: View {
 
 
     let sessionMenus: [SessionMenu] = [
-        .chat ,.freeze,.liveText,.swapCamera,.ScanQR
+        .freeze,.liveText,.swapCamera,.ScanQR
     ]
 
     var body: some View {
@@ -208,10 +208,6 @@ struct MyViewControllerRepresentable: UIViewControllerRepresentable {
                 } else {
                    lensObject?.swapToFrontCamera()
                 }
-    
-            case .chat:
-                
-                break
                 
             default:
                 break
