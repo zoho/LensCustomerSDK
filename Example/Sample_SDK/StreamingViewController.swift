@@ -357,6 +357,10 @@ extension StreamingViewController: UICollectionViewDataSource, UICollectionViewD
 
 
 extension StreamingViewController: OtherActionProtocol {
+    func onCameraSwitch(isFront: Bool) {
+        
+    }
+    
     func onFreezeSuccess(fromUpstreamer: Bool) {
         print("Freeze Success upstreamer")
     }

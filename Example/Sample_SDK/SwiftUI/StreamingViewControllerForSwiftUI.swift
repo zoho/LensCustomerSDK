@@ -313,6 +313,9 @@ extension StreamingViewControllerForSwiftUI: LensSignallingProtocol {
 
 
 extension StreamingViewControllerForSwiftUI: OtherActionProtocol {
+    func onCameraSwitch(isFront: Bool) {
+    }
+    
     func onFreezeSuccess(fromUpstreamer: Bool) {
         print("Freeze Success upstreamer")
     }
