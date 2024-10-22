@@ -94,7 +94,7 @@ struct SessionJoinScreen: View {
         print("Submit button tapped")
         if !sessionId.isEmpty {
             isLoading = true
-            LensCustomer.validateSessionForSDK(sessionKey: sessionId, token: sdkToken, base: URL.init(string: url)!) {  (validation) in
+            LensCustomer.validateSessionForSDK(sessionKey: sessionId, token: sdkToken) {  (validation) in
                 switch validation {
                 case .validCustomer(let param):
                     self.param = param

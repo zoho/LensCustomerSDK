@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         
         
         if let id = sessionID.text {
-            LensCustomer.validateSessionForSDK(sessionKey: id, token: default_token, base: URL.init(string: url )!) { (validation) in
+            LensCustomer.validateSessionForSDK(sessionKey: id, token: default_token) { (validation) in
                 DispatchQueue.main.async {
                     switch validation {
                     case .validCustomer(let param):
