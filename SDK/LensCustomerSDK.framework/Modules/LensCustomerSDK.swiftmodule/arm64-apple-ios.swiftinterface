@@ -2484,36 +2484,6 @@ extension UIKit.UIView {
   }
 }
 extension UIKit.UIView {
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var atCornerRadius: CoreFoundation.CGFloat {
-    @objc get
-    @objc set(newValue)
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var atBorderColor: UIKit.UIColor? {
-    @objc get
-    @objc set(newValue)
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var borderWidth: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var shadowRadius: CoreFoundation.CGFloat {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var shadowColor: UIKit.UIColor? {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var shadowOpacity: Swift.Float {
-    @objc get
-    @objc set
-  }
-  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var shadowOffset: CoreFoundation.CGSize {
-    @objc get
-    @objc set
-  }
-}
-extension UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency public func makeSecure()
 }
 public protocol AssistSocketProtocol : AnyObject {

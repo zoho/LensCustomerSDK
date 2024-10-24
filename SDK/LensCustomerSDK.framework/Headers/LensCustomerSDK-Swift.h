@@ -1086,16 +1086,6 @@ SWIFT_PROTOCOL("_TtP15LensCustomerSDK16RenderARDelegate_") SWIFT_AVAILABILITY(io
 
 
 
-@interface UIView (SWIFT_EXTENSION(LensCustomerSDK))
-@property (nonatomic) IBInspectable CGFloat atCornerRadius;
-@property (nonatomic, strong) IBInspectable UIColor * _Nullable atBorderColor;
-@property (nonatomic) IBInspectable CGFloat borderWidth;
-@property (nonatomic) IBInspectable CGFloat shadowRadius;
-@property (nonatomic, strong) IBInspectable UIColor * _Nullable shadowColor;
-@property (nonatomic) IBInspectable float shadowOpacity;
-@property (nonatomic) IBInspectable CGSize shadowOffset;
-@end
-
 
 @class UIPopoverPresentationController;
 
