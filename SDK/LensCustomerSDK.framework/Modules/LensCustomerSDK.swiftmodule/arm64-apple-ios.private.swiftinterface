@@ -987,7 +987,7 @@ public protocol OtherActionProtocol : AnyObject {
 extension LensCustomerSDK.OtherActionProtocol {
   public func didReceiveAnnotation(input: LensCustomerSDK.DrawingInput?, isClear: Swift.Bool)
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class Node : SceneKit.SCNNode {
+@_hasMissingDesignatedInitializers @objc(ARNode) @_Concurrency.MainActor @preconcurrency public class Node : SceneKit.SCNNode {
   @_Concurrency.MainActor @preconcurrency public static var DEFAULT_USER_ID: Swift.String {
     get
   }
@@ -3209,7 +3209,8 @@ extension Foundation.URL {
   public var params: [(Swift.String, Swift.String)] {
     get
   }
-  public func appendParams(param: [Swift.String : Any]) -> Foundation.URL?
+  public func appendNewQueryParams(param: [Swift.String : Any]) -> Foundation.URL?
+  public func appendParams(param: [Swift.String : Swift.String]) -> Foundation.URL?
   public static func constructURLString(API: Swift.String, service: Swift.String, protocol protocolString: Swift.String, domain: Swift.String) -> Swift.String
   public static func constructURL(API: Swift.String, service: Swift.String, protocol protocolString: Swift.String, domain: Swift.String) -> Foundation.URL?
 }

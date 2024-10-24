@@ -855,8 +855,8 @@ SWIFT_CLASS("_TtC15LensCustomerSDK20LensFlashCoordinator")
 
 
 /// Base class for all annotations
-SWIFT_CLASS("_TtC15LensCustomerSDK4Node")
-@interface Node : SCNNode
+SWIFT_CLASS_NAMED("Node")
+@interface ARNode : SCNNode
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -864,7 +864,7 @@ SWIFT_CLASS("_TtC15LensCustomerSDK4Node")
 
 
 SWIFT_CLASS("_TtC15LensCustomerSDK8LineNode")
-@interface LineNode : Node
+@interface LineNode : ARNode
 @end
 
 
@@ -950,7 +950,7 @@ SWIFT_CLASS("_TtC15LensCustomerSDK11Participant")
 
 
 SWIFT_CLASS("_TtC15LensCustomerSDK7Pointer")
-@interface Pointer : Node
+@interface Pointer : ARNode
 @end
 
 
