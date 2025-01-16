@@ -4385,6 +4385,7 @@ extension Swift.String {
   public func isValidEmailID() -> Swift.Bool
 }
 @_hasMissingDesignatedInitializers public class LensNetworkManager {
+  public static func startSession(handshakeID: Swift.String, authToken: Swift.String, emailID: Swift.String?, departmentID: Swift.String?, orgID: Swift.String?, success: @escaping (LensCustomerSDK.NewSession) -> Swift.Void, failure: @escaping (LensCustomerSDK.LensAPIError) -> Swift.Void)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class LensChatController : LensCustomerSDK.AssistChatController {
