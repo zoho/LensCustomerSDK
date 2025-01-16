@@ -4370,10 +4370,22 @@ public struct SessionDescription {
   public let clientToken: Swift.String
   public var participantsParticipant: LensCustomerSDK.Participant?
 }
+public struct NewSession : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct LensAPIError {
+}
+extension LensCustomerSDK.LensAPIError : Swift.Equatable {
+  public static func == (lhs: LensCustomerSDK.LensAPIError, rhs: LensCustomerSDK.LensAPIError) -> Swift.Bool
+}
 extension Swift.String {
   public func encodeURLString() -> Swift.String
   public func decodeUrl() -> Swift.String?
   public func isValidEmailID() -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers public class LensNetworkManager {
+  @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class LensChatController : LensCustomerSDK.AssistChatController {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
