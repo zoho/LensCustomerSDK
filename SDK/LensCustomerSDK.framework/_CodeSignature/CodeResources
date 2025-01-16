@@ -4,9 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>ATCustomPageController.nib</key>
+		<data>
+		RyTcgtwoc0euN1N40LHnzwTiJjI=
+		</data>
 		<key>Assets.car</key>
 		<data>
-		s5YdvTEPfqQZdUtka+mV8EweImc=
+		J9laS/yva2YhecXiyryiQ0vme3U=
 		</data>
 		<key>Assets.scnassets/CameraSetup.scn</key>
 		<data>
@@ -16,9 +20,57 @@
 		<data>
 		0owULy2FEQQwJ9bxuuMVHb3z0fk=
 		</data>
+		<key>AssistBlurAlertController.nib</key>
+		<data>
+		kkQ3OxGoF4XbKOhKcVK2oSdu2GA=
+		</data>
+		<key>AssistChatController.nib/objects-11.0+.nib</key>
+		<data>
+		vO3n2bi4Z9x6UMQboGbIx8cBNOo=
+		</data>
+		<key>AssistChatController.nib/runtime.nib</key>
+		<data>
+		QQnCm+euuOUItsMeQ/+PVUDL0pk=
+		</data>
+		<key>AssistMenuCell.nib</key>
+		<data>
+		ceeLzeqgxa2rvFBlX404EKQFIx4=
+		</data>
+		<key>Connecting_state.json</key>
+		<data>
+		rfDisqM9lD0X1XdRVc7USdwwQ4U=
+		</data>
+		<key>Connection_denied.json</key>
+		<data>
+		mlVr9WsV4lA/Htd83uO2YD1MKf8=
+		</data>
+		<key>Connection_stopped.json</key>
+		<data>
+		c78xsatdZONbA/D1Q4AWuHM7Djc=
+		</data>
+		<key>CustomerCell.nib</key>
+		<data>
+		pNy6bwrZMhaX8qJUXPOTwAs/6OA=
+		</data>
+		<key>DatePickerController.nib</key>
+		<data>
+		YjlkpF5rhIBdBA4E4dy9/atRj/8=
+		</data>
+		<key>DrawerViewController.nib</key>
+		<data>
+		Irg4jZ31Yz64rtfj9lyTiTcJOjI=
+		</data>
+		<key>GenericLottieOnBoardDesciptionController.nib</key>
+		<data>
+		5+Ky7hPslBGmxK2WHnrjvByywsY=
+		</data>
+		<key>GenericOnBoardingDescriptiorCell.nib</key>
+		<data>
+		io9IoRPMXYnbAv20kz0ZHVOonk8=
+		</data>
 		<key>Headers/LensCustomerSDK-Swift.h</key>
 		<data>
-		BwRfe5OgqD4+K02peInWMblPuM4=
+		Tu1A5UUot6u5hUNlBRcWclbZLLA=
 		</data>
 		<key>Headers/LensCustomerSDK.h</key>
 		<data>
@@ -26,47 +78,219 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		3BJx75iHIIJurS9PgON2UkMcfDc=
+		8DtfqW0F32DJ9B9neUpQOydF01w=
+		</data>
+		<key>InviteViewController.nib</key>
+		<data>
+		YYBIfd0434nJ9ytlrNN1Bhxa1PQ=
 		</data>
 		<key>LICENSE</key>
 		<data>
 		viPPNo04o63+rU31VZuj755Y9PY=
 		</data>
+		<key>Lens.storyboardc/Exb-RO-Klc-view-15B-mD-dGA.nib</key>
+		<data>
+		D0UP0BK2cqW8tv99l0HvHnVWbhg=
+		</data>
+		<key>Lens.storyboardc/Info.plist</key>
+		<data>
+		63G3I2kVw5IvOmWZIfntX1pBrlI=
+		</data>
+		<key>Lens.storyboardc/chat_controller.nib</key>
+		<data>
+		pfLME5OPG8IJcm2Gk3eO9HUOqYI=
+		</data>
+		<key>Lens.storyboardc/freeze_controller.nib</key>
+		<data>
+		LTt1rUSHGmbafRtP6whh+LhGmCA=
+		</data>
+		<key>Lens.storyboardc/oug-O7-kRD-view-lvG-7S-mfd.nib</key>
+		<data>
+		OnjU+007rmSWc94eDXrgcLvIeu8=
+		</data>
+		<key>LensCustomerSessionController.nib</key>
+		<data>
+		TaflwgLVtAghCIXEL/1yIXSEAeI=
+		</data>
+		<key>LensScreenUI.storyboardc/3Fw-68-NHm-view-6kB-zI-6pd.nib</key>
+		<data>
+		HCtcQw+4AVVMCmyel+lS8tK1RrQ=
+		</data>
+		<key>LensScreenUI.storyboardc/Info.plist</key>
+		<data>
+		1n+rYFFgP7EZMrfSwNqgySDQeHM=
+		</data>
+		<key>LensScreenUI.storyboardc/InviteTechnicianViewController.nib</key>
+		<data>
+		pOtO7sTDjhuvYplifgiRpE3ugfM=
+		</data>
+		<key>LensScreenUI.storyboardc/LQq-K9-pIe-view-rby-E2-REb.nib</key>
+		<data>
+		hZfcbwVj9jEag1VNz9DkElrJfjY=
+		</data>
+		<key>LensScreenUI.storyboardc/QJK-7r-XcR-view-Edg-Eb-Bvc.nib</key>
+		<data>
+		r4xipQWpeB2H8ner5Aa1Zz4Qf/k=
+		</data>
+		<key>LensScreenUI.storyboardc/WaitingRoomView.nib</key>
+		<data>
+		F8OoMJ9R4hsxcozXKhnwZjCu7WA=
+		</data>
+		<key>LensScreenUI.storyboardc/inviteView.nib</key>
+		<data>
+		PL++gHO+SNAhsfV3XFZRsiIW/uI=
+		</data>
+		<key>LensScreenUI.storyboardc/kHY-L4-vIV-view-37d-ip-XNI.nib</key>
+		<data>
+		j526RCnll2PMFeY7EI3Hv2tBNkw=
+		</data>
+		<key>LensScreenUI.storyboardc/lens_session_controller.nib</key>
+		<data>
+		92qjwoyBX1yPOtmi79powJdkki8=
+		</data>
 		<key>LottieMessageView.nib</key>
 		<data>
-		6MAIcgrIQiVtH8VYGeoDd1UydBA=
+		X8M3AtB/It+nv6JCh3wiU+gp+hk=
 		</data>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		+lOCXCNGhdm2alPzNK9CEy4CksY=
+		YeevuMttMKOyauUhudXP0YU67RU=
 		</data>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		NiCPW8/STU9qYEkxI1iLszaCKCQ=
+		sf3DnxKNtIp82kN1tU098qh7e3U=
 		</data>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		NAqTEwjdRC66YjeiExOzW3pfY60=
+		IjrapnicdI7Kp+Htf+virDNUM2s=
 		</data>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		NiCPW8/STU9qYEkxI1iLszaCKCQ=
+		sf3DnxKNtIp82kN1tU098qh7e3U=
 		</data>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		Y2Na+iOsoVZRNx8XELURH2wVjLs=
+		714LFfN7bm4FYTGQfGxVqMineWQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		quxhO4xrsrg8qtLmdUFiitTT8lM=
 		</data>
+		<key>MultiTech.storyboardc/1zS-4M-BoB-view-KrC-bY-eLA.nib</key>
+		<data>
+		6fnwsjGqgHWr39Iyw0K12UN5kSk=
+		</data>
+		<key>MultiTech.storyboardc/AnnotateColorPickViewController.nib</key>
+		<data>
+		26DM5ZUqMkplQQPshXx2FA5FtOw=
+		</data>
+		<key>MultiTech.storyboardc/AnnotationNotesListViewController.nib</key>
+		<data>
+		9LLNAHdeTuogXcMIcn/vdw4K2pk=
+		</data>
+		<key>MultiTech.storyboardc/ChatletViewController.nib</key>
+		<data>
+		pz4bwnExkBGZjWADSLA+LT32XGk=
+		</data>
+		<key>MultiTech.storyboardc/Info.plist</key>
+		<data>
+		HwQu+i1RvrTAyO/VtYOycgLNmSU=
+		</data>
+		<key>MultiTech.storyboardc/MultipleTechDetailsViewController.nib</key>
+		<data>
+		nfMPEX+5wqCXGw7H3hmvrIGDnqI=
+		</data>
+		<key>MultiTech.storyboardc/Wzk-7x-bJd-view-8I4-7e-NtC.nib</key>
+		<data>
+		F6ikGKnya9Z+rDDCpVyTA7l3Wpc=
+		</data>
+		<key>MultiTech.storyboardc/cfS-M5-fpQ-view-oea-7E-V1P.nib</key>
+		<data>
+		JDLAyo19gBXFDF5tDaq6lmH6zhI=
+		</data>
+		<key>MultiTech.storyboardc/v0D-A8-fFg-view-lND-ck-4BK.nib</key>
+		<data>
+		PDoonFTavr3eEKmQQSVjIx/PFlQ=
+		</data>
+		<key>No_videoStream.json</key>
+		<data>
+		Dtb6x8XHFIQarKIXh2kVMhd5IYU=
+		</data>
+		<key>NotesViewController.nib</key>
+		<data>
+		0ZoB117P8j8ohs0kkOnkkT67ePE=
+		</data>
 		<key>NotificationView.nib</key>
 		<data>
 		t0ZCwM1Xq6Uqg/PV3YcpFgIo0kk=
 		</data>
+		<key>OtherChatCell.nib</key>
+		<data>
+		JO3fupcZM+JinrgRTTzLWk9IqMo=
+		</data>
 		<key>README.md</key>
 		<data>
 		9RaQVjMc1/52LwUyawBBK+ikzhw=
+		</data>
+		<key>RecievedChatCell.nib</key>
+		<data>
+		Vod5ZDzO9gUHxIPQxnOrXshTpPA=
+		</data>
+		<key>SentChatCell.nib</key>
+		<data>
+		9jfYFUpofQpY97pcdFP/hRsouzU=
+		</data>
+		<key>SheetActionCell.nib</key>
+		<data>
+		3JVtEO9ZdTFmCsSJHPvZ9h/22cU=
+		</data>
+		<key>SheetActionImageIconCell.nib</key>
+		<data>
+		jnNIhiN+mqf2Vn9KW6+WXV4Otmw=
+		</data>
+		<key>SheetSectionFooter.nib</key>
+		<data>
+		VfE/aMqSt0k7eMDEzn2Kufb3vW4=
+		</data>
+		<key>SheetSectionHeader.nib</key>
+		<data>
+		0CwbgaONxHwlfK1eon+8zpvXN1Y=
+		</data>
+		<key>SheetSelectionCell.nib</key>
+		<data>
+		rbSjtxiNynaqnAivXpkY5AHVPXs=
+		</data>
+		<key>SheetViewController.nib</key>
+		<data>
+		7rYBtuMviICLuHnBRyn7dTqWeBE=
+		</data>
+		<key>SnapShotCollectionCell.nib</key>
+		<data>
+		9p49kNrd59+RFg2l2bP1+YociRI=
+		</data>
+		<key>SnapShotView.nib</key>
+		<data>
+		xmBkTZuuhgc/3W8k9wJCYLVWtDM=
+		</data>
+		<key>TechnicianCell.nib</key>
+		<data>
+		7rHZHXCn9M+Rn/thyRuBtlTHRkk=
+		</data>
+		<key>Toast.nib/objects-11.0+.nib</key>
+		<data>
+		FcAfYz4q5HtgEG/aVVRQDmskX9U=
+		</data>
+		<key>Toast.nib/runtime.nib</key>
+		<data>
+		bPTD3F7oox9eR4yWBTIuQMfwEbo=
+		</data>
+		<key>ZAssistAlert.nib</key>
+		<data>
+		f2L2430ZCuyZc5X8xZ0SKK8JWZI=
+		</data>
+		<key>anotate_tutorial.json</key>
+		<data>
+		NklR9tRSJyCSR/MLCusUBUl0Log=
 		</data>
 		<key>bg.lproj/Localizable.strings</key>
 		<dict>
@@ -86,6 +310,10 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>detect_surface.json</key>
+		<data>
+		7UdjGmbvkTqhRk0SDK92TNhFMlE=
+		</data>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -144,6 +372,30 @@
 		<data>
 		7vFWSu20asolDS6XPEIDz8rtkeg=
 		</data>
+		<key>no_arnotes.json</key>
+		<data>
+		cSlJFGVJDdJsVPBRDgIJpAKNqkg=
+		</data>
+		<key>no_chat.json</key>
+		<data>
+		i7jIyjB0Y7hpxfNXU1sBkEOMr4M=
+		</data>
+		<key>no_files.json</key>
+		<data>
+		c8UiVNQbGTx8pDj5V4OU8wf6zhs=
+		</data>
+		<key>no_network.json</key>
+		<data>
+		2QsOuiUuKm8yLKKUH26bP4toZTs=
+		</data>
+		<key>no_search.json</key>
+		<data>
+		XTnNd5HWinBWbAl9fraW8FENtxM=
+		</data>
+		<key>no_summary.json</key>
+		<data>
+		vTmI4M/X+5ysZYak1sItxYJEIXE=
+		</data>
 		<key>pt.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -153,6 +405,10 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>something_went_wrong.json</key>
+		<data>
+		spm0HE+/LH9SV8A7GXK8IIMmjLo=
+		</data>
 		<key>sv.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -162,6 +418,10 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>waiting_sec_tech.json</key>
+		<data>
+		r3ZqTXm5UHIQLUDg2WZ27cpRDJM=
+		</data>
 		<key>zh-Hans.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
@@ -174,11 +434,18 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>ATCustomPageController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vp84jg63998sEsk4Xtu7mk7izUHbMkYV2EFXfwU6eSQ=
+			</data>
+		</dict>
 		<key>Assets.car</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			D63ttEW1oXvZLE1OD9GHy98LKdwzzHoF+710jiGyZGo=
+			EaiQHXYiBcrdEJufOMATWeTjUcFKerAqPONutdZ+TzI=
 			</data>
 		</dict>
 		<key>Assets.scnassets/CameraSetup.scn</key>
@@ -195,11 +462,95 @@
 			YcywJ2wFdr2JZjOk3US1s9cUV6ifI5nY90MNfNxcENE=
 			</data>
 		</dict>
+		<key>AssistBlurAlertController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			WubeepofJa5BmBACwVHICWHoODUsQ5X2txZme83TZ5U=
+			</data>
+		</dict>
+		<key>AssistChatController.nib/objects-11.0+.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			I/F+LrdiydtsPbpVQoRRhX+RXGkzXnLwbDVOvroM1IA=
+			</data>
+		</dict>
+		<key>AssistChatController.nib/runtime.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			UzMgM+QUbnudlbF5F+5bgtzIhDVzXuMQ+ZL4ag8gDe8=
+			</data>
+		</dict>
+		<key>AssistMenuCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			F7E2/zXohVUSz3JQmSv/xluJD8OtcFLFpxi9zOcKhD0=
+			</data>
+		</dict>
+		<key>Connecting_state.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			8NbuR87vE7LQWGg7X6TgiThvVjq6FkhzAMlSJlYrqUA=
+			</data>
+		</dict>
+		<key>Connection_denied.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			FHaERNDjVDV42v5UDfGvjfeRfQh5XRBMIuFqFaOBNeE=
+			</data>
+		</dict>
+		<key>Connection_stopped.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			HTAh7JwcwWJAvtDydpKjU/aMdnJYGkl8BhTSW0U82uA=
+			</data>
+		</dict>
+		<key>CustomerCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			XJ/bdktNAaxCYvzrRwCLahped5aNpbEBRlre5Toi9Tw=
+			</data>
+		</dict>
+		<key>DatePickerController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OAOpzZ8WH9qj0O4EPIwtr0M3yV5Pq5J5w0lAB+ydb0Y=
+			</data>
+		</dict>
+		<key>DrawerViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5AIsT4uXLLolGqXMGaloOAiqEqTL4p0PNQ8YEzX5WXc=
+			</data>
+		</dict>
+		<key>GenericLottieOnBoardDesciptionController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			DKaSweQoFTT0xl6zhDcJRNaQx0hON6Ya71xrfubvGro=
+			</data>
+		</dict>
+		<key>GenericOnBoardingDescriptiorCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LQI00mCeQEmCZ6hJmjF+Ab3YZ1grqoKx8uoXfMxxIHA=
+			</data>
+		</dict>
 		<key>Headers/LensCustomerSDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zbV/ry3YpjgRg8eSVaZ5Vw1U616dkmnn/3HcVQTovYI=
+			RfOUkTLBT/p8TpChyQJpGGGBTfDX6hga69g6LR7jmbc=
 			</data>
 		</dict>
 		<key>Headers/LensCustomerSDK.h</key>
@@ -209,6 +560,13 @@
 			nxxqXHW3toLskOOAr7w+Rsc+DdWsLVzfIAwIB0QI+lE=
 			</data>
 		</dict>
+		<key>InviteViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			UCvPjQIx1ej6DzIVpd5uauJ0iwoG8ZKfTJnmWU2ATXg=
+			</data>
+		</dict>
 		<key>LICENSE</key>
 		<dict>
 			<key>hash2</key>
@@ -216,46 +574,151 @@
 			jZ0aTtzLPUvgkinpl4r0yEzyZgZxB+eIxExJE7V/3V8=
 			</data>
 		</dict>
+		<key>Lens.storyboardc/Exb-RO-Klc-view-15B-mD-dGA.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pa77GowmXgVVBx4uHxp5rs/HfVQixezrxBQom8Kq7yI=
+			</data>
+		</dict>
+		<key>Lens.storyboardc/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			UdMJcCHQWYdghqd9wVeutnLxxoNLu0tmajY7vw74LRU=
+			</data>
+		</dict>
+		<key>Lens.storyboardc/chat_controller.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			um+JanqY6nmj0qSKeJEXHjs/7ZLuqDFbQMFrEHhfVi0=
+			</data>
+		</dict>
+		<key>Lens.storyboardc/freeze_controller.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Sbf/eLBD3ngPWFnrbkNhqe2wZ8mYfRCEp0fLja/PpwM=
+			</data>
+		</dict>
+		<key>Lens.storyboardc/oug-O7-kRD-view-lvG-7S-mfd.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			QEyiNgW1IGEvOfESoM5DCMpzy8ozh/M3moNF8it0v1c=
+			</data>
+		</dict>
+		<key>LensCustomerSessionController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			PbS0WuO9p9UJRpK5JNUyNM5o46LTi3dGFaRdwGH+Fs0=
+			</data>
+		</dict>
+		<key>LensScreenUI.storyboardc/3Fw-68-NHm-view-6kB-zI-6pd.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cqO/xq/40aaG7xaiqOSKuXwjKdzfP2NdMgoQLqorYNc=
+			</data>
+		</dict>
+		<key>LensScreenUI.storyboardc/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Rwl3yiXcACZNslZrdQzVQGLFjMVaHOrjPIwLtu0lzDs=
+			</data>
+		</dict>
+		<key>LensScreenUI.storyboardc/InviteTechnicianViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			p8dnLtb9cn3/kyc9IV0ByvHkPjnUjJgIqJxt85mj8LY=
+			</data>
+		</dict>
+		<key>LensScreenUI.storyboardc/LQq-K9-pIe-view-rby-E2-REb.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			zREnCSzPh7X2UAAMmD36RCE387rZYC7sKfQRy0tc7rM=
+			</data>
+		</dict>
+		<key>LensScreenUI.storyboardc/QJK-7r-XcR-view-Edg-Eb-Bvc.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			m7/XTPOko92vvoz6ene2dpzVq2QQhCfg5g443B6qPUs=
+			</data>
+		</dict>
+		<key>LensScreenUI.storyboardc/WaitingRoomView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9qcUt6KObc7ifWMZ+w7OFy6sOAL9df876BLkADmdf0Y=
+			</data>
+		</dict>
+		<key>LensScreenUI.storyboardc/inviteView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			blMoBIRHeFkSfEEDuFfMG5m2EnLn+yDJYKPtL83dFcE=
+			</data>
+		</dict>
+		<key>LensScreenUI.storyboardc/kHY-L4-vIV-view-37d-ip-XNI.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			TeKyTOV1kkVgwA2cpvqL9NjFVFHvdrKu7nkMOGIS9ok=
+			</data>
+		</dict>
+		<key>LensScreenUI.storyboardc/lens_session_controller.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			1Dr+LyjKGfEgq8ty0p2z1YCkFMJzFRXDIfIGHmGkuRs=
+			</data>
+		</dict>
 		<key>LottieMessageView.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NE5Och43LvB8p1M1Utz7xkqZaVBkgTMvcIJ9PO8JV68=
+			PNxJL3lAN+z4kc/+XHbLVgk8EDZbXsUAr+CE3PUktsk=
 			</data>
 		</dict>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oL74C1rwkGnj0Jg1kLmty8gEBZWiWaYS/qRa6EqjqOE=
+			2eQ84XfkXNgd7NDpDXFzedKGCXMamiIuG9Fh4Zqb/C4=
 			</data>
 		</dict>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0fdi6OewviUQhn8EFtvDV8+f11ApNGkhVpAoYAD0ktI=
+			ohp/2kGnMK5I5yVpfH64JHHCdlbSU0B60eK+3/mzF9U=
 			</data>
 		</dict>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1KnPf/oXVf5dx5TFcmOLyqtIb2OER8znV10Jui8nTcc=
+			ifSHBXM97rM3VBvEEOtr6HLtEB1yN7pz6Mtb7NOUNZQ=
 			</data>
 		</dict>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0fdi6OewviUQhn8EFtvDV8+f11ApNGkhVpAoYAD0ktI=
+			ohp/2kGnMK5I5yVpfH64JHHCdlbSU0B60eK+3/mzF9U=
 			</data>
 		</dict>
 		<key>Modules/LensCustomerSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4b5n0vn2/boospinXxbhL0Hz+MB6K0idIE+SOxQDJxA=
+			qPjPUPbx76DEl64ivyx6vkycetQvi/qRQ57RQc4fOO4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -265,6 +728,83 @@
 			2LIqbfuUWdF9t4ebQR7f1yoUAEXJmC4cyJwIIxgONIg=
 			</data>
 		</dict>
+		<key>MultiTech.storyboardc/1zS-4M-BoB-view-KrC-bY-eLA.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			JlmO+q9T7x0WA88wuT7e3HVQm+L9+EcIMcp8Jmfpsj0=
+			</data>
+		</dict>
+		<key>MultiTech.storyboardc/AnnotateColorPickViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LkdheFkerDSXFB97CM/AWO45q3t2rrHqZTPX4ewg9bY=
+			</data>
+		</dict>
+		<key>MultiTech.storyboardc/AnnotationNotesListViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			e13gNCNDjJDYM1JZRbOkIajKx4+IRI0etcjv6EF7qPo=
+			</data>
+		</dict>
+		<key>MultiTech.storyboardc/ChatletViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Q3b8CXo1P8Xm5uQw/kAzJicJHI08aBVEkREdckIhKrY=
+			</data>
+		</dict>
+		<key>MultiTech.storyboardc/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OiEToQXGZovj8shyg+JTM0kSzmxmbGIBN1sn/ojsKwg=
+			</data>
+		</dict>
+		<key>MultiTech.storyboardc/MultipleTechDetailsViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6sG8x9yUpSNdjbsP0LV/ryW0vqhQyRP65WV+okTKh9U=
+			</data>
+		</dict>
+		<key>MultiTech.storyboardc/Wzk-7x-bJd-view-8I4-7e-NtC.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			gF5ZocMhlLAIYqh0QDXoN495LdDT78nWwCRU4uUyiSg=
+			</data>
+		</dict>
+		<key>MultiTech.storyboardc/cfS-M5-fpQ-view-oea-7E-V1P.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qVmYTkd9hPwN3YtdPw7uMmHdmy/ZFhUe1fhpEAa7jFU=
+			</data>
+		</dict>
+		<key>MultiTech.storyboardc/v0D-A8-fFg-view-lND-ck-4BK.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/xT2o7w77gKQIVwO46ORA1M7f0q5yb9ryhVgBCfxMBA=
+			</data>
+		</dict>
+		<key>No_videoStream.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			SdNWo8J2Y+2cqf96JqgbgI/IWRRp0fmvVulMel1SudA=
+			</data>
+		</dict>
+		<key>NotesViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			xz+BzUfLQkPfXZ1qZ+ntIzwzIGdDaCB2o+A2EKKV22U=
+			</data>
+		</dict>
 		<key>NotificationView.nib</key>
 		<dict>
 			<key>hash2</key>
@@ -272,11 +812,123 @@
 			TwMzn4STGNrGVUKWTmsW2vIH/wjEIrf8XmPVG4mk7LQ=
 			</data>
 		</dict>
+		<key>OtherChatCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0ER4Q0tOmBiOp9mQmSqmUvGUQHVviwVBmTaNwDV5Nrg=
+			</data>
+		</dict>
 		<key>README.md</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			YyaiBMrmdFksQeahuiNe8ahTDxcYpQqn4cgYA+SXhfM=
+			</data>
+		</dict>
+		<key>RecievedChatCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5bMph/yYaemRLMGSwexYBqcrVSxRYTyrF6T/iQpVPwU=
+			</data>
+		</dict>
+		<key>SentChatCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/Bd0GRvPoihD4hcccqIYMmJli/wDoW3JoebXYAv7Ww8=
+			</data>
+		</dict>
+		<key>SheetActionCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZkIEIaI+PPmVKmPCbQD+y8dMMEUSBx4YGb0wbzRYBqo=
+			</data>
+		</dict>
+		<key>SheetActionImageIconCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			hQJzVuOOhuoh3VTzl3eRYNE4V/AdXq161183bkVUQsM=
+			</data>
+		</dict>
+		<key>SheetSectionFooter.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			xZnUSW/u+l6IUtSzi2DCb79R9EXNBo4sTa0tdBIsCo8=
+			</data>
+		</dict>
+		<key>SheetSectionHeader.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4OGEy2Lab+h6v+3Rm8l3Gb/QGr9gew1PdpnsxV3+Y50=
+			</data>
+		</dict>
+		<key>SheetSelectionCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Z+x2NhjNRUbctyLp9+NgAKPkpry2qTwSGct+SE/YjeQ=
+			</data>
+		</dict>
+		<key>SheetViewController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2EO0tBRF43ZI03qniq2Uv1tHkANwyjZWothuKmQjtO0=
+			</data>
+		</dict>
+		<key>SnapShotCollectionCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			PLqyh6nRMjbZLH5fZa5+inJ6uWM5VcYYcsZzpL2bqP8=
+			</data>
+		</dict>
+		<key>SnapShotView.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			oihGYTfHGzaQbJc32bGSuCIPI4MFbzgoGJycTJZBzpc=
+			</data>
+		</dict>
+		<key>TechnicianCell.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			DoW0BpWu44ooqimqoYdES9uDKFoduCtMosk3U8VHKF0=
+			</data>
+		</dict>
+		<key>Toast.nib/objects-11.0+.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Jgerk2f/swznm8Ah8JE8tu7ALgDm9C9KgQuky/KgJOA=
+			</data>
+		</dict>
+		<key>Toast.nib/runtime.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			isiNd91CONXeAC1ryQkJOurXESwHZBnmRglGkKq6Mak=
+			</data>
+		</dict>
+		<key>ZAssistAlert.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			df8FUQwDRjjKgqETad/NCTTehoc6XP5kjhV/KOpIOBk=
+			</data>
+		</dict>
+		<key>anotate_tutorial.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			gcsoQoHq3Ilf4MUHpzVSUOzkwy+v0vER88uliA0NDgE=
 			</data>
 		</dict>
 		<key>bg.lproj/Localizable.strings</key>
@@ -296,6 +948,13 @@
 			</data>
 			<key>optional</key>
 			<true/>
+		</dict>
+		<key>detect_surface.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Fk3dkug40Jg/heYXix46g5lgJRlc8oDzKhCLHbep77c=
+			</data>
 		</dict>
 		<key>en.lproj/Localizable.strings</key>
 		<dict>
@@ -358,6 +1017,48 @@
 			EWMlQYJeSYw46+Rvx5WBnNFAFUHFSqzjff1HsdG/250=
 			</data>
 		</dict>
+		<key>no_arnotes.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			wjKAryDv9/dIPFkw4bn6CTk53ukB8kyPT54Vqzn/Z+0=
+			</data>
+		</dict>
+		<key>no_chat.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Mxct0VfUJBDynhlxNTNI9mJhQwPjMDCGkd8y1m08+LI=
+			</data>
+		</dict>
+		<key>no_files.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			DRCyfLT4qBVTjRP9dciZwJ5Airdh1NzP3qtroFaxMkA=
+			</data>
+		</dict>
+		<key>no_network.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Ek3prGXaEWqjF5pDVJVuCw/q/FOcaZQh96gcnwmaL+E=
+			</data>
+		</dict>
+		<key>no_search.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			yNTggEZ/nLlxibLJrx8sRqRsHWje2+pgYGN8eESQPoE=
+			</data>
+		</dict>
+		<key>no_summary.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fgxZxV/GWT5ui/k/5O/GIoPKx76xubd23bRsNwpyJoM=
+			</data>
+		</dict>
 		<key>pt.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
@@ -367,6 +1068,13 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>something_went_wrong.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			z3tdel3amO7TbIjGKEIVg7th8GXW5IESXuJkjW5hQDo=
+			</data>
+		</dict>
 		<key>sv.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
@@ -375,6 +1083,13 @@
 			</data>
 			<key>optional</key>
 			<true/>
+		</dict>
+		<key>waiting_sec_tech.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			G4BfR0wiOZ8O+PhFuTOMPfZcK0w1f8Bum4XhMKFhLhg=
+			</data>
 		</dict>
 		<key>zh-Hans.lproj/Localizable.strings</key>
 		<dict>

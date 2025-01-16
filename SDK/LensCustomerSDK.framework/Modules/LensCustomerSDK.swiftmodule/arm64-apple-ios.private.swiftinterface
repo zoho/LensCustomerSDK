@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
 // swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name LensCustomerSDK
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import ARKit
@@ -21,7 +21,9 @@ import Foundation
 @_exported import LensCustomerSDK
 import Metal
 import Photos
+import PushKit
 import QuartzCore
+import QuickLook
 import SceneKit
 import Security
 import SnapKit
@@ -75,7 +77,10 @@ public enum Edition : Swift.String {
   }
 }
 public enum Features : Swift.String {
-  case INSTANT_CHAT, ANNOTATION_CUSTOMER, USER_MANAGEMENT, ZOOM, ACTION_LOG_VIEWER, SESSION_NOTES, CAPTURE_SCREEN_SHOT, SMS_INVITATION, ANNOTATION_TECHNICIAN, FREEZE_CAMERA_STREAM, DEPARTMENT
+  case INSTANT_CHAT, USER_MANAGEMENT, ZOOM, ACTION_LOG_VIEWER, SESSION_NOTES, CAPTURE_SCREEN_SHOT, SMS_INVITATION, ANNOTATION_TECHNICIAN, FREEZE_CAMERA_STREAM, DEPARTMENT, OFFLINE_RECORDING, ADVANCED_CHAT, SECONDARY_TECHNICIAN, FLASH, RECORDING, AR_NOTES, LIVE_TEXT, QR_BARCODE, SHARE_CAMERA, EXTERNAL_TECHNICIAN, AR_MEASURE
+  case ANNOTATION_CUSTOMER
+  case NONE
+  case COMMON
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -291,6 +296,15 @@ public enum SupportedTools : Swift.String {
     get
   }
 }
+public enum MexType : Swift.Int32 {
+  case PIN_PAGE_DETAILS
+  case PIN_USER_VIDEO_RECEIVE
+  public init?(rawValue: Swift.Int32)
+  public typealias RawValue = Swift.Int32
+  public var rawValue: Swift.Int32 {
+    get
+  }
+}
 @objc @_Concurrency.MainActor @preconcurrency open class ChatletViewController : UIKit.UIViewController, WebKit.WKDownloadDelegate, WebKit.WKNavigationDelegate, WebKit.WKUIDelegate {
   @_Concurrency.MainActor @preconcurrency public var new_chat_notification: LensCustomerSDK.LensBind<Swift.Bool>
   @_Concurrency.MainActor @preconcurrency public var chat_open_request: LensCustomerSDK.LensBind<Swift.Bool>
@@ -348,7 +362,9 @@ public struct LensSessionContent {
     case sessionExpired
     case timeout
     case leaveSession
-    case planError
+    case planError_Standard_Above
+    case planError_Professional
+    case planError_Annotation
     case customerJoined
     case customerLeft
     case exitWarning
@@ -766,20 +782,6 @@ public protocol ARProtocol : AnyObject {
   func onAnchorRemoved(annotationId: Swift.String)
   var isARSupported: Swift.Bool { get }
 }
-public enum FreezeCurrentStatus {
-  case freezeRunningStream(LensCustomerSDK.FreezeCurrentStatus.FreezeBy), freezeSnapshot(LensCustomerSDK.FreezeCurrentStatus.FreezeBy), unfreeze(LensCustomerSDK.FreezeCurrentStatus.FreezeBy)
-  public enum FreezeBy {
-    case me, other
-    public static func == (a: LensCustomerSDK.FreezeCurrentStatus.FreezeBy, b: LensCustomerSDK.FreezeCurrentStatus.FreezeBy) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-  }
-  public var isFreeze: Swift.Bool {
-    get
-  }
-}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class BaseParser : ObjectiveC.NSObject {
   @objc override dynamic public var description: Swift.String {
     @objc get
@@ -805,6 +807,61 @@ public enum SDKLensLottieType : LensCustomerSDK.LottieType {
   public var hashValue: Swift.Int {
     get
   }
+}
+@available(iOSApplicationExtension, unavailable)
+public struct ZAssistAlertModel {
+  public init(alertConfig: LensCustomerSDK.Alert_Configs, footer_config: LensCustomerSDK.Footer_Configs? = nil, actions: [LensCustomerSDK.ZAssistAlertAction], action_buttons_axis: UIKit.NSLayoutConstraint.Axis = .horizontal)
+  public let alert_config: LensCustomerSDK.Alert_Configs
+  public var footer_config: LensCustomerSDK.Footer_Configs?
+  public let actions: [LensCustomerSDK.ZAssistAlertAction]
+  public var action_buttons_axis: UIKit.NSLayoutConstraint.Axis
+}
+@available(iOSApplicationExtension, unavailable)
+public struct ZAssistAlertAction : Swift.Equatable {
+  public init(title: Swift.String, title_color: UIKit.UIColor = .color(dark: .white, light: .black), bg_color: UIKit.UIColor = .clear, is_priority: Swift.Bool = false, action: ((LensCustomerSDK.ZAssistAlertAction) -> ()?)? = nil)
+  public let title: Swift.String
+  public var title_color: UIKit.UIColor
+  public var bg_color: UIKit.UIColor
+  public var is_priority: Swift.Bool
+  public var action: ((LensCustomerSDK.ZAssistAlertAction) -> ()?)?
+  public static func == (lhs: LensCustomerSDK.ZAssistAlertAction, rhs: LensCustomerSDK.ZAssistAlertAction) -> Swift.Bool
+}
+@available(iOSApplicationExtension, unavailable)
+public struct Alert_Configs {
+  public init(title: Swift.String? = nil, body: Foundation.NSAttributedString? = nil)
+  public var title: Swift.String?
+  public var title_color: UIKit.UIColor
+  public var alert_bg_color: UIKit.UIColor
+  public var body: Foundation.NSAttributedString?
+}
+@available(iOSApplicationExtension, unavailable)
+public struct Check_Box_Configuration {
+  public init(icon_font: UIKit.UIFont, selected_check_box: Swift.String, unselected_check_box: Swift.String, defaultValue: Swift.Bool = true, onChange: ((Swift.Bool) -> ())? = nil)
+  public var icon_font: UIKit.UIFont
+  public var selected_check_box: Swift.String
+  public var selected_check_box_color: UIKit.UIColor
+  public var unselected_check_box: Swift.String
+  public var unselected_check_box_color: UIKit.UIColor
+  public var defaultValue: Swift.Bool
+  public var onChange: ((Swift.Bool) -> ())?
+}
+@available(iOSApplicationExtension, unavailable)
+public struct Footer_Configs {
+  public init(bg_color: UIKit.UIColor = .clear, text_color: UIKit.UIColor = .color(dark: .white, light: .black), footer_note: Swift.String, check_box_configuration: LensCustomerSDK.Check_Box_Configuration? = nil)
+  public var bg_color: UIKit.UIColor
+  public var text_color: UIKit.UIColor
+  public let footer_note: Swift.String
+  public var check_box_configuration: LensCustomerSDK.Check_Box_Configuration?
+}
+@objc @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@_Concurrency.MainActor @preconcurrency public class ZAssistAlert : LensCustomerSDK.OverlayViewController {
+  @_Concurrency.MainActor @preconcurrency public var delegate: (any UIKit.UITextViewDelegate)?
+  @_Concurrency.MainActor @preconcurrency convenience public init(with model: LensCustomerSDK.ZAssistAlertModel)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
+  @objc deinit
 }
 @_hasMissingDesignatedInitializers public class LensCustomer : LensCustomerSDK.Lens {
   weak public var otherActionDelegate: (any LensCustomerSDK.OtherActionProtocol)?
@@ -1075,6 +1132,26 @@ public class CustomCircularArray<E> {
   public func getMaxElementCount() -> Swift.Int
   @objc deinit
 }
+extension UIKit.UILabel {
+  @_Concurrency.MainActor @preconcurrency public func set(icon: any LensCustomerSDK.ATIcon, iconSize: CoreFoundation.CGFloat? = nil, color: UIKit.UIColor? = nil)
+}
+public protocol ATIcon {
+  var iconString: Swift.String { get }
+  var iconSize: CoreFoundation.CGFloat { get }
+  var description: Swift.String? { get }
+  var iconNormalColor: UIKit.UIColor? { get }
+  var iconSelectedColor: UIKit.UIColor? { get }
+  var iconDisabledColor: UIKit.UIColor? { get }
+  func iconFont(size: CoreFoundation.CGFloat) -> UIKit.UIFont
+}
+@available(iOSApplicationExtension, unavailable)
+extension UIKit.UIButton {
+  @_Concurrency.MainActor @preconcurrency public func set(icon: any LensCustomerSDK.ATIcon, iconSize: CoreFoundation.CGFloat? = nil, iconColor: UIKit.UIColor? = nil, for controlStates: [UIKit.UIControl.State] = [.normal, .highlighted])
+}
+@available(iOSApplicationExtension, unavailable)
+extension UIKit.UIBarButtonItem {
+  @_Concurrency.MainActor @preconcurrency public func set(icon: any LensCustomerSDK.ATIcon, iconSize: CoreFoundation.CGFloat? = nil, iconColor: UIKit.UIColor? = nil, for controlStates: [UIKit.UIControl.State] = [.normal, .highlighted,.selected])
+}
 @objc @_hasMissingDesignatedInitializers public class RemovePointerOperation : Foundation.Operation {
   @objc override dynamic public func cancel()
   @objc override dynamic public func main()
@@ -1113,6 +1190,54 @@ public protocol ARVideoDelegate : AnyObject {
 }
 public protocol NodeStateChangeCallback {
   func onNodeDeleteRequested(node: LensCustomerSDK.Node)
+}
+@available(iOSApplicationExtension, unavailable)
+public protocol ControllerReusable {
+  static var at_storyBoardId: Swift.String { get }
+  static var at_storyBoard: UIKit.UIStoryboard { get }
+}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.ControllerReusable {
+  public static func at_storyBoardInstance<T>() -> T where T : UIKit.UIViewController
+}
+@available(iOSApplicationExtension, unavailable)
+public protocol ViewResuable {
+  static var owner: Any? { get }
+  static var nibName: Swift.String { get }
+  static var bundle: Foundation.Bundle { get }
+}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.ViewResuable where Self : UIKit.UIView {
+  public static var owner: Any? {
+    get
+  }
+  public static var bundle: Foundation.Bundle {
+    get
+  }
+  public static var nibName: Swift.String {
+    get
+  }
+  public static var view: UIKit.UIView {
+    get
+  }
+}
+@available(iOSApplicationExtension, unavailable)
+public protocol CellResuable {
+  static var identifier: Swift.String { get }
+  static var nibName: Swift.String { get }
+  static var bundle: Foundation.Bundle { get }
+}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.CellResuable where Self : UIKit.UIView {
+  public static var bundle: Foundation.Bundle {
+    get
+  }
+  public static var nibName: Swift.String {
+    get
+  }
+  public static var nib: UIKit.UINib {
+    get
+  }
 }
 extension LensCustomerSDK.LottieColor : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
@@ -1271,6 +1396,132 @@ extension UIKit.UIColor {
     get
   }
 }
+@available(iOSApplicationExtension, unavailable)
+public protocol DrawerControllerDelegate {
+  func drawerView(for drawerController: LensCustomerSDK.DrawerViewController) -> UIKit.UIView
+  func drawerMaximumHieght(for drawer: LensCustomerSDK.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  func drawerMinimumHieght(for drawer: LensCustomerSDK.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  func drawerWidth(for drawer: LensCustomerSDK.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  func drawer(movingPosition: LensCustomerSDK.DrawerMovingPosition, drawerChangedHeight height: CoreFoundation.CGFloat, drawerMinHeight: CoreFoundation.CGFloat, drawerMaximumHeight: CoreFoundation.CGFloat, animated: Swift.Bool)
+  func drawer(controller: LensCustomerSDK.DrawerViewController, movingPosition: LensCustomerSDK.DrawerMovingPosition, canChangeDrawerHeight height: CoreFoundation.CGFloat, drawerMinHeight: CoreFoundation.CGFloat, drawerMaximumHeight: CoreFoundation.CGFloat) -> Swift.Bool
+  func drawer(_ drawer: LensCustomerSDK.DrawerViewController, reachedMinHeight height: CoreFoundation.CGFloat, animated: Swift.Bool)
+  func drawer(_ drawer: LensCustomerSDK.DrawerViewController, reachedMaximumHeight height: CoreFoundation.CGFloat, animated: Swift.Bool)
+  func drawer(dismissed withAnimation: Swift.Bool)
+}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.DrawerControllerDelegate where Self : UIKit.UIViewController {
+  public func drawerMinimumHieght(for drawer: LensCustomerSDK.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  public func drawerMaximumHieght(for drawer: LensCustomerSDK.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  public func drawerWidth(for drawer: LensCustomerSDK.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  public func drawer(movingPosition: LensCustomerSDK.DrawerMovingPosition, drawerChangedHeight height: CoreFoundation.CGFloat, drawerMinHeight: CoreFoundation.CGFloat, drawerMaximumHeight: CoreFoundation.CGFloat, animated: Swift.Bool)
+  public func drawer(movingPosition: LensCustomerSDK.DrawerMovingPosition, canChangeDrawerHeight height: CoreFoundation.CGFloat, drawerMinHeight: CoreFoundation.CGFloat, drawerMaximumHeight: CoreFoundation.CGFloat) -> Swift.Bool
+  public func drawer(_ drawer: LensCustomerSDK.DrawerViewController, reachedMinHeight height: CoreFoundation.CGFloat, animated: Swift.Bool)
+  public func drawer(_ drawer: LensCustomerSDK.DrawerViewController, reachedMaximumHeight height: CoreFoundation.CGFloat, animated: Swift.Bool)
+  public var drawerViewController: LensCustomerSDK.DrawerViewController? {
+    get
+  }
+  @discardableResult
+  public func dismissDrawer(animated: Swift.Bool, completion: (() -> Swift.Void)?) -> Swift.Bool
+  public func updateDrawerHieghtByGiven(_ height: CoreFoundation.CGFloat)
+  public func drawer(dismissed withAnimation: Swift.Bool)
+}
+@available(iOSApplicationExtension, unavailable)
+public enum DrawerMovingPosition : Swift.Int {
+  case nutral, up, down
+  public init?(rawValue: Swift.Int)
+  @available(iOSApplicationExtension, unavailable)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum positionType : Swift.Int {
+  case up, middle
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@_Concurrency.MainActor @preconcurrency public class DrawerViewController : LensCustomerSDK.OverlayViewController {
+  @_Concurrency.MainActor @preconcurrency public var drawerDelegate: (any LensCustomerSDK.DrawerControllerDelegate)?
+  @_Concurrency.MainActor @preconcurrency public var indicatorHeight: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var indicatorWidth: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var drawerIndicatorColor: UIKit.UIColor? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var drawerBackgroundColor: UIKit.UIColor? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var minimumSlidVelocity: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency public var maximumSlidVelocity: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency public var heightChangingProgress: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public func updateDrawerHeight(height: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency public var canStopMiddle: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public var containerMiddlePoint: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var containerMaxHeight: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var childForStatusBarHidden: UIKit.UIViewController? {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var prefersStatusBarHidden: Swift.Bool {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency open var hideStatusBar: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc convenience dynamic public init()
+  @_Concurrency.MainActor @preconcurrency convenience public init(delegate: any LensCustomerSDK.DrawerControllerDelegate, hideStatusBar hidden: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency public func updateDrawerHieghtByGiven(_ height: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func dismiss(animated flag: Swift.Bool, completion: (() -> Swift.Void)?)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
+  @_Concurrency.MainActor @preconcurrency override public func deviceRotated(_ currentOrientation: UIKit.UIDeviceOrientation)
+  @_Concurrency.MainActor @preconcurrency public func setPosition(position: LensCustomerSDK.positionType)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.DrawerViewController : UIKit.UIGestureRecognizerDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+}
+@objc @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@_Concurrency.MainActor @preconcurrency open class DrawerChildTableViewController : UIKit.UIViewController, LensCustomerSDK.DrawerControllerDelegate {
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak open var scrollView: UIKit.UIScrollView!
+  @_Concurrency.MainActor @preconcurrency public var canScrollView: Swift.Bool
+  @discardableResult
+  @_Concurrency.MainActor @preconcurrency public func presentWithDrawer(from: UIKit.UIViewController, config: ((LensCustomerSDK.DrawerViewController) -> ())? = nil) -> LensCustomerSDK.DrawerViewController
+  @_Concurrency.MainActor @preconcurrency public func tableViewViewHandle()
+  @_Concurrency.MainActor @preconcurrency open func drawerView(for drawer: LensCustomerSDK.DrawerViewController) -> UIKit.UIView
+  @_Concurrency.MainActor @preconcurrency open func drawer(controller: LensCustomerSDK.DrawerViewController, movingPosition: LensCustomerSDK.DrawerMovingPosition, canChangeDrawerHeight height: CoreFoundation.CGFloat, drawerMinHeight: CoreFoundation.CGFloat, drawerMaximumHeight: CoreFoundation.CGFloat) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency open func drawer(movingPosition: LensCustomerSDK.DrawerMovingPosition, drawerChangedHeight height: CoreFoundation.CGFloat, drawerMinHeight: CoreFoundation.CGFloat, drawerMaximumHeight: CoreFoundation.CGFloat, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency open func drawer(_ drawer: LensCustomerSDK.DrawerViewController, reachedMinHeight height: CoreFoundation.CGFloat, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency open func drawerMaximumHieght(for drawer: LensCustomerSDK.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  @_Concurrency.MainActor @preconcurrency open func drawerMinimumHieght(for drawer: LensCustomerSDK.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  @_Concurrency.MainActor @preconcurrency open func drawerWidth(for drawer: LensCustomerSDK.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  @_Concurrency.MainActor @preconcurrency open func drawer(_ drawer: LensCustomerSDK.DrawerViewController, reachedMaximumHeight height: CoreFoundation.CGFloat, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency open func drawer(dismissed withAnimation: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
 extension UIKit.UITextField {
   @_Concurrency.MainActor @preconcurrency public var leftPading: CoreFoundation.CGFloat {
     get
@@ -1308,6 +1559,45 @@ extension UIKit.UITableView {
 extension UIKit.UITableView {
   @_Concurrency.MainActor @preconcurrency public func addNoDataView(noDataView: UIKit.UIView)
   @_Concurrency.MainActor @preconcurrency public func removenoDataView()
+}
+@objc public protocol GrowingTextViewDelegate : UIKit.UITextViewDelegate {
+  @objc optional func textViewDidChangeHeight(_ textView: LensCustomerSDK.GrowingTextView, height: CoreFoundation.CGFloat)
+}
+@_inheritsConvenienceInitializers @IBDesignable @objc @_Concurrency.MainActor @preconcurrency open class GrowingTextView : UIKit.UITextView {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var text: Swift.String! {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var maxLength: Swift.Int
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var trimWhiteSpaceWhenEndEditing: Swift.Bool
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var minHeight: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var maxHeight: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var placeholder: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var placeholderColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency open var attributedPlaceholder: Foundation.NSAttributedString? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect, textContainer: UIKit.NSTextContainer?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func draw(_ rect: CoreFoundation.CGRect)
 }
 extension UIKit.UIImage {
   convenience public init?(color: UIKit.UIColor, size: CoreFoundation.CGSize = CGSize(width: 1, height: 1))
@@ -1747,6 +2037,437 @@ extension Foundation.FileManager {
     get
   }
 }
+public struct MultiTechSessionDetails {
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class MultipleTechDetailsViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func prepopulateData(participant: [LensCustomerSDK.Participant], hostZuid: Foundation.NSNumber, isHost: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func presentWithDrawer(controller: UIKit.UIViewController, _ completion: (() -> Swift.Void)? = nil, hideStatusBar: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension LensCustomerSDK.MultipleTechDetailsViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, estimatedHeightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, titleForHeaderInSection section: Swift.Int) -> Swift.String?
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplayHeaderView view: UIKit.UIView, forSection section: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+}
+extension LensCustomerSDK.MultipleTechDetailsViewController : LensCustomerSDK.DrawerControllerDelegate {
+  @_Concurrency.MainActor @preconcurrency public func drawerView(for drawerController: LensCustomerSDK.DrawerViewController) -> UIKit.UIView
+  @_Concurrency.MainActor @preconcurrency public func drawer(controller: LensCustomerSDK.DrawerViewController, movingPosition: LensCustomerSDK.DrawerMovingPosition, canChangeDrawerHeight height: CoreFoundation.CGFloat, drawerMinHeight: CoreFoundation.CGFloat, drawerMaximumHeight: CoreFoundation.CGFloat) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func drawer(_ drawer: LensCustomerSDK.DrawerViewController, reachedMinHeight height: CoreFoundation.CGFloat, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func drawerMaximumHieght(for drawer: LensCustomerSDK.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  @_Concurrency.MainActor @preconcurrency public func drawer(dismissed withAnimation: Swift.Bool)
+}
+extension LensCustomerSDK.LensCustomerSessionController : LensCustomerSDK.ARProtocol {
+  @_Concurrency.MainActor @preconcurrency public func onAnchorSelectionChanged(annotationId: Swift.String, state: LensCustomerSDK.AnnotationSelection, triggerId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func onAnchorRemoved(annotationId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func onAnchorPlaced(annotationId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func onArCommentsReceived(annotationNode: LensCustomerSDK.AnnotationNotify)
+  @_Concurrency.MainActor @preconcurrency public func onArNewNodeCreated()
+  @_Concurrency.MainActor @preconcurrency public func onArNodeRemoved()
+  @_Concurrency.MainActor @preconcurrency public func updateAnnotationNotesListViewControllerifPresenting()
+}
+public protocol AnnotationNotesListUIProtocol : AnyObject {
+  func onArSelectionCompleted(isSelected: Swift.Bool, annotationId: Swift.String, triggerId: Swift.String)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class AnnotationNotesListViewController : UIKit.UIViewController, LensCustomerSDK.KeyboardNotificationhandler {
+  @_Concurrency.MainActor @preconcurrency weak public var arNotesListUIDelegate: (any LensCustomerSDK.AnnotationNotesListUIProtocol)?
+  @_Concurrency.MainActor @preconcurrency weak public var lensVC: UIKit.UIViewController?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func showEmptyStateView()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension LensCustomerSDK.AnnotationNotesListViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, estimatedHeightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, titleForHeaderInSection section: Swift.Int) -> Swift.String?
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplayHeaderView view: UIKit.UIView, forSection section: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func scrollViewWillBeginDragging(_ scrollView: UIKit.UIScrollView)
+}
+extension LensCustomerSDK.AnnotationNotesListViewController : LensCustomerSDK.GrowingTextViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func textViewDidChangeHeight(_ textView: LensCustomerSDK.GrowingTextView, height: CoreFoundation.CGFloat)
+}
+extension LensCustomerSDK.AnnotationNotesListViewController : LensCustomerSDK.AnnotationNotesListUIProtocol {
+  @_Concurrency.MainActor @preconcurrency public func onArSelectionCompleted(isSelected: Swift.Bool, annotationId: Swift.String, triggerId: Swift.String)
+}
+public enum FreezeCurrentStatus {
+  case freezeRunningStream(LensCustomerSDK.FreezeCurrentStatus.FreezeBy), freezeSnapshot(LensCustomerSDK.FreezeCurrentStatus.FreezeBy), unfreeze(LensCustomerSDK.FreezeCurrentStatus.FreezeBy)
+  public enum FreezeBy {
+    case me, other
+    public static func == (a: LensCustomerSDK.FreezeCurrentStatus.FreezeBy, b: LensCustomerSDK.FreezeCurrentStatus.FreezeBy) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var isFreeze: Swift.Bool {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class InviteTechnicianViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension LensCustomerSDK.LensCustomerSessionController : LensCustomerSDK.LensSignallingProtocol {
+  @_Concurrency.MainActor @preconcurrency public func onScanSuccess(scanResult: LensCustomerSDK.ScanModel)
+  @_Concurrency.MainActor @preconcurrency public func onScanFailure(scanError: LensCustomerSDK.ScanError)
+  @_Concurrency.MainActor @preconcurrency public func conferenceReceived(type: LensCustomerSDK.ConferenceType)
+  @_Concurrency.MainActor @preconcurrency public func refreshBottomMenu()
+  @_Concurrency.MainActor @preconcurrency public func onTechnicianPerform(draw shape: LensCustomerSDK.DrawingInput.DrawShape)
+  @_Concurrency.MainActor @preconcurrency public func didChangeLensConnectionState(state: LensCustomerSDK.AssisLensStates)
+  @_Concurrency.MainActor @preconcurrency public func didChange(_ participant: LensCustomerSDK.Participant)
+  @_Concurrency.MainActor @preconcurrency public func renderingView(_ view: UIKit.UIView?)
+  @_Concurrency.MainActor @preconcurrency public func onSessionValidationDone()
+  @_Concurrency.MainActor @preconcurrency public func newFreezeAcknowledgement()
+  @_Concurrency.MainActor @preconcurrency public func unFreezeFinalAction()
+  @_Concurrency.MainActor @preconcurrency public func showFreezedImage()
+  @_Concurrency.MainActor @preconcurrency public func didChangeARState(tracking state: ARKit.ARCamera.TrackingState)
+  @_Concurrency.MainActor @preconcurrency public func participantRejoined(clientId: Swift.String)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class LensCustomerSessionController : LensCustomerSDK.LensBaseSessionController {
+  @_Concurrency.MainActor @preconcurrency weak public var delegate: (any LensCustomerSDK.LensEventProtocol)?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var prefersStatusBarHidden: Swift.Bool {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency weak public var activityProtocol: (any LensCustomerSDK.LensEventProtocol)?
+  @_Concurrency.MainActor @preconcurrency public static func validateSession(sessionid id: Swift.String, base url: Foundation.URL? = nil, completion: @escaping (LensCustomerSDK.SessionValidationResponse) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency convenience public init(connectionParam param: any LensCustomerSDK.CustomerSessionParams, customer name: Swift.String, is_arMode: Swift.Bool, remoteConfigConferenceType: LensCustomerSDK.ConferenceType, customerEmail: Swift.String)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency override public func deviceRotated(_ currentOrientation: UIKit.UIDeviceOrientation)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var preferredStatusBarStyle: UIKit.UIStatusBarStyle {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func dismiss(animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public func exitLensSession()
+  @_Concurrency.MainActor @preconcurrency public func endCurrentAppCallKit()
+  @_Concurrency.MainActor @preconcurrency public func alertJoinAnotherSession()
+  @_Concurrency.MainActor @preconcurrency public func selectedOption(option: LensCustomerSDK.AssistMenu)
+}
+extension LensCustomerSDK.LensCustomerSessionController {
+  @objc @IBAction @_Concurrency.MainActor @preconcurrency dynamic public func exit(_ sender: UIKit.UIButton?)
+}
+extension LensCustomerSDK.LensCustomerSessionController : LensCustomerSDK.LensUICommonDelegates {
+  @_Concurrency.MainActor @preconcurrency public func dismissWithError(message: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func show(lottie type: LensCustomerSDK.LensLottieType, message: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func set(loader enabled: Swift.Bool, text: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency public func dismissLottie()
+  @_Concurrency.MainActor @preconcurrency public func showStatusBar(message: Swift.String, interval: Foundation.TimeInterval = 4)
+}
+extension LensCustomerSDK.LensCustomerSessionController : LensCustomerSDK.AudioSessionProtocol {
+  @_Concurrency.MainActor @preconcurrency public func didChangeRoute(_ audioDescription: AVFAudio.AVAudioSessionRouteDescription, reason: AVFAudio.AVAudioSession.RouteChangeReason)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class AnnotateColorPickViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func presentWithDrawer(controller: UIKit.UIViewController, _ completion: (() -> Swift.Void)? = nil, hideStatusBar: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension LensCustomerSDK.AnnotateColorPickViewController : LensCustomerSDK.DrawerControllerDelegate {
+  @_Concurrency.MainActor @preconcurrency public func drawerView(for drawerController: LensCustomerSDK.DrawerViewController) -> UIKit.UIView
+  @_Concurrency.MainActor @preconcurrency public func drawer(controller: LensCustomerSDK.DrawerViewController, movingPosition: LensCustomerSDK.DrawerMovingPosition, canChangeDrawerHeight height: CoreFoundation.CGFloat, drawerMinHeight: CoreFoundation.CGFloat, drawerMaximumHeight: CoreFoundation.CGFloat) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func drawer(_ drawer: LensCustomerSDK.DrawerViewController, reachedMinHeight height: CoreFoundation.CGFloat, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func drawerMaximumHieght(for drawer: LensCustomerSDK.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  @_Concurrency.MainActor @preconcurrency public func drawer(dismissed withAnimation: Swift.Bool)
+}
+extension LensCustomerSDK.AnnotateColorPickViewController : UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegateFlowLayout {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+}
+@objc public class ChatData : ObjectiveC.NSObject {
+  final public let chat: LensCustomerSDK.Chat
+  final public let chatTime: Foundation.Date
+  public var isShowNameAndDate: Swift.Bool
+  public init(chat: LensCustomerSDK.Chat)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class ScanResultSheet : UIKit.UIViewController, LensCustomerSDK.KeyboardNotificationhandler {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func removeFromParent()
+  @_Concurrency.MainActor @preconcurrency public func updateScannedText(text: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func setSendButtonCallback(sendCallback: @escaping ((_ resultText: Swift.String) -> Swift.Void))
+  @_Concurrency.MainActor @preconcurrency public func setCopyButtonCallback(sendCallback: @escaping ((_ text: Swift.String) -> Swift.Void))
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension LensCustomerSDK.ScanResultSheet : UIKit.UITextViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func textView(_ textView: UIKit.UITextView, shouldInteractWith URL: Foundation.URL, in characterRange: Foundation.NSRange, interaction: UIKit.UITextItemInteraction) -> Swift.Bool
+}
+public enum AnnotateIcon : LensCustomerSDK.ATIcon {
+  case delete, rectangle, pencil, circle, ellipse, close, annotateMenu, arrow, deleteAll, selectionAnnotation, color, pointer, selectedPointer
+  case selectedRectangle, selectedPencil, selectedEllipse, selectedArrow, selectedAnnotation
+  case measurement_add, measurementSelected, measurement
+  public var iconString: Swift.String {
+    get
+  }
+  public var iconSize: CoreFoundation.CGFloat {
+    get
+  }
+  public var description: Swift.String? {
+    get
+  }
+  public var iconNormalColor: UIKit.UIColor? {
+    get
+  }
+  public var iconSelectedColor: UIKit.UIColor? {
+    get
+  }
+  public var iconDisabledColor: UIKit.UIColor? {
+    get
+  }
+  public func iconFont(size: CoreFoundation.CGFloat) -> UIKit.UIFont
+  public static func == (a: LensCustomerSDK.AnnotateIcon, b: LensCustomerSDK.AnnotateIcon) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct AssistMenuTheme {
+  public var cellNormalTheme: LensCustomerSDK.AssistCellTheme
+  public var cellDisabledTheme: LensCustomerSDK.AssistCellTheme
+  public init()
+}
+public struct AssistCellTheme {
+  public var titleColor: UIKit.UIColor
+  public var iconColor: UIKit.UIColor
+  public var backgroundColor: UIKit.UIColor
+}
+public struct AssistMenu : Swift.Identifiable, Swift.Equatable {
+  public static func == (lhs: LensCustomerSDK.AssistMenu, rhs: LensCustomerSDK.AssistMenu) -> Swift.Bool
+  public var id: Swift.String
+  public var featureType: LensCustomerSDK.Features?
+  public var icon: any LensCustomerSDK.ATIcon
+  public var selectedIcon: (any LensCustomerSDK.ATIcon)?
+  public var isEnabled: Swift.Bool
+  public var isNewActivtyAvailable: Swift.Bool
+  public var color: (Swift.Bool, UIKit.UIColor)
+  public init(id: Swift.String, icon: any LensCustomerSDK.ATIcon, selectedIcon: (any LensCustomerSDK.ATIcon)? = nil, color: (Swift.Bool, UIKit.UIColor)? = (false, UIColor.white), isSelectedInitially: Swift.Bool = false, featureType: LensCustomerSDK.Features? = nil)
+  public typealias ID = Swift.String
+}
+extension LensCustomerSDK.AssistMenu : LensCustomerSDK.SheetActionData {
+  public var actionTitle: Swift.String {
+    get
+  }
+  public var actionIcon: (any LensCustomerSDK.ATIcon)? {
+    get
+  }
+  public var accessoryIcon: (any LensCustomerSDK.ATIcon)? {
+    get
+  }
+}
+public protocol AssistMenuCollectionViewDelegate : AnyObject {
+  func didSelectMenu(item: LensCustomerSDK.AssistMenu, hidedMenus: [LensCustomerSDK.AssistMenu])
+  func didDeSelectMenu(item: LensCustomerSDK.AssistMenu, hidedMenus: [LensCustomerSDK.AssistMenu])
+  func cellSizeFor(collectionView: UIKit.UICollectionView) -> CoreFoundation.CGSize
+  func assistMenuItems(collectionView: UIKit.UICollectionView) -> [LensCustomerSDK.AssistMenu]
+  func assistMenuMoreItem() -> LensCustomerSDK.AssistMenu
+  func maxWidth(collectionView: UIKit.UICollectionView) -> CoreFoundation.CGFloat
+  func isSelectedFeatureAvailable(item: LensCustomerSDK.AssistMenu, lensObject: LensCustomerSDK.Lens?) -> Swift.Bool
+  var lensObject: LensCustomerSDK.Lens? { get }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class AssistMenuCollectionView : UIKit.UICollectionView {
+  @_Concurrency.MainActor @preconcurrency weak public var assistMenuDelegate: (any LensCustomerSDK.AssistMenuCollectionViewDelegate)? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var isErrorOccured: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public static var theme: LensCustomerSDK.AssistMenuTheme
+  @_Concurrency.MainActor @preconcurrency public func has_action_menu(_ menu: LensCustomerSDK.AssistMenu) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func awakeFromNib()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect, collectionViewLayout layout: UIKit.UICollectionViewLayout)
+  @_Concurrency.MainActor @preconcurrency public func refreshAllData()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func reloadData()
+  @_Concurrency.MainActor @preconcurrency public func updateSelectionState(menu: LensCustomerSDK.AssistMenu, isSelected: Swift.Bool, trigger_select_delegate: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency public func select(menu: LensCustomerSDK.AssistMenu, trigger_select_delegate: Swift.Bool = true)
+  @_Concurrency.MainActor @preconcurrency public func deSelect(menu: LensCustomerSDK.AssistMenu, trigger_select_delegate: Swift.Bool = true)
+  @_Concurrency.MainActor @preconcurrency public func hasMenuItem(menu: LensCustomerSDK.AssistMenu) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func isSelected(menu: LensCustomerSDK.AssistMenu) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func set(enabled isEnable: Swift.Bool, for menu: [LensCustomerSDK.AssistMenu], isSelected: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency public func isEnabled(menu: LensCustomerSDK.AssistMenu) -> Swift.Bool
+  @objc deinit
+}
+extension LensCustomerSDK.AssistMenuCollectionView : UIKit.UICollectionViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didDeselectItemAt indexPath: Foundation.IndexPath)
+}
+extension LensCustomerSDK.AssistMenuCollectionView : UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegateFlowLayout {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class LensBaseSessionController : LensCustomerSDK.OrientationHelperController {
+  @_Concurrency.MainActor @preconcurrency public var sessionID: Swift.String? {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency override public func deviceRotated(_ currentOrientation: UIKit.UIDeviceOrientation)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency public func showNotificationView(message: Swift.String, interval: Foundation.TimeInterval = 4)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension LensCustomerSDK.LensBaseSessionController : LensCustomerSDK.AssistMenuCollectionViewDelegate {
+  @_Concurrency.MainActor @preconcurrency public var lensObject: LensCustomerSDK.Lens? {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public func cellSizeFor(collectionView: UIKit.UICollectionView) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor @preconcurrency public func maxWidth(collectionView: UIKit.UICollectionView) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency public func assistMenuItems(collectionView: UIKit.UICollectionView) -> [LensCustomerSDK.AssistMenu]
+  @_Concurrency.MainActor @preconcurrency public func assistMenuMoreItem() -> LensCustomerSDK.AssistMenu
+  @_Concurrency.MainActor @preconcurrency public func didSelectMenu(item: LensCustomerSDK.AssistMenu, hidedMenus: [LensCustomerSDK.AssistMenu])
+  @_Concurrency.MainActor @preconcurrency public func didDeSelectMenu(item: LensCustomerSDK.AssistMenu, hidedMenus: [LensCustomerSDK.AssistMenu])
+  @_Concurrency.MainActor @preconcurrency public func isSelectedFeatureAvailable(item: LensCustomerSDK.AssistMenu, lensObject: LensCustomerSDK.Lens?) -> Swift.Bool
+}
+public protocol LensEventProtocol : AnyObject {
+  func summary(sessionInfo: LensCustomerSDK.SessionDescription, snapshots: [LensCustomerSDK.SnapShotEntity]?, isNotesAvailable: Swift.Bool, chat: [LensCustomerSDK.Chat]?)
+  func sessionEvents(_ event: LensCustomerSDK.SessionEvents)
+  func showFeedback()
+  func showPricingPlans()
+  var sessionType: LensCustomerSDK.Participant.Role! { get set }
+}
+public enum SessionEvents {
+  case freeze, unfreeze, freezeFailed, chatRecived, chatSent, clearAnnotaion
+  case flash_request(ison: Swift.Bool)
+  case flash_failed(ison: Swift.Bool)
+  case sessionState(LensCustomerSDK.AssisLensStates)
+  case isVideoMuted(Swift.Bool)
+  case isAudioMuted(Swift.Bool)
+  case isARAvailable(Swift.Bool)
+  case customer_action(LensCustomerSDK.CustomerAction)
+  case audioRouteDescription(AVFAudio.AVAudioSessionRouteDescription?)
+  case annotation(LensCustomerSDK.DrawingInput.DrawShape)
+  case participantState(LensCustomerSDK.Participant)
+  case notesAdded(LensCustomerSDK.SessionEvents.FileAction, (any Swift.Error)?)
+  case inviteCustomer((any Swift.Error)?)
+  case inviteTechnician((any Swift.Error)?)
+  case snapshotActions(LensCustomerSDK.SessionEvents.FileAction, (any Swift.Error)?)
+  case arTrackingState(LensCustomerSDK.AR_TrackingState)
+  public enum FileAction : Swift.Int {
+    case created, deleted, downloaded
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency public func show(title: Swift.String, alert message: Swift.String? = nil, dismissOnTapOutside isEnable: Swift.Bool = true, actions: [LensCustomerSDK.AssistAlertAction] = [])
+  @_Concurrency.MainActor @preconcurrency public func accessDenideRedirectToAppSettings(_ message: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func showInputAlert(message: Swift.String, actions: [LensCustomerSDK.AssistAlertAction] = [], completion: ((_ controller: LensCustomerSDK.AssistBlurAlertController, _ text: Swift.String?, _ action: LensCustomerSDK.AssistAlertAction) -> (Swift.Bool))? = nil)
+  @_Concurrency.MainActor @preconcurrency public func networkConnectionAvailable() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func alertToOpenAppstore()
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency public func addLottie(type: LensCustomerSDK.LensLottieType) -> LensCustomerSDK.LottieAnimationView
+}
+public enum ExternalApp : Swift.String {
+  case camera, photo, microphone
+  public enum Permission : Swift.String {
+    case denied, restricted, authorized
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension LensCustomerSDK.LensCustomerSessionController : LensCustomerSDK.OtherActionProtocol {
+  @_Concurrency.MainActor @preconcurrency public func onVideoStateChanged(status: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public var isARSupported: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var isCustomerVideoMuted: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public func onTechnicianPerform(action: LensCustomerSDK.TechnicianAction)
+  @_Concurrency.MainActor @preconcurrency public func onShareCameraResponse(action: LensCustomerSDK.ShareCameraTechAction, participant: LensCustomerSDK.Participant?)
+  @_Concurrency.MainActor @preconcurrency public func showLottieView(lottie: LensCustomerSDK.LensLottieType, show: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func showNotificationBanner(msg: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func onFreezeSuccess(fromUpstreamer: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func onFreezeFailure()
+  @_Concurrency.MainActor @preconcurrency public func onUnfreezed()
+  @_Concurrency.MainActor @preconcurrency public func didReceiveAnnotation(input: LensCustomerSDK.DrawingInput?, isClear: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func onCameraSwitch(isFront: Swift.Bool)
+}
+public enum LensLottieType : LensCustomerSDK.LottieType {
+  case noNetwork, loader, nochat, oopsWrong, noSearch, waitingForJoin, shareStopped, sessionClosed, sessionExpired, noTechSessionSummary, noCustSessionSummary, secTechWaitingRoom, noneScreenSharing, no_arnotes_cust, no_arnotes_tech, arNotesFreezedState
+  case surfaceDetection, anotateTurorial
+  case slide1
+  public var lottie: LensCustomerSDK.LottieAnimationView {
+    get
+  }
+  public var lottieName: Swift.String {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public var size: CoreFoundation.CGSize? {
+    get
+  }
+  public static func == (a: LensCustomerSDK.LensLottieType, b: LensCustomerSDK.LensLottieType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum AssistAlertActionStyle : LensCustomerSDK.AlertStyleConfiguration {
+  case `default`, destructive, outlined
+  public var backgroundColor: UIKit.UIColor {
+    get
+  }
+  public var titleColor: UIKit.UIColor {
+    get
+  }
+  public var borderColor: UIKit.UIColor? {
+    get
+  }
+  public var borderWidth: CoreFoundation.CGFloat {
+    get
+  }
+  public static func == (a: LensCustomerSDK.AssistAlertActionStyle, b: LensCustomerSDK.AssistAlertActionStyle) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public struct LottieVector1D : Swift.Hashable, Swift.Sendable {
   public init(_ value: Swift.Double)
   public let value: Swift.Double
@@ -1992,7 +2713,6 @@ public typealias LRUAnimationCache = LensCustomerSDK.DefaultAnimationCache
   @_Concurrency.MainActor @preconcurrency public func getRealtimeAnimationFrame(_ realtimeAnimationFrame: SwiftUICore.Binding<LensCustomerSDK.AnimationFrameTime>?) -> some SwiftUICore.View
   
   @_Concurrency.MainActor @preconcurrency public func dotLottieConfigurationComponents(_ dotLottieConfigurationComponents: LensCustomerSDK.DotLottieConfigurationComponents) -> LensCustomerSDK.LottieView<Placeholder>
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias Body = @_opaqueReturnTypeOf("$s15LensCustomerSDK10LottieViewV4bodyQrvp", 0) __<Placeholder>
 }
 final public class SizeValueProvider {
@@ -2238,6 +2958,241 @@ public enum LottieMarkerPosition : Swift.Hashable {
 extension UIKit.UIViewController {
   @_Concurrency.MainActor @preconcurrency public func addChildren(viewController: UIKit.UIViewController, containerView: UIKit.UIView? = nil, isSafeArea: Swift.Bool = false)
 }
+@objc @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+open class ATAbstractDataSource : ObjectiveC.NSObject, LensCustomerSDK.ATDataSource, LensCustomerSDK.ATDelegate {
+  public var estimatedRowHeight: CoreFoundation.CGFloat
+  public var estimatedSectionHeaderHeight: CoreFoundation.CGFloat
+  public var estimatedSectionFooterHeight: CoreFoundation.CGFloat
+  public func at_collectionView(collectionView: any LensCustomerSDK.ATGeneralCollectionView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  public func at_collectionView(collectionView: any LensCustomerSDK.ATGeneralCollectionView, viewForFooterInSection section: Swift.Int) -> UIKit.UIView?
+  public func at_collectionView(collectionView: any LensCustomerSDK.ATGeneralCollectionView, cellForItemAt indexpath: Foundation.IndexPath) -> any LensCustomerSDK.ATReusableCell
+  public func at_collectionView(_ collectionView: any LensCustomerSDK.ATGeneralCollectionView, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize
+  public func at_numberOfSections() -> Swift.Int
+  public func at_numberOfItems(inSection section: Swift.Int) -> Swift.Int
+  public func at_collectionView(collectionView: any LensCustomerSDK.ATGeneralCollectionView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  public func at_collectionView(collectionView: any LensCustomerSDK.ATGeneralCollectionView, heightForFooterInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  public func at_scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  public func at_scrollViewWillBeginDragging(_ scrollView: UIKit.UIScrollView)
+  public func at_scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
+  public func at_scrollViewDidEndScroll(_ scrollView: UIKit.UIScrollView)
+  public func at_scrollViewDidEndDragging(_ scrollView: UIKit.UIScrollView, willDecelerate decelerate: Swift.Bool)
+  public func at_collectionView(_ collectionView: any LensCustomerSDK.ATGeneralCollectionView, didDeselectItemAt indexPath: Foundation.IndexPath)
+  public func at_collectionView(_ collectionView: any LensCustomerSDK.ATGeneralCollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  public func at_collectionView(_ collectionView: any LensCustomerSDK.ATGeneralCollectionView, willDisplay cell: any LensCustomerSDK.ATReusableCell, forItemAt indexPath: Foundation.IndexPath)
+  public func at_collectionView(_ collectionView: any LensCustomerSDK.ATGeneralCollectionView, willDisplayHeaderView view: UIKit.UIView, forSection section: Swift.Int)
+  public func at_collectionView(_ collectionView: any LensCustomerSDK.ATGeneralCollectionView, willDisplayFooterView view: UIKit.UIView, forSection section: Swift.Int)
+  public func at_sizeOfCollectionViewHeader(collectionView: any LensCustomerSDK.ATGeneralCollectionView, inSection section: Swift.Int) -> CoreFoundation.CGSize
+  public func at_sizeOfcollectionViewFooter(collectionView: any LensCustomerSDK.ATGeneralCollectionView, inSection section: Swift.Int) -> CoreFoundation.CGSize
+  public func at_sizeOfcollectionViewFooter(collectionView: any LensCustomerSDK.ATGeneralCollectionView, heightForFooterInSection section: Swift.Int) -> CoreFoundation.CGSize
+  public func at_shouldShowMenuController(at indexPath: Foundation.IndexPath) -> Swift.Bool
+  public func at_canPerformMenuController(at indexPath: Foundation.IndexPath, selector: ObjectiveC.Selector) -> Swift.Bool
+  public func at_perfomMenuController(at indexPath: Foundation.IndexPath, selector: ObjectiveC.Selector)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.ATAbstractDataSource : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForFooterInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, viewForFooterInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didDeselectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplay cell: UIKit.UITableViewCell, forRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplayFooterView view: UIKit.UIView, forSection section: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplayHeaderView view: UIKit.UIView, forSection section: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, shouldShowMenuForRowAt indexPath: Foundation.IndexPath) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, canPerformAction action: ObjectiveC.Selector, forRowAt indexPath: Foundation.IndexPath, withSender sender: Any?) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, performAction action: ObjectiveC.Selector, forRowAt indexPath: Foundation.IndexPath, withSender sender: Any?)
+}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.ATAbstractDataSource : UIKit.UICollectionViewDataSource {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func numberOfSections(in collectionView: UIKit.UICollectionView) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, viewForSupplementaryElementOfKind kind: Swift.String, at indexPath: Foundation.IndexPath) -> UIKit.UICollectionReusableView
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, referenceSizeForHeaderInSection section: Swift.Int) -> CoreFoundation.CGSize
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, referenceSizeForFooterInSection section: Swift.Int) -> CoreFoundation.CGSize
+}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.ATAbstractDataSource : UIKit.UICollectionViewDelegateFlowLayout {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize
+}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.ATAbstractDataSource : UIKit.UICollectionViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didDeselectItemAt indexPath: Foundation.IndexPath)
+}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.ATAbstractDataSource {
+  @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  @objc dynamic public func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
+  @objc dynamic public func scrollViewDidEndDragging(_ scrollView: UIKit.UIScrollView, willDecelerate decelerate: Swift.Bool)
+  @objc dynamic public func scrollViewWillBeginDragging(_ scrollView: UIKit.UIScrollView)
+}
+@available(iOSApplicationExtension, unavailable)
+public protocol ATGeneralCollectionView {
+  func at_registerCell(forClass cellClass: Swift.AnyClass, identifier: Swift.String)
+  func at_registerCell(forXib nib: UIKit.UINib?, identifier: Swift.String)
+  func at_dequeueReusableCell(withIdentifier: Swift.String, indexPath: Foundation.IndexPath) -> any LensCustomerSDK.ATReusableCell
+  func at_cellForItemAt(_ indexPath: Foundation.IndexPath) -> (any LensCustomerSDK.ATReusableCell)?
+}
+@available(iOSApplicationExtension, unavailable)
+extension UIKit.UITableView : LensCustomerSDK.ATGeneralCollectionView {
+  @_Concurrency.MainActor @preconcurrency public func at_cellForItemAt(_ indexPath: Foundation.IndexPath) -> (any LensCustomerSDK.ATReusableCell)?
+  @_Concurrency.MainActor @preconcurrency public func at_registerCell(forXib nib: UIKit.UINib?, identifier: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func at_registerCell(forClass cellClass: Swift.AnyClass, identifier: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func at_dequeueReusableCell(withIdentifier: Swift.String, indexPath: Foundation.IndexPath) -> any LensCustomerSDK.ATReusableCell
+}
+@available(iOSApplicationExtension, unavailable)
+extension UIKit.UICollectionView : LensCustomerSDK.ATGeneralCollectionView {
+  @_Concurrency.MainActor @preconcurrency public func at_cellForItemAt(_ indexPath: Foundation.IndexPath) -> (any LensCustomerSDK.ATReusableCell)?
+  @_Concurrency.MainActor @preconcurrency public func at_registerCell(forXib nib: UIKit.UINib?, identifier: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func at_registerCell(forClass cellClass: Swift.AnyClass, identifier: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func at_dequeueReusableCell(withIdentifier: Swift.String, indexPath: Foundation.IndexPath) -> any LensCustomerSDK.ATReusableCell
+}
+@available(iOSApplicationExtension, unavailable)
+extension UIKit.UITableView {
+  @_Concurrency.MainActor @preconcurrency public func at_useDataSource(_ datasource: LensCustomerSDK.ATAbstractDataSource)
+}
+@available(iOSApplicationExtension, unavailable)
+extension UIKit.UICollectionView {
+  @_Concurrency.MainActor @preconcurrency public func at_useDataSource(_ datasource: LensCustomerSDK.ATAbstractDataSource)
+}
+@_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@_Concurrency.MainActor @preconcurrency public class AssistCollectionDataSource<ItemType, CellType> : LensCustomerSDK.ATAbstractDataSource where CellType : LensCustomerSDK.ATReusableCell {
+  public typealias Section = Swift.Int
+  @_Concurrency.MainActor @preconcurrency public var sections: [LensCustomerSDK.ATSection<ItemType>] {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var configureCell: ((_ item: ItemType, _ cell: CellType, _ indexPath: Foundation.IndexPath) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public var cellIdentifier: ((_ item: ItemType, _ indexPath: Foundation.IndexPath) -> Swift.String)?
+  @_Concurrency.MainActor @preconcurrency public var actionHandler: ((LensCustomerSDK.AssistCollectionActionType<ItemType, CellType>) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public var handleNoData: ((_ isNodata: Swift.Bool, _ sections: [LensCustomerSDK.ATSection<ItemType>]) -> ())?
+  @_Concurrency.MainActor @preconcurrency public var scrollViewDidEndScroll: ((UIKit.UIScrollView) -> ())?
+  @_Concurrency.MainActor @preconcurrency public var scrollViewDidScroll: ((UIKit.UIScrollView) -> ())?
+  @_Concurrency.MainActor @preconcurrency public var scrollViewWillBeginDragging: ((UIKit.UIScrollView) -> ())?
+  @_Concurrency.MainActor @preconcurrency public var scrollViewDidEndDecelerating: ((UIKit.UIScrollView) -> ())?
+  @_Concurrency.MainActor @preconcurrency public var scrollViewDidEndDraging: ((_ scrollView: UIKit.UIScrollView, _ isDecelerating: Swift.Bool) -> ())?
+  @_Concurrency.MainActor @preconcurrency public var willDisplayCell: ((_ cell: CellType, _ indexPath: Foundation.IndexPath) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public var willDisplaySectionFooter: ((_ headerView: UIKit.UIView, _ section: Swift.Int) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public var willDisplaySectionHeader: ((_ footerView: UIKit.UIView, _ section: Swift.Int) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public var shouldShowMenuController: ((Foundation.IndexPath) -> Swift.Bool)?
+  @_Concurrency.MainActor @preconcurrency public var canShowMenuController: ((Foundation.IndexPath, ObjectiveC.Selector) -> Swift.Bool)?
+  @_Concurrency.MainActor @preconcurrency public var performMenuController: ((Foundation.IndexPath, ObjectiveC.Selector) -> Swift.Void)?
+  override public func at_numberOfSections() -> Swift.Int
+  override public func at_numberOfItems(inSection section: Swift.Int) -> Swift.Int
+  override public func at_collectionView(collectionView: any LensCustomerSDK.ATGeneralCollectionView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  override public func at_collectionView(collectionView: any LensCustomerSDK.ATGeneralCollectionView, heightForFooterInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  override public func at_collectionView(collectionView: any LensCustomerSDK.ATGeneralCollectionView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  override public func at_collectionView(collectionView: any LensCustomerSDK.ATGeneralCollectionView, viewForFooterInSection section: Swift.Int) -> UIKit.UIView?
+  override public func at_collectionView(_ collectionView: any LensCustomerSDK.ATGeneralCollectionView, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize
+  override public func at_collectionView(collectionView: any LensCustomerSDK.ATGeneralCollectionView, cellForItemAt indexpath: Foundation.IndexPath) -> any LensCustomerSDK.ATReusableCell
+  override public func at_collectionView(_ collectionView: any LensCustomerSDK.ATGeneralCollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  override public func at_collectionView(_ collectionView: any LensCustomerSDK.ATGeneralCollectionView, didDeselectItemAt indexPath: Foundation.IndexPath)
+  override public func at_scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  override public func at_scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
+  override public func at_scrollViewDidEndScroll(_ scrollView: UIKit.UIScrollView)
+  override public func at_scrollViewDidEndDragging(_ scrollView: UIKit.UIScrollView, willDecelerate decelerate: Swift.Bool)
+  override public func at_scrollViewWillBeginDragging(_ scrollView: UIKit.UIScrollView)
+  override public func at_collectionView(_ collectionView: any LensCustomerSDK.ATGeneralCollectionView, willDisplay cell: any LensCustomerSDK.ATReusableCell, forItemAt indexPath: Foundation.IndexPath)
+  override public func at_collectionView(_ tableView: any LensCustomerSDK.ATGeneralCollectionView, willDisplayHeaderView view: UIKit.UIView, forSection section: Swift.Int)
+  override public func at_collectionView(_ tableView: any LensCustomerSDK.ATGeneralCollectionView, willDisplayFooterView view: UIKit.UIView, forSection section: Swift.Int)
+  override public func at_sizeOfCollectionViewHeader(collectionView: any LensCustomerSDK.ATGeneralCollectionView, inSection section: Swift.Int) -> CoreFoundation.CGSize
+  override public func at_sizeOfcollectionViewFooter(collectionView: any LensCustomerSDK.ATGeneralCollectionView, inSection section: Swift.Int) -> CoreFoundation.CGSize
+  override public func at_canPerformMenuController(at indexPath: Foundation.IndexPath, selector: ObjectiveC.Selector) -> Swift.Bool
+  override public func at_shouldShowMenuController(at indexPath: Foundation.IndexPath) -> Swift.Bool
+  override public func at_perfomMenuController(at indexPath: Foundation.IndexPath, selector: ObjectiveC.Selector)
+  @_Concurrency.MainActor @preconcurrency public func addSection(_ section: LensCustomerSDK.ATSection<ItemType>)
+  @_Concurrency.MainActor @preconcurrency public func getItemFor(indexPath: Foundation.IndexPath) -> ItemType
+  @_Concurrency.MainActor @preconcurrency public func indexPath(where completion: (ItemType) -> Swift.Bool) -> Foundation.IndexPath?
+  @_Concurrency.MainActor @preconcurrency public func getSection(for index: Swift.Int) -> LensCustomerSDK.ATSection<ItemType>
+  @discardableResult
+  @_Concurrency.MainActor @preconcurrency public func delete(itemAt indexPath: Foundation.IndexPath) -> ItemType
+  @_Concurrency.MainActor @preconcurrency public func update(itemAt item: ItemType, for indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency public func insert(itemsAt items: [ItemType], at indexPath: Foundation.IndexPath)
+  @discardableResult
+  @_Concurrency.MainActor @preconcurrency public func addItems(_ items: [ItemType], at section: LensCustomerSDK.AssistCollectionDataSource<ItemType, CellType>.Section) -> [Foundation.IndexPath]
+  @_Concurrency.MainActor @preconcurrency public func insert(section: LensCustomerSDK.ATSection<ItemType>, at index: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency public func numberOfRows(forSection section: Swift.Int) -> Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.AssistCollectionDataSource {
+  @_Concurrency.MainActor @preconcurrency public var lastIndexPath: Foundation.IndexPath? {
+    get
+  }
+}
+@available(iOSApplicationExtension, unavailable)
+public enum AssistCollectionActionType<ItemType, CellType> where CellType : LensCustomerSDK.ATReusableCell {
+  case select(item: ItemType, cell: CellType?, indexpath: Foundation.IndexPath)
+  case deSelect(item: ItemType, cell: CellType?, indexpath: Foundation.IndexPath)
+}
+@available(iOSApplicationExtension, unavailable)
+public protocol ATDataSource {
+  var estimatedRowHeight: CoreFoundation.CGFloat { get set }
+  var estimatedSectionHeaderHeight: CoreFoundation.CGFloat { get set }
+  var estimatedSectionFooterHeight: CoreFoundation.CGFloat { get set }
+  func at_numberOfSections() -> Swift.Int
+  func at_numberOfItems(inSection section: Swift.Int) -> Swift.Int
+  func at_collectionView(_ collectionView: any LensCustomerSDK.ATGeneralCollectionView, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize
+  func at_collectionView(collectionView: any LensCustomerSDK.ATGeneralCollectionView, cellForItemAt indexpath: Foundation.IndexPath) -> any LensCustomerSDK.ATReusableCell
+  func at_collectionView(collectionView: any LensCustomerSDK.ATGeneralCollectionView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  func at_collectionView(collectionView: any LensCustomerSDK.ATGeneralCollectionView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  func at_collectionView(collectionView: any LensCustomerSDK.ATGeneralCollectionView, heightForFooterInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  func at_collectionView(collectionView: any LensCustomerSDK.ATGeneralCollectionView, viewForFooterInSection section: Swift.Int) -> UIKit.UIView?
+  func at_sizeOfCollectionViewHeader(collectionView: any LensCustomerSDK.ATGeneralCollectionView, inSection section: Swift.Int) -> CoreFoundation.CGSize
+  func at_sizeOfcollectionViewFooter(collectionView: any LensCustomerSDK.ATGeneralCollectionView, inSection section: Swift.Int) -> CoreFoundation.CGSize
+}
+@available(iOSApplicationExtension, unavailable)
+public protocol ATDelegate : LensCustomerSDK.ATScrollDelegate {
+  func at_collectionView(_ collectionView: any LensCustomerSDK.ATGeneralCollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  func at_collectionView(_ collectionView: any LensCustomerSDK.ATGeneralCollectionView, willDisplay cell: any LensCustomerSDK.ATReusableCell, forItemAt indexPath: Foundation.IndexPath)
+  func at_collectionView(_ collectionView: any LensCustomerSDK.ATGeneralCollectionView, willDisplayHeaderView view: UIKit.UIView, forSection section: Swift.Int)
+  func at_collectionView(_ collectionView: any LensCustomerSDK.ATGeneralCollectionView, willDisplayFooterView view: UIKit.UIView, forSection section: Swift.Int)
+  func at_collectionView(_ collectionView: any LensCustomerSDK.ATGeneralCollectionView, didDeselectItemAt indexPath: Foundation.IndexPath)
+  func at_shouldShowMenuController(at indexPath: Foundation.IndexPath) -> Swift.Bool
+  func at_canPerformMenuController(at indexPath: Foundation.IndexPath, selector: ObjectiveC.Selector) -> Swift.Bool
+  func at_perfomMenuController(at indexPath: Foundation.IndexPath, selector: ObjectiveC.Selector)
+}
+@available(iOSApplicationExtension, unavailable)
+public protocol ATScrollDelegate {
+  func at_scrollViewDidEndScroll(_ scrollView: UIKit.UIScrollView)
+  func at_scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  func at_scrollViewDidEndDragging(_ scrollView: UIKit.UIScrollView, willDecelerate decelerate: Swift.Bool)
+  func at_scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
+  func at_scrollViewWillBeginDragging(_ scrollView: UIKit.UIScrollView)
+}
+@available(iOSApplicationExtension, unavailable)
+open class ATSection<ItemType> {
+  public var identifier: Swift.String?
+  open var items: [ItemType]
+  open var title: Swift.String?
+  open var sizeForItem: ((_ section: LensCustomerSDK.ATSection<ItemType>, _ indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize)?
+  open var heightForSectionHeader: ((LensCustomerSDK.ATSection<ItemType>) -> CoreFoundation.CGFloat)?
+  open var heightForSectionFooter: ((LensCustomerSDK.ATSection<ItemType>) -> CoreFoundation.CGFloat)?
+  open var headerViewForSection: ((LensCustomerSDK.ATSection<ItemType>) -> UIKit.UIView?)?
+  open var footerViewForSection: ((LensCustomerSDK.ATSection<ItemType>) -> UIKit.UIView?)?
+  open var sizeForSectionHeader: ((LensCustomerSDK.ATSection<ItemType>) -> CoreFoundation.CGSize)?
+  open var sizeForSectionFooter: ((LensCustomerSDK.ATSection<ItemType>) -> CoreFoundation.CGSize)?
+  public init(title: Swift.String? = nil, items: [ItemType] = [])
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+public protocol ATReusableCell {
+}
+@available(iOSApplicationExtension, unavailable)
+extension UIKit.UITableViewCell : LensCustomerSDK.ATReusableCell {
+}
+@available(iOSApplicationExtension, unavailable)
+extension UIKit.UICollectionViewCell : LensCustomerSDK.ATReusableCell {
+}
 public typealias AnimationFrameTime = CoreFoundation.CGFloat
 public typealias AnimationProgressTime = CoreFoundation.CGFloat
 @_hasMissingDesignatedInitializers public class VMJsonManager {
@@ -2247,6 +3202,54 @@ public typealias AnimationProgressTime = CoreFoundation.CGFloat
   public class func json(data: Foundation.Data) -> Any
   public class func isValid(json: Any) -> Swift.Bool
   @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@_Concurrency.MainActor @preconcurrency open class OrientationHelperController : UIKit.UIViewController, LensCustomerSDK.OrientationHandler {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency open func deviceRotated(_ currentOrientation: UIKit.UIDeviceOrientation)
+  @_Concurrency.MainActor @preconcurrency open func supportedOrientation() -> LensCustomerSDK.At_Orientation
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+public enum At_Orientation {
+  case landscape, landscapeLeft, landscapeRight, portrait, all, allButUpsideDown
+  public var orientationMask: UIKit.UIInterfaceOrientationMask {
+    get
+  }
+  public static func at_orientaion(deviceOrientation: UIKit.UIDeviceOrientation) -> LensCustomerSDK.At_Orientation
+  public static func at_orientaion(orientationMask: UIKit.UIInterfaceOrientationMask) -> LensCustomerSDK.At_Orientation
+  public var interfaceOrientation: UIKit.UIInterfaceOrientation {
+    get
+  }
+  public static func == (a: LensCustomerSDK.At_Orientation, b: LensCustomerSDK.At_Orientation) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@available(iOSApplicationExtension, unavailable)
+public protocol OrientationChanger {
+}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.OrientationChanger {
+  public func changeOriantaion(atoriantation: LensCustomerSDK.At_Orientation)
+  public func changeOriantaion(deviceOriantation: UIKit.UIDeviceOrientation)
+  public func changeOriantaion(oriantationMask: UIKit.UIInterfaceOrientationMask)
+}
+@available(iOSApplicationExtension, unavailable)
+public protocol OrientationHandler : LensCustomerSDK.OrientationChanger {
+  func supportedOrientation() -> LensCustomerSDK.At_Orientation
+}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.OrientationHandler where Self : UIKit.UIViewController {
+  public func supportedOrientation() -> LensCustomerSDK.At_Orientation
+  public var currentOrientation: LensCustomerSDK.At_Orientation {
+    get
+  }
 }
 public protocol SSLTrustValidator {
   func isValid(_ trust: Security.SecTrust, domain: Swift.String?) -> Swift.Bool
@@ -2443,6 +3446,51 @@ public protocol AnimationCacheProvider : AnyObject, Swift.Sendable {
   func setAnimation(_ animation: LensCustomerSDK.LottieAnimation, forKey: Swift.String)
   func clearCache()
 }
+@available(iOSApplicationExtension, unavailable)
+public enum OverlayViewType {
+  case blurView, normalView
+  public static func == (a: LensCustomerSDK.OverlayViewType, b: LensCustomerSDK.OverlayViewType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@_Concurrency.MainActor @preconcurrency open class OverlayViewController : LensCustomerSDK.OrientationHelperController {
+  @_Concurrency.MainActor @preconcurrency public var isTapOutsideDissmissEnabled: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var overlayType: LensCustomerSDK.OverlayViewType
+  @_Concurrency.MainActor @preconcurrency public var overlayStyle: LensCustomerSDK.OverlayViewStyle
+  @_Concurrency.MainActor @preconcurrency public var overlayColorTint: UIKit.UIColor?
+  @_Concurrency.MainActor @preconcurrency public var overlayColorTintAlpha: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency public var overlayAlpha: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func didReceiveMemoryWarning()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func dismiss(animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public func dismissOverlayController(animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+public enum OverlayViewStyle : Swift.Int {
+  case extraLight
+  case light
+  case dark
+  case extraDark
+  public init?(rawValue: Swift.Int)
+  @available(iOSApplicationExtension, unavailable)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 extension Foundation.TimeZone {
   public func hoursFromGMT() -> Swift.String
   public func hoursFromGMTWithSign() -> Swift.String
@@ -2457,7 +3505,6 @@ extension Foundation.TimeZone {
   @_Concurrency.MainActor @preconcurrency public func animate(fromProgress: LensCustomerSDK.AnimationProgressTime, toProgress: LensCustomerSDK.AnimationProgressTime, on event: LensCustomerSDK.LottieControlEvent) -> LensCustomerSDK.LottieButton
   @_Concurrency.MainActor @preconcurrency public func animate(fromMarker: Swift.String, toMarker: Swift.String, on event: LensCustomerSDK.LottieControlEvent) -> LensCustomerSDK.LottieButton
   @_Concurrency.MainActor @preconcurrency public func valueProvider<ValueProvider>(_ valueProvider: ValueProvider, for keypath: LensCustomerSDK.AnimationKeypath) -> LensCustomerSDK.LottieButton where ValueProvider : LensCustomerSDK.AnyValueProvider, ValueProvider : Swift.Equatable
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias Body = @_opaqueReturnTypeOf("$s15LensCustomerSDK12LottieButtonV4bodyQrvp", 0) __
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class ImageAsset : LensCustomerSDK.Asset {
@@ -2563,7 +3610,6 @@ extension UIKit.UIScreen {
   @_Concurrency.MainActor @preconcurrency public func onAnimation(fromProgress onStartProgress: LensCustomerSDK.AnimationProgressTime, toProgress onEndProgress: LensCustomerSDK.AnimationProgressTime) -> LensCustomerSDK.LottieSwitch
   @_Concurrency.MainActor @preconcurrency public func offAnimation(fromProgress offStartProgress: LensCustomerSDK.AnimationProgressTime, toProgress offEndProgress: LensCustomerSDK.AnimationProgressTime) -> LensCustomerSDK.LottieSwitch
   @_Concurrency.MainActor @preconcurrency public func valueProvider<ValueProvider>(_ valueProvider: ValueProvider, for keypath: LensCustomerSDK.AnimationKeypath) -> LensCustomerSDK.LottieSwitch where ValueProvider : LensCustomerSDK.AnyValueProvider, ValueProvider : Swift.Equatable
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias Body = @_opaqueReturnTypeOf("$s15LensCustomerSDK12LottieSwitchV4bodyQrvp", 0) __
 }
 extension LensCustomerSDK.DotLottieFile {
@@ -2600,6 +3646,124 @@ extension Dispatch.DispatchQueue {
   @_Concurrency.MainActor @preconcurrency public func setPlayRange(fromProgress: LensCustomerSDK.AnimationProgressTime, toProgress: LensCustomerSDK.AnimationProgressTime, event: LensCustomerSDK.LottieControlEvent)
   @_Concurrency.MainActor @preconcurrency public func setPlayRange(fromMarker fromName: Swift.String, toMarker toName: Swift.String, event: LensCustomerSDK.LottieControlEvent)
   @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+public protocol AssistChatParticipant {
+  var displayName: Foundation.NSAttributedString { get }
+  var uniqueId: Swift.String { get }
+}
+@available(iOSApplicationExtension, unavailable)
+public protocol AssistChatProtocol {
+  var chatText: Foundation.NSAttributedString { get }
+  var chatTime: Foundation.Date { get }
+  var chatParticipant: any LensCustomerSDK.AssistChatParticipant { get }
+}
+@available(iOSApplicationExtension, unavailable)
+public struct OtherChatActivity {
+  public let activityString: Foundation.NSAttributedString
+  public let date: Foundation.Date
+  public var color: UIKit.UIColor?
+  public init(activity: Foundation.NSAttributedString, date: Foundation.Date, color: UIKit.UIColor? = nil)
+}
+@available(iOSApplicationExtension, unavailable)
+public enum AssistChatActivityType {
+  case chatSent(chat: any LensCustomerSDK.AssistChatProtocol), chatRecieved(chat: any LensCustomerSDK.AssistChatProtocol), otherActivity(otherActivity: LensCustomerSDK.OtherChatActivity)
+}
+@objc @available(iOSApplicationExtension, unavailable)
+public class AssistChatActivity : ObjectiveC.NSObject {
+  public var showNameDateTime: Swift.Bool
+  public var activityTime: Foundation.Date {
+    get
+  }
+  public var activityType: LensCustomerSDK.AssistChatActivityType
+  public init(activity: LensCustomerSDK.AssistChatActivityType)
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+public enum AssistChatResponse<AnyTpe> {
+  case success(value: AnyTpe), failure(message: Swift.String)
+}
+@available(iOSApplicationExtension, unavailable)
+public protocol AssistChatControllerDelegate : AnyObject {
+  func assistChatController(send message: Swift.String, completion: @escaping ((LensCustomerSDK.AssistChatResponse<any LensCustomerSDK.AssistChatProtocol>) -> ()))
+  func assistChatController(configureSendButton: UIKit.UIButton)
+  func assistChatController(placeHolderTextFor: UIKit.UITextView) -> Swift.String?
+  func assistChatController(needTitle for: LensCustomerSDK.AssistChatController) -> Swift.String?
+  func assistChatController(noDataView for: LensCustomerSDK.AssistChatController) -> UIKit.UIView?
+}
+@objc @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@_Concurrency.MainActor @preconcurrency open class AssistChatController : LensCustomerSDK.DrawerChildTableViewController, LensCustomerSDK.KeyboardNotificationhandler, LensCustomerSDK.OrientationHandler {
+  @_Concurrency.MainActor @preconcurrency public static var assistChatTheme: LensCustomerSDK.AssistChatTheme
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak open var tableView: UIKit.UITableView!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var sendButton: UIKit.UIButton!
+  @_Concurrency.MainActor @preconcurrency weak public var delegate: (any LensCustomerSDK.AssistChatControllerDelegate)?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency required convenience public init(delegate: (any LensCustomerSDK.AssistChatControllerDelegate)?, chatMode: Swift.Bool? = true)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func removeFromParent()
+  @_Concurrency.MainActor @preconcurrency open func setChatComponents(hidden: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency open func resetData()
+  @_Concurrency.MainActor @preconcurrency public func handleNoData()
+  @_Concurrency.MainActor @preconcurrency override open func drawerView(for drawer: LensCustomerSDK.DrawerViewController) -> UIKit.UIView
+  @_Concurrency.MainActor @preconcurrency override open func drawer(movingPosition: LensCustomerSDK.DrawerMovingPosition, drawerChangedHeight height: CoreFoundation.CGFloat, drawerMinHeight: CoreFoundation.CGFloat, drawerMaximumHeight: CoreFoundation.CGFloat, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency override open func drawer(_ drawer: LensCustomerSDK.DrawerViewController, reachedMinHeight height: CoreFoundation.CGFloat, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency override open func drawer(_ drawer: LensCustomerSDK.DrawerViewController, reachedMaximumHeight height: CoreFoundation.CGFloat, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency open func send(chat: any LensCustomerSDK.AssistChatProtocol)
+  @_Concurrency.MainActor @preconcurrency open func received(chat: any LensCustomerSDK.AssistChatProtocol)
+  @_Concurrency.MainActor @preconcurrency open func registerOther(chatActivity: LensCustomerSDK.OtherChatActivity)
+  @_Concurrency.MainActor @preconcurrency public func scrollToEnd()
+  @_Concurrency.MainActor @preconcurrency override open func drawerWidth(for drawer: LensCustomerSDK.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+public struct AssistChatTheme {
+  public var sentChatCellTheme: LensCustomerSDK.AssistChatCellTheme
+  public var recievedChatCellTheme: LensCustomerSDK.AssistChatCellTheme
+  public var textFieldTheme: LensCustomerSDK.AssistChatTextFieldTheme
+  public init(sentCellTheme: LensCustomerSDK.AssistChatCellTheme = AssistChatCellTheme.defaultSentCellTheme, recievedCellTheme: LensCustomerSDK.AssistChatCellTheme = AssistChatCellTheme.defaultRecievedCellTheme, textFieldTheme: LensCustomerSDK.AssistChatTextFieldTheme = AssistChatTextFieldTheme.defaultTextFieldTheme)
+}
+@available(iOSApplicationExtension, unavailable)
+public struct AssistChatCellTheme {
+  public var nameColor: UIKit.UIColor
+  public var dateColor: UIKit.UIColor
+  public var chatTextColor: UIKit.UIColor
+  public var chatBackgroundColor: UIKit.UIColor
+  public init(nameColor: UIKit.UIColor, dateColor: UIKit.UIColor, chatTextColor: UIKit.UIColor, chatBackgroundColor: UIKit.UIColor)
+  public static var defaultSentCellTheme: LensCustomerSDK.AssistChatCellTheme {
+    get
+  }
+  public static var defaultRecievedCellTheme: LensCustomerSDK.AssistChatCellTheme {
+    get
+  }
+}
+@available(iOSApplicationExtension, unavailable)
+public struct AssistChatTextFieldTheme {
+  public init(textFieldBorderColor: UIKit.UIColor, textColor: UIKit.UIColor, placeHolder: UIKit.UIColor, textFieldBackgroundColor: UIKit.UIColor)
+  public init()
+  public static var defaultTextFieldTheme: LensCustomerSDK.AssistChatTextFieldTheme {
+    get
+  }
+}
+@available(iOSApplicationExtension, unavailable)
+public struct AssistChatNavigationBarTheme {
+  public var navBarBackgroundColor: UIKit.UIColor?
+  public var navBarTitleColor: UIKit.UIColor?
+  public init(navigationBarBackgroundColor: UIKit.UIColor? = nil, navigationTitleColor: UIKit.UIColor? = nil)
+}
+@available(iOSApplicationExtension, unavailable)
+public struct AssistChatControl {
+  public var pause: UIKit.UIImage?
+  public var resume: UIKit.UIImage?
+  public var sendChat: UIKit.UIImage?
+  public var exitSession: UIKit.UIImage?
+  public var technician: UIKit.UIImage?
+  public var iconTintColor: UIKit.UIColor?
+  public init(pause: UIKit.UIImage? = nil, resume: UIKit.UIImage? = nil, sendChat: UIKit.UIImage? = nil, exitSession: UIKit.UIImage? = nil, technician: UIKit.UIImage? = nil, iconTintColor: UIKit.UIColor? = nil)
 }
 public enum AssistSocketErrorState : Swift.Error {
   case nointernet, writeTimeoutError, invalidSSLError, compressionError, outputStreamWriteError, protocolError, upgradeError, closeError, connectionTimeOut
@@ -2976,6 +4140,499 @@ final public class FloatValueProvider {
 extension LensCustomerSDK.FloatValueProvider : Swift.Equatable {
   public static func == (lhs: LensCustomerSDK.FloatValueProvider, rhs: LensCustomerSDK.FloatValueProvider) -> Swift.Bool
 }
+public protocol NotesViewDelegate : AnyObject {
+  func getNotes(completion: @escaping ((LensCustomerSDK.Notes?) -> Swift.Void))
+  func updateNotes(noteTitle: Swift.String, notes: Swift.String)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class NotesViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency weak public var delegate: (any LensCustomerSDK.NotesViewDelegate)?
+  @_Concurrency.MainActor @preconcurrency public static func getNotesController() -> LensCustomerSDK.NotesViewController
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public func showToast(message: Swift.String, show duration: Foundation.TimeInterval = 3, dismissOnTap: Swift.Bool = true, lottie type: (any LensCustomerSDK.LottieType)? = nil, onTap: ((LensCustomerSDK.Toast) -> Swift.Void)? = nil, completion: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public func dismissToastView()
+  @_Concurrency.MainActor @preconcurrency public func makeCircular()
+}
+public struct FloatingMenuItem : Swift.Equatable {
+  public static func == (lhs: LensCustomerSDK.FloatingMenuItem, rhs: LensCustomerSDK.FloatingMenuItem) -> Swift.Bool
+  public var id: Swift.String
+  public var icon: (any LensCustomerSDK.ATIcon)?
+  public var isSelectionNeeded: Swift.Bool
+  public var handler: ((_ menuItem: LensCustomerSDK.FloatingMenuItem, _ isSelected: Swift.Bool) -> ())?
+  public var iconSize: CoreFoundation.CGFloat?
+  public init(id: Swift.String, icon: (any LensCustomerSDK.ATIcon)?, handler: ((_ menuItem: LensCustomerSDK.FloatingMenuItem, _ isSelected: Swift.Bool) -> ())?)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class FloatingMenu : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public var collapseIcon: (any LensCustomerSDK.ATIcon)? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var revielIcon: (any LensCustomerSDK.ATIcon)? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var floatingMenuToggleButton: UIKit.UIButton?
+  @_Concurrency.MainActor @preconcurrency public var floatingMenuItems: [LensCustomerSDK.FloatingMenuItem]
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var isHidden: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor @preconcurrency public init(collapse cicon: any LensCustomerSDK.ATIcon, reviel ricon: any LensCustomerSDK.ATIcon)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class ATCopyLabel : UIKit.UILabel {
+  @_Concurrency.MainActor @preconcurrency public var copyClipBoardCompletion: ((Swift.String) -> Swift.String)?
+  @_Concurrency.MainActor @preconcurrency public var isCopyToClipBoardEnabled: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public struct FreezeData {
+  public let freezeImage: UIKit.UIImage
+  public var id: Swift.Int
+}
+@_hasMissingDesignatedInitializers public class FreezeHandler : LensCustomerSDK.FreezeProtocol {
+  public func onFreezeCancelled(id: Swift.String)
+  public func onFreezeCompleted(id: Swift.String)
+  public func onFreezeStart(id: Swift.String)
+  public func progress(id: Swift.String, sendBytes: Swift.Int, totalBytes: Swift.Int)
+  public func liveStreamingPaused(_ freezeBy: LensCustomerSDK.FreezeCurrentStatus.FreezeBy)
+  public func onUnfreezed(_ unFreezeBy: LensCustomerSDK.FreezeCurrentStatus.FreezeBy)
+  public func freezeConfiguration(status: LensCustomerSDK.RecodingStatus?)
+  @objc deinit
+}
+extension LensCustomerSDK.LensSessionController : LensCustomerSDK.NotesViewDelegate {
+  @_Concurrency.MainActor @preconcurrency public func getNotes(completion: @escaping ((LensCustomerSDK.Notes?) -> Swift.Void))
+  @_Concurrency.MainActor @preconcurrency public func updateNotes(noteTitle: Swift.String, notes: Swift.String)
+}
+public protocol SnapShotViewDelegate : AnyObject {
+  func snapShotClick(completion: @escaping (_ snapshot: any LensCustomerSDK.SnapShotObject) -> Swift.Void)
+  func downloadSnapShot(_ snapShots: [any LensCustomerSDK.SnapShotObject]?, sender: UIKit.UIButton, completion: @escaping (_ isDownloadSuccess: Swift.Bool) -> Swift.Void)
+  func freeze(snapShot: any LensCustomerSDK.SnapShotObject, completion: @escaping (_ isFreezeSuccess: Swift.Bool) -> Swift.Void)
+  func unfreezeSnapShot(completion: @escaping (_ isUnfreezeSuccess: Swift.Bool) -> Swift.Void)
+  func deleteSnapShot(_ snapshots: [any LensCustomerSDK.SnapShotObject], completion: @escaping (_ isDownloadSuccess: Swift.Bool) -> Swift.Void)
+  func newsnapShotFreeze(fileId: Swift.String, image: UIKit.UIImage)
+  func newsnapShotUnFreeze()
+  func alertForFreezeSnapshot()
+}
+@objc @_Concurrency.MainActor @preconcurrency public class SnapShotView : UIKit.UIView, LensCustomerSDK.ViewResuable {
+  @_Concurrency.MainActor @preconcurrency weak public var delegate: (any LensCustomerSDK.SnapShotViewDelegate)?
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @available(iOS 14, *)
+@_Concurrency.MainActor @preconcurrency public class ZLInviteTechnicianController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency public var technicianInviteCallBack: ((_ external: Swift.Bool, _ Email: Swift.String) -> ())?
+  @_Concurrency.MainActor @preconcurrency public init(techJoinUrl: Foundation.URL?, sessionKey: Swift.String)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @objc deinit
+}
+@available(iOS 14, *)
+extension LensCustomerSDK.ZLInviteTechnicianController : LensCustomerSDK.OrientationHandler {
+  @_Concurrency.MainActor @preconcurrency public func supportedOrientation() -> LensCustomerSDK.At_Orientation
+}
+extension LensCustomerSDK.LensSessionController : LensCustomerSDK.SnapShotViewDelegate {
+  @_Concurrency.MainActor @preconcurrency public func snapShotClick(completion: @escaping (any LensCustomerSDK.SnapShotObject) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func deleteSnapShot(_ snapshots: [any LensCustomerSDK.SnapShotObject], completion: @escaping (Swift.Bool) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func freeze(snapShot: any LensCustomerSDK.SnapShotObject, completion: @escaping (Swift.Bool) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func downloadSnapShot(_ snapShots: [any LensCustomerSDK.SnapShotObject]?, sender: UIKit.UIButton, completion: @escaping (Swift.Bool) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func unfreezeSnapShot(completion: @escaping (Swift.Bool) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func addSnapShotUI()
+  @_Concurrency.MainActor @preconcurrency public func hideSnapShotUI(flag: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func newsnapShotFreeze(fileId: Swift.String, image: UIKit.UIImage)
+  @_Concurrency.MainActor @preconcurrency public func newsnapShotUnFreeze()
+  @_Concurrency.MainActor @preconcurrency public func alertForFreezeSnapshot()
+}
+public protocol SnapShotObject {
+  var snapShotId: Swift.String { get }
+  var snapShotImage: UIKit.UIImage { get }
+}
+extension LensCustomerSDK.Chat : LensCustomerSDK.AssistChatProtocol {
+  public var chatText: Foundation.NSAttributedString {
+    get
+  }
+  public var chatTime: Foundation.Date {
+    get
+  }
+  public var chatParticipant: any LensCustomerSDK.AssistChatParticipant {
+    get
+  }
+}
+extension LensCustomerSDK.Chat : LensCustomerSDK.AssistChatParticipant {
+  public var displayName: Foundation.NSAttributedString {
+    get
+  }
+  public var uniqueId: Swift.String {
+    get
+  }
+}
+extension LensCustomerSDK.Participant : LensCustomerSDK.AssistChatParticipant {
+  public var displayName: Foundation.NSAttributedString {
+    get
+  }
+  public var uniqueId: Swift.String {
+    get
+  }
+}
+extension Foundation.URLResponse : Swift.Error {
+}
+public class APIResponseManger {
+  public init(_ delegate: any LensCustomerSDK.LensUICommonDelegates, networkingDelegate: (any LensCustomerSDK.LensSessionNetworkProtocol)?, eventProtocol: (any LensCustomerSDK.LensEventProtocol)?)
+  public func updateNotes(title: Swift.String?, note: Swift.String?, sys_client_id: Swift.String, sessionToken: Swift.String, clientToken: Swift.String)
+  public func fetchNotes(sys_client_id: Swift.String, sessionToken: Swift.String, clientToken: Swift.String, completion: @escaping ((LensCustomerSDK.Notes?) -> Swift.Void))
+  public func deleteScreenshot(fileId: [Swift.Int], sessionToken: Swift.String, clientToken: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
+  public func deleteAllScreenshot(sys_id: Swift.String, sessionToken: Swift.String, clientToken: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class WaitingRoomViewController : UIKit.UIViewController, LensCustomerSDK.ControllerReusable {
+  @_Concurrency.MainActor @preconcurrency public static var at_storyBoardId: Swift.String
+  @_Concurrency.MainActor @preconcurrency public static var at_storyBoard: UIKit.UIStoryboard
+  @_Concurrency.MainActor @preconcurrency public static func waitingVC() -> LensCustomerSDK.WaitingRoomViewController?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func didReceiveMemoryWarning()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+public struct Notes : Swift.Codable {
+  public var notes: Swift.String?
+  public var context_title: Swift.String?
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case notes
+    case file_name
+    case notes_last_edit_time
+    case notes_added_time
+    case notes_owner_name
+    case notes_edited_user_name
+    case notes_owner_email
+    case notes_edited_user_email
+    case context_identity
+    case context_title
+    case context_edited_time
+    case context_added_time
+    case department_id
+    case context_owner_name
+    case context_edited_user_name
+    case context_owner_email
+    case context_edited_user_email
+    case notes_edit_permission
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SnapShotEntity : LensCustomerSDK.SnapShotObject {
+  public let uploadID: Swift.String
+  public var snapShotId: Swift.String {
+    get
+  }
+  public var snapShotImage: UIKit.UIImage {
+    get
+  }
+}
+public struct SessionDescription {
+  public var sessionID: Swift.String
+  public var sys_id: Swift.String?
+  public var startDate: Foundation.Date?
+  public var endDate: Foundation.Date?
+  public var duration: Foundation.TimeInterval? {
+    get
+  }
+  public let sessionToken: Swift.String
+  public let clientToken: Swift.String
+  public var participantsParticipant: LensCustomerSDK.Participant?
+}
+extension Swift.String {
+  public func encodeURLString() -> Swift.String
+  public func decodeUrl() -> Swift.String?
+  public func isValidEmailID() -> Swift.Bool
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class LensChatController : LensCustomerSDK.AssistChatController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency override open func drawerView(for drawer: LensCustomerSDK.DrawerViewController) -> UIKit.UIView
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension LensCustomerSDK.LensChatController : LensCustomerSDK.AssistChatControllerDelegate {
+  @_Concurrency.MainActor @preconcurrency public func assistChatController(send message: Swift.String, completion: @escaping ((LensCustomerSDK.AssistChatResponse<any LensCustomerSDK.AssistChatProtocol>) -> ()))
+  @_Concurrency.MainActor @preconcurrency public func assistChatController(configureExitButton: UIKit.UIButton) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func assistChatController(configureSendButton: UIKit.UIButton)
+  @_Concurrency.MainActor @preconcurrency public func assistChatController(placeHolderTextFor: UIKit.UITextView) -> Swift.String?
+  @_Concurrency.MainActor @preconcurrency public func assistChatController(needTitle for: LensCustomerSDK.AssistChatController) -> Swift.String?
+  @_Concurrency.MainActor @preconcurrency public func assistChatController(noDataView for: LensCustomerSDK.AssistChatController) -> UIKit.UIView?
+}
+@_hasMissingDesignatedInitializers public class LensTechnician : LensCustomerSDK.Lens {
+  weak public var freezeProtocol: (any LensCustomerSDK.FreezeProtocol)?
+  weak public var actionProtocol: (any LensCustomerSDK.OtherActionsProtocol)?
+  weak public var otherTechnicianAction: (any LensCustomerSDK.OtherTechnicianAction)?
+  weak public var technicianCommonProtocol: (any LensCustomerSDK.TechnicianCommonProtocol)?
+  final public let currentUserZuid: Swift.String
+  public var recording_status: LensCustomerSDK.RecodingStatus? {
+    get
+  }
+  public var recording_control_mode: LensCustomerSDK.RecordingControlMode? {
+    get
+  }
+  public var technicianConnectionParam: any LensCustomerSDK.TechnicianSessionParams {
+    get
+  }
+  public init(connectionParam: any LensCustomerSDK.TechnicianSessionParams, name: Swift.String, email: Swift.String, zuid: Swift.String)
+  public static func validateSession(sessionKey key: Swift.String?, digest: Swift.String?, is_scheduled: Swift.Bool, role: LensCustomerSDK.RoleEnum, networkDelegate: (any LensCustomerSDK.LensSessionNetworkProtocol)?, completion: @escaping (LensCustomerSDK.SessionValidationResponse) -> Swift.Void)
+  public func startSession()
+  public func screenShot() -> LensCustomerSDK.FreezeData?
+  public func isInSessionRecording() -> Swift.Bool
+  public func startInSessionRecording()
+  public func stopInSessionRecording()
+  @discardableResult
+  public func freeze() -> Swift.Bool
+  public func set(freeze buffer: LensCustomerSDK.FreezeData) -> Swift.Bool
+  public func unfreeze() -> Swift.Bool
+  @objc deinit
+}
+extension LensCustomerSDK.LensTechnician {
+  @discardableResult
+  public func muteAudio() -> Swift.Bool?
+  @discardableResult
+  public func unmuteAudio() -> Swift.Bool?
+  @discardableResult
+  public func exitSession() -> Swift.Bool
+}
+extension LensCustomerSDK.LensTechnician {
+  public func getSnapShotImage(fileDigestId: Swift.String, completion: @escaping ((UIKit.UIImage?) -> Swift.Void))
+}
+extension LensCustomerSDK.AssistMenu : LensCustomerSDK.SheetSelectionData {
+  public var uniqueIdentifier: Swift.String {
+    get
+  }
+  public var title: Swift.String {
+    get
+  }
+}
+extension LensCustomerSDK.LensSessionController : LensCustomerSDK.AudioSessionProtocol {
+  @_Concurrency.MainActor @preconcurrency public func didChangeRoute(_ audioDescription: AVFAudio.AVAudioSessionRouteDescription, reason: AVFAudio.AVAudioSession.RouteChangeReason)
+}
+public protocol LensUICommonDelegates : AnyObject {
+  func set(loader enabled: Swift.Bool, text: Swift.String?)
+  func show(lottie type: LensCustomerSDK.LensLottieType, message: Swift.String)
+  func dismissLottie()
+  func showStatusBar(message: Swift.String, interval: Foundation.TimeInterval)
+  func dismissWithError(message: Swift.String)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class LensSessionController : LensCustomerSDK.LensBaseSessionController, LensCustomerSDK.ControllerReusable {
+  @_Concurrency.MainActor @preconcurrency public static var at_storyBoardId: Swift.String
+  @_Concurrency.MainActor @preconcurrency public static var at_storyBoard: UIKit.UIStoryboard
+  @_Concurrency.MainActor @preconcurrency public var networkDelegate: (any LensCustomerSDK.LensSessionNetworkProtocol)? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency weak public var activityProtocol: (any LensCustomerSDK.LensEventProtocol)?
+  @_Concurrency.MainActor @preconcurrency public var sessionTitle: Swift.String
+  @_Concurrency.MainActor @preconcurrency public var isSessionHost: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var snapShotView: LensCustomerSDK.SnapShotView?
+  @_Concurrency.MainActor @preconcurrency public var apiResponseManager: LensCustomerSDK.APIResponseManger? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var freezeManager: LensCustomerSDK.FreezeHandler? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var isARSupported: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var preferredStatusBarStyle: UIKit.UIStatusBarStyle {
+    @objc get
+  }
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency public static func getLensController(connection param: any LensCustomerSDK.TechnicianSessionParams, technician email: Swift.String, customer cutemail: Swift.String? = nil, techName: Swift.String, sys_id: Swift.String, isCxAlreadyInSession: Swift.Bool = false, isARMode: Swift.Bool, remoteConfigConferenceType: LensCustomerSDK.ConferenceType, zuid: Swift.String) -> LensCustomerSDK.LensSessionController?
+  @_Concurrency.MainActor @preconcurrency override public func deviceRotated(_ currentOrientation: UIKit.UIDeviceOrientation)
+  @_Concurrency.MainActor @preconcurrency public func alertForJoinAnotherTechSession()
+  @_Concurrency.MainActor @preconcurrency public func selectedOption(option: LensCustomerSDK.AssistMenu)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension LensCustomerSDK.LensSessionController : LensCustomerSDK.LensUICommonDelegates {
+  @_Concurrency.MainActor @preconcurrency public func showStatusBar(message: Swift.String, interval: Foundation.TimeInterval = 4)
+  @_Concurrency.MainActor @preconcurrency public func dismissWithError(message: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func show(lottie type: LensCustomerSDK.LensLottieType, message: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func set(loader enabled: Swift.Bool, text: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency public func dismissLottie()
+}
+extension LensCustomerSDK.LensSessionController {
+  @_Concurrency.MainActor @preconcurrency public func participantRejoined(clientId: Swift.String)
+}
+extension LensCustomerSDK.LensSessionController : LensCustomerSDK.TechnicianCommonProtocol {
+  @_Concurrency.MainActor @preconcurrency public func seconderyTechWaitingForCustomerUIUpdate()
+  @_Concurrency.MainActor @preconcurrency public func secondaryTechnicianApprovalRequest(email: Swift.String, clientId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func secondaryTechnicianApprovalResponse(isAccepted: Swift.Bool, email: Swift.String, clientId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func onReceiveShareCameraRequest(participant: LensCustomerSDK.Participant?)
+  @_Concurrency.MainActor @preconcurrency public func onCameraSwitch(isFront: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func onSessionRecordResponseCompletion()
+  @_Concurrency.MainActor @preconcurrency public func onShareCameraResponse(action: LensCustomerSDK.ShareCameraTechAction, participant: LensCustomerSDK.Participant?)
+  @_Concurrency.MainActor @preconcurrency public func notifyUserWith(msg: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func refreshBottomMenu()
+  @_Concurrency.MainActor @preconcurrency public func showLottieView(lottie: LensCustomerSDK.LensLottieType, show: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func showStatusBarNotifyBanner(msg: Swift.String, show: Foundation.TimeInterval)
+  @_Concurrency.MainActor @preconcurrency public func onCustomerAction(action: LensCustomerSDK.CustomerAction)
+}
+extension LensCustomerSDK.LensSessionController {
+  @_Concurrency.MainActor @preconcurrency public func endCurrentAppCallKit()
+}
+extension LensCustomerSDK.LensSessionController {
+  @_Concurrency.MainActor @preconcurrency public func getCurrentState() -> [Swift.String : Any]
+}
+extension LensCustomerSDK.LensSessionController : LensCustomerSDK.ARProtocol {
+  @_Concurrency.MainActor @preconcurrency public func onAnchorSelectionChanged(annotationId: Swift.String, state: LensCustomerSDK.AnnotationSelection, triggerId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func onAnchorRemoved(annotationId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func onAnchorPlaced(annotationId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func onArCommentsReceived(annotationNode: LensCustomerSDK.AnnotationNotify)
+  @_Concurrency.MainActor @preconcurrency public func onArNewNodeCreated()
+  @_Concurrency.MainActor @preconcurrency public func onArNodeRemoved()
+  @_Concurrency.MainActor @preconcurrency public func updateAnnotationNotesListViewControllerifPresenting()
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class VisualEffectView : UIKit.UIVisualEffectView {
+  @_Concurrency.MainActor @preconcurrency open var colorTint: UIKit.UIColor? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency open var colorTintAlpha: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency open var blurRadius: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency open var scale: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(effect: UIKit.UIVisualEffect?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class Toast : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency required convenience public init(message: Swift.String, lottie type: (any LensCustomerSDK.LottieType)? = nil)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc required convenience dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func removeFromSuperview()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class InviteViewController : UIKit.UIViewController {
+  public struct InviteVCData {
+    public let title: Swift.String
+    public let titleDescription: Swift.String?
+    public let textViewPlaceHolder: Swift.String
+    public let linkDescription: Swift.String?
+    public let copyTextTitle: Swift.String
+    public let copyURL: Foundation.URL
+    public let inviteButtonTitle: Swift.String
+    public var controllerTitle: Swift.String?
+    public init(title: Swift.String, titleDescription: Swift.String?, textViewPlaceHolder: Swift.String, linkDescription: Swift.String?, inviteButtonTitle: Swift.String, copyTextTitle: Swift.String, copyURL: Foundation.URL)
+  }
+  @_Concurrency.MainActor @preconcurrency public static var at_storyBoardId: Swift.String
+  @_Concurrency.MainActor @preconcurrency public static var at_storyBoard: UIKit.UIStoryboard
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var inviteTextView: UIKit.UITextField!
+  @_Concurrency.MainActor @preconcurrency public var inviteData: LensCustomerSDK.InviteViewController.InviteVCData?
+  @_Concurrency.MainActor @preconcurrency public var onInvite: ((Swift.String) -> ())?
+  @_Concurrency.MainActor @preconcurrency public var customerEmail: Swift.String?
+  @_Concurrency.MainActor @preconcurrency public var copyClipBoardCompletion: ((Swift.String) -> Swift.String)?
+  @_Concurrency.MainActor @preconcurrency public static func inviteVC() -> LensCustomerSDK.InviteViewController?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func didReceiveMemoryWarning()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension LensCustomerSDK.InviteViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+}
+extension LensCustomerSDK.InviteViewController : LensCustomerSDK.KeyboardNotificationhandler {
+}
+extension LensCustomerSDK.InviteViewController : LensCustomerSDK.ControllerReusable {
+}
+public protocol LensSessionNetworkProtocol : AnyObject {
+  var departmentID: Swift.String { get }
+  var baseURL: Foundation.URL { get }
+  var multiOrgEnabled: Swift.Bool { get }
+  var orgId: Swift.Int { get }
+  func setAuthorizationHeader(requestSerializer: LensCustomerSDK.VMRequestSerialization, completion: @escaping (Swift.Bool) -> ())
+}
+public protocol OtherActionsProtocol : AnyObject {
+  func onCustomer(performs action: LensCustomerSDK.CustomerAction)
+  func onSwitchCameraChanged(isFrontCam: Swift.Bool)
+}
+public protocol FreezeProtocol : AnyObject {
+  func onFreezeStart(id: Swift.String)
+  func onFreezeCompleted(id: Swift.String)
+  func onFreezeCancelled(id: Swift.String)
+  func progress(id: Swift.String, sendBytes: Swift.Int, totalBytes: Swift.Int)
+  func liveStreamingPaused(_ freezeBy: LensCustomerSDK.FreezeCurrentStatus.FreezeBy)
+  func onUnfreezed(_ unFreezeBy: LensCustomerSDK.FreezeCurrentStatus.FreezeBy)
+  func freezeConfiguration(status: LensCustomerSDK.RecodingStatus?)
+}
+public protocol OtherTechnicianAction : AnyObject {
+  func unlockFreeze(by: LensCustomerSDK.Participant?)
+  func freezeRunningStream()
+  func freezedSnapshotInitiated()
+  func snapshotDownloadProgress(totalReceived: Swift.Int, totalSize: Swift.Int)
+  func snapshotFreezeCompleted()
+  func snapshotFreezeCancel()
+  func updateNote()
+}
+public protocol TechnicianCommonProtocol : AnyObject {
+  func onCameraSwitch(isFront: Swift.Bool)
+  func onSessionRecordResponseCompletion()
+  func onReceiveShareCameraRequest(participant: LensCustomerSDK.Participant?)
+  func onShareCameraResponse(action: LensCustomerSDK.ShareCameraTechAction, participant: LensCustomerSDK.Participant?)
+  func notifyUserWith(msg: Swift.String)
+  func refreshBottomMenu()
+  func showLottieView(lottie: LensCustomerSDK.LensLottieType, show: Swift.Bool)
+  func showStatusBarNotifyBanner(msg: Swift.String, show: Foundation.TimeInterval)
+  func onCustomerAction(action: LensCustomerSDK.CustomerAction)
+  func secondaryTechnicianApprovalRequest(email: Swift.String, clientId: Swift.String)
+  func secondaryTechnicianApprovalResponse(isAccepted: Swift.Bool, email: Swift.String, clientId: Swift.String)
+  func seconderyTechWaitingForCustomerUIUpdate()
+}
 extension LensCustomerSDK.LottieAnimationView {
   @_Concurrency.MainActor @preconcurrency convenience public init(name: Swift.String, bundle: Foundation.Bundle = Bundle.main, subdirectory: Swift.String? = nil, imageProvider: (any LensCustomerSDK.AnimationImageProvider)? = nil, animationCache: (any LensCustomerSDK.AnimationCacheProvider)? = LottieAnimationCache.shared, configuration: LensCustomerSDK.LottieConfiguration = .shared)
   @_Concurrency.MainActor @preconcurrency convenience public init(filePath: Swift.String, imageProvider: (any LensCustomerSDK.AnimationImageProvider)? = nil, animationCache: (any LensCustomerSDK.AnimationCacheProvider)? = LottieAnimationCache.shared, configuration: LensCustomerSDK.LottieConfiguration = .shared)
@@ -3007,6 +4664,449 @@ public struct DotLottieConfigurationComponents : Swift.OptionSet {
   public typealias Element = LensCustomerSDK.DotLottieConfigurationComponents
   public typealias RawValue = Swift.Int
 }
+@objc @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@_Concurrency.MainActor @preconcurrency public class SheetSelectionCell : UIKit.UITableViewCell {
+  @_Concurrency.MainActor @preconcurrency public static var nib: UIKit.UINib {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public static var identifier: Swift.String {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var iconSet: LensCustomerSDK.SelectionSheetIconSet?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func awakeFromNib()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func configure(_ data: any LensCustomerSDK.SheetSelectionData, iconSet: LensCustomerSDK.SelectionSheetIconSet?)
+  @available(iOS 3.0, *)
+  @available(iOSApplicationExtension, unavailable)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol SheetSelectionData {
+  var uniqueIdentifier: Swift.String { get }
+  var title: Swift.String { get }
+  var selectedColor: UIKit.UIColor { get }
+  var unselectedColor: UIKit.UIColor { get }
+}
+extension LensCustomerSDK.SheetSelectionData {
+  public var unselectedColor: UIKit.UIColor {
+    get
+  }
+  public var selectedColor: UIKit.UIColor {
+    get
+  }
+}
+@available(iOSApplicationExtension, unavailable)
+public enum SheetActionCellType {
+  case actionIconCell, actionImageCell
+  public static func == (a: LensCustomerSDK.SheetActionCellType, b: LensCustomerSDK.SheetActionCellType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@_Concurrency.MainActor @preconcurrency public class SheetActionCell : UIKit.UITableViewCell {
+  @_Concurrency.MainActor @preconcurrency public static func nib(for type: LensCustomerSDK.SheetActionCellType) -> UIKit.UINib
+  @_Concurrency.MainActor @preconcurrency public static func identifier(for type: LensCustomerSDK.SheetActionCellType) -> Swift.String
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func awakeFromNib()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func setSelected(_ selected: Swift.Bool, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func configure(_ data: any LensCustomerSDK.SheetActionData)
+  @available(iOS 3.0, *)
+  @available(iOSApplicationExtension, unavailable)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(style: UIKit.UITableViewCell.CellStyle, reuseIdentifier: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@_Concurrency.MainActor @preconcurrency public class GenericOnBoardingDescriptiorCell : UIKit.UICollectionViewCell, LensCustomerSDK.CellResuable {
+  @_Concurrency.MainActor @preconcurrency public static var identifier: Swift.String
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var moduleLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var descriptionLabel: UIKit.UILabel!
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func awakeFromNib()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+public struct BarViewStyleConfigure {
+  public var barViewHeight: CoreFoundation.CGFloat
+  public var barViewBackgroundColor: UIKit.UIColor
+}
+@_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@_Concurrency.MainActor @preconcurrency open class ATCustomPageController<CellDataType, CellType> : LensCustomerSDK.HeaderAccessoryBarViewMakerController where CellType : LensCustomerSDK.ATBarViewCell {
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak open var barView: UIKit.UICollectionView!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak open var barViewHeightConstraint: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var middleViewContainer: UIKit.UIView!
+  @_Concurrency.MainActor @preconcurrency public var barViewStyle: LensCustomerSDK.BarViewStyleConfigure {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var middleView: UIKit.UIView?
+  @_Concurrency.MainActor @preconcurrency public var cellIdentifier: Swift.String?
+  @_Concurrency.MainActor @preconcurrency public var cellNib: UIKit.UINib?
+  @_Concurrency.MainActor @preconcurrency public var cellItems: [CellDataType]
+  @_Concurrency.MainActor @preconcurrency public var cellConfigure: ((_ item: CellDataType, _ cell: CellType, _ indexPath: Foundation.IndexPath) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public var cellSizeFor: ((_ item: CellDataType, _ indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize)?
+  @_Concurrency.MainActor @preconcurrency public var viewControllers: [UIKit.UIViewController]
+  @_Concurrency.MainActor @preconcurrency public var currentIndex: Swift.Int
+  @_Concurrency.MainActor @preconcurrency public var didChangeController: ((_ currentPageIndex: Swift.Int, _ currentPage: UIKit.UIViewController) -> ())?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func didReceiveMemoryWarning()
+  @_Concurrency.MainActor @preconcurrency public func setController(controllerIndex: Swift.Int, animated: Swift.Bool = true)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@_Concurrency.MainActor @preconcurrency public class DatePickerController : LensCustomerSDK.OverlayViewController {
+  public enum Mode : Swift.Int {
+    case time, date, dateAndTime
+    public var originMode: UIKit.UIDatePicker.Mode {
+      get
+    }
+    public init?(rawValue: Swift.Int)
+    @available(iOSApplicationExtension, unavailable)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @_Concurrency.MainActor @preconcurrency public var tintColor: UIKit.UIColor
+  @_Concurrency.MainActor @preconcurrency public var titleColor: UIKit.UIColor
+  @_Concurrency.MainActor @preconcurrency public var datePickerBacgroundColor: UIKit.UIColor
+  @_Concurrency.MainActor @preconcurrency public var barBackgroundColor: UIKit.UIColor
+  @_Concurrency.MainActor @preconcurrency public var timeZone: Foundation.TimeZone
+  @_Concurrency.MainActor @preconcurrency public var datePickerMode: LensCustomerSDK.DatePickerController.Mode
+  @_Concurrency.MainActor @preconcurrency public var minimumDate: Foundation.Date?
+  @_Concurrency.MainActor @preconcurrency public var maximumDate: Foundation.Date?
+  @_Concurrency.MainActor @preconcurrency public var completionHandler: ((_ oldDate: Foundation.Date?, _ newDate: Foundation.Date?) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public var defaultDate: Foundation.Date?
+  @_Concurrency.MainActor @preconcurrency public var minuteInterval: Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.DatePickerController {
+  @_Concurrency.MainActor @preconcurrency public func presentDateControllerAsPopOver(controller: UIKit.UIViewController?, fromView soruceView: UIKit.UIView, popoverDirection direction: UIKit.UIPopoverArrowDirection)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIKit.UIPopoverPresentationController)
+}
+@_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@_Concurrency.MainActor @preconcurrency public class ActionSheetController<SheetDataType> : LensCustomerSDK.SheetController where SheetDataType : LensCustomerSDK.SheetActionData {
+  public typealias SectionTuple = (sectionTitle: Swift.String?, rows: [LensCustomerSDK.SheetAction<SheetDataType>])
+  @_Concurrency.MainActor @preconcurrency public var sections: [LensCustomerSDK.ActionSheetController<SheetDataType>.SectionTuple]
+  @_Concurrency.MainActor @preconcurrency public var canShowSectionSeparator: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public var canDismissAutomaticaly: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func addSection(_ section: LensCustomerSDK.ActionSheetController<SheetDataType>.SectionTuple)
+  @_Concurrency.MainActor @preconcurrency public func addSections(_ sections: [LensCustomerSDK.ActionSheetController<SheetDataType>.SectionTuple])
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency public func reloadActions()
+  @_Concurrency.MainActor @preconcurrency public func reloadAction(section: Swift.Int, action: SheetDataType)
+  @_Concurrency.MainActor @preconcurrency @objc override public func searchBar(_ searchBar: UIKit.UISearchBar, textDidChange searchText: Swift.String)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func drawer(dismissed withAnimation: Swift.Bool)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+public struct SheetSelectionSection<DataType> where DataType : LensCustomerSDK.SheetSelectionData {
+  public var sectionTitle: Swift.String?
+  public var rows: [LensCustomerSDK.SheetSelection<DataType>]
+  public var isSelectAllButtonEnabled: Swift.Bool
+  public var isSelectedAll: Swift.Bool {
+    get
+  }
+  public init(title: Swift.String? = nil, _ rows: [LensCustomerSDK.SheetSelection<DataType>] = [], _ selectionButtonEnabled: Swift.Bool = true)
+}
+@objc @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@_Concurrency.MainActor @preconcurrency public class ATPageViewController : UIKit.UIPageViewController {
+  @_Concurrency.MainActor @preconcurrency public var pages: [UIKit.UIViewController]
+  @_Concurrency.MainActor @preconcurrency public var didChangePage: ((_ currentPageIndex: Swift.Int, _ currentPage: UIKit.UIViewController) -> ())?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func setViewControllers(_ viewControllers: [UIKit.UIViewController]?, direction: UIKit.UIPageViewController.NavigationDirection, animated: Swift.Bool, completion: ((Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(transitionStyle style: UIKit.UIPageViewController.TransitionStyle, navigationOrientation: UIKit.UIPageViewController.NavigationOrientation, options: [UIKit.UIPageViewController.OptionsKey : Any]? = nil)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.ATPageViewController : UIKit.UIPageViewControllerDataSource {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, viewControllerAfter viewController: UIKit.UIViewController) -> UIKit.UIViewController?
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, viewControllerBefore viewController: UIKit.UIViewController) -> UIKit.UIViewController?
+}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.ATPageViewController : UIKit.UIPageViewControllerDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, willTransitionTo pendingViewControllers: [UIKit.UIViewController])
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, didFinishAnimating finished: Swift.Bool, previousViewControllers: [UIKit.UIViewController], transitionCompleted completed: Swift.Bool)
+}
+public protocol SheetActionData {
+  var actionTitle: Swift.String { get }
+  var actionIcon: (any LensCustomerSDK.ATIcon)? { get }
+  var actionIconColor: UIKit.UIColor { get }
+  var actionCustomIcon: UIKit.UIView? { get }
+  var accessoryIcon: (any LensCustomerSDK.ATIcon)? { get }
+  var accessoryIconColor: UIKit.UIColor { get }
+  var promotionIcon: UIKit.UIImage? { get }
+}
+extension LensCustomerSDK.SheetActionData {
+  public var actionCustomIcon: UIKit.UIView? {
+    get
+  }
+  public var promotionIcon: UIKit.UIImage? {
+    get
+  }
+}
+extension LensCustomerSDK.SheetActionData {
+  public var accessoryIconColor: UIKit.UIColor {
+    get
+  }
+  public var actionIconColor: UIKit.UIColor {
+    get
+  }
+}
+public class SimpleSheetData : LensCustomerSDK.SheetActionData {
+  public var promotionIcon: UIKit.UIImage?
+  public var actionTitle: Swift.String
+  public var actionIcon: (any LensCustomerSDK.ATIcon)?
+  public var accessoryIcon: (any LensCustomerSDK.ATIcon)?
+  public init(title: Swift.String)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@_Concurrency.MainActor @preconcurrency open class SheetController : UIKit.UIViewController, LensCustomerSDK.HeaderAccessoryBarViewMaker, UIKit.UISearchBarDelegate {
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak open var leftBarContainerView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak open var rightBarContainerView: UIKit.UIView!
+  @_Concurrency.MainActor @preconcurrency open var leftBarViews: [UIKit.UIView]
+  @_Concurrency.MainActor @preconcurrency open var rightBarViews: [UIKit.UIView]
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak open var tableview: UIKit.UITableView!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak open var searchBar: UIKit.UISearchBar!
+  @_Concurrency.MainActor @preconcurrency public var isSearchBarEnabled: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var enableSearchWithConfiguration: ((UIKit.UISearchBar) -> Swift.Bool)?
+  @_Concurrency.MainActor @preconcurrency public var sheetTitle: Swift.String? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var canScrollTable: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public var isAutomaticHeightEnabled: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc convenience dynamic public init()
+  @_Concurrency.MainActor @preconcurrency convenience public init(title: Swift.String)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency public func displacementAnimate(view: UIKit.UIView, delay: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency public func presentWithDrawer(controller: UIKit.UIViewController?, barButtonView soruceView: UIKit.UIBarButtonItem, popoverDirection direction: UIKit.UIPopoverArrowDirection, contentSize size: CoreFoundation.CGSize = .zero, hideStatusBar: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency @objc public func adaptivePresentationStyle(for controller: UIKit.UIPresentationController) -> UIKit.UIModalPresentationStyle
+  @_Concurrency.MainActor @preconcurrency public func presentWithDrawer(controller: UIKit.UIViewController?, fromView soruceView: UIKit.UIView?, popoverDirection direction: UIKit.UIPopoverArrowDirection, contentSize size: CoreFoundation.CGSize = .zero, hideStatusBar: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency @objc public func searchBarCancelButtonClicked(_ searchBar: UIKit.UISearchBar)
+  @_Concurrency.MainActor @preconcurrency @objc open func searchBar(_ searchBar: UIKit.UISearchBar, textDidChange searchText: Swift.String)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.SheetController : LensCustomerSDK.DrawerControllerDelegate {
+  @_Concurrency.MainActor @preconcurrency public func drawerView(for drawer: LensCustomerSDK.DrawerViewController) -> UIKit.UIView
+  @_Concurrency.MainActor @preconcurrency public func drawerMaximumHieght(for drawer: LensCustomerSDK.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  @_Concurrency.MainActor @preconcurrency public func drawer(controller: LensCustomerSDK.DrawerViewController, movingPosition: LensCustomerSDK.DrawerMovingPosition, canChangeDrawerHeight height: CoreFoundation.CGFloat, drawerMinHeight: CoreFoundation.CGFloat, drawerMaximumHeight: CoreFoundation.CGFloat) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func drawer(movingPosition: LensCustomerSDK.DrawerMovingPosition, drawerChangedHeight height: CoreFoundation.CGFloat, drawerMinHeight: CoreFoundation.CGFloat, drawerMaximumHeight: CoreFoundation.CGFloat, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func drawer(_ drawer: LensCustomerSDK.DrawerViewController, reachedMinHeight height: CoreFoundation.CGFloat, animated: Swift.Bool)
+  @objc @_Concurrency.MainActor @preconcurrency dynamic open func drawer(dismissed withAnimation: Swift.Bool)
+}
+public class SheetSelection<SelectionData> : ObjectiveC.NSObject where SelectionData : LensCustomerSDK.SheetSelectionData {
+  public var data: SelectionData
+  public var isSelected: Swift.Bool
+  public init(_ data: SelectionData, isSelected: Swift.Bool = false)
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+public protocol HeaderAccessoryBarViewMaker {
+  var leftBarContainerView: UIKit.UIView! { get set }
+  var rightBarContainerView: UIKit.UIView! { get set }
+  var leftBarViews: [UIKit.UIView] { get set }
+  var rightBarViews: [UIKit.UIView] { get set }
+  func pinLeftBarViews()
+  func pinRightBarViews()
+}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.HeaderAccessoryBarViewMaker where Self : UIKit.UIViewController {
+  public func pinLeftBarViews()
+  public func pinRightBarViews()
+}
+@available(iOSApplicationExtension, unavailable)
+public struct ToastTheme {
+  public init(textColor: SwiftUICore.Color, bgColor: SwiftUICore.Color)
+}
+@available(iOSApplicationExtension, unavailable)
+public enum ToastPosition {
+  case top
+  case bottom
+  public static func == (a: LensCustomerSDK.ToastPosition, b: LensCustomerSDK.ToastPosition) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct SelectionSheetIconSet {
+  public var selectionIcon: any LensCustomerSDK.ATIcon {
+    get
+  }
+  public var unSelectionIcon: any LensCustomerSDK.ATIcon {
+    get
+  }
+  public init(_ selectionIcon: any LensCustomerSDK.ATIcon, _ unSelectionIcon: any LensCustomerSDK.ATIcon)
+}
+@_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@_Concurrency.MainActor @preconcurrency open class SelectionSheetController<DataType> : LensCustomerSDK.SheetController where DataType : LensCustomerSDK.SheetSelectionData {
+  public enum SelectionMode {
+    case single, multy
+    public static func == (a: LensCustomerSDK.SelectionSheetController<DataType>.SelectionMode, b: LensCustomerSDK.SelectionSheetController<DataType>.SelectionMode) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @_Concurrency.MainActor @preconcurrency public var datasource: LensCustomerSDK.AssistCollectionDataSource<LensCustomerSDK.SheetSelection<DataType>, LensCustomerSDK.SheetSelectionCell>?
+  @_Concurrency.MainActor @preconcurrency public var sections: [LensCustomerSDK.SheetSelectionSection<DataType>]
+  public typealias CompletionHandlerTuple = (section: Swift.Int, selectedItems: [DataType])
+  @_Concurrency.MainActor @preconcurrency public var selectionCompletionHandler: (([LensCustomerSDK.SelectionSheetController<DataType>.CompletionHandlerTuple]) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public var mode: LensCustomerSDK.SelectionSheetController<DataType>.SelectionMode
+  @_Concurrency.MainActor @preconcurrency public var canShowSectionSeparator: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public var noDataLottie: (any LensCustomerSDK.LottieType)?
+  @_Concurrency.MainActor @preconcurrency public var iconSet: LensCustomerSDK.SelectionSheetIconSet?
+  @_Concurrency.MainActor @preconcurrency public func addSection(_ section: LensCustomerSDK.SheetSelectionSection<DataType>)
+  @_Concurrency.MainActor @preconcurrency public func addSections(_ sections: [LensCustomerSDK.SheetSelectionSection<DataType>])
+  @_Concurrency.MainActor @preconcurrency public func insert(selection: LensCustomerSDK.SheetSelection<DataType>, in indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency public func update(selection: LensCustomerSDK.SheetSelection<DataType>, in indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency public func delete(selectionAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency public func delete(uniqueId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func insertSection(_ section: LensCustomerSDK.SheetSelectionSection<DataType>, at sectionIndex: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func reloadSelections()
+  @_Concurrency.MainActor @preconcurrency open func initSectionDataSource(_ sectionsArray: [LensCustomerSDK.SheetSelectionSection<DataType>])
+  @_Concurrency.MainActor @preconcurrency open func reloadSelectionDataSource(_ _sections: [LensCustomerSDK.SheetSelectionSection<DataType>])
+  @_Concurrency.MainActor @preconcurrency open func reloadAsssistDataSource(_ _sections: [LensCustomerSDK.SheetSelectionSection<DataType>])
+  @_Concurrency.MainActor @preconcurrency @objc override open func searchBar(_ searchBar: UIKit.UISearchBar, textDidChange searchText: Swift.String)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func dismiss(animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func drawer(dismissed withAnimation: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIKit.UIPopoverPresentationController)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@_Concurrency.MainActor @preconcurrency open class HeaderAccessoryBarViewMakerController : UIKit.UIViewController, LensCustomerSDK.HeaderAccessoryBarViewMaker {
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var leftBarContainerView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var rightBarContainerView: UIKit.UIView!
+  @_Concurrency.MainActor @preconcurrency public var leftBarViews: [UIKit.UIView]
+  @_Concurrency.MainActor @preconcurrency public var rightBarViews: [UIKit.UIView]
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@_Concurrency.MainActor @preconcurrency public class SheetSectionFooter : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public static var nibView: LensCustomerSDK.SheetSectionFooter? {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+public enum SheetActionStyle {
+  case `default`
+  case cancel
+  case destructive
+  public static func == (a: LensCustomerSDK.SheetActionStyle, b: LensCustomerSDK.SheetActionStyle) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@available(iOSApplicationExtension, unavailable)
+public struct SheetAction<SheetDataType> {
+  public var sheetData: SheetDataType
+  public typealias SheetCompletion = ((LensCustomerSDK.SheetAction<SheetDataType>) -> Swift.Void)
+  public var handler: LensCustomerSDK.SheetAction<SheetDataType>.SheetCompletion?
+  public var style: LensCustomerSDK.SheetActionStyle
+  public init(_ data: SheetDataType, handler: LensCustomerSDK.SheetAction<SheetDataType>.SheetCompletion? = nil, style: LensCustomerSDK.SheetActionStyle = SheetActionStyle.default)
+}
+@_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@_Concurrency.MainActor @preconcurrency public class GenericLottieOnBoardDesciptionController<CellType> : LensCustomerSDK.OrientationHelperController, UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegateFlowLayout, UIKit.UICollectionViewDelegate where CellType : UIKit.UICollectionViewCell {
+  public class CellDescription {
+    public init(nib: UIKit.UINib, identifier: Swift.String, cofiguration: ((CellType, Foundation.IndexPath) -> Swift.Void)?)
+    @objc deinit
+  }
+  @_Concurrency.MainActor @preconcurrency public var numberOfScenes: Swift.Int
+  @_Concurrency.MainActor @preconcurrency public var cellDescription: LensCustomerSDK.GenericLottieOnBoardDesciptionController<CellType>.CellDescription?
+  @_Concurrency.MainActor @preconcurrency public var animationSpeed: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency public var lottieAnimationView: LensCustomerSDK.LottieAnimationView?
+  @_Concurrency.MainActor @preconcurrency public var enablePageController: ((UIKit.UIPageControl) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency convenience public init(lottie: LensCustomerSDK.LottieAnimationView, numberOfScenes: Swift.Int, cellDescription: LensCustomerSDK.GenericLottieOnBoardDesciptionController<CellType>.CellDescription)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency override public func deviceRotated(_ currentOrientation: UIKit.UIDeviceOrientation)
+  @_Concurrency.MainActor @preconcurrency @objc public func numberOfSections(in collectionView: UIKit.UICollectionView) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @_Concurrency.MainActor @preconcurrency @objc public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor @preconcurrency @objc public func scrollViewWillBeginDragging(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor @preconcurrency @objc public func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor @preconcurrency @objc public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor @preconcurrency public func reloadData()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@_Concurrency.MainActor @preconcurrency public class SheetSectionHeader : UIKit.UITableViewHeaderFooterView {
+  @_Concurrency.MainActor @preconcurrency public static var nibView: LensCustomerSDK.SheetSectionHeader? {
+    get
+  }
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var titleLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var containerView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var LeftAccessoryContainerView: UIKit.UIView!
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func awakeFromNib()
+  @_Concurrency.MainActor @preconcurrency public func setTitle(_ text: Swift.String)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(reuseIdentifier: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+public class QLPreviewHandler {
+  public var previewObjects: [any QuickLook.QLPreviewItem] {
+    get
+    set
+  }
+  public init(previewData: [any QuickLook.QLPreviewItem])
+  public func appendPreview(_ data: [any QuickLook.QLPreviewItem], fromIndex: Swift.Int? = nil)
+  public func showQL(from vc: UIKit.UIViewController, index: Swift.Int = 0)
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.QLPreviewHandler : QuickLook.QLPreviewControllerDataSource {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func numberOfPreviewItems(in controller: QuickLook.QLPreviewController) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func previewController(_ controller: QuickLook.QLPreviewController, previewItemAt index: Swift.Int) -> any QuickLook.QLPreviewItem
+}
+@objc @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@_Concurrency.MainActor @preconcurrency open class ATBarViewCell : UIKit.UICollectionViewCell {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var isSelected: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor @preconcurrency open func cellSelected(_ flag: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
 postfix operator |-|
 postfix operator |=|
 infix operator |-| : DefaultPrecedence
@@ -3017,6 +5117,69 @@ extension UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency public static func |-| (lhs: UIKit.UIView, padding: CoreFoundation.CGFloat)
   @_Concurrency.MainActor @preconcurrency postfix public static func |=| (argument: UIKit.UIView)
   @_Concurrency.MainActor @preconcurrency public static func |=| (lhs: UIKit.UIView, rhs: UIKit.UIView)
+}
+@objc @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@_Concurrency.MainActor @preconcurrency public class AssistBlurAlertController : LensCustomerSDK.OverlayViewController, LensCustomerSDK.KeyboardNotificationhandler {
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var textField: UIKit.UITextField!
+  @_Concurrency.MainActor @preconcurrency public var actions: [LensCustomerSDK.AssistAlertAction]
+  @_Concurrency.MainActor @preconcurrency public var enableTextFieldWithConfiguration: ((UIKit.UITextField) -> Swift.Bool)?
+  @_Concurrency.MainActor @preconcurrency public var enablesliderWithConfiguration: ((UIKit.UISlider) -> Swift.Bool)?
+  @_Concurrency.MainActor @preconcurrency public var configureButtonUI: ((UIKit.UIButton) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public var textFieldValidationHandler: ((_ controller: LensCustomerSDK.AssistBlurAlertController, _ text: Swift.String?, _ action: LensCustomerSDK.AssistAlertAction) -> (Swift.Bool))?
+  @_Concurrency.MainActor @preconcurrency public var isTextFieldEnabled: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc convenience dynamic public init()
+  @_Concurrency.MainActor @preconcurrency convenience public init(title: Swift.String?, description: Swift.String? = nil)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency public func showError(message: Swift.String, resetTime: Foundation.TimeInterval = 1)
+  @_Concurrency.MainActor @preconcurrency public func addAction(_ action: LensCustomerSDK.AssistAlertAction)
+  @_Concurrency.MainActor @preconcurrency public func addActions(_ actions: [LensCustomerSDK.AssistAlertAction])
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func didReceiveMemoryWarning()
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency override public func supportedOrientation() -> LensCustomerSDK.At_Orientation
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+}
+@available(iOSApplicationExtension, unavailable)
+extension UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public func shake()
+}
+@available(iOSApplicationExtension, unavailable)
+public protocol AlertStyleConfiguration {
+  var backgroundColor: UIKit.UIColor { get }
+  var titleColor: UIKit.UIColor { get }
+  var borderColor: UIKit.UIColor? { get }
+  var borderWidth: CoreFoundation.CGFloat { get }
+}
+@available(iOSApplicationExtension, unavailable)
+public enum AlertStyle : LensCustomerSDK.AlertStyleConfiguration {
+  case `default`, destructive, outlined
+  public var backgroundColor: UIKit.UIColor {
+    get
+  }
+  public var titleColor: UIKit.UIColor {
+    get
+  }
+  public var borderColor: UIKit.UIColor? {
+    get
+  }
+  public var borderWidth: CoreFoundation.CGFloat {
+    get
+  }
+  public static func == (a: LensCustomerSDK.AlertStyle, b: LensCustomerSDK.AlertStyle) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@available(iOSApplicationExtension, unavailable)
+public struct AssistAlertAction {
+  public typealias AssistCompletionHandler = ((LensCustomerSDK.AssistAlertAction, LensCustomerSDK.AssistBlurAlertController) -> ())
+  public var title: Swift.String?
+  public var completionHandler: LensCustomerSDK.AssistAlertAction.AssistCompletionHandler?
+  public var styleConfiguration: any LensCustomerSDK.AlertStyleConfiguration
+  public init(title titleText: Swift.String?, style: any LensCustomerSDK.AlertStyleConfiguration = AlertStyle.default, handler: LensCustomerSDK.AssistAlertAction.AssistCompletionHandler?)
 }
 @objc final public class CompatibleAnimationKeypath : ObjectiveC.NSObject {
   @objc public init(keypath: Swift.String)
@@ -3265,6 +5428,17 @@ extension Swift.Optional : LensCustomerSDK.Interpolatable, LensCustomerSDK.AnyIn
   public func interpolate(to: Wrapped?, amount: CoreFoundation.CGFloat) -> Wrapped?
 }
 #endif
+@available(iOSApplicationExtension, unavailable)
+public protocol KeyboardNotificationhandler {
+  func addKeyboardChange(observer: Any?, selector: ObjectiveC.Selector)
+  func removeKeyboardChange(observer: Any?)
+}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.KeyboardNotificationhandler {
+  public func getKeyboardDetails(for notification: Foundation.Notification) -> (frame: CoreFoundation.CGRect?, duration: Foundation.TimeInterval, option: UIKit.UIView.AnimationOptions)
+  public func addKeyboardChange(observer: Any?, selector: ObjectiveC.Selector)
+  public func removeKeyboardChange(observer: Any?)
+}
 public typealias LottieControlType = UIKit.UIControl
 public typealias LottieControlState = UIKit.UIControl.State
 public typealias LottieControlEvent = UIKit.UIControl.Event
@@ -3620,6 +5794,9 @@ public enum QRRetryMode {
   public var edition: LensCustomerSDK.Edition? {
     get
   }
+  public var supportedfeatures: [LensCustomerSDK.Features]? {
+    get
+  }
   public var connectionParam: any LensCustomerSDK.CommonConnectionParams {
     get
   }
@@ -3627,6 +5804,7 @@ public enum QRRetryMode {
     get
     set
   }
+  public var isSnapshotFreezeEnabled: Swift.Bool
   public var isARSupported: Swift.Bool {
     get
     set
@@ -3951,6 +6129,9 @@ extension LensCustomerSDK.AR_TrackingState : Swift.Hashable {}
 extension LensCustomerSDK.SupportedTools : Swift.Equatable {}
 extension LensCustomerSDK.SupportedTools : Swift.Hashable {}
 extension LensCustomerSDK.SupportedTools : Swift.RawRepresentable {}
+extension LensCustomerSDK.MexType : Swift.Equatable {}
+extension LensCustomerSDK.MexType : Swift.Hashable {}
+extension LensCustomerSDK.MexType : Swift.RawRepresentable {}
 extension LensCustomerSDK.LensSessionContent.Session : Swift.Equatable {}
 extension LensCustomerSDK.LensSessionContent.Session : Swift.Hashable {}
 extension LensCustomerSDK.LensSessionContent.Session : Swift.RawRepresentable {}
@@ -3990,8 +6171,6 @@ extension LensCustomerSDK.LensSessionContent.ShareCamera : Swift.RawRepresentabl
 extension LensCustomerSDK.LensSessionContent.Flash : Swift.Equatable {}
 extension LensCustomerSDK.LensSessionContent.Flash : Swift.Hashable {}
 extension LensCustomerSDK.LensSessionContent.Flash : Swift.RawRepresentable {}
-extension LensCustomerSDK.FreezeCurrentStatus.FreezeBy : Swift.Equatable {}
-extension LensCustomerSDK.FreezeCurrentStatus.FreezeBy : Swift.Hashable {}
 extension LensCustomerSDK.SDKLensLottieType : Swift.Equatable {}
 extension LensCustomerSDK.SDKLensLottieType : Swift.Hashable {}
 extension LensCustomerSDK.ImageScrollView.ContentMode : Swift.Equatable {}
@@ -4009,6 +6188,7 @@ extension LensCustomerSDK.DrawingInput.FreeStyleState : Swift.RawRepresentable {
 extension LensCustomerSDK.LensFlashError : Swift.Equatable {}
 extension LensCustomerSDK.LensFlashError : Swift.Hashable {}
 extension LensCustomerSDK.LensFlashError : Swift.RawRepresentable {}
+extension LensCustomerSDK.Node : Swift.Sendable {}
 extension LensCustomerSDK.ARInputViewOrientation : Swift.Equatable {}
 extension LensCustomerSDK.ARInputViewOrientation : Swift.Hashable {}
 extension LensCustomerSDK.ARInputViewOrientation : Swift.RawRepresentable {}
@@ -4029,6 +6209,15 @@ extension LensCustomerSDK.MatteType : Swift.RawRepresentable {}
 extension LensCustomerSDK.BlendMode : Swift.Equatable {}
 extension LensCustomerSDK.BlendMode : Swift.Hashable {}
 extension LensCustomerSDK.BlendMode : Swift.RawRepresentable {}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.DrawerMovingPosition : Swift.Equatable {}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.DrawerMovingPosition : Swift.Hashable {}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.DrawerMovingPosition : Swift.RawRepresentable {}
+extension LensCustomerSDK.positionType : Swift.Equatable {}
+extension LensCustomerSDK.positionType : Swift.Hashable {}
+extension LensCustomerSDK.positionType : Swift.RawRepresentable {}
 extension Foundation.Date.Weekday : Swift.Equatable {}
 extension Foundation.Date.Weekday : Swift.Hashable {}
 extension Foundation.Date.Weekday : Swift.RawRepresentable {}
@@ -4047,6 +6236,29 @@ extension LensCustomerSDK.ErrorType : Swift.Hashable {}
 extension LensCustomerSDK.WebSocket.OpCode : Swift.Equatable {}
 extension LensCustomerSDK.WebSocket.OpCode : Swift.Hashable {}
 extension LensCustomerSDK.WebSocket.OpCode : Swift.RawRepresentable {}
+extension LensCustomerSDK.FreezeCurrentStatus.FreezeBy : Swift.Equatable {}
+extension LensCustomerSDK.FreezeCurrentStatus.FreezeBy : Swift.Hashable {}
+extension LensCustomerSDK.CanvasBoardSettings : Swift.Equatable {}
+extension LensCustomerSDK.CanvasBoardSettings : Swift.Hashable {}
+extension LensCustomerSDK.CanvasBoardSettings : Swift.RawRepresentable {}
+extension LensCustomerSDK.LensAnnotationType : Swift.Equatable {}
+extension LensCustomerSDK.LensAnnotationType : Swift.Hashable {}
+extension LensCustomerSDK.LensAnnotationType : Swift.RawRepresentable {}
+extension LensCustomerSDK.AnnotateIcon : Swift.Equatable {}
+extension LensCustomerSDK.AnnotateIcon : Swift.Hashable {}
+extension LensCustomerSDK.SessionEvents.FileAction : Swift.Equatable {}
+extension LensCustomerSDK.SessionEvents.FileAction : Swift.Hashable {}
+extension LensCustomerSDK.SessionEvents.FileAction : Swift.RawRepresentable {}
+extension LensCustomerSDK.ExternalApp : Swift.Equatable {}
+extension LensCustomerSDK.ExternalApp : Swift.Hashable {}
+extension LensCustomerSDK.ExternalApp : Swift.RawRepresentable {}
+extension LensCustomerSDK.ExternalApp.Permission : Swift.Equatable {}
+extension LensCustomerSDK.ExternalApp.Permission : Swift.Hashable {}
+extension LensCustomerSDK.ExternalApp.Permission : Swift.RawRepresentable {}
+extension LensCustomerSDK.LensLottieType : Swift.Equatable {}
+extension LensCustomerSDK.LensLottieType : Swift.Hashable {}
+extension LensCustomerSDK.AssistAlertActionStyle : Swift.Equatable {}
+extension LensCustomerSDK.AssistAlertActionStyle : Swift.Hashable {}
 extension LensCustomerSDK.CompatibleRenderingEngineOption : Swift.Equatable {}
 extension LensCustomerSDK.CompatibleRenderingEngineOption : Swift.Hashable {}
 extension LensCustomerSDK.CompatibleRenderingEngineOption : Swift.RawRepresentable {}
@@ -4056,8 +6268,24 @@ extension LensCustomerSDK.CompatibleBackgroundBehavior : Swift.RawRepresentable 
 extension LensCustomerSDK.LottieView : SwiftUICore.View {}
 extension LensCustomerSDK.LottieView : Swift.Sendable {}
 extension LensCustomerSDK.SizeValueProvider : LensCustomerSDK.AnyValueProvider {}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.AssistCollectionDataSource : Swift.Sendable {}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.At_Orientation : Swift.Equatable {}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.At_Orientation : Swift.Hashable {}
 extension LensCustomerSDK.LottieBackgroundBehavior : Swift.Equatable {}
 extension LensCustomerSDK.LottieBackgroundBehavior : Swift.Hashable {}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.OverlayViewType : Swift.Equatable {}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.OverlayViewType : Swift.Hashable {}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.OverlayViewStyle : Swift.Equatable {}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.OverlayViewStyle : Swift.Hashable {}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.OverlayViewStyle : Swift.RawRepresentable {}
 extension LensCustomerSDK.LottieButton : SwiftUICore.View {}
 extension LensCustomerSDK.LottieButton : Swift.Sendable {}
 extension UIKit.UIDevice.ScreenType : Swift.Equatable {}
@@ -4077,14 +6305,40 @@ extension LensCustomerSDK.ContentType : Swift.Hashable {}
 extension LensCustomerSDK.ContentType : Swift.RawRepresentable {}
 extension LensCustomerSDK.PointValueProvider : LensCustomerSDK.AnyValueProvider {}
 extension LensCustomerSDK.FloatValueProvider : LensCustomerSDK.AnyValueProvider {}
+extension LensCustomerSDK.Notes.CodingKeys : Swift.Equatable {}
+extension LensCustomerSDK.Notes.CodingKeys : Swift.Hashable {}
+extension LensCustomerSDK.Notes.CodingKeys : Swift.RawRepresentable {}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.SheetActionCellType : Swift.Equatable {}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.SheetActionCellType : Swift.Hashable {}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.DatePickerController.Mode : Swift.Equatable {}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.DatePickerController.Mode : Swift.Hashable {}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.DatePickerController.Mode : Swift.RawRepresentable {}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.ToastPosition : Swift.Equatable {}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.ToastPosition : Swift.Hashable {}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.SelectionSheetController.SelectionMode : Swift.Equatable {}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.SelectionSheetController.SelectionMode : Swift.Hashable {}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.SheetActionStyle : Swift.Equatable {}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.SheetActionStyle : Swift.Hashable {}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.AlertStyle : Swift.Equatable {}
+@available(iOSApplicationExtension, unavailable)
+extension LensCustomerSDK.AlertStyle : Swift.Hashable {}
 extension LensCustomerSDK.AnimatedSwitch.CancelBehavior : Swift.Equatable {}
 extension LensCustomerSDK.AnimatedSwitch.CancelBehavior : Swift.Hashable {}
 extension UIKit.UIScrollView.ATViewSide : Swift.Equatable {}
 extension UIKit.UIScrollView.ATViewSide : Swift.Hashable {}
 extension LensCustomerSDK.ColorValueProvider : LensCustomerSDK.AnyValueProvider {}
-extension LensCustomerSDK.LensAnnotationType : Swift.Equatable {}
-extension LensCustomerSDK.LensAnnotationType : Swift.Hashable {}
-extension LensCustomerSDK.LensAnnotationType : Swift.RawRepresentable {}
 extension LensCustomerSDK.FreeStyleState : Swift.Equatable {}
 extension LensCustomerSDK.FreeStyleState : Swift.Hashable {}
 extension LensCustomerSDK.ARFrameMode : Swift.Equatable {}
@@ -4116,9 +6370,6 @@ extension LensCustomerSDK.Reachability.NetworkStatus : Swift.Equatable {}
 extension LensCustomerSDK.Reachability.NetworkStatus : Swift.Hashable {}
 extension LensCustomerSDK.Reachability.Connection : Swift.Equatable {}
 extension LensCustomerSDK.Reachability.Connection : Swift.Hashable {}
-extension LensCustomerSDK.CanvasBoardSettings : Swift.Equatable {}
-extension LensCustomerSDK.CanvasBoardSettings : Swift.Hashable {}
-extension LensCustomerSDK.CanvasBoardSettings : Swift.RawRepresentable {}
 extension LensCustomerSDK.FlashActionType : Swift.Equatable {}
 extension LensCustomerSDK.FlashActionType : Swift.Hashable {}
 extension LensCustomerSDK.FlashActionType : Swift.RawRepresentable {}
