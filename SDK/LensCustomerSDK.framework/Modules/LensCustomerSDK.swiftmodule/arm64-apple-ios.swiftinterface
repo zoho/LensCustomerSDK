@@ -4371,10 +4371,28 @@ public struct SessionDescription {
   public var participantsParticipant: LensCustomerSDK.Participant?
 }
 public struct NewSession : Swift.Codable {
+  public let key: Swift.String?
+  public let url: Swift.String?
+  public let sysId: Swift.Int?
+  public let authkey: Swift.String?
+  public var chatlet_enabled: Swift.Bool?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct LensAPIError {
+  public var code: Swift.String
+  public var error: (any Swift.Error)?
+  public static var unKnown: LensCustomerSDK.LensAPIError
+  public static var offline: LensCustomerSDK.LensAPIError
+  public static var timeOutError: LensCustomerSDK.LensAPIError
+  public static var device_verification_dismissed: LensCustomerSDK.LensAPIError
+  public static var subscriptionActivationProblem: LensCustomerSDK.LensAPIError
+  public var isOffline: Swift.Bool {
+    get
+  }
+}
+extension LensCustomerSDK.LensAPIError {
+  public static func get(error: (any Swift.Error)?) -> LensCustomerSDK.LensAPIError
 }
 extension LensCustomerSDK.LensAPIError : Swift.Equatable {
   public static func == (lhs: LensCustomerSDK.LensAPIError, rhs: LensCustomerSDK.LensAPIError) -> Swift.Bool
