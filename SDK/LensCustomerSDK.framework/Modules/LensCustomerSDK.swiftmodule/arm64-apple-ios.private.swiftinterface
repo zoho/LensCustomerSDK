@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
-// swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name LensCustomerSDK
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name LensCustomerSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
 import ARKit
 import AVFoundation
 import AVKit
@@ -68,7 +68,9 @@ public enum Edition : Swift.String {
   public var features: [LensCustomerSDK.Features] {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -76,7 +78,9 @@ public enum Edition : Swift.String {
 }
 public enum Features : Swift.String {
   case INSTANT_CHAT, ANNOTATION_CUSTOMER, USER_MANAGEMENT, ZOOM, ACTION_LOG_VIEWER, SESSION_NOTES, CAPTURE_SCREEN_SHOT, SMS_INVITATION, ANNOTATION_TECHNICIAN, FREEZE_CAMERA_STREAM, DEPARTMENT
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -99,7 +103,9 @@ public enum AssisLensStates {
 }
 public enum SessionValidation : Swift.String {
   case valid_session, invalid_session, invalid_client, session_expired, duplicate_client
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -107,7 +113,9 @@ public enum SessionValidation : Swift.String {
 }
 public enum ConnectionProcessType : Swift.String {
   case REINIT, INIT, RESTART
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -115,7 +123,9 @@ public enum ConnectionProcessType : Swift.String {
 }
 public enum TechnicianAction : Swift.String {
   case snapshot_taken, video_pause, video_play, audio_muted, audio_unmuted
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -123,7 +133,9 @@ public enum TechnicianAction : Swift.String {
 }
 public enum RecodingStatus : Swift.String {
   case ENABLED, STORAGE_FULL, NOT_CONFIGURED, NOT_AVAILABLE
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -131,7 +143,9 @@ public enum RecodingStatus : Swift.String {
 }
 public enum RecordingControlMode : Swift.String {
   case FULL_SESSION_REC, IN_SESSION_REC
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -144,7 +158,9 @@ public enum CustomerAction : Swift.String {
   case unmuteVideo
   case appResignActive
   case appBecomeActive
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -152,7 +168,9 @@ public enum CustomerAction : Swift.String {
 }
 public enum ConferenceType : Swift.String {
   case smart_conference, peer_to_peer
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -172,7 +190,9 @@ public enum ShareCameraActionType : Swift.String {
   case videoOff
   case cameraStreamChange
   case cameraStreamRemoved
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -180,7 +200,9 @@ public enum ShareCameraActionType : Swift.String {
 }
 public enum ShareCameraTechAction : Swift.String {
   case cameraStreamChange, cameraStreamRemoved, RequestApproved, RequestRejected, RequestWaiting
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -188,7 +210,9 @@ public enum ShareCameraTechAction : Swift.String {
 }
 public enum SnapShotAction : Swift.String, Swift.Codable {
   case freeze, freeze_request, unfreeze, unfreeze_request
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -198,7 +222,9 @@ public enum ScanType : Swift.String {
   case OCR
   case QR
   case BARCODE
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -209,7 +235,9 @@ public enum RoleEnum : Swift.String {
   case PrimaryTechnician
   case SecondaryTechnician
   case ExternalTechnician
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -239,7 +267,9 @@ public enum MonitorActionEnum : Swift.String {
   case OPEN, UPDATE, SELECT, DESELECT, DELETE, TURN_ON, TURN_OFF, ARROW, PENCIL, RECTANGLE, ELLIPSE, MEASUREMENT, POINTER_3D, TYPE_ERROR
   public static func convertLensAnnotationType(typeString: Swift.String) -> LensCustomerSDK.MonitorActionEnum
   public static func convertLensAnnotationType(type: LensCustomerSDK.LensAnnotationType) -> LensCustomerSDK.MonitorActionEnum
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -253,7 +283,9 @@ public enum MonitorFeatureEnum {
 }
 public enum AnnotationObjectType : Swift.String {
   case pencil, ellipse, rectangle, arrow, pointer
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -261,7 +293,9 @@ public enum AnnotationObjectType : Swift.String {
 }
 public enum ClearAction : Swift.String {
   case clear_ar, clearall_ar, clearall_2d, clearall, add_ar
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -269,7 +303,9 @@ public enum ClearAction : Swift.String {
 }
 public enum AnnotationSelection : Swift.String {
   case ar_selected, ar_deselected
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -285,7 +321,9 @@ public enum AR_TrackingState {
 }
 public enum SupportedTools : Swift.String {
   case ARROW, PENCIL, RECTANGLE, ELLIPSE, AR_MEASURE, AR_NOTES, POINTER, FLASH, SELECT
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -295,7 +333,9 @@ public enum SupportedTools : Swift.String {
   @_Concurrency.MainActor @preconcurrency public var new_chat_notification: LensCustomerSDK.LensBind<Swift.Bool>
   @_Concurrency.MainActor @preconcurrency public var chat_open_request: LensCustomerSDK.LensBind<Swift.Bool>
   @_Concurrency.MainActor @preconcurrency public init(connection_param: any LensCustomerSDK.CommonConnectionParams)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
@@ -308,9 +348,15 @@ extension LensCustomerSDK.ChatletViewController {
   @_Concurrency.MainActor @preconcurrency public func send_chat(_ chat_text: Swift.String)
 }
 extension LensCustomerSDK.ChatletViewController {
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, didCommit navigation: WebKit.WKNavigation!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, didStartProvisionalNavigation navigation: WebKit.WKNavigation!)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  #endif
   @available(iOS 13.0, *)
   @_Concurrency.MainActor @preconcurrency public func webView(_ webView: WebKit.WKWebView, navigationAction: WebKit.WKNavigationAction, preferences: WebKit.WKWebpagePreferences, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy, WebKit.WKWebpagePreferences) -> Swift.Void)
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationResponse: WebKit.WKNavigationResponse, decisionHandler: @escaping (WebKit.WKNavigationResponsePolicy) -> Swift.Void)
@@ -319,22 +365,30 @@ extension LensCustomerSDK.ChatletViewController : WebKit.WKScriptMessageHandler 
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
 }
 extension LensCustomerSDK.ChatletViewController {
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, createWebViewWith configuration: WebKit.WKWebViewConfiguration, for navigationAction: WebKit.WKNavigationAction, windowFeatures: WebKit.WKWindowFeatures) -> WebKit.WKWebView?
+  #endif
   @available(iOS 14.5, *)
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, navigationAction: WebKit.WKNavigationAction, didBecome download: WebKit.WKDownload)
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS 14.5, *)
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func download(_ download: WebKit.WKDownload, decideDestinationUsing response: Foundation.URLResponse, suggestedFilename: Swift.String, completionHandler: @escaping (Foundation.URL?) -> Swift.Void)
+  #endif
   @available(iOS 14.5, *)
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func downloadDidFinish(_ download: WebKit.WKDownload)
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS 14.5, *)
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func download(_ download: WebKit.WKDownload, didFailWithError error: any Swift.Error, resumeData: Foundation.Data?)
+  #endif
 }
 @objc @_hasMissingDesignatedInitializers public class Chat : LensCustomerSDK.BaseParser {
   public var clientID: Foundation.NSNumber?
   final public let message: Swift.String?
   public var participant: LensCustomerSDK.Participant?
   final public let date: Foundation.Date
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(with chatMsg: Swift.String?)
+  #endif
   @objc deinit
 }
 public struct LensSessionContent {
@@ -382,13 +436,17 @@ public struct LensSessionContent {
       public var localized: Swift.String {
         get
       }
+      #if compiler(>=5.3) && $NonescapableTypes
       public init?(rawValue: Swift.String)
+      #endif
       public typealias RawValue = Swift.String
       public var rawValue: Swift.String {
         get
       }
     }
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -407,7 +465,9 @@ public struct LensSessionContent {
     public var localized: Swift.String {
       get
     }
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -430,13 +490,17 @@ public struct LensSessionContent {
         get
       }
       public static func invalidEmail() -> Swift.String
+      #if compiler(>=5.3) && $NonescapableTypes
       public init?(rawValue: Swift.String)
+      #endif
       public typealias RawValue = Swift.String
       public var rawValue: Swift.String {
         get
       }
     }
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -447,7 +511,9 @@ public struct LensSessionContent {
     public var localized: Swift.String {
       get
     }
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -460,7 +526,9 @@ public struct LensSessionContent {
     public var localized: Swift.String {
       get
     }
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -493,7 +561,9 @@ public struct LensSessionContent {
     public var localized: Swift.String {
       get
     }
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -508,7 +578,9 @@ public struct LensSessionContent {
     public var localized: Swift.String {
       get
     }
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -538,7 +610,9 @@ public struct LensSessionContent {
     public var localized: Swift.String {
       get
     }
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -554,7 +628,9 @@ public struct LensSessionContent {
     public var localized: Swift.String {
       get
     }
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -572,7 +648,9 @@ public struct LensSessionContent {
     public var localized: Swift.String {
       get
     }
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -589,7 +667,9 @@ public struct LensSessionContent {
     }
     public static func flash_light_on(by_participant: Swift.String) -> Swift.String
     public static func flash_light_off(by_participant: Swift.String) -> Swift.String
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -597,31 +677,43 @@ public struct LensSessionContent {
   }
 }
 extension Foundation.Data {
+  #if compiler(>=5.3) && $NonescapableTypes
   public var utf8String: Swift.String? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var asciiString: Swift.String? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var isoLatin1: Swift.String? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var jsonData: LensCustomerSDK.JSON? {
     get
   }
+  #endif
   public func getInt64(startIndex: Swift.Int) -> Swift.Int64
   public func getInt32(startIndex: Swift.Int) -> Swift.Int32
   public func getInt16(startIndex: Swift.Int) -> Swift.Int16
   public func getInt8(startIndex: Swift.Int) -> Swift.Int8
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getString(startIndex: Swift.Int, length: Swift.Int) -> Swift.String?
+  #endif
   public func get<T>(startIndex: Swift.Int, _: T.Type) -> T
   public mutating func appendValue<T>(_ value: T)
   public mutating func appendValue(_ value: Swift.String)
 }
 extension Swift.Dictionary {
+  #if compiler(>=5.3) && $NonescapableTypes
   public var jsonData: Foundation.Data? {
     get
   }
+  #endif
 }
 extension Swift.String {
   public static let EMPTY: Swift.String
@@ -658,12 +750,18 @@ extension Swift.String {
   public static let BOOL_TRUE: Swift.String
   public static let BOOL_FALSE: Swift.String
   public static let ZST_ERROR_PLACEHOLDER: Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
   public func jsonStringParse() -> Any?
+  #endif
   public func heightWithConstrainedWidth(width: CoreFoundation.CGFloat, font: UIKit.UIFont) -> CoreFoundation.CGFloat
 }
 public protocol LensSessionProtocolDelegate {
+  #if compiler(>=5.3) && $NonescapableTypes
   func flash_change(is_supported: Swift.Bool?, current_flash_status: Swift.Bool)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func flash_change_triggered(by_participant_name: Swift.String?, isOn: Swift.Bool)
+  #endif
   func flash_change_failed(error_message: Swift.String, isOn: Swift.Bool)
   func chatlet_feature_status(is_enabled: Swift.Bool)
 }
@@ -671,12 +769,20 @@ public typealias JSON = [Swift.String : Any]
 public typealias JSONKey = Swift.String
 public struct JsonParser {
   public var json: LensCustomerSDK.JSON
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(json: LensCustomerSDK.JSON?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public subscript<DataType>(key: LensCustomerSDK.JSONKey) -> DataType? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func jsonParser(forKey key: LensCustomerSDK.JSONKey) -> LensCustomerSDK.JsonParser?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func jsonParsers(forKey key: LensCustomerSDK.JSONKey) -> [LensCustomerSDK.JsonParser]?
+  #endif
 }
 public class LensBind<T> {
   public typealias Listener = (T) -> Swift.Void
@@ -685,7 +791,9 @@ public class LensBind<T> {
     set
   }
   public init(_ value: T)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func bind(listener: LensCustomerSDK.LensBind<T>.Listener?)
+  #endif
   @objc deinit
 }
 public struct RoomCredential {
@@ -715,7 +823,9 @@ public protocol AudioSessionProtocol : AnyObject {
   func didChangeRoute(_ audioDescription: AVFAudio.AVAudioSessionRouteDescription, reason: AVFAudio.AVAudioSession.RouteChangeReason)
 }
 public protocol LensSignallingProtocol : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   func renderingView(_ view: UIKit.UIView?)
+  #endif
   func didChangeLensConnectionState(state: LensCustomerSDK.AssisLensStates)
   func didChange(_ participant: LensCustomerSDK.Participant)
   func refreshBottomMenu()
@@ -794,12 +904,16 @@ public enum SDKLensLottieType : LensCustomerSDK.LottieType {
   public var lottieName: Swift.String {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public var message: Swift.String? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var size: CoreFoundation.CGSize? {
     get
   }
+  #endif
   public static func == (a: LensCustomerSDK.SDKLensLottieType, b: LensCustomerSDK.SDKLensLottieType) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -808,9 +922,11 @@ public enum SDKLensLottieType : LensCustomerSDK.LottieType {
 }
 @_hasMissingDesignatedInitializers public class LensCustomer : LensCustomerSDK.Lens {
   weak public var otherActionDelegate: (any LensCustomerSDK.OtherActionProtocol)?
+  #if compiler(>=5.3) && $NonescapableTypes
   public var getStreamType: LensCustomerSDK.StreamingType? {
     get
   }
+  #endif
   public init(connectionParam: any LensCustomerSDK.CustomerSessionParams, name: Swift.String, email: Swift.String, isARSupported: Swift.Bool = false)
   public func startSession()
   public static func validateSessionForSDK(sessionKey key: Swift.String, token: Swift.String, completion: @escaping (LensCustomerSDK.SessionValidationResponse) -> Swift.Void)
@@ -840,7 +956,9 @@ extension LensCustomerSDK.Lens : LensCustomerSDK.AudioSessionProtocol {
     case aspectFit
     case widthFill
     case heightFill
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
+    #endif
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
@@ -849,7 +967,9 @@ extension LensCustomerSDK.Lens : LensCustomerSDK.AudioSessionProtocol {
   public enum Offset : Swift.Int {
     case begining
     case center
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.Int)
+    #endif
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {
       get
@@ -865,20 +985,28 @@ extension LensCustomerSDK.Lens : LensCustomerSDK.AudioSessionProtocol {
     @objc get
     @objc set
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  #endif
   @objc deinit
   @_Concurrency.MainActor @preconcurrency public func adjustFrameToCenter()
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func layoutSubviews()
   @_Concurrency.MainActor @preconcurrency open func display(image res: CoreFoundation.CGSize)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func removeFromSuperview()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc public func viewForZooming(in scrollView: UIKit.UIScrollView) -> UIKit.UIView?
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc public func scrollViewDidZoom(_ scrollView: UIKit.UIScrollView)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc public func scrollViewDidEndZooming(_ scrollView: UIKit.UIScrollView, with view: UIKit.UIView?, atScale scale: CoreFoundation.CGFloat)
+  #endif
 }
 public struct DrawingInput {
   public enum DrawShape : Swift.String {
     case ellipse, pencil, rectangle, arrow, pointer
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -895,7 +1023,9 @@ public struct DrawingInput {
   public var name: Swift.String
   public enum FreeStyleState : Swift.String {
     case mouse_move, mouse_up
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -912,10 +1042,14 @@ public struct DrawingInput {
   public var line_width: CoreFoundation.CGFloat
 }
 extension UIKit.UIView {
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func showNotificationBanner(message: Swift.String, show duration: Foundation.TimeInterval = 4, completion: (() -> Swift.Void)? = nil)
+  #endif
 }
 extension UIKit.UIView {
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func showLottie(lottie type: any LensCustomerSDK.LottieType, onTap: ((UIKit.UIButton) -> (() -> Swift.Void)?)? = nil, lottieBackgroundColor: UIKit.UIColor = UIColor.white, subViewIndex: Swift.Int = -1, tag: Swift.Int? = 43566534)
+  #endif
   @_Concurrency.MainActor @preconcurrency public func dismissLottieView()
   @_Concurrency.MainActor @preconcurrency public func at_showLoader(with size: CoreFoundation.CGSize = CGSize.init(width: 100, height: 100), overViewColor: UIKit.UIColor = UIColor.black.withAlphaComponent(0.5), text: Swift.String = "", textColor: UIKit.UIColor = .white)
   @_Concurrency.MainActor @preconcurrency public var at_isLoaderHidden: Swift.Bool {
@@ -941,7 +1075,9 @@ extension LensCustomerSDK.AudioSessionHandler : WebRTC.RTCAudioSessionDelegate {
 public enum LensFlashError : Swift.String, Swift.Error {
   case unable_to_turn_on_the_flash
   case unable_to_turn_off_the_flash
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -956,14 +1092,18 @@ public struct LensFlashNotification {
   public func force_stop_the_flashlight()
   public func current_device_has_flash(is_front_camera: Swift.Bool = false) -> Swift.Bool
   public func current_device_flash_status() -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   public func current_device_flash_toggle(trigger_Id: Foundation.NSNumber?)
+  #endif
   @objc deinit
 }
 public class DrawingShapes {
   final public let superShapeLayer: QuartzCore.CAShapeLayer
   weak public var view: UIKit.UIView?
   public init(with view: UIKit.UIView, within rect: CoreFoundation.CGRect)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func draw(with drawParm: LensCustomerSDK.DrawingInput, lineDashPattern: [Foundation.NSNumber]? = nil)
+  #endif
   public func clearPath(for id: Swift.String)
   public func clearAll()
   @objc deinit
@@ -975,17 +1115,23 @@ extension LensCustomerSDK.Lens {
 public protocol OtherActionProtocol : AnyObject {
   func onTechnicianPerform(action: LensCustomerSDK.TechnicianAction)
   var isCustomerVideoMuted: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   func onShareCameraResponse(action: LensCustomerSDK.ShareCameraTechAction, participant: LensCustomerSDK.Participant?)
+  #endif
   func showNotificationBanner(msg: Swift.String)
   func onVideoStateChanged(status: Swift.Bool)
   func onFreezeSuccess(fromUpstreamer: Swift.Bool)
   func onFreezeFailure()
   func onUnfreezed()
+  #if compiler(>=5.3) && $NonescapableTypes
   func didReceiveAnnotation(input: LensCustomerSDK.DrawingInput?, isClear: Swift.Bool)
+  #endif
   func onCameraSwitch(isFront: Swift.Bool)
 }
 extension LensCustomerSDK.OtherActionProtocol {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func didReceiveAnnotation(input: LensCustomerSDK.DrawingInput?, isClear: Swift.Bool)
+  #endif
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class Node : SceneKit.SCNNode {
   @_Concurrency.MainActor @preconcurrency public static var DEFAULT_USER_ID: Swift.String {
@@ -1029,7 +1175,9 @@ extension LensCustomerSDK.ARRenderView {
   case portrait = 1
   case landscapeLeft = 3
   case landscapeRight = 4
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1042,7 +1190,9 @@ public enum ARInputViewOrientationMode {
   case disabled
 }
 public protocol AnchorStateListener {
+  #if compiler(>=5.3) && $NonescapableTypes
   func onAnchorPlaced(annotationId: Swift.String, annotationColor: UIKit.UIColor, annotationType: Swift.String, annotationNumber: Swift.Int, triggerId: Swift.String, length: Swift.String?)
+  #endif
   func onAnchorRemoved(annotationId: Swift.String)
 }
 @available(iOS 11.0, *)
@@ -1051,7 +1201,9 @@ public protocol AnchorStateListener {
 }
 public class CustomCircularArray<E> {
   public init(ofSize size: Swift.Int)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func setOverwriteCallback(_ callback: ((E, Swift.Int) -> ())?)
+  #endif
   public var count: Swift.Int {
     get
   }
@@ -1059,17 +1211,29 @@ public class CustomCircularArray<E> {
     get
   }
   public func clear()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func get(index: Swift.Int) -> E?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var first: E? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var last: E? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func popLast() -> E?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func popFirst() -> E?
+  #endif
   public func push(element: E)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func remove(forWhich: (E) -> Swift.Bool) -> [E?]
+  #endif
   public func remove(index: Swift.Int)
   public func nextIndex() -> Swift.Int
   public func getMaxElementCount() -> Swift.Int
@@ -1081,12 +1245,24 @@ public class CustomCircularArray<E> {
   @objc deinit
 }
 extension UIKit.UIImage {
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func getPointerTexture(color: UIKit.UIColor) -> UIKit.UIImage?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func getPlaneTexture() -> UIKit.UIImage?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func getBorderTexture() -> UIKit.UIImage?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func getBorderLineTexture() -> UIKit.UIImage?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func getCancelButtonTexture() -> UIKit.UIImage?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func getARNotesButtonTexture() -> UIKit.UIImage?
+  #endif
 }
 public protocol ARViewDelegate : AnyObject {
   func didChange(tracking state: ARKit.ARCamera.TrackingState)
@@ -1165,7 +1341,9 @@ public struct SystemReducedMotionOptionProvider : LensCustomerSDK.ReducedMotionO
 }
 public enum VMHTTPMethod : Swift.String {
   case post, get, put, delete
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1173,7 +1351,9 @@ public enum VMHTTPMethod : Swift.String {
 }
 public enum VMSessionError : Swift.String, Swift.Error {
   case invalidURLString, sessionNotConfigured
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1200,12 +1380,24 @@ public class VMSessionManager {
     get
   }
   public init(reqSer: LensCustomerSDK.VMRequestSerialization = VMRequestSerialization(), respSer: LensCustomerSDK.VMResponseSerialization = VMResponseSerialization(), config: Foundation.URLSessionConfiguration = .default)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func GET(API: Swift.String, requestSerialization: LensCustomerSDK.VMRequestSerialization? = nil, params: [Swift.String : Swift.String] = [:], success: @escaping LensCustomerSDK.VMSessionManager.ApiSuccess, failure: @escaping LensCustomerSDK.VMSessionManager.ApiFailure)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func PUT(API: Swift.String, requestSerialization: LensCustomerSDK.VMRequestSerialization? = nil, params: [Swift.String : Swift.String] = [:], success: @escaping LensCustomerSDK.VMSessionManager.ApiSuccess, failure: @escaping LensCustomerSDK.VMSessionManager.ApiFailure)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func DELETE(API: Swift.String, requestSerialization: LensCustomerSDK.VMRequestSerialization? = nil, params: [Swift.String : Swift.String] = [:], success: @escaping LensCustomerSDK.VMSessionManager.ApiSuccess, failure: @escaping LensCustomerSDK.VMSessionManager.ApiFailure)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func POST(API: Swift.String, requestSerialization: LensCustomerSDK.VMRequestSerialization? = nil, params: [Swift.String : Any] = [:], success: @escaping LensCustomerSDK.VMSessionManager.ApiSuccess, failure: @escaping LensCustomerSDK.VMSessionManager.ApiFailure)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func hitAPI(_ method: LensCustomerSDK.VMHTTPMethod, _ API: Swift.String, _ requestSerialization: LensCustomerSDK.VMRequestSerialization? = nil, _ params: [Swift.String : Any] = [:], _ success: @escaping LensCustomerSDK.VMSessionManager.ApiSuccess, _ failure: @escaping LensCustomerSDK.VMSessionManager.ApiFailure, _ requestConfiguration: ((Foundation.URLRequest) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func hitUploadAPI(_ method: LensCustomerSDK.VMHTTPMethod, httpBodyData: Foundation.Data, _ API: Swift.String, _ requestSerialization: LensCustomerSDK.VMRequestSerialization? = nil, _ params: [Swift.String : Any] = [:], _ success: @escaping LensCustomerSDK.VMSessionManager.ApiSuccess, _ failure: @escaping LensCustomerSDK.VMSessionManager.ApiFailure, _ requestConfiguration: ((Foundation.URLRequest) -> Swift.Void)? = nil)
+  #endif
   public func invalidCancelSession()
   @objc deinit
 }
@@ -1226,7 +1418,9 @@ public enum LayerType : Swift.Int, Swift.Codable {
   case text
   case unknown
   public init(from decoder: any Swift.Decoder) throws
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1237,7 +1431,9 @@ public enum MatteType : Swift.Int, Swift.Codable {
   case add
   case invert
   case unknown
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1260,7 +1456,9 @@ public enum BlendMode : Swift.Int, Swift.Codable {
   case saturation
   case color
   case luminosity
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1285,8 +1483,8 @@ extension QuartzCore.CALayer {
   @nonobjc public func logLayerTree(withIndent: Swift.Int = 0)
 }
 public class VMSession {
-  public typealias dataSuccess = ((_ data: Foundation.Data, _ response: Foundation.HTTPURLResponse) -> Swift.Void)
-  public typealias datafailure = (((any Swift.Error)?) -> Swift.Void)
+  public typealias dataSuccess = (_ data: Foundation.Data, _ response: Foundation.HTTPURLResponse) -> Swift.Void
+  public typealias datafailure = ((any Swift.Error)?) -> Swift.Void
   public init(config: Foundation.URLSessionConfiguration)
   public func invalidateAndCancel()
   public func dataTask(_ request: Foundation.URLRequest, success: @escaping LensCustomerSDK.VMSession.dataSuccess, failure: @escaping LensCustomerSDK.VMSession.datafailure)
@@ -1310,7 +1508,9 @@ extension UIKit.UITableView {
   @_Concurrency.MainActor @preconcurrency public func removenoDataView()
 }
 extension UIKit.UIImage {
+  #if compiler(>=5.3) && $NonescapableTypes
   convenience public init?(color: UIKit.UIColor, size: CoreFoundation.CGSize = CGSize(width: 1, height: 1))
+  #endif
 }
 extension LensCustomerSDK.LottieAnimation {
   public typealias DownloadClosure = (LensCustomerSDK.LottieAnimation?) -> Swift.Void
@@ -1323,15 +1523,31 @@ extension LensCustomerSDK.LottieAnimation {
   final public var size: CoreFoundation.CGSize {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func named(_ name: Swift.String, bundle: Foundation.Bundle = Bundle.main, subdirectory: Swift.String? = nil, animationCache: (any LensCustomerSDK.AnimationCacheProvider)? = LottieAnimationCache.shared) -> LensCustomerSDK.LottieAnimation?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func filepath(_ filepath: Swift.String, animationCache: (any LensCustomerSDK.AnimationCacheProvider)? = LottieAnimationCache.shared) -> LensCustomerSDK.LottieAnimation?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func asset(_ name: Swift.String, bundle: Foundation.Bundle = Bundle.main, animationCache: (any LensCustomerSDK.AnimationCacheProvider)? = LottieAnimationCache.shared) -> LensCustomerSDK.LottieAnimation?
+  #endif
   public static func from(data: Foundation.Data, strategy: LensCustomerSDK.DecodingStrategy = LottieConfiguration.shared.decodingStrategy) throws -> LensCustomerSDK.LottieAnimation
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func loadedFrom(url: Foundation.URL, session: Foundation.URLSession = .shared, animationCache: (any LensCustomerSDK.AnimationCacheProvider)? = LottieAnimationCache.shared) async -> LensCustomerSDK.LottieAnimation?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func loadedFrom(url: Foundation.URL, session: Foundation.URLSession = .shared, closure: @escaping LensCustomerSDK.LottieAnimation.DownloadClosure, animationCache: (any LensCustomerSDK.AnimationCacheProvider)? = LottieAnimationCache.shared)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func progressTime(forMarker named: Swift.String) -> LensCustomerSDK.AnimationProgressTime?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func frameTime(forMarker named: Swift.String) -> LensCustomerSDK.AnimationFrameTime?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func durationFrameTime(forMarker named: Swift.String) -> LensCustomerSDK.AnimationFrameTime?
+  #endif
   final public func progressTime(forFrame frameTime: LensCustomerSDK.AnimationFrameTime, clamped: Swift.Bool = true) -> LensCustomerSDK.AnimationProgressTime
   final public func frameTime(forProgress progressTime: LensCustomerSDK.AnimationProgressTime) -> LensCustomerSDK.AnimationFrameTime
   final public func time(forFrame frameTime: LensCustomerSDK.AnimationFrameTime) -> Foundation.TimeInterval
@@ -1349,7 +1565,9 @@ extension Foundation.Date {
   public func getWeekDaysInEnglish() -> [Swift.String]
   public enum Weekday : Swift.String {
     case monday, tuesday, wednesday, thursday, friday, saturday, sunday
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.10, *)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -1367,9 +1585,15 @@ extension Foundation.Date {
   }
 }
 extension Foundation.Date {
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func string(for date: Foundation.Date, format: Swift.String? = nil) -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func string(format: Swift.String? = nil) -> Swift.String
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func date(for string: Swift.String, format: Swift.String) -> Foundation.Date?
+  #endif
 }
 extension Foundation.Date {
   public func getString(mode: UIKit.UIDatePicker.Mode = .date, timeZone: Foundation.TimeZone = TimeZone.current) -> Swift.String
@@ -1397,13 +1621,17 @@ extension Foundation.Date {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func didMoveToWindow()
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 public enum CoordinateSpace : Swift.Int, Swift.Codable, Swift.Sendable {
   case type2d
   case type3d
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1499,9 +1727,13 @@ extension ObjectiveC.NSObject {
   public static func makeTapTick(_ style: ObjectiveC.NSObject.AssistImpactFeedbackStyle)
 }
 @objc @_Concurrency.MainActor @preconcurrency open class AnimatedControl : LensCustomerSDK.LottieControlType {
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public init(animation: LensCustomerSDK.LottieAnimation?, configuration: LensCustomerSDK.LottieConfiguration = .shared)
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc dynamic public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open var isEnabled: Swift.Bool {
     @objc get
     @objc set
@@ -1517,10 +1749,18 @@ extension ObjectiveC.NSObject {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open var intrinsicContentSize: CoreFoundation.CGSize {
     @objc get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func beginTracking(_ touch: UIKit.UITouch, with event: UIKit.UIEvent?) -> Swift.Bool
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func continueTracking(_ touch: UIKit.UITouch, with event: UIKit.UIEvent?) -> Swift.Bool
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func endTracking(_ touch: UIKit.UITouch?, with event: UIKit.UIEvent?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func cancelTracking(with event: UIKit.UIEvent?)
+  #endif
   @_Concurrency.MainActor @preconcurrency open func animationDidSet()
   @_Concurrency.MainActor @preconcurrency final public let animationView: LensCustomerSDK.LottieAnimationView
   @_Concurrency.MainActor @preconcurrency public var animation: LensCustomerSDK.LottieAnimation? {
@@ -1547,7 +1787,9 @@ public enum CloseCode : Swift.UInt16 {
   case encoding
   case policyViolated
   case messageTooBig
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.UInt16)
+  #endif
   public typealias RawValue = Swift.UInt16
   public var rawValue: Swift.UInt16 {
     get
@@ -1573,21 +1815,43 @@ public struct WSError : Swift.Error {
   public let code: Swift.Int
 }
 public protocol WebSocketClient : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   var delegate: (any LensCustomerSDK.WebSocketDelegate)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var pongDelegate: (any LensCustomerSDK.WebSocketPongDelegate)? { get set }
+  #endif
   var disableSSLCertValidation: Swift.Bool { get set }
   var overrideTrustHostname: Swift.Bool { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
   var desiredTrustHostname: Swift.String? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var sslClientCertificate: LensCustomerSDK.SSLClientCertificate? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var security: (any LensCustomerSDK.SSLTrustValidator)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var enabledSSLCipherSuites: [Security.SSLCipherSuite]? { get set }
+  #endif
   var isConnected: Swift.Bool { get }
   func connect()
+  #if compiler(>=5.3) && $NonescapableTypes
   func disconnect(forceTimeout: Foundation.TimeInterval?, closeCode: Swift.UInt16)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func write(string: Swift.String, completion: (() -> ())?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func write(data: Foundation.Data, completion: (() -> ())?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func write(ping: Foundation.Data, completion: (() -> ())?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func write(pong: Foundation.Data, completion: (() -> ())?)
+  #endif
 }
 extension LensCustomerSDK.WebSocketClient {
   public func write(string: Swift.String)
@@ -1606,40 +1870,62 @@ public struct SSLSettings {
 }
 public protocol WSStreamDelegate : AnyObject {
   func newBytesInStream()
+  #if compiler(>=5.3) && $NonescapableTypes
   func streamDidError(error: (any Swift.Error)?)
+  #endif
 }
 public protocol WSStream {
+  #if compiler(>=5.3) && $NonescapableTypes
   var delegate: (any LensCustomerSDK.WSStreamDelegate)? { get set }
-  func connect(url: Foundation.URL, port: Swift.Int, timeout: Foundation.TimeInterval, ssl: LensCustomerSDK.SSLSettings, completion: @escaping (((any Swift.Error)?) -> Swift.Void))
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func connect(url: Foundation.URL, port: Swift.Int, timeout: Foundation.TimeInterval, ssl: LensCustomerSDK.SSLSettings, completion: @escaping ((any Swift.Error)?) -> Swift.Void)
+  #endif
   func write(data: Foundation.Data) -> Swift.Int
+  #if compiler(>=5.3) && $NonescapableTypes
   func read() -> Foundation.Data?
+  #endif
   func cleanup()
+  #if compiler(>=5.3) && $NonescapableTypes
   func sslTrust() -> (trust: Security.SecTrust?, domain: Swift.String?)
+  #endif
 }
 @objc @_inheritsConvenienceInitializers open class FoundationStream : ObjectiveC.NSObject, LensCustomerSDK.WSStream, Foundation.StreamDelegate {
   weak public var delegate: (any LensCustomerSDK.WSStreamDelegate)?
   public var enableSOCKSProxy: Swift.Bool
-  public func connect(url: Foundation.URL, port: Swift.Int, timeout: Foundation.TimeInterval, ssl: LensCustomerSDK.SSLSettings, completion: @escaping (((any Swift.Error)?) -> Swift.Void))
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func connect(url: Foundation.URL, port: Swift.Int, timeout: Foundation.TimeInterval, ssl: LensCustomerSDK.SSLSettings, completion: @escaping ((any Swift.Error)?) -> Swift.Void)
+  #endif
   public func write(data: Foundation.Data) -> Swift.Int
+  #if compiler(>=5.3) && $NonescapableTypes
   public func read() -> Foundation.Data?
+  #endif
   public func cleanup()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func sslTrust() -> (trust: Security.SecTrust?, domain: Swift.String?)
+  #endif
   @objc open func stream(_ aStream: Foundation.Stream, handle eventCode: Foundation.Stream.Event)
   @objc override dynamic public init()
   @objc deinit
 }
 public protocol WebSocketDelegate : AnyObject {
   func websocketDidConnect(socket: any LensCustomerSDK.WebSocketClient)
+  #if compiler(>=5.3) && $NonescapableTypes
   func websocketDidDisconnect(socket: any LensCustomerSDK.WebSocketClient, error: (any Swift.Error)?)
+  #endif
   func websocketDidReceiveMessage(socket: any LensCustomerSDK.WebSocketClient, text: Swift.String)
   func websocketDidReceiveData(socket: any LensCustomerSDK.WebSocketClient, data: Foundation.Data)
 }
 public protocol WebSocketPongDelegate : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   func websocketDidReceivePong(socket: any LensCustomerSDK.WebSocketClient, data: Foundation.Data?)
+  #endif
 }
 public protocol WebSocketAdvancedDelegate : AnyObject {
   func websocketDidConnect(socket: LensCustomerSDK.WebSocket)
+  #if compiler(>=5.3) && $NonescapableTypes
   func websocketDidDisconnect(socket: LensCustomerSDK.WebSocket, error: (any Swift.Error)?)
+  #endif
   func websocketDidReceiveMessage(socket: LensCustomerSDK.WebSocket, text: Swift.String, response: LensCustomerSDK.WebSocket.WSResponse)
   func websocketDidReceiveData(socket: LensCustomerSDK.WebSocket, data: Foundation.Data, response: LensCustomerSDK.WebSocket.WSResponse)
   func websocketHttpUpgrade(socket: LensCustomerSDK.WebSocket, request: Swift.String)
@@ -1653,7 +1939,9 @@ public protocol WebSocketAdvancedDelegate : AnyObject {
     case connectionClose
     case ping
     case pong
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.UInt8)
+    #endif
     public typealias RawValue = Swift.UInt8
     public var rawValue: Swift.UInt8 {
       get
@@ -1692,21 +1980,41 @@ public protocol WebSocketAdvancedDelegate : AnyObject {
     get
   }
   public var respondToPingWithPong: Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(request: Foundation.URLRequest, protocols: [Swift.String]? = nil, stream: any LensCustomerSDK.WSStream = FoundationStream())
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   convenience public init(url: Foundation.URL, protocols: [Swift.String]? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   convenience public init(url: Foundation.URL, writeQueueQOS: Foundation.QualityOfService, protocols: [Swift.String]? = nil)
+  #endif
   open func connect()
+  #if compiler(>=5.3) && $NonescapableTypes
   open func disconnect(forceTimeout: Foundation.TimeInterval? = nil, closeCode: Swift.UInt16 = CloseCode.normal.rawValue)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func write(string: Swift.String, completion: (() -> ())? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func write(data: Foundation.Data, completion: (() -> ())? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func write(ping: Foundation.Data, completion: (() -> ())? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func write(pong: Foundation.Data, completion: (() -> ())? = nil)
+  #endif
   public func newBytesInStream()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func streamDidError(error: (any Swift.Error)?)
+  #endif
   @objc deinit
 }
 public protocol AnimationKeypathTextProvider : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   func text(for keypath: LensCustomerSDK.AnimationKeypath, sourceText: Swift.String) -> Swift.String?
+  #endif
 }
 @available(*, deprecated, message: "`AnimationKeypathTextProvider` has been deprecated and renamed to `LegacyAnimationTextProvider`. Instead, conform to `AnimationKeypathTextProvider` instead or conform to `LegacyAnimationTextProvider` explicitly.")
 public typealias AnimationTextProvider = LensCustomerSDK.LegacyAnimationTextProvider
@@ -1714,11 +2022,15 @@ public protocol LegacyAnimationTextProvider : LensCustomerSDK.AnimationKeypathTe
   func textFor(keypathName: Swift.String, sourceText: Swift.String) -> Swift.String
 }
 extension LensCustomerSDK.LegacyAnimationTextProvider {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func text(for _: LensCustomerSDK.AnimationKeypath, sourceText _: Swift.String) -> Swift.String?
+  #endif
 }
 final public class DictionaryTextProvider : LensCustomerSDK.AnimationKeypathTextProvider, LensCustomerSDK.LegacyAnimationTextProvider {
   public init(_ values: [Swift.String : Swift.String])
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func text(for keypath: LensCustomerSDK.AnimationKeypath, sourceText: Swift.String) -> Swift.String?
+  #endif
   final public func textFor(keypathName: Swift.String, sourceText: Swift.String) -> Swift.String
   @objc deinit
 }
@@ -1735,7 +2047,9 @@ extension LensCustomerSDK.DefaultTextProvider : Swift.Equatable {
   public static func == (_: LensCustomerSDK.DefaultTextProvider, _: LensCustomerSDK.DefaultTextProvider) -> Swift.Bool
 }
 extension UIKit.UITableView {
-  @_Concurrency.MainActor @preconcurrency public func addBackgroundLottie(_ lottieType: any LensCustomerSDK.LottieType, customView: UIKit.UIView? = nil, actionButtonConfiguration: ((UIKit.UIButton) -> (() -> Swift.Void))? = nil)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public func addBackgroundLottie(_ lottieType: any LensCustomerSDK.LottieType, customView: UIKit.UIView? = nil, actionButtonConfiguration: ((UIKit.UIButton) -> () -> Swift.Void)? = nil)
+  #endif
   @_Concurrency.MainActor @preconcurrency public func updateBackgroundLottie()
   @_Concurrency.MainActor @preconcurrency public var isBackgroundLottiePlaying: Swift.Bool {
     get
@@ -1743,15 +2057,17 @@ extension UIKit.UITableView {
   @_Concurrency.MainActor @preconcurrency public func removeBackgroundLottie()
 }
 extension Foundation.FileManager {
+  #if compiler(>=5.3) && $NonescapableTypes
   public static var documentDirURL: Foundation.URL? {
     get
   }
+  #endif
 }
 public struct LottieVector1D : Swift.Hashable, Swift.Sendable {
   public init(_ value: Swift.Double)
   public let value: Swift.Double
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: LensCustomerSDK.LottieVector1D, b: LensCustomerSDK.LottieVector1D) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -1761,14 +2077,16 @@ public struct LottieVector3D : Swift.Hashable, Swift.Sendable {
   public let y: Swift.Double
   public let z: Swift.Double
   public init(x: Swift.Double, y: Swift.Double, z: Swift.Double)
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: LensCustomerSDK.LottieVector3D, b: LensCustomerSDK.LottieVector3D) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
 }
 @objc final public class CompatibleAnimation : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(name: Swift.String, subdirectory: Swift.String? = nil, bundle: Foundation.Bundle = Bundle.main)
+  #endif
   @objc deinit
 }
 @objc public enum CompatibleRenderingEngineOption : Swift.Int {
@@ -1778,7 +2096,9 @@ public struct LottieVector3D : Swift.Hashable, Swift.Sendable {
   case mainThread
   case coreAnimation
   public static func generateLottieConfiguration(_ configuration: LensCustomerSDK.CompatibleRenderingEngineOption) -> LensCustomerSDK.LottieConfiguration
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1790,7 +2110,9 @@ public struct LottieVector3D : Swift.Hashable, Swift.Sendable {
   case pauseAndRestore
   case forceFinish
   case continuePlaying
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1861,22 +2183,40 @@ public struct LottieVector3D : Swift.Hashable, Swift.Sendable {
     @objc set
   }
   @objc @_Concurrency.MainActor @preconcurrency final public func play()
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @_Concurrency.MainActor @preconcurrency final public func play(completion: ((Swift.Bool) -> Swift.Void)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @_Concurrency.MainActor @preconcurrency final public func play(fromProgress: CoreFoundation.CGFloat, toProgress: CoreFoundation.CGFloat, completion: ((Swift.Bool) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @_Concurrency.MainActor @preconcurrency final public func play(fromFrame: CoreFoundation.CGFloat, toFrame: CoreFoundation.CGFloat, completion: ((Swift.Bool) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @_Concurrency.MainActor @preconcurrency final public func play(fromMarker: Swift.String, toMarker: Swift.String, completion: ((Swift.Bool) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @_Concurrency.MainActor @preconcurrency final public func play(marker: Swift.String, completion: ((Swift.Bool) -> Swift.Void)? = nil)
+  #endif
   @objc @_Concurrency.MainActor @preconcurrency final public func stop()
   @objc @_Concurrency.MainActor @preconcurrency final public func pause()
   @objc @_Concurrency.MainActor @preconcurrency final public func reloadImages()
   @objc @_Concurrency.MainActor @preconcurrency final public func forceDisplayUpdate()
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @_Concurrency.MainActor @preconcurrency final public func getValue(for keypath: LensCustomerSDK.CompatibleAnimationKeypath, atFrame: CoreFoundation.CGFloat) -> Any?
+  #endif
   @objc @_Concurrency.MainActor @preconcurrency final public func logHierarchyKeypaths()
   @objc @_Concurrency.MainActor @preconcurrency final public func setColorValue(_ color: UIKit.UIColor, forKeypath keypath: LensCustomerSDK.CompatibleAnimationKeypath)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @_Concurrency.MainActor @preconcurrency final public func getColorValue(for keypath: LensCustomerSDK.CompatibleAnimationKeypath, atFrame: CoreFoundation.CGFloat) -> UIKit.UIColor?
+  #endif
   @objc @_Concurrency.MainActor @preconcurrency final public func addSubview(_ subview: LensCustomerSDK.AnimationSubview, forLayerAt keypath: LensCustomerSDK.CompatibleAnimationKeypath)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @_Concurrency.MainActor @preconcurrency final public func convert(rect: CoreFoundation.CGRect, toLayerAt keypath: LensCustomerSDK.CompatibleAnimationKeypath?) -> CoreFoundation.CGRect
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @_Concurrency.MainActor @preconcurrency final public func convert(point: CoreFoundation.CGPoint, toLayerAt keypath: LensCustomerSDK.CompatibleAnimationKeypath?) -> CoreFoundation.CGPoint
+  #endif
   @objc @_Concurrency.MainActor @preconcurrency final public func progressTime(forMarker named: Swift.String) -> CoreFoundation.CGFloat
   @objc @_Concurrency.MainActor @preconcurrency final public func frameTime(forMarker named: Swift.String) -> CoreFoundation.CGFloat
   @objc @_Concurrency.MainActor @preconcurrency final public func durationFrameTime(forMarker named: Swift.String) -> CoreFoundation.CGFloat
@@ -1901,7 +2241,9 @@ public enum RenderingEngine : Swift.Hashable {
   case coreAnimation
 }
 extension LensCustomerSDK.RenderingEngineOption : Swift.RawRepresentable, Swift.CustomStringConvertible {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public var rawValue: Swift.String {
     get
   }
@@ -1911,7 +2253,9 @@ extension LensCustomerSDK.RenderingEngineOption : Swift.RawRepresentable, Swift.
   public typealias RawValue = Swift.String
 }
 extension LensCustomerSDK.RenderingEngine : Swift.RawRepresentable, Swift.CustomStringConvertible {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public var rawValue: Swift.String {
     get
   }
@@ -1921,8 +2265,12 @@ extension LensCustomerSDK.RenderingEngine : Swift.RawRepresentable, Swift.Custom
   public typealias RawValue = Swift.String
 }
 public class BundleImageProvider : LensCustomerSDK.AnimationImageProvider {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(bundle: Foundation.Bundle, searchPath: Swift.String?, contentsGravity: QuartzCore.CALayerContentsGravity = .resize)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func imageForAsset(asset: LensCustomerSDK.ImageAsset) -> CoreGraphics.CGImage?
+  #endif
   public func contentsGravity(for _: LensCustomerSDK.ImageAsset) -> QuartzCore.CALayerContentsGravity
   @objc deinit
 }
@@ -1942,14 +2290,30 @@ public class SSLClientCertificate {
 @available(*, deprecated, message: "Use DefaultAnimationCache instead, which is thread-safe and automatically responds to memory pressure.")
 public typealias LRUAnimationCache = LensCustomerSDK.DefaultAnimationCache
 @_Concurrency.MainActor @preconcurrency public struct LottieView<Placeholder> where Placeholder : SwiftUICore.View {
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public init(animation: LensCustomerSDK.LottieAnimation?) where Placeholder == SwiftUICore.EmptyView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public init(dotLottieFile: LensCustomerSDK.DotLottieFile?) where Placeholder == SwiftUICore.EmptyView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public init(_ loadAnimation: @escaping () async throws -> LensCustomerSDK.LottieAnimation?) where Placeholder == SwiftUICore.EmptyView
-  @_Concurrency.MainActor @preconcurrency public init(_ loadAnimation: @escaping () async throws -> LensCustomerSDK.LottieAnimation?, @SwiftUICore.ViewBuilder placeholder: @escaping (() -> Placeholder))
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public init(_ loadAnimation: @escaping () async throws -> LensCustomerSDK.LottieAnimation?, @SwiftUICore.ViewBuilder placeholder: @escaping () -> Placeholder)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public init(_ loadDotLottieFile: @escaping () async throws -> LensCustomerSDK.DotLottieFile?) where Placeholder == SwiftUICore.EmptyView
-  @_Concurrency.MainActor @preconcurrency public init(_ loadDotLottieFile: @escaping () async throws -> LensCustomerSDK.DotLottieFile?, @SwiftUICore.ViewBuilder placeholder: @escaping (() -> Placeholder))
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @_Concurrency.MainActor @preconcurrency public init(_ loadDotLottieFile: @escaping () async throws -> LensCustomerSDK.DotLottieFile?, @SwiftUICore.ViewBuilder placeholder: @escaping () -> Placeholder)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public init(_ loadAnimation: @escaping () async throws -> LensCustomerSDK.LottieAnimationSource?) where Placeholder == SwiftUICore.EmptyView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public init(_ loadAnimation: @escaping () async throws -> LensCustomerSDK.LottieAnimationSource?, @SwiftUICore.ViewBuilder placeholder: @escaping () -> Placeholder)
+  #endif
   @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
     get
   }
@@ -1972,27 +2336,40 @@ public typealias LRUAnimationCache = LensCustomerSDK.DefaultAnimationCache
   @_Concurrency.MainActor @preconcurrency public func playbackMode(_ playbackMode: LensCustomerSDK.LottiePlaybackMode) -> LensCustomerSDK.LottieView<Placeholder>
   @_Concurrency.MainActor @preconcurrency public func animationSpeed(_ animationSpeed: Swift.Double) -> LensCustomerSDK.LottieView<Placeholder>
   @_Concurrency.MainActor @preconcurrency public func animationDidLoad(_ animationDidLoad: @escaping (LensCustomerSDK.LottieAnimationSource) -> Swift.Void) -> LensCustomerSDK.LottieView<Placeholder>
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func animationDidFinish(_ animationCompletionHandler: LensCustomerSDK.LottieCompletionBlock?) -> LensCustomerSDK.LottieView<Placeholder>
+  #endif
   @_Concurrency.MainActor @preconcurrency public func backgroundBehavior(_ value: LensCustomerSDK.LottieBackgroundBehavior) -> LensCustomerSDK.LottieView<Placeholder>
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func accessibilityLabel(_ accessibilityLabel: Swift.String?) -> LensCustomerSDK.LottieView<Placeholder>
+  #endif
   @_Concurrency.MainActor @preconcurrency public func configuration(_ configuration: LensCustomerSDK.LottieConfiguration) -> LensCustomerSDK.LottieView<Placeholder>
   @_Concurrency.MainActor @preconcurrency public func logger(_ logger: LensCustomerSDK.LottieLogger) -> LensCustomerSDK.LottieView<Placeholder>
   @_Concurrency.MainActor @preconcurrency public func imageProvider<ImageProvider>(_ imageProvider: ImageProvider) -> LensCustomerSDK.LottieView<Placeholder> where ImageProvider : LensCustomerSDK.AnimationImageProvider, ImageProvider : Swift.Equatable
   @_Concurrency.MainActor @preconcurrency public func textProvider<TextProvider>(_ textProvider: TextProvider) -> LensCustomerSDK.LottieView<Placeholder> where TextProvider : LensCustomerSDK.AnimationKeypathTextProvider, TextProvider : Swift.Equatable
   @_Concurrency.MainActor @preconcurrency public func fontProvider<FontProvider>(_ fontProvider: FontProvider) -> LensCustomerSDK.LottieView<Placeholder> where FontProvider : LensCustomerSDK.AnimationFontProvider, FontProvider : Swift.Equatable
   @_Concurrency.MainActor @preconcurrency public func valueProvider<ValueProvider>(_ valueProvider: ValueProvider, for keypath: LensCustomerSDK.AnimationKeypath) -> LensCustomerSDK.LottieView<Placeholder> where ValueProvider : LensCustomerSDK.AnyValueProvider, ValueProvider : Swift.Equatable
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func currentProgress(_ currentProgress: LensCustomerSDK.AnimationProgressTime?) -> LensCustomerSDK.LottieView<Placeholder>
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func currentFrame(_ currentFrame: LensCustomerSDK.AnimationFrameTime?) -> LensCustomerSDK.LottieView<Placeholder>
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func currentTime(_ currentTime: Foundation.TimeInterval?) -> LensCustomerSDK.LottieView<Placeholder>
+  #endif
   @_Concurrency.MainActor @preconcurrency public func reloadAnimationTrigger(_ value: some Equatable, showPlaceholder: Swift.Bool = true) -> LensCustomerSDK.LottieView<Placeholder>
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS 15.0, tvOS 15.0, macOS 12.0, *)
   @_Concurrency.MainActor @preconcurrency public func getRealtimeAnimationProgress(_ realtimeAnimationProgress: SwiftUICore.Binding<LensCustomerSDK.AnimationProgressTime>?) -> some SwiftUICore.View
   
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(iOS 15.0, tvOS 15.0, macOS 12.0, *)
   @_Concurrency.MainActor @preconcurrency public func getRealtimeAnimationFrame(_ realtimeAnimationFrame: SwiftUICore.Binding<LensCustomerSDK.AnimationFrameTime>?) -> some SwiftUICore.View
   
+  #endif
   @_Concurrency.MainActor @preconcurrency public func dotLottieConfigurationComponents(_ dotLottieConfigurationComponents: LensCustomerSDK.DotLottieConfigurationComponents) -> LensCustomerSDK.LottieView<Placeholder>
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias Body = @_opaqueReturnTypeOf("$s15LensCustomerSDK10LottieViewV4bodyQrvp", 0) __<Placeholder>
 }
 final public class SizeValueProvider {
@@ -2024,22 +2401,44 @@ extension Swift.Bool {
   }
 }
 @objc @_hasMissingDesignatedInitializers public class LottieAnimationLayer : QuartzCore.CALayer {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(animation: LensCustomerSDK.LottieAnimation?, imageProvider: (any LensCustomerSDK.AnimationImageProvider)? = nil, textProvider: any LensCustomerSDK.AnimationKeypathTextProvider = DefaultTextProvider(), fontProvider: any LensCustomerSDK.AnimationFontProvider = DefaultFontProvider(), configuration: LensCustomerSDK.LottieConfiguration = .shared, logger: LensCustomerSDK.LottieLogger = .shared)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(dotLottie: LensCustomerSDK.DotLottieFile?, animationId: Swift.String? = nil, textProvider: any LensCustomerSDK.AnimationKeypathTextProvider = DefaultTextProvider(), fontProvider: any LensCustomerSDK.AnimationFontProvider = DefaultFontProvider(), configuration: LensCustomerSDK.LottieConfiguration = .shared, logger: LensCustomerSDK.LottieLogger = .shared)
+  #endif
   public init(configuration: LensCustomerSDK.LottieConfiguration = .shared, logger: LensCustomerSDK.LottieLogger = .shared)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func play(completion: LensCustomerSDK.LottieCompletionBlock? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func play(fromProgress: LensCustomerSDK.AnimationProgressTime? = nil, toProgress: LensCustomerSDK.AnimationProgressTime, loopMode: LensCustomerSDK.LottieLoopMode? = nil, completion: LensCustomerSDK.LottieCompletionBlock? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func play(fromFrame: LensCustomerSDK.AnimationFrameTime? = nil, toFrame: LensCustomerSDK.AnimationFrameTime, loopMode: LensCustomerSDK.LottieLoopMode? = nil, completion: LensCustomerSDK.LottieCompletionBlock? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func play(fromMarker: Swift.String? = nil, toMarker: Swift.String, playEndMarkerFrame: Swift.Bool = true, loopMode: LensCustomerSDK.LottieLoopMode? = nil, completion: LensCustomerSDK.LottieCompletionBlock? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func play(marker: Swift.String, loopMode: LensCustomerSDK.LottieLoopMode? = nil, completion: LensCustomerSDK.LottieCompletionBlock? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func play(markers: [Swift.String], completion: LensCustomerSDK.LottieCompletionBlock? = nil)
+  #endif
   open func stop()
   open func pause()
   open func pause(at state: LensCustomerSDK.LottiePlaybackMode.PausedState)
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, renamed: "setPlaybackMode(_:completion:)", message: "Will be removed in a future major release.")
   open func play(_ playbackMode: LensCustomerSDK.LottiePlaybackMode, animationCompletionHandler: LensCustomerSDK.LottieCompletionBlock? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func setPlaybackMode(_ playbackMode: LensCustomerSDK.LottiePlaybackMode, completion: LensCustomerSDK.LottieCompletionBlock? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   open func play(_ playbackMode: LensCustomerSDK.LottiePlaybackMode.PlaybackMode, completion: LensCustomerSDK.LottieCompletionBlock? = nil)
+  #endif
   public var currentPlaybackMode: LensCustomerSDK.LottiePlaybackMode? {
     get
   }
@@ -2051,9 +2450,11 @@ extension Swift.Bool {
     get
     set
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public var animationLayer: QuartzCore.CALayer? {
     get
   }
+  #endif
   public var screenScale: CoreFoundation.CGFloat {
     get
     set
@@ -2123,28 +2524,46 @@ extension Swift.Bool {
     get
     set
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public var currentRenderingEngine: LensCustomerSDK.RenderingEngine? {
     get
   }
+  #endif
   public var mainThreadRenderingEngineShouldForceDisplayUpdateOnEachFrame: Swift.Bool {
     get
     set
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public func loadAnimation(_ animationId: Swift.String? = nil, from dotLottieFile: LensCustomerSDK.DotLottieFile)
+  #endif
   public func loadAnimation(atIndex index: Swift.Int, from dotLottieFile: LensCustomerSDK.DotLottieFile)
   public func reloadImages()
   public func forceDisplayUpdate()
   public func setValueProvider(_ valueProvider: any LensCustomerSDK.AnyValueProvider, keypath: LensCustomerSDK.AnimationKeypath)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getValue(for keypath: LensCustomerSDK.AnimationKeypath, atFrame: LensCustomerSDK.AnimationFrameTime?) -> Any?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getOriginalValue(for keypath: LensCustomerSDK.AnimationKeypath, atFrame: LensCustomerSDK.AnimationFrameTime?) -> Any?
+  #endif
   public func logHierarchyKeypaths()
   public func allHierarchyKeypaths() -> [Swift.String]
+  #if compiler(>=5.3) && $NonescapableTypes
   public func convert(_ rect: CoreFoundation.CGRect, toLayerAt keypath: LensCustomerSDK.AnimationKeypath?) -> CoreFoundation.CGRect?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func convert(_ point: CoreFoundation.CGPoint, toLayerAt keypath: LensCustomerSDK.AnimationKeypath?) -> CoreFoundation.CGPoint?
+  #endif
   public func setNodeIsEnabled(isEnabled: Swift.Bool, keypath: LensCustomerSDK.AnimationKeypath)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func progressTime(forMarker named: Swift.String) -> LensCustomerSDK.AnimationProgressTime?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func frameTime(forMarker named: Swift.String) -> LensCustomerSDK.AnimationFrameTime?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func durationFrameTime(forMarker named: Swift.String) -> LensCustomerSDK.AnimationFrameTime?
+  #endif
   public func updateAnimationForBackgroundState()
   public func updateAnimationForForegroundState(wasWaitingToPlayAnimation: Swift.Bool)
   @objc deinit
@@ -2152,7 +2571,9 @@ extension Swift.Bool {
 public class FilepathImageProvider : LensCustomerSDK.AnimationImageProvider {
   public init(filepath: Swift.String, contentsGravity: QuartzCore.CALayerContentsGravity = .resize)
   public init(filepath: Foundation.URL, contentsGravity: QuartzCore.CALayerContentsGravity = .resize)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func imageForAsset(asset: LensCustomerSDK.ImageAsset) -> CoreGraphics.CGImage?
+  #endif
   public func contentsGravity(for _: LensCustomerSDK.ImageAsset) -> QuartzCore.CALayerContentsGravity
   @objc deinit
 }
@@ -2186,8 +2607,8 @@ public enum LottiePlaybackMode : Swift.Hashable {
     case frame(_: LensCustomerSDK.AnimationFrameTime)
     case time(_: Foundation.TimeInterval)
     case marker(_: Swift.String, position: LensCustomerSDK.LottieMarkerPosition = .start)
-    public func hash(into hasher: inout Swift.Hasher)
     public static func == (a: LensCustomerSDK.LottiePlaybackMode.PausedState, b: LensCustomerSDK.LottiePlaybackMode.PausedState) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
@@ -2198,14 +2619,14 @@ public enum LottiePlaybackMode : Swift.Hashable {
     case fromMarker(_: Swift.String?, toMarker: Swift.String, playEndMarkerFrame: Swift.Bool = true, loopMode: LensCustomerSDK.LottieLoopMode)
     case marker(_: Swift.String, loopMode: LensCustomerSDK.LottieLoopMode)
     case markers(_: [Swift.String])
-    public func hash(into hasher: inout Swift.Hasher)
     public static func == (a: LensCustomerSDK.LottiePlaybackMode.PlaybackMode, b: LensCustomerSDK.LottiePlaybackMode.PlaybackMode) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
   }
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: LensCustomerSDK.LottiePlaybackMode, b: LensCustomerSDK.LottiePlaybackMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -2236,20 +2657,30 @@ public enum LottieMarkerPosition : Swift.Hashable {
   }
 }
 extension UIKit.UIViewController {
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func addChildren(viewController: UIKit.UIViewController, containerView: UIKit.UIView? = nil, isSafeArea: Swift.Bool = false)
+  #endif
 }
 public typealias AnimationFrameTime = CoreFoundation.CGFloat
 public typealias AnimationProgressTime = CoreFoundation.CGFloat
 @_hasMissingDesignatedInitializers public class VMJsonManager {
+  #if compiler(>=5.3) && $NonescapableTypes
   public class func convertToDictionary(text: Swift.String) -> [Swift.String : Any]?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public class func data(jsonObject: Any) -> Foundation.Data?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public class func formData(jsonObject: [Swift.String : Any]?) -> Foundation.Data?
+  #endif
   public class func json(data: Foundation.Data) -> Any
   public class func isValid(json: Any) -> Swift.Bool
   @objc deinit
 }
 public protocol SSLTrustValidator {
+  #if compiler(>=5.3) && $NonescapableTypes
   func isValid(_ trust: Security.SecTrust, domain: Swift.String?) -> Swift.Bool
+  #endif
 }
 open class SSLCert {
   public init(data: Foundation.Data)
@@ -2261,9 +2692,15 @@ open class SSLSecurity : LensCustomerSDK.SSLTrustValidator {
   public var validateEntireChain: Swift.Bool
   convenience public init(usePublicKeys: Swift.Bool = false)
   public init(certs: [LensCustomerSDK.SSLCert], usePublicKeys: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
   open func isValid(_ trust: Security.SecTrust, domain: Swift.String?) -> Swift.Bool
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func extractPublicKey(_ data: Foundation.Data) -> Security.SecKey?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func extractPublicKey(_ cert: Security.SecCertificate, policy: Security.SecPolicy) -> Security.SecKey?
+  #endif
   public func certificateChain(_ trust: Security.SecTrust) -> [Foundation.Data]
   public func publicKeyChain(_ trust: Security.SecTrust) -> [Security.SecKey]
   @objc deinit
@@ -2296,23 +2733,47 @@ extension LensCustomerSDK.LottieLoopMode : Swift.Equatable {
   public static func == (lhs: LensCustomerSDK.LottieLoopMode, rhs: LensCustomerSDK.LottieLoopMode) -> Swift.Bool
 }
 @objc @_inheritsConvenienceInitializers @IBDesignable @_Concurrency.MainActor @preconcurrency open class LottieAnimationView : LensCustomerSDK.LottieAnimationViewBase {
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public init(animation: LensCustomerSDK.LottieAnimation?, imageProvider: (any LensCustomerSDK.AnimationImageProvider)? = nil, textProvider: any LensCustomerSDK.AnimationKeypathTextProvider = DefaultTextProvider(), fontProvider: any LensCustomerSDK.AnimationFontProvider = DefaultFontProvider(), configuration: LensCustomerSDK.LottieConfiguration = .shared, logger: LensCustomerSDK.LottieLogger = .shared)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public init(dotLottie: LensCustomerSDK.DotLottieFile?, animationId: Swift.String? = nil, textProvider: any LensCustomerSDK.AnimationKeypathTextProvider = DefaultTextProvider(), fontProvider: any LensCustomerSDK.AnimationFontProvider = DefaultFontProvider(), configuration: LensCustomerSDK.LottieConfiguration = .shared, logger: LensCustomerSDK.LottieLogger = .shared)
+  #endif
   @_Concurrency.MainActor @preconcurrency public init(configuration: LensCustomerSDK.LottieConfiguration = .shared, logger: LensCustomerSDK.LottieLogger = .shared)
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency open func play(_ mode: LensCustomerSDK.LottiePlaybackMode.PlaybackMode, completion: LensCustomerSDK.LottieCompletionBlock? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency open func play(completion: LensCustomerSDK.LottieCompletionBlock? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency open func play(fromProgress: LensCustomerSDK.AnimationProgressTime? = nil, toProgress: LensCustomerSDK.AnimationProgressTime, loopMode: LensCustomerSDK.LottieLoopMode? = nil, completion: LensCustomerSDK.LottieCompletionBlock? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency open func play(fromFrame: LensCustomerSDK.AnimationFrameTime? = nil, toFrame: LensCustomerSDK.AnimationFrameTime, loopMode: LensCustomerSDK.LottieLoopMode? = nil, completion: LensCustomerSDK.LottieCompletionBlock? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency open func play(fromMarker: Swift.String? = nil, toMarker: Swift.String, playEndMarkerFrame: Swift.Bool = true, loopMode: LensCustomerSDK.LottieLoopMode? = nil, completion: LensCustomerSDK.LottieCompletionBlock? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency open func play(marker: Swift.String, loopMode: LensCustomerSDK.LottieLoopMode? = nil, completion: LensCustomerSDK.LottieCompletionBlock? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency open func play(markers: [Swift.String], completion: LensCustomerSDK.LottieCompletionBlock? = nil)
+  #endif
   @_Concurrency.MainActor @preconcurrency open func stop()
   @_Concurrency.MainActor @preconcurrency open func pause()
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, renamed: "setPlaybackMode(_:completion:)", message: "Will be removed in a future major release.")
   @_Concurrency.MainActor @preconcurrency open func play(_ playbackMode: LensCustomerSDK.LottiePlaybackMode, animationCompletionHandler: LensCustomerSDK.LottieCompletionBlock? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency open func setPlaybackMode(_ playbackMode: LensCustomerSDK.LottiePlaybackMode, completion: LensCustomerSDK.LottieCompletionBlock? = nil)
+  #endif
   @_Concurrency.MainActor @preconcurrency public var animateLayoutChangesWithCurrentCoreAnimationContext: Swift.Bool
   @_Concurrency.MainActor @preconcurrency public var configuration: LensCustomerSDK.LottieConfiguration {
     get
@@ -2325,10 +2786,12 @@ extension LensCustomerSDK.LottieLoopMode : Swift.Equatable {
     get
     set
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public var animation: LensCustomerSDK.LottieAnimation? {
     get
     set
   }
+  #endif
   @_Concurrency.MainActor @preconcurrency public var animationLoaded: ((_ animationView: LensCustomerSDK.LottieAnimationView, _ animation: LensCustomerSDK.LottieAnimation) -> Swift.Void)? {
     get
     set
@@ -2396,32 +2859,52 @@ extension LensCustomerSDK.LottieLoopMode : Swift.Equatable {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public var intrinsicContentSize: CoreFoundation.CGSize {
     @objc get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public var currentRenderingEngine: LensCustomerSDK.RenderingEngine? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public var currentPlaybackMode: LensCustomerSDK.LottiePlaybackMode? {
     get
   }
+  #endif
   @_Concurrency.MainActor @preconcurrency public var mainThreadRenderingEngineShouldForceDisplayUpdateOnEachFrame: Swift.Bool {
     get
     set
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func loadAnimation(_ animationId: Swift.String? = nil, from dotLottieFile: LensCustomerSDK.DotLottieFile)
+  #endif
   @_Concurrency.MainActor @preconcurrency public func loadAnimation(atIndex index: Swift.Int, from dotLottieFile: LensCustomerSDK.DotLottieFile)
   @_Concurrency.MainActor @preconcurrency public func reloadImages()
   @_Concurrency.MainActor @preconcurrency public func forceDisplayUpdate()
   @_Concurrency.MainActor @preconcurrency public func setValueProvider(_ valueProvider: any LensCustomerSDK.AnyValueProvider, keypath: LensCustomerSDK.AnimationKeypath)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func getValue(for keypath: LensCustomerSDK.AnimationKeypath, atFrame: LensCustomerSDK.AnimationFrameTime?) -> Any?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func getOriginalValue(for keypath: LensCustomerSDK.AnimationKeypath, atFrame: LensCustomerSDK.AnimationFrameTime?) -> Any?
+  #endif
   @_Concurrency.MainActor @preconcurrency public func logHierarchyKeypaths()
   @_Concurrency.MainActor @preconcurrency public func allHierarchyKeypaths() -> [Swift.String]
   @_Concurrency.MainActor @preconcurrency public func addSubview(_ subview: LensCustomerSDK.AnimationSubview, forLayerAt keypath: LensCustomerSDK.AnimationKeypath)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func convert(_ rect: CoreFoundation.CGRect, toLayerAt keypath: LensCustomerSDK.AnimationKeypath?) -> CoreFoundation.CGRect?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func convert(_ point: CoreFoundation.CGPoint, toLayerAt keypath: LensCustomerSDK.AnimationKeypath?) -> CoreFoundation.CGPoint?
+  #endif
   @_Concurrency.MainActor @preconcurrency public func setNodeIsEnabled(isEnabled: Swift.Bool, keypath: LensCustomerSDK.AnimationKeypath)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func progressTime(forMarker named: Swift.String) -> LensCustomerSDK.AnimationProgressTime?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func frameTime(forMarker named: Swift.String) -> LensCustomerSDK.AnimationFrameTime?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func durationFrameTime(forMarker named: Swift.String) -> LensCustomerSDK.AnimationFrameTime?
+  #endif
   @objc deinit
 }
 public class DotLottieCache : LensCustomerSDK.DotLottieCacheProvider {
@@ -2432,14 +2915,18 @@ public class DotLottieCache : LensCustomerSDK.DotLottieCacheProvider {
     set
   }
   public func clearCache()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func file(forKey key: Swift.String) -> LensCustomerSDK.DotLottieFile?
+  #endif
   public func setFile(_ lottie: LensCustomerSDK.DotLottieFile, forKey key: Swift.String)
   @objc deinit
 }
 extension LensCustomerSDK.DotLottieCache : @unchecked Swift.Sendable {
 }
 public protocol AnimationCacheProvider : AnyObject, Swift.Sendable {
+  #if compiler(>=5.3) && $NonescapableTypes
   func animation(forKey: Swift.String) -> LensCustomerSDK.LottieAnimation?
+  #endif
   func setAnimation(_ animation: LensCustomerSDK.LottieAnimation, forKey: Swift.String)
   func clearCache()
 }
@@ -2448,7 +2935,9 @@ extension Foundation.TimeZone {
   public func hoursFromGMTWithSign() -> Swift.String
 }
 @_Concurrency.MainActor @preconcurrency public struct LottieButton {
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public init(animation: LensCustomerSDK.LottieAnimation?, action: @escaping () -> Swift.Void)
+  #endif
   @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
     get
   }
@@ -2457,7 +2946,6 @@ extension Foundation.TimeZone {
   @_Concurrency.MainActor @preconcurrency public func animate(fromProgress: LensCustomerSDK.AnimationProgressTime, toProgress: LensCustomerSDK.AnimationProgressTime, on event: LensCustomerSDK.LottieControlEvent) -> LensCustomerSDK.LottieButton
   @_Concurrency.MainActor @preconcurrency public func animate(fromMarker: Swift.String, toMarker: Swift.String, on event: LensCustomerSDK.LottieControlEvent) -> LensCustomerSDK.LottieButton
   @_Concurrency.MainActor @preconcurrency public func valueProvider<ValueProvider>(_ valueProvider: ValueProvider, for keypath: LensCustomerSDK.AnimationKeypath) -> LensCustomerSDK.LottieButton where ValueProvider : LensCustomerSDK.AnyValueProvider, ValueProvider : Swift.Equatable
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias Body = @_opaqueReturnTypeOf("$s15LensCustomerSDK12LottieButtonV4bodyQrvp", 0) __
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class ImageAsset : LensCustomerSDK.Asset {
@@ -2488,10 +2976,12 @@ extension UIKit.UIView {
     @objc get
     @objc set(newValue)
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var atBorderColor: UIKit.UIColor? {
     @objc get
     @objc set(newValue)
   }
+  #endif
   @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var borderWidth: CoreFoundation.CGFloat {
     @objc get
     @objc set
@@ -2500,10 +2990,12 @@ extension UIKit.UIView {
     @objc get
     @objc set
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var shadowColor: UIKit.UIColor? {
     @objc get
     @objc set
   }
+  #endif
   @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var shadowOpacity: Swift.Float {
     @objc get
     @objc set
@@ -2518,15 +3010,21 @@ extension UIKit.UIView {
 }
 public protocol AssistSocketProtocol : AnyObject {
   func didSocketConnected()
+  #if compiler(>=5.3) && $NonescapableTypes
   func didSocketDisconnected(_ error: (any Swift.Error)?)
+  #endif
   func didReceive(_ data: Foundation.Data)
   func didReceive(_ string: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
   func custom_socket(call_back listerner: any LensCustomerSDK.WebSocketCallBack) -> (any LensCustomerSDK.WebSocketProtocol)?
+  #endif
   var canReceiveData: Swift.Bool { get set }
 }
 public protocol WebSocketCallBack : AnyObject {
   func onConnect()
+  #if compiler(>=5.3) && $NonescapableTypes
   func onDisconnect(error: (any Swift.Error)?)
+  #endif
   func onTextReceive(_ text: Swift.String)
   func onDataReceive(_ data: Foundation.Data)
 }
@@ -2566,7 +3064,9 @@ extension UIKit.UIDevice {
     case iPhoneX_iPhoneXS
     case iPhoneXSMax
     case unknown
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     @available(iOS 2.0, *)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -2583,7 +3083,9 @@ extension UIKit.UIScreen {
   }
 }
 @_Concurrency.MainActor @preconcurrency public struct LottieSwitch {
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public init(animation: LensCustomerSDK.LottieAnimation?)
+  #endif
   @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
     get
   }
@@ -2593,35 +3095,66 @@ extension UIKit.UIScreen {
   @_Concurrency.MainActor @preconcurrency public func onAnimation(fromProgress onStartProgress: LensCustomerSDK.AnimationProgressTime, toProgress onEndProgress: LensCustomerSDK.AnimationProgressTime) -> LensCustomerSDK.LottieSwitch
   @_Concurrency.MainActor @preconcurrency public func offAnimation(fromProgress offStartProgress: LensCustomerSDK.AnimationProgressTime, toProgress offEndProgress: LensCustomerSDK.AnimationProgressTime) -> LensCustomerSDK.LottieSwitch
   @_Concurrency.MainActor @preconcurrency public func valueProvider<ValueProvider>(_ valueProvider: ValueProvider, for keypath: LensCustomerSDK.AnimationKeypath) -> LensCustomerSDK.LottieSwitch where ValueProvider : LensCustomerSDK.AnyValueProvider, ValueProvider : Swift.Equatable
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias Body = @_opaqueReturnTypeOf("$s15LensCustomerSDK12LottieSwitchV4bodyQrvp", 0) __
 }
 extension LensCustomerSDK.DotLottieFile {
   public enum SynchronouslyBlockingCurrentThread {
+    #if compiler(>=5.3) && $NonescapableTypes
     public static func loadedFrom(filepath: Swift.String, dotLottieCache: (any LensCustomerSDK.DotLottieCacheProvider)? = DotLottieCache.sharedCache) -> Swift.Result<LensCustomerSDK.DotLottieFile, any Swift.Error>
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
     public static func named(_ name: Swift.String, bundle: Foundation.Bundle = Bundle.main, subdirectory: Swift.String? = nil, dotLottieCache: (any LensCustomerSDK.DotLottieCacheProvider)? = DotLottieCache.sharedCache) -> Swift.Result<LensCustomerSDK.DotLottieFile, any Swift.Error>
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
     public static func loadedFrom(data: Foundation.Data, filename: Swift.String) -> Swift.Result<LensCustomerSDK.DotLottieFile, any Swift.Error>
+    #endif
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func named(_ name: Swift.String, bundle: Foundation.Bundle = Bundle.main, subdirectory: Swift.String? = nil, dotLottieCache: (any LensCustomerSDK.DotLottieCacheProvider)? = DotLottieCache.sharedCache) async throws -> LensCustomerSDK.DotLottieFile
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func named(_ name: Swift.String, bundle: Foundation.Bundle = Bundle.main, subdirectory: Swift.String? = nil, dotLottieCache: (any LensCustomerSDK.DotLottieCacheProvider)? = DotLottieCache.sharedCache, dispatchQueue: Dispatch.DispatchQueue = .dotLottie, handleResult: @escaping (Swift.Result<LensCustomerSDK.DotLottieFile, any Swift.Error>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func loadedFrom(filepath: Swift.String, dotLottieCache: (any LensCustomerSDK.DotLottieCacheProvider)? = DotLottieCache.sharedCache) async throws -> LensCustomerSDK.DotLottieFile
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func loadedFrom(filepath: Swift.String, dotLottieCache: (any LensCustomerSDK.DotLottieCacheProvider)? = DotLottieCache.sharedCache, dispatchQueue: Dispatch.DispatchQueue = .dotLottie, handleResult: @escaping (Swift.Result<LensCustomerSDK.DotLottieFile, any Swift.Error>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func asset(named name: Swift.String, bundle: Foundation.Bundle = Bundle.main, dotLottieCache: (any LensCustomerSDK.DotLottieCacheProvider)? = DotLottieCache.sharedCache) async throws -> LensCustomerSDK.DotLottieFile
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func asset(named name: Swift.String, bundle: Foundation.Bundle = Bundle.main, dotLottieCache: (any LensCustomerSDK.DotLottieCacheProvider)? = DotLottieCache.sharedCache, dispatchQueue: Dispatch.DispatchQueue = .dotLottie, handleResult: @escaping (Swift.Result<LensCustomerSDK.DotLottieFile, any Swift.Error>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func loadedFrom(url: Foundation.URL, session: Foundation.URLSession = .shared, dotLottieCache: (any LensCustomerSDK.DotLottieCacheProvider)? = DotLottieCache.sharedCache) async throws -> LensCustomerSDK.DotLottieFile
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func loadedFrom(url: Foundation.URL, session: Foundation.URLSession = .shared, dotLottieCache: (any LensCustomerSDK.DotLottieCacheProvider)? = DotLottieCache.sharedCache, handleResult: @escaping (Swift.Result<LensCustomerSDK.DotLottieFile, any Swift.Error>) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func loadedFrom(data: Foundation.Data, filename: Swift.String, dispatchQueue: Dispatch.DispatchQueue = .dotLottie, handleResult: @escaping (Swift.Result<LensCustomerSDK.DotLottieFile, any Swift.Error>) -> Swift.Void)
+  #endif
   public static func loadedFrom(data: Foundation.Data, filename: Swift.String, dispatchQueue: Dispatch.DispatchQueue = .dotLottie) async throws -> LensCustomerSDK.DotLottieFile
 }
 extension Dispatch.DispatchQueue {
   public static let dotLottie: Dispatch.DispatchQueue
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class AnimatedButton : LensCustomerSDK.AnimatedControl {
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency override public init(animation: LensCustomerSDK.LottieAnimation?, configuration: LensCustomerSDK.LottieConfiguration = .shared)
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func beginTracking(_ touch: UIKit.UITouch, with event: UIKit.UIEvent?) -> Swift.Bool
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func endTracking(_ touch: UIKit.UITouch?, with event: UIKit.UIEvent?)
+  #endif
   @_Concurrency.MainActor @preconcurrency public var performAction: (() -> Swift.Void)?
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public var accessibilityTraits: UIKit.UIAccessibilityTraits {
     @objc get
@@ -2645,14 +3178,18 @@ public class DisposableObserver : Swift.Equatable {
   @objc deinit
 }
 public protocol DotLottieCacheProvider : Swift.Sendable {
+  #if compiler(>=5.3) && $NonescapableTypes
   func file(forKey: Swift.String) -> LensCustomerSDK.DotLottieFile?
+  #endif
   func setFile(_ lottie: LensCustomerSDK.DotLottieFile, forKey: Swift.String)
   func clearCache()
 }
 extension UIKit.UISearchBar {
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public var at_searchTextField: UIKit.UITextField? {
     get
   }
+  #endif
 }
 public class VMResponseSerialization {
   public var responseType: LensCustomerSDK.VMResponseType
@@ -2666,15 +3203,17 @@ public struct LottieConfiguration : Swift.Hashable {
   public var decodingStrategy: LensCustomerSDK.DecodingStrategy
   public var reducedMotionOption: LensCustomerSDK.ReducedMotionOption
   public var colorSpace: CoreGraphics.CGColorSpace
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: LensCustomerSDK.LottieConfiguration, b: LensCustomerSDK.LottieConfiguration) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency final public class AnimationSubview : UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 public enum LottieAnimationCache {
@@ -2702,7 +3241,9 @@ public class DefaultAnimationCache : LensCustomerSDK.AnimationCacheProvider {
     set
   }
   public func clearCache()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func animation(forKey key: Swift.String) -> LensCustomerSDK.LottieAnimation?
+  #endif
   public func setAnimation(_ animation: LensCustomerSDK.LottieAnimation, forKey key: Swift.String)
   @objc deinit
 }
@@ -2711,12 +3252,18 @@ extension LensCustomerSDK.DefaultAnimationCache : @unchecked Swift.Sendable {
 @objc @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
 @_Concurrency.MainActor @preconcurrency public class NotificationView : UIKit.UIView {
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var messageLabel: UIKit.UILabel!
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public static func getNotificationView() -> LensCustomerSDK.NotificationView?
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
   @_Concurrency.MainActor @preconcurrency public func show()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func dismiss(completion: (() -> ())? = nil)
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 @available(iOSApplicationExtension, unavailable)
@@ -2730,8 +3277,12 @@ extension UIKit.UIView {
       get
     }
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func showNotificationInWindow(message: Swift.String, bgColor: UIKit.UIColor? = nil, textColor: UIKit.UIColor? = nil, show duration: Foundation.TimeInterval = 4, style: UIKit.UIView.NotificationBannerStyle = .banner, completion: (() -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func showNotificationBanner(message: Swift.String, bgColor: UIKit.UIColor? = nil, textColor: UIKit.UIColor? = nil, show duration: Foundation.TimeInterval = 4, style: UIKit.UIView.NotificationBannerStyle = .banner, completion: (() -> Swift.Void)? = nil)
+  #endif
   @_Concurrency.MainActor @preconcurrency public func dismissNotificationView()
 }
 extension LensCustomerSDK.LottieType {
@@ -2746,19 +3297,29 @@ extension LensCustomerSDK.LottieType {
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var lottieContainerWidth: UIKit.NSLayoutConstraint!
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var messageLabel: UIKit.UILabel!
   @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var actionButton: UIKit.UIButton!
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public var lottie: LensCustomerSDK.LottieAnimationView? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public static func instance(lottieType: any LensCustomerSDK.LottieType, messageLabelConfig: ((UIKit.UILabel) -> Swift.Void)? = nil, customView: UIKit.UIView? = nil, actionButtonConfiguration: ((UIKit.UIButton) -> (() -> Swift.Void)?)? = nil) -> LensCustomerSDK.LottieMessageView
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public static func instance(with lottieType: any LensCustomerSDK.LottieType, withCustomMessage message: Swift.String? = nil, lineCount: Swift.Int? = -1, customView: UIKit.UIView? = nil, actionButtonConfiguration: ((UIKit.UIButton) -> (() -> Swift.Void)?)? = nil) -> LensCustomerSDK.LottieMessageView
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func layoutSubviews()
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func awakeFromNib()
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  #endif
   @objc deinit
 }
 final public class GradientValueProvider {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(block: @escaping LensCustomerSDK.GradientValueProvider.ColorsValueBlock, locations: LensCustomerSDK.GradientValueProvider.ColorLocationsBlock? = nil)
+  #endif
   public init(_ colors: [LensCustomerSDK.LottieColor], locations: [Swift.Double] = [])
   public typealias ColorsValueBlock = (CoreFoundation.CGFloat) -> [LensCustomerSDK.LottieColor]
   public typealias ColorLocationsBlock = (CoreFoundation.CGFloat) -> [Swift.Double]
@@ -2810,16 +3371,24 @@ extension Swift.String {
   public func subString(toIndex: Swift.Int) -> Swift.String
   public static func < (lhs: Swift.String, rhs: Swift.Int) -> Swift.String
   public func copyInClipboard()
+  #if compiler(>=5.3) && $NonescapableTypes
   public var utf8Data: Foundation.Data? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var isoLatin1Data: Foundation.Data? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var asciiData: Foundation.Data? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func data(encode: Swift.String.Encoding) -> Foundation.Data?
+  #endif
   public var splitByNewLine: [Swift.String] {
     get
   }
@@ -2834,7 +3403,9 @@ extension UIKit.UIBarButtonItem {
 }
 public enum ContentType : Swift.String {
   case jsonType, formType
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -2849,15 +3420,21 @@ public class VMRequestSerialization {
     set(newValue)
   }
   public init(timeOutInterval: Foundation.TimeInterval = 60)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func setValue(_ value: Swift.String?, forHTTPField: Swift.String)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func value(_ forHTTPField: Swift.String) -> Swift.String?
+  #endif
   public func setValues(_ values: [LensCustomerSDK.VMRequestSerialization.HTTPField : Swift.String])
   public func addValue(_ value: Swift.String, forHTTPField key: Swift.String)
   public func addValues(_ values: [Swift.String], forHttpField key: Swift.String)
   @objc deinit
 }
 extension Foundation.Data {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func write(fileName: Swift.String, appendIntermediateDir path: Swift.String? = nil) throws -> Foundation.URL?
+  #endif
   public var mbSize: CoreFoundation.CGFloat {
     get
   }
@@ -2867,7 +3444,9 @@ extension Foundation.Data {
 }
 public protocol AnimationImageProvider {
   var cacheEligible: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   func imageForAsset(asset: LensCustomerSDK.ImageAsset) -> CoreGraphics.CGImage?
+  #endif
   func contentsGravity(for asset: LensCustomerSDK.ImageAsset) -> QuartzCore.CALayerContentsGravity
 }
 extension LensCustomerSDK.AnimationImageProvider {
@@ -2908,8 +3487,12 @@ extension LensCustomerSDK.PointValueProvider : Swift.Equatable {
   public static func == (lhs: LensCustomerSDK.PointValueProvider, rhs: LensCustomerSDK.PointValueProvider) -> Swift.Bool
 }
 final public class Keyframe<T> {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(_ value: T, spatialInTangent: LensCustomerSDK.LottieVector3D? = nil, spatialOutTangent: LensCustomerSDK.LottieVector3D? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(value: T, time: LensCustomerSDK.AnimationFrameTime, isHold: Swift.Bool = false, inTangent: LensCustomerSDK.LottieVector2D? = nil, outTangent: LensCustomerSDK.LottieVector2D? = nil, spatialInTangent: LensCustomerSDK.LottieVector3D? = nil, spatialOutTangent: LensCustomerSDK.LottieVector3D? = nil)
+  #endif
   final public let value: T
   final public let time: LensCustomerSDK.AnimationFrameTime
   final public let isHold: Swift.Bool
@@ -2931,16 +3514,26 @@ extension LensCustomerSDK.Keyframe : Swift.Hashable where T : Swift.Hashable {
 extension LensCustomerSDK.Keyframe : Swift.Sendable where T : Swift.Sendable {
 }
 extension UIKit.UIPopoverArrowDirection {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func defaultSourceRect(from view: UIKit.UIView) -> CoreFoundation.CGRect?
+  #endif
   public var isVerticalDirection: Swift.Bool {
     get
   }
 }
 extension UIKit.UIViewController {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @_Concurrency.MainActor @preconcurrency dynamic public func openShareSheet(_ data: [Any], popFromView view: UIKit.UIView, completionHandler completionBlock: ((Swift.Bool) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func openShareSheet(_ data: [Any], popFromView barbutton: UIKit.UIBarButtonItem, completionHandler completionBlock: ((Swift.Bool) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func prepareAsPopoverController(from view: UIKit.UIView, soruceRect: CoreFoundation.CGRect?, preferedSize contentSize: CoreFoundation.CGSize = .zero, permittedArrowDirections directions: UIKit.UIPopoverArrowDirection = .down)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func prepareAsPopoverController(from barButton: UIKit.UIBarButtonItem, soruceRect: CoreFoundation.CGRect?, preferedSize contentSize: CoreFoundation.CGSize = .zero, permittedArrowDirections directions: UIKit.UIPopoverArrowDirection = .down)
+  #endif
   @_Concurrency.MainActor @preconcurrency public func dismissPopoverIfExist()
 }
 extension UIKit.UIViewController : UIKit.UIPopoverPresentationControllerDelegate {
@@ -3007,23 +3600,41 @@ extension LensCustomerSDK.FloatValueProvider : Swift.Equatable {
   public static func == (lhs: LensCustomerSDK.FloatValueProvider, rhs: LensCustomerSDK.FloatValueProvider) -> Swift.Bool
 }
 extension LensCustomerSDK.LottieAnimationView {
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency convenience public init(name: Swift.String, bundle: Foundation.Bundle = Bundle.main, subdirectory: Swift.String? = nil, imageProvider: (any LensCustomerSDK.AnimationImageProvider)? = nil, animationCache: (any LensCustomerSDK.AnimationCacheProvider)? = LottieAnimationCache.shared, configuration: LensCustomerSDK.LottieConfiguration = .shared)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency convenience public init(filePath: Swift.String, imageProvider: (any LensCustomerSDK.AnimationImageProvider)? = nil, animationCache: (any LensCustomerSDK.AnimationCacheProvider)? = LottieAnimationCache.shared, configuration: LensCustomerSDK.LottieConfiguration = .shared)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency convenience public init(url: Foundation.URL, imageProvider: (any LensCustomerSDK.AnimationImageProvider)? = nil, session: Foundation.URLSession = .shared, closure: @escaping LensCustomerSDK.LottieAnimationView.DownloadClosure, animationCache: (any LensCustomerSDK.AnimationCacheProvider)? = LottieAnimationCache.shared, configuration: LensCustomerSDK.LottieConfiguration = .shared)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency convenience public init(asset name: Swift.String, bundle: Foundation.Bundle = Bundle.main, imageProvider: (any LensCustomerSDK.AnimationImageProvider)? = nil, animationCache: (any LensCustomerSDK.AnimationCacheProvider)? = LottieAnimationCache.shared, configuration: LensCustomerSDK.LottieConfiguration = .shared)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency convenience public init(dotLottieName name: Swift.String, bundle: Foundation.Bundle = Bundle.main, subdirectory: Swift.String? = nil, animationId: Swift.String? = nil, dotLottieCache: (any LensCustomerSDK.DotLottieCacheProvider)? = DotLottieCache.sharedCache, configuration: LensCustomerSDK.LottieConfiguration = .shared, completion: ((LensCustomerSDK.LottieAnimationView, (any Swift.Error)?) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency convenience public init(dotLottieFilePath filePath: Swift.String, animationId: Swift.String? = nil, dotLottieCache: (any LensCustomerSDK.DotLottieCacheProvider)? = DotLottieCache.sharedCache, configuration: LensCustomerSDK.LottieConfiguration = .shared, completion: ((LensCustomerSDK.LottieAnimationView, (any Swift.Error)?) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency convenience public init(dotLottieUrl url: Foundation.URL, animationId: Swift.String? = nil, dotLottieCache: (any LensCustomerSDK.DotLottieCacheProvider)? = DotLottieCache.sharedCache, configuration: LensCustomerSDK.LottieConfiguration = .shared, session: Foundation.URLSession = .shared, completion: ((LensCustomerSDK.LottieAnimationView, (any Swift.Error)?) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency convenience public init(dotLottieAsset name: Swift.String, bundle: Foundation.Bundle = Bundle.main, animationId: Swift.String? = nil, dotLottieCache: (any LensCustomerSDK.DotLottieCacheProvider)? = DotLottieCache.sharedCache, configuration: LensCustomerSDK.LottieConfiguration = .shared, completion: ((LensCustomerSDK.LottieAnimationView, (any Swift.Error)?) -> Swift.Void)? = nil)
+  #endif
   public typealias DownloadClosure = ((any Swift.Error)?) -> Swift.Void
 }
 public struct DotLottieConfiguration {
   public var id: Swift.String
   public var loopMode: LensCustomerSDK.LottieLoopMode
   public var speed: Swift.Double
+  #if compiler(>=5.3) && $NonescapableTypes
   public var imageProvider: (any LensCustomerSDK.AnimationImageProvider)? {
     get
   }
+  #endif
 }
 public struct DotLottieConfigurationComponents : Swift.OptionSet {
   public init(rawValue: Swift.Int)
@@ -3055,11 +3666,15 @@ extension UIKit.UIView {
   @objc deinit
 }
 public protocol AnimationFontProvider {
+  #if compiler(>=5.3) && $NonescapableTypes
   func fontFor(family: Swift.String, size: CoreFoundation.CGFloat) -> CoreText.CTFont?
+  #endif
 }
 final public class DefaultFontProvider : LensCustomerSDK.AnimationFontProvider {
   public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func fontFor(family: Swift.String, size: CoreFoundation.CGFloat) -> CoreText.CTFont?
+  #endif
   @objc deinit
 }
 extension LensCustomerSDK.DefaultFontProvider : Swift.Equatable {
@@ -3095,8 +3710,8 @@ public struct LottieColor : Swift.Hashable {
   public var b: Swift.Double
   public var a: Swift.Double
   public init(r: Swift.Double, g: Swift.Double, b: Swift.Double, a: Swift.Double, denominator: LensCustomerSDK.ColorFormatDenominator = .One)
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: LensCustomerSDK.LottieColor, b: LensCustomerSDK.LottieColor) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -3138,8 +3753,8 @@ extension LensCustomerSDK.LottieVector1D : Swift.Codable {
 public struct LottieVector2D : Swift.Codable, Swift.Hashable, Swift.Sendable {
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: LensCustomerSDK.LottieVector2D, b: LensCustomerSDK.LottieVector2D) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -3166,21 +3781,27 @@ public struct AnimationKeypath : Swift.Hashable, Swift.ExpressibleByStringLitera
   public var string: Swift.String {
     get
   }
-  public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: LensCustomerSDK.AnimationKeypath, b: LensCustomerSDK.AnimationKeypath) -> Swift.Bool
   public typealias ExtendedGraphemeClusterLiteralType = Swift.String
   public typealias StringLiteralType = Swift.String
   public typealias UnicodeScalarLiteralType = Swift.String
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class AnimatedSwitch : LensCustomerSDK.AnimatedControl {
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency override public init(animation: LensCustomerSDK.LottieAnimation?, configuration: LensCustomerSDK.LottieConfiguration = .shared)
+  #endif
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  #endif
   @_Concurrency.MainActor @preconcurrency override open func animationDidSet()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func endTracking(_ touch: UIKit.UITouch?, with event: UIKit.UIEvent?)
+  #endif
   public enum CancelBehavior {
     case reverse
     case none
@@ -3209,9 +3830,16 @@ extension Foundation.URL {
   public var params: [(Swift.String, Swift.String)] {
     get
   }
-  public func appendParams(param: [Swift.String : Any]) -> Foundation.URL?
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func appendNewQueryParams(param: [Swift.String : Any]) -> Foundation.URL?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func appendParams(param: [Swift.String : Swift.String]) -> Foundation.URL?
+  #endif
   public static func constructURLString(API: Swift.String, service: Swift.String, protocol protocolString: Swift.String, domain: Swift.String) -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func constructURL(API: Swift.String, service: Swift.String, protocol protocolString: Swift.String, domain: Swift.String) -> Foundation.URL?
+  #endif
 }
 extension UIKit.UIScrollView {
   @_Concurrency.MainActor @preconcurrency public func didScrollToEnd() -> Swift.Bool
@@ -3233,24 +3861,34 @@ extension Swift.Array {
 }
 extension Swift.Array where Element : Swift.Equatable {
   public func contains(_ element: Element) -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   public func index(of element: Element) -> Swift.Int?
+  #endif
   public mutating func remove(element: Element)
 }
 public protocol Interpolatable : LensCustomerSDK.AnyInterpolatable {
   func interpolate(to: Self, amount: CoreFoundation.CGFloat) -> Self
 }
 public protocol SpatialInterpolatable : LensCustomerSDK.AnyInterpolatable {
+  #if compiler(>=5.3) && $NonescapableTypes
   func interpolate(to: Self, amount: CoreFoundation.CGFloat, spatialOutTangent: CoreFoundation.CGPoint?, spatialInTangent: CoreFoundation.CGPoint?) -> Self
+  #endif
 }
 public protocol AnyInterpolatable {
+  #if compiler(>=5.3) && $NonescapableTypes
   func _interpolate(to: Self, amount: CoreFoundation.CGFloat, spatialOutTangent: CoreFoundation.CGPoint?, spatialInTangent: CoreFoundation.CGPoint?) -> Self
+  #endif
 }
 extension LensCustomerSDK.Interpolatable {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func _interpolate(to: Self, amount: CoreFoundation.CGFloat, spatialOutTangent _: CoreFoundation.CGPoint?, spatialInTangent _: CoreFoundation.CGPoint?) -> Self
+  #endif
 }
 extension LensCustomerSDK.SpatialInterpolatable {
   public func interpolate(to: Self, amount: CoreFoundation.CGFloat) -> Self
+  #if compiler(>=5.3) && $NonescapableTypes
   public func _interpolate(to: Self, amount: CoreFoundation.CGFloat, spatialOutTangent: CoreFoundation.CGPoint?, spatialInTangent: CoreFoundation.CGPoint?) -> Self
+  #endif
 }
 extension Swift.Double : LensCustomerSDK.Interpolatable {
 }
@@ -3268,7 +3906,9 @@ extension CoreFoundation.CGSize : LensCustomerSDK.Interpolatable {
   public func interpolate(to: CoreFoundation.CGSize, amount: CoreFoundation.CGFloat) -> CoreFoundation.CGSize
 }
 extension CoreFoundation.CGPoint : LensCustomerSDK.SpatialInterpolatable {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func interpolate(to: CoreFoundation.CGPoint, amount: CoreFoundation.CGFloat, spatialOutTangent: CoreFoundation.CGPoint?, spatialInTangent: CoreFoundation.CGPoint?) -> CoreFoundation.CGPoint
+  #endif
 }
 extension LensCustomerSDK.LottieColor : LensCustomerSDK.Interpolatable {
   public func interpolate(to: LensCustomerSDK.LottieColor, amount: CoreFoundation.CGFloat) -> LensCustomerSDK.LottieColor
@@ -3277,19 +3917,19 @@ extension LensCustomerSDK.LottieVector1D : LensCustomerSDK.Interpolatable {
   public func interpolate(to: LensCustomerSDK.LottieVector1D, amount: CoreFoundation.CGFloat) -> LensCustomerSDK.LottieVector1D
 }
 extension LensCustomerSDK.LottieVector2D : LensCustomerSDK.SpatialInterpolatable {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func interpolate(to: LensCustomerSDK.LottieVector2D, amount: CoreFoundation.CGFloat, spatialOutTangent: CoreFoundation.CGPoint?, spatialInTangent: CoreFoundation.CGPoint?) -> LensCustomerSDK.LottieVector2D
+  #endif
 }
 extension LensCustomerSDK.LottieVector3D : LensCustomerSDK.SpatialInterpolatable {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func interpolate(to: LensCustomerSDK.LottieVector3D, amount: CoreFoundation.CGFloat, spatialOutTangent: CoreFoundation.CGPoint?, spatialInTangent: CoreFoundation.CGPoint?) -> LensCustomerSDK.LottieVector3D
+  #endif
 }
 extension Swift.Array : LensCustomerSDK.Interpolatable, LensCustomerSDK.AnyInterpolatable where Element : LensCustomerSDK.Interpolatable {
   public func interpolate(to: [Element], amount: CoreFoundation.CGFloat) -> [Element]
 }
-#if compiler(>=5.3) && $NoncopyableGenerics
-extension Swift.Optional : LensCustomerSDK.Interpolatable, LensCustomerSDK.AnyInterpolatable where Wrapped : LensCustomerSDK.Interpolatable {
-  public func interpolate(to: Wrapped?, amount: CoreFoundation.CGFloat) -> Wrapped?
-}
-#else
+#if compiler(>=5.3) && $NonescapableTypes
 extension Swift.Optional : LensCustomerSDK.Interpolatable, LensCustomerSDK.AnyInterpolatable where Wrapped : LensCustomerSDK.Interpolatable {
   public func interpolate(to: Wrapped?, amount: CoreFoundation.CGFloat) -> Wrapped?
 }
@@ -3337,21 +3977,31 @@ public class SocketHandler {
   public func addListerner(_ object: any LensCustomerSDK.AssistSocketProtocol) -> LensCustomerSDK.DisposableObserver
   public func removeListerner(_ object: LensCustomerSDK.DisposableObserver)
   public func reset()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func write(_ string: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func write(_ data: Foundation.Data?)
+  #endif
   public func disconnect()
   @objc deinit
 }
 extension LensCustomerSDK.SocketHandler : LensCustomerSDK.WebSocketCallBack {
   public func onConnect()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func onDisconnect(error: (any Swift.Error)?)
+  #endif
   public func onTextReceive(_ text: Swift.String)
   public func onDataReceive(_ data: Foundation.Data)
 }
 public protocol LottieType {
   var lottie: LensCustomerSDK.LottieAnimationView { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var size: CoreFoundation.CGSize? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var message: Swift.String? { get }
+  #endif
 }
 public enum LensAnnotationType : Swift.String {
   case none, measurement, rectangle, ellipse, pencil, arrow, pointer
@@ -3367,7 +4017,9 @@ public enum LensAnnotationType : Swift.String {
   public var isPointer: Swift.Bool {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -3388,7 +4040,9 @@ public enum FreeStyleState : Swift.CustomStringConvertible {
   case auto
   case aspectFit
   case aspectFill
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -3398,7 +4052,9 @@ public enum FreeStyleState : Swift.CustomStringConvertible {
   case auto
   case alwaysPortrait
   case alwaysLandscape
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -3407,7 +4063,9 @@ public enum FreeStyleState : Swift.CustomStringConvertible {
 @objc public enum RecordARMicrophonePermission : Swift.Int {
   case auto
   case manual
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -3418,7 +4076,9 @@ public enum FreeStyleState : Swift.CustomStringConvertible {
   case readyToRecord
   case recording
   case paused
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -3428,7 +4088,9 @@ public enum FreeStyleState : Swift.CustomStringConvertible {
   case unknown
   case enabled
   case disabled
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -3438,7 +4100,9 @@ public enum VideoResolution : CoreFoundation.CGFloat {
   case resolution_720p
   case resolution_480p
   case resolution_360p
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: CoreFoundation.CGFloat)
+  #endif
   public typealias RawValue = CoreFoundation.CGFloat
   public var rawValue: CoreFoundation.CGFloat {
     get
@@ -3451,7 +4115,9 @@ public enum VideoResolution : CoreFoundation.CGFloat {
     get
   }
   @_Concurrency.MainActor @preconcurrency @objc convenience dynamic public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency convenience public init(arDelegate: (any LensCustomerSDK.ARViewDelegate)? = nil, triggerId: Swift.String)
+  #endif
   @_Concurrency.MainActor @preconcurrency public func setUserName(name: Swift.String)
   @objc @_Concurrency.MainActor @preconcurrency public func resumeARSCNViewSession(isSessionStart: Swift.Bool = true, callWithDelay: Swift.Bool = false)
   @objc @_Concurrency.MainActor @preconcurrency public func pauseARSCNViewSession()
@@ -3459,8 +4125,12 @@ public enum VideoResolution : CoreFoundation.CGFloat {
   @objc @_Concurrency.MainActor @preconcurrency public func isARSCNViewSessionPaused() -> Swift.Bool
   @objc @_Concurrency.MainActor @preconcurrency public func pauseARSCNViewSessionInHD(SessionPauseCallback callback: @escaping () -> Swift.Void)
   @_Concurrency.MainActor @preconcurrency public func snapshot() -> UIKit.UIImage
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func getRawCameraImageBuffer() -> CoreVideo.CVPixelBuffer?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func getRawCameraImage() -> UIKit.UIImage?
+  #endif
   @objc deinit
 }
 extension LensCustomerSDK.ARRenderView {
@@ -3475,31 +4145,55 @@ extension LensCustomerSDK.ARRenderView {
 }
 extension LensCustomerSDK.ARRenderView {
   @_Concurrency.MainActor @preconcurrency public func setVideoFPS(fps: Swift.Int)
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func renderPointCloud(_ flag: Swift.Bool, callback: ((_ flag: Swift.Bool) -> Swift.Void)? = nil)
+  #endif
   @_Concurrency.MainActor @preconcurrency public func isRenderingPointCloud() -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func renderPlanes(_ flag: Swift.Bool, callback: ((_ flag: Swift.Bool) -> Swift.Void)? = nil)
+  #endif
   @_Concurrency.MainActor @preconcurrency public func isRenderingPlanes() -> Swift.Bool
   @_Concurrency.MainActor @preconcurrency public var isHDStreaming: Swift.Bool {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func setHighResolution(_ flag: Swift.Bool, callback: ((_ flag: Swift.Bool) -> Swift.Void)? = nil)
+  #endif
   @available(*, deprecated, renamed: "getCustomerAnchorCount")
   @_Concurrency.MainActor @preconcurrency public func getAnchorCount() -> Swift.Int
   @_Concurrency.MainActor @preconcurrency public func getCustomerAnchorCount() -> Swift.Int
   @_Concurrency.MainActor @preconcurrency public func getTechnicianAnchorCount() -> Swift.Int
   @_Concurrency.MainActor @preconcurrency public func getMaxAnchorCount() -> Swift.Int
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, renamed: "removeFirstCustomerAnchor")
   @_Concurrency.MainActor @preconcurrency public func removeFirstAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func removeFirstCustomerAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, renamed: "removeLastCustomerAnchor")
   @_Concurrency.MainActor @preconcurrency public func removeLastAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func removeLastCustomerAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func removeLastTechnicianAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, renamed: "removeAllCustomerAnchors")
   @_Concurrency.MainActor @preconcurrency public func removeAllAnchors(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func removeAllCustomerAnchors(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func removeAllTechnicianAnchors(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency public func removeSelectedCustomerAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  #endif
   @_Concurrency.MainActor @preconcurrency public func isAnyCustomerAnchorSelected() -> Swift.Bool
   @_Concurrency.MainActor @preconcurrency public func isAnyTechnicianAnchorSelected() -> Swift.Bool
   @_Concurrency.MainActor @preconcurrency public func selectTechnicianAnchor(atPoint originalPoint: CoreFoundation.CGPoint, triggerId: Swift.String) -> Swift.Bool
@@ -3564,23 +4258,39 @@ public class ARRecorder : ObjectiveC.NSObject {
   @objc public init(ARSceneKit: ARKit.ARSCNView)
   @objc deinit
   public func isVideoRecording() -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func record(at url: Foundation.URL? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func record(at url: Foundation.URL? = nil, forDuration duration: Foundation.TimeInterval, _ finished: ((_ videoPath: Foundation.URL) -> Swift.Void)? = nil)
+  #endif
   @objc public func pause()
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func stopAndExport(_ finished: ((_ videoAsset: Photos.PHAsset?, _ videoPath: Foundation.URL?, _ permissionStatus: Photos.PHAuthorizationStatus, _ exported: Swift.Bool) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func stop(_ finished: ((_ videoPath: Foundation.URL) -> Swift.Void)? = nil)
+  #endif
   @objc public func cancel()
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func export(video path: Foundation.URL, _ finished: ((_ videoAsset: Photos.PHAsset?, _ videoPath: Foundation.URL?, _ exported: Swift.Bool, _ permissionStatus: Photos.PHAuthorizationStatus) -> Swift.Void)? = nil)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func requestMicrophonePermission(_ finished: ((_ status: Swift.Bool) -> Swift.Void)? = nil)
+  #endif
 }
 @available(iOS 11.0, *)
 @objc extension LensCustomerSDK.ARRecorder {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic public func prepare(_ configuration: ARKit.ARConfiguration? = nil)
+  #endif
 }
 @available(iOS 11.0, *)
 @objc public protocol RecordARDelegate {
   @objc func recorder(didEndRecording path: Foundation.URL, with noError: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc func recorder(didFailRecording error: (any Swift.Error)?, and status: Swift.String)
+  #endif
   @objc optional func recorder(didCancelRecording status: Swift.String)
   @objc optional func recorder(didUpdateRecording duration: Foundation.TimeInterval)
   @objc func recorder(willEnterBackground status: LensCustomerSDK.RecordARStatus)
@@ -3589,7 +4299,9 @@ public enum StreamingType : Swift.String {
   case none
   case down
   case up
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -3625,15 +4337,21 @@ public enum QRRetryMode {
   public var clientToken: Swift.String {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public var clientID: Swift.String? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var displayName: Swift.String? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var customerObject: LensCustomerSDK.Participant? {
     get
   }
+  #endif
   public var creatorZUID: Foundation.NSNumber? {
     get
   }
@@ -3668,9 +4386,11 @@ public enum QRRetryMode {
   @discardableResult
   public func swapToBackCamera() -> Swift.Bool
   public var lens_protocol_delegate: (any LensCustomerSDK.LensSessionProtocolDelegate)?
+  #if compiler(>=5.3) && $NonescapableTypes
   public var arRenderView: LensCustomerSDK.ARRenderView? {
     get
   }
+  #endif
   public var videoResolution: CoreFoundation.CGSize?
   public var arNodesNotifyList: [LensCustomerSDK.AnnotationNotify] {
     get
@@ -3686,7 +4406,9 @@ extension LensCustomerSDK.Lens {
 extension LensCustomerSDK.Lens : LensCustomerSDK.AnnotationSelectionListener, LensCustomerSDK.AnchorStateListener {
   public func onAnnotationSelected(id: Swift.String, triggerId: Swift.String)
   public func onAnnotationDeselected(id: Swift.String, triggerId: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func onAnchorPlaced(annotationId: Swift.String, annotationColor: UIKit.UIColor, annotationType: Swift.String, annotationNumber: Swift.Int, triggerId: Swift.String, length: Swift.String? = nil)
+  #endif
   public func onAnchorRemoved(annotationId: Swift.String)
 }
 extension LensCustomerSDK.Lens {
@@ -3749,9 +4471,15 @@ public class Reachability {
   public var connection: LensCustomerSDK.Reachability.Connection {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   required public init(reachabilityRef: SystemConfiguration.SCNetworkReachability, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   convenience public init(hostname: Swift.String, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   convenience public init(queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  #endif
   @objc deinit
 }
 extension LensCustomerSDK.Reachability {
@@ -3796,7 +4524,9 @@ extension LensCustomerSDK.Reachability {
 @_hasMissingDesignatedInitializers final public class NotificationHandler {
   public static func removeAllNotificaion()
   public static func register(categories: [LensCustomerSDK.UserNotificationCategory])
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func schedule(notification configuration: LensCustomerSDK.UserNotificationScheduleConfiguration, completion: ((Swift.Bool) -> Swift.Void)?)
+  #endif
   @objc deinit
 }
 public struct OCRData {
@@ -3844,7 +4574,9 @@ extension LensCustomerSDK.Lens {
 }
 public enum CanvasBoardSettings : Swift.String {
   case ellipse, pencil, rectangle, arrow, pointer, none
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -3853,7 +4585,9 @@ public enum CanvasBoardSettings : Swift.String {
 public enum FlashActionType : Swift.String {
   case turn_On, turn_Off
   public init(boolean: Swift.Bool)
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -3878,7 +4612,9 @@ public class ResolutionHandler {
 @objc @_hasMissingDesignatedInitializers public class Participant : LensCustomerSDK.BaseParser {
   public enum Role : Swift.String {
     case technician, customer, secondary_technician, external_technician
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -3886,7 +4622,9 @@ public class ResolutionHandler {
   }
   public enum Status : Swift.String {
     case UP, DOWN
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -3894,7 +4632,9 @@ public class ResolutionHandler {
   }
   public enum ParticpantOSType : Swift.String {
     case ios, android
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -3905,13 +4645,17 @@ public class ResolutionHandler {
   final public let email: Swift.String?
   public var status: LensCustomerSDK.Participant.Status?
   final public let zuid: Foundation.NSNumber?
+  #if compiler(>=5.3) && $NonescapableTypes
   public var name: Swift.String? {
     get
   }
+  #endif
   public var time: Swift.Int?
   public var platformType: LensCustomerSDK.Participant.ParticpantOSType?
   final public let app_version: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(selfEmail: Swift.String?, role: LensCustomerSDK.Participant.Role, status: LensCustomerSDK.Participant.Status?, zuid: Foundation.NSNumber?, display_name: Swift.String?, app_version: Swift.String?, joiningTime: Swift.Int?)
+  #endif
   public static func == (lhs: LensCustomerSDK.Participant, rhs: LensCustomerSDK.Participant) -> Swift.Bool
   @objc deinit
 }
@@ -4038,6 +4782,7 @@ extension LensCustomerSDK.DrawingInput.FreeStyleState : Swift.RawRepresentable {
 extension LensCustomerSDK.LensFlashError : Swift.Equatable {}
 extension LensCustomerSDK.LensFlashError : Swift.Hashable {}
 extension LensCustomerSDK.LensFlashError : Swift.RawRepresentable {}
+extension LensCustomerSDK.Node : Swift.Sendable {}
 extension LensCustomerSDK.ARInputViewOrientation : Swift.Equatable {}
 extension LensCustomerSDK.ARInputViewOrientation : Swift.Hashable {}
 extension LensCustomerSDK.ARInputViewOrientation : Swift.RawRepresentable {}
