@@ -7,5 +7,4 @@ framework module LensCustomerSDK {
 
 module LensCustomerSDK.Swift {
   header "LensCustomerSDK-Swift.h"
-  requires objc
 }
