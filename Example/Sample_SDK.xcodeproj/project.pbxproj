@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B281614F937451F7DB1912B /* Pods_Sample_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 064DD456DCCA610B35ACC50A /* Pods_Sample_SDK.framework */; };
 		3F8575442A25CCEF0022FBD9 /* StreamingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8575412A25CCEF0022FBD9 /* StreamingView.swift */; };
 		3F8575452A25CCEF0022FBD9 /* StreamingViewControllerForSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8575422A25CCEF0022FBD9 /* StreamingViewControllerForSwiftUI.swift */; };
 		3F8575462A25CCEF0022FBD9 /* SessionJoinScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8575432A25CCEF0022FBD9 /* SessionJoinScreen.swift */; };
@@ -20,11 +19,10 @@
 		C24E1CA524B5CF9100ACE8D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E1CA424B5CF9100ACE8D3 /* SceneDelegate.swift */; };
 		C24E1CAC24B5CF9200ACE8D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C24E1CAB24B5CF9200ACE8D3 /* Assets.xcassets */; };
 		C24E1CAF24B5CF9200ACE8D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24E1CAD24B5CF9200ACE8D3 /* LaunchScreen.storyboard */; };
+		F5E030A4304ED1F900A738FC /* Lens_Integration_SDK in Frameworks */ = {isa = PBXBuildFile; productRef = F5E030A3304ED1F900A738FC /* Lens_Integration_SDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		064DD456DCCA610B35ACC50A /* Pods_Sample_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sample_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F3B90C32A1B44D800995D45 /* FruitBasket.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FruitBasket.xcframework; path = "../../ZohoAssistLens-master_specific_commit/native/LensSDK/framework/FruitBasket.xcframework"; sourceTree = "<group>"; };
 		3F8575412A25CCEF0022FBD9 /* StreamingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingView.swift; sourceTree = "<group>"; };
 		3F8575422A25CCEF0022FBD9 /* StreamingViewControllerForSwiftUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingViewControllerForSwiftUI.swift; sourceTree = "<group>"; };
 		3F8575432A25CCEF0022FBD9 /* SessionJoinScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionJoinScreen.swift; sourceTree = "<group>"; };
@@ -38,17 +36,6 @@
 		C24E1CAB24B5CF9200ACE8D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C24E1CAE24B5CF9200ACE8D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C24E1CB024B5CF9200ACE8D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C2958E3C261373FC00898985 /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2B86CEF2611C6BB003FE2A7 /* ZAssistKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZAssistKit.framework; sourceTree = "<group>"; };
-		C2B86CF12611C6BB003FE2A7 /* ZAUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZAUtils.framework; sourceTree = "<group>"; };
-		C2B86CF32611C6BB003FE2A7 /* ZohoLensArLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZohoLensArLibrary.framework; sourceTree = "<group>"; };
-		C2B86CF52611C6BB003FE2A7 /* Lens.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Lens.framework; sourceTree = "<group>"; };
-		C2B86CF72611C6BB003FE2A7 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Starscream.framework; sourceTree = "<group>"; };
-		C2E78F15261492C20079831B /* Lens.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lens.framework; path = ../SDK/Lens/Lens.framework; sourceTree = "<group>"; };
-		C2E78F19261492D20079831B /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = ../SDK/Starscream/Starscream.framework; sourceTree = "<group>"; };
-		C2E78F1C261492E30079831B /* ZAssistKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZAssistKit.framework; path = ../SDK/ZAssistKit/ZAssistKit.framework; sourceTree = "<group>"; };
-		C2E78F1F261492EE0079831B /* ZAUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZAUtils.framework; path = ../SDK/ZAUtils/ZAUtils.framework; sourceTree = "<group>"; };
-		C2E78F22261492F70079831B /* ZohoLensArLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZohoLensArLibrary.framework; path = ../SDK/ZohoLensArLibrary/ZohoLensArLibrary.framework; sourceTree = "<group>"; };
 		C2EBF52C24B73E5C00C226B8 /* StreamingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,29 +44,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B281614F937451F7DB1912B /* Pods_Sample_SDK.framework in Frameworks */,
+				F5E030A4304ED1F900A738FC /* Lens_Integration_SDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1272570C658EBE2C84B937D1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3F3B90C32A1B44D800995D45 /* FruitBasket.xcframework */,
-				C2E78F22261492F70079831B /* ZohoLensArLibrary.framework */,
-				C2E78F1F261492EE0079831B /* ZAUtils.framework */,
-				C2E78F1C261492E30079831B /* ZAssistKit.framework */,
-				C2E78F19261492D20079831B /* Starscream.framework */,
-				C2E78F15261492C20079831B /* Lens.framework */,
-				C2958E3C261373FC00898985 /* Reachability.framework */,
-				C2B86CED2611C6BB003FE2A7 /* SDK */,
-				064DD456DCCA610B35ACC50A /* Pods_Sample_SDK.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		3F8575402A25CCEF0022FBD9 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,7 +66,6 @@
 			children = (
 				C24E1CA124B5CF9100ACE8D3 /* Sample_SDK */,
 				C24E1CA024B5CF9100ACE8D3 /* Products */,
-				1272570C658EBE2C84B937D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,59 +93,6 @@
 				C24E1CB024B5CF9200ACE8D3 /* Info.plist */,
 			);
 			path = Sample_SDK;
-			sourceTree = "<group>";
-		};
-		C2B86CED2611C6BB003FE2A7 /* SDK */ = {
-			isa = PBXGroup;
-			children = (
-				C2B86CEE2611C6BB003FE2A7 /* ZAssistKit */,
-				C2B86CF02611C6BB003FE2A7 /* ZAUtils */,
-				C2B86CF22611C6BB003FE2A7 /* ZohoLensArLibrary */,
-				C2B86CF42611C6BB003FE2A7 /* Lens */,
-				C2B86CF62611C6BB003FE2A7 /* Starscream */,
-			);
-			name = SDK;
-			path = Pods/LensSDK/SDK;
-			sourceTree = "<group>";
-		};
-		C2B86CEE2611C6BB003FE2A7 /* ZAssistKit */ = {
-			isa = PBXGroup;
-			children = (
-				C2B86CEF2611C6BB003FE2A7 /* ZAssistKit.framework */,
-			);
-			path = ZAssistKit;
-			sourceTree = "<group>";
-		};
-		C2B86CF02611C6BB003FE2A7 /* ZAUtils */ = {
-			isa = PBXGroup;
-			children = (
-				C2B86CF12611C6BB003FE2A7 /* ZAUtils.framework */,
-			);
-			path = ZAUtils;
-			sourceTree = "<group>";
-		};
-		C2B86CF22611C6BB003FE2A7 /* ZohoLensArLibrary */ = {
-			isa = PBXGroup;
-			children = (
-				C2B86CF32611C6BB003FE2A7 /* ZohoLensArLibrary.framework */,
-			);
-			path = ZohoLensArLibrary;
-			sourceTree = "<group>";
-		};
-		C2B86CF42611C6BB003FE2A7 /* Lens */ = {
-			isa = PBXGroup;
-			children = (
-				C2B86CF52611C6BB003FE2A7 /* Lens.framework */,
-			);
-			path = Lens;
-			sourceTree = "<group>";
-		};
-		C2B86CF62611C6BB003FE2A7 /* Starscream */ = {
-			isa = PBXGroup;
-			children = (
-				C2B86CF72611C6BB003FE2A7 /* Starscream.framework */,
-			);
-			path = Starscream;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
