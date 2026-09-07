@@ -7,28 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F8575442A25CCEF0022FBD9 /* StreamingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8575412A25CCEF0022FBD9 /* StreamingView.swift */; };
-		3F8575452A25CCEF0022FBD9 /* StreamingViewControllerForSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8575422A25CCEF0022FBD9 /* StreamingViewControllerForSwiftUI.swift */; };
 		3F8575462A25CCEF0022FBD9 /* SessionJoinScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8575432A25CCEF0022FBD9 /* SessionJoinScreen.swift */; };
 		3F8575492A25CDA80022FBD9 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8575472A25CDA80022FBD9 /* InitialViewController.swift */; };
 		3F85754A2A25CDA80022FBD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F8575482A25CDA80022FBD9 /* Main.storyboard */; };
-		3F85754C2A25CDC90022FBD9 /* CustomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F85754B2A25CDC90022FBD9 /* CustomModel.swift */; };
-		3F85754D2A25CDFA0022FBD9 /* StreamingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EBF52C24B73E5C00C226B8 /* StreamingViewController.swift */; };
 		3FBF369B2A9E038900177B3F /* SessionJoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBF369A2A9E038900177B3F /* SessionJoinViewController.swift */; };
 		C24E1CA324B5CF9100ACE8D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E1CA224B5CF9100ACE8D3 /* AppDelegate.swift */; };
 		C24E1CA524B5CF9100ACE8D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E1CA424B5CF9100ACE8D3 /* SceneDelegate.swift */; };
 		C24E1CAC24B5CF9200ACE8D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C24E1CAB24B5CF9200ACE8D3 /* Assets.xcassets */; };
 		C24E1CAF24B5CF9200ACE8D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24E1CAD24B5CF9200ACE8D3 /* LaunchScreen.storyboard */; };
+		F5E030B2304ED1F900A738FC /* LensSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E030B1304ED1F900A738FC /* LensSessionDelegate.swift */; };
 		F5E030A4304ED1F900A738FC /* Lens_Integration_SDK in Frameworks */ = {isa = PBXBuildFile; productRef = F5E030A3304ED1F900A738FC /* Lens_Integration_SDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F8575412A25CCEF0022FBD9 /* StreamingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingView.swift; sourceTree = "<group>"; };
-		3F8575422A25CCEF0022FBD9 /* StreamingViewControllerForSwiftUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamingViewControllerForSwiftUI.swift; sourceTree = "<group>"; };
 		3F8575432A25CCEF0022FBD9 /* SessionJoinScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionJoinScreen.swift; sourceTree = "<group>"; };
 		3F8575472A25CDA80022FBD9 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		3F8575482A25CDA80022FBD9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		3F85754B2A25CDC90022FBD9 /* CustomModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomModel.swift; sourceTree = "<group>"; };
 		3FBF369A2A9E038900177B3F /* SessionJoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionJoinViewController.swift; sourceTree = "<group>"; };
 		C24E1C9F24B5CF9100ACE8D3 /* Sample_SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample_SDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24E1CA224B5CF9100ACE8D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +30,7 @@
 		C24E1CAB24B5CF9200ACE8D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C24E1CAE24B5CF9200ACE8D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C24E1CB024B5CF9200ACE8D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C2EBF52C24B73E5C00C226B8 /* StreamingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingViewController.swift; sourceTree = "<group>"; };
+		F5E030B1304ED1F900A738FC /* LensSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LensSessionDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +48,6 @@
 		3F8575402A25CCEF0022FBD9 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				3F8575412A25CCEF0022FBD9 /* StreamingView.swift */,
-				3F8575422A25CCEF0022FBD9 /* StreamingViewControllerForSwiftUI.swift */,
 				3F8575432A25CCEF0022FBD9 /* SessionJoinScreen.swift */,
 			);
 			path = SwiftUI;
@@ -82,11 +74,10 @@
 			children = (
 				3F8575402A25CCEF0022FBD9 /* SwiftUI */,
 				C24E1CA224B5CF9100ACE8D3 /* AppDelegate.swift */,
-				3FBF369A2A9E038900177B3F /* SessionJoinViewController.swift */,
 				C24E1CA424B5CF9100ACE8D3 /* SceneDelegate.swift */,
-				3F85754B2A25CDC90022FBD9 /* CustomModel.swift */,
 				3F8575472A25CDA80022FBD9 /* InitialViewController.swift */,
-				C2EBF52C24B73E5C00C226B8 /* StreamingViewController.swift */,
+				3FBF369A2A9E038900177B3F /* SessionJoinViewController.swift */,
+				F5E030B1304ED1F900A738FC /* LensSessionDelegate.swift */,
 				C24E1CAB24B5CF9200ACE8D3 /* Assets.xcassets */,
 				3F8575482A25CDA80022FBD9 /* Main.storyboard */,
 				C24E1CAD24B5CF9200ACE8D3 /* LaunchScreen.storyboard */,
@@ -170,13 +161,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F8575462A25CCEF0022FBD9 /* SessionJoinScreen.swift in Sources */,
-				3F85754D2A25CDFA0022FBD9 /* StreamingViewController.swift in Sources */,
 				C24E1CA324B5CF9100ACE8D3 /* AppDelegate.swift in Sources */,
-				3F85754C2A25CDC90022FBD9 /* CustomModel.swift in Sources */,
-				3F8575452A25CCEF0022FBD9 /* StreamingViewControllerForSwiftUI.swift in Sources */,
 				3FBF369B2A9E038900177B3F /* SessionJoinViewController.swift in Sources */,
 				3F8575492A25CDA80022FBD9 /* InitialViewController.swift in Sources */,
-				3F8575442A25CCEF0022FBD9 /* StreamingView.swift in Sources */,
+				F5E030B2304ED1F900A738FC /* LensSessionDelegate.swift in Sources */,
 				C24E1CA524B5CF9100ACE8D3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,7 +234,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -302,7 +290,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "-no-verify-emitted-module-interface";
@@ -325,7 +313,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 7VPXG96P25;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Sample_SDK/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -351,7 +339,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 7VPXG96P25;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Sample_SDK/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
