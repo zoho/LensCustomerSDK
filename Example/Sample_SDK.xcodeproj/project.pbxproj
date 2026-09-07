@@ -224,6 +224,9 @@
 				Base,
 			);
 			mainGroup = C24E1C9624B5CF9100ACE8D3;
+			packageReferences = (
+				F5E030A2304ED1F900A738FC /* XCLocalSwiftPackageReference "../../LensCustomerSDK" */,
+			);
 			productRefGroup = C24E1CA024B5CF9100ACE8D3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -527,6 +530,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		F5E030A2304ED1F900A738FC /* XCLocalSwiftPackageReference "../../LensCustomerSDK" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../LensCustomerSDK;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F5E030A3304ED1F900A738FC /* Lens_Integration_SDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Lens_Integration_SDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C24E1C9724B5CF9100ACE8D3 /* Project object */;
 }
