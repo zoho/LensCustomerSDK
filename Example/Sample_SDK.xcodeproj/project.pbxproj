@@ -102,11 +102,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C24E1CB324B5CF9200ACE8D3 /* Build configuration list for PBXNativeTarget "Sample_SDK" */;
 			buildPhases = (
-				87F96EAD425FC0433E7097A6 /* [CP] Check Pods Manifest.lock */,
 				C24E1C9B24B5CF9100ACE8D3 /* Sources */,
 				C24E1C9C24B5CF9100ACE8D3 /* Frameworks */,
 				C24E1C9D24B5CF9100ACE8D3 /* Resources */,
-				6469DC3D001BC735C1D3505A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,52 +163,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		6469DC3D001BC735C1D3505A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Sample_SDK/Pods-Sample_SDK-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Sample_SDK/Pods-Sample_SDK-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sample_SDK/Pods-Sample_SDK-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		87F96EAD425FC0433E7097A6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Sample_SDK-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C24E1C9B24B5CF9100ACE8D3 /* Sources */ = {
@@ -372,12 +324,6 @@
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 7VPXG96P25;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift/Reachability.framework/Headers\"",
-					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit.framework/Headers\"",
-				);
 				INFOPLIST_FILE = Sample_SDK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,12 +350,6 @@
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 7VPXG96P25;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift/Reachability.framework/Headers\"",
-					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit.framework/Headers\"",
-				);
 				INFOPLIST_FILE = Sample_SDK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
