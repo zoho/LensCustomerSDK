@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "snapkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SnapKit/SnapKit.git",
+      "state" : {
+        "revision" : "2842e6e84e82eb9a8dac0100ca90d9444b0307f4",
+        "version" : "5.7.1"
+      }
+    },
+    {
+      "identity" : "zreachability.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kishorekumar007/ZReachability.swift.git",
+      "state" : {
+        "revision" : "5166efadc9ed15a23019962d2948aff6e9791ddd",
+        "version" : "5.2.41"
+      }
+    }
+  ],
+  "version" : 2
+}

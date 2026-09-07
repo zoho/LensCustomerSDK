@@ -2,3 +2,4 @@ IDEWorkspaceChecks.plist
 Sample_SDK.xcworkspace
 Example/Pods
 xcschememanagement.plist
+/.build
