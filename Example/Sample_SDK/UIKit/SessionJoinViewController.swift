@@ -4,7 +4,6 @@
 //
 
 import UIKit
-import Lens
 import Lens_Integration_SDK
 
 final class SessionJoinViewController: UIViewController {
@@ -14,6 +13,7 @@ final class SessionJoinViewController: UIViewController {
     @IBOutlet weak var arSwitch: UISwitch!
 
     private let sessionDelegate = CustomerSessionDelegate()
+    private var isJoining = false
 
     private var storedSDKToken: String {
         get { UserDefaults.standard.string(forKey: "sdk_token") ?? "" }
@@ -25,33 +25,35 @@ final class SessionJoinViewController: UIViewController {
         sdkTokenField.text = storedSDKToken
     }
 
-    @IBAction func start(_ sender: Any) {
-        joinSession()
-    }
-
     @IBAction func joinButtonAction(_ sender: UIButton) {
         joinSession()
     }
 
     private func joinSession() {
+        guard !isJoining else { return }
+
         sessionID.resignFirstResponder()
         sdkTokenField.resignFirstResponder()
 
-        guard let sessionKey = sessionID.text, !sessionKey.isEmpty else {
+        let sessionKey = sessionID.text ?? ""
+        guard !sessionKey.isEmpty else {
             presentAlert(title: "Session Key Required", message: "Enter a session key to join.")
             return
         }
 
-        guard let sdkToken = sdkTokenField.text, !sdkToken.isEmpty else {
+        let sdkToken = sdkTokenField.text ?? ""
+        guard !sdkToken.isEmpty else {
             presentAlert(title: "SDK Token Required", message: "Enter a Mobile SDK token from lens.zoho.com.")
             return
         }
 
         storedSDKToken = sdkToken
+        isJoining = true
 
         LensSDK.shared.joinSessionAsCustomer(sessionKey: sessionKey, sdkToken: sdkToken) { [weak self] result in
             DispatchQueue.main.async {
                 guard let self else { return }
+                self.isJoining = false
                 switch result {
                 case .success(let params):
                     LensSDK.shared.presentCustomerSession(

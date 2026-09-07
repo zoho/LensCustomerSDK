@@ -15,7 +15,7 @@ private struct CustomerSessionPresentation: Identifiable {
 
 struct SessionJoinScreen: View {
     @State private var sessionKey = ""
-    @AppStorage("sdk_token") private var sdkToken = ""
+    @State private var sdkToken = UserDefaults.standard.string(forKey: "sdk_token") ?? ""
     @State private var isARMode = true
     @State private var isLoading = false
     @State private var errorMessage: String?
@@ -77,7 +77,8 @@ struct SessionJoinScreen: View {
     }
 
     private func joinSession() {
-        hideKeyboard()
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        UserDefaults.standard.set(sdkToken, forKey: "sdk_token")
         isLoading = true
 
         LensSDK.shared.joinSessionAsCustomer(sessionKey: sessionKey, sdkToken: sdkToken) { result in
@@ -91,9 +92,5 @@ struct SessionJoinScreen: View {
                 }
             }
         }
-    }
-
-    private func hideKeyboard() {
-        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }

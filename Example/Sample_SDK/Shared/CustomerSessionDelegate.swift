@@ -8,7 +8,7 @@ import Lens
 import Lens_Integration_SDK
 
 final class CustomerSessionDelegate: LensEventProtocol {
-    var sessionType: Participant.Role!
+    var sessionType: Participant.Role! = .customer
     var onSessionEnd: ((SessionDescription) -> Void)?
 
     func summary(

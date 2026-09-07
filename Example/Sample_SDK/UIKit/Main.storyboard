@@ -42,7 +42,6 @@
                                 <state key="normal" title="Join"/>
                                 <connections>
                                     <action selector="joinButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mii-Vk-Myl"/>
-                                    <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WzU-pd-N6Y"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AR Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC7-1Y-cIM">
@@ -113,7 +112,6 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="UIKit"/>
                                         <connections>
-                                            <action selector="storyboardAction:" destination="x8B-xr-4bX" eventType="touchUpInside" id="7ex-MY-bgx"/>
                                             <segue destination="BYZ-38-t0r" kind="show" id="WAX-AX-rDk"/>
                                         </connections>
                                     </button>
