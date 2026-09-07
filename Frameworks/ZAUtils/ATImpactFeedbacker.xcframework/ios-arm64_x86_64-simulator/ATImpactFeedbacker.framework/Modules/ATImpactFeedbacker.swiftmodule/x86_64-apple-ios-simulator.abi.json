@@ -1,0 +1,35 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "ATImpactFeedbacker",
+    "printedName": "ATImpactFeedbacker",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ATImpactFeedbacker",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ATImpactFeedbacker"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "ATImpactFeedbacker"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": []
+}

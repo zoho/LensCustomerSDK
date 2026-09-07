@@ -1,0 +1,138 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name DrawerController
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import Foundation
+import Foundation_Extention
+import OverlayViewController
+import Swift
+import UIKit
+import UIKit_Extention
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class DrawerChildTableViewController : UIKit.UIViewController, DrawerController.DrawerControllerDelegate {
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak open var scrollView: UIKit.UIScrollView!
+  @_Concurrency.MainActor @preconcurrency public var canScrollView: Swift.Bool
+  @discardableResult
+  @_Concurrency.MainActor @preconcurrency public func presentWithDrawer(from: UIKit.UIViewController, config: ((DrawerController.DrawerViewController) -> ())? = nil) -> DrawerController.DrawerViewController
+  @_Concurrency.MainActor @preconcurrency public func tableViewViewHandle()
+  @_Concurrency.MainActor @preconcurrency open func drawerView(for drawer: DrawerController.DrawerViewController) -> UIKit.UIView
+  @_Concurrency.MainActor @preconcurrency open func drawer(controller: DrawerController.DrawerViewController, movingPosition: DrawerController.DrawerMovingPosition, canChangeDrawerHeight height: CoreFoundation.CGFloat, drawerMinHeight: CoreFoundation.CGFloat, drawerMaximumHeight: CoreFoundation.CGFloat) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency open func drawer(movingPosition: DrawerController.DrawerMovingPosition, drawerChangedHeight height: CoreFoundation.CGFloat, drawerMinHeight: CoreFoundation.CGFloat, drawerMaximumHeight: CoreFoundation.CGFloat, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency open func drawer(_ drawer: DrawerController.DrawerViewController, reachedMinHeight height: CoreFoundation.CGFloat, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency open func drawerMaximumHieght(for drawer: DrawerController.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  @_Concurrency.MainActor @preconcurrency open func drawerMinimumHieght(for drawer: DrawerController.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  @_Concurrency.MainActor @preconcurrency open func drawerWidth(for drawer: DrawerController.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  @_Concurrency.MainActor @preconcurrency open func drawer(_ drawer: DrawerController.DrawerViewController, reachedMaximumHeight height: CoreFoundation.CGFloat, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency open func drawer(dismissed withAnimation: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public protocol DrawerControllerDelegate {
+  func drawerView(for drawerController: DrawerController.DrawerViewController) -> UIKit.UIView
+  func drawerMaximumHieght(for drawer: DrawerController.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  func drawerMinimumHieght(for drawer: DrawerController.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  func drawerWidth(for drawer: DrawerController.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  func drawer(movingPosition: DrawerController.DrawerMovingPosition, drawerChangedHeight height: CoreFoundation.CGFloat, drawerMinHeight: CoreFoundation.CGFloat, drawerMaximumHeight: CoreFoundation.CGFloat, animated: Swift.Bool)
+  func drawer(controller: DrawerController.DrawerViewController, movingPosition: DrawerController.DrawerMovingPosition, canChangeDrawerHeight height: CoreFoundation.CGFloat, drawerMinHeight: CoreFoundation.CGFloat, drawerMaximumHeight: CoreFoundation.CGFloat) -> Swift.Bool
+  func drawer(_ drawer: DrawerController.DrawerViewController, reachedMinHeight height: CoreFoundation.CGFloat, animated: Swift.Bool)
+  func drawer(_ drawer: DrawerController.DrawerViewController, reachedMaximumHeight height: CoreFoundation.CGFloat, animated: Swift.Bool)
+  func drawer(dismissed withAnimation: Swift.Bool)
+}
+extension DrawerController.DrawerControllerDelegate where Self : UIKit.UIViewController {
+  public func drawerMinimumHieght(for drawer: DrawerController.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  public func drawerMaximumHieght(for drawer: DrawerController.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  public func drawerWidth(for drawer: DrawerController.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  public func drawer(movingPosition: DrawerController.DrawerMovingPosition, drawerChangedHeight height: CoreFoundation.CGFloat, drawerMinHeight: CoreFoundation.CGFloat, drawerMaximumHeight: CoreFoundation.CGFloat, animated: Swift.Bool)
+  public func drawer(movingPosition: DrawerController.DrawerMovingPosition, canChangeDrawerHeight height: CoreFoundation.CGFloat, drawerMinHeight: CoreFoundation.CGFloat, drawerMaximumHeight: CoreFoundation.CGFloat) -> Swift.Bool
+  public func drawer(_ drawer: DrawerController.DrawerViewController, reachedMinHeight height: CoreFoundation.CGFloat, animated: Swift.Bool)
+  public func drawer(_ drawer: DrawerController.DrawerViewController, reachedMaximumHeight height: CoreFoundation.CGFloat, animated: Swift.Bool)
+  public var drawerViewController: DrawerController.DrawerViewController? {
+    get
+  }
+  @discardableResult
+  public func dismissDrawer(animated: Swift.Bool, completion: (() -> Swift.Void)?) -> Swift.Bool
+  public func updateDrawerHieghtByGiven(_ height: CoreFoundation.CGFloat)
+  public func drawer(dismissed withAnimation: Swift.Bool)
+}
+public enum DrawerMovingPosition : Swift.Int {
+  case nutral, up, down
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum positionType : Swift.Int {
+  case up, middle
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class DrawerViewController : OverlayViewController {
+  @_Concurrency.MainActor @preconcurrency public var drawerDelegate: (any DrawerController.DrawerControllerDelegate)?
+  @_Concurrency.MainActor @preconcurrency public var indicatorHeight: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var indicatorWidth: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var drawerIndicatorColor: UIKit.UIColor? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var drawerBackgroundColor: UIKit.UIColor? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var minimumSlidVelocity: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency public var maximumSlidVelocity: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency public var heightChangingProgress: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public func updateDrawerHeight(height: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency public var canStopMiddle: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public var containerMiddlePoint: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var containerMaxHeight: CoreFoundation.CGFloat {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var childForStatusBarHidden: UIKit.UIViewController? {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var prefersStatusBarHidden: Swift.Bool {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency open var hideStatusBar: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc convenience dynamic public init()
+  @_Concurrency.MainActor @preconcurrency convenience public init(delegate: any DrawerController.DrawerControllerDelegate, hideStatusBar hidden: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency public func updateDrawerHieghtByGiven(_ height: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func dismiss(animated flag: Swift.Bool, completion: (() -> Swift.Void)?)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
+  @_Concurrency.MainActor @preconcurrency override public func deviceRotated(_ currentOrientation: UIKit.UIDeviceOrientation)
+  @_Concurrency.MainActor @preconcurrency public func setPosition(position: DrawerController.positionType)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+}
+extension DrawerController.DrawerViewController : UIKit.UIGestureRecognizerDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+}
+extension DrawerController.DrawerMovingPosition : Swift.Equatable {}
+extension DrawerController.DrawerMovingPosition : Swift.Hashable {}
+extension DrawerController.DrawerMovingPosition : Swift.RawRepresentable {}
+extension DrawerController.positionType : Swift.Equatable {}
+extension DrawerController.positionType : Swift.Hashable {}
+extension DrawerController.positionType : Swift.RawRepresentable {}

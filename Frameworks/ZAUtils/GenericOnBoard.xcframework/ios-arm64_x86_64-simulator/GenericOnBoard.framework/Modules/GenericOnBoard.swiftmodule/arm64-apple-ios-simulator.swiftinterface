@@ -1,0 +1,56 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name GenericOnBoard
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import Foundation
+import Lottie
+import Orientation
+import Reusable
+import SnapKit_Extention
+import Swift
+import UIKit
+import UIKit_Extention
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class GenericLottieOnBoardDesciptionController<CellType> : Orientation.OrientationHelperController, UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegateFlowLayout, UIKit.UICollectionViewDelegate where CellType : UIKit.UICollectionViewCell {
+  public class CellDescription {
+    public init(nib: UIKit.UINib, identifier: Swift.String, cofiguration: ((CellType, Foundation.IndexPath) -> Swift.Void)?)
+    @objc deinit
+  }
+  @_Concurrency.MainActor @preconcurrency public var numberOfScenes: Swift.Int
+  @_Concurrency.MainActor @preconcurrency public var cellDescription: GenericOnBoard.GenericLottieOnBoardDesciptionController<CellType>.CellDescription?
+  @_Concurrency.MainActor @preconcurrency public var animationSpeed: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency public var lottieAnimationView: Lottie.LottieAnimationView?
+  @_Concurrency.MainActor @preconcurrency public var enablePageController: ((UIKit.UIPageControl) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency convenience public init(lottie: Lottie.LottieAnimationView, numberOfScenes: Swift.Int, cellDescription: GenericOnBoard.GenericLottieOnBoardDesciptionController<CellType>.CellDescription)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency override public func deviceRotated(_ currentOrientation: UIKit.UIDeviceOrientation)
+  @_Concurrency.MainActor @preconcurrency @objc public func numberOfSections(in collectionView: UIKit.UICollectionView) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @_Concurrency.MainActor @preconcurrency @objc public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor @preconcurrency @objc public func scrollViewWillBeginDragging(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor @preconcurrency @objc public func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor @preconcurrency @objc public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor @preconcurrency public func reloadData()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension Foundation.Bundle {
+  public static var onboardBundle: Foundation.Bundle {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class GenericOnBoardingDescriptiorCell : UIKit.UICollectionViewCell, Reusable.CellResuable {
+  @_Concurrency.MainActor @preconcurrency public static var identifier: Swift.String
+  @_Concurrency.MainActor @preconcurrency public static var GenericOnBoardBundle: Foundation.Bundle
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var moduleLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var descriptionLabel: UIKit.UILabel!
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func awakeFromNib()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension GenericOnBoard.GenericLottieOnBoardDesciptionController : Swift.Sendable {}

@@ -1,0 +1,3 @@
+framework module VMNetworking {
+  header "VMNetworking-Swift.h"
+}

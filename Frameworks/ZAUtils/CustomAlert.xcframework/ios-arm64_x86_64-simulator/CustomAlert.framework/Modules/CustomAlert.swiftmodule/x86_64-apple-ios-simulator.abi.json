@@ -1,0 +1,2933 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "CustomAlert",
+    "printedName": "CustomAlert",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CustomAlert",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "CustomAlert"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AlertStyleConfiguration",
+        "printedName": "AlertStyleConfiguration",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "backgroundColor",
+            "printedName": "backgroundColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11CustomAlert0B18StyleConfigurationP15backgroundColorSo7UIColorCvp",
+            "mangledName": "$s11CustomAlert0B18StyleConfigurationP15backgroundColorSo7UIColorCvp",
+            "moduleName": "CustomAlert",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert0B18StyleConfigurationP15backgroundColorSo7UIColorCvg",
+                "mangledName": "$s11CustomAlert0B18StyleConfigurationP15backgroundColorSo7UIColorCvg",
+                "moduleName": "CustomAlert",
+                "genericSig": "<τ_0_0 where τ_0_0 : CustomAlert.AlertStyleConfiguration>",
+                "sugared_genericSig": "<Self where Self : CustomAlert.AlertStyleConfiguration>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "titleColor",
+            "printedName": "titleColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11CustomAlert0B18StyleConfigurationP10titleColorSo7UIColorCvp",
+            "mangledName": "$s11CustomAlert0B18StyleConfigurationP10titleColorSo7UIColorCvp",
+            "moduleName": "CustomAlert",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert0B18StyleConfigurationP10titleColorSo7UIColorCvg",
+                "mangledName": "$s11CustomAlert0B18StyleConfigurationP10titleColorSo7UIColorCvg",
+                "moduleName": "CustomAlert",
+                "genericSig": "<τ_0_0 where τ_0_0 : CustomAlert.AlertStyleConfiguration>",
+                "sugared_genericSig": "<Self where Self : CustomAlert.AlertStyleConfiguration>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "borderColor",
+            "printedName": "borderColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11CustomAlert0B18StyleConfigurationP11borderColorSo7UIColorCSgvp",
+            "mangledName": "$s11CustomAlert0B18StyleConfigurationP11borderColorSo7UIColorCSgvp",
+            "moduleName": "CustomAlert",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert0B18StyleConfigurationP11borderColorSo7UIColorCSgvg",
+                "mangledName": "$s11CustomAlert0B18StyleConfigurationP11borderColorSo7UIColorCSgvg",
+                "moduleName": "CustomAlert",
+                "genericSig": "<τ_0_0 where τ_0_0 : CustomAlert.AlertStyleConfiguration>",
+                "sugared_genericSig": "<Self where Self : CustomAlert.AlertStyleConfiguration>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "borderWidth",
+            "printedName": "borderWidth",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11CustomAlert0B18StyleConfigurationP11borderWidth14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s11CustomAlert0B18StyleConfigurationP11borderWidth12CoreGraphics7CGFloatVvp",
+            "moduleName": "CustomAlert",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert0B18StyleConfigurationP11borderWidth14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s11CustomAlert0B18StyleConfigurationP11borderWidth12CoreGraphics7CGFloatVvg",
+                "moduleName": "CustomAlert",
+                "genericSig": "<τ_0_0 where τ_0_0 : CustomAlert.AlertStyleConfiguration>",
+                "sugared_genericSig": "<Self where Self : CustomAlert.AlertStyleConfiguration>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:11CustomAlert0B18StyleConfigurationP",
+        "mangledName": "$s11CustomAlert0B18StyleConfigurationP",
+        "moduleName": "CustomAlert",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AlertStyle",
+        "printedName": "AlertStyle",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "default",
+            "printedName": "default",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CustomAlert.AlertStyle.Type) -> CustomAlert.AlertStyle",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AlertStyle",
+                    "printedName": "CustomAlert.AlertStyle",
+                    "usr": "s:11CustomAlert0B5StyleO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CustomAlert.AlertStyle.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AlertStyle",
+                        "printedName": "CustomAlert.AlertStyle",
+                        "usr": "s:11CustomAlert0B5StyleO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11CustomAlert0B5StyleO7defaultyA2CmF",
+            "mangledName": "$s11CustomAlert0B5StyleO7defaultyA2CmF",
+            "moduleName": "CustomAlert"
+          },
+          {
+            "kind": "Var",
+            "name": "destructive",
+            "printedName": "destructive",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CustomAlert.AlertStyle.Type) -> CustomAlert.AlertStyle",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AlertStyle",
+                    "printedName": "CustomAlert.AlertStyle",
+                    "usr": "s:11CustomAlert0B5StyleO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CustomAlert.AlertStyle.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AlertStyle",
+                        "printedName": "CustomAlert.AlertStyle",
+                        "usr": "s:11CustomAlert0B5StyleO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11CustomAlert0B5StyleO11destructiveyA2CmF",
+            "mangledName": "$s11CustomAlert0B5StyleO11destructiveyA2CmF",
+            "moduleName": "CustomAlert"
+          },
+          {
+            "kind": "Var",
+            "name": "outlined",
+            "printedName": "outlined",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CustomAlert.AlertStyle.Type) -> CustomAlert.AlertStyle",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AlertStyle",
+                    "printedName": "CustomAlert.AlertStyle",
+                    "usr": "s:11CustomAlert0B5StyleO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CustomAlert.AlertStyle.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AlertStyle",
+                        "printedName": "CustomAlert.AlertStyle",
+                        "usr": "s:11CustomAlert0B5StyleO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11CustomAlert0B5StyleO8outlinedyA2CmF",
+            "mangledName": "$s11CustomAlert0B5StyleO8outlinedyA2CmF",
+            "moduleName": "CustomAlert"
+          },
+          {
+            "kind": "Var",
+            "name": "backgroundColor",
+            "printedName": "backgroundColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11CustomAlert0B5StyleO15backgroundColorSo7UIColorCvp",
+            "mangledName": "$s11CustomAlert0B5StyleO15backgroundColorSo7UIColorCvp",
+            "moduleName": "CustomAlert",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert0B5StyleO15backgroundColorSo7UIColorCvg",
+                "mangledName": "$s11CustomAlert0B5StyleO15backgroundColorSo7UIColorCvg",
+                "moduleName": "CustomAlert",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "titleColor",
+            "printedName": "titleColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11CustomAlert0B5StyleO10titleColorSo7UIColorCvp",
+            "mangledName": "$s11CustomAlert0B5StyleO10titleColorSo7UIColorCvp",
+            "moduleName": "CustomAlert",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert0B5StyleO10titleColorSo7UIColorCvg",
+                "mangledName": "$s11CustomAlert0B5StyleO10titleColorSo7UIColorCvg",
+                "moduleName": "CustomAlert",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "borderColor",
+            "printedName": "borderColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11CustomAlert0B5StyleO11borderColorSo7UIColorCSgvp",
+            "mangledName": "$s11CustomAlert0B5StyleO11borderColorSo7UIColorCSgvp",
+            "moduleName": "CustomAlert",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert0B5StyleO11borderColorSo7UIColorCSgvg",
+                "mangledName": "$s11CustomAlert0B5StyleO11borderColorSo7UIColorCSgvg",
+                "moduleName": "CustomAlert",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "borderWidth",
+            "printedName": "borderWidth",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11CustomAlert0B5StyleO11borderWidth14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s11CustomAlert0B5StyleO11borderWidth12CoreGraphics7CGFloatVvp",
+            "moduleName": "CustomAlert",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert0B5StyleO11borderWidth14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s11CustomAlert0B5StyleO11borderWidth12CoreGraphics7CGFloatVvg",
+                "moduleName": "CustomAlert",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AlertStyle",
+                "printedName": "CustomAlert.AlertStyle",
+                "usr": "s:11CustomAlert0B5StyleO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AlertStyle",
+                "printedName": "CustomAlert.AlertStyle",
+                "usr": "s:11CustomAlert0B5StyleO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11CustomAlert0B5StyleO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s11CustomAlert0B5StyleO2eeoiySbAC_ACtFZ",
+            "moduleName": "CustomAlert",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11CustomAlert0B5StyleO9hashValueSivp",
+            "mangledName": "$s11CustomAlert0B5StyleO9hashValueSivp",
+            "moduleName": "CustomAlert",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert0B5StyleO9hashValueSivg",
+                "mangledName": "$s11CustomAlert0B5StyleO9hashValueSivg",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11CustomAlert0B5StyleO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s11CustomAlert0B5StyleO4hash4intoys6HasherVz_tF",
+            "moduleName": "CustomAlert",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:11CustomAlert0B5StyleO",
+        "mangledName": "$s11CustomAlert0B5StyleO",
+        "moduleName": "CustomAlert",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "AlertStyleConfiguration",
+            "printedName": "AlertStyleConfiguration",
+            "usr": "s:11CustomAlert0B18StyleConfigurationP",
+            "mangledName": "$s11CustomAlert0B18StyleConfigurationP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AssistAlertAction",
+        "printedName": "AssistAlertAction",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "title",
+            "printedName": "title",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11CustomAlert06AssistB6ActionV5titleSSSgvp",
+            "mangledName": "$s11CustomAlert06AssistB6ActionV5titleSSSgvp",
+            "moduleName": "CustomAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert06AssistB6ActionV5titleSSSgvg",
+                "mangledName": "$s11CustomAlert06AssistB6ActionV5titleSSSgvg",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert06AssistB6ActionV5titleSSSgvs",
+                "mangledName": "$s11CustomAlert06AssistB6ActionV5titleSSSgvs",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert06AssistB6ActionV5titleSSSgvM",
+                "mangledName": "$s11CustomAlert06AssistB6ActionV5titleSSSgvM",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "completionHandler",
+            "printedName": "completionHandler",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((CustomAlert.AssistAlertAction, CustomAlert.AssistBlurAlertController) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CustomAlert.AssistAlertAction, CustomAlert.AssistBlurAlertController) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(CustomAlert.AssistAlertAction, CustomAlert.AssistBlurAlertController)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AssistAlertAction",
+                            "printedName": "CustomAlert.AssistAlertAction",
+                            "usr": "s:11CustomAlert06AssistB6ActionV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AssistBlurAlertController",
+                            "printedName": "CustomAlert.AssistBlurAlertController",
+                            "usr": "c:@M@CustomAlert@objc(cs)AssistBlurAlertController"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11CustomAlert06AssistB6ActionV17completionHandleryAC_AA0c4BlurB10ControllerCtcSgvp",
+            "mangledName": "$s11CustomAlert06AssistB6ActionV17completionHandleryAC_AA0c4BlurB10ControllerCtcSgvp",
+            "moduleName": "CustomAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((CustomAlert.AssistAlertAction, CustomAlert.AssistBlurAlertController) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(CustomAlert.AssistAlertAction, CustomAlert.AssistBlurAlertController) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(CustomAlert.AssistAlertAction, CustomAlert.AssistBlurAlertController)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "AssistAlertAction",
+                                "printedName": "CustomAlert.AssistAlertAction",
+                                "usr": "s:11CustomAlert06AssistB6ActionV"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "AssistBlurAlertController",
+                                "printedName": "CustomAlert.AssistBlurAlertController",
+                                "usr": "c:@M@CustomAlert@objc(cs)AssistBlurAlertController"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert06AssistB6ActionV17completionHandleryAC_AA0c4BlurB10ControllerCtcSgvg",
+                "mangledName": "$s11CustomAlert06AssistB6ActionV17completionHandleryAC_AA0c4BlurB10ControllerCtcSgvg",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((CustomAlert.AssistAlertAction, CustomAlert.AssistBlurAlertController) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(CustomAlert.AssistAlertAction, CustomAlert.AssistBlurAlertController) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(CustomAlert.AssistAlertAction, CustomAlert.AssistBlurAlertController)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "AssistAlertAction",
+                                "printedName": "CustomAlert.AssistAlertAction",
+                                "usr": "s:11CustomAlert06AssistB6ActionV"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "AssistBlurAlertController",
+                                "printedName": "CustomAlert.AssistBlurAlertController",
+                                "usr": "c:@M@CustomAlert@objc(cs)AssistBlurAlertController"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert06AssistB6ActionV17completionHandleryAC_AA0c4BlurB10ControllerCtcSgvs",
+                "mangledName": "$s11CustomAlert06AssistB6ActionV17completionHandleryAC_AA0c4BlurB10ControllerCtcSgvs",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert06AssistB6ActionV17completionHandleryAC_AA0c4BlurB10ControllerCtcSgvM",
+                "mangledName": "$s11CustomAlert06AssistB6ActionV17completionHandleryAC_AA0c4BlurB10ControllerCtcSgvM",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "styleConfiguration",
+            "printedName": "styleConfiguration",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AlertStyleConfiguration",
+                "printedName": "any CustomAlert.AlertStyleConfiguration",
+                "usr": "s:11CustomAlert0B18StyleConfigurationP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11CustomAlert06AssistB6ActionV18styleConfigurationAA0b5StyleF0_pvp",
+            "mangledName": "$s11CustomAlert06AssistB6ActionV18styleConfigurationAA0b5StyleF0_pvp",
+            "moduleName": "CustomAlert",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AlertStyleConfiguration",
+                    "printedName": "any CustomAlert.AlertStyleConfiguration",
+                    "usr": "s:11CustomAlert0B18StyleConfigurationP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert06AssistB6ActionV18styleConfigurationAA0b5StyleF0_pvg",
+                "mangledName": "$s11CustomAlert06AssistB6ActionV18styleConfigurationAA0b5StyleF0_pvg",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AlertStyleConfiguration",
+                    "printedName": "any CustomAlert.AlertStyleConfiguration",
+                    "usr": "s:11CustomAlert0B18StyleConfigurationP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert06AssistB6ActionV18styleConfigurationAA0b5StyleF0_pvs",
+                "mangledName": "$s11CustomAlert06AssistB6ActionV18styleConfigurationAA0b5StyleF0_pvs",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert06AssistB6ActionV18styleConfigurationAA0b5StyleF0_pvM",
+                "mangledName": "$s11CustomAlert06AssistB6ActionV18styleConfigurationAA0b5StyleF0_pvM",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(title:style:handler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AssistAlertAction",
+                "printedName": "CustomAlert.AssistAlertAction",
+                "usr": "s:11CustomAlert06AssistB6ActionV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AlertStyleConfiguration",
+                "printedName": "any CustomAlert.AlertStyleConfiguration",
+                "hasDefaultArg": true,
+                "usr": "s:11CustomAlert0B18StyleConfigurationP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((CustomAlert.AssistAlertAction, CustomAlert.AssistBlurAlertController) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CustomAlert.AssistAlertAction, CustomAlert.AssistBlurAlertController) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(CustomAlert.AssistAlertAction, CustomAlert.AssistBlurAlertController)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AssistAlertAction",
+                            "printedName": "CustomAlert.AssistAlertAction",
+                            "usr": "s:11CustomAlert06AssistB6ActionV"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AssistBlurAlertController",
+                            "printedName": "CustomAlert.AssistBlurAlertController",
+                            "usr": "c:@M@CustomAlert@objc(cs)AssistBlurAlertController"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11CustomAlert06AssistB6ActionV5title5style7handlerACSSSg_AA0B18StyleConfiguration_pyAC_AA0c4BlurB10ControllerCtcSgtcfc",
+            "mangledName": "$s11CustomAlert06AssistB6ActionV5title5style7handlerACSSSg_AA0B18StyleConfiguration_pyAC_AA0c4BlurB10ControllerCtcSgtcfc",
+            "moduleName": "CustomAlert",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11CustomAlert06AssistB6ActionV",
+        "mangledName": "$s11CustomAlert06AssistB6ActionV",
+        "moduleName": "CustomAlert",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CustomAlert",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "CustomAlert"
+      },
+      {
+        "kind": "Import",
+        "name": "OverlayViewController",
+        "printedName": "OverlayViewController",
+        "declKind": "Import",
+        "moduleName": "CustomAlert"
+      },
+      {
+        "kind": "Import",
+        "name": "KeyBoardChangeObserver",
+        "printedName": "KeyBoardChangeObserver",
+        "declKind": "Import",
+        "moduleName": "CustomAlert"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit_Extention",
+        "printedName": "UIKit_Extention",
+        "declKind": "Import",
+        "moduleName": "CustomAlert"
+      },
+      {
+        "kind": "Import",
+        "name": "Orientation",
+        "printedName": "Orientation",
+        "declKind": "Import",
+        "moduleName": "CustomAlert"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AssistBlurAlertController",
+        "printedName": "AssistBlurAlertController",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "textField",
+            "printedName": "textField",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "UIKit.UITextField?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@CustomAlert@objc(cs)AssistBlurAlertController(py)textField",
+            "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC9textFieldSo06UITextG0CSgvp",
+            "moduleName": "CustomAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl",
+              "IBOutlet",
+              "ObjC"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UITextField?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UITextField",
+                        "printedName": "UIKit.UITextField",
+                        "usr": "c:objc(cs)UITextField"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@CustomAlert@objc(cs)AssistBlurAlertController(im)textField",
+                "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC9textFieldSo06UITextG0CSgvg",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UITextField?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UITextField",
+                        "printedName": "UIKit.UITextField",
+                        "usr": "c:objc(cs)UITextField"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@CustomAlert@objc(cs)AssistBlurAlertController(im)setTextField:",
+                "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC9textFieldSo06UITextG0CSgvs",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert010AssistBlurB10ControllerC9textFieldSo06UITextG0CSgvM",
+                "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC9textFieldSo06UITextG0CSgvM",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "actions",
+            "printedName": "actions",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[CustomAlert.AssistAlertAction]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AssistAlertAction",
+                    "printedName": "CustomAlert.AssistAlertAction",
+                    "usr": "s:11CustomAlert06AssistB6ActionV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11CustomAlert010AssistBlurB10ControllerC7actionsSayAA0cB6ActionVGvp",
+            "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC7actionsSayAA0cB6ActionVGvp",
+            "moduleName": "CustomAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[CustomAlert.AssistAlertAction]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AssistAlertAction",
+                        "printedName": "CustomAlert.AssistAlertAction",
+                        "usr": "s:11CustomAlert06AssistB6ActionV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert010AssistBlurB10ControllerC7actionsSayAA0cB6ActionVGvg",
+                "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC7actionsSayAA0cB6ActionVGvg",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[CustomAlert.AssistAlertAction]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AssistAlertAction",
+                        "printedName": "CustomAlert.AssistAlertAction",
+                        "usr": "s:11CustomAlert06AssistB6ActionV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert010AssistBlurB10ControllerC7actionsSayAA0cB6ActionVGvs",
+                "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC7actionsSayAA0cB6ActionVGvs",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert010AssistBlurB10ControllerC7actionsSayAA0cB6ActionVGvM",
+                "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC7actionsSayAA0cB6ActionVGvM",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "enableTextFieldWithConfiguration",
+            "printedName": "enableTextFieldWithConfiguration",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((UIKit.UITextField) -> Swift.Bool)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UIKit.UITextField) -> Swift.Bool",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UITextField",
+                        "printedName": "UIKit.UITextField",
+                        "usr": "c:objc(cs)UITextField"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11CustomAlert010AssistBlurB10ControllerC32enableTextFieldWithConfigurationSbSo06UITextH0CcSgvp",
+            "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC32enableTextFieldWithConfigurationSbSo06UITextH0CcSgvp",
+            "moduleName": "CustomAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((UIKit.UITextField) -> Swift.Bool)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(UIKit.UITextField) -> Swift.Bool",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UITextField",
+                            "printedName": "UIKit.UITextField",
+                            "usr": "c:objc(cs)UITextField"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert010AssistBlurB10ControllerC32enableTextFieldWithConfigurationSbSo06UITextH0CcSgvg",
+                "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC32enableTextFieldWithConfigurationSbSo06UITextH0CcSgvg",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((UIKit.UITextField) -> Swift.Bool)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(UIKit.UITextField) -> Swift.Bool",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UITextField",
+                            "printedName": "UIKit.UITextField",
+                            "usr": "c:objc(cs)UITextField"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert010AssistBlurB10ControllerC32enableTextFieldWithConfigurationSbSo06UITextH0CcSgvs",
+                "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC32enableTextFieldWithConfigurationSbSo06UITextH0CcSgvs",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert010AssistBlurB10ControllerC32enableTextFieldWithConfigurationSbSo06UITextH0CcSgvM",
+                "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC32enableTextFieldWithConfigurationSbSo06UITextH0CcSgvM",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "enablesliderWithConfiguration",
+            "printedName": "enablesliderWithConfiguration",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((UIKit.UISlider) -> Swift.Bool)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UIKit.UISlider) -> Swift.Bool",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UISlider",
+                        "printedName": "UIKit.UISlider",
+                        "usr": "c:objc(cs)UISlider"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11CustomAlert010AssistBlurB10ControllerC29enablesliderWithConfigurationSbSo8UISliderCcSgvp",
+            "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC29enablesliderWithConfigurationSbSo8UISliderCcSgvp",
+            "moduleName": "CustomAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((UIKit.UISlider) -> Swift.Bool)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(UIKit.UISlider) -> Swift.Bool",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UISlider",
+                            "printedName": "UIKit.UISlider",
+                            "usr": "c:objc(cs)UISlider"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert010AssistBlurB10ControllerC29enablesliderWithConfigurationSbSo8UISliderCcSgvg",
+                "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC29enablesliderWithConfigurationSbSo8UISliderCcSgvg",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((UIKit.UISlider) -> Swift.Bool)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(UIKit.UISlider) -> Swift.Bool",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UISlider",
+                            "printedName": "UIKit.UISlider",
+                            "usr": "c:objc(cs)UISlider"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert010AssistBlurB10ControllerC29enablesliderWithConfigurationSbSo8UISliderCcSgvs",
+                "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC29enablesliderWithConfigurationSbSo8UISliderCcSgvs",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert010AssistBlurB10ControllerC29enablesliderWithConfigurationSbSo8UISliderCcSgvM",
+                "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC29enablesliderWithConfigurationSbSo8UISliderCcSgvM",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "configureButtonUI",
+            "printedName": "configureButtonUI",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((UIKit.UIButton) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UIKit.UIButton) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIButton",
+                        "printedName": "UIKit.UIButton",
+                        "usr": "c:objc(cs)UIButton"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11CustomAlert010AssistBlurB10ControllerC17configureButtonUIySo8UIButtonCcSgvp",
+            "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC17configureButtonUIySo8UIButtonCcSgvp",
+            "moduleName": "CustomAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((UIKit.UIButton) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(UIKit.UIButton) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UIButton",
+                            "printedName": "UIKit.UIButton",
+                            "usr": "c:objc(cs)UIButton"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert010AssistBlurB10ControllerC17configureButtonUIySo8UIButtonCcSgvg",
+                "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC17configureButtonUIySo8UIButtonCcSgvg",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((UIKit.UIButton) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(UIKit.UIButton) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UIButton",
+                            "printedName": "UIKit.UIButton",
+                            "usr": "c:objc(cs)UIButton"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert010AssistBlurB10ControllerC17configureButtonUIySo8UIButtonCcSgvs",
+                "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC17configureButtonUIySo8UIButtonCcSgvs",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert010AssistBlurB10ControllerC17configureButtonUIySo8UIButtonCcSgvM",
+                "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC17configureButtonUIySo8UIButtonCcSgvM",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "textFieldValidationHandler",
+            "printedName": "textFieldValidationHandler",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((CustomAlert.AssistBlurAlertController, Swift.String?, CustomAlert.AssistAlertAction) -> Swift.Bool)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CustomAlert.AssistBlurAlertController, Swift.String?, CustomAlert.AssistAlertAction) -> Swift.Bool",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(CustomAlert.AssistBlurAlertController, Swift.String?, CustomAlert.AssistAlertAction)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AssistBlurAlertController",
+                            "printedName": "CustomAlert.AssistBlurAlertController",
+                            "usr": "c:@M@CustomAlert@objc(cs)AssistBlurAlertController"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Swift.String?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "AssistAlertAction",
+                            "printedName": "CustomAlert.AssistAlertAction",
+                            "usr": "s:11CustomAlert06AssistB6ActionV"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11CustomAlert010AssistBlurB10ControllerC26textFieldValidationHandlerSbAC_SSSgAA0cB6ActionVtcSgvp",
+            "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC26textFieldValidationHandlerSbAC_SSSgAA0cB6ActionVtcSgvp",
+            "moduleName": "CustomAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((CustomAlert.AssistBlurAlertController, Swift.String?, CustomAlert.AssistAlertAction) -> Swift.Bool)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(CustomAlert.AssistBlurAlertController, Swift.String?, CustomAlert.AssistAlertAction) -> Swift.Bool",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(CustomAlert.AssistBlurAlertController, Swift.String?, CustomAlert.AssistAlertAction)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "AssistBlurAlertController",
+                                "printedName": "CustomAlert.AssistBlurAlertController",
+                                "usr": "c:@M@CustomAlert@objc(cs)AssistBlurAlertController"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Optional",
+                                "printedName": "Swift.String?",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "String",
+                                    "printedName": "Swift.String",
+                                    "usr": "s:SS"
+                                  }
+                                ],
+                                "usr": "s:Sq"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "AssistAlertAction",
+                                "printedName": "CustomAlert.AssistAlertAction",
+                                "usr": "s:11CustomAlert06AssistB6ActionV"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert010AssistBlurB10ControllerC26textFieldValidationHandlerSbAC_SSSgAA0cB6ActionVtcSgvg",
+                "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC26textFieldValidationHandlerSbAC_SSSgAA0cB6ActionVtcSgvg",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((CustomAlert.AssistBlurAlertController, Swift.String?, CustomAlert.AssistAlertAction) -> Swift.Bool)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(CustomAlert.AssistBlurAlertController, Swift.String?, CustomAlert.AssistAlertAction) -> Swift.Bool",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(CustomAlert.AssistBlurAlertController, Swift.String?, CustomAlert.AssistAlertAction)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "AssistBlurAlertController",
+                                "printedName": "CustomAlert.AssistBlurAlertController",
+                                "usr": "c:@M@CustomAlert@objc(cs)AssistBlurAlertController"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Optional",
+                                "printedName": "Swift.String?",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "String",
+                                    "printedName": "Swift.String",
+                                    "usr": "s:SS"
+                                  }
+                                ],
+                                "usr": "s:Sq"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "AssistAlertAction",
+                                "printedName": "CustomAlert.AssistAlertAction",
+                                "usr": "s:11CustomAlert06AssistB6ActionV"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert010AssistBlurB10ControllerC26textFieldValidationHandlerSbAC_SSSgAA0cB6ActionVtcSgvs",
+                "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC26textFieldValidationHandlerSbAC_SSSgAA0cB6ActionVtcSgvs",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert010AssistBlurB10ControllerC26textFieldValidationHandlerSbAC_SSSgAA0cB6ActionVtcSgvM",
+                "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC26textFieldValidationHandlerSbAC_SSSgAA0cB6ActionVtcSgvM",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isTextFieldEnabled",
+            "printedName": "isTextFieldEnabled",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11CustomAlert010AssistBlurB10ControllerC18isTextFieldEnabledSbvp",
+            "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC18isTextFieldEnabledSbvp",
+            "moduleName": "CustomAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert010AssistBlurB10ControllerC18isTextFieldEnabledSbvg",
+                "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC18isTextFieldEnabledSbvg",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert010AssistBlurB10ControllerC18isTextFieldEnabledSbvs",
+                "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC18isTextFieldEnabledSbvs",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11CustomAlert010AssistBlurB10ControllerC18isTextFieldEnabledSbvM",
+                "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC18isTextFieldEnabledSbvM",
+                "moduleName": "CustomAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AssistBlurAlertController",
+                "printedName": "CustomAlert.AssistBlurAlertController",
+                "usr": "c:@M@CustomAlert@objc(cs)AssistBlurAlertController"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@CustomAlert@objc(cs)AssistBlurAlertController(im)init",
+            "mangledName": "$s11CustomAlert010AssistBlurB10ControllerCACycfc",
+            "moduleName": "CustomAlert",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Convenience",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(title:description:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AssistBlurAlertController",
+                "printedName": "CustomAlert.AssistBlurAlertController",
+                "usr": "c:@M@CustomAlert@objc(cs)AssistBlurAlertController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11CustomAlert010AssistBlurB10ControllerC5title11descriptionACSSSg_AFtcfc",
+            "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC5title11descriptionACSSSg_AFtcfc",
+            "moduleName": "CustomAlert",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "Convenience",
+              "AccessControl"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Function",
+            "name": "viewDidLoad",
+            "printedName": "viewDidLoad()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CustomAlert@objc(cs)AssistBlurAlertController(im)viewDidLoad",
+            "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC11viewDidLoadyyF",
+            "moduleName": "CustomAlert",
+            "overriding": true,
+            "objc_name": "viewDidLoad",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewWillAppear",
+            "printedName": "viewWillAppear(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CustomAlert@objc(cs)AssistBlurAlertController(im)viewWillAppear:",
+            "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC14viewWillAppearyySbF",
+            "moduleName": "CustomAlert",
+            "overriding": true,
+            "objc_name": "viewWillAppear:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewDidLayoutSubviews",
+            "printedName": "viewDidLayoutSubviews()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CustomAlert@objc(cs)AssistBlurAlertController(im)viewDidLayoutSubviews",
+            "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC21viewDidLayoutSubviewsyyF",
+            "moduleName": "CustomAlert",
+            "overriding": true,
+            "objc_name": "viewDidLayoutSubviews",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showError",
+            "printedName": "showError(message:resetTime:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11CustomAlert010AssistBlurB10ControllerC9showError7message9resetTimeySS_SdtF",
+            "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC9showError7message9resetTimeySS_SdtF",
+            "moduleName": "CustomAlert",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addAction",
+            "printedName": "addAction(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AssistAlertAction",
+                "printedName": "CustomAlert.AssistAlertAction",
+                "usr": "s:11CustomAlert06AssistB6ActionV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11CustomAlert010AssistBlurB10ControllerC9addActionyyAA0cbG0VF",
+            "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC9addActionyyAA0cbG0VF",
+            "moduleName": "CustomAlert",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addActions",
+            "printedName": "addActions(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[CustomAlert.AssistAlertAction]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AssistAlertAction",
+                    "printedName": "CustomAlert.AssistAlertAction",
+                    "usr": "s:11CustomAlert06AssistB6ActionV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11CustomAlert010AssistBlurB10ControllerC10addActionsyySayAA0cB6ActionVGF",
+            "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC10addActionsyySayAA0cB6ActionVGF",
+            "moduleName": "CustomAlert",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didReceiveMemoryWarning",
+            "printedName": "didReceiveMemoryWarning()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@CustomAlert@objc(cs)AssistBlurAlertController(im)didReceiveMemoryWarning",
+            "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC23didReceiveMemoryWarningyyF",
+            "moduleName": "CustomAlert",
+            "overriding": true,
+            "objc_name": "didReceiveMemoryWarning",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "supportedOrientation",
+            "printedName": "supportedOrientation()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "At_Orientation",
+                "printedName": "Orientation.At_Orientation",
+                "usr": "s:11Orientation03At_A0O"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11CustomAlert010AssistBlurB10ControllerC20supportedOrientation0G003At_G0OyF",
+            "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC20supportedOrientation0G003At_G0OyF",
+            "moduleName": "CustomAlert",
+            "overriding": true,
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(nibName:bundle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AssistBlurAlertController",
+                "printedName": "CustomAlert.AssistBlurAlertController",
+                "usr": "c:@M@CustomAlert@objc(cs)AssistBlurAlertController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Bundle?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@CustomAlert@objc(cs)AssistBlurAlertController(im)initWithNibName:bundle:",
+            "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC7nibName6bundleACSSSg_So8NSBundleCSgtcfc",
+            "moduleName": "CustomAlert",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithNibName:bundle:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CustomAlert.AssistBlurAlertController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AssistBlurAlertController",
+                    "printedName": "CustomAlert.AssistBlurAlertController",
+                    "usr": "c:@M@CustomAlert@objc(cs)AssistBlurAlertController"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@CustomAlert@objc(cs)AssistBlurAlertController(im)initWithCoder:",
+            "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "CustomAlert",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@CustomAlert@objc(cs)AssistBlurAlertController",
+        "mangledName": "$s11CustomAlert010AssistBlurB10ControllerC",
+        "moduleName": "CustomAlert",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:@M@OverlayViewController@objc(cs)OverlayViewController",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "OverlayViewController.OverlayViewController",
+          "Orientation.OrientationHelperController",
+          "UIKit.UIViewController",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "KeyboardNotificationhandler",
+            "printedName": "KeyboardNotificationhandler",
+            "usr": "s:22KeyBoardChangeObserver27KeyboardNotificationhandlerP",
+            "mangledName": "$s22KeyBoardChangeObserver27KeyboardNotificationhandlerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "OrientationChanger",
+            "printedName": "OrientationChanger",
+            "usr": "s:11Orientation0A7ChangerP",
+            "mangledName": "$s11Orientation0A7ChangerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "OrientationHandler",
+            "printedName": "OrientationHandler",
+            "usr": "s:11Orientation0A7HandlerP",
+            "mangledName": "$s11Orientation0A7HandlerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CustomAlert",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UIView",
+        "printedName": "UIView",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "shake",
+            "printedName": "shake()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC11CustomAlertE5shakeyyF",
+            "mangledName": "$sSo6UIViewC11CustomAlertE5shakeyyF",
+            "moduleName": "CustomAlert",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)UIView",
+        "moduleName": "UIKit",
+        "isOpen": true,
+        "intro_iOS": "2.0",
+        "objc_name": "UIView",
+        "declAttributes": [
+          "Preconcurrency",
+          "Available",
+          "ObjC",
+          "NonSendable",
+          "Custom",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)UIResponder",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConstraintRelatableTarget",
+            "printedName": "ConstraintRelatableTarget",
+            "usr": "s:7SnapKit25ConstraintRelatableTargetP",
+            "mangledName": "$s7SnapKit25ConstraintRelatableTargetP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LayoutConstraintItem",
+            "printedName": "LayoutConstraintItem",
+            "usr": "s:7SnapKit20LayoutConstraintItemP",
+            "mangledName": "$s7SnapKit20LayoutConstraintItemP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/AssistBlurAlertController\/AssistBlurAlertController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2008,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/AssistBlurAlertController\/AssistBlurAlertController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4406,
+      "length": 1,
+      "value": "1"
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AssistTableDataSource
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import Foundation
+import Swift
+import UIKit
+import UIKit_Extention
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc @_inheritsConvenienceInitializers open class ATAbstractDataSource : ObjectiveC.NSObject, AssistTableDataSource.ATDataSource, AssistTableDataSource.ATDelegate {
+  public var estimatedRowHeight: CoreFoundation.CGFloat
+  public var estimatedSectionHeaderHeight: CoreFoundation.CGFloat
+  public var estimatedSectionFooterHeight: CoreFoundation.CGFloat
+  public func at_collectionView(collectionView: any AssistTableDataSource.ATGeneralCollectionView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  public func at_collectionView(collectionView: any AssistTableDataSource.ATGeneralCollectionView, viewForFooterInSection section: Swift.Int) -> UIKit.UIView?
+  public func at_collectionView(collectionView: any AssistTableDataSource.ATGeneralCollectionView, cellForItemAt indexpath: Foundation.IndexPath) -> any AssistTableDataSource.ATReusableCell
+  public func at_collectionView(_ collectionView: any AssistTableDataSource.ATGeneralCollectionView, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize
+  public func at_numberOfSections() -> Swift.Int
+  public func at_numberOfItems(inSection section: Swift.Int) -> Swift.Int
+  public func at_collectionView(collectionView: any AssistTableDataSource.ATGeneralCollectionView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  public func at_collectionView(collectionView: any AssistTableDataSource.ATGeneralCollectionView, heightForFooterInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  public func at_scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  public func at_scrollViewWillBeginDragging(_ scrollView: UIKit.UIScrollView)
+  public func at_scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
+  public func at_scrollViewDidEndScroll(_ scrollView: UIKit.UIScrollView)
+  public func at_scrollViewDidEndDragging(_ scrollView: UIKit.UIScrollView, willDecelerate decelerate: Swift.Bool)
+  public func at_collectionView(_ collectionView: any AssistTableDataSource.ATGeneralCollectionView, didDeselectItemAt indexPath: Foundation.IndexPath)
+  public func at_collectionView(_ collectionView: any AssistTableDataSource.ATGeneralCollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  public func at_collectionView(_ collectionView: any AssistTableDataSource.ATGeneralCollectionView, willDisplay cell: any AssistTableDataSource.ATReusableCell, forItemAt indexPath: Foundation.IndexPath)
+  public func at_collectionView(_ collectionView: any AssistTableDataSource.ATGeneralCollectionView, willDisplayHeaderView view: UIKit.UIView, forSection section: Swift.Int)
+  public func at_collectionView(_ collectionView: any AssistTableDataSource.ATGeneralCollectionView, willDisplayFooterView view: UIKit.UIView, forSection section: Swift.Int)
+  public func at_sizeOfCollectionViewHeader(collectionView: any AssistTableDataSource.ATGeneralCollectionView, inSection section: Swift.Int) -> CoreFoundation.CGSize
+  public func at_sizeOfcollectionViewFooter(collectionView: any AssistTableDataSource.ATGeneralCollectionView, inSection section: Swift.Int) -> CoreFoundation.CGSize
+  public func at_sizeOfcollectionViewFooter(collectionView: any AssistTableDataSource.ATGeneralCollectionView, heightForFooterInSection section: Swift.Int) -> CoreFoundation.CGSize
+  public func at_shouldShowMenuController(at indexPath: Foundation.IndexPath) -> Swift.Bool
+  public func at_canPerformMenuController(at indexPath: Foundation.IndexPath, selector: ObjectiveC.Selector) -> Swift.Bool
+  public func at_perfomMenuController(at indexPath: Foundation.IndexPath, selector: ObjectiveC.Selector)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension AssistTableDataSource.ATAbstractDataSource : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForFooterInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, viewForFooterInSection section: Swift.Int) -> UIKit.UIView?
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didDeselectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplay cell: UIKit.UITableViewCell, forRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplayFooterView view: UIKit.UIView, forSection section: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplayHeaderView view: UIKit.UIView, forSection section: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, shouldShowMenuForRowAt indexPath: Foundation.IndexPath) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, canPerformAction action: ObjectiveC.Selector, forRowAt indexPath: Foundation.IndexPath, withSender sender: Any?) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, performAction action: ObjectiveC.Selector, forRowAt indexPath: Foundation.IndexPath, withSender sender: Any?)
+}
+extension AssistTableDataSource.ATAbstractDataSource : UIKit.UICollectionViewDataSource {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func numberOfSections(in collectionView: UIKit.UICollectionView) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, viewForSupplementaryElementOfKind kind: Swift.String, at indexPath: Foundation.IndexPath) -> UIKit.UICollectionReusableView
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, referenceSizeForHeaderInSection section: Swift.Int) -> CoreFoundation.CGSize
+  @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, referenceSizeForFooterInSection section: Swift.Int) -> CoreFoundation.CGSize
+}
+extension AssistTableDataSource.ATAbstractDataSource : UIKit.UICollectionViewDelegateFlowLayout {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize
+}
+extension AssistTableDataSource.ATAbstractDataSource : UIKit.UICollectionViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didDeselectItemAt indexPath: Foundation.IndexPath)
+}
+extension AssistTableDataSource.ATAbstractDataSource {
+  @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  @objc dynamic public func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
+  @objc dynamic public func scrollViewDidEndDragging(_ scrollView: UIKit.UIScrollView, willDecelerate decelerate: Swift.Bool)
+  @objc dynamic public func scrollViewWillBeginDragging(_ scrollView: UIKit.UIScrollView)
+}
+public protocol ATGeneralCollectionView {
+  func at_registerCell(forClass cellClass: Swift.AnyClass, identifier: Swift.String)
+  func at_registerCell(forXib nib: UIKit.UINib?, identifier: Swift.String)
+  func at_dequeueReusableCell(withIdentifier: Swift.String, indexPath: Foundation.IndexPath) -> any AssistTableDataSource.ATReusableCell
+  func at_cellForItemAt(_ indexPath: Foundation.IndexPath) -> (any AssistTableDataSource.ATReusableCell)?
+}
+extension UIKit.UITableView : AssistTableDataSource.ATGeneralCollectionView {
+  @_Concurrency.MainActor @preconcurrency public func at_cellForItemAt(_ indexPath: Foundation.IndexPath) -> (any AssistTableDataSource.ATReusableCell)?
+  @_Concurrency.MainActor @preconcurrency public func at_registerCell(forXib nib: UIKit.UINib?, identifier: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func at_registerCell(forClass cellClass: Swift.AnyClass, identifier: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func at_dequeueReusableCell(withIdentifier: Swift.String, indexPath: Foundation.IndexPath) -> any AssistTableDataSource.ATReusableCell
+}
+extension UIKit.UICollectionView : AssistTableDataSource.ATGeneralCollectionView {
+  @_Concurrency.MainActor @preconcurrency public func at_cellForItemAt(_ indexPath: Foundation.IndexPath) -> (any AssistTableDataSource.ATReusableCell)?
+  @_Concurrency.MainActor @preconcurrency public func at_registerCell(forXib nib: UIKit.UINib?, identifier: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func at_registerCell(forClass cellClass: Swift.AnyClass, identifier: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func at_dequeueReusableCell(withIdentifier: Swift.String, indexPath: Foundation.IndexPath) -> any AssistTableDataSource.ATReusableCell
+}
+extension UIKit.UITableView {
+  @_Concurrency.MainActor @preconcurrency public func at_useDataSource(_ datasource: AssistTableDataSource.ATAbstractDataSource)
+}
+extension UIKit.UICollectionView {
+  @_Concurrency.MainActor @preconcurrency public func at_useDataSource(_ datasource: AssistTableDataSource.ATAbstractDataSource)
+}
+public protocol ATReusableCell {
+}
+extension UIKit.UITableViewCell : AssistTableDataSource.ATReusableCell {
+}
+extension UIKit.UICollectionViewCell : AssistTableDataSource.ATReusableCell {
+}
+open class ATSection<ItemType> {
+  public var identifier: Swift.String?
+  open var items: [ItemType]
+  open var title: Swift.String?
+  open var sizeForItem: ((_ section: AssistTableDataSource.ATSection<ItemType>, _ indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize)?
+  open var heightForSectionHeader: ((AssistTableDataSource.ATSection<ItemType>) -> CoreFoundation.CGFloat)?
+  open var heightForSectionFooter: ((AssistTableDataSource.ATSection<ItemType>) -> CoreFoundation.CGFloat)?
+  open var headerViewForSection: ((AssistTableDataSource.ATSection<ItemType>) -> UIKit.UIView?)?
+  open var footerViewForSection: ((AssistTableDataSource.ATSection<ItemType>) -> UIKit.UIView?)?
+  open var sizeForSectionHeader: ((AssistTableDataSource.ATSection<ItemType>) -> CoreFoundation.CGSize)?
+  open var sizeForSectionFooter: ((AssistTableDataSource.ATSection<ItemType>) -> CoreFoundation.CGSize)?
+  public init(title: Swift.String? = nil, items: [ItemType] = [])
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class AssistCollectionDataSource<ItemType, CellType> : AssistTableDataSource.ATAbstractDataSource where CellType : AssistTableDataSource.ATReusableCell {
+  public typealias Section = Swift.Int
+  @_Concurrency.MainActor @preconcurrency public var sections: [AssistTableDataSource.ATSection<ItemType>] {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var configureCell: ((_ item: ItemType, _ cell: CellType, _ indexPath: Foundation.IndexPath) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public var cellIdentifier: ((_ item: ItemType, _ indexPath: Foundation.IndexPath) -> Swift.String)?
+  @_Concurrency.MainActor @preconcurrency public var actionHandler: ((AssistTableDataSource.AssistCollectionActionType<ItemType, CellType>) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public var handleNoData: ((_ isNodata: Swift.Bool, _ sections: [AssistTableDataSource.ATSection<ItemType>]) -> ())?
+  @_Concurrency.MainActor @preconcurrency public var scrollViewDidEndScroll: ((UIKit.UIScrollView) -> ())?
+  @_Concurrency.MainActor @preconcurrency public var scrollViewDidScroll: ((UIKit.UIScrollView) -> ())?
+  @_Concurrency.MainActor @preconcurrency public var scrollViewWillBeginDragging: ((UIKit.UIScrollView) -> ())?
+  @_Concurrency.MainActor @preconcurrency public var scrollViewDidEndDecelerating: ((UIKit.UIScrollView) -> ())?
+  @_Concurrency.MainActor @preconcurrency public var scrollViewDidEndDraging: ((_ scrollView: UIKit.UIScrollView, _ isDecelerating: Swift.Bool) -> ())?
+  @_Concurrency.MainActor @preconcurrency public var willDisplayCell: ((_ cell: CellType, _ indexPath: Foundation.IndexPath) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public var willDisplaySectionFooter: ((_ headerView: UIKit.UIView, _ section: Swift.Int) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public var willDisplaySectionHeader: ((_ footerView: UIKit.UIView, _ section: Swift.Int) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public var shouldShowMenuController: ((Foundation.IndexPath) -> Swift.Bool)?
+  @_Concurrency.MainActor @preconcurrency public var canShowMenuController: ((Foundation.IndexPath, ObjectiveC.Selector) -> Swift.Bool)?
+  @_Concurrency.MainActor @preconcurrency public var performMenuController: ((Foundation.IndexPath, ObjectiveC.Selector) -> Swift.Void)?
+  override public func at_numberOfSections() -> Swift.Int
+  override public func at_numberOfItems(inSection section: Swift.Int) -> Swift.Int
+  override public func at_collectionView(collectionView: any AssistTableDataSource.ATGeneralCollectionView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  override public func at_collectionView(collectionView: any AssistTableDataSource.ATGeneralCollectionView, heightForFooterInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  override public func at_collectionView(collectionView: any AssistTableDataSource.ATGeneralCollectionView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  override public func at_collectionView(collectionView: any AssistTableDataSource.ATGeneralCollectionView, viewForFooterInSection section: Swift.Int) -> UIKit.UIView?
+  override public func at_collectionView(_ collectionView: any AssistTableDataSource.ATGeneralCollectionView, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize
+  override public func at_collectionView(collectionView: any AssistTableDataSource.ATGeneralCollectionView, cellForItemAt indexpath: Foundation.IndexPath) -> any AssistTableDataSource.ATReusableCell
+  override public func at_collectionView(_ collectionView: any AssistTableDataSource.ATGeneralCollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  override public func at_collectionView(_ collectionView: any AssistTableDataSource.ATGeneralCollectionView, didDeselectItemAt indexPath: Foundation.IndexPath)
+  override public func at_scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  override public func at_scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
+  override public func at_scrollViewDidEndScroll(_ scrollView: UIKit.UIScrollView)
+  override public func at_scrollViewDidEndDragging(_ scrollView: UIKit.UIScrollView, willDecelerate decelerate: Swift.Bool)
+  override public func at_scrollViewWillBeginDragging(_ scrollView: UIKit.UIScrollView)
+  override public func at_collectionView(_ collectionView: any AssistTableDataSource.ATGeneralCollectionView, willDisplay cell: any AssistTableDataSource.ATReusableCell, forItemAt indexPath: Foundation.IndexPath)
+  override public func at_collectionView(_ tableView: any AssistTableDataSource.ATGeneralCollectionView, willDisplayHeaderView view: UIKit.UIView, forSection section: Swift.Int)
+  override public func at_collectionView(_ tableView: any AssistTableDataSource.ATGeneralCollectionView, willDisplayFooterView view: UIKit.UIView, forSection section: Swift.Int)
+  override public func at_sizeOfCollectionViewHeader(collectionView: any AssistTableDataSource.ATGeneralCollectionView, inSection section: Swift.Int) -> CoreFoundation.CGSize
+  override public func at_sizeOfcollectionViewFooter(collectionView: any AssistTableDataSource.ATGeneralCollectionView, inSection section: Swift.Int) -> CoreFoundation.CGSize
+  override public func at_canPerformMenuController(at indexPath: Foundation.IndexPath, selector: ObjectiveC.Selector) -> Swift.Bool
+  override public func at_shouldShowMenuController(at indexPath: Foundation.IndexPath) -> Swift.Bool
+  override public func at_perfomMenuController(at indexPath: Foundation.IndexPath, selector: ObjectiveC.Selector)
+  @_Concurrency.MainActor @preconcurrency public func addSection(_ section: AssistTableDataSource.ATSection<ItemType>)
+  @_Concurrency.MainActor @preconcurrency public func getItemFor(indexPath: Foundation.IndexPath) -> ItemType
+  @_Concurrency.MainActor @preconcurrency public func indexPath(where completion: (ItemType) -> Swift.Bool) -> Foundation.IndexPath?
+  @_Concurrency.MainActor @preconcurrency public func getSection(for index: Swift.Int) -> AssistTableDataSource.ATSection<ItemType>
+  @discardableResult
+  @_Concurrency.MainActor @preconcurrency public func delete(itemAt indexPath: Foundation.IndexPath) -> ItemType
+  @_Concurrency.MainActor @preconcurrency public func update(itemAt item: ItemType, for indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency public func insert(itemsAt items: [ItemType], at indexPath: Foundation.IndexPath)
+  @discardableResult
+  @_Concurrency.MainActor @preconcurrency public func addItems(_ items: [ItemType], at section: AssistTableDataSource.AssistCollectionDataSource<ItemType, CellType>.Section) -> [Foundation.IndexPath]
+  @_Concurrency.MainActor @preconcurrency public func insert(section: AssistTableDataSource.ATSection<ItemType>, at index: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency public func numberOfRows(forSection section: Swift.Int) -> Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension AssistTableDataSource.AssistCollectionDataSource {
+  @_Concurrency.MainActor @preconcurrency public var lastIndexPath: Foundation.IndexPath? {
+    get
+  }
+}
+public enum AssistCollectionActionType<ItemType, CellType> where CellType : AssistTableDataSource.ATReusableCell {
+  case select(item: ItemType, cell: CellType?, indexpath: Foundation.IndexPath)
+  case deSelect(item: ItemType, cell: CellType?, indexpath: Foundation.IndexPath)
+}
+public protocol ATDataSource {
+  var estimatedRowHeight: CoreFoundation.CGFloat { get set }
+  var estimatedSectionHeaderHeight: CoreFoundation.CGFloat { get set }
+  var estimatedSectionFooterHeight: CoreFoundation.CGFloat { get set }
+  func at_numberOfSections() -> Swift.Int
+  func at_numberOfItems(inSection section: Swift.Int) -> Swift.Int
+  func at_collectionView(_ collectionView: any AssistTableDataSource.ATGeneralCollectionView, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize
+  func at_collectionView(collectionView: any AssistTableDataSource.ATGeneralCollectionView, cellForItemAt indexpath: Foundation.IndexPath) -> any AssistTableDataSource.ATReusableCell
+  func at_collectionView(collectionView: any AssistTableDataSource.ATGeneralCollectionView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  func at_collectionView(collectionView: any AssistTableDataSource.ATGeneralCollectionView, viewForHeaderInSection section: Swift.Int) -> UIKit.UIView?
+  func at_collectionView(collectionView: any AssistTableDataSource.ATGeneralCollectionView, heightForFooterInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  func at_collectionView(collectionView: any AssistTableDataSource.ATGeneralCollectionView, viewForFooterInSection section: Swift.Int) -> UIKit.UIView?
+  func at_sizeOfCollectionViewHeader(collectionView: any AssistTableDataSource.ATGeneralCollectionView, inSection section: Swift.Int) -> CoreFoundation.CGSize
+  func at_sizeOfcollectionViewFooter(collectionView: any AssistTableDataSource.ATGeneralCollectionView, inSection section: Swift.Int) -> CoreFoundation.CGSize
+}
+public protocol ATDelegate : AssistTableDataSource.ATScrollDelegate {
+  func at_collectionView(_ collectionView: any AssistTableDataSource.ATGeneralCollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  func at_collectionView(_ collectionView: any AssistTableDataSource.ATGeneralCollectionView, willDisplay cell: any AssistTableDataSource.ATReusableCell, forItemAt indexPath: Foundation.IndexPath)
+  func at_collectionView(_ collectionView: any AssistTableDataSource.ATGeneralCollectionView, willDisplayHeaderView view: UIKit.UIView, forSection section: Swift.Int)
+  func at_collectionView(_ collectionView: any AssistTableDataSource.ATGeneralCollectionView, willDisplayFooterView view: UIKit.UIView, forSection section: Swift.Int)
+  func at_collectionView(_ collectionView: any AssistTableDataSource.ATGeneralCollectionView, didDeselectItemAt indexPath: Foundation.IndexPath)
+  func at_shouldShowMenuController(at indexPath: Foundation.IndexPath) -> Swift.Bool
+  func at_canPerformMenuController(at indexPath: Foundation.IndexPath, selector: ObjectiveC.Selector) -> Swift.Bool
+  func at_perfomMenuController(at indexPath: Foundation.IndexPath, selector: ObjectiveC.Selector)
+}
+public protocol ATScrollDelegate {
+  func at_scrollViewDidEndScroll(_ scrollView: UIKit.UIScrollView)
+  func at_scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  func at_scrollViewDidEndDragging(_ scrollView: UIKit.UIScrollView, willDecelerate decelerate: Swift.Bool)
+  func at_scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
+  func at_scrollViewWillBeginDragging(_ scrollView: UIKit.UIScrollView)
+}
+extension AssistTableDataSource.AssistCollectionDataSource : Swift.Sendable {}

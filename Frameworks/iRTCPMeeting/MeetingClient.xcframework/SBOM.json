@@ -1,0 +1,27 @@
+{
+    "specVersion": "1.4",
+    "metadata": {
+        "tools": [
+            {
+                "vendor": "Sonatype",
+                "name": "LifeCycle",
+                "version": "202"
+            },
+            {
+                "vendor": "Zoho",
+                "name": "Hacksaw",
+                "version": "10.0.3"
+            },
+            {
+                "vendor": "Owasp",
+                "name": "Dependency Checker",
+                "version": "7.4.1"
+            }
+        ],
+        "timestamp": "2026-05-06T18:31:45.098366+05:30"
+    },
+    "components": [],
+    "bomFormat": "CycloneDX",
+    "version": 1,
+    "dependencies": []
+}

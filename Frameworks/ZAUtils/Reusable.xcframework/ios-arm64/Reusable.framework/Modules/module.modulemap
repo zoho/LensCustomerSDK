@@ -1,0 +1,3 @@
+framework module Reusable {
+  header "Reusable-Swift.h"
+}

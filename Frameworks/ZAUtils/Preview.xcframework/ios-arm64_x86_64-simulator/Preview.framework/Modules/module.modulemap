@@ -1,0 +1,3 @@
+framework module Preview {
+  header "Preview-Swift.h"
+}

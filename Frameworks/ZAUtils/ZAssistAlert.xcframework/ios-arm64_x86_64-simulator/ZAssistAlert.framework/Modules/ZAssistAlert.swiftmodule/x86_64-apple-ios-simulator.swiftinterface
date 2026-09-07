@@ -1,0 +1,61 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ZAssistAlert
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import Foundation
+import OverlayViewController
+import Swift
+import UIKit
+import UIKit_Extention
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class ZAssistAlert : OverlayViewController {
+  @_Concurrency.MainActor @preconcurrency public var delegate: (any UIKit.UITextViewDelegate)?
+  @_Concurrency.MainActor @preconcurrency convenience public init(with model: ZAssistAlert.ZAssistAlertModel)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
+  @objc deinit
+}
+public struct ZAssistAlertModel {
+  public init(alertConfig: ZAssistAlert.Alert_Configs, footer_config: ZAssistAlert.Footer_Configs? = nil, actions: [ZAssistAlert.ZAssistAlertAction], action_buttons_axis: UIKit.NSLayoutConstraint.Axis = .horizontal)
+  public let alert_config: ZAssistAlert.Alert_Configs
+  public var footer_config: ZAssistAlert.Footer_Configs?
+  public let actions: [ZAssistAlert.ZAssistAlertAction]
+  public var action_buttons_axis: UIKit.NSLayoutConstraint.Axis
+}
+public struct ZAssistAlertAction : Swift.Equatable {
+  public init(title: Swift.String, title_color: UIKit.UIColor = .color(dark: .white, light: .black), bg_color: UIKit.UIColor = .clear, is_priority: Swift.Bool = false, action: ((ZAssistAlert.ZAssistAlertAction) -> ()?)? = nil)
+  public let title: Swift.String
+  public var title_color: UIKit.UIColor
+  public var bg_color: UIKit.UIColor
+  public var is_priority: Swift.Bool
+  public var action: ((ZAssistAlert.ZAssistAlertAction) -> ()?)?
+  public static func == (lhs: ZAssistAlert.ZAssistAlertAction, rhs: ZAssistAlert.ZAssistAlertAction) -> Swift.Bool
+}
+public struct Alert_Configs {
+  public init(title: Swift.String? = nil, body: Foundation.NSAttributedString? = nil)
+  public var title: Swift.String?
+  public var title_color: UIKit.UIColor
+  public var alert_bg_color: UIKit.UIColor
+  public var body: Foundation.NSAttributedString?
+}
+public struct Check_Box_Configuration {
+  public init(icon_font: UIKit.UIFont, selected_check_box: Swift.String, unselected_check_box: Swift.String, defaultValue: Swift.Bool = true, onChange: ((Swift.Bool) -> ())? = nil)
+  public var icon_font: UIKit.UIFont
+  public var selected_check_box: Swift.String
+  public var selected_check_box_color: UIKit.UIColor
+  public var unselected_check_box: Swift.String
+  public var unselected_check_box_color: UIKit.UIColor
+  public var defaultValue: Swift.Bool
+  public var onChange: ((Swift.Bool) -> ())?
+}
+public struct Footer_Configs {
+  public init(bg_color: UIKit.UIColor = .clear, text_color: UIKit.UIColor = .color(dark: .white, light: .black), footer_note: Swift.String, check_box_configuration: ZAssistAlert.Check_Box_Configuration? = nil)
+  public var bg_color: UIKit.UIColor
+  public var text_color: UIKit.UIColor
+  public let footer_note: Swift.String
+  public var check_box_configuration: ZAssistAlert.Check_Box_Configuration?
+}

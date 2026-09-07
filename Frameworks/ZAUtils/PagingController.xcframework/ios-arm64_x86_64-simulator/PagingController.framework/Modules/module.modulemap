@@ -1,0 +1,3 @@
+framework module PagingController {
+  header "PagingController-Swift.h"
+}

@@ -1,0 +1,76 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ZSocketHandler
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import Foundation
+import Reachability
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public class SocketHandler {
+  public var socket: (any ZSocketHandler.WebSocketProtocol)?
+  public var timeOut: Swift.Double
+  public var reachability: Reachability.ZReachability?
+  public var gateWayUrlRequest: Foundation.URLRequest!
+  final public let writeQoS: Foundation.QualityOfService
+  final public let readQoS: Foundation.QualityOfService
+  public var disableSSLCertValidation: Swift.Bool
+  public var isConnected: Swift.Bool {
+    get
+  }
+  public init(_ url: Foundation.URLRequest, writeQoS: Foundation.QualityOfService, readQoS: Foundation.QualityOfService)
+  public func start()
+  public func addListerner(_ object: any ZSocketHandler.AssistSocketProtocol) -> ZSocketHandler.DisposableObserver
+  public func removeListerner(_ object: ZSocketHandler.DisposableObserver)
+  public func write(_ string: Swift.String?)
+  public func write(_ data: Foundation.Data?)
+  public func disconnect()
+  public func reset()
+  @objc deinit
+}
+extension ZSocketHandler.SocketHandler : ZSocketHandler.WebSocketCallBack {
+  public func onConnect()
+  public func onDisconnect(error: (any Swift.Error)?)
+  public func onTextReceive(_ text: Swift.String)
+  public func onDataReceive(_ data: Foundation.Data)
+}
+public protocol AssistSocketProtocol : AnyObject {
+  func didSocketConnected()
+  func didSocketDisconnected(_ error: (any Swift.Error)?)
+  func didReceive(_ data: Foundation.Data)
+  func didReceive(_ string: Swift.String)
+  func custom_socket(call_back listerner: any ZSocketHandler.WebSocketCallBack) -> (any ZSocketHandler.WebSocketProtocol)?
+  var canReceiveData: Swift.Bool { get set }
+}
+public protocol WebSocketCallBack : AnyObject {
+  func onConnect()
+  func onDisconnect(error: (any Swift.Error)?)
+  func onTextReceive(_ text: Swift.String)
+  func onDataReceive(_ data: Foundation.Data)
+}
+public protocol WebSocketProtocol : AnyObject {
+  var disableSSLCertValidation: Swift.Bool { get set }
+  var is_connected: Swift.Bool { get }
+  func disconnect()
+  func write(data: Foundation.Data)
+  func write(string: Swift.String)
+  func connect(websocket url: Foundation.URLRequest, delegate: (any ZSocketHandler.WebSocketCallBack)?)
+  func lostNetwork()
+}
+public enum AssistSocketErrorState : Swift.Error {
+  case nointernet, writeTimeoutError, invalidSSLError, compressionError, outputStreamWriteError, protocolError, upgradeError, closeError, connectionTimeOut
+  public static func == (a: ZSocketHandler.AssistSocketErrorState, b: ZSocketHandler.AssistSocketErrorState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class DisposableObserver : Swift.Equatable {
+  public static func == (lhs: ZSocketHandler.DisposableObserver, rhs: ZSocketHandler.DisposableObserver) -> Swift.Bool
+  public init(value: Swift.AnyObject)
+  @objc deinit
+}
+extension ZSocketHandler.AssistSocketErrorState : Swift.Equatable {}
+extension ZSocketHandler.AssistSocketErrorState : Swift.Hashable {}

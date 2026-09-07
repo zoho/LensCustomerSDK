@@ -1,0 +1,36 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/jem-8413/Library/Developer/Xcode/DerivedData/ZAUtilsFramework-ckicxhmmskzkvughqdftssjpucxw/Build/Intermediates.noindex/ArchiveIntermediates/ATIcon/InstallationBuildProductsLocation/Library/Frameworks/ATIcon.framework/ATIcon'
+relocations:
+  - { offset: 0x4D0A6, size: 0x8, addend: 0x0, symName: _ATIconVersionString, symObjAddr: 0x0, symBinAddr: 0x32E0, symSize: 0x0 }
+  - { offset: 0x4D0DD, size: 0x8, addend: 0x0, symName: _ATIconVersionNumber, symObjAddr: 0x30, symBinAddr: 0x3310, symSize: 0x0 }
+  - { offset: 0x4D11B, size: 0x8, addend: 0x0, symName: '_$sSo21NSAttributedStringKeyaMa', symObjAddr: 0x38, symBinAddr: 0x1088, symSize: 0x50 }
+  - { offset: 0x4D133, size: 0x8, addend: 0x0, symName: '_$sSo21NSAttributedStringKeyaMa', symObjAddr: 0x38, symBinAddr: 0x1088, symSize: 0x50 }
+  - { offset: 0x4D204, size: 0x8, addend: 0x0, symName: '_$sSo21NSAttributedStringKeyas20_SwiftNewtypeWrapperSCSYWb', symObjAddr: 0x418, symBinAddr: 0x1454, symSize: 0x24 }
+  - { offset: 0x4D218, size: 0x8, addend: 0x0, symName: '_$sSo21NSAttributedStringKeyas20_SwiftNewtypeWrapperSCs35_HasCustomAnyHashableRepresentationPWb', symObjAddr: 0x43C, symBinAddr: 0x1478, symSize: 0x24 }
+  - { offset: 0x4D22C, size: 0x8, addend: 0x0, symName: '_$sSo21NSAttributedStringKeyaSHSCSQWb', symObjAddr: 0x460, symBinAddr: 0x149C, symSize: 0x24 }
+  - { offset: 0x4D49D, size: 0x8, addend: 0x0, symName: '_$sSo21NSAttributedStringKeyaSQSCSQ2eeoiySbx_xtFZTW', symObjAddr: 0x2BC, symBinAddr: 0x12F8, symSize: 0x84 }
+  - { offset: 0x4D568, size: 0x8, addend: 0x0, symName: '_$sSo21NSAttributedStringKeyas21_ObjectiveCBridgeableSCsACP09_bridgeToD1C01_D5CTypeQzyFTW', symObjAddr: 0x88, symBinAddr: 0x10D8, symSize: 0x8 }
+  - { offset: 0x4D5F1, size: 0x8, addend: 0x0, symName: '_$sSo21NSAttributedStringKeyas21_ObjectiveCBridgeableSCsACP016_forceBridgeFromD1C_6resulty01_D5CTypeQz_xSgztFZTW', symObjAddr: 0x90, symBinAddr: 0x10E0, symSize: 0x74 }
+  - { offset: 0x4D68F, size: 0x8, addend: 0x0, symName: '_$sSo21NSAttributedStringKeyas21_ObjectiveCBridgeableSCsACP024_conditionallyBridgeFromD1C_6resultSb01_D5CTypeQz_xSgztFZTW', symObjAddr: 0x104, symBinAddr: 0x1154, symSize: 0x7C }
+  - { offset: 0x4D72D, size: 0x8, addend: 0x0, symName: '_$sSo21NSAttributedStringKeyas21_ObjectiveCBridgeableSCsACP026_unconditionallyBridgeFromD1Cyx01_D5CTypeQzSgFZTW', symObjAddr: 0x180, symBinAddr: 0x11D0, symSize: 0x40 }
+  - { offset: 0x4D79C, size: 0x8, addend: 0x0, symName: '_$sSo21NSAttributedStringKeyaSHSCSH9hashValueSivgTW', symObjAddr: 0x1C0, symBinAddr: 0x1210, symSize: 0x38 }
+  - { offset: 0x4D80A, size: 0x8, addend: 0x0, symName: '_$sSo21NSAttributedStringKeyaSHSCSH4hash4intoys6HasherVz_tFTW', symObjAddr: 0x1F8, symBinAddr: 0x1248, symSize: 0x40 }
+  - { offset: 0x4D878, size: 0x8, addend: 0x0, symName: '_$sSo21NSAttributedStringKeyaSHSCSH13_rawHashValue4seedS2i_tFTW', symObjAddr: 0x238, symBinAddr: 0x1288, symSize: 0x70 }
+  - { offset: 0x4D8DF, size: 0x8, addend: 0x0, symName: '_$sSo21NSAttributedStringKeyaSYSCSY8rawValuexSg03RawE0Qz_tcfCTW', symObjAddr: 0x340, symBinAddr: 0x137C, symSize: 0x44 }
+  - { offset: 0x4D909, size: 0x8, addend: 0x0, symName: '_$sSo21NSAttributedStringKeyaSYSCSY8rawValue03RawE0QzvgTW', symObjAddr: 0x384, symBinAddr: 0x13C0, symSize: 0x28 }
+  - { offset: 0x4D932, size: 0x8, addend: 0x0, symName: '_$sSo21NSAttributedStringKeyas35_HasCustomAnyHashableRepresentationSCsACP03_toefG0s0fG0VSgyFTW', symObjAddr: 0x3AC, symBinAddr: 0x13E8, symSize: 0x6C }
+  - { offset: 0x4DAE0, size: 0x8, addend: 0x0, symName: ___swift_project_boxed_opaque_existential_1, symObjAddr: 0x738, symBinAddr: 0x1C38, symSize: 0x24 }
+  - { offset: 0x4DAF4, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledNameV2, symObjAddr: 0x75C, symBinAddr: 0x1C5C, symSize: 0x50 }
+  - { offset: 0x4DB13, size: 0x8, addend: 0x0, symName: '_$ss22__RawDictionaryStorageC4findys10_HashTableV6BucketV6bucket_Sb5foundtxSHRzlFSo21NSAttributedStringKeya_Tg5', symObjAddr: 0x7AC, symBinAddr: 0x1CAC, symSize: 0x80 }
+  - { offset: 0x4DB9C, size: 0x8, addend: 0x0, symName: '_$sSo21NSAttributedStringKeya_yptWOc', symObjAddr: 0x82C, symBinAddr: 0x1D2C, symSize: 0x50 }
+  - { offset: 0x4DBB0, size: 0x8, addend: 0x0, symName: '_$sypWOb', symObjAddr: 0x87C, symBinAddr: 0x1D7C, symSize: 0x10 }
+  - { offset: 0x4DBC4, size: 0x8, addend: 0x0, symName: '_$sSo21NSAttributedStringKeya_yptWOh', symObjAddr: 0x88C, symBinAddr: 0x1D8C, symSize: 0x48 }
+  - { offset: 0x4DBD8, size: 0x8, addend: 0x0, symName: '_$sSo21NSAttributedStringKeyaABSHSCWl', symObjAddr: 0x8D4, symBinAddr: 0x1DD4, symSize: 0x44 }
+  - { offset: 0x4DC0D, size: 0x8, addend: 0x0, symName: '_$ss22__RawDictionaryStorageC4find_9hashValues10_HashTableV6BucketV6bucket_Sb5foundtx_SitSHRzlFSo21NSAttributedStringKeya_Tg5', symObjAddr: 0x958, symBinAddr: 0x1E58, symSize: 0xF8 }
+  - { offset: 0x4DED2, size: 0x8, addend: 0x0, symName: '_$sSo15UIBarButtonItemC6ATIconE3set4icon0F4Size0F5Color3foryA2C_p_12CoreGraphics7CGFloatVSgSo7UIColorCSgSaySo14UIControlStateVGtF', symObjAddr: 0x0, symBinAddr: 0x1500, symSize: 0x738 }
+  - { offset: 0x4E502, size: 0x8, addend: 0x0, symName: '_$sSo8UIButtonC6ATIconE3set4icon0D4Size0D5Color3foryA2C_p_12CoreGraphics7CGFloatVSgSo7UIColorCSgSaySo14UIControlStateVGtF', symObjAddr: 0x0, symBinAddr: 0x1F50, symSize: 0x2BC }
+  - { offset: 0x4E703, size: 0x8, addend: 0x0, symName: '_$sSo8UIButtonC6ATIconE3set4icon0D4Size0D5Color3foryA2C_p_12CoreGraphics7CGFloatVSgSo7UIColorCSgSaySo14UIControlStateVGtF', symObjAddr: 0x0, symBinAddr: 0x1F50, symSize: 0x2BC }
+  - { offset: 0x4EAEC, size: 0x8, addend: 0x0, symName: '_$sSo7UILabelC6ATIconE3set4icon0D4Size5coloryA2C_p_12CoreGraphics7CGFloatVSgSo7UIColorCSgtF', symObjAddr: 0x0, symBinAddr: 0x220C, symSize: 0x154 }
+  - { offset: 0x4EB9A, size: 0x8, addend: 0x0, symName: '_$sSo7UILabelC6ATIconE3set4icon0D4Size5coloryA2C_p_12CoreGraphics7CGFloatVSgSo7UIColorCSgtF', symObjAddr: 0x0, symBinAddr: 0x220C, symSize: 0x154 }
+...

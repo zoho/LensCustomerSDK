@@ -1,0 +1,258 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "KeyBoardChangeObserver",
+    "printedName": "KeyBoardChangeObserver",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "KeyBoardChangeObserver",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "KeyBoardChangeObserver"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "KeyboardNotificationhandler",
+        "printedName": "KeyboardNotificationhandler",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "addKeyboardChange",
+            "printedName": "addKeyboardChange(observer:selector:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Any?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Selector",
+                "printedName": "ObjectiveC.Selector",
+                "usr": "s:10ObjectiveC8SelectorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:22KeyBoardChangeObserver27KeyboardNotificationhandlerP03addeC08observer8selectoryypSg_10ObjectiveC8SelectorVtF",
+            "mangledName": "$s22KeyBoardChangeObserver27KeyboardNotificationhandlerP03addeC08observer8selectoryypSg_10ObjectiveC8SelectorVtF",
+            "moduleName": "KeyBoardChangeObserver",
+            "genericSig": "<τ_0_0 where τ_0_0 : KeyBoardChangeObserver.KeyboardNotificationhandler>",
+            "sugared_genericSig": "<Self where Self : KeyBoardChangeObserver.KeyboardNotificationhandler>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeKeyboardChange",
+            "printedName": "removeKeyboardChange(observer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Any?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:22KeyBoardChangeObserver27KeyboardNotificationhandlerP06removeeC08observeryypSg_tF",
+            "mangledName": "$s22KeyBoardChangeObserver27KeyboardNotificationhandlerP06removeeC08observeryypSg_tF",
+            "moduleName": "KeyBoardChangeObserver",
+            "genericSig": "<τ_0_0 where τ_0_0 : KeyBoardChangeObserver.KeyboardNotificationhandler>",
+            "sugared_genericSig": "<Self where Self : KeyBoardChangeObserver.KeyboardNotificationhandler>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getKeyboardDetails",
+            "printedName": "getKeyboardDetails(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Tuple",
+                "printedName": "(frame: CoreFoundation.CGRect?, duration: Swift.Double, option: UIKit.UIView.AnimationOptions)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CoreFoundation.CGRect?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGRect",
+                        "printedName": "CoreFoundation.CGRect",
+                        "usr": "c:@S@CGRect"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnimationOptions",
+                    "printedName": "UIKit.UIView.AnimationOptions",
+                    "usr": "c:@E@UIViewAnimationOptions"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Notification",
+                "printedName": "Foundation.Notification",
+                "usr": "s:10Foundation12NotificationV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:22KeyBoardChangeObserver27KeyboardNotificationhandlerPAAE03getE7Details3forSo6CGRectVSg5frame_Sd8durationSo22UIViewAnimationOptionsV6optiont10Foundation12NotificationV_tF",
+            "mangledName": "$s22KeyBoardChangeObserver27KeyboardNotificationhandlerPAAE03getE7Details3forSo6CGRectVSg5frame_Sd8durationSo22UIViewAnimationOptionsV6optiont10Foundation12NotificationV_tF",
+            "moduleName": "KeyBoardChangeObserver",
+            "genericSig": "<τ_0_0 where τ_0_0 : KeyBoardChangeObserver.KeyboardNotificationhandler>",
+            "sugared_genericSig": "<Self where Self : KeyBoardChangeObserver.KeyboardNotificationhandler>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addKeyboardChange",
+            "printedName": "addKeyboardChange(observer:selector:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Any?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Selector",
+                "printedName": "ObjectiveC.Selector",
+                "usr": "s:10ObjectiveC8SelectorV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:22KeyBoardChangeObserver27KeyboardNotificationhandlerPAAE03addeC08observer8selectoryypSg_10ObjectiveC8SelectorVtF",
+            "mangledName": "$s22KeyBoardChangeObserver27KeyboardNotificationhandlerPAAE03addeC08observer8selectoryypSg_10ObjectiveC8SelectorVtF",
+            "moduleName": "KeyBoardChangeObserver",
+            "genericSig": "<τ_0_0 where τ_0_0 : KeyBoardChangeObserver.KeyboardNotificationhandler>",
+            "sugared_genericSig": "<Self where Self : KeyBoardChangeObserver.KeyboardNotificationhandler>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeKeyboardChange",
+            "printedName": "removeKeyboardChange(observer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Any?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:22KeyBoardChangeObserver27KeyboardNotificationhandlerPAAE06removeeC08observeryypSg_tF",
+            "mangledName": "$s22KeyBoardChangeObserver27KeyboardNotificationhandlerPAAE06removeeC08observeryypSg_tF",
+            "moduleName": "KeyBoardChangeObserver",
+            "genericSig": "<τ_0_0 where τ_0_0 : KeyBoardChangeObserver.KeyboardNotificationhandler>",
+            "sugared_genericSig": "<Self where Self : KeyBoardChangeObserver.KeyboardNotificationhandler>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:22KeyBoardChangeObserver27KeyboardNotificationhandlerP",
+        "mangledName": "$s22KeyBoardChangeObserver27KeyboardNotificationhandlerP",
+        "moduleName": "KeyBoardChangeObserver",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": []
+}

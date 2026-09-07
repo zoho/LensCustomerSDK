@@ -1,0 +1,1319 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "NotificationView",
+    "printedName": "NotificationView",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "NotificationView",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "NotificationView",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SnapKit",
+        "printedName": "SnapKit",
+        "declKind": "Import",
+        "moduleName": "NotificationView"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "NotificationView"
+      },
+      {
+        "kind": "Import",
+        "name": "ToastView",
+        "printedName": "ToastView",
+        "declKind": "Import",
+        "moduleName": "NotificationView"
+      },
+      {
+        "kind": "Import",
+        "name": "OverlayViewController",
+        "printedName": "OverlayViewController",
+        "declKind": "Import",
+        "moduleName": "NotificationView"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit_Extention",
+        "printedName": "UIKit_Extention",
+        "declKind": "Import",
+        "moduleName": "NotificationView"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation_Extention",
+        "printedName": "Foundation_Extention",
+        "declKind": "Import",
+        "moduleName": "NotificationView"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NotificationView",
+        "printedName": "NotificationView",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "messageLabel",
+            "printedName": "messageLabel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "UIKit.UILabel?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@NotificationView@objc(cs)NotificationView(py)messageLabel",
+            "mangledName": "$s16NotificationViewAAC12messageLabelSo7UILabelCSgvp",
+            "moduleName": "NotificationView",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl",
+              "IBOutlet",
+              "ObjC"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UILabel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@NotificationView@objc(cs)NotificationView(im)messageLabel",
+                "mangledName": "$s16NotificationViewAAC12messageLabelSo7UILabelCSgvg",
+                "moduleName": "NotificationView",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UILabel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@NotificationView@objc(cs)NotificationView(im)setMessageLabel:",
+                "mangledName": "$s16NotificationViewAAC12messageLabelSo7UILabelCSgvs",
+                "moduleName": "NotificationView",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16NotificationViewAAC12messageLabelSo7UILabelCSgvM",
+                "mangledName": "$s16NotificationViewAAC12messageLabelSo7UILabelCSgvM",
+                "moduleName": "NotificationView",
+                "implicit": true,
+                "declAttributes": [
+                  "Available"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "getNotificationView",
+            "printedName": "getNotificationView()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "NotificationView.NotificationView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NotificationView",
+                    "printedName": "NotificationView.NotificationView",
+                    "usr": "c:@M@NotificationView@objc(cs)NotificationView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16NotificationViewAAC03getaB0ABSgyFZ",
+            "mangledName": "$s16NotificationViewAAC03getaB0ABSgyFZ",
+            "moduleName": "NotificationView",
+            "static": true,
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "layoutSubviews",
+            "printedName": "layoutSubviews()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@NotificationView@objc(cs)NotificationView(im)layoutSubviews",
+            "mangledName": "$s16NotificationViewAAC14layoutSubviewsyyF",
+            "moduleName": "NotificationView",
+            "overriding": true,
+            "objc_name": "layoutSubviews",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "show",
+            "printedName": "show()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16NotificationViewAAC4showyyF",
+            "mangledName": "$s16NotificationViewAAC4showyyF",
+            "moduleName": "NotificationView",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dismiss",
+            "printedName": "dismiss(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16NotificationViewAAC7dismiss10completionyyycSg_tF",
+            "mangledName": "$s16NotificationViewAAC7dismiss10completionyyycSg_tF",
+            "moduleName": "NotificationView",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(frame:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NotificationView",
+                "printedName": "NotificationView.NotificationView",
+                "usr": "c:@M@NotificationView@objc(cs)NotificationView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@NotificationView@objc(cs)NotificationView(im)initWithFrame:",
+            "mangledName": "$s16NotificationViewAAC5frameABSo6CGRectV_tcfc",
+            "moduleName": "NotificationView",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithFrame:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "NotificationView.NotificationView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NotificationView",
+                    "printedName": "NotificationView.NotificationView",
+                    "usr": "c:@M@NotificationView@objc(cs)NotificationView"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@NotificationView@objc(cs)NotificationView(im)initWithCoder:",
+            "mangledName": "$s16NotificationViewAAC5coderABSgSo7NSCoderC_tcfc",
+            "moduleName": "NotificationView",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@NotificationView@objc(cs)NotificationView",
+        "mangledName": "$s16NotificationViewAAC",
+        "moduleName": "NotificationView",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "Available",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UIView",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UIView",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConstraintRelatableTarget",
+            "printedName": "ConstraintRelatableTarget",
+            "usr": "s:7SnapKit25ConstraintRelatableTargetP",
+            "mangledName": "$s7SnapKit25ConstraintRelatableTargetP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LayoutConstraintItem",
+            "printedName": "LayoutConstraintItem",
+            "usr": "s:7SnapKit20LayoutConstraintItemP",
+            "mangledName": "$s7SnapKit20LayoutConstraintItemP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UIView",
+        "printedName": "UIView",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "NotificationBannerStyle",
+            "printedName": "NotificationBannerStyle",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "banner",
+                "printedName": "banner",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UIKit.UIView.NotificationBannerStyle.Type) -> UIKit.UIView.NotificationBannerStyle",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NotificationBannerStyle",
+                        "printedName": "UIKit.UIView.NotificationBannerStyle",
+                        "usr": "s:So6UIViewC16NotificationViewE0B11BannerStyleO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "UIKit.UIView.NotificationBannerStyle.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "NotificationBannerStyle",
+                            "printedName": "UIKit.UIView.NotificationBannerStyle",
+                            "usr": "s:So6UIViewC16NotificationViewE0B11BannerStyleO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:So6UIViewC16NotificationViewE0B11BannerStyleO6banneryA2EmF",
+                "mangledName": "$sSo6UIViewC16NotificationViewE0B11BannerStyleO6banneryA2EmF",
+                "moduleName": "NotificationView"
+              },
+              {
+                "kind": "Var",
+                "name": "toast",
+                "printedName": "toast",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UIKit.UIView.NotificationBannerStyle.Type) -> UIKit.UIView.NotificationBannerStyle",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NotificationBannerStyle",
+                        "printedName": "UIKit.UIView.NotificationBannerStyle",
+                        "usr": "s:So6UIViewC16NotificationViewE0B11BannerStyleO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "UIKit.UIView.NotificationBannerStyle.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "NotificationBannerStyle",
+                            "printedName": "UIKit.UIView.NotificationBannerStyle",
+                            "usr": "s:So6UIViewC16NotificationViewE0B11BannerStyleO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:So6UIViewC16NotificationViewE0B11BannerStyleO5toastyA2EmF",
+                "mangledName": "$sSo6UIViewC16NotificationViewE0B11BannerStyleO5toastyA2EmF",
+                "moduleName": "NotificationView"
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NotificationBannerStyle",
+                    "printedName": "UIKit.UIView.NotificationBannerStyle",
+                    "usr": "s:So6UIViewC16NotificationViewE0B11BannerStyleO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NotificationBannerStyle",
+                    "printedName": "UIKit.UIView.NotificationBannerStyle",
+                    "usr": "s:So6UIViewC16NotificationViewE0B11BannerStyleO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:So6UIViewC16NotificationViewE0B11BannerStyleO2eeoiySbAE_AEtFZ",
+                "mangledName": "$sSo6UIViewC16NotificationViewE0B11BannerStyleO2eeoiySbAE_AEtFZ",
+                "moduleName": "NotificationView",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:So6UIViewC16NotificationViewE0B11BannerStyleO9hashValueSivp",
+                "mangledName": "$sSo6UIViewC16NotificationViewE0B11BannerStyleO9hashValueSivp",
+                "moduleName": "NotificationView",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:So6UIViewC16NotificationViewE0B11BannerStyleO9hashValueSivg",
+                    "mangledName": "$sSo6UIViewC16NotificationViewE0B11BannerStyleO9hashValueSivg",
+                    "moduleName": "NotificationView",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:So6UIViewC16NotificationViewE0B11BannerStyleO4hash4intoys6HasherVz_tF",
+                "mangledName": "$sSo6UIViewC16NotificationViewE0B11BannerStyleO4hash4intoys6HasherVz_tF",
+                "moduleName": "NotificationView",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:So6UIViewC16NotificationViewE0B11BannerStyleO",
+            "mangledName": "$sSo6UIViewC16NotificationViewE0B11BannerStyleO",
+            "moduleName": "NotificationView",
+            "isFromExtension": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "showNotificationInWindow",
+            "printedName": "showNotificationInWindow(message:bgColor:textColor:show:style:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NotificationBannerStyle",
+                "printedName": "UIKit.UIView.NotificationBannerStyle",
+                "hasDefaultArg": true,
+                "usr": "s:So6UIViewC16NotificationViewE0B11BannerStyleO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC16NotificationViewE04showB8InWindow7message7bgColor04textI00D05style10completionySS_So7UIColorCSgAMSdAbCE0B11BannerStyleOyycSgtF",
+            "mangledName": "$sSo6UIViewC16NotificationViewE04showB8InWindow7message7bgColor04textI00D05style10completionySS_So7UIColorCSgAMSdAbCE0B11BannerStyleOyycSgtF",
+            "moduleName": "NotificationView",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showActionToast",
+            "printedName": "showActionToast(message:buttons:duration:position:theme:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[(title: Swift.String, titleColor: SwiftUI.Color, successMessage: Swift.String, failureMessage: Swift.String, action: () async -> Swift.Bool)]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(title: Swift.String, titleColor: SwiftUI.Color, successMessage: Swift.String, failureMessage: Swift.String, action: () async -> Swift.Bool)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Color",
+                        "printedName": "SwiftUI.Color",
+                        "usr": "s:7SwiftUI5ColorV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() async -> Swift.Bool",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ToastPosition",
+                "printedName": "ToastView.ToastPosition",
+                "hasDefaultArg": true,
+                "usr": "s:9ToastView0A8PositionO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ToastTheme",
+                "printedName": "ToastView.ToastTheme",
+                "usr": "s:9ToastView0A5ThemeV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC16NotificationViewE15showActionToast7message7buttons8duration8position5themeySS_SaySS5title_7SwiftUI5ColorV0lO0SS14successMessageSS07failureQ0SbyYac6actiontGSd0fC00F8PositionOAS0F5ThemeVtF",
+            "mangledName": "$sSo6UIViewC16NotificationViewE15showActionToast7message7buttons8duration8position5themeySS_SaySS5title_7SwiftUI5ColorV0lO0SS14successMessageSS07failureQ0SbyYac6actiontGSd0fC00F8PositionOAS0F5ThemeVtF",
+            "moduleName": "NotificationView",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showToast",
+            "printedName": "showToast(message:buttons:duration:position:theme:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[(title: Swift.String, titleColor: SwiftUI.Color, action: () -> ())]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(title: Swift.String, titleColor: SwiftUI.Color, action: () -> ())",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Color",
+                        "printedName": "SwiftUI.Color",
+                        "usr": "s:7SwiftUI5ColorV"
+                      },
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ToastPosition",
+                "printedName": "ToastView.ToastPosition",
+                "hasDefaultArg": true,
+                "usr": "s:9ToastView0A8PositionO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ToastTheme",
+                "printedName": "ToastView.ToastTheme",
+                "usr": "s:9ToastView0A5ThemeV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC16NotificationViewE9showToast7message7buttons8duration8position5themeySS_SaySS5title_7SwiftUI5ColorV0kN0yyc6actiontGSd0eC00E8PositionOAQ0E5ThemeVtF",
+            "mangledName": "$sSo6UIViewC16NotificationViewE9showToast7message7buttons8duration8position5themeySS_SaySS5title_7SwiftUI5ColorV0kN0yyc6actiontGSd0eC00E8PositionOAQ0E5ThemeVtF",
+            "moduleName": "NotificationView",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showLoaderToast",
+            "printedName": "showLoaderToast(message:position:theme:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ToastPresenter",
+                "printedName": "ToastView.ToastPresenter",
+                "usr": "s:9ToastView0A9PresenterC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ToastPosition",
+                "printedName": "ToastView.ToastPosition",
+                "hasDefaultArg": true,
+                "usr": "s:9ToastView0A8PositionO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ToastTheme",
+                "printedName": "ToastView.ToastTheme",
+                "usr": "s:9ToastView0A5ThemeV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC16NotificationViewE15showLoaderToast7message8position5theme0fC00F9PresenterCSS_AH0F8PositionOAH0F5ThemeVtF",
+            "mangledName": "$sSo6UIViewC16NotificationViewE15showLoaderToast7message8position5theme0fC00F9PresenterCSS_AH0F8PositionOAH0F5ThemeVtF",
+            "moduleName": "NotificationView",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "DiscardableResult"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showNotificationBanner",
+            "printedName": "showNotificationBanner(message:bgColor:textColor:show:style:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NotificationBannerStyle",
+                "printedName": "UIKit.UIView.NotificationBannerStyle",
+                "hasDefaultArg": true,
+                "usr": "s:So6UIViewC16NotificationViewE0B11BannerStyleO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC16NotificationViewE04showB6Banner7message7bgColor04textH00D05style10completionySS_So7UIColorCSgAMSdAbCE0bE5StyleOyycSgtF",
+            "mangledName": "$sSo6UIViewC16NotificationViewE04showB6Banner7message7bgColor04textH00D05style10completionySS_So7UIColorCSgAMSdAbCE0bE5StyleOyycSgtF",
+            "moduleName": "NotificationView",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dismissNotificationView",
+            "printedName": "dismissNotificationView()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So6UIViewC16NotificationViewE07dismissbC0yyF",
+            "mangledName": "$sSo6UIViewC16NotificationViewE07dismissbC0yyF",
+            "moduleName": "NotificationView",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)UIView",
+        "moduleName": "UIKit",
+        "isOpen": true,
+        "intro_iOS": "2.0",
+        "objc_name": "UIView",
+        "declAttributes": [
+          "Preconcurrency",
+          "Available",
+          "ObjC",
+          "NonSendable",
+          "Custom",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)UIResponder",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConstraintRelatableTarget",
+            "printedName": "ConstraintRelatableTarget",
+            "usr": "s:7SnapKit25ConstraintRelatableTargetP",
+            "mangledName": "$s7SnapKit25ConstraintRelatableTargetP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LayoutConstraintItem",
+            "printedName": "LayoutConstraintItem",
+            "usr": "s:7SnapKit20LayoutConstraintItemP",
+            "mangledName": "$s7SnapKit20LayoutConstraintItemP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/NotificationAlert\/NotificationView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3494,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/NotificationAlert\/NotificationView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5003,
+      "length": 1,
+      "value": "4"
+    }
+  ]
+}

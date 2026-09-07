@@ -1,0 +1,25 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/jem-8413/Library/Developer/Xcode/DerivedData/ZAUtilsFramework-ckicxhmmskzkvughqdftssjpucxw/Build/Intermediates.noindex/ArchiveIntermediates/KeyBoardChangeObserver/InstallationBuildProductsLocation/Library/Frameworks/KeyBoardChangeObserver.framework/KeyBoardChangeObserver'
+relocations:
+  - { offset: 0x4D0A6, size: 0x8, addend: 0x0, symName: _KeyBoardChangeObserverVersionString, symObjAddr: 0x0, symBinAddr: 0x2840, symSize: 0x0 }
+  - { offset: 0x4D0DD, size: 0x8, addend: 0x0, symName: _KeyBoardChangeObserverVersionNumber, symObjAddr: 0x40, symBinAddr: 0x2880, symSize: 0x0 }
+  - { offset: 0x4D331, size: 0x8, addend: 0x0, symName: '_$ss22__RawDictionaryStorageC4findys10_HashTableV6BucketV6bucket_Sb5foundtxSHRzlFs11AnyHashableV_Tg5', symObjAddr: 0x47C, symBinAddr: 0x140C, symSize: 0x30 }
+  - { offset: 0x4D369, size: 0x8, addend: 0x0, symName: '_$ss22__RawDictionaryStorageC4find_9hashValues10_HashTableV6BucketV6bucket_Sb5foundtx_SitSHRzlFs11AnyHashableV_Tg5', symObjAddr: 0x4AC, symBinAddr: 0x143C, symSize: 0xBC }
+  - { offset: 0x4D396, size: 0x8, addend: 0x0, symName: '_$ss11AnyHashableVWOh', symObjAddr: 0x6E0, symBinAddr: 0x1670, symSize: 0x34 }
+  - { offset: 0x4D3AA, size: 0x8, addend: 0x0, symName: '_$sypSgWOh', symObjAddr: 0x714, symBinAddr: 0x16A4, symSize: 0x48 }
+  - { offset: 0x4D3BE, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledNameV2, symObjAddr: 0x75C, symBinAddr: 0x16EC, symSize: 0x50 }
+  - { offset: 0x4D3D2, size: 0x8, addend: 0x0, symName: '_$sypWOc', symObjAddr: 0x7EC, symBinAddr: 0x177C, symSize: 0x3C }
+  - { offset: 0x4D3E6, size: 0x8, addend: 0x0, symName: '_$ss11AnyHashableVWOc', symObjAddr: 0x838, symBinAddr: 0x17C8, symSize: 0x3C }
+  - { offset: 0x4D3FA, size: 0x8, addend: 0x0, symName: '_$sypSgWOc', symObjAddr: 0x874, symBinAddr: 0x1804, symSize: 0x50 }
+  - { offset: 0x4D40E, size: 0x8, addend: 0x0, symName: '_$sypWOb', symObjAddr: 0x8C4, symBinAddr: 0x1854, symSize: 0x10 }
+  - { offset: 0x4D422, size: 0x8, addend: 0x0, symName: ___swift_project_boxed_opaque_existential_0, symObjAddr: 0x8D4, symBinAddr: 0x1864, symSize: 0x24 }
+  - { offset: 0x4D436, size: 0x8, addend: 0x0, symName: ___swift_destroy_boxed_opaque_existential_0, symObjAddr: 0x8F8, symBinAddr: 0x1888, symSize: 0x20 }
+  - { offset: 0x4D47F, size: 0x8, addend: 0x0, symName: '_$s22KeyBoardChangeObserver27KeyboardNotificationhandlerP03addeC08observer8selectoryypSg_10ObjectiveC8SelectorVtF', symObjAddr: 0x0, symBinAddr: 0xF98, symSize: 0x4 }
+  - { offset: 0x4D497, size: 0x8, addend: 0x0, symName: '_$s22KeyBoardChangeObserver27KeyboardNotificationhandlerP03addeC08observer8selectoryypSg_10ObjectiveC8SelectorVtF', symObjAddr: 0x0, symBinAddr: 0xF98, symSize: 0x4 }
+  - { offset: 0x4D4B0, size: 0x8, addend: 0x0, symName: '_$s22KeyBoardChangeObserver27KeyboardNotificationhandlerP06removeeC08observeryypSg_tF', symObjAddr: 0x8, symBinAddr: 0xF9C, symSize: 0x4 }
+  - { offset: 0x4D4C8, size: 0x8, addend: 0x0, symName: '_$s22KeyBoardChangeObserver27KeyboardNotificationhandlerP06removeeC08observeryypSg_tF', symObjAddr: 0x8, symBinAddr: 0xF9C, symSize: 0x4 }
+  - { offset: 0x4D54A, size: 0x8, addend: 0x0, symName: '_$s22KeyBoardChangeObserver27KeyboardNotificationhandlerPAAE03getE7Details3forSo6CGRectVSg5frame_Sd8durationSo22UIViewAnimationOptionsV6optiont10Foundation12NotificationV_tF', symObjAddr: 0x10, symBinAddr: 0xFA0, symSize: 0x46C }
+  - { offset: 0x4D6DC, size: 0x8, addend: 0x0, symName: '_$s22KeyBoardChangeObserver27KeyboardNotificationhandlerPAAE03addeC08observer8selectoryypSg_10ObjectiveC8SelectorVtFTf4nnd_n', symObjAddr: 0x568, symBinAddr: 0x14F8, symSize: 0xC4 }
+  - { offset: 0x4D736, size: 0x8, addend: 0x0, symName: '_$s22KeyBoardChangeObserver27KeyboardNotificationhandlerPAAE06removeeC08observeryypSg_tFTf4nd_n', symObjAddr: 0x62C, symBinAddr: 0x15BC, symSize: 0xB4 }
+...

@@ -1,0 +1,3 @@
+framework module Foundation_Extention {
+  header "Foundation_Extention-Swift.h"
+}

@@ -1,0 +1,22 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/harrish-21397/Desktop/Salesiq_Frameworks/Packages/6.3.2/irtcpmeeting/build/DerivedData/Build/Intermediates.noindex/ArchiveIntermediates/TraceKit/InstallationBuildProductsLocation/Library/Frameworks/TraceKit.framework/TraceKit'
+relocations:
+  - { offset: 0x29E5D, size: 0x8, addend: 0x0, symName: '_$s8TraceKit18DefaultLogArchiverCMa', symObjAddr: 0x34, symBinAddr: 0xFC4, symSize: 0x20 }
+  - { offset: 0x29ED4, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledNameV2, symObjAddr: 0x5C8, symBinAddr: 0x145C, symSize: 0x50 }
+  - { offset: 0x29EF5, size: 0x8, addend: 0x0, symName: '_$s8TraceKit18DefaultLogArchiverCACycfC', symObjAddr: 0x0, symBinAddr: 0xF90, symSize: 0x10 }
+  - { offset: 0x29F09, size: 0x8, addend: 0x0, symName: '_$s8TraceKit18DefaultLogArchiverC6sharedACvgZ', symObjAddr: 0x10, symBinAddr: 0xFA0, symSize: 0x1C }
+  - { offset: 0x29F2A, size: 0x8, addend: 0x0, symName: '_$s8TraceKit18DefaultLogArchiverCACycfc', symObjAddr: 0x2C, symBinAddr: 0xFBC, symSize: 0x8 }
+  - { offset: 0x2A031, size: 0x8, addend: 0x0, symName: '_$s8TraceKit18DefaultLogArchiverC7archive5files2toySay10Foundation3URLVG_AItKF', symObjAddr: 0x54, symBinAddr: 0xFE4, symSize: 0x14 }
+  - { offset: 0x2A0F3, size: 0x8, addend: 0x0, symName: '_$s8TraceKit18DefaultLogArchiverC7archive9directory2toy10Foundation3URLV_AItKF', symObjAddr: 0x68, symBinAddr: 0xFF8, symSize: 0xE0 }
+  - { offset: 0x2A14D, size: 0x8, addend: 0x0, symName: '_$s8TraceKit18DefaultLogArchiverCfD', symObjAddr: 0x150, symBinAddr: 0x10D8, symSize: 0x10 }
+  - { offset: 0x2A1D6, size: 0x8, addend: 0x0, symName: '_$s8TraceKit18DefaultLogArchiverC7archive5files2toySay10Foundation3URLVG_AItKFTf4nnd_n', symObjAddr: 0x254, symBinAddr: 0x10E8, symSize: 0x328 }
+  - { offset: 0x2A40B, size: 0x8, addend: 0x0, symName: '_$s12TraceKitCore22FileLoggingDestinationV0aB0E7default_WZ', symObjAddr: 0x0, symBinAddr: 0x14AC, symSize: 0x48 }
+  - { offset: 0x2A423, size: 0x8, addend: 0x0, symName: '_$s12TraceKitCore22FileLoggingDestinationV0aB0E7default_WZ', symObjAddr: 0x0, symBinAddr: 0x14AC, symSize: 0x48 }
+  - { offset: 0x2A4CE, size: 0x8, addend: 0x0, symName: '_$s8TraceKit18DefaultLogArchiverCAC0aB4Core0dE0AAWl', symObjAddr: 0x370, symBinAddr: 0x181C, symSize: 0x44 }
+  - { offset: 0x2A4F3, size: 0x8, addend: 0x0, symName: ___swift_project_value_buffer, symObjAddr: 0x424, symBinAddr: 0x18D0, symSize: 0x18 }
+  - { offset: 0x2A507, size: 0x8, addend: 0x0, symName: ___swift_allocate_value_buffer, symObjAddr: 0x43C, symBinAddr: 0x18E8, symSize: 0x40 }
+  - { offset: 0x2A660, size: 0x8, addend: 0x0, symName: '_$s12TraceKitCore22FileLoggingDestinationV0aB0E7defaultACvpZfiACyXEfU_', symObjAddr: 0x48, symBinAddr: 0x14F4, symSize: 0x1FC }
+  - { offset: 0x2A7F1, size: 0x8, addend: 0x0, symName: '_$s12TraceKitCore22FileLoggingDestinationV0aB0E9directory4name21segmentationBehaviourAC10Foundation3URLV_SSAC012SegmentationJ0OtcfC', symObjAddr: 0x244, symBinAddr: 0x16F0, symSize: 0x12C }
+  - { offset: 0x2A83A, size: 0x8, addend: 0x0, symName: '_$s12TraceKitCore22FileLoggingDestinationV0aB0E7defaultACvgZ', symObjAddr: 0x3B4, symBinAddr: 0x1860, symSize: 0x70 }
+...

@@ -1,0 +1,79 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ZASwiftUIAlert
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import Combine
+import Swift
+import SwiftUI
+import UIKit
+import UIKit_Extention
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@available(iOS 15.0, *)
+extension SwiftUICore.Color {
+  public static func fromUIColor(_ uiColor: UIKit.UIColor) -> SwiftUICore.Color
+  public static var adaptiveBackground: SwiftUICore.Color {
+    get
+  }
+  public static var adaptiveLabel: SwiftUICore.Color {
+    get
+  }
+}
+@available(iOS 15.0, *)
+public struct AlertButton : Swift.Identifiable {
+  public let id: Foundation.UUID
+  public let title: Swift.String
+  public var isEnabled: Swift.Bool
+  public let textColor: SwiftUICore.Color
+  public let backgroundColor: SwiftUICore.Color
+  public let fontWeight: SwiftUICore.Font.Weight
+  public let disableOnInvalidInput: Swift.Bool
+  public let disableOnCheckboxUnchecked: Swift.Bool
+  public let action: (Swift.String) -> Swift.Void
+  public init(title: Swift.String, isEnabled: Swift.Bool = true, textColor: SwiftUICore.Color, backgroundColor: SwiftUICore.Color, fontWeight: SwiftUICore.Font.Weight, disableOnInvalidInput: Swift.Bool = false, disableOnCheckboxUnchecked: Swift.Bool = false, action: @escaping (Swift.String) -> Swift.Void)
+  @available(iOS 15.0, *)
+  public typealias ID = Foundation.UUID
+}
+@available(iOS 15.0, *)
+public struct CheckboxConfiguration {
+  public let label: Swift.String
+  public let isCheckedByDefault: Swift.Bool
+  public let isRequired: Swift.Bool
+  public let checkedColor: SwiftUICore.Color
+  public let borderColor: SwiftUICore.Color
+  public let fontSize: CoreFoundation.CGFloat
+  public init(label: Swift.String, isCheckedByDefault: Swift.Bool = false, isRequired: Swift.Bool = true, checkedColor: SwiftUICore.Color = .green, borderColor: SwiftUICore.Color = .gray, fontSize: CoreFoundation.CGFloat = 15)
+}
+@available(iOS 15.0, *)
+@_Concurrency.MainActor @preconcurrency public struct CustomAlert : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(icon: Swift.String? = nil, isIconSFSymbol: Swift.Bool = false, iconTintColor: SwiftUICore.Color? = nil, title: Swift.String? = nil, titleDescription: Swift.String? = nil, titleAttributedDescription: Foundation.NSAttributedString? = nil, placeholder: Swift.String? = nil, helperText: Swift.String? = nil, validationErrorMessage: Swift.String? = nil, textFieldCharacterLimit: Swift.Int? = nil, buttons: [ZASwiftUIAlert.AlertButton], isPresented: SwiftUICore.Binding<Swift.Bool>, useEmailKeyboard: Swift.Bool = false, showTextField: Swift.Bool = true, validateInput: ((Swift.String) -> Swift.Bool)? = nil, onInputChange: ((Swift.String) -> Swift.Void)? = nil, checkboxConfiguration: ZASwiftUIAlert.CheckboxConfiguration? = nil, onCheckboxChange: ((Swift.Bool) -> Swift.Void)? = nil, onDismiss: (() -> Swift.Void)? = nil, tapToDismiss: Swift.Bool = false, inputText: Swift.String = "")
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  @available(iOS 15.0, *)
+  public typealias Body = @_opaqueReturnTypeOf("$s14ZASwiftUIAlert11CustomAlertV4bodyQrvp", 0) __
+}
+@objc @available(iOS 15.0, *)
+@_Concurrency.MainActor @preconcurrency public class CustomAlertViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency public init(alertIcon: Swift.String? = nil, isIconSFSymbol: Swift.Bool = false, iconTintColor: UIKit.UIColor? = nil, alertTitle: Swift.String? = nil, alertTitleDescription: Swift.String? = nil, alertAttributedDescription: Foundation.NSAttributedString? = nil, alertPlaceholder: Swift.String? = nil, alertHelperText: Swift.String? = nil, characterLimitWarning: Swift.String? = nil, maxCharacters: Swift.Int? = nil, buttons: [ZASwiftUIAlert.AlertButton], validateInput: ((Swift.String) -> Swift.Bool)? = nil, useEmailKeyboard: Swift.Bool = false, showTextField: Swift.Bool = false, checkboxConfiguration: ZASwiftUIAlert.CheckboxConfiguration? = nil, tapToDismiss: Swift.Bool = false, inputText: Swift.String = "")
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency convenience public init(title: Swift.String? = nil, message: Swift.String? = nil, buttons: [ZASwiftUIAlert.AlertButton], tapToDismiss: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency convenience public init(icon: Swift.String, iconTintColor: UIKit.UIColor, title: Swift.String? = nil, message: Swift.String? = nil, buttons: [ZASwiftUIAlert.AlertButton], tapToDismiss: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency convenience public init(icon: Swift.String, iconTintColor: UIKit.UIColor, title: Swift.String? = nil, message: Swift.String? = nil, footerText: Swift.String, buttons: [ZASwiftUIAlert.AlertButton], tapToDismiss: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency convenience public init(icon: Swift.String, iconTintColor: UIKit.UIColor, title: Swift.String? = nil, message: Swift.String? = nil, checkbox: ZASwiftUIAlert.CheckboxConfiguration, buttons: [ZASwiftUIAlert.AlertButton], tapToDismiss: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency convenience public init(title: Swift.String? = nil, message: Swift.String? = nil, checkbox: ZASwiftUIAlert.CheckboxConfiguration, buttons: [ZASwiftUIAlert.AlertButton], tapToDismiss: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency convenience public init(icon: Swift.String, iconTintColor: UIKit.UIColor, title: Swift.String? = nil, message: Swift.String? = nil, placeholder: Swift.String, inputText: Swift.String = "", buttons: [ZASwiftUIAlert.AlertButton], validateInput: ((Swift.String) -> Swift.Bool)? = nil, useEmailKeyboard: Swift.Bool = false, tapToDismiss: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency convenience public init(icon: Swift.String, iconTintColor: UIKit.UIColor, title: Swift.String? = nil, message: Swift.String? = nil, placeholder: Swift.String, helperText: Swift.String, inputText: Swift.String = "", buttons: [ZASwiftUIAlert.AlertButton], validateInput: ((Swift.String) -> Swift.Bool)? = nil, useEmailKeyboard: Swift.Bool = false, tapToDismiss: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency convenience public init(icon: Swift.String? = nil, iconTintColor: UIKit.UIColor? = nil, title: Swift.String? = nil, message: Swift.String? = nil, placeholder: Swift.String, helperText: Swift.String? = nil, characterLimitWarning: Swift.String? = nil, maxCharacters: Swift.Int? = nil, inputText: Swift.String = "", buttons: [ZASwiftUIAlert.AlertButton], validateInput: ((Swift.String) -> Swift.Bool)? = nil, useEmailKeyboard: Swift.Bool = false, tapToDismiss: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency convenience public init(success title: Swift.String? = nil, message: Swift.String? = nil, buttons: [ZASwiftUIAlert.AlertButton], tapToDismiss: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency convenience public init(warning title: Swift.String? = nil, message: Swift.String? = nil, buttons: [ZASwiftUIAlert.AlertButton], tapToDismiss: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency convenience public init(warning title: Swift.String? = nil, message: Swift.String? = nil, checkbox: ZASwiftUIAlert.CheckboxConfiguration, buttons: [ZASwiftUIAlert.AlertButton], tapToDismiss: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency convenience public init(error title: Swift.String? = nil, message: Swift.String? = nil, buttons: [ZASwiftUIAlert.AlertButton], tapToDismiss: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency public func getInputPublisher() -> Combine.AnyPublisher<Swift.String, Swift.Never>
+  @_Concurrency.MainActor @preconcurrency public func getCheckboxPublisher() -> Combine.AnyPublisher<Swift.Bool, Swift.Never>
+  @objc deinit
+}
+@available(iOS 15.0, *)
+extension ZASwiftUIAlert.CustomAlert : Swift.Sendable {}

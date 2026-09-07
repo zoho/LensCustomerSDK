@@ -1,0 +1,75 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     '/Users/harrish-21397/Library/Developer/Xcode/DerivedData/WebRTCExtras-folzvxhzyivrczezuzgmwfsnsxqb/Build/Intermediates.noindex/ArchiveIntermediates/WebRTCExtras/InstallationBuildProductsLocation/Library/Frameworks/WebRTCExtras.framework/WebRTCExtras'
+relocations:
+  - { offset: 0x3B82F, size: 0x8, addend: 0x0, symName: _WebRTCExtrasVersionString, symObjAddr: 0x0, symBinAddr: 0x4260, symSize: 0x0 }
+  - { offset: 0x3B864, size: 0x8, addend: 0x0, symName: _WebRTCExtrasVersionNumber, symObjAddr: 0x38, symBinAddr: 0x4298, symSize: 0x0 }
+  - { offset: 0x3B8A1, size: 0x8, addend: 0x0, symName: '+[DataConversionManager shared]', symObjAddr: 0x0, symBinAddr: 0xD60, symSize: 0x22 }
+  - { offset: 0x3B8AF, size: 0x8, addend: 0x0, symName: '+[DataConversionManager shared]', symObjAddr: 0x0, symBinAddr: 0xD60, symSize: 0x22 }
+  - { offset: 0x3B8D9, size: 0x8, addend: 0x0, symName: _shared.sharedInstance, symObjAddr: 0x48B0, symBinAddr: 0x6AB0, symSize: 0x0 }
+  - { offset: 0x3B8EF, size: 0x8, addend: 0x0, symName: _shared.onceToken, symObjAddr: 0x48B8, symBinAddr: 0x6AB8, symSize: 0x0 }
+  - { offset: 0x3B997, size: 0x8, addend: 0x0, symName: '+[DataConversionManager shared].cold.1', symObjAddr: 0xBC3, symBinAddr: 0x3D53, symSize: 0x18 }
+  - { offset: 0x3B9C5, size: 0x8, addend: 0x0, symName: '___31+[DataConversionManager shared]_block_invoke', symObjAddr: 0x22, symBinAddr: 0xD82, symSize: 0x25 }
+  - { offset: 0x3BA2C, size: 0x8, addend: 0x0, symName: '-[DataConversionManager encodeMessageToData:]', symObjAddr: 0x47, symBinAddr: 0xDA7, symSize: 0x53B }
+  - { offset: 0x3C0A4, size: 0x8, addend: 0x0, symName: '-[DataConversionManager decodeDataToMessage:]', symObjAddr: 0x582, symBinAddr: 0x12E2, symSize: 0x641 }
+  - { offset: 0x3C8F4, size: 0x8, addend: 0x0, symName: _ZCDispatchOnMainThread, symObjAddr: 0x0, symBinAddr: 0x1923, symSize: 0x5B }
+  - { offset: 0x3CAA3, size: 0x8, addend: 0x0, symName: _ZCDispatchOnMainThread, symObjAddr: 0x0, symBinAddr: 0x1923, symSize: 0x5B }
+  - { offset: 0x3CB57, size: 0x8, addend: 0x0, symName: '-[EncryptedResultObjC initWithIV:encrypted:ratchetCount:]', symObjAddr: 0x5B, symBinAddr: 0x197E, symSize: 0xE7 }
+  - { offset: 0x3CC77, size: 0x8, addend: 0x0, symName: '-[EncryptedResultObjC iv]', symObjAddr: 0x142, symBinAddr: 0x1A65, symSize: 0xA }
+  - { offset: 0x3CCAC, size: 0x8, addend: 0x0, symName: '-[EncryptedResultObjC encrypted]', symObjAddr: 0x14C, symBinAddr: 0x1A6F, symSize: 0xA }
+  - { offset: 0x3CCE1, size: 0x8, addend: 0x0, symName: '-[EncryptedResultObjC ratchetCount]', symObjAddr: 0x156, symBinAddr: 0x1A79, symSize: 0xA }
+  - { offset: 0x3CD16, size: 0x8, addend: 0x0, symName: '-[EncryptedResultObjC .cxx_destruct]', symObjAddr: 0x160, symBinAddr: 0x1A83, symSize: 0x33 }
+  - { offset: 0x3CD49, size: 0x8, addend: 0x0, symName: '-[MasterKeyResultObjC initWithMasterKey:fingerPrint:]', symObjAddr: 0x193, symBinAddr: 0x1AB6, symSize: 0xB9 }
+  - { offset: 0x3CE31, size: 0x8, addend: 0x0, symName: '-[MasterKeyResultObjC masterKey]', symObjAddr: 0x24C, symBinAddr: 0x1B6F, symSize: 0xA }
+  - { offset: 0x3CE66, size: 0x8, addend: 0x0, symName: '-[MasterKeyResultObjC fingerPrint]', symObjAddr: 0x256, symBinAddr: 0x1B79, symSize: 0xA }
+  - { offset: 0x3CE9B, size: 0x8, addend: 0x0, symName: '-[MasterKeyResultObjC .cxx_destruct]', symObjAddr: 0x260, symBinAddr: 0x1B83, symSize: 0x28 }
+  - { offset: 0x3CECE, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper initWithDataMode:streamType:ratchetInterval:]', symObjAddr: 0x288, symBinAddr: 0x1BAB, symSize: 0xFC }
+  - { offset: 0x3CFD6, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper initializeEncryption:]', symObjAddr: 0x384, symBinAddr: 0x1CA7, symSize: 0x10D }
+  - { offset: 0x3D135, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper generateMasterKeyAndFingerPrint]', symObjAddr: 0x491, symBinAddr: 0x1DB4, symSize: 0x221 }
+  - { offset: 0x3D4C3, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper deriveSessionKeyWithMasterKey:info:]', symObjAddr: 0x6B2, symBinAddr: 0x1FD5, symSize: 0x2D1 }
+  - { offset: 0x3D935, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper ratchetCurrentKey:]', symObjAddr: 0x983, symBinAddr: 0x22A6, symSize: 0x241 }
+  - { offset: 0x3DBE2, size: 0x8, addend: 0x0, symName: '___38-[EncryptionHelper ratchetCurrentKey:]_block_invoke', symObjAddr: 0xBC4, symBinAddr: 0x24E7, symSize: 0x51 }
+  - { offset: 0x3DC55, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32s40s, symObjAddr: 0xC15, symBinAddr: 0x2538, symSize: 0x25 }
+  - { offset: 0x3DC96, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32s40s, symObjAddr: 0xC3A, symBinAddr: 0x255D, symSize: 0x25 }
+  - { offset: 0x3DCCD, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper getRatchetCount]', symObjAddr: 0xC5F, symBinAddr: 0x2582, symSize: 0x12 }
+  - { offset: 0x3DE61, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper encrypt:]', symObjAddr: 0xC71, symBinAddr: 0x2594, symSize: 0x587 }
+  - { offset: 0x3E4E6, size: 0x8, addend: 0x0, symName: _ghash, symObjAddr: 0x1DC3, symBinAddr: 0x36E6, symSize: 0xB5 }
+  - { offset: 0x3E60D, size: 0x8, addend: 0x0, symName: _gf128_multiply, symObjAddr: 0x1E78, symBinAddr: 0x379B, symSize: 0xBA }
+  - { offset: 0x3E6FC, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper encryptWithData:]', symObjAddr: 0x11F8, symBinAddr: 0x2B1B, symSize: 0x12 }
+  - { offset: 0x3E8C9, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper decrypt:iv:ratchet:]', symObjAddr: 0x120A, symBinAddr: 0x2B2D, symSize: 0x6AD }
+  - { offset: 0x3EF95, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper decryptWithData:iv:ratchet:]', symObjAddr: 0x18B7, symBinAddr: 0x31DA, symSize: 0x12 }
+  - { offset: 0x3F021, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper close]', symObjAddr: 0x18C9, symBinAddr: 0x31EC, symSize: 0xAB }
+  - { offset: 0x3F0EC, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper dealloc]', symObjAddr: 0x1974, symBinAddr: 0x3297, symSize: 0x3E }
+  - { offset: 0x3F134, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper initRatchet]', symObjAddr: 0x19B2, symBinAddr: 0x32D5, symSize: 0x103 }
+  - { offset: 0x3F1D2, size: 0x8, addend: 0x0, symName: '___31-[EncryptionHelper initRatchet]_block_invoke', symObjAddr: 0x1AB5, symBinAddr: 0x33D8, symSize: 0x122 }
+  - { offset: 0x3F298, size: 0x8, addend: 0x0, symName: '___31-[EncryptionHelper initRatchet]_block_invoke_2', symObjAddr: 0x1BD7, symBinAddr: 0x34FA, symSize: 0xB0 }
+  - { offset: 0x3F372, size: 0x8, addend: 0x0, symName: ___copy_helper_block_e8_32w, symObjAddr: 0x1C87, symBinAddr: 0x35AA, symSize: 0x12 }
+  - { offset: 0x3F39B, size: 0x8, addend: 0x0, symName: ___destroy_helper_block_e8_32w, symObjAddr: 0x1C99, symBinAddr: 0x35BC, symSize: 0xE }
+  - { offset: 0x3F3BA, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper dataMode]', symObjAddr: 0x1CA7, symBinAddr: 0x35CA, symSize: 0xA }
+  - { offset: 0x3F3EF, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper setDataMode:]', symObjAddr: 0x1CB1, symBinAddr: 0x35D4, symSize: 0x11 }
+  - { offset: 0x3F430, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper streamType]', symObjAddr: 0x1CC2, symBinAddr: 0x35E5, symSize: 0xA }
+  - { offset: 0x3F465, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper setStreamType:]', symObjAddr: 0x1CCC, symBinAddr: 0x35EF, symSize: 0x11 }
+  - { offset: 0x3F4A6, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper ratchetInterval]', symObjAddr: 0x1CDD, symBinAddr: 0x3600, symSize: 0xA }
+  - { offset: 0x3F4DB, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper setRatchetInterval:]', symObjAddr: 0x1CE7, symBinAddr: 0x360A, symSize: 0x11 }
+  - { offset: 0x3F51C, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper ratchetCount]', symObjAddr: 0x1CF8, symBinAddr: 0x361B, symSize: 0xA }
+  - { offset: 0x3F551, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper setRatchetCount:]', symObjAddr: 0x1D02, symBinAddr: 0x3625, symSize: 0x11 }
+  - { offset: 0x3F592, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper encryptionKey]', symObjAddr: 0x1D13, symBinAddr: 0x3636, symSize: 0xA }
+  - { offset: 0x3F5C7, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper setEncryptionKey:]', symObjAddr: 0x1D1D, symBinAddr: 0x3640, symSize: 0x11 }
+  - { offset: 0x3F608, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper previousKeys]', symObjAddr: 0x1D2E, symBinAddr: 0x3651, symSize: 0xA }
+  - { offset: 0x3F63D, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper setPreviousKeys:]', symObjAddr: 0x1D38, symBinAddr: 0x365B, symSize: 0x11 }
+  - { offset: 0x3F67E, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper ratchetTimer]', symObjAddr: 0x1D49, symBinAddr: 0x366C, symSize: 0xA }
+  - { offset: 0x3F6B3, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper setRatchetTimer:]', symObjAddr: 0x1D53, symBinAddr: 0x3676, symSize: 0x11 }
+  - { offset: 0x3F6F4, size: 0x8, addend: 0x0, symName: '-[EncryptionHelper .cxx_destruct]', symObjAddr: 0x1D64, symBinAddr: 0x3687, symSize: 0x5F }
+  - { offset: 0x3F973, size: 0x8, addend: 0x0, symName: '-[NSData(Extensions) getInt64AtIndex:]', symObjAddr: 0x0, symBinAddr: 0x3855, symSize: 0x62 }
+  - { offset: 0x3F9B0, size: 0x8, addend: 0x0, symName: '-[NSData(Extensions) getInt64AtIndex:]', symObjAddr: 0x0, symBinAddr: 0x3855, symSize: 0x62 }
+  - { offset: 0x3FA7C, size: 0x8, addend: 0x0, symName: '-[NSData(Extensions) getInt32AtIndex:]', symObjAddr: 0x62, symBinAddr: 0x38B7, symSize: 0x62 }
+  - { offset: 0x3FB48, size: 0x8, addend: 0x0, symName: '-[NSData(Extensions) getInt16AtIndex:]', symObjAddr: 0xC4, symBinAddr: 0x3919, symSize: 0x64 }
+  - { offset: 0x3FBFA, size: 0x8, addend: 0x0, symName: '-[NSData(Extensions) getInt8AtIndex:]', symObjAddr: 0x128, symBinAddr: 0x397D, symSize: 0x5F }
+  - { offset: 0x3FC8E, size: 0x8, addend: 0x0, symName: '-[NSData(Extensions) getStringAtIndex:length:]', symObjAddr: 0x187, symBinAddr: 0x39DC, symSize: 0x90 }
+  - { offset: 0x3FD44, size: 0x8, addend: 0x0, symName: '-[NSData(Extensions) isValidRangeForData:atIndex:length:]', symObjAddr: 0x217, symBinAddr: 0x3A6C, symSize: 0x29 }
+  - { offset: 0x3FDBC, size: 0x8, addend: 0x0, symName: '-[NSData(Extensions) getInt32FromData:atIndex:]', symObjAddr: 0x240, symBinAddr: 0x3A95, symSize: 0x7C }
+  - { offset: 0x3FE95, size: 0x8, addend: 0x0, symName: '-[NSData(Extensions) getInt16FromData:atIndex:]', symObjAddr: 0x2BC, symBinAddr: 0x3B11, symSize: 0x82 }
+  - { offset: 0x3FF6E, size: 0x8, addend: 0x0, symName: '-[NSData(Extensions) getInt8FromData:atIndex:]', symObjAddr: 0x33E, symBinAddr: 0x3B93, symSize: 0x7C }
+  - { offset: 0x40047, size: 0x8, addend: 0x0, symName: '-[NSData(Extensions) getStringFromData:atIndex:length:]', symObjAddr: 0x3BA, symBinAddr: 0x3C0F, symSize: 0xAD }
+  - { offset: 0x40153, size: 0x8, addend: 0x0, symName: '-[NSData(Extensions) getValueFromData:atIndex:size:]', symObjAddr: 0x467, symBinAddr: 0x3CBC, symSize: 0x97 }
+...

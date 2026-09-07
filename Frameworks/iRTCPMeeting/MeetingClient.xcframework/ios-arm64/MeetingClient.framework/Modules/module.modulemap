@@ -1,0 +1,8 @@
+framework module "MeetingClient" {
+    umbrella header "MeetingClient.h"
+
+    export *
+    module * { export * }
+
+    use Foundation
+}

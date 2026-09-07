@@ -1,0 +1,3 @@
+framework module Lens_Integration_SDK {
+  header "Lens_Integration_SDK-Swift.h"
+}

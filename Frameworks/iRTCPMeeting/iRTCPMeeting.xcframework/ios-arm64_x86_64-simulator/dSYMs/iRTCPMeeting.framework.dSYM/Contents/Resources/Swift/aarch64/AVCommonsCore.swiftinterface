@@ -1,0 +1,504 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.1 effective-5.10 (swiftlang-6.3.1.1.2 clang-2100.0.123.102)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -module-name AVCommonsCore
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.1
+import Foundation
+import Foundation/*.Bundle*/
+import Foundation/*.ProcessInfo*/
+import Foundation/*.URL*/
+import Network
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct AVLocalization {
+  public static var customLanguage: Swift.String?
+  public static func getString(for state: AVCommonsCore.AVLibraryContents, withArgs: Any...) -> Swift.String
+  public static func getString(for state: AVCommonsCore.AVLibraryContents) -> Swift.String
+}
+public enum AVLibraryContents : Swift.String, AVCommonsCore.AVLocalizationParsing, Swift.CaseIterable {
+  case shareUrl
+  case inviteParticipants
+  case ringAll
+  case joinSession
+  case acceptRespect
+  case cancelAction
+  case shareAction
+  case shareVideoMessage
+  case notNow
+  case shareVideo
+  case callBack
+  case calling
+  case ringing
+  case reconnect
+  case reconnecting
+  case connecting
+  case connected
+  case disconnected
+  case waiting
+  case busy
+  case declined
+  case noResponse
+  case switchVideo
+  case switchAction
+  case mutedMicrophone
+  case incomingVideo
+  case incomingAudio
+  case you
+  case deviceNotFound
+  case okayAction
+  case host
+  case participants
+  case silentParticipants
+  case yetToJoin
+  case handRaise
+  case cancelHandRaise
+  case startingSession
+  case joiningSession
+  case ringingParticipants
+  case cancelAll
+  case leaveCall
+  case continueCall
+  case callRecorded
+  case maxCharaterLimit
+  case otherOrgUserPlaceholder
+  case addParticipant
+  case migrating
+  case assignHost
+  case kickOut
+  case mute
+  case unmute
+  case makeCohost
+  case makeParticipant
+  case noInternet
+  case unmuteBadge
+  case muteUnrestricted
+  case muteRestricted
+  case invite
+  case assignLeave
+  case maxParticipants
+  case permissionRestricted
+  case audio
+  case video
+  case reactionsHeading
+  case meetingHeader
+  case meetingTitle
+  case recordMeeting
+  case addCohost
+  case audioMeeting
+  case videoMeeting
+  case videoCompact
+  case audioCompact
+  case speakerRequest
+  case placeholderExample
+  case enableMicrophone
+  case enableCamera
+  case linkCopied
+  case addPanellist
+  case panellistCount
+  case emojiSearchPlaceholder
+  case requestsSpeaker
+  case joinRequests
+  case screenshareRequest
+  case whiteboardRequests
+  case startMeeting
+  case endMeeting
+  case assignAndLeave
+  case meetingRequests
+  case messageParticipant
+  case forwardMeeting
+  case shareMeeting
+  case closeAction
+  case copyMeetingLink
+  case meetingNone
+  case noResults
+  case meetingGestures
+  case meetingQuickReactions
+  case meetingExpressions
+  case meetingSigns
+  case meetingCelebrate
+  case emojiFestivity
+  case emojiSports
+  case emojiTravel
+  case emojiEveryday
+  case meetingGeneral
+  case meetingResetVoting
+  case meetingPermissions
+  case noPermissionsScreenShare
+  case noPermissionsGrid
+  case coHost
+  case orgMember
+  case externalUsers
+  case transferDescription
+  case transferTitle
+  case addDeviceDescription
+  case addDeviceTitle
+  case onlyHost
+  case hostCohost
+  case allParticipants
+  case allAttended
+  case screenSharePermission
+  case gridPermission
+  case recordingPermission
+  case allowExternalUserPermission
+  case guestChatAccessPermission
+  case whiteboardRequestPermission
+  case gesturesPermission
+  case reactionsPermission
+  case searchPlaceholder
+  case recordingStarted
+  case recordingStopped
+  case meetingRecording
+  case meetingNoOne
+  case permissionFooter
+  case streamingDescription
+  case streamingTitle
+  case meetingKickedOut
+  case filterApply
+  case meetingYetToRequest
+  case joinRequesting
+  case meetingPending
+  case hostApproval
+  case audioNopermission
+  case videoNopermission
+  case alreadyEnded
+  case inviteDescription
+  case audioSource
+  case rec
+  case notInPanel
+  case transferPromptDescription
+  case transferAction
+  case inviteUsers
+  case unmuteAll
+  case muteAll
+  case startRecording
+  case stopRecording
+  case startStreaming
+  case stopStreaming
+  case mutedByHostUnrestricted
+  case bluetooth
+  case speaker
+  case carplay
+  case headphones
+  case end
+  case leave
+  case muteAllPromptTitle
+  case muteAllPromptDescription
+  case unmuteAllPromptTitle
+  case unmuteAllPromptDescription
+  case muteAllPromptOption
+  case allowAccess
+  case cameraPermissionError
+  case micPermissionError
+  case cameraAndMicPermissionError
+  case meetingLinkPlaceholder
+  case userChangedToHost
+  case ringEveryOne
+  case inviteMessage
+  case waitingRoomMandate
+  case copyMeetingInvitation
+  case copyAVMeetingLink
+  case addParticipants
+  case waitingRoom
+  case participant
+  case admitAll
+  case admitAllMessage
+  case admit
+  case waitingRoomPermissionMessage
+  case meetingrecord
+  case hostAndCoHost
+  case guestUsersetting
+  case guestUsersettingMsg
+  case muteParticipants
+  case participantsVideo
+  case participantsVideoMsg
+  case unmuteThemselvesTitle
+  case unmuteThemselvesMsg
+  case permissionsDisplayTitle
+  case requestImage
+  case requestLocation
+  case waitingRoomInvitedUsers
+  case emptyRequestMessage
+  case inviteParticipantBadgeTitle
+  case inviteParticipantBadgeDescription
+  case leaveMeeting
+  case meetingNotStartedMessage
+  case WaitingRoomEnabledMessage
+  case waitingRoomHostApproval
+  case settings
+  case doneAction
+  case location
+  case allowUserTitle
+  case declineRequest
+  case joinRequestDeclined
+  case approveJoinRequestsFailed
+  case makeHost
+  case searchParticipants
+  case noResultsFound
+  case leaveConfirmationDescription
+  case endConfirmationDescription
+  case audioAction
+  case emojiAction
+  case connectionDetails
+  case alreadyScreenshareExist
+  case alreadyScreenshareExistDescription
+  case stopScreenshareTitle
+  case stopScreenshareDescription
+  case stopRemoteScreenshareForSpotlight
+  case endAndShareScreenshare
+  case startScreenshareAction
+  case stopScreenshareAction
+  case screenshareStarted
+  case preparingScreenShare
+  case meetingYetToStart
+  case guest
+  case assignedCoHost
+  case removedCoHost
+  case assignedHost
+  case meetingExpiry
+  case addToSpotlight
+  case removeFromSpotlight
+  case disableAction
+  case spotlightDescription
+  case spotlightAlertForActiveSpeakers
+  case setSpotlight
+  case setSpotlightForScreenShare
+  case setYourselfSpotlight
+  case cohostLimitExceeded
+  case meetingEnded
+  case meetingRecorded
+  case screenSharingParticipant
+  case invitationCopied
+  case askToUnmute
+  case allowToUnmute
+  case restrictUnmute
+  case waitingForParticipantToJoin
+  case notifyUnmute
+  case muteOptions
+  case meetingEndingSoon
+  case endRemoteScreenshareForSpotlight
+  case proceedAction
+  case setSpotlightForBoth
+  case maximumParticipants
+  case allRequestsAddressed
+  case spotlightLimitExceeded
+  case audioReconnecting
+  case videoReconnecting
+  case audioAndVideoReconnecting
+  case yourAudioAndVideoReconnecting
+  case yourAudioReconnecting
+  case yourVideoReconnecting
+  case changeLayout
+  case kickoutTitle
+  case kickoutDescription
+  case kickoutAction
+  case kickoutActionAcknowledge
+  case kickoutParticipantAction
+  case enableWaitingRoom
+  case kickoutTitleWithName
+  case scaleVideosToFit
+  case scaleVideosToFill
+  case resumePlaybackTitle
+  case resumePlaybackDescription
+  case resumeWatching
+  case startOver
+  case volume
+  case brightness
+  case live
+  case goLive
+  case poweredBy
+  case watching
+  case meetingNotAccessible
+  case exitLive
+  case exitLiveDescription
+  case exitLiveStreaming
+  case welcomeInfo
+  case gettingReadyInfo
+  case tapToLock
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [AVCommonsCore.AVLibraryContents]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [AVCommonsCore.AVLibraryContents] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol AVLocalizationParsing : Swift.RawRepresentable {
+  func localizeString(_ args: [Swift.String]) -> Swift.String
+}
+extension AVCommonsCore.AVLocalizationParsing where Self.RawValue == Swift.String {
+  public func localizeString(_ args: [Swift.String] = []) -> Swift.String
+}
+@_hasMissingDesignatedInitializers public class AVLogger {
+  public static var DEBUG_NOTIFICATION: Swift.String
+  public static var isDebugMode: Swift.Bool
+  public static func log(_ items: Any..., separator: Swift.String = " ", terminator: Swift.String = "\n")
+  public static func error(_ items: Any..., separator: Swift.String = " ", terminator: Swift.String = "\n")
+  public static func info(_ items: Any..., separator: Swift.String = " ", terminator: Swift.String = "\n")
+  @objc deinit
+}
+extension Foundation.NSNotification.Name {
+  public static let networkStatusChanged: Foundation.Notification.Name
+}
+@_hasMissingDesignatedInitializers @available(macOS 10.14, *)
+public class AVNetworkStatusManager {
+  public static let shared: AVCommonsCore.AVNetworkStatusManager
+  public var isConnected: Swift.Bool {
+    get
+  }
+  public var isExpensiveConnection: Swift.Bool {
+    get
+  }
+  public var connectionType: AVCommonsCore.AVNetworkStatusManager.ConnectionType {
+    get
+  }
+  public enum ConnectionType {
+    case wifi
+    case cellular
+    case ethernet
+    case offline
+    case unknown
+    public static func == (a: AVCommonsCore.AVNetworkStatusManager.ConnectionType, b: AVCommonsCore.AVNetworkStatusManager.ConnectionType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public func start()
+  public func stop()
+  @objc deinit
+}
+public struct AVNotifierSubscriptionDetails {
+  public init(uuid: Foundation.UUID, subscriber: @escaping (Any) -> Swift.Void)
+}
+open class AVNotifiersBase<T> {
+  public typealias Subscription<Value> = (Value, @escaping () -> Swift.Void) -> Swift.Void
+  public init()
+  public func subscribe<Value>(to keyPath: Swift.KeyPath<T, Value>, _ subscriber: @escaping AVCommonsCore.AVNotifiersBase<T>.Subscription<Value>)
+  public func subscribe<Value>(to key: Swift.String, _ subscriber: @escaping AVCommonsCore.AVNotifiersBase<T>.Subscription<Value>)
+  public func notifySubscribers<Value>(forKeyPath keyPath: Swift.KeyPath<T, Value>, value: Value)
+  public func notifySubscribers<Value>(forKey key: Swift.String, value: Value)
+  public func clearSubscriptionForKeyPath<Value>(keyPath: Swift.KeyPath<T, Value>)
+  public func clearSubscriptionForKey(key: Swift.String)
+  public func clearSubscriptions()
+  @objc deinit
+}
+@objc public enum PosXState : Swift.Int {
+  case none
+  case left
+  case right
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum PosYState : Swift.Int {
+  case none
+  case top
+  case bottom
+  case middle
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers open class AVSynchronizedArray<T> : AVCommonsCore.AVNotifiersBase<AVCommonsCore.AVSynchronizedArray<T>> {
+  final public let accessQueue: Dispatch.DispatchQueue
+  override public init()
+  public init(array: [T] = [])
+  public func list() -> [T]
+  public func prefix(_ k: Swift.Int) -> [T]
+  public func removeFirst(_ k: Swift.Int)
+  public func append(_ newElement: T)
+  public func append(_ newElements: [T])
+  public func removeAtIndex(index: Swift.Int)
+  public func insertAtIndex(newElement: T, index: Swift.Int)
+  public func replaceAtIndex(newElement: T, index: Swift.Int)
+  public func removeAll(where: @escaping (T) throws -> Swift.Bool)
+  public func replace(_ newElements: [T])
+  @objc public var count: Swift.Int {
+    @objc get
+  }
+  public func first() -> T?
+  public subscript(index: Swift.Int) -> T {
+    get
+    set
+  }
+  public func removeAll()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class AVSynchronizedDictionary<KeyType, ValueType> : ObjectiveC.NSObject, Swift.ExpressibleByDictionaryLiteral where KeyType : Swift.Hashable {
+  public var count: Swift.Int {
+    get
+  }
+  public var dictionary: [KeyType : ValueType] {
+    get
+    set
+  }
+  public var keys: Swift.Dictionary<KeyType, ValueType>.Keys {
+    get
+  }
+  public var values: Swift.Dictionary<KeyType, ValueType>.Values {
+    get
+  }
+  @objc override convenience dynamic public init()
+  convenience required public init(dictionaryLiteral elements: (KeyType, ValueType)...)
+  public init(dictionary: [KeyType : ValueType])
+  public subscript(key: KeyType) -> ValueType? {
+    get
+    set
+  }
+  public subscript(key: AVCommonsCore.AVSynchronizedDictionary<KeyType, ValueType>.Key, default defaultValue: @autoclosure () -> AVCommonsCore.AVSynchronizedDictionary<KeyType, ValueType>.Value) -> AVCommonsCore.AVSynchronizedDictionary<KeyType, ValueType>.Value {
+    get
+    set
+  }
+  @discardableResult
+  public func removeValue(forKey key: KeyType) -> ValueType?
+  public func filter(_ isIncluded: @escaping (Swift.Dictionary<KeyType, ValueType>.Element) throws -> Swift.Bool) rethrows -> AVCommonsCore.AVSynchronizedDictionary<KeyType, ValueType>
+  public func merge(_ dict: [KeyType : ValueType])
+  public func removeAll()
+  public typealias Key = KeyType
+  public typealias Value = ValueType
+  @objc deinit
+}
+extension Swift.String {
+  public func trunc(length: Swift.Int, trailing: Swift.String = "...") -> Swift.String
+  public func subString(start: Swift.Int, end: Swift.Int) -> Swift.String
+  public func jsonStringParse() -> Any?
+  public func parseHTMLString() -> Swift.String
+  public func firstChar() -> Swift.String?
+  public func firstCharacterImage(trimSpecialCharacters: Swift.Bool = true) -> Swift.String?
+  public func firstName(trimSpecialCharacters: Swift.Bool = true) -> Swift.String?
+  public func trimSpecialChars() -> Swift.String
+  public func getUTFDecodedString() -> Swift.String
+  public func getHTMLDecodedString() -> Swift.String
+}
+public func ZCDispatchOnMainThread(_ block: @escaping () -> ())
+public func ZCDispatchOnMainThreadSync<T>(_ block: @escaping () -> T) -> T
+public func ZCDispatchAfterDelay(_ delay: Swift.Double, block: @escaping () -> ())
+public func ZCDispatchOnDefaultThread(_ block: @escaping () -> ())
+public func ZCDispatchOnQOSBackgroundThread(_ block: @escaping () -> ())
+public func ZCDispatchOnQOSUtilityThread(_ block: @escaping () -> ())
+public func ZCDispatchOnQOSInteractiveThread(_ block: @escaping () -> ())
+public func ZCDispatchOnDefaultHighThread(_ block: @escaping () -> ())
+public func ZCDispatchOnMainThreadNoCheck(_ block: @escaping () -> ())
+public func ZCDispatchOnGlobalAccessQueueSync<T>(_ block: @escaping () -> T) -> T
+public func ZCDispatchOnGlobalAccessQueueAsync(_ block: @escaping () -> Swift.Void)
+public func ZCDispatchOnGlobalSynchronizedAccessQueue(_ delay: Swift.Double, _ block: @escaping () -> Swift.Void)
+extension AVCommonsCore.AVLibraryContents : Swift.Equatable {}
+extension AVCommonsCore.AVLibraryContents : Swift.Hashable {}
+@available(macOS 10.14, *)
+extension AVCommonsCore.AVNetworkStatusManager.ConnectionType : Swift.Equatable {}
+@available(macOS 10.14, *)
+extension AVCommonsCore.AVNetworkStatusManager.ConnectionType : Swift.Hashable {}
+extension AVCommonsCore.PosXState : Swift.Equatable {}
+extension AVCommonsCore.PosXState : Swift.Hashable {}
+extension AVCommonsCore.PosXState : Swift.RawRepresentable {}
+extension AVCommonsCore.PosYState : Swift.Equatable {}
+extension AVCommonsCore.PosYState : Swift.Hashable {}
+extension AVCommonsCore.PosYState : Swift.RawRepresentable {}

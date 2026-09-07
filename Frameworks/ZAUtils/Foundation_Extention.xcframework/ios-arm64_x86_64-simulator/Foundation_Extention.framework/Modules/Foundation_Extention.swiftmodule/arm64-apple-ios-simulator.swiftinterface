@@ -1,0 +1,201 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name Foundation_Extention
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import AVFoundation
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension Swift.Array {
+  public mutating func removeElements(_ filter: (Element) -> Swift.Bool)
+}
+extension Swift.Array where Element : Swift.Equatable {
+  public func contains(_ element: Element) -> Swift.Bool
+  public func index(of element: Element) -> Swift.Int?
+  public mutating func remove(element: Element)
+}
+extension Swift.Bool {
+  public var rawValue: Swift.String {
+    get
+  }
+  public var intValue: Swift.Int {
+    get
+  }
+}
+extension CoreFoundation.CGFloat {
+  public var quarter: CoreFoundation.CGFloat {
+    get
+  }
+  public var half: CoreFoundation.CGFloat {
+    get
+  }
+  public var Threequarter: CoreFoundation.CGFloat {
+    get
+  }
+}
+extension CoreFoundation.CGFloat {
+  public func rounded(toPlaces places: Swift.Int) -> CoreFoundation.CGFloat
+}
+extension Foundation.Data {
+  public func write(fileName: Swift.String, appendIntermediateDir path: Swift.String? = nil) throws -> Foundation.URL?
+  public var mbSize: CoreFoundation.CGFloat {
+    get
+  }
+  public var sizeWithUnit: Swift.String {
+    get
+  }
+}
+extension Foundation.Date {
+  public static func today() -> Foundation.Date
+  public func next(_ weekday: Foundation.Date.Weekday, considerToday: Swift.Bool = false) -> Foundation.Date
+  public func previous(_ weekday: Foundation.Date.Weekday, considerToday: Swift.Bool = false) -> Foundation.Date
+  public func get(_ direction: Foundation.Date.SearchDirection, _ weekDay: Foundation.Date.Weekday, considerToday consider: Swift.Bool = false) -> Foundation.Date
+}
+extension Foundation.Date {
+  public func getWeekDaysInEnglish() -> [Swift.String]
+  public enum Weekday : Swift.String {
+    case monday, tuesday, wednesday, thursday, friday, saturday, sunday
+    public init?(rawValue: Swift.String)
+    @available(iOS 8.0, tvOS 9.0, watchOS 2.0, macOS 10.10, *)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum SearchDirection {
+    case Next
+    case Previous
+    public static func == (a: Foundation.Date.SearchDirection, b: Foundation.Date.SearchDirection) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+extension Foundation.Date {
+  public static func string(for date: Foundation.Date, format: Swift.String? = nil) -> Swift.String
+  public func string(format: Swift.String? = nil) -> Swift.String
+  public static func date(for string: Swift.String, format: Swift.String) -> Foundation.Date?
+}
+extension Foundation.Date {
+  public func getString(mode: UIKit.UIDatePicker.Mode = .date, timeZone: Foundation.TimeZone = TimeZone.current) -> Swift.String
+  public func getString(format: Swift.String) -> Swift.String
+  public func at_getLocalizedString(_ mode: UIKit.UIDatePicker.Mode = .date) -> Swift.String
+}
+extension Foundation.Date {
+  public var millisecondsSince1970: Swift.Int {
+    get
+  }
+  public var randomID: Swift.String {
+    get
+  }
+}
+extension Foundation.Date {
+  public func isSmallerThanGivenDateByDay(_ date: Foundation.Date) -> Swift.Bool
+  public func isEqualDay(_ date: Foundation.Date) -> Swift.Bool
+  public func isSmallerThanByMinutes(_ date: Foundation.Date) -> Swift.Bool
+}
+public typealias Email = Swift.String
+extension Foundation.FileManager {
+  public static var documentDirURL: Foundation.URL? {
+    get
+  }
+}
+extension Swift.Int {
+  public var cgfloat: CoreFoundation.CGFloat {
+    get
+  }
+}
+public protocol CommonIntUtility {
+  var isNegative: Swift.Bool { get }
+  var isZero: Swift.Bool { get }
+  var string: Swift.String { get }
+}
+extension Foundation_Extention.CommonIntUtility where Self : Swift.SignedInteger {
+  public var string: Swift.String {
+    get
+  }
+  public func string(maximumNumber: Swift.Int) -> Swift.String
+  public var isNegative: Swift.Bool {
+    get
+  }
+  public var isZero: Swift.Bool {
+    get
+  }
+  public var convertFileSizeWithUnit: Swift.String {
+    get
+  }
+  public var fileSizeWithUnit: Swift.String {
+    get
+  }
+}
+extension Swift.Int : Foundation_Extention.CommonIntUtility {
+}
+extension Swift.Int32 : Foundation_Extention.CommonIntUtility {
+}
+extension Swift.Int64 : Foundation_Extention.CommonIntUtility {
+}
+extension Swift.Int16 : Foundation_Extention.CommonIntUtility {
+}
+extension ObjectiveC.NSObject {
+  public static func performInMainThread(_ block: @escaping () -> Swift.Void)
+  public func performInMainThread(_ block: @escaping () -> Swift.Void)
+  public enum AssistImpactFeedbackStyle {
+    case medium, high, low, success, warning, error
+    public static func == (a: ObjectiveC.NSObject.AssistImpactFeedbackStyle, b: ObjectiveC.NSObject.AssistImpactFeedbackStyle) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public func makeTapTick(_ style: ObjectiveC.NSObject.AssistImpactFeedbackStyle)
+  public static func makeTapTick(_ style: ObjectiveC.NSObject.AssistImpactFeedbackStyle)
+}
+extension Swift.String {
+  public var isEmailID: Swift.Bool {
+    get
+  }
+  public var intValue: Swift.Int {
+    get
+  }
+  public var floatValue: CoreFoundation.CGFloat {
+    get
+  }
+  public func subString(fromIndex: Swift.Int) -> Swift.String
+  public func subString(toIndex: Swift.Int) -> Swift.String
+  public static func < (lhs: Swift.String, rhs: Swift.Int) -> Swift.String
+  public func copyInClipboard()
+  public var utf8Data: Foundation.Data? {
+    get
+  }
+  public var isoLatin1Data: Foundation.Data? {
+    get
+  }
+  public var asciiData: Foundation.Data? {
+    get
+  }
+  public func data(encode: Swift.String.Encoding) -> Foundation.Data?
+  public var splitByNewLine: [Swift.String] {
+    get
+  }
+  public var splitBySpace: [Swift.String] {
+    get
+  }
+  public var maskedFileName: Swift.String {
+    get
+  }
+}
+extension Foundation.TimeZone {
+  public func hoursFromGMT() -> Swift.String
+  public func hoursFromGMTWithSign() -> Swift.String
+}
+extension Foundation.Date.Weekday : Swift.Equatable {}
+extension Foundation.Date.Weekday : Swift.Hashable {}
+extension Foundation.Date.Weekday : Swift.RawRepresentable {}
+extension Foundation.Date.SearchDirection : Swift.Equatable {}
+extension Foundation.Date.SearchDirection : Swift.Hashable {}
+extension ObjectiveC.NSObject.AssistImpactFeedbackStyle : Swift.Equatable {}
+extension ObjectiveC.NSObject.AssistImpactFeedbackStyle : Swift.Hashable {}

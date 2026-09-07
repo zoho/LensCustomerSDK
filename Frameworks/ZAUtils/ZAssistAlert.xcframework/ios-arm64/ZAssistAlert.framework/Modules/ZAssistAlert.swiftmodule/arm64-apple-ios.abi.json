@@ -1,0 +1,3201 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "ZAssistAlert",
+    "printedName": "ZAssistAlert",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZAssistAlert",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "OverlayViewController",
+        "printedName": "OverlayViewController",
+        "declKind": "Import",
+        "moduleName": "ZAssistAlert"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZAssistAlert"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit_Extention",
+        "printedName": "UIKit_Extention",
+        "declKind": "Import",
+        "moduleName": "ZAssistAlert"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZAssistAlert",
+        "printedName": "ZAssistAlert",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "delegate",
+            "printedName": "delegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any UIKit.UITextViewDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UITextViewDelegate",
+                    "printedName": "any UIKit.UITextViewDelegate",
+                    "usr": "c:objc(pl)UITextViewDelegate"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlertAAC8delegateSo18UITextViewDelegate_pSgvp",
+            "mangledName": "$s12ZAssistAlertAAC8delegateSo18UITextViewDelegate_pSgvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any UIKit.UITextViewDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UITextViewDelegate",
+                        "printedName": "any UIKit.UITextViewDelegate",
+                        "usr": "c:objc(pl)UITextViewDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlertAAC8delegateSo18UITextViewDelegate_pSgvg",
+                "mangledName": "$s12ZAssistAlertAAC8delegateSo18UITextViewDelegate_pSgvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any UIKit.UITextViewDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UITextViewDelegate",
+                        "printedName": "any UIKit.UITextViewDelegate",
+                        "usr": "c:objc(pl)UITextViewDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlertAAC8delegateSo18UITextViewDelegate_pSgvs",
+                "mangledName": "$s12ZAssistAlertAAC8delegateSo18UITextViewDelegate_pSgvs",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlertAAC8delegateSo18UITextViewDelegate_pSgvM",
+                "mangledName": "$s12ZAssistAlertAAC8delegateSo18UITextViewDelegate_pSgvM",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZAssistAlert",
+                "printedName": "ZAssistAlert.ZAssistAlert",
+                "usr": "c:@M@ZAssistAlert@objc(cs)ZAssistAlert"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ZAssistAlertModel",
+                "printedName": "ZAssistAlert.ZAssistAlertModel",
+                "usr": "s:12ZAssistAlert0aB5ModelV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12ZAssistAlertAAC4withAbA0aB5ModelV_tcfc",
+            "mangledName": "$s12ZAssistAlertAAC4withAbA0aB5ModelV_tcfc",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "Convenience",
+              "AccessControl"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(nibName:bundle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZAssistAlert",
+                "printedName": "ZAssistAlert.ZAssistAlert",
+                "usr": "c:@M@ZAssistAlert@objc(cs)ZAssistAlert"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Bundle?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@ZAssistAlert@objc(cs)ZAssistAlert(im)initWithNibName:bundle:",
+            "mangledName": "$s12ZAssistAlertAAC7nibName6bundleABSSSg_So8NSBundleCSgtcfc",
+            "moduleName": "ZAssistAlert",
+            "overriding": true,
+            "objc_name": "initWithNibName:bundle:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ZAssistAlert.ZAssistAlert?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZAssistAlert",
+                    "printedName": "ZAssistAlert.ZAssistAlert",
+                    "usr": "c:@M@ZAssistAlert@objc(cs)ZAssistAlert"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@ZAssistAlert@objc(cs)ZAssistAlert(im)initWithCoder:",
+            "mangledName": "$s12ZAssistAlertAAC5coderABSgSo7NSCoderC_tcfc",
+            "moduleName": "ZAssistAlert",
+            "overriding": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Required",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "viewDidLoad",
+            "printedName": "viewDidLoad()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZAssistAlert@objc(cs)ZAssistAlert(im)viewDidLoad",
+            "mangledName": "$s12ZAssistAlertAAC11viewDidLoadyyF",
+            "moduleName": "ZAssistAlert",
+            "overriding": true,
+            "objc_name": "viewDidLoad",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewDidLayoutSubviews",
+            "printedName": "viewDidLayoutSubviews()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ZAssistAlert@objc(cs)ZAssistAlert(im)viewDidLayoutSubviews",
+            "mangledName": "$s12ZAssistAlertAAC21viewDidLayoutSubviewsyyF",
+            "moduleName": "ZAssistAlert",
+            "overriding": true,
+            "objc_name": "viewDidLayoutSubviews",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@ZAssistAlert@objc(cs)ZAssistAlert",
+        "mangledName": "$s12ZAssistAlertAAC",
+        "moduleName": "ZAssistAlert",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:@M@OverlayViewController@objc(cs)OverlayViewController",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "OverlayViewController.OverlayViewController",
+          "Orientation.OrientationHelperController",
+          "UIKit.UIViewController",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "OrientationChanger",
+            "printedName": "OrientationChanger",
+            "usr": "s:11Orientation0A7ChangerP",
+            "mangledName": "$s11Orientation0A7ChangerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "OrientationHandler",
+            "printedName": "OrientationHandler",
+            "usr": "s:11Orientation0A7HandlerP",
+            "mangledName": "$s11Orientation0A7HandlerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZAssistAlert",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZAssistAlert"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZAssistAlertModel",
+        "printedName": "ZAssistAlertModel",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(alertConfig:footer_config:actions:action_buttons_axis:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZAssistAlertModel",
+                "printedName": "ZAssistAlert.ZAssistAlertModel",
+                "usr": "s:12ZAssistAlert0aB5ModelV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Alert_Configs",
+                "printedName": "ZAssistAlert.Alert_Configs",
+                "usr": "s:12ZAssistAlert0B8_ConfigsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ZAssistAlert.Footer_Configs?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Footer_Configs",
+                    "printedName": "ZAssistAlert.Footer_Configs",
+                    "usr": "s:12ZAssistAlert14Footer_ConfigsV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[ZAssistAlert.ZAssistAlertAction]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZAssistAlertAction",
+                    "printedName": "ZAssistAlert.ZAssistAlertAction",
+                    "usr": "s:12ZAssistAlert0aB6ActionV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Axis",
+                "printedName": "UIKit.NSLayoutConstraint.Axis",
+                "hasDefaultArg": true,
+                "usr": "c:@E@UILayoutConstraintAxis"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12ZAssistAlert0aB5ModelV11alertConfig13footer_config7actions19action_buttons_axisAcA0B8_ConfigsV_AA07Footer_L0VSgSayAA0aB6ActionVGSo22UILayoutConstraintAxisVtcfc",
+            "mangledName": "$s12ZAssistAlert0aB5ModelV11alertConfig13footer_config7actions19action_buttons_axisAcA0B8_ConfigsV_AA07Footer_L0VSgSayAA0aB6ActionVGSo22UILayoutConstraintAxisVtcfc",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "alert_config",
+            "printedName": "alert_config",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Alert_Configs",
+                "printedName": "ZAssistAlert.Alert_Configs",
+                "usr": "s:12ZAssistAlert0B8_ConfigsV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlert0aB5ModelV12alert_configAA0B8_ConfigsVvp",
+            "mangledName": "$s12ZAssistAlert0aB5ModelV12alert_configAA0B8_ConfigsVvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Alert_Configs",
+                    "printedName": "ZAssistAlert.Alert_Configs",
+                    "usr": "s:12ZAssistAlert0B8_ConfigsV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0aB5ModelV12alert_configAA0B8_ConfigsVvg",
+                "mangledName": "$s12ZAssistAlert0aB5ModelV12alert_configAA0B8_ConfigsVvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "footer_config",
+            "printedName": "footer_config",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ZAssistAlert.Footer_Configs?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Footer_Configs",
+                    "printedName": "ZAssistAlert.Footer_Configs",
+                    "usr": "s:12ZAssistAlert14Footer_ConfigsV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlert0aB5ModelV13footer_configAA14Footer_ConfigsVSgvp",
+            "mangledName": "$s12ZAssistAlert0aB5ModelV13footer_configAA14Footer_ConfigsVSgvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ZAssistAlert.Footer_Configs?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Footer_Configs",
+                        "printedName": "ZAssistAlert.Footer_Configs",
+                        "usr": "s:12ZAssistAlert14Footer_ConfigsV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0aB5ModelV13footer_configAA14Footer_ConfigsVSgvg",
+                "mangledName": "$s12ZAssistAlert0aB5ModelV13footer_configAA14Footer_ConfigsVSgvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ZAssistAlert.Footer_Configs?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Footer_Configs",
+                        "printedName": "ZAssistAlert.Footer_Configs",
+                        "usr": "s:12ZAssistAlert14Footer_ConfigsV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0aB5ModelV13footer_configAA14Footer_ConfigsVSgvs",
+                "mangledName": "$s12ZAssistAlert0aB5ModelV13footer_configAA14Footer_ConfigsVSgvs",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0aB5ModelV13footer_configAA14Footer_ConfigsVSgvM",
+                "mangledName": "$s12ZAssistAlert0aB5ModelV13footer_configAA14Footer_ConfigsVSgvM",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "actions",
+            "printedName": "actions",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[ZAssistAlert.ZAssistAlertAction]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZAssistAlertAction",
+                    "printedName": "ZAssistAlert.ZAssistAlertAction",
+                    "usr": "s:12ZAssistAlert0aB6ActionV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlert0aB5ModelV7actionsSayAA0aB6ActionVGvp",
+            "mangledName": "$s12ZAssistAlert0aB5ModelV7actionsSayAA0aB6ActionVGvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[ZAssistAlert.ZAssistAlertAction]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZAssistAlertAction",
+                        "printedName": "ZAssistAlert.ZAssistAlertAction",
+                        "usr": "s:12ZAssistAlert0aB6ActionV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0aB5ModelV7actionsSayAA0aB6ActionVGvg",
+                "mangledName": "$s12ZAssistAlert0aB5ModelV7actionsSayAA0aB6ActionVGvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "action_buttons_axis",
+            "printedName": "action_buttons_axis",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Axis",
+                "printedName": "UIKit.NSLayoutConstraint.Axis",
+                "usr": "c:@E@UILayoutConstraintAxis"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlert0aB5ModelV19action_buttons_axisSo22UILayoutConstraintAxisVvp",
+            "mangledName": "$s12ZAssistAlert0aB5ModelV19action_buttons_axisSo22UILayoutConstraintAxisVvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Axis",
+                    "printedName": "UIKit.NSLayoutConstraint.Axis",
+                    "usr": "c:@E@UILayoutConstraintAxis"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0aB5ModelV19action_buttons_axisSo22UILayoutConstraintAxisVvg",
+                "mangledName": "$s12ZAssistAlert0aB5ModelV19action_buttons_axisSo22UILayoutConstraintAxisVvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Axis",
+                    "printedName": "UIKit.NSLayoutConstraint.Axis",
+                    "usr": "c:@E@UILayoutConstraintAxis"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0aB5ModelV19action_buttons_axisSo22UILayoutConstraintAxisVvs",
+                "mangledName": "$s12ZAssistAlert0aB5ModelV19action_buttons_axisSo22UILayoutConstraintAxisVvs",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0aB5ModelV19action_buttons_axisSo22UILayoutConstraintAxisVvM",
+                "mangledName": "$s12ZAssistAlert0aB5ModelV19action_buttons_axisSo22UILayoutConstraintAxisVvM",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12ZAssistAlert0aB5ModelV",
+        "mangledName": "$s12ZAssistAlert0aB5ModelV",
+        "moduleName": "ZAssistAlert",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ZAssistAlertAction",
+        "printedName": "ZAssistAlertAction",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(title:title_color:bg_color:is_priority:action:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ZAssistAlertAction",
+                "printedName": "ZAssistAlert.ZAssistAlertAction",
+                "usr": "s:12ZAssistAlert0aB6ActionV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "hasDefaultArg": true,
+                "usr": "c:objc(cs)UIColor"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "hasDefaultArg": true,
+                "usr": "c:objc(cs)UIColor"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((ZAssistAlert.ZAssistAlertAction) -> ()?)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ZAssistAlert.ZAssistAlertAction) -> ()?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "()?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZAssistAlertAction",
+                        "printedName": "ZAssistAlert.ZAssistAlertAction",
+                        "usr": "s:12ZAssistAlert0aB6ActionV"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12ZAssistAlert0aB6ActionV5title0D6_color03bg_E011is_priority6actionACSS_So7UIColorCAJSbytSgACcSgtcfc",
+            "mangledName": "$s12ZAssistAlert0aB6ActionV5title0D6_color03bg_E011is_priority6actionACSS_So7UIColorCAJSbytSgACcSgtcfc",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "title",
+            "printedName": "title",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlert0aB6ActionV5titleSSvp",
+            "mangledName": "$s12ZAssistAlert0aB6ActionV5titleSSvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0aB6ActionV5titleSSvg",
+                "mangledName": "$s12ZAssistAlert0aB6ActionV5titleSSvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "title_color",
+            "printedName": "title_color",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlert0aB6ActionV11title_colorSo7UIColorCvp",
+            "mangledName": "$s12ZAssistAlert0aB6ActionV11title_colorSo7UIColorCvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0aB6ActionV11title_colorSo7UIColorCvg",
+                "mangledName": "$s12ZAssistAlert0aB6ActionV11title_colorSo7UIColorCvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0aB6ActionV11title_colorSo7UIColorCvs",
+                "mangledName": "$s12ZAssistAlert0aB6ActionV11title_colorSo7UIColorCvs",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0aB6ActionV11title_colorSo7UIColorCvM",
+                "mangledName": "$s12ZAssistAlert0aB6ActionV11title_colorSo7UIColorCvM",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "bg_color",
+            "printedName": "bg_color",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlert0aB6ActionV8bg_colorSo7UIColorCvp",
+            "mangledName": "$s12ZAssistAlert0aB6ActionV8bg_colorSo7UIColorCvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0aB6ActionV8bg_colorSo7UIColorCvg",
+                "mangledName": "$s12ZAssistAlert0aB6ActionV8bg_colorSo7UIColorCvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0aB6ActionV8bg_colorSo7UIColorCvs",
+                "mangledName": "$s12ZAssistAlert0aB6ActionV8bg_colorSo7UIColorCvs",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0aB6ActionV8bg_colorSo7UIColorCvM",
+                "mangledName": "$s12ZAssistAlert0aB6ActionV8bg_colorSo7UIColorCvM",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "is_priority",
+            "printedName": "is_priority",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlert0aB6ActionV11is_prioritySbvp",
+            "mangledName": "$s12ZAssistAlert0aB6ActionV11is_prioritySbvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0aB6ActionV11is_prioritySbvg",
+                "mangledName": "$s12ZAssistAlert0aB6ActionV11is_prioritySbvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0aB6ActionV11is_prioritySbvs",
+                "mangledName": "$s12ZAssistAlert0aB6ActionV11is_prioritySbvs",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0aB6ActionV11is_prioritySbvM",
+                "mangledName": "$s12ZAssistAlert0aB6ActionV11is_prioritySbvM",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "action",
+            "printedName": "action",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((ZAssistAlert.ZAssistAlertAction) -> ()?)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ZAssistAlert.ZAssistAlertAction) -> ()?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "()?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZAssistAlertAction",
+                        "printedName": "ZAssistAlert.ZAssistAlertAction",
+                        "usr": "s:12ZAssistAlert0aB6ActionV"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlert0aB6ActionV6actionytSgACcSgvp",
+            "mangledName": "$s12ZAssistAlert0aB6ActionV6actionytSgACcSgvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((ZAssistAlert.ZAssistAlertAction) -> ()?)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(ZAssistAlert.ZAssistAlertAction) -> ()?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "()?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ZAssistAlertAction",
+                            "printedName": "ZAssistAlert.ZAssistAlertAction",
+                            "usr": "s:12ZAssistAlert0aB6ActionV"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0aB6ActionV6actionytSgACcSgvg",
+                "mangledName": "$s12ZAssistAlert0aB6ActionV6actionytSgACcSgvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((ZAssistAlert.ZAssistAlertAction) -> ()?)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(ZAssistAlert.ZAssistAlertAction) -> ()?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "()?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ZAssistAlertAction",
+                            "printedName": "ZAssistAlert.ZAssistAlertAction",
+                            "usr": "s:12ZAssistAlert0aB6ActionV"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0aB6ActionV6actionytSgACcSgvs",
+                "mangledName": "$s12ZAssistAlert0aB6ActionV6actionytSgACcSgvs",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0aB6ActionV6actionytSgACcSgvM",
+                "mangledName": "$s12ZAssistAlert0aB6ActionV6actionytSgACcSgvM",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ZAssistAlertAction",
+                "printedName": "ZAssistAlert.ZAssistAlertAction",
+                "usr": "s:12ZAssistAlert0aB6ActionV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ZAssistAlertAction",
+                "printedName": "ZAssistAlert.ZAssistAlertAction",
+                "usr": "s:12ZAssistAlert0aB6ActionV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12ZAssistAlert0aB6ActionV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s12ZAssistAlert0aB6ActionV2eeoiySbAC_ACtFZ",
+            "moduleName": "ZAssistAlert",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12ZAssistAlert0aB6ActionV",
+        "mangledName": "$s12ZAssistAlert0aB6ActionV",
+        "moduleName": "ZAssistAlert",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Alert_Configs",
+        "printedName": "Alert_Configs",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(title:body:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Alert_Configs",
+                "printedName": "ZAssistAlert.Alert_Configs",
+                "usr": "s:12ZAssistAlert0B8_ConfigsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSAttributedString?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSAttributedString",
+                    "printedName": "Foundation.NSAttributedString",
+                    "usr": "c:objc(cs)NSAttributedString"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12ZAssistAlert0B8_ConfigsV5title4bodyACSSSg_So18NSAttributedStringCSgtcfc",
+            "mangledName": "$s12ZAssistAlert0B8_ConfigsV5title4bodyACSSSg_So18NSAttributedStringCSgtcfc",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "title",
+            "printedName": "title",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlert0B8_ConfigsV5titleSSSgvp",
+            "mangledName": "$s12ZAssistAlert0B8_ConfigsV5titleSSSgvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0B8_ConfigsV5titleSSSgvg",
+                "mangledName": "$s12ZAssistAlert0B8_ConfigsV5titleSSSgvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0B8_ConfigsV5titleSSSgvs",
+                "mangledName": "$s12ZAssistAlert0B8_ConfigsV5titleSSSgvs",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0B8_ConfigsV5titleSSSgvM",
+                "mangledName": "$s12ZAssistAlert0B8_ConfigsV5titleSSSgvM",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "title_color",
+            "printedName": "title_color",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlert0B8_ConfigsV11title_colorSo7UIColorCvp",
+            "mangledName": "$s12ZAssistAlert0B8_ConfigsV11title_colorSo7UIColorCvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0B8_ConfigsV11title_colorSo7UIColorCvg",
+                "mangledName": "$s12ZAssistAlert0B8_ConfigsV11title_colorSo7UIColorCvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0B8_ConfigsV11title_colorSo7UIColorCvs",
+                "mangledName": "$s12ZAssistAlert0B8_ConfigsV11title_colorSo7UIColorCvs",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0B8_ConfigsV11title_colorSo7UIColorCvM",
+                "mangledName": "$s12ZAssistAlert0B8_ConfigsV11title_colorSo7UIColorCvM",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "alert_bg_color",
+            "printedName": "alert_bg_color",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlert0B8_ConfigsV14alert_bg_colorSo7UIColorCvp",
+            "mangledName": "$s12ZAssistAlert0B8_ConfigsV14alert_bg_colorSo7UIColorCvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0B8_ConfigsV14alert_bg_colorSo7UIColorCvg",
+                "mangledName": "$s12ZAssistAlert0B8_ConfigsV14alert_bg_colorSo7UIColorCvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0B8_ConfigsV14alert_bg_colorSo7UIColorCvs",
+                "mangledName": "$s12ZAssistAlert0B8_ConfigsV14alert_bg_colorSo7UIColorCvs",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0B8_ConfigsV14alert_bg_colorSo7UIColorCvM",
+                "mangledName": "$s12ZAssistAlert0B8_ConfigsV14alert_bg_colorSo7UIColorCvM",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSAttributedString?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSAttributedString",
+                    "printedName": "Foundation.NSAttributedString",
+                    "usr": "c:objc(cs)NSAttributedString"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlert0B8_ConfigsV4bodySo18NSAttributedStringCSgvp",
+            "mangledName": "$s12ZAssistAlert0B8_ConfigsV4bodySo18NSAttributedStringCSgvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.NSAttributedString?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSAttributedString",
+                        "printedName": "Foundation.NSAttributedString",
+                        "usr": "c:objc(cs)NSAttributedString"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0B8_ConfigsV4bodySo18NSAttributedStringCSgvg",
+                "mangledName": "$s12ZAssistAlert0B8_ConfigsV4bodySo18NSAttributedStringCSgvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.NSAttributedString?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSAttributedString",
+                        "printedName": "Foundation.NSAttributedString",
+                        "usr": "c:objc(cs)NSAttributedString"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0B8_ConfigsV4bodySo18NSAttributedStringCSgvs",
+                "mangledName": "$s12ZAssistAlert0B8_ConfigsV4bodySo18NSAttributedStringCSgvs",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert0B8_ConfigsV4bodySo18NSAttributedStringCSgvM",
+                "mangledName": "$s12ZAssistAlert0B8_ConfigsV4bodySo18NSAttributedStringCSgvM",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12ZAssistAlert0B8_ConfigsV",
+        "mangledName": "$s12ZAssistAlert0B8_ConfigsV",
+        "moduleName": "ZAssistAlert",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Check_Box_Configuration",
+        "printedName": "Check_Box_Configuration",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(icon_font:selected_check_box:unselected_check_box:defaultValue:onChange:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Check_Box_Configuration",
+                "printedName": "ZAssistAlert.Check_Box_Configuration",
+                "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIFont",
+                "printedName": "UIKit.UIFont",
+                "usr": "c:objc(cs)UIFont"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Bool) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Bool) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV9icon_font18selected_check_box011unselected_i1_J012defaultValue8onChangeACSo6UIFontC_S2SSbySbcSgtcfc",
+            "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV9icon_font18selected_check_box011unselected_i1_J012defaultValue8onChangeACSo6UIFontC_S2SSbySbcSgtcfc",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "icon_font",
+            "printedName": "icon_font",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIFont",
+                "printedName": "UIKit.UIFont",
+                "usr": "c:objc(cs)UIFont"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV9icon_fontSo6UIFontCvp",
+            "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV9icon_fontSo6UIFontCvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIFont",
+                    "printedName": "UIKit.UIFont",
+                    "usr": "c:objc(cs)UIFont"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV9icon_fontSo6UIFontCvg",
+                "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV9icon_fontSo6UIFontCvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIFont",
+                    "printedName": "UIKit.UIFont",
+                    "usr": "c:objc(cs)UIFont"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV9icon_fontSo6UIFontCvs",
+                "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV9icon_fontSo6UIFontCvs",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV9icon_fontSo6UIFontCvM",
+                "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV9icon_fontSo6UIFontCvM",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "selected_check_box",
+            "printedName": "selected_check_box",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV18selected_check_boxSSvp",
+            "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV18selected_check_boxSSvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV18selected_check_boxSSvg",
+                "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV18selected_check_boxSSvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV18selected_check_boxSSvs",
+                "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV18selected_check_boxSSvs",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV18selected_check_boxSSvM",
+                "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV18selected_check_boxSSvM",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "selected_check_box_color",
+            "printedName": "selected_check_box_color",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV24selected_check_box_colorSo7UIColorCvp",
+            "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV24selected_check_box_colorSo7UIColorCvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV24selected_check_box_colorSo7UIColorCvg",
+                "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV24selected_check_box_colorSo7UIColorCvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV24selected_check_box_colorSo7UIColorCvs",
+                "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV24selected_check_box_colorSo7UIColorCvs",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV24selected_check_box_colorSo7UIColorCvM",
+                "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV24selected_check_box_colorSo7UIColorCvM",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "unselected_check_box",
+            "printedName": "unselected_check_box",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV20unselected_check_boxSSvp",
+            "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV20unselected_check_boxSSvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV20unselected_check_boxSSvg",
+                "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV20unselected_check_boxSSvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV20unselected_check_boxSSvs",
+                "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV20unselected_check_boxSSvs",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV20unselected_check_boxSSvM",
+                "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV20unselected_check_boxSSvM",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "unselected_check_box_color",
+            "printedName": "unselected_check_box_color",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV26unselected_check_box_colorSo7UIColorCvp",
+            "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV26unselected_check_box_colorSo7UIColorCvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV26unselected_check_box_colorSo7UIColorCvg",
+                "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV26unselected_check_box_colorSo7UIColorCvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV26unselected_check_box_colorSo7UIColorCvs",
+                "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV26unselected_check_box_colorSo7UIColorCvs",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV26unselected_check_box_colorSo7UIColorCvM",
+                "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV26unselected_check_box_colorSo7UIColorCvM",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "defaultValue",
+            "printedName": "defaultValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV12defaultValueSbvp",
+            "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV12defaultValueSbvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV12defaultValueSbvg",
+                "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV12defaultValueSbvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV12defaultValueSbvs",
+                "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV12defaultValueSbvs",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV12defaultValueSbvM",
+                "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV12defaultValueSbvM",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "onChange",
+            "printedName": "onChange",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Bool) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Bool) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV8onChangeySbcSgvp",
+            "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV8onChangeySbcSgvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Bool) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Bool) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV8onChangeySbcSgvg",
+                "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV8onChangeySbcSgvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Bool) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Bool) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV8onChangeySbcSgvs",
+                "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV8onChangeySbcSgvs",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV8onChangeySbcSgvM",
+                "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV8onChangeySbcSgvM",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV",
+        "mangledName": "$s12ZAssistAlert23Check_Box_ConfigurationV",
+        "moduleName": "ZAssistAlert",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Footer_Configs",
+        "printedName": "Footer_Configs",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(bg_color:text_color:footer_note:check_box_configuration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Footer_Configs",
+                "printedName": "ZAssistAlert.Footer_Configs",
+                "usr": "s:12ZAssistAlert14Footer_ConfigsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "hasDefaultArg": true,
+                "usr": "c:objc(cs)UIColor"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "hasDefaultArg": true,
+                "usr": "c:objc(cs)UIColor"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ZAssistAlert.Check_Box_Configuration?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Check_Box_Configuration",
+                    "printedName": "ZAssistAlert.Check_Box_Configuration",
+                    "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12ZAssistAlert14Footer_ConfigsV8bg_color05text_F011footer_note23check_box_configurationACSo7UIColorC_AISSAA23Check_Box_ConfigurationVSgtcfc",
+            "mangledName": "$s12ZAssistAlert14Footer_ConfigsV8bg_color05text_F011footer_note23check_box_configurationACSo7UIColorC_AISSAA23Check_Box_ConfigurationVSgtcfc",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "bg_color",
+            "printedName": "bg_color",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlert14Footer_ConfigsV8bg_colorSo7UIColorCvp",
+            "mangledName": "$s12ZAssistAlert14Footer_ConfigsV8bg_colorSo7UIColorCvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert14Footer_ConfigsV8bg_colorSo7UIColorCvg",
+                "mangledName": "$s12ZAssistAlert14Footer_ConfigsV8bg_colorSo7UIColorCvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert14Footer_ConfigsV8bg_colorSo7UIColorCvs",
+                "mangledName": "$s12ZAssistAlert14Footer_ConfigsV8bg_colorSo7UIColorCvs",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert14Footer_ConfigsV8bg_colorSo7UIColorCvM",
+                "mangledName": "$s12ZAssistAlert14Footer_ConfigsV8bg_colorSo7UIColorCvM",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "text_color",
+            "printedName": "text_color",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlert14Footer_ConfigsV10text_colorSo7UIColorCvp",
+            "mangledName": "$s12ZAssistAlert14Footer_ConfigsV10text_colorSo7UIColorCvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert14Footer_ConfigsV10text_colorSo7UIColorCvg",
+                "mangledName": "$s12ZAssistAlert14Footer_ConfigsV10text_colorSo7UIColorCvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert14Footer_ConfigsV10text_colorSo7UIColorCvs",
+                "mangledName": "$s12ZAssistAlert14Footer_ConfigsV10text_colorSo7UIColorCvs",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert14Footer_ConfigsV10text_colorSo7UIColorCvM",
+                "mangledName": "$s12ZAssistAlert14Footer_ConfigsV10text_colorSo7UIColorCvM",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "footer_note",
+            "printedName": "footer_note",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlert14Footer_ConfigsV11footer_noteSSvp",
+            "mangledName": "$s12ZAssistAlert14Footer_ConfigsV11footer_noteSSvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert14Footer_ConfigsV11footer_noteSSvg",
+                "mangledName": "$s12ZAssistAlert14Footer_ConfigsV11footer_noteSSvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "check_box_configuration",
+            "printedName": "check_box_configuration",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ZAssistAlert.Check_Box_Configuration?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Check_Box_Configuration",
+                    "printedName": "ZAssistAlert.Check_Box_Configuration",
+                    "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12ZAssistAlert14Footer_ConfigsV23check_box_configurationAA23Check_Box_ConfigurationVSgvp",
+            "mangledName": "$s12ZAssistAlert14Footer_ConfigsV23check_box_configurationAA23Check_Box_ConfigurationVSgvp",
+            "moduleName": "ZAssistAlert",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ZAssistAlert.Check_Box_Configuration?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Check_Box_Configuration",
+                        "printedName": "ZAssistAlert.Check_Box_Configuration",
+                        "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert14Footer_ConfigsV23check_box_configurationAA23Check_Box_ConfigurationVSgvg",
+                "mangledName": "$s12ZAssistAlert14Footer_ConfigsV23check_box_configurationAA23Check_Box_ConfigurationVSgvg",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ZAssistAlert.Check_Box_Configuration?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Check_Box_Configuration",
+                        "printedName": "ZAssistAlert.Check_Box_Configuration",
+                        "usr": "s:12ZAssistAlert23Check_Box_ConfigurationV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert14Footer_ConfigsV23check_box_configurationAA23Check_Box_ConfigurationVSgvs",
+                "mangledName": "$s12ZAssistAlert14Footer_ConfigsV23check_box_configurationAA23Check_Box_ConfigurationVSgvs",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12ZAssistAlert14Footer_ConfigsV23check_box_configurationAA23Check_Box_ConfigurationVSgvM",
+                "mangledName": "$s12ZAssistAlert14Footer_ConfigsV23check_box_configurationAA23Check_Box_ConfigurationVSgvM",
+                "moduleName": "ZAssistAlert",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12ZAssistAlert14Footer_ConfigsV",
+        "mangledName": "$s12ZAssistAlert14Footer_ConfigsV",
+        "moduleName": "ZAssistAlert",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/Alert\/ZAssistAlert.swift",
+      "kind": "Array",
+      "offset": 1103,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/Alert\/ZAssistAlertModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 972,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/Alert\/ZAssistAlertModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1372,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/Alert\/ZAssistAlertModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1973,
+      "length": 8,
+      "value": "0x2E2E2E"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/Alert\/ZAssistAlertModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2210,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/Alert\/ZAssistAlertModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2622,
+      "length": 8,
+      "value": "0x7ED321"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/Alert\/ZAssistAlertModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2746,
+      "length": 8,
+      "value": "0xEC656A"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/Alert\/ZAssistAlertModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2791,
+      "length": 4,
+      "value": "true"
+    }
+  ]
+}

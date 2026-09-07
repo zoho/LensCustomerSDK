@@ -1,0 +1,388 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TraceKit",
+    "printedName": "TraceKit",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TraceKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ZIPFoundation",
+        "printedName": "ZIPFoundation",
+        "declKind": "Import",
+        "moduleName": "TraceKit"
+      },
+      {
+        "kind": "Import",
+        "name": "TraceKitCore",
+        "printedName": "TraceKitCore",
+        "declKind": "Import",
+        "moduleName": "TraceKit",
+        "declAttributes": [
+          "Exported"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DefaultLogArchiver",
+        "printedName": "DefaultLogArchiver",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DefaultLogArchiver",
+                "printedName": "TraceKit.DefaultLogArchiver",
+                "usr": "s:8TraceKit18DefaultLogArchiverC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8TraceKit18DefaultLogArchiverC6sharedACvpZ",
+            "mangledName": "$s8TraceKit18DefaultLogArchiverC6sharedACvpZ",
+            "moduleName": "TraceKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DefaultLogArchiver",
+                    "printedName": "TraceKit.DefaultLogArchiver",
+                    "usr": "s:8TraceKit18DefaultLogArchiverC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8TraceKit18DefaultLogArchiverC6sharedACvgZ",
+                "mangledName": "$s8TraceKit18DefaultLogArchiverC6sharedACvgZ",
+                "moduleName": "TraceKit",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DefaultLogArchiver",
+                "printedName": "TraceKit.DefaultLogArchiver",
+                "usr": "s:8TraceKit18DefaultLogArchiverC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8TraceKit18DefaultLogArchiverCACycfc",
+            "mangledName": "$s8TraceKit18DefaultLogArchiverCACycfc",
+            "moduleName": "TraceKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "archive",
+            "printedName": "archive(files:to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Foundation.URL]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8TraceKit18DefaultLogArchiverC7archive5files2toySay10Foundation3URLVG_AItKF",
+            "mangledName": "$s8TraceKit18DefaultLogArchiverC7archive5files2toySay10Foundation3URLVG_AItKF",
+            "moduleName": "TraceKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "archive",
+            "printedName": "archive(directory:to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8TraceKit18DefaultLogArchiverC7archive9directory2toy10Foundation3URLV_AItKF",
+            "mangledName": "$s8TraceKit18DefaultLogArchiverC7archive9directory2toy10Foundation3URLV_AItKF",
+            "moduleName": "TraceKit",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8TraceKit18DefaultLogArchiverC",
+        "mangledName": "$s8TraceKit18DefaultLogArchiverC",
+        "moduleName": "TraceKit",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LogArchiver",
+            "printedName": "LogArchiver",
+            "usr": "s:12TraceKitCore11LogArchiverP",
+            "mangledName": "$s12TraceKitCore11LogArchiverP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TraceKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "TraceKitCore",
+        "printedName": "TraceKitCore",
+        "declKind": "Import",
+        "moduleName": "TraceKit",
+        "declAttributes": [
+          "Exported"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FileLoggingDestination",
+        "printedName": "FileLoggingDestination",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "default",
+            "printedName": "default",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FileLoggingDestination",
+                "printedName": "TraceKitCore.FileLoggingDestination",
+                "usr": "s:12TraceKitCore22FileLoggingDestinationV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12TraceKitCore22FileLoggingDestinationV0aB0E7defaultACvpZ",
+            "mangledName": "$s12TraceKitCore22FileLoggingDestinationV0aB0E7defaultACvpZ",
+            "moduleName": "TraceKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FileLoggingDestination",
+                    "printedName": "TraceKitCore.FileLoggingDestination",
+                    "usr": "s:12TraceKitCore22FileLoggingDestinationV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12TraceKitCore22FileLoggingDestinationV0aB0E7defaultACvgZ",
+                "mangledName": "$s12TraceKitCore22FileLoggingDestinationV0aB0E7defaultACvgZ",
+                "moduleName": "TraceKit",
+                "static": true,
+                "implicit": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(directory:name:segmentationBehaviour:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FileLoggingDestination",
+                "printedName": "TraceKitCore.FileLoggingDestination",
+                "usr": "s:12TraceKitCore22FileLoggingDestinationV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SegmentationBehaviour",
+                "printedName": "TraceKitCore.FileLoggingDestination.SegmentationBehaviour",
+                "hasDefaultArg": true,
+                "usr": "s:12TraceKitCore22FileLoggingDestinationV21SegmentationBehaviourO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12TraceKitCore22FileLoggingDestinationV0aB0E9directory4name21segmentationBehaviourAC10Foundation3URLV_SSAC012SegmentationJ0Otcfc",
+            "mangledName": "$s12TraceKitCore22FileLoggingDestinationV0aB0E9directory4name21segmentationBehaviourAC10Foundation3URLV_SSAC012SegmentationJ0Otcfc",
+            "moduleName": "TraceKit",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:12TraceKitCore22FileLoggingDestinationV",
+        "mangledName": "$s12TraceKitCore22FileLoggingDestinationV",
+        "moduleName": "TraceKitCore",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "DiscardableLoggingDestination",
+            "printedName": "DiscardableLoggingDestination",
+            "usr": "s:12TraceKitCore29DiscardableLoggingDestinationP",
+            "mangledName": "$s12TraceKitCore29DiscardableLoggingDestinationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExportableDestination",
+            "printedName": "ExportableDestination",
+            "usr": "s:12TraceKitCore21ExportableDestinationP",
+            "mangledName": "$s12TraceKitCore21ExportableDestinationP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LoggingDestination",
+            "printedName": "LoggingDestination",
+            "usr": "s:12TraceKitCore18LoggingDestinationP",
+            "mangledName": "$s12TraceKitCore18LoggingDestinationP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/harrish-21397\/Desktop\/Salesiq_Frameworks\/Packages\/6.3.2\/irtcpmeeting\/build\/xcframeworks_out\/work\/tracekit-ios\/Sources\/TraceKit\/FileLoggingDestination+Extension.swift",
+      "kind": "StringLiteral",
+      "offset": 702,
+      "length": 10,
+      "value": "\"tracekit\""
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+framework module ATIcon {
+  header "ATIcon-Swift.h"
+}

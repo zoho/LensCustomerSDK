@@ -1,0 +1,49 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name DatePickerController
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import Foundation
+import OverlayViewController
+import Swift
+import UIKit
+import UIKit_Extention
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class DatePickerController : OverlayViewController {
+  public enum Mode : Swift.Int {
+    case time, date, dateAndTime
+    public var originMode: UIKit.UIDatePicker.Mode {
+      get
+    }
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @_Concurrency.MainActor @preconcurrency public var tintColor: UIKit.UIColor
+  @_Concurrency.MainActor @preconcurrency public var titleColor: UIKit.UIColor
+  @_Concurrency.MainActor @preconcurrency public var datePickerBacgroundColor: UIKit.UIColor
+  @_Concurrency.MainActor @preconcurrency public var barBackgroundColor: UIKit.UIColor
+  @_Concurrency.MainActor @preconcurrency public var timeZone: Foundation.TimeZone
+  @_Concurrency.MainActor @preconcurrency public var datePickerMode: DatePickerController.Mode
+  @_Concurrency.MainActor @preconcurrency public var minimumDate: Foundation.Date?
+  @_Concurrency.MainActor @preconcurrency public var maximumDate: Foundation.Date?
+  @_Concurrency.MainActor @preconcurrency public var completionHandler: ((_ oldDate: Foundation.Date?, _ newDate: Foundation.Date?) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public var defaultDate: Foundation.Date?
+  @_Concurrency.MainActor @preconcurrency public var minuteInterval: Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+extension DatePickerController {
+  @_Concurrency.MainActor @preconcurrency public func presentDateControllerAsPopOver(controller: UIKit.UIViewController?, fromView soruceView: UIKit.UIView, popoverDirection direction: UIKit.UIPopoverArrowDirection)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIKit.UIPopoverPresentationController)
+}
+extension DatePickerController.Mode : Swift.Equatable {}
+extension DatePickerController.Mode : Swift.Hashable {}
+extension DatePickerController.Mode : Swift.RawRepresentable {}

@@ -1,0 +1,22 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.1 effective-5.10 (swiftlang-6.3.1.1.2 clang-2100.0.123.102)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -module-name TraceKit
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.1
+import Foundation
+import Swift
+@_exported import TraceKitCore
+import ZIPFoundation
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public class DefaultLogArchiver : TraceKitCore.LogArchiver {
+  public static let shared: TraceKit.DefaultLogArchiver
+  public init()
+  public func archive(files: [Foundation.URL], to destination: Foundation.URL) throws
+  public func archive(directory: Foundation.URL, to destination: Foundation.URL) throws
+  @objc deinit
+}
+extension TraceKitCore.FileLoggingDestination {
+  public static let `default`: TraceKitCore.FileLoggingDestination
+  public init(directory: Foundation.URL, name: Swift.String, segmentationBehaviour: TraceKitCore.FileLoggingDestination.SegmentationBehaviour = .none)
+}

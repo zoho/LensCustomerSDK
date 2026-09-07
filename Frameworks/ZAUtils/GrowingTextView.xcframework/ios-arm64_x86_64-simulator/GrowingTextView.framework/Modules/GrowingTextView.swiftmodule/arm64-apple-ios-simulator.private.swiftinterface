@@ -1,0 +1,32 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name GrowingTextView
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import Combine
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class GrowingTextView : UIKit.UITextView {
+  @_Concurrency.MainActor @preconcurrency public var placeholder: Swift.String? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var placeholderColor: UIKit.UIColor {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect, textContainer: UIKit.NSTextContainer?)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency public func updatePlaceholderVisibility()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var font: UIKit.UIFont? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var textAlignment: UIKit.NSTextAlignment {
+    @objc get
+    @objc set
+  }
+}

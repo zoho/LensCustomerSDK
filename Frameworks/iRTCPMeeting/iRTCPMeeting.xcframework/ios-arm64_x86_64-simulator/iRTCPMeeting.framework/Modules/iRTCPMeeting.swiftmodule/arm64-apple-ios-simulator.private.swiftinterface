@@ -1,0 +1,764 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.1 effective-5.10 (swiftlang-6.3.1.1.2 clang-2100.0.123.102)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -module-name iRTCPMeeting
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.1
+import AVCommonsCore
+import AVFoundation
+import AppBridge
+import CallKit
+import Combine
+import Compression
+import Foundation
+import MeetingClient
+import Network
+import ReplayKit
+import Swift
+import UIKit
+import UIKit
+import VideoToolbox
+import WMSPackage
+import WebRTC
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public class AVKotlinFlowCollector<T> : iRTCPMeeting.AVCoroutineFlowCollector {
+  public init(callback: @escaping (T?) -> Swift.Void)
+  @objc public func emit(value: Any?, completionHandler: @escaping ((any Swift.Error)?) -> Swift.Void)
+  @objc deinit
+}
+extension MeetingClient.Kotlinx_coroutines_coreFlow {
+  public func collect<T>(_ collector: iRTCPMeeting.AVKotlinFlowCollector<T>, completionHandler: (((any Swift.Error)?) -> Swift.Void)? = nil)
+  public func collect<T>(_ completion: @escaping (Swift.Result<T?, any Swift.Error>) -> Swift.Void)
+}
+public protocol AVPexClientProtocol : ObjectiveC.NSObject {
+  func onPexMessage(msg: Any?, mtype: Swift.Int, sessionId: Swift.String)
+  func onCustomMessage(msg: Any?, sessionId: Swift.String)
+  func onConnect(wmsId wmsid: Swift.String, sessionId sid: Swift.String?, displayName dname: Swift.String?)
+  func onDisconnect(isManual: Swift.Bool, reason: Swift.String)
+  func onReconnect()
+  func onNetworkUp()
+}
+extension iRTCPMeeting.AVPexClientProtocol {
+  public func onCustomMessage(msg: Any?, sessionId: Swift.String)
+  public func onConnect(wmsId wmsid: Swift.String, sessionId sid: Swift.String?, displayName dname: Swift.String?)
+  public func onDisconnect(isManual: Swift.Bool, reason: Swift.String)
+  public func onReconnect()
+  public func onNetworkUp()
+}
+public struct AVPexClientServerDetails {
+  public let domain: Swift.String
+  public let prefix: Swift.String
+  public init(domain: Swift.String, prefix: Swift.String)
+}
+public protocol RTCPMeetingClientDelegate : AnyObject {
+  func meetingStateDidChange(for id: Swift.String, with state: iRTCPMeeting.RTCPMeetingClientState)
+  func isDebugMode() -> Swift.Bool
+  func onMeetingPropertyUpdate(properties: iRTCPMeeting.RTCPMeetingProperties)
+  func onWMSConnectionStateChange(state: WMSPackage.PexConnectionEvent)
+}
+extension iRTCPMeeting.RTCPMeetingClientDelegate {
+  public func isDebugMode() -> Swift.Bool
+  public func onWMSConnectionStateChange(state: WMSPackage.PexConnectionEvent)
+}
+extension Swift.Error {
+  public var debugDescription: Swift.String {
+    get
+  }
+  public var errorMessage: Swift.String? {
+    get
+  }
+  public var errorCode: Swift.Int? {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public var cause: Swift.String? {
+    get
+  }
+  public var error: Swift.String? {
+    get
+  }
+  public var code: Swift.Int? {
+    get
+  }
+  public var responseCode: Swift.Int? {
+    get
+  }
+}
+public struct RTCPMeetingNetworkStatus {
+  public let isWiFi: Swift.Bool
+  public let isCellular: Swift.Bool
+  public let isEthernet: Swift.Bool
+  public let status: iRTCPMeeting.RTCPMeetingNetworkStatusType
+  public let isExpensive: Swift.Bool
+  public let otherInterface: Swift.Bool
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public enum RTCPMeetingNetworkStatusType {
+  case connected
+  case disconnected
+  public static func == (a: iRTCPMeeting.RTCPMeetingNetworkStatusType, b: iRTCPMeeting.RTCPMeetingNetworkStatusType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class RTCPMeetingNetworkHelper {
+  public static let shared: iRTCPMeeting.RTCPMeetingNetworkHelper
+  public func observeNetworkReachability(for key: Swift.String, callback: @escaping (iRTCPMeeting.RTCPMeetingNetworkStatus) -> Swift.Void)
+  public func stopObservingNetworkReachability(for key: Swift.String)
+  @objc deinit
+}
+extension UIKit.UIControl.Event {
+  public static var changeAudioRoute: UIKit.UIControl.Event
+  public static var toggleAudioMute: UIKit.UIControl.Event
+  public static var toggleVideoMute: UIKit.UIControl.Event
+  public static var toggleHandRaise: UIKit.UIControl.Event
+  public static var toggleMuteAll: UIKit.UIControl.Event
+  public static var toggleRecording: UIKit.UIControl.Event
+  public static var showInviteParticipants: UIKit.UIControl.Event
+  public static var toggleStreaming: UIKit.UIControl.Event
+  public static var showPermissions: UIKit.UIControl.Event
+  public static var updateCameraFlip: UIKit.UIControl.Event
+  public static var startOrJoin: UIKit.UIControl.Event
+  public static var leaveOrEnd: UIKit.UIControl.Event
+  public static var localMemberAudioUpdate: UIKit.UIControl.Event
+  public static var localMemberVideoUpdate: UIKit.UIControl.Event
+  public static var bottomSheetUpdate: UIKit.UIControl.Event
+  public static var showEmojiBottomSheet: UIKit.UIControl.Event
+  public static var showBroadCastPicker: UIKit.UIControl.Event
+  public static var showMeetingMembersSearch: UIKit.UIControl.Event
+  public static var updateAspectRatio: UIKit.UIControl.Event
+}
+extension UIKit.UILabel {
+  @_Concurrency.MainActor @preconcurrency public func numberOfCharactersThatFitLabel(withWidth: Swift.Double? = nil, withText: Swift.String? = nil) -> Swift.Int
+}
+public enum RTCPBroadCastConnectionEvents : Swift.UInt32, Swift.CaseIterable {
+  case broadCastBuffer
+  case broadCastState
+  case broadCastEndReason
+  case broadCastOrientation
+  public init?(rawValue: Swift.UInt32)
+  public typealias AllCases = [iRTCPMeeting.RTCPBroadCastConnectionEvents]
+  public typealias RawValue = Swift.UInt32
+  nonisolated public static var allCases: [iRTCPMeeting.RTCPBroadCastConnectionEvents] {
+    get
+  }
+  public var rawValue: Swift.UInt32 {
+    get
+  }
+}
+public class RTCPBroadcastManager : AVCommonsCore.AVNotifiersBase<iRTCPMeeting.RTCPBroadcastManager> {
+  public var currentStatus: iRTCPMeeting.RTCPMeetingBroadCastState {
+    get
+    set
+  }
+  public init(appGroup: Swift.String, isFromExtension: Swift.Bool = true)
+  public func setABConnectionDelegate(_ delegate: any AppBridge.ABConnectionDelegate)
+  public func updateOrientation(_ orientation: ImageIO.CGImagePropertyOrientation)
+  public func initSession(broadCastHandler: ReplayKit.RPBroadcastSampleHandler)
+  public func processSampleBuffer(_ sampleBuffer: CoreMedia.CMSampleBuffer, with sampleBufferType: ReplayKit.RPSampleBufferType)
+  public func getRTCScreenBuffer(with data: Foundation.Data) -> WebRTC.RTCVideoFrame?
+  public func updateEndReason(_ value: Swift.String)
+  public func pauseSession()
+  public func resumeSession()
+  public func finishBroadcast()
+  public func endSession(with reason: Swift.String = "Broadcast ended")
+  @objc deinit
+}
+extension iRTCPMeeting.RTCPBroadcastManager : AppBridge.ABConnectionDelegate {
+  public func connection(_ connection: AppBridge.ABConnection, didReceive message: AppBridge.ABMessage, from senderID: Swift.Int32)
+}
+extension Foundation.Data {
+  public init?(encode value: Swift.String)
+  public init?(encode value: Swift.Int)
+  public func getData<T>() -> T? where T : Swift.Decodable, T : Swift.Encodable
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class RTCPMEXClient : ObjectiveC.NSObject {
+  public static let shared: iRTCPMeeting.RTCPMEXClient
+  public func initMexSession(userId: Swift.String, entityKey: Swift.String, clientOTP: Swift.String, remoteConfigs: MeetingClient.RTCPMexRemoteConfigs, completion: @escaping (Swift.Result<MeetingClient.ConnectionState?, any Swift.Error>) -> Swift.Void)
+  public func getMexObserver(completion: @escaping (Swift.Result<MeetingClient.MexData?, any Swift.Error>) -> Swift.Void)
+  public func sendMexData(mexData: MeetingClient.MexData, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  public func getIsNetworkAvailableState(completion: @escaping (Swift.Result<MeetingClient.KotlinBoolean?, any Swift.Error>) -> Swift.Void)
+  public func closeMexSession(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  @objc deinit
+}
+public typealias RTCPMeetingInitSessionCompletion = (iRTCPMeeting.RTCPMeetingClientState?, iRTCPMeeting.RTCPMeetingInitSessionError?) -> Swift.Void
+public typealias AVCoroutineStateFlow = MeetingClient.Kotlinx_coroutines_coreStateFlow
+public typealias AVCoroutineFlowCollector = MeetingClient.Kotlinx_coroutines_coreFlowCollector
+public typealias AVCoroutineFlow = MeetingClient.Kotlinx_coroutines_coreFlow
+public typealias RTCPMembersSynchronizedList = AVCommonsCore.AVSynchronizedDictionary<iRTCPMeeting.RTCPMeetingMemberRole, [MeetingClient.RTCPMeetingsMember]>
+public typealias RTCPMembersList = [iRTCPMeeting.RTCPMeetingMemberRole : [MeetingClient.RTCPMeetingsMember]]
+public typealias RTCPImage = UIKit.UIImage
+public typealias RTCPWindow = UIKit.UIWindow
+public typealias RTCPColor = UIKit.UIColor
+public typealias RTCPView = UIKit.UIView
+public typealias RTCPViewController = UIKit.UIViewController
+public typealias RTCPNavigationController = UIKit.UINavigationController
+public typealias RTCPRect = CoreFoundation.CGRect
+public typealias RTCPMTLView = WebRTC.RTCMTLVideoView
+public var meetingAspectRatio: iRTCPMeeting.RTCPMeetingAspectRatios
+public enum RTCPMeetingAspectRatios : Swift.String, Swift.CaseIterable {
+  case aspectRatioFit
+  case aspectRatioFill
+  public func toggle() -> iRTCPMeeting.RTCPMeetingAspectRatios
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [iRTCPMeeting.RTCPMeetingAspectRatios]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [iRTCPMeeting.RTCPMeetingAspectRatios] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class RTCPMeetingSharedMeetingClient {
+  @objc deinit
+}
+public enum RTCPMemberType : Swift.Equatable {
+  case hostMeeting(shouldAutoStart: Swift.Bool)
+  case joinMeeting(shouldAutoJoin: Swift.Bool)
+  public var isHostMeeting: Swift.Bool {
+    get
+  }
+  public static func == (a: iRTCPMeeting.RTCPMemberType, b: iRTCPMeeting.RTCPMemberType) -> Swift.Bool
+}
+public enum RTCPMeetingInitSessionError : Swift.Error {
+  case activeHostedMeeting
+  case activeJoinedMeeting
+  public static func == (a: iRTCPMeeting.RTCPMeetingInitSessionError, b: iRTCPMeeting.RTCPMeetingInitSessionError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum RTCPMediaPermission : Swift.Int {
+  case audio
+  case video
+  case audioVideo
+  case none
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum RTCPMeetingClientState {
+  case initated
+  case joining
+  case joined
+  case hosting
+  case hosted
+  case end
+  case ringing
+  public static func == (a: iRTCPMeeting.RTCPMeetingClientState, b: iRTCPMeeting.RTCPMeetingClientState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum RTCPMeetingClientUIActionTypes {
+  case audioRouteChange(name: Swift.String)
+  case audioStatusChange(enabled: Swift.Bool)
+  case videoStatusChange(enabled: Swift.Bool)
+}
+public enum RTCPMeetingPipStates {
+  case maximize
+  case minimize(xPosition: AVCommonsCore.PosXState, yPosition: AVCommonsCore.PosYState)
+}
+public struct RTCPMeetingLocalScreenStates {
+  public var isActive: Swift.Bool
+  public var isConnected: Swift.Bool
+}
+public struct RTCPMeetingConnectionDetails {
+  public var isUpstreamVideoConnected: Swift.Bool
+  public var isDownstreamVideoConnected: Swift.Bool
+  public var isDownstreamAudioConnected: Swift.Bool
+  public var isUpstreamAudioConnected: Swift.Bool
+  public var isDownStreamScreenShareConnected: Swift.Bool
+  public var isUpStreamScreenShareConnected: Swift.Bool
+  public var isDataChannelConnected: Swift.Bool
+  public func getDebugDescription() -> Swift.String
+}
+@_inheritsConvenienceInitializers public class RTCPMeetingDataSource : AVCommonsCore.AVNotifiersBase<iRTCPMeeting.RTCPMeetingDataSource> {
+  public var isLocalScreenSharing: Swift.Bool
+  public var islocalScreenShareConnected: Swift.Bool {
+    get
+    set
+  }
+  public var remoteScreenShareDetails: MeetingClient.RTCPMeetingsMember?
+  public var isSpotlightEnabled: Swift.Bool {
+    get
+    set
+  }
+  public var callKitId: Foundation.UUID?
+  override public init()
+  @objc deinit
+}
+public struct RTCPMeetingInviteDetails {
+  public let inviteLink: Swift.String
+  public let invitation: Swift.String
+  public init(inviteLink: Swift.String, invitation: Swift.String)
+}
+public struct RTCPMeetingEndDetails {
+  public init(conferenceKey: Swift.String, completion: ((Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)? = nil)
+}
+public struct RTCPMeetingLeaveDetails {
+  public init(assignPrimaryAdminId: Swift.String? = nil, conferenceKey: Swift.String, completion: ((Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)? = nil)
+}
+public struct RTCPMeetingCVPixelBufferDetails {
+  public let cvPixelBuffer: CoreVideo.CVPixelBuffer
+  public let orientation: ImageIO.CGImagePropertyOrientation?
+  public let broadCastState: iRTCPMeeting.RTCPMeetingBroadCastState
+  public init(cvPixelBuffer: CoreVideo.CVPixelBuffer, orientation: ImageIO.CGImagePropertyOrientation? = nil, broadCastState: iRTCPMeeting.RTCPMeetingBroadCastState)
+}
+public enum RTCPMeetingBroadCastState : Swift.Int, Swift.CaseIterable {
+  case notStarted
+  case started
+  case paused
+  case resumed
+  case finished
+  public func isRunning() -> Swift.Bool
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [iRTCPMeeting.RTCPMeetingBroadCastState]
+  public typealias RawValue = Swift.Int
+  nonisolated public static var allCases: [iRTCPMeeting.RTCPMeetingBroadCastState] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct RTCPMeetingBroadCastInitDetails {
+  public let appGroupIdentifier: Swift.String
+  public let broadCastBundleIdentifier: Swift.String
+  public init(appGroupIdentifier: Swift.String, broadCastBundleIdentifier: Swift.String)
+}
+public class RTCPMeetingInitDetails : AVCommonsCore.AVNotifiersBase<iRTCPMeeting.RTCPMeetingInitDetails> {
+  final public let conferenceKey: Swift.String
+  final public let clientOtp: Swift.String
+  final public let userId: Swift.String
+  final public let isChatBasedMeeting: Swift.Bool
+  final public let memberType: iRTCPMeeting.RTCPMemberType
+  public var title: Swift.String {
+    get
+    set
+  }
+  final public let baseUrl: Swift.String
+  final public let bundleId: Swift.String
+  final public let authorizationToken: Swift.String
+  final public let appName: Swift.String
+  final public let isAudioEnabled: Swift.Bool
+  final public let isVideoEnabled: Swift.Bool
+  final public let meetingUniqueId: Swift.String
+  final public let isCustomDomain: Swift.Bool
+  final public let isCrossOrigin: Swift.Bool
+  final public let ipVersion: Swift.String?
+  final public let useDBEncryption: Swift.Bool
+  public var debugDescription: Swift.String {
+    get
+  }
+  public init(conferenceKey: Swift.String, clientOtp: Swift.String, userId: Swift.String, isChatBasedMeeting: Swift.Bool, memberType: iRTCPMeeting.RTCPMemberType, title: Swift.String, baseUrl: Swift.String, bundleId: Swift.String, authorizationToken: Swift.String, appName: Swift.String, isAudioEnabled: Swift.Bool, isVideoEnabled: Swift.Bool, meetingUniqueId: Swift.String, isCustomDomain: Swift.Bool = false, isCrossOrigin: Swift.Bool = false, ipVersion: Swift.String? = nil, useDBEncryption: Swift.Bool = false)
+  @objc deinit
+}
+public enum LogLevel : Swift.String {
+  case error
+  case debug
+  case info
+  case ui
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum RTCPViewContentMode {
+  case aspectFit
+  case aspectFill
+  case scaleAspectFit
+  case scaleAspectFill
+  case center
+  public var getContentMode: iRTCPMeeting.RTCPView.ContentMode {
+    get
+  }
+  public static func == (a: iRTCPMeeting.RTCPViewContentMode, b: iRTCPMeeting.RTCPViewContentMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct RTCPProfileImageDetails {
+  public let userId: Swift.String
+  public let image: iRTCPMeeting.RTCPImage
+  public let contentMode: iRTCPMeeting.RTCPViewContentMode
+  public init(userId: Swift.String, image: iRTCPMeeting.RTCPImage, contentMode: iRTCPMeeting.RTCPViewContentMode = .scaleAspectFit)
+}
+public protocol RTCPMeetingManagerDelegate : AnyObject {
+  func onSessionOperationUpdate(_ state: iRTCPMeeting.RTCPMeetingClientOperationState)
+}
+public enum RTCPMeetingClientOperationState {
+  case sessionInitiated
+  case sessionTokenValidated
+  case sessionDetailsUpdated(details: iRTCPMeeting.RTCPMeetingInitDetails)
+  case sessionEnded
+  case sessionAborted(reason: Swift.String)
+}
+public enum RTCPMeetingBroadCastModuleType {
+  case `default`(details: iRTCPMeeting.RTCPMeetingBroadCastInitDetails)
+  case manual(details: iRTCPMeeting.RTCPMeetingBroadCastInitDetails, delegate: any iRTCPMeeting.RTCPMeetingBroadCastManualDelegate)
+}
+public protocol RTCPMeetingBroadCastManualDelegate : ObjectiveC.NSObjectProtocol {
+  func getBroadCastVideoFrame() -> WebRTC.RTCVideoFrame?
+}
+extension MeetingClient.EndScope {
+  public func isMeetingEnded() -> Swift.Bool
+}
+extension MeetingClient.RTCPMeetingsClientResultError : Swift.Error {
+}
+extension MeetingClient.RTCPMexResultError : Swift.Error {
+}
+@_hasMissingDesignatedInitializers public class RTCPMexSharedMexClient {
+  @objc deinit
+}
+public enum RTCPMeetingMemberRole {
+  case host
+  case coHost
+  case activeParticipants
+  case silentParticipants
+  case yetToJoin
+  public static func getUserRole(role: MeetingClient.MemberRole, isActive: Swift.Bool = true) -> iRTCPMeeting.RTCPMeetingMemberRole
+  public static func == (a: iRTCPMeeting.RTCPMeetingMemberRole, b: iRTCPMeeting.RTCPMeetingMemberRole) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension iRTCPMeeting.RTCPMeetingManager {
+  public func getBroadCastStatus() -> iRTCPMeeting.RTCPMeetingBroadCastState?
+  public func broadCastStateChangeObserver(_ completion: @escaping (iRTCPMeeting.RTCPMeetingBroadCastState) -> Swift.Void)
+  public func addBroadCastExtension(type: iRTCPMeeting.RTCPMeetingBroadCastModuleType)
+  public func getBroadCastManager() -> iRTCPMeeting.RTCPBroadcastManager?
+}
+extension iRTCPMeeting.RTCPMeetingManager : AppBridge.ABConnectionDelegate {
+  public func connection(_ connection: AppBridge.ABConnection, didReceive message: AppBridge.ABMessage, from senderID: Swift.Int32)
+  public func connection(_ connection: AppBridge.ABConnection, didDisconnectFrom id: Swift.Int32)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class RTCPMeetingManager : ObjectiveC.NSObject, iRTCPMeeting.RTCPMeetingManagerProtocol {
+  public static let shared: any iRTCPMeeting.RTCPMeetingManagerProtocol
+  public static let sharedAPIs: any iRTCPMeeting.RTCPMeetingApisProtocol
+  weak public var delegate: (any iRTCPMeeting.RTCPMeetingClientDelegate)?
+  public var localUserId: Swift.String?
+  public func initialize(delegate: any iRTCPMeeting.RTCPMeetingClientDelegate, completion: @escaping iRTCPMeeting.RTCPMeetingInitSessionCompletion)
+  public func initSessionWithoutUI(delegate: any iRTCPMeeting.RTCPMeetingClientDelegate, completion: @escaping iRTCPMeeting.RTCPMeetingInitSessionCompletion)
+  public func abortSession(with reason: Swift.String)
+  public func updateSession(with details: iRTCPMeeting.RTCPMeetingInitDetails) throws
+  @objc deinit
+}
+extension iRTCPMeeting.RTCPMeetingManager {
+  public func getCurrentSessionProperties() -> iRTCPMeeting.RTCPMeetingProperties?
+  public func getMeetingLogs(shouldClearDirecrtory: Swift.Bool = false) -> Foundation.URL?
+  public func getMeetingLogs(for meetingUniqueId: Swift.String) -> Foundation.URL?
+  public func getMeetingLogsFolderURL(for meetingUniqueId: Swift.String) -> Foundation.URL?
+  public func clearMeetingLogs()
+  public func meetingStateDidChange(with state: iRTCPMeeting.RTCPMeetingClientState)
+  public func observeMeetingLocalState(_ completion: @escaping (iRTCPMeeting.RTCPMeetingClientState) -> Swift.Void)
+  public func endSession(details: iRTCPMeeting.RTCPMeetingEndDetails)
+  public func leaveSession(details: iRTCPMeeting.RTCPMeetingLeaveDetails)
+  public func closeCurrentMeetingSession(details: iRTCPMeeting.RTCPMeetingLeaveDetails)
+  public func getMeetingMembers(searchQuery: Swift.String = .init(), excludingStageMembers: Swift.Bool = false, needUpdates: Swift.Bool = true, completion: @escaping (Swift.Result<iRTCPMeeting.RTCPMembersList, any Swift.Error>) -> Swift.Void)
+  public func isNetworkAvailable() -> Swift.Bool
+  public func getNetworkStatus() -> iRTCPMeeting.RTCPMeetingNetworkStatus?
+}
+extension iRTCPMeeting.RTCPMeetingManager : iRTCPMeeting.AVPexClientProtocol {
+  public func onPexMessage(msg: Any?, mtype: Swift.Int, sessionId: Swift.String)
+  public func onConnect(wmsId wmsid: Swift.String, sessionId sid: Swift.String?, displayName dname: Swift.String?)
+  public func onReconnect()
+  public func onDisconnect(isManual: Swift.Bool, reason: Swift.String)
+  public func onNetworkUp()
+}
+extension iRTCPMeeting.RTCPMeetingManager {
+  public func subscribeManagerEvents(delegate: any iRTCPMeeting.RTCPMeetingManagerDelegate)
+}
+public protocol RTCPMeetingManagerProtocol : ObjectiveC.NSObjectProtocol {
+  var delegate: (any iRTCPMeeting.RTCPMeetingClientDelegate)? { get }
+  var localUserId: Swift.String? { get }
+  func initSessionWithoutUI(delegate: any iRTCPMeeting.RTCPMeetingClientDelegate, completion: @escaping iRTCPMeeting.RTCPMeetingInitSessionCompletion)
+  func updateSession(with details: iRTCPMeeting.RTCPMeetingInitDetails) throws
+  func endSession(details: iRTCPMeeting.RTCPMeetingEndDetails)
+  func leaveSession(details: iRTCPMeeting.RTCPMeetingLeaveDetails)
+  func closeCurrentMeetingSession(details: iRTCPMeeting.RTCPMeetingLeaveDetails)
+  func abortSession(with reason: Swift.String)
+  func getCurrentSessionProperties() -> iRTCPMeeting.RTCPMeetingProperties?
+  func getMeetingMembers(searchQuery: Swift.String, excludingStageMembers: Swift.Bool, needUpdates: Swift.Bool, completion: @escaping (Swift.Result<iRTCPMeeting.RTCPMembersList, any Swift.Error>) -> Swift.Void)
+  func getMeetingLogs(shouldClearDirecrtory: Swift.Bool) -> Foundation.URL?
+  func getMeetingLogs(for meetingUniqueId: Swift.String) -> Foundation.URL?
+  func getMeetingLogsFolderURL(for meetingUniqueId: Swift.String) -> Foundation.URL?
+  func observeMeetingLocalState(_ completion: @escaping (iRTCPMeeting.RTCPMeetingClientState) -> Swift.Void)
+  func addBroadCastExtension(type: iRTCPMeeting.RTCPMeetingBroadCastModuleType)
+}
+public protocol RTCPMeetingApisProtocol : ObjectiveC.NSObjectProtocol {
+  func initMeetingSession(clientOtp: Swift.String, callKey: Swift.String, rtcpUserId: Swift.String, authorization: Swift.String, rtcpMeetingsRemoteConfigs: MeetingClient.RTCPMeetingsRemoteConfigs, rtcpWMSConfiguration: MeetingClient.RTCPWMSConfiguration?, completion: @escaping (Swift.Result<Foundation.NSString?, any Swift.Error>) -> Swift.Void)
+  func createAudioInput(audioProcessingSpec: MeetingClient.AudioProcessingSpec, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func replaceAudioInput(forceInitAudioManager: Swift.Bool, audioProcessingSpec: MeetingClient.AudioProcessingSpec, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func createVideoInput(videoCaptureSpec: MeetingClient.VideoCaptureSpec, callbacks: any MeetingClient.CameraStateCallbacks, completion: @escaping (Swift.Result<MeetingClient.RTCPMeetingVideo?, any Swift.Error>) -> Swift.Void)
+  func replaceVideoInput(videoCaptureSpec: MeetingClient.VideoCaptureSpec, callbacks: any MeetingClient.CameraStateCallbacks, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func startMeeting(meetingTitle: Swift.String, primaryAdminId: Swift.String?, userDisplayName: Swift.String?, isGlobalPin: Swift.Bool, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func startLiveTranscription(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func stopLiveTranscription(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func ringAll(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func cancelRingAll(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func ringUser(userId: Swift.String, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func cancelRingUser(userId: Swift.String, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func getMeetingState(completion: @escaping (Swift.Result<MeetingClient.RTCPMeetingState?, any Swift.Error>) -> Swift.Void)
+  func joinMeeting(userDisplayName: Swift.String?, isGlobalPin: Swift.Bool, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func requestToJoinMeeting(userDisplayName: Swift.String?, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func getMeetingLayout(_ completion: @escaping (Swift.Result<MeetingClient.MeetingLayout?, any Swift.Error>) -> Swift.Void)
+  func getMediaServerReachabilityReport(_ completion: @escaping (Swift.Result<MeetingClient.MediaServerReachabilityReport?, any Swift.Error>) -> Swift.Void)
+  func getIsRingingAllState(_ completion: @escaping (Swift.Result<Swift.Bool?, any Swift.Error>) -> Swift.Void)
+  func getLiveTranscriptMessage(_ completion: @escaping (Swift.Result<MeetingClient.Transcript?, any Swift.Error>) -> Swift.Void)
+  func isLiveTranscriptionInProgress(_ completion: @escaping (Swift.Result<Swift.Bool?, any Swift.Error>) -> Swift.Void)
+  func getMeetingTitle(_ completion: @escaping (Swift.Result<Swift.String?, any Swift.Error>) -> Swift.Void)
+  func getMeetingStartTime(_ completion: @escaping (Swift.Result<Foundation.NSNumber?, any Swift.Error>) -> Swift.Void)
+  func getAudioStatus(_ completion: @escaping (Swift.Result<Swift.Bool?, any Swift.Error>) -> Swift.Void)
+  func updateAudioStatus(enable: Swift.Bool, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func updateVideoStatus(enable: Swift.Bool, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func getVideoStatus(_ completion: @escaping (Swift.Result<Swift.Bool?, any Swift.Error>) -> Swift.Void)
+  func isAllMeetingParticipantsAudioDisabled(_ completion: @escaping (Swift.Result<Swift.Bool?, any Swift.Error>) -> Swift.Void)
+  func isAllMeetingParticipantsAudioEnabled(_ completion: @escaping (Swift.Result<Swift.Bool?, any Swift.Error>) -> Swift.Void)
+  func getAllAudioDisabledStatus(_ completion: @escaping (Swift.Result<Swift.Bool?, any Swift.Error>) -> Swift.Void)
+  func getEnableAudioRestrictedAllStatus(_ completion: @escaping (Swift.Result<Swift.Bool?, any Swift.Error>) -> Swift.Void)
+  func getEnableAudioRestrictedStatus(_ completion: @escaping (Swift.Result<Swift.Bool?, any Swift.Error>) -> Swift.Void)
+  func getEnableVideoRestrictedStatus(_ completion: @escaping (Swift.Result<Swift.Bool?, any Swift.Error>) -> Swift.Void)
+  func getEnableAudioRestrictedMemberIds(_ completion: @escaping (Swift.Result<[Swift.String]?, any Swift.Error>) -> Swift.Void)
+  func getAssignPrimaryAdminMembersList(_ completion: @escaping (Swift.Result<[MeetingClient.RTCPMeetingsMember]?, any Swift.Error>) -> Swift.Void)
+  func isAssignPrimaryAdminMembersAvailable(_ completion: @escaping (Swift.Result<Swift.Bool?, any Swift.Error>) -> Swift.Void)
+  func getSpotlightMemberCount(_ completion: @escaping (Swift.Result<Swift.Int?, any Swift.Error>) -> Swift.Void)
+  func otherSpeakersVisibilityRestrictedInSpotlight(_ completion: @escaping (Swift.Result<Swift.Bool?, any Swift.Error>) -> Swift.Void)
+  func getCurrentMemberObservable(_ completion: @escaping (Swift.Result<MeetingClient.RTCPMeetingsMember?, any Swift.Error>) -> Swift.Void)
+  func getCurrentMemberRoleObservable(_ completion: @escaping (Swift.Result<MeetingClient.MemberRole?, any Swift.Error>) -> Swift.Void)
+  func getPrimaryAdminNameObservable(_ completion: @escaping (Swift.Result<Swift.String?, any Swift.Error>) -> Swift.Void)
+  func getSpotLightEnabledState(_ completion: @escaping (Swift.Result<Swift.Bool?, any Swift.Error>) -> Swift.Void)
+  func getGridMembers(_ completion: @escaping (Swift.Result<[MeetingClient.RTCPMeetingsMember]?, any Swift.Error>) -> Swift.Void)
+  func getStageMembers(_ completion: @escaping (Swift.Result<[MeetingClient.RTCPMeetingsMember]?, any Swift.Error>) -> Swift.Void)
+  func getReaction(_ completion: @escaping (Swift.Result<[MeetingClient.Reaction]?, any Swift.Error>) -> Swift.Void)
+  func sendReaction(reactionCode: Swift.String, userID: Swift.String?, _ completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func getScreenShare(_ completion: @escaping (Swift.Result<MeetingClient.RTCPMeetingsMember?, any Swift.Error>) -> Swift.Void)
+  func getMeetingMembers(searchQuery: Swift.String, excludingStageMembers: Swift.Bool, _ completion: @escaping (Swift.Result<[MeetingClient.MemberRole : [MeetingClient.RTCPMeetingsMember]]?, any Swift.Error>) -> Swift.Void)
+  func getMeetingsMemberCount(excludingMemberRoleNone: Swift.Bool, _ completion: @escaping (Swift.Result<Swift.Int?, any Swift.Error>) -> Swift.Void)
+  func getActiveSpeakingMembers(_ completion: @escaping (Swift.Result<[MeetingClient.RTCPMeetingsMember]?, any Swift.Error>) -> Swift.Void)
+  func getIsNetworkAvailableState(_ completion: @escaping (Swift.Result<Swift.Bool?, any Swift.Error>) -> Swift.Void)
+  func getMediaConnectionState(mediaConnectionType: MeetingClient.MediaConnectionType, _ completion: @escaping (Swift.Result<MeetingClient.MediaConnectionState?, any Swift.Error>) -> Swift.Void)
+  func getIsRecordingState(_ completion: @escaping (Swift.Result<Swift.Bool?, any Swift.Error>) -> Swift.Void)
+  func getIsMeetingEndedState(_ completion: @escaping (Swift.Result<MeetingClient.EndScope?, any Swift.Error>) -> Swift.Void)
+  func getAllJoinRequest(_ completion: @escaping (Swift.Result<[MeetingClient.RTCPMeetingRequest]?, any Swift.Error>) -> Swift.Void)
+  func getAllJoinRequestCount(_ completion: @escaping (Swift.Result<Swift.Int?, any Swift.Error>) -> Swift.Void)
+  func getRTCPMeetingsConfigurations(completion: @escaping (Swift.Result<MeetingClient.RTCPMeetingsConfigurations?, any Swift.Error>) -> Swift.Void)
+  func getRTCPMeetingConfigurationsACL(completion: @escaping (Swift.Result<MeetingClient.KotlinInt?, any Swift.Error>) -> Swift.Void)
+  func isMeetingConnectionEstablished(completion: @escaping (Swift.Result<Swift.Bool?, any Swift.Error>) -> Swift.Void)
+  func updateOutputAudioStatus(enable: Swift.Bool, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func disableAudioAll(restrictEnableAudio: Swift.Bool?, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func askEnableAudioAll(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func disableUserAudio(userId: Swift.String, restrictEnableAudio: Swift.Bool?, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func askEnableUserAudio(userId: Swift.String, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func restrictEnableAudio(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func unRestrictEnableAudio(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func assignPrimaryAdmin(userId: Swift.String, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func assignSecondaryAdmin(userId: Swift.String, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func removeSecondaryAdmin(userId: Swift.String, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func bringToSpotlight(userIds: [Swift.String], completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func removeFromSpotlight(userId: Swift.String, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func addToGlobalPin(userId: Swift.String, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func updateGlobalPinnedUsers(userIds: [Swift.String], completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func removeFromGlobalPin(userId: Swift.String, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func configureOtherSpeakersVisibilityInSpotlight(showOtherSpeakers: Swift.Bool, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func disableSpotlight(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func getCurrentMember(completion: @escaping (Swift.Result<MeetingClient.RTCPMeetingsMember?, any Swift.Error>) -> Swift.Void)
+  func subscribeVideos(userIds: [Swift.String], completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func switchLayout(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func flipCamera(completion: @escaping (Swift.Result<MeetingClient.CameraFace?, any Swift.Error>) -> Swift.Void)
+  func startScreenShare(videoCaptureSpec: MeetingClient.VideoCaptureSpec, restrictDownstream: Swift.Bool, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func stopScreenShare(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func resizeScreenShareContent(videoCaptureSpec: MeetingClient.VideoCaptureSpec, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func isScreenSharingInProgress(completion: @escaping (Swift.Result<Swift.Bool?, any Swift.Error>) -> Swift.Void)
+  func dismissAssignedAsPrimaryAdminNotifierState(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func dismissSecondaryAdminAssignedRemovedNotifierState(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func dismissAudioEnabledDisabledNotifierState(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func dismissEnableAudioRestrictedNotifierState(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func dismissEnableVideoRestrictedNotifierState(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func getShowAssignedAsPrimaryAdminNotifierState(completion: @escaping (Swift.Result<MeetingClient.PrimaryAdminAssignedNotifierData?, any Swift.Error>) -> Swift.Void)
+  func getShowSecondaryAdminAssignedRemovedNotifierState(completion: @escaping (Swift.Result<MeetingClient.SecondaryAdminAssignedRemovedNotifierData?, any Swift.Error>) -> Swift.Void)
+  func getShowAudioEnabledDisabledNotifierState(completion: @escaping (Swift.Result<MeetingClient.AudioEnabledDisabledNotifierData?, any Swift.Error>) -> Swift.Void)
+  func getShowEnableAudioRestrictedNotifierState(completion: @escaping (Swift.Result<MeetingClient.EnableAudioRestrictedNotifierData?, any Swift.Error>) -> Swift.Void)
+  func getShowEnableVideoRestrictedNotifierState(completion: @escaping (Swift.Result<Swift.Bool?, any Swift.Error>) -> Swift.Void)
+  func approveJoinRequest(userId: Swift.String, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func approveAllJoinRequest(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func rejectJoinRequest(userId: Swift.String, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func rejectAllJoinRequest(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func getWaitingRoomRequestStatus(completion: @escaping (Swift.Result<MeetingClient.WaitingRoomStatus?, any Swift.Error>) -> Swift.Void)
+  func requestToSpeak(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func cancelRequestToSpeak(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func approveSpeakRequest(userId: Swift.String, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func rejectSpeakRequest(userId: Swift.String, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func getAllSpeakRequest(completion: @escaping (Swift.Result<[MeetingClient.RTCPMeetingRequest]?, any Swift.Error>) -> Swift.Void)
+  func getAllSpeakRequestCount(completion: @escaping (Swift.Result<Swift.Int?, any Swift.Error>) -> Swift.Void)
+  func isMemberRequestedToSpeak(userId: Swift.String, completion: @escaping (Swift.Result<Swift.Bool?, any Swift.Error>) -> Swift.Void)
+  func getRecordingNotifierState(completion: @escaping (Swift.Result<MeetingClient.RecordingNotifierData?, any Swift.Error>) -> Swift.Void)
+  func dismissRecordingNotifierState(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func getJoinedMemberNotifierState(completion: @escaping (Swift.Result<MeetingClient.MemberNotifierData?, any Swift.Error>) -> Swift.Void)
+  func getLeftMemberNotifierState(completion: @escaping (Swift.Result<MeetingClient.MemberNotifierData?, any Swift.Error>) -> Swift.Void)
+  func getRemovedMemberNotifierState(completion: @escaping (Swift.Result<MeetingClient.RemovedMemberNotifierData?, any Swift.Error>) -> Swift.Void)
+  func dismissRemovedMemberNotifierState(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func getShowLimitExpiryBannerNotifierState(completion: @escaping (Swift.Result<MeetingClient.ExpiryDurationRemainsData?, any Swift.Error>) -> Swift.Void)
+  func dismissExpiryBannerNotifierState(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func sendCustomMessage(message: MeetingClient.CustomMessage, userIds: [Swift.String], completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func getCustomMessage(completion: @escaping (Swift.Result<MeetingClient.CustomMessage?, any Swift.Error>) -> Swift.Void)
+  func requestToShare(shareType: MeetingClient.ShareType, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func approveShareRequest(userId: Swift.String, shareType: MeetingClient.ShareType, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func rejectShareRequest(userId: Swift.String, shareType: MeetingClient.ShareType, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func getAllShareRequest(shareType: MeetingClient.ShareType, _ completion: @escaping (Swift.Result<[MeetingClient.RTCPMeetingShareRequest]?, any Swift.Error>) -> Swift.Void)
+  func getAllShareRequestCount(shareType: MeetingClient.ShareType, _ completion: @escaping (Swift.Result<Swift.Int?, any Swift.Error>) -> Swift.Void)
+  func isMemberRequestedToShare(userId: Swift.String, shareType: MeetingClient.ShareType, _ completion: @escaping (Swift.Result<Swift.Bool?, any Swift.Error>) -> Swift.Void)
+  func getShowShareRequestApprovedNotifierState(shareType: MeetingClient.ShareType, completion: @escaping (Swift.Result<MeetingClient.ShareRequestApprovedNotifierData?, any Swift.Error>) -> Swift.Void)
+  func getShowShareRequestDeniedNotifierState(shareType: MeetingClient.ShareType, completion: @escaping (Swift.Result<MeetingClient.ShareRequestDeniedNotifierData?, any Swift.Error>) -> Swift.Void)
+  func dismissShareRequestApprovedNotifierState(shareType: MeetingClient.ShareType, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func dismissShareRequestDeniedNotifierState(shareType: MeetingClient.ShareType, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func getPhoneAudioDetails(completion: @escaping (Swift.Result<MeetingClient.PhoneAudioDetails?, any Swift.Error>) -> Swift.Void)
+  func getNoAudioSourceNotifierState(completion: @escaping (Swift.Result<MeetingClient.NoAudioSourceNotifierData?, any Swift.Error>) -> Swift.Void)
+  func switchFromPhoneToInternetAudio(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func getAudioSourceType(completion: @escaping (Swift.Result<MeetingClient.AudioSourceType?, any Swift.Error>) -> Swift.Void)
+  func connectToInternetAudio(completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+  func kickoutUser(userId: Swift.String, completion: @escaping (Swift.Result<MeetingClient.KotlinUnit?, any Swift.Error>) -> Swift.Void)
+}
+@_hasMissingDesignatedInitializers public class RTCPMeetingBrandingDetails : AVCommonsCore.AVNotifiersBase<iRTCPMeeting.RTCPMeetingBrandingDetails> {
+  public var backgroundImage: iRTCPMeeting.RTCPImage? {
+    get
+    set
+  }
+  public var logoImage: iRTCPMeeting.RTCPImage? {
+    get
+    set
+  }
+  public func updateBackgroundUrl(_ backgroundUrl: Foundation.URL? = nil)
+  public func updateLogoUrl(_ logoUrl: Foundation.URL? = nil)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class RTCPMeetingCollectables : AVCommonsCore.AVNotifiersBase<iRTCPMeeting.RTCPMeetingCollectables> {
+  final public let stageMembers: AVCommonsCore.AVSynchronizedArray<MeetingClient.RTCPMeetingsMember>
+  final public let activeSpeakers: AVCommonsCore.AVSynchronizedArray<MeetingClient.RTCPMeetingsMember>
+  final public let activeSelectedSpeakers: AVCommonsCore.AVSynchronizedArray<MeetingClient.RTCPMeetingsMember>
+  final public let gridMembers: AVCommonsCore.AVSynchronizedArray<MeetingClient.RTCPMeetingsMember>
+  final public let speakerRequests: AVCommonsCore.AVSynchronizedArray<MeetingClient.RTCPMeetingRequest>
+  final public let joinRequests: AVCommonsCore.AVSynchronizedArray<MeetingClient.RTCPMeetingRequest>
+  final public let assignPrimaryAdminList: AVCommonsCore.AVSynchronizedArray<MeetingClient.RTCPMeetingsMember>
+  public var previousSubscribedMembers: AVCommonsCore.AVSynchronizedArray<Swift.String>
+  public var waitingRoomStatus: MeetingClient.WaitingRoomStatus?
+  weak public var configurations: MeetingClient.RTCPMeetingsConfigurations? {
+    get
+    set
+  }
+  public var brandingDetails: iRTCPMeeting.RTCPMeetingBrandingDetails
+  public var isVideoConferenceRestricted: Swift.Bool
+  public var initialConnectionsEstablished: Swift.Bool {
+    get
+    set
+  }
+  weak public var role: MeetingClient.MemberRole?
+  public var videoMutedOnAppBackground: Swift.Bool
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class RTCPMeetingProperties : AVCommonsCore.AVNotifiersBase<iRTCPMeeting.RTCPMeetingProperties> {
+  public var meetingDetails: iRTCPMeeting.RTCPMeetingInitDetails
+  public var selfUser: MeetingClient.RTCPMeetingsMember?
+  public var selfUserVideo: MeetingClient.RTCPMeetingVideo?
+  public var meetingMembers: iRTCPMeeting.RTCPMembersSynchronizedList
+  public var collectables: iRTCPMeeting.RTCPMeetingCollectables
+  public var meetingStartTime: Swift.Double
+  public var connectionDetails: iRTCPMeeting.RTCPMeetingConnectionDetails
+  public var states: iRTCPMeeting.RTCPMeetingDataSource
+  public var endInitatedLocal: Swift.Bool
+  public var broadCastDetails: iRTCPMeeting.RTCPMeetingBroadCastInitDetails?
+  @objc deinit
+}
+open class RTCPMeetingsBaseFileLogger {
+  public init()
+  public func initSessionLogger(meetingUniqueId: Swift.String, title: Swift.String)
+  public func initSessionWithoutDetails()
+  open func log(_ items: Any..., level: iRTCPMeeting.LogLevel)
+  open func log(_ data: Foundation.Data, level: iRTCPMeeting.LogLevel)
+  public func clearLogger()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class RTCPMeetingsFileLogger : iRTCPMeeting.RTCPMeetingsBaseFileLogger {
+  public static let shared: iRTCPMeeting.RTCPMeetingsFileLogger
+  @objc deinit
+}
+extension MeetingClient.RTCPMeetingsMember {
+  @objc override dynamic public var debugDescription: Swift.String {
+    @objc get
+  }
+  public var isSelf: Swift.Bool {
+    get
+  }
+  public var videoView: iRTCPMeeting.RTCPView? {
+    get
+  }
+  @discardableResult
+  public func processLocalVideo(forceRemoteView: Swift.Bool = false, secondarySource: Swift.Bool = false, requiredAspectRatio: iRTCPMeeting.RTCPMeetingAspectRatios? = nil) -> iRTCPMeeting.RTCPView?
+  public func clearOnFrameSubscriptions()
+  public func updateMemberInstance(name: Swift.String? = nil, aclName: Swift.String? = nil, aclValue: MeetingClient.KotlinInt? = nil, viewType: MeetingClient.ViewType? = nil, memberType: MeetingClient.MemberType? = nil, role: MeetingClient.MemberRole? = nil, audioEnabled: Swift.Bool? = nil, unMuteAudioRestricted: Swift.Bool? = nil, enableVideoRestricted: Swift.Bool? = nil, videoEnabled: Swift.Bool? = nil, speaking: Swift.Bool? = nil, deviceType: MeetingClient.DeviceType? = nil, stageStreamId: Swift.String? = nil, gridStreamId: Swift.String? = nil, ringing: Swift.Bool? = nil, isInSpotlight: Swift.Bool? = nil, firstJoinedTime: MeetingClient.KotlinLong? = nil, isGlobalPinned: Swift.Bool? = nil, isLocalPinned: Swift.Bool? = nil, isGuest: Swift.Bool? = nil, joinedTime: MeetingClient.KotlinLong? = nil, isDialInActiveUser: Swift.Bool? = nil) -> MeetingClient.RTCPMeetingsMember
+  public func getVideoViewDetails(_ completion: @escaping (_ details: MeetingClient.Meeting_coreVideoSinkDetails?) -> Swift.Void)
+}
+extension MeetingClient.RTCPMeetingRequest {
+  public var isSelf: Swift.Bool {
+    get
+  }
+}
+extension MeetingClient.RTCPMeetingRequest : Swift.Comparable {
+  public static func < (lhs: MeetingClient.RTCPMeetingRequest, rhs: MeetingClient.RTCPMeetingRequest) -> Swift.Bool
+}
+extension MeetingClient.RTCPMeetingsMember : Swift.Comparable {
+  public static func < (lhs: MeetingClient.RTCPMeetingsMember, rhs: MeetingClient.RTCPMeetingsMember) -> Swift.Bool
+}
+extension Swift.Dictionary where Key == iRTCPMeeting.RTCPMeetingMemberRole, Value == [MeetingClient.RTCPMeetingsMember] {
+  public var membersCount: Swift.Int {
+    get
+  }
+  public var activeMembersCount: Swift.Int {
+    get
+  }
+}
+public class RTCPMembersListDetails : Foundation.ObservableObject {
+  public var list: [MeetingClient.RTCPMeetingsMember]
+  public init(list: [MeetingClient.RTCPMeetingsMember] = [])
+  public func updateList(with members: [MeetingClient.RTCPMeetingsMember])
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+extension iRTCPMeeting.RTCPMeetingNetworkStatusType : Swift.Equatable {}
+extension iRTCPMeeting.RTCPMeetingNetworkStatusType : Swift.Hashable {}
+extension iRTCPMeeting.RTCPBroadCastConnectionEvents : Swift.Equatable {}
+extension iRTCPMeeting.RTCPBroadCastConnectionEvents : Swift.Hashable {}
+extension iRTCPMeeting.RTCPBroadCastConnectionEvents : Swift.RawRepresentable {}
+extension iRTCPMeeting.RTCPMeetingAspectRatios : Swift.Equatable {}
+extension iRTCPMeeting.RTCPMeetingAspectRatios : Swift.Hashable {}
+extension iRTCPMeeting.RTCPMeetingAspectRatios : Swift.RawRepresentable {}
+extension iRTCPMeeting.RTCPMeetingInitSessionError : Swift.Equatable {}
+extension iRTCPMeeting.RTCPMeetingInitSessionError : Swift.Hashable {}
+extension iRTCPMeeting.RTCPMediaPermission : Swift.Equatable {}
+extension iRTCPMeeting.RTCPMediaPermission : Swift.Hashable {}
+extension iRTCPMeeting.RTCPMediaPermission : Swift.RawRepresentable {}
+extension iRTCPMeeting.RTCPMeetingClientState : Swift.Equatable {}
+extension iRTCPMeeting.RTCPMeetingClientState : Swift.Hashable {}
+extension iRTCPMeeting.RTCPMeetingBroadCastState : Swift.Equatable {}
+extension iRTCPMeeting.RTCPMeetingBroadCastState : Swift.Hashable {}
+extension iRTCPMeeting.RTCPMeetingBroadCastState : Swift.RawRepresentable {}
+extension iRTCPMeeting.LogLevel : Swift.Equatable {}
+extension iRTCPMeeting.LogLevel : Swift.Hashable {}
+extension iRTCPMeeting.LogLevel : Swift.RawRepresentable {}
+extension iRTCPMeeting.RTCPViewContentMode : Swift.Equatable {}
+extension iRTCPMeeting.RTCPViewContentMode : Swift.Hashable {}
+extension iRTCPMeeting.RTCPMeetingMemberRole : Swift.Equatable {}
+extension iRTCPMeeting.RTCPMeetingMemberRole : Swift.Hashable {}

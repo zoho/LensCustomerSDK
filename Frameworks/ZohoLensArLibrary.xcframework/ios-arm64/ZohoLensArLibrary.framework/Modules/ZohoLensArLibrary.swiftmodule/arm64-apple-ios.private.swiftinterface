@@ -1,0 +1,560 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ZohoLensArLibrary
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import ARKit
+import AVFoundation
+import CoreImage
+import CoreMedia
+import CoreVideo
+import DeveloperToolsSupport
+import Foundation
+import Metal
+import Photos
+import SceneKit
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc public enum ARInputViewOrientation : Swift.Int {
+  case portrait = 1
+  case landscapeLeft = 3
+  case landscapeRight = 4
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum ARInputViewOrientationMode {
+  case auto
+  case all
+  case manual(subviews: [UIKit.UIView])
+  case disabled
+}
+@objc @available(iOS 11.0, *)
+public class ARRecorder : ObjectiveC.NSObject {
+  @objc public var delegate: (any ZohoLensArLibrary.RecordARDelegate)?
+  @objc public var renderAR: (any ZohoLensArLibrary.RenderARDelegate)?
+  @objc public var status: ZohoLensArLibrary.RecordARStatus {
+    get
+  }
+  @objc public var micStatus: ZohoLensArLibrary.RecordARMicrophoneStatus {
+    get
+  }
+  @objc public var requestMicPermission: ZohoLensArLibrary.RecordARMicrophonePermission {
+    @objc get
+    @objc set
+  }
+  public var videoResolution: ZohoLensArLibrary.VideoResolution {
+    get
+    set
+  }
+  @objc public var videoOrientation: ZohoLensArLibrary.ARVideoOrientation
+  @objc public var contentMode: ZohoLensArLibrary.ARFrameMode
+  @objc public var onlyRenderWhileRecording: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var enableAudio: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var enableMixWithOthers: Swift.Bool
+  @objc public var adjustVideoForSharing: Swift.Bool
+  @objc public var deleteCacheWhenExported: Swift.Bool
+  @objc public var enableAdjustEnvironmentLighting: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var retainTechnique: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public init(ARSceneKit: ARKit.ARSCNView)
+  @objc deinit
+  public func isVideoRecording() -> Swift.Bool
+  @objc public func record(at url: Foundation.URL? = nil)
+  @objc public func record(at url: Foundation.URL? = nil, forDuration duration: Foundation.TimeInterval, _ finished: ((_ videoPath: Foundation.URL) -> Swift.Void)? = nil)
+  @objc public func pause()
+  @objc public func stopAndExport(_ finished: ((_ videoAsset: Photos.PHAsset?, _ videoPath: Foundation.URL?, _ permissionStatus: Photos.PHAuthorizationStatus, _ exported: Swift.Bool) -> Swift.Void)? = nil)
+  @objc public func stop(_ finished: ((_ videoPath: Foundation.URL) -> Swift.Void)? = nil)
+  @objc public func cancel()
+  @objc public func export(video path: Foundation.URL, _ finished: ((_ videoAsset: Photos.PHAsset?, _ videoPath: Foundation.URL?, _ exported: Swift.Bool, _ permissionStatus: Photos.PHAuthorizationStatus) -> Swift.Void)? = nil)
+  @objc public func requestMicrophonePermission(_ finished: ((_ status: Swift.Bool) -> Swift.Void)? = nil)
+}
+@available(iOS 11.0, *)
+@objc extension ZohoLensArLibrary.ARRecorder {
+  @objc dynamic public func prepare(_ configuration: ARKit.ARConfiguration? = nil)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class ARRenderView : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency weak public var arVideoDelegate: (any ZohoLensArLibrary.ARVideoDelegate)?
+  @_Concurrency.MainActor @preconcurrency public var sceneView: ARKit.ARSCNView!
+  @_Concurrency.MainActor @preconcurrency public var selectedARTool: ZohoLensArLibrary.LensAnnotationType {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var customerAnnotationColor: UIKit.UIColor
+  @_Concurrency.MainActor @preconcurrency public func refreshMeasurements()
+  @_Concurrency.MainActor @preconcurrency public var cameraPosition: ZohoLensArLibrary.CameraPosition {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var currentVideoFrameSize: CoreFoundation.CGSize {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc convenience dynamic public init()
+  @_Concurrency.MainActor @preconcurrency convenience public init(arDelegate: (any ZohoLensArLibrary.ARViewDelegate)? = nil, triggerId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func setUserName(name: Swift.String)
+  @discardableResult
+  @_Concurrency.MainActor @preconcurrency public func switchCamera(to position: ZohoLensArLibrary.CameraPosition) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public var isBackCameraActive: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var isFrontCameraActive: Swift.Bool {
+    get
+  }
+  @objc @_Concurrency.MainActor @preconcurrency public func resumeARSCNViewSession(isSessionStart: Swift.Bool = true, callWithDelay: Swift.Bool = false)
+  @objc @_Concurrency.MainActor @preconcurrency public func pauseARSCNViewSession()
+  @objc @_Concurrency.MainActor @preconcurrency public func pauseARSCNViewSession(forBackgroundTransition: Swift.Bool)
+  @objc @_Concurrency.MainActor @preconcurrency public func isARSCNViewSessionPaused() -> Swift.Bool
+  @objc @_Concurrency.MainActor @preconcurrency public func pauseARSCNViewSessionInHD(SessionPauseCallback callback: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func snapshot() -> UIKit.UIImage
+  @_Concurrency.MainActor @preconcurrency public func hdSnapshot(_ callback: @escaping (UIKit.UIImage?) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func getRawCameraImageBuffer() -> CoreVideo.CVPixelBuffer?
+  @_Concurrency.MainActor @preconcurrency public func getRawCameraImage() -> UIKit.UIImage?
+  @objc deinit
+}
+extension ZohoLensArLibrary.ARRenderView {
+  @_Concurrency.MainActor @preconcurrency public func updateSelectedARTool(tool: ZohoLensArLibrary.LensAnnotationType)
+}
+extension ZohoLensArLibrary.ARRenderView {
+  @objc @_Concurrency.MainActor @preconcurrency dynamic public func handleTap(gestureRecognizer: UIKit.UIGestureRecognizer)
+  @objc @_Concurrency.MainActor @preconcurrency dynamic public func handlePinch(pinchGestureRecognizer: UIKit.UIPinchGestureRecognizer)
+  @objc @_Concurrency.MainActor @preconcurrency dynamic public func handlePan(gestureRecognizer: UIKit.UIGestureRecognizer)
+  @_Concurrency.MainActor @preconcurrency public func drawLine(withId id: Swift.String, withLineColor color: UIKit.UIColor = UIColor.defaultCustomer, atPoint point: CoreFoundation.CGPoint, triggerId: Swift.String, freeStyle: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func placeArrow(withId id: Swift.String = Node.DEFAULT_USER_ID, atPoint originalPoint: CoreFoundation.CGPoint, withArrowColor arrowColor: UIKit.UIColor = UIColor.defaultCustomer, triggerId: Swift.String, isCustomer: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency public func placePointer(withId id: Swift.String = Node.DEFAULT_USER_ID, atPoint originalPoint: CoreFoundation.CGPoint, withLabel userName: Swift.String, fadeOutDelay: Swift.Int = Pointer.DEFAULT_FADE_OUT_DELAY, withPointerColor pointerColor: UIKit.UIColor = UIColor.defaultCustomer, triggerId: Swift.String, isCustomer: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency public func drawRectangle(withId id: Swift.String, color: UIKit.UIColor = UIColor.defaultCustomer, startPoint: CoreFoundation.CGPoint, endPoint: CoreFoundation.CGPoint, triggerId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func drawEllipse(withId id: Swift.String, color: UIKit.UIColor = UIColor.defaultCustomer, startPoint: CoreFoundation.CGPoint, endPoint: CoreFoundation.CGPoint, triggerId: Swift.String)
+}
+extension ZohoLensArLibrary.ARRenderView {
+  @_Concurrency.MainActor @preconcurrency public func setVideoFPS(fps: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency public func renderPointCloud(_ flag: Swift.Bool, callback: ((_ flag: Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public func isRenderingPointCloud() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func renderPlanes(_ flag: Swift.Bool, callback: ((_ flag: Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public func isRenderingPlanes() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public var isHDStreaming: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public func setHighResolution(_ flag: Swift.Bool, callback: ((_ flag: Swift.Bool) -> Swift.Void)? = nil)
+  @available(*, deprecated, renamed: "getCustomerAnchorCount")
+  @_Concurrency.MainActor @preconcurrency public func getAnchorCount() -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency public func getCustomerAnchorCount() -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency public func getTechnicianAnchorCount() -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency public func getMaxAnchorCount() -> Swift.Int
+  @available(*, deprecated, renamed: "removeFirstCustomerAnchor")
+  @_Concurrency.MainActor @preconcurrency public func removeFirstAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public func removeFirstCustomerAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  @available(*, deprecated, renamed: "removeLastCustomerAnchor")
+  @_Concurrency.MainActor @preconcurrency public func removeLastAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public func removeLastCustomerAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public func removeLastTechnicianAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  @available(*, deprecated, renamed: "removeAllCustomerAnchors")
+  @_Concurrency.MainActor @preconcurrency public func removeAllAnchors(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public func removeAllCustomerAnchors(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public func removeAllTechnicianAnchors(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public func removeSelectedCustomerAnchor(callback: ((_ remainingAnchorCount: Swift.Int) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public func isAnyCustomerAnchorSelected() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func isAnyTechnicianAnchorSelected() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func selectTechnicianAnchor(atPoint originalPoint: CoreFoundation.CGPoint, triggerId: Swift.String) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func setAnchorSelectionListener(listener: any ZohoLensArLibrary.AnnotationSelectionListener)
+  @_Concurrency.MainActor @preconcurrency public func setAnchorStateListener(listener: any ZohoLensArLibrary.AnchorStateListener)
+  @_Concurrency.MainActor @preconcurrency public func updateNodeAnchor(annotateId: Swift.String, text: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func selectNodeAnchor(annotateId: Swift.String, senderTriggerId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func deselectNodeAnchor(annotateId: Swift.String, triggerId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func removeNodeAnchor(annotateId: Swift.String)
+}
+extension ZohoLensArLibrary.ARRenderView {
+  @_Concurrency.MainActor @preconcurrency public class func checkARKitCompatibility() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public class func isFrontCameraSupported() -> Swift.Bool
+}
+extension ZohoLensArLibrary.ARRenderView : ARKit.ARSessionDelegate, ARKit.ARSCNViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func sessionWasInterrupted(_ session: ARKit.ARSession)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func sessionInterruptionEnded(_ session: ARKit.ARSession)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func session(_ session: ARKit.ARSession, cameraDidChangeTrackingState camera: ARKit.ARCamera)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func session(_ session: ARKit.ARSession, didFailWithError error: any Swift.Error)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func renderer(_ renderer: any SceneKit.SCNSceneRenderer, didAdd node: SceneKit.SCNNode, for anchor: ARKit.ARAnchor)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func renderer(_ renderer: any SceneKit.SCNSceneRenderer, didUpdate node: SceneKit.SCNNode, for anchor: ARKit.ARAnchor)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func session(_ session: ARKit.ARSession, didUpdate frame: ARKit.ARFrame)
+}
+extension ZohoLensArLibrary.ARRenderView {
+  @_Concurrency.MainActor @preconcurrency public func setMeasurementPointerVisible(_ visible: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func measurement_Trigger_Action()
+  @_Concurrency.MainActor @preconcurrency public func undoMeasurement()
+  @_Concurrency.MainActor @preconcurrency public func cancelMeasurementInProgress()
+  @_Concurrency.MainActor @preconcurrency public func undoLastCustomerAnnotation()
+  @_Concurrency.MainActor @preconcurrency public func undoLastTechAnnotation()
+}
+public enum RaycastQueryTarget : Swift.Int {
+  case existingPlaneGeometry
+  case existingPlaneInfinite
+  case estimatedPlane
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ARFrameMode : Swift.Int {
+  case auto
+  case aspectFit
+  case aspectFill
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ARVideoOrientation : Swift.Int {
+  case auto
+  case alwaysPortrait
+  case alwaysLandscape
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum RecordARMicrophonePermission : Swift.Int {
+  case auto
+  case manual
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum RecordARStatus : Swift.Int {
+  case unknown
+  case readyToRecord
+  case recording
+  case paused
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum RecordARMicrophoneStatus : Swift.Int {
+  case unknown
+  case enabled
+  case disabled
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum VideoResolution : CoreFoundation.CGFloat {
+  case resolution_720p
+  case resolution_480p
+  case resolution_360p
+  public init?(rawValue: CoreFoundation.CGFloat)
+  public typealias RawValue = CoreFoundation.CGFloat
+  public var rawValue: CoreFoundation.CGFloat {
+    get
+  }
+}
+@objc public enum CameraPosition : Swift.Int {
+  case back
+  case front
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol ARViewDelegate : AnyObject {
+  func didChange(tracking state: ARKit.ARCamera.TrackingState)
+  func onSupportedMeasurementActionsChanged(_ supportedActions: [ZohoLensArLibrary.ShapeAction])
+  func didSwitchCamera(to position: ZohoLensArLibrary.CameraPosition)
+}
+public protocol ARVideoDelegate : AnyObject {
+  func onVideoFrameUpdate(frameBuffer: CoreVideo.CVPixelBuffer, rotation: Swift.Int, timestamp: Swift.Int64)
+}
+public protocol AnnotationSelectionListener : AnyObject {
+  func onAnnotationSelected(id: Swift.String, triggerId: Swift.String)
+  func onAnnotationDeselected(id: Swift.String, triggerId: Swift.String)
+}
+public protocol AnchorStateListener {
+  func onAnchorPlaced(annotationId: Swift.String, annotationColor: UIKit.UIColor, annotationType: ZohoLensArLibrary.LensAnnotationType, annotationNumber: Swift.Int, triggerId: Swift.String, geometricProperties: [ZohoLensArLibrary.GeometricProperty : CoreFoundation.CGFloat]?)
+  func onAnchorRemoved(annotationId: Swift.String)
+}
+public enum LensAnnotationType : Swift.Equatable {
+  case none
+  case rectangle, ellipse, pencil, arrow, pointer
+  case measurement(ZohoLensArLibrary.Shape)
+  public init(rawValue: Swift.String)
+  public var rawValue: Swift.String? {
+    get
+  }
+  public var isArrow: Swift.Bool {
+    get
+  }
+  public var isPencil: Swift.Bool {
+    get
+  }
+  public var isPointer: Swift.Bool {
+    get
+  }
+  public var isMeasurement: Swift.Bool {
+    get
+  }
+  public static func == (a: ZohoLensArLibrary.LensAnnotationType, b: ZohoLensArLibrary.LensAnnotationType) -> Swift.Bool
+}
+extension ZohoLensArLibrary.Shape {
+  public func toLensAnnotationType() -> ZohoLensArLibrary.LensAnnotationType?
+}
+public enum FreeStyleState : Swift.CustomStringConvertible {
+  case mouse_move, mouse_up
+  public var description: Swift.String {
+    get
+  }
+  public static func == (a: ZohoLensArLibrary.FreeStyleState, b: ZohoLensArLibrary.FreeStyleState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class CustomCircularArray<E> {
+  public init(ofSize size: Swift.Int)
+  public func setOverwriteCallback(_ callback: ((E, Swift.Int) -> ())?)
+  public var count: Swift.Int {
+    get
+  }
+  public var isEmpty: Swift.Bool {
+    get
+  }
+  public func clear()
+  public func get(index: Swift.Int) -> E?
+  public var first: E? {
+    get
+  }
+  public var last: E? {
+    get
+  }
+  public func popLast() -> E?
+  public func popFirst() -> E?
+  public func push(element: E)
+  public func remove(forWhich: (E) -> Swift.Bool) -> [E?]
+  public func remove(index: Swift.Int)
+  public func nextIndex() -> Swift.Int
+  public func getMaxElementCount() -> Swift.Int
+  @objc deinit
+}
+public enum GeometricProperty : Swift.CaseIterable {
+  case length
+  case radius
+  case diameter
+  case totalLength
+  case perimeter
+  case circumference
+  case area
+  public func getUnitType() -> Foundation.Dimension
+  public static func == (a: ZohoLensArLibrary.GeometricProperty, b: ZohoLensArLibrary.GeometricProperty) -> Swift.Bool
+  public typealias AllCases = [ZohoLensArLibrary.GeometricProperty]
+  nonisolated public static var allCases: [ZohoLensArLibrary.GeometricProperty] {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class LineNode : ZohoLensArLibrary.Node, ZohoLensArLibrary.PseudoPlaneBasedNode {
+  @_Concurrency.MainActor @preconcurrency public static let LINE_NODE_NAME: Swift.String
+  @_Concurrency.MainActor @preconcurrency public func reset()
+  @_Concurrency.MainActor @preconcurrency public func getLineVertexCameraNode(forIndex index: Swift.Int) -> SceneKit.SCNNode
+  @_Concurrency.MainActor @preconcurrency public func addScreenPointUsingPlaneSurface(sceneView: ARKit.ARSCNView, touchPoint: CoreFoundation.CGPoint, withInvertedTriangle isInvertedTriangle: Swift.Bool = false, shouldDiscardClosePoints: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency public func addPointAndCreateVertices(sceneView: ARKit.ARSCNView, wx: Swift.Float, wy: Swift.Float, wz: Swift.Float, withInvertedTriangle isInvertedTriangle: Swift.Bool = true)
+  @_Concurrency.MainActor @preconcurrency override public func createOutlineNode() -> SceneKit.SCNNode
+  @objc deinit
+}
+public enum MeasurementUnitSystem : Swift.String {
+  case metric
+  case imperial
+  public static var current: ZohoLensArLibrary.MeasurementUnitSystem {
+    get
+    set
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class Node : SceneKit.SCNNode, Swift.Identifiable {
+  @_Concurrency.MainActor @preconcurrency public static var DEFAULT_USER_ID: Swift.String {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var id: Swift.String
+  @_Concurrency.MainActor @preconcurrency public func createOutlineNode() -> SceneKit.SCNNode
+  public typealias ID = Swift.String
+  @objc deinit
+}
+extension ZohoLensArLibrary.Node : Swift.Comparable {
+  @_Concurrency.MainActor @preconcurrency public static func < (lhs: ZohoLensArLibrary.Node, rhs: ZohoLensArLibrary.Node) -> Swift.Bool
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class Pointer : ZohoLensArLibrary.Node {
+  @_Concurrency.MainActor @preconcurrency public static let POINTER_NODE_NAME: Swift.String
+  @_Concurrency.MainActor @preconcurrency public static let DEFAULT_BOX_HEIGHT: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency public static let DEFAULT_BOX_WIDTH: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency public static let DEFAULT_FADE_OUT_DELAY: Swift.Int
+  @_Concurrency.MainActor @preconcurrency public static let DEFAULT_FADE_OUT_DURATION: Swift.Int
+  @_Concurrency.MainActor @preconcurrency public static let DEFAULT_POINTER_SCALE: Swift.Float
+  @_Concurrency.MainActor @preconcurrency public var fadeOutDelay: Swift.Int
+  @_Concurrency.MainActor @preconcurrency public var fadeOutDuration: Swift.Int
+  @_Concurrency.MainActor @preconcurrency public var currentDefaultScale: Swift.Float
+  @_Concurrency.MainActor @preconcurrency final public let pointerColor: UIKit.UIColor
+  @_Concurrency.MainActor @preconcurrency public func updateScaleRelativeToCamera(camera: ARKit.ARCamera)
+  @_Concurrency.MainActor @preconcurrency public func updateScaleRelativeToCamera(distanceToCamera distance: Swift.Float)
+  @_Concurrency.MainActor @preconcurrency public static func constructPointerName(withId id: Swift.String) -> Swift.String
+  @objc deinit
+}
+public protocol PseudoPlaneBasedNode : Swift.Identifiable {
+  static var PLANE_SURFACE_NODE_NAME: Swift.String { get }
+  static var PLANE_SURFACE_CONTAINER_NODE_NAME: Swift.String { get }
+  var planeSurfaceName: Swift.String { get }
+  var planeSurfaceContainerName: Swift.String { get }
+  @discardableResult
+  func createPseudoPlane(using sceneView: ARKit.ARSCNView, at point: CoreFoundation.CGPoint, withFallbackLocation airLocation: SceneKit.SCNVector3?, onRaycastQueryTarget target: ZohoLensArLibrary.RaycastQueryTarget, useFeaturePointsInFallback: Swift.Bool) -> Swift.Bool
+  func removePseudoPlane(from sceneView: ARKit.ARSCNView)
+  func pseudoPlaneHitTest(on sceneView: ARKit.ARSCNView, at point: CoreFoundation.CGPoint) -> SceneKit.SCNHitTestResult?
+}
+extension ZohoLensArLibrary.PseudoPlaneBasedNode {
+  public static var PLANE_SURFACE_NODE_NAME: Swift.String {
+    get
+  }
+  public static var PLANE_SURFACE_CONTAINER_NODE_NAME: Swift.String {
+    get
+  }
+  public var planeSurfaceName: Swift.String {
+    get
+  }
+  public var planeSurfaceContainerName: Swift.String {
+    get
+  }
+  @discardableResult
+  public func createPseudoPlane(using sceneView: ARKit.ARSCNView, at point: CoreFoundation.CGPoint, withFallbackLocation airLocation: SceneKit.SCNVector3?, onRaycastQueryTarget target: ZohoLensArLibrary.RaycastQueryTarget = .existingPlaneGeometry, useFeaturePointsInFallback: Swift.Bool = false) -> Swift.Bool
+  public func removePseudoPlane(from sceneView: ARKit.ARSCNView)
+  public func pseudoPlaneHitTest(on sceneView: ARKit.ARSCNView, at point: CoreFoundation.CGPoint) -> SceneKit.SCNHitTestResult?
+}
+@available(iOS 11.0, *)
+@objc public protocol RecordARDelegate {
+  @objc func recorder(didEndRecording path: Foundation.URL, with noError: Swift.Bool)
+  @objc func recorder(didFailRecording error: (any Swift.Error)?, and status: Swift.String)
+  @objc optional func recorder(didCancelRecording status: Swift.String)
+  @objc optional func recorder(didUpdateRecording duration: Foundation.TimeInterval)
+  @objc func recorder(willEnterBackground status: ZohoLensArLibrary.RecordARStatus)
+}
+@objc @_hasMissingDesignatedInitializers public class RemovePointerOperation : Foundation.Operation {
+  @objc override dynamic public func cancel()
+  @objc override dynamic public func main()
+  @objc deinit
+}
+@available(iOS 11.0, *)
+@objc public protocol RenderARDelegate {
+  @objc func frame(didRender buffer: CoreVideo.CVPixelBuffer, with time: CoreMedia.CMTime, using rawBuffer: CoreVideo.CVPixelBuffer)
+}
+extension SceneKit.SCNVector3 : Swift.Equatable {
+  public static func == (lhs: SceneKit.SCNVector3, rhs: SceneKit.SCNVector3) -> Swift.Bool
+}
+extension SceneKit.SCNVector3 {
+  public func cross(_ vector: SceneKit.SCNVector3) -> SceneKit.SCNVector3
+  public func dot(_ vector: SceneKit.SCNVector3) -> Swift.Float
+  public func length() -> Swift.Float
+}
+public enum Shape : Swift.String {
+  case lineSegment
+  case polygon
+  case circle
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ShapeAction : Swift.Equatable, Swift.Comparable {
+  case nextStep
+  case finish
+  case updatePoint
+  case undoLastStep
+  case delete
+  public static func < (a: ZohoLensArLibrary.ShapeAction, b: ZohoLensArLibrary.ShapeAction) -> Swift.Bool
+  public static func == (a: ZohoLensArLibrary.ShapeAction, b: ZohoLensArLibrary.ShapeAction) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension UIKit.UIColor {
+  open class var defaultCustomer: UIKit.UIColor {
+    get
+  }
+}
+extension UIKit.UIImage {
+  public static func getPointerTexture(color: UIKit.UIColor) -> UIKit.UIImage?
+  public static func getPlaneTexture() -> UIKit.UIImage?
+  public static func getBorderTexture() -> UIKit.UIImage?
+  public static func getBorderLineTexture() -> UIKit.UIImage?
+  public static func getCancelButtonTexture() -> UIKit.UIImage?
+  public static func getARNotesButtonTexture() -> UIKit.UIImage?
+}
+@_inheritsConvenienceInitializers @available(iOS 11.0, *)
+@objc public class ViewAR : ObjectiveC.NSObject {
+  @objc public static var orientation: UIKit.UIInterfaceOrientationMask {
+    @objc get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension ZohoLensArLibrary.ARInputViewOrientation : Swift.Equatable {}
+extension ZohoLensArLibrary.ARInputViewOrientation : Swift.Hashable {}
+extension ZohoLensArLibrary.ARInputViewOrientation : Swift.RawRepresentable {}
+extension ZohoLensArLibrary.RaycastQueryTarget : Swift.Equatable {}
+extension ZohoLensArLibrary.RaycastQueryTarget : Swift.Hashable {}
+extension ZohoLensArLibrary.RaycastQueryTarget : Swift.RawRepresentable {}
+extension ZohoLensArLibrary.ARFrameMode : Swift.Equatable {}
+extension ZohoLensArLibrary.ARFrameMode : Swift.Hashable {}
+extension ZohoLensArLibrary.ARFrameMode : Swift.RawRepresentable {}
+extension ZohoLensArLibrary.ARVideoOrientation : Swift.Equatable {}
+extension ZohoLensArLibrary.ARVideoOrientation : Swift.Hashable {}
+extension ZohoLensArLibrary.ARVideoOrientation : Swift.RawRepresentable {}
+extension ZohoLensArLibrary.RecordARMicrophonePermission : Swift.Equatable {}
+extension ZohoLensArLibrary.RecordARMicrophonePermission : Swift.Hashable {}
+extension ZohoLensArLibrary.RecordARMicrophonePermission : Swift.RawRepresentable {}
+extension ZohoLensArLibrary.RecordARStatus : Swift.Equatable {}
+extension ZohoLensArLibrary.RecordARStatus : Swift.Hashable {}
+extension ZohoLensArLibrary.RecordARStatus : Swift.RawRepresentable {}
+extension ZohoLensArLibrary.RecordARMicrophoneStatus : Swift.Equatable {}
+extension ZohoLensArLibrary.RecordARMicrophoneStatus : Swift.Hashable {}
+extension ZohoLensArLibrary.RecordARMicrophoneStatus : Swift.RawRepresentable {}
+extension ZohoLensArLibrary.VideoResolution : Swift.Equatable {}
+extension ZohoLensArLibrary.VideoResolution : Swift.Hashable {}
+extension ZohoLensArLibrary.VideoResolution : Swift.RawRepresentable {}
+extension ZohoLensArLibrary.CameraPosition : Swift.Equatable {}
+extension ZohoLensArLibrary.CameraPosition : Swift.Hashable {}
+extension ZohoLensArLibrary.CameraPosition : Swift.RawRepresentable {}
+extension ZohoLensArLibrary.Shape : Swift.Equatable {}
+extension ZohoLensArLibrary.Shape : Swift.Hashable {}
+extension ZohoLensArLibrary.Shape : Swift.RawRepresentable {}
+extension ZohoLensArLibrary.FreeStyleState : Swift.Equatable {}
+extension ZohoLensArLibrary.FreeStyleState : Swift.Hashable {}
+extension ZohoLensArLibrary.GeometricProperty : Swift.Equatable {}
+extension ZohoLensArLibrary.GeometricProperty : Swift.Hashable {}
+extension ZohoLensArLibrary.MeasurementUnitSystem : Swift.Equatable {}
+extension ZohoLensArLibrary.MeasurementUnitSystem : Swift.Hashable {}
+extension ZohoLensArLibrary.MeasurementUnitSystem : Swift.RawRepresentable {}
+extension ZohoLensArLibrary.Node : Swift.Sendable {}
+extension ZohoLensArLibrary.ShapeAction : Swift.Hashable {}

@@ -1,0 +1,3639 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "PagingController",
+    "printedName": "PagingController",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PagingController",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PagingController"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ATBarViewCell",
+        "printedName": "ATBarViewCell",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "isSelected",
+            "printedName": "isSelected",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@PagingController@objc(cs)ATBarViewCell(py)selected",
+            "mangledName": "$s16PagingController13ATBarViewCellC10isSelectedSbvp",
+            "moduleName": "PagingController",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "selected",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PagingController@objc(cs)ATBarViewCell(im)isSelected",
+                "mangledName": "$s16PagingController13ATBarViewCellC10isSelectedSbvg",
+                "moduleName": "PagingController",
+                "overriding": true,
+                "implicit": true,
+                "isOpen": true,
+                "objc_name": "isSelected",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@PagingController@objc(cs)ATBarViewCell(im)setSelected:",
+                "mangledName": "$s16PagingController13ATBarViewCellC10isSelectedSbvs",
+                "moduleName": "PagingController",
+                "overriding": true,
+                "implicit": true,
+                "isOpen": true,
+                "objc_name": "setSelected:",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "cellSelected",
+            "printedName": "cellSelected(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16PagingController13ATBarViewCellC12cellSelectedyySbF",
+            "mangledName": "$s16PagingController13ATBarViewCellC12cellSelectedyySbF",
+            "moduleName": "PagingController",
+            "isOpen": true,
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(frame:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ATBarViewCell",
+                "printedName": "PagingController.ATBarViewCell",
+                "usr": "c:@M@PagingController@objc(cs)ATBarViewCell"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PagingController@objc(cs)ATBarViewCell(im)initWithFrame:",
+            "mangledName": "$s16PagingController13ATBarViewCellC5frameACSo6CGRectV_tcfc",
+            "moduleName": "PagingController",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithFrame:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "PagingController.ATBarViewCell?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ATBarViewCell",
+                    "printedName": "PagingController.ATBarViewCell",
+                    "usr": "c:@M@PagingController@objc(cs)ATBarViewCell"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PagingController@objc(cs)ATBarViewCell(im)initWithCoder:",
+            "mangledName": "$s16PagingController13ATBarViewCellC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "PagingController",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@PagingController@objc(cs)ATBarViewCell",
+        "mangledName": "$s16PagingController13ATBarViewCellC",
+        "moduleName": "PagingController",
+        "isOpen": true,
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UICollectionViewCell",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UICollectionViewCell",
+          "UIKit.UICollectionReusableView",
+          "UIKit.UIView",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ATReusableCell",
+            "printedName": "ATReusableCell",
+            "usr": "s:21AssistTableDataSource14ATReusableCellP",
+            "mangledName": "$s21AssistTableDataSource14ATReusableCellP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConstraintRelatableTarget",
+            "printedName": "ConstraintRelatableTarget",
+            "usr": "s:7SnapKit25ConstraintRelatableTargetP",
+            "mangledName": "$s7SnapKit25ConstraintRelatableTargetP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LayoutConstraintItem",
+            "printedName": "LayoutConstraintItem",
+            "usr": "s:7SnapKit20LayoutConstraintItemP",
+            "mangledName": "$s7SnapKit20LayoutConstraintItemP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PagingController",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "HeaderAccessoryBarViewMaker",
+        "printedName": "HeaderAccessoryBarViewMaker",
+        "declKind": "Import",
+        "moduleName": "PagingController"
+      },
+      {
+        "kind": "Import",
+        "name": "AssistTableDataSource",
+        "printedName": "AssistTableDataSource",
+        "declKind": "Import",
+        "moduleName": "PagingController"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BarViewStyleConfigure",
+        "printedName": "BarViewStyleConfigure",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "barViewHeight",
+            "printedName": "barViewHeight",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16PagingController21BarViewStyleConfigureV03barD6Height14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s16PagingController21BarViewStyleConfigureV03barD6Height12CoreGraphics7CGFloatVvp",
+            "moduleName": "PagingController",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController21BarViewStyleConfigureV03barD6Height14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s16PagingController21BarViewStyleConfigureV03barD6Height12CoreGraphics7CGFloatVvg",
+                "moduleName": "PagingController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController21BarViewStyleConfigureV03barD6Height14CoreFoundation7CGFloatVvs",
+                "mangledName": "$s16PagingController21BarViewStyleConfigureV03barD6Height12CoreGraphics7CGFloatVvs",
+                "moduleName": "PagingController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController21BarViewStyleConfigureV03barD6Height14CoreFoundation7CGFloatVvM",
+                "mangledName": "$s16PagingController21BarViewStyleConfigureV03barD6Height12CoreGraphics7CGFloatVvM",
+                "moduleName": "PagingController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "barViewBackgroundColor",
+            "printedName": "barViewBackgroundColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16PagingController21BarViewStyleConfigureV03barD15BackgroundColorSo7UIColorCvp",
+            "mangledName": "$s16PagingController21BarViewStyleConfigureV03barD15BackgroundColorSo7UIColorCvp",
+            "moduleName": "PagingController",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController21BarViewStyleConfigureV03barD15BackgroundColorSo7UIColorCvg",
+                "mangledName": "$s16PagingController21BarViewStyleConfigureV03barD15BackgroundColorSo7UIColorCvg",
+                "moduleName": "PagingController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController21BarViewStyleConfigureV03barD15BackgroundColorSo7UIColorCvs",
+                "mangledName": "$s16PagingController21BarViewStyleConfigureV03barD15BackgroundColorSo7UIColorCvs",
+                "moduleName": "PagingController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController21BarViewStyleConfigureV03barD15BackgroundColorSo7UIColorCvM",
+                "mangledName": "$s16PagingController21BarViewStyleConfigureV03barD15BackgroundColorSo7UIColorCvM",
+                "moduleName": "PagingController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:16PagingController21BarViewStyleConfigureV",
+        "mangledName": "$s16PagingController21BarViewStyleConfigureV",
+        "moduleName": "PagingController",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ATCustomPageController",
+        "printedName": "ATCustomPageController",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "barView",
+            "printedName": "barView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "UIKit.UICollectionView?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16PagingController012ATCustomPageB0C7barViewSo012UICollectionF0CSgvp",
+            "mangledName": "$s16PagingController012ATCustomPageB0C7barViewSo012UICollectionF0CSgvp",
+            "moduleName": "PagingController",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl",
+              "IBOutlet",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UICollectionView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UICollectionView",
+                        "printedName": "UIKit.UICollectionView",
+                        "usr": "c:objc(cs)UICollectionView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C7barViewSo012UICollectionF0CSgvg",
+                "mangledName": "$s16PagingController012ATCustomPageB0C7barViewSo012UICollectionF0CSgvg",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "isOpen": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UICollectionView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UICollectionView",
+                        "printedName": "UIKit.UICollectionView",
+                        "usr": "c:objc(cs)UICollectionView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C7barViewSo012UICollectionF0CSgvs",
+                "mangledName": "$s16PagingController012ATCustomPageB0C7barViewSo012UICollectionF0CSgvs",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "isOpen": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C7barViewSo012UICollectionF0CSgvM",
+                "mangledName": "$s16PagingController012ATCustomPageB0C7barViewSo012UICollectionF0CSgvM",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "barViewHeightConstraint",
+            "printedName": "barViewHeightConstraint",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "UIKit.NSLayoutConstraint?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16PagingController012ATCustomPageB0C23barViewHeightConstraintSo08NSLayoutH0CSgvp",
+            "mangledName": "$s16PagingController012ATCustomPageB0C23barViewHeightConstraintSo08NSLayoutH0CSgvp",
+            "moduleName": "PagingController",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl",
+              "IBOutlet",
+              "ObjC"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.NSLayoutConstraint?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSLayoutConstraint",
+                        "printedName": "UIKit.NSLayoutConstraint",
+                        "usr": "c:objc(cs)NSLayoutConstraint"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C23barViewHeightConstraintSo08NSLayoutH0CSgvg",
+                "mangledName": "$s16PagingController012ATCustomPageB0C23barViewHeightConstraintSo08NSLayoutH0CSgvg",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "isOpen": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.NSLayoutConstraint?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSLayoutConstraint",
+                        "printedName": "UIKit.NSLayoutConstraint",
+                        "usr": "c:objc(cs)NSLayoutConstraint"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C23barViewHeightConstraintSo08NSLayoutH0CSgvs",
+                "mangledName": "$s16PagingController012ATCustomPageB0C23barViewHeightConstraintSo08NSLayoutH0CSgvs",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "isOpen": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C23barViewHeightConstraintSo08NSLayoutH0CSgvM",
+                "mangledName": "$s16PagingController012ATCustomPageB0C23barViewHeightConstraintSo08NSLayoutH0CSgvM",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "middleViewContainer",
+            "printedName": "middleViewContainer",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "UIKit.UIView?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16PagingController012ATCustomPageB0C19middleViewContainerSo6UIViewCSgvp",
+            "mangledName": "$s16PagingController012ATCustomPageB0C19middleViewContainerSo6UIViewCSgvp",
+            "moduleName": "PagingController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl",
+              "IBOutlet",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C19middleViewContainerSo6UIViewCSgvg",
+                "mangledName": "$s16PagingController012ATCustomPageB0C19middleViewContainerSo6UIViewCSgvg",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C19middleViewContainerSo6UIViewCSgvs",
+                "mangledName": "$s16PagingController012ATCustomPageB0C19middleViewContainerSo6UIViewCSgvs",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C19middleViewContainerSo6UIViewCSgvM",
+                "mangledName": "$s16PagingController012ATCustomPageB0C19middleViewContainerSo6UIViewCSgvM",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "barViewStyle",
+            "printedName": "barViewStyle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "BarViewStyleConfigure",
+                "printedName": "PagingController.BarViewStyleConfigure",
+                "usr": "s:16PagingController21BarViewStyleConfigureV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16PagingController012ATCustomPageB0C12barViewStyleAA03BarfG9ConfigureVvp",
+            "mangledName": "$s16PagingController012ATCustomPageB0C12barViewStyleAA03BarfG9ConfigureVvp",
+            "moduleName": "PagingController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BarViewStyleConfigure",
+                    "printedName": "PagingController.BarViewStyleConfigure",
+                    "usr": "s:16PagingController21BarViewStyleConfigureV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C12barViewStyleAA03BarfG9ConfigureVvg",
+                "mangledName": "$s16PagingController012ATCustomPageB0C12barViewStyleAA03BarfG9ConfigureVvg",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BarViewStyleConfigure",
+                    "printedName": "PagingController.BarViewStyleConfigure",
+                    "usr": "s:16PagingController21BarViewStyleConfigureV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C12barViewStyleAA03BarfG9ConfigureVvs",
+                "mangledName": "$s16PagingController012ATCustomPageB0C12barViewStyleAA03BarfG9ConfigureVvs",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C12barViewStyleAA03BarfG9ConfigureVvM",
+                "mangledName": "$s16PagingController012ATCustomPageB0C12barViewStyleAA03BarfG9ConfigureVvM",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "middleView",
+            "printedName": "middleView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16PagingController012ATCustomPageB0C10middleViewSo6UIViewCSgvp",
+            "mangledName": "$s16PagingController012ATCustomPageB0C10middleViewSo6UIViewCSgvp",
+            "moduleName": "PagingController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C10middleViewSo6UIViewCSgvg",
+                "mangledName": "$s16PagingController012ATCustomPageB0C10middleViewSo6UIViewCSgvg",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C10middleViewSo6UIViewCSgvs",
+                "mangledName": "$s16PagingController012ATCustomPageB0C10middleViewSo6UIViewCSgvs",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C10middleViewSo6UIViewCSgvM",
+                "mangledName": "$s16PagingController012ATCustomPageB0C10middleViewSo6UIViewCSgvM",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "cellIdentifier",
+            "printedName": "cellIdentifier",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16PagingController012ATCustomPageB0C14cellIdentifierSSSgvp",
+            "mangledName": "$s16PagingController012ATCustomPageB0C14cellIdentifierSSSgvp",
+            "moduleName": "PagingController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C14cellIdentifierSSSgvg",
+                "mangledName": "$s16PagingController012ATCustomPageB0C14cellIdentifierSSSgvg",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C14cellIdentifierSSSgvs",
+                "mangledName": "$s16PagingController012ATCustomPageB0C14cellIdentifierSSSgvs",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C14cellIdentifierSSSgvM",
+                "mangledName": "$s16PagingController012ATCustomPageB0C14cellIdentifierSSSgvM",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "cellNib",
+            "printedName": "cellNib",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UINib?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UINib",
+                    "printedName": "UIKit.UINib",
+                    "usr": "c:objc(cs)UINib"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16PagingController012ATCustomPageB0C7cellNibSo5UINibCSgvp",
+            "mangledName": "$s16PagingController012ATCustomPageB0C7cellNibSo5UINibCSgvp",
+            "moduleName": "PagingController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UINib?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UINib",
+                        "printedName": "UIKit.UINib",
+                        "usr": "c:objc(cs)UINib"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C7cellNibSo5UINibCSgvg",
+                "mangledName": "$s16PagingController012ATCustomPageB0C7cellNibSo5UINibCSgvg",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UINib?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UINib",
+                        "printedName": "UIKit.UINib",
+                        "usr": "c:objc(cs)UINib"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C7cellNibSo5UINibCSgvs",
+                "mangledName": "$s16PagingController012ATCustomPageB0C7cellNibSo5UINibCSgvs",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C7cellNibSo5UINibCSgvM",
+                "mangledName": "$s16PagingController012ATCustomPageB0C7cellNibSo5UINibCSgvM",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "cellItems",
+            "printedName": "cellItems",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[τ_0_0]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16PagingController012ATCustomPageB0C9cellItemsSayxGvp",
+            "mangledName": "$s16PagingController012ATCustomPageB0C9cellItemsSayxGvp",
+            "moduleName": "PagingController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[τ_0_0]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C9cellItemsSayxGvg",
+                "mangledName": "$s16PagingController012ATCustomPageB0C9cellItemsSayxGvg",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[τ_0_0]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C9cellItemsSayxGvs",
+                "mangledName": "$s16PagingController012ATCustomPageB0C9cellItemsSayxGvs",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C9cellItemsSayxGvM",
+                "mangledName": "$s16PagingController012ATCustomPageB0C9cellItemsSayxGvM",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "cellConfigure",
+            "printedName": "cellConfigure",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((τ_0_0, τ_0_1, Foundation.IndexPath) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(τ_0_0, τ_0_1, Foundation.IndexPath) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(τ_0_0, τ_0_1, Foundation.IndexPath)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_1"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "IndexPath",
+                            "printedName": "Foundation.IndexPath",
+                            "usr": "s:10Foundation9IndexPathV"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16PagingController012ATCustomPageB0C13cellConfigureyx_q_10Foundation9IndexPathVtcSgvp",
+            "mangledName": "$s16PagingController012ATCustomPageB0C13cellConfigureyx_q_10Foundation9IndexPathVtcSgvp",
+            "moduleName": "PagingController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((τ_0_0, τ_0_1, Foundation.IndexPath) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(τ_0_0, τ_0_1, Foundation.IndexPath) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(τ_0_0, τ_0_1, Foundation.IndexPath)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "GenericTypeParam",
+                                "printedName": "τ_0_0"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "GenericTypeParam",
+                                "printedName": "τ_0_1"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "IndexPath",
+                                "printedName": "Foundation.IndexPath",
+                                "usr": "s:10Foundation9IndexPathV"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C13cellConfigureyx_q_10Foundation9IndexPathVtcSgvg",
+                "mangledName": "$s16PagingController012ATCustomPageB0C13cellConfigureyx_q_10Foundation9IndexPathVtcSgvg",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((τ_0_0, τ_0_1, Foundation.IndexPath) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(τ_0_0, τ_0_1, Foundation.IndexPath) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(τ_0_0, τ_0_1, Foundation.IndexPath)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "GenericTypeParam",
+                                "printedName": "τ_0_0"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "GenericTypeParam",
+                                "printedName": "τ_0_1"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "IndexPath",
+                                "printedName": "Foundation.IndexPath",
+                                "usr": "s:10Foundation9IndexPathV"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C13cellConfigureyx_q_10Foundation9IndexPathVtcSgvs",
+                "mangledName": "$s16PagingController012ATCustomPageB0C13cellConfigureyx_q_10Foundation9IndexPathVtcSgvs",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C13cellConfigureyx_q_10Foundation9IndexPathVtcSgvM",
+                "mangledName": "$s16PagingController012ATCustomPageB0C13cellConfigureyx_q_10Foundation9IndexPathVtcSgvM",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "cellSizeFor",
+            "printedName": "cellSizeFor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((τ_0_0, Foundation.IndexPath) -> CoreFoundation.CGSize)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(τ_0_0, Foundation.IndexPath) -> CoreFoundation.CGSize",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGSize",
+                        "printedName": "CoreFoundation.CGSize",
+                        "usr": "c:@S@CGSize"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(τ_0_0, Foundation.IndexPath)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "IndexPath",
+                            "printedName": "Foundation.IndexPath",
+                            "usr": "s:10Foundation9IndexPathV"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16PagingController012ATCustomPageB0C11cellSizeForSo6CGSizeVx_10Foundation9IndexPathVtcSgvp",
+            "mangledName": "$s16PagingController012ATCustomPageB0C11cellSizeForSo6CGSizeVx_10Foundation9IndexPathVtcSgvp",
+            "moduleName": "PagingController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((τ_0_0, Foundation.IndexPath) -> CoreFoundation.CGSize)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(τ_0_0, Foundation.IndexPath) -> CoreFoundation.CGSize",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGSize",
+                            "printedName": "CoreFoundation.CGSize",
+                            "usr": "c:@S@CGSize"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(τ_0_0, Foundation.IndexPath)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "GenericTypeParam",
+                                "printedName": "τ_0_0"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "IndexPath",
+                                "printedName": "Foundation.IndexPath",
+                                "usr": "s:10Foundation9IndexPathV"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C11cellSizeForSo6CGSizeVx_10Foundation9IndexPathVtcSgvg",
+                "mangledName": "$s16PagingController012ATCustomPageB0C11cellSizeForSo6CGSizeVx_10Foundation9IndexPathVtcSgvg",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((τ_0_0, Foundation.IndexPath) -> CoreFoundation.CGSize)?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(τ_0_0, Foundation.IndexPath) -> CoreFoundation.CGSize",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGSize",
+                            "printedName": "CoreFoundation.CGSize",
+                            "usr": "c:@S@CGSize"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(τ_0_0, Foundation.IndexPath)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "GenericTypeParam",
+                                "printedName": "τ_0_0"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "IndexPath",
+                                "printedName": "Foundation.IndexPath",
+                                "usr": "s:10Foundation9IndexPathV"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C11cellSizeForSo6CGSizeVx_10Foundation9IndexPathVtcSgvs",
+                "mangledName": "$s16PagingController012ATCustomPageB0C11cellSizeForSo6CGSizeVx_10Foundation9IndexPathVtcSgvs",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C11cellSizeForSo6CGSizeVx_10Foundation9IndexPathVtcSgvM",
+                "mangledName": "$s16PagingController012ATCustomPageB0C11cellSizeForSo6CGSizeVx_10Foundation9IndexPathVtcSgvM",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "viewControllers",
+            "printedName": "viewControllers",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[UIKit.UIViewController]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16PagingController012ATCustomPageB0C15viewControllersSaySo06UIViewB0CGvp",
+            "mangledName": "$s16PagingController012ATCustomPageB0C15viewControllersSaySo06UIViewB0CGvp",
+            "moduleName": "PagingController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UIKit.UIViewController]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIViewController",
+                        "printedName": "UIKit.UIViewController",
+                        "usr": "c:objc(cs)UIViewController"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C15viewControllersSaySo06UIViewB0CGvg",
+                "mangledName": "$s16PagingController012ATCustomPageB0C15viewControllersSaySo06UIViewB0CGvg",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UIKit.UIViewController]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIViewController",
+                        "printedName": "UIKit.UIViewController",
+                        "usr": "c:objc(cs)UIViewController"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C15viewControllersSaySo06UIViewB0CGvs",
+                "mangledName": "$s16PagingController012ATCustomPageB0C15viewControllersSaySo06UIViewB0CGvs",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C15viewControllersSaySo06UIViewB0CGvM",
+                "mangledName": "$s16PagingController012ATCustomPageB0C15viewControllersSaySo06UIViewB0CGvM",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "currentIndex",
+            "printedName": "currentIndex",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16PagingController012ATCustomPageB0C12currentIndexSivp",
+            "mangledName": "$s16PagingController012ATCustomPageB0C12currentIndexSivp",
+            "moduleName": "PagingController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C12currentIndexSivg",
+                "mangledName": "$s16PagingController012ATCustomPageB0C12currentIndexSivg",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C12currentIndexSivs",
+                "mangledName": "$s16PagingController012ATCustomPageB0C12currentIndexSivs",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C12currentIndexSivM",
+                "mangledName": "$s16PagingController012ATCustomPageB0C12currentIndexSivM",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "didChangeController",
+            "printedName": "didChangeController",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Int, UIKit.UIViewController) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int, UIKit.UIViewController) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Swift.Int, UIKit.UIViewController)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UIViewController",
+                            "printedName": "UIKit.UIViewController",
+                            "usr": "c:objc(cs)UIViewController"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16PagingController012ATCustomPageB0C09didChangeB0ySi_So06UIViewB0CtcSgvp",
+            "mangledName": "$s16PagingController012ATCustomPageB0C09didChangeB0ySi_So06UIViewB0CtcSgvp",
+            "moduleName": "PagingController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Int, UIKit.UIViewController) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Int, UIKit.UIViewController) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(Swift.Int, UIKit.UIViewController)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Int",
+                                "printedName": "Swift.Int",
+                                "usr": "s:Si"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "UIViewController",
+                                "printedName": "UIKit.UIViewController",
+                                "usr": "c:objc(cs)UIViewController"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C09didChangeB0ySi_So06UIViewB0CtcSgvg",
+                "mangledName": "$s16PagingController012ATCustomPageB0C09didChangeB0ySi_So06UIViewB0CtcSgvg",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Int, UIKit.UIViewController) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Int, UIKit.UIViewController) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(Swift.Int, UIKit.UIViewController)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Int",
+                                "printedName": "Swift.Int",
+                                "usr": "s:Si"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "UIViewController",
+                                "printedName": "UIKit.UIViewController",
+                                "usr": "c:objc(cs)UIViewController"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C09didChangeB0ySi_So06UIViewB0CtcSgvs",
+                "mangledName": "$s16PagingController012ATCustomPageB0C09didChangeB0ySi_So06UIViewB0CtcSgvs",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController012ATCustomPageB0C09didChangeB0ySi_So06UIViewB0CtcSgvM",
+                "mangledName": "$s16PagingController012ATCustomPageB0C09didChangeB0ySi_So06UIViewB0CtcSgvM",
+                "moduleName": "PagingController",
+                "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+                "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "viewDidLoad",
+            "printedName": "viewDidLoad()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16PagingController012ATCustomPageB0C11viewDidLoadyyF",
+            "mangledName": "$s16PagingController012ATCustomPageB0C11viewDidLoadyyF",
+            "moduleName": "PagingController",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+            "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "viewDidLoad",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "Override",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewWillAppear",
+            "printedName": "viewWillAppear(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16PagingController012ATCustomPageB0C14viewWillAppearyySbF",
+            "mangledName": "$s16PagingController012ATCustomPageB0C14viewWillAppearyySbF",
+            "moduleName": "PagingController",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+            "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "viewWillAppear:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewDidAppear",
+            "printedName": "viewDidAppear(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16PagingController012ATCustomPageB0C13viewDidAppearyySbF",
+            "mangledName": "$s16PagingController012ATCustomPageB0C13viewDidAppearyySbF",
+            "moduleName": "PagingController",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+            "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "viewDidAppear:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didReceiveMemoryWarning",
+            "printedName": "didReceiveMemoryWarning()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16PagingController012ATCustomPageB0C23didReceiveMemoryWarningyyF",
+            "mangledName": "$s16PagingController012ATCustomPageB0C23didReceiveMemoryWarningyyF",
+            "moduleName": "PagingController",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+            "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "didReceiveMemoryWarning",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setController",
+            "printedName": "setController(controllerIndex:animated:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16PagingController012ATCustomPageB0C03setB015controllerIndex8animatedySi_SbtF",
+            "mangledName": "$s16PagingController012ATCustomPageB0C03setB015controllerIndex8animatedySi_SbtF",
+            "moduleName": "PagingController",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+            "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(nibName:bundle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ATCustomPageController",
+                "printedName": "PagingController.ATCustomPageController<τ_0_0, τ_0_1>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_1"
+                  }
+                ],
+                "usr": "s:16PagingController012ATCustomPageB0C"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Bundle?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16PagingController012ATCustomPageB0C7nibName6bundleACyxq_GSSSg_So8NSBundleCSgtcfc",
+            "mangledName": "$s16PagingController012ATCustomPageB0C7nibName6bundleACyxq_GSSSg_So8NSBundleCSgtcfc",
+            "moduleName": "PagingController",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+            "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithNibName:bundle:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "PagingController.ATCustomPageController<τ_0_0, τ_0_1>?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ATCustomPageController",
+                    "printedName": "PagingController.ATCustomPageController<τ_0_0, τ_0_1>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_1"
+                      }
+                    ],
+                    "usr": "s:16PagingController012ATCustomPageB0C"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16PagingController012ATCustomPageB0C5coderACyxq_GSgSo7NSCoderC_tcfc",
+            "mangledName": "$s16PagingController012ATCustomPageB0C5coderACyxq_GSgSo7NSCoderC_tcfc",
+            "moduleName": "PagingController",
+            "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+            "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:16PagingController012ATCustomPageB0C",
+        "mangledName": "$s16PagingController012ATCustomPageB0C",
+        "moduleName": "PagingController",
+        "genericSig": "<τ_0_0, τ_0_1 where τ_0_1 : PagingController.ATBarViewCell>",
+        "sugared_genericSig": "<CellDataType, CellType where CellType : PagingController.ATBarViewCell>",
+        "isOpen": true,
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:@M@HeaderAccessoryBarViewMaker@objc(cs)HeaderAccessoryBarViewMakerController",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMakerController",
+          "UIKit.UIViewController",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "HeaderAccessoryBarViewMaker",
+            "printedName": "HeaderAccessoryBarViewMaker",
+            "usr": "s:27HeaderAccessoryBarViewMakerAAP",
+            "mangledName": "$s27HeaderAccessoryBarViewMakerAAP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "PagingController",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ATPageViewController",
+        "printedName": "ATPageViewController",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "pages",
+            "printedName": "pages",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[UIKit.UIViewController]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16PagingController010ATPageViewB0C5pagesSaySo06UIViewB0CGvp",
+            "mangledName": "$s16PagingController010ATPageViewB0C5pagesSaySo06UIViewB0CGvp",
+            "moduleName": "PagingController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UIKit.UIViewController]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIViewController",
+                        "printedName": "UIKit.UIViewController",
+                        "usr": "c:objc(cs)UIViewController"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController010ATPageViewB0C5pagesSaySo06UIViewB0CGvg",
+                "mangledName": "$s16PagingController010ATPageViewB0C5pagesSaySo06UIViewB0CGvg",
+                "moduleName": "PagingController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UIKit.UIViewController]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIViewController",
+                        "printedName": "UIKit.UIViewController",
+                        "usr": "c:objc(cs)UIViewController"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController010ATPageViewB0C5pagesSaySo06UIViewB0CGvs",
+                "mangledName": "$s16PagingController010ATPageViewB0C5pagesSaySo06UIViewB0CGvs",
+                "moduleName": "PagingController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController010ATPageViewB0C5pagesSaySo06UIViewB0CGvM",
+                "mangledName": "$s16PagingController010ATPageViewB0C5pagesSaySo06UIViewB0CGvM",
+                "moduleName": "PagingController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "didChangePage",
+            "printedName": "didChangePage",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Int, UIKit.UIViewController) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int, UIKit.UIViewController) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Swift.Int, UIKit.UIViewController)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UIViewController",
+                            "printedName": "UIKit.UIViewController",
+                            "usr": "c:objc(cs)UIViewController"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16PagingController010ATPageViewB0C13didChangePageySi_So06UIViewB0CtcSgvp",
+            "mangledName": "$s16PagingController010ATPageViewB0C13didChangePageySi_So06UIViewB0CtcSgvp",
+            "moduleName": "PagingController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Int, UIKit.UIViewController) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Int, UIKit.UIViewController) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(Swift.Int, UIKit.UIViewController)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Int",
+                                "printedName": "Swift.Int",
+                                "usr": "s:Si"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "UIViewController",
+                                "printedName": "UIKit.UIViewController",
+                                "usr": "c:objc(cs)UIViewController"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController010ATPageViewB0C13didChangePageySi_So06UIViewB0CtcSgvg",
+                "mangledName": "$s16PagingController010ATPageViewB0C13didChangePageySi_So06UIViewB0CtcSgvg",
+                "moduleName": "PagingController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.Int, UIKit.UIViewController) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.Int, UIKit.UIViewController) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(Swift.Int, UIKit.UIViewController)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Int",
+                                "printedName": "Swift.Int",
+                                "usr": "s:Si"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "UIViewController",
+                                "printedName": "UIKit.UIViewController",
+                                "usr": "c:objc(cs)UIViewController"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController010ATPageViewB0C13didChangePageySi_So06UIViewB0CtcSgvs",
+                "mangledName": "$s16PagingController010ATPageViewB0C13didChangePageySi_So06UIViewB0CtcSgvs",
+                "moduleName": "PagingController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PagingController010ATPageViewB0C13didChangePageySi_So06UIViewB0CtcSgvM",
+                "mangledName": "$s16PagingController010ATPageViewB0C13didChangePageySi_So06UIViewB0CtcSgvM",
+                "moduleName": "PagingController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "viewDidLoad",
+            "printedName": "viewDidLoad()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@PagingController@objc(cs)ATPageViewController(im)viewDidLoad",
+            "mangledName": "$s16PagingController010ATPageViewB0C11viewDidLoadyyF",
+            "moduleName": "PagingController",
+            "overriding": true,
+            "objc_name": "viewDidLoad",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "Override",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setViewControllers",
+            "printedName": "setViewControllers(_:direction:animated:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[UIKit.UIViewController]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UIKit.UIViewController]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIViewController",
+                        "printedName": "UIKit.UIViewController",
+                        "usr": "c:objc(cs)UIViewController"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NavigationDirection",
+                "printedName": "UIKit.UIPageViewController.NavigationDirection",
+                "usr": "c:@E@UIPageViewControllerNavigationDirection"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Bool) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Bool) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@PagingController@objc(cs)ATPageViewController(im)setViewControllers:direction:animated:completion:",
+            "mangledName": "$s16PagingController010ATPageViewB0C03setD11Controllers_9direction8animated10completionySaySo06UIViewB0CGSg_So06UIPagedB19NavigationDirectionVSbySbcSgtF",
+            "moduleName": "PagingController",
+            "overriding": true,
+            "objc_name": "setViewControllers:direction:animated:completion:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(transitionStyle:navigationOrientation:options:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ATPageViewController",
+                "printedName": "PagingController.ATPageViewController",
+                "usr": "c:@M@PagingController@objc(cs)ATPageViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TransitionStyle",
+                "printedName": "UIKit.UIPageViewController.TransitionStyle",
+                "usr": "c:@E@UIPageViewControllerTransitionStyle"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NavigationOrientation",
+                "printedName": "UIKit.UIPageViewController.NavigationOrientation",
+                "usr": "c:@E@UIPageViewControllerNavigationOrientation"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[UIKit.UIPageViewController.OptionsKey : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[UIKit.UIPageViewController.OptionsKey : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OptionsKey",
+                        "printedName": "UIKit.UIPageViewController.OptionsKey",
+                        "usr": "c:@T@UIPageViewControllerOptionsKey"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PagingController@objc(cs)ATPageViewController(im)initWithTransitionStyle:navigationOrientation:options:",
+            "mangledName": "$s16PagingController010ATPageViewB0C15transitionStyle21navigationOrientation7optionsACSo06UIPagedb10TransitionF0V_So0jdb10NavigationH0VSDySo0jdB10OptionsKeyaypGSgtcfc",
+            "moduleName": "PagingController",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithTransitionStyle:navigationOrientation:options:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "PagingController.ATPageViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ATPageViewController",
+                    "printedName": "PagingController.ATPageViewController",
+                    "usr": "c:@M@PagingController@objc(cs)ATPageViewController"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PagingController@objc(cs)ATPageViewController(im)initWithCoder:",
+            "mangledName": "$s16PagingController010ATPageViewB0C5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "PagingController",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "pageViewController",
+            "printedName": "pageViewController(_:viewControllerAfter:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIPageViewController",
+                "printedName": "UIKit.UIPageViewController",
+                "usr": "c:objc(cs)UIPageViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@PagingController@objc(cs)ATPageViewController(im)pageViewController:viewControllerAfterViewController:",
+            "mangledName": "$s16PagingController010ATPageViewB0C04pagedB0_04viewB5AfterSo06UIViewB0CSgSo06UIPagedB0C_AGtF",
+            "moduleName": "PagingController",
+            "objc_name": "pageViewController:viewControllerAfterViewController:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pageViewController",
+            "printedName": "pageViewController(_:viewControllerBefore:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIPageViewController",
+                "printedName": "UIKit.UIPageViewController",
+                "usr": "c:objc(cs)UIPageViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@PagingController@objc(cs)ATPageViewController(im)pageViewController:viewControllerBeforeViewController:",
+            "mangledName": "$s16PagingController010ATPageViewB0C04pagedB0_04viewB6BeforeSo06UIViewB0CSgSo06UIPagedB0C_AGtF",
+            "moduleName": "PagingController",
+            "objc_name": "pageViewController:viewControllerBeforeViewController:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pageViewController",
+            "printedName": "pageViewController(_:willTransitionTo:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIPageViewController",
+                "printedName": "UIKit.UIPageViewController",
+                "usr": "c:objc(cs)UIPageViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[UIKit.UIViewController]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@PagingController@objc(cs)ATPageViewController(im)pageViewController:willTransitionToViewControllers:",
+            "mangledName": "$s16PagingController010ATPageViewB0C04pagedB0_16willTransitionToySo06UIPagedB0C_SaySo06UIViewB0CGtF",
+            "moduleName": "PagingController",
+            "objc_name": "pageViewController:willTransitionToViewControllers:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pageViewController",
+            "printedName": "pageViewController(_:didFinishAnimating:previousViewControllers:transitionCompleted:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIPageViewController",
+                "printedName": "UIKit.UIPageViewController",
+                "usr": "c:objc(cs)UIPageViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[UIKit.UIViewController]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@PagingController@objc(cs)ATPageViewController(im)pageViewController:didFinishAnimating:previousViewControllers:transitionCompleted:",
+            "mangledName": "$s16PagingController010ATPageViewB0C04pagedB0_18didFinishAnimating08previousD11Controllers19transitionCompletedySo06UIPagedB0C_SbSaySo06UIViewB0CGSbtF",
+            "moduleName": "PagingController",
+            "objc_name": "pageViewController:didFinishAnimating:previousViewControllers:transitionCompleted:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@PagingController@objc(cs)ATPageViewController",
+        "mangledName": "$s16PagingController010ATPageViewB0C",
+        "moduleName": "PagingController",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UIPageViewController",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UIPageViewController",
+          "UIKit.UIViewController",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PagingController",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/PagingController\/ATCustomPageController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 397,
+      "length": 2,
+      "value": "50"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/PagingController\/ATCustomPageController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 604,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/PagingController\/ATCustomPageController.swift",
+      "kind": "Array",
+      "offset": 2048,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/PagingController\/ATCustomPageController.swift",
+      "kind": "Array",
+      "offset": 2408,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/PagingController\/ATCustomPageController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2754,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/PagingController\/ATCustomPageController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6768,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/PagingController\/ATPageController\/ATPagingController.swift",
+      "kind": "Array",
+      "offset": 282,
+      "length": 2,
+      "value": "[]"
+    }
+  ]
+}

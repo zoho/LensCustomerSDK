@@ -1,0 +1,282 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TechAppticsEventModel",
+    "printedName": "TechAppticsEventModel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TechAppticsEventModel",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "TechAppticsEventModel"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SDKAppticsEvents",
+        "printedName": "SDKAppticsEvents",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "sendEvents",
+            "printedName": "sendEvents",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PassthroughSubject",
+                "printedName": "Combine.PassthroughSubject<any TechAppticsEventModel.EventProtocol, Swift.Never>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EventProtocol",
+                    "printedName": "any TechAppticsEventModel.EventProtocol",
+                    "usr": "s:21TechAppticsEventModel0C8ProtocolP"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Never",
+                    "printedName": "Swift.Never",
+                    "usr": "s:s5NeverO"
+                  }
+                ],
+                "usr": "s:7Combine18PassthroughSubjectC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21TechAppticsEventModel16SDKAppticsEventsC04sendF07Combine18PassthroughSubjectCyAA0C8Protocol_ps5NeverOGvpZ",
+            "mangledName": "$s21TechAppticsEventModel16SDKAppticsEventsC04sendF07Combine18PassthroughSubjectCyAA0C8Protocol_ps5NeverOGvpZ",
+            "moduleName": "TechAppticsEventModel",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PassthroughSubject",
+                    "printedName": "Combine.PassthroughSubject<any TechAppticsEventModel.EventProtocol, Swift.Never>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventProtocol",
+                        "printedName": "any TechAppticsEventModel.EventProtocol",
+                        "usr": "s:21TechAppticsEventModel0C8ProtocolP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Never",
+                        "printedName": "Swift.Never",
+                        "usr": "s:s5NeverO"
+                      }
+                    ],
+                    "usr": "s:7Combine18PassthroughSubjectC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21TechAppticsEventModel16SDKAppticsEventsC04sendF07Combine18PassthroughSubjectCyAA0C8Protocol_ps5NeverOGvgZ",
+                "mangledName": "$s21TechAppticsEventModel16SDKAppticsEventsC04sendF07Combine18PassthroughSubjectCyAA0C8Protocol_ps5NeverOGvgZ",
+                "moduleName": "TechAppticsEventModel",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PassthroughSubject",
+                    "printedName": "Combine.PassthroughSubject<any TechAppticsEventModel.EventProtocol, Swift.Never>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "EventProtocol",
+                        "printedName": "any TechAppticsEventModel.EventProtocol",
+                        "usr": "s:21TechAppticsEventModel0C8ProtocolP"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Never",
+                        "printedName": "Swift.Never",
+                        "usr": "s:s5NeverO"
+                      }
+                    ],
+                    "usr": "s:7Combine18PassthroughSubjectC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21TechAppticsEventModel16SDKAppticsEventsC04sendF07Combine18PassthroughSubjectCyAA0C8Protocol_ps5NeverOGvsZ",
+                "mangledName": "$s21TechAppticsEventModel16SDKAppticsEventsC04sendF07Combine18PassthroughSubjectCyAA0C8Protocol_ps5NeverOGvsZ",
+                "moduleName": "TechAppticsEventModel",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21TechAppticsEventModel16SDKAppticsEventsC04sendF07Combine18PassthroughSubjectCyAA0C8Protocol_ps5NeverOGvMZ",
+                "mangledName": "$s21TechAppticsEventModel16SDKAppticsEventsC04sendF07Combine18PassthroughSubjectCyAA0C8Protocol_ps5NeverOGvMZ",
+                "moduleName": "TechAppticsEventModel",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:21TechAppticsEventModel16SDKAppticsEventsC",
+        "mangledName": "$s21TechAppticsEventModel16SDKAppticsEventsC",
+        "moduleName": "TechAppticsEventModel",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "EventProtocol",
+        "printedName": "EventProtocol",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "groupName",
+            "printedName": "groupName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21TechAppticsEventModel0C8ProtocolP9groupNameSSvp",
+            "mangledName": "$s21TechAppticsEventModel0C8ProtocolP9groupNameSSvp",
+            "moduleName": "TechAppticsEventModel",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21TechAppticsEventModel0C8ProtocolP9groupNameSSvg",
+                "mangledName": "$s21TechAppticsEventModel0C8ProtocolP9groupNameSSvg",
+                "moduleName": "TechAppticsEventModel",
+                "genericSig": "<τ_0_0 where τ_0_0 : TechAppticsEventModel.EventProtocol>",
+                "sugared_genericSig": "<Self where Self : TechAppticsEventModel.EventProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:21TechAppticsEventModel0C8ProtocolP",
+        "mangledName": "$s21TechAppticsEventModel0C8ProtocolP",
+        "moduleName": "TechAppticsEventModel",
+        "genericSig": "<τ_0_0 : Swift.RawRepresentable, τ_0_0.RawValue == Swift.String>",
+        "sugared_genericSig": "<Self : Swift.RawRepresentable, Self.RawValue == Swift.String>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": []
+}

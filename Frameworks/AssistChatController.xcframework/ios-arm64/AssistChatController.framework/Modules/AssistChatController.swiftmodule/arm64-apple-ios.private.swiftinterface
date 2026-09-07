@@ -1,0 +1,191 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name AssistChatController
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import AssistTableDataSource
+import DrawerController
+import Foundation
+import GrowingTextView
+import KeyBoardChangeObserver
+import NotificationView
+import Orientation
+import SnapKit
+import Swift
+import UIKit
+import UIKit_Extention
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@available(iOSApplicationExtension, unavailable)
+public enum AssistChatResponse<AnyTpe> {
+  case success(value: AnyTpe), failure(message: Swift.String)
+}
+@available(iOSApplicationExtension, unavailable)
+public protocol AssistChatControllerDelegate : AnyObject {
+  func assistChatController(send message: Swift.String, completion: @escaping (AssistChatResponse<any AssistChatProtocol>) -> ())
+  func assistChatController(configureSendButton: UIKit.UIButton)
+  func assistChatController(configureOneTapScrollDown: UIKit.UIButton)
+  func assistChatController(placeHolderTextFor: UIKit.UITextView) -> Swift.String?
+  func assistChatController(needTitle for: AssistChatController) -> Swift.String?
+  func assistChatController(noDataView for: AssistChatController) -> UIKit.UIView?
+  func assistChatController(bannerView for: AssistChatController) -> UIKit.UIView?
+  func scrollViewShouldScroll() -> Swift.Bool?
+  func assistChatController(configureRephraseButton: UIKit.UIButton)
+  func assistChatController(configureGenerateResponseButton: UIKit.UIButton)
+  func assistChatControllerZiaGenerateResponseTitle() -> Swift.String
+  func assistChatControllerZiaGenerateResponseMinimumConvoMessage() -> Swift.String
+  func assistChatControllerZiaRephraseMessage() -> Swift.String
+  func rephase(message: Swift.String, completion: @escaping (Swift.String) -> (), failure: @escaping (Swift.String) -> ())
+  func chatCompletion(jsonArray: [[Swift.String : Any]], completion: @escaping (Swift.String) -> (), failure: @escaping (Swift.String) -> ())
+}
+@objc @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@_Concurrency.MainActor @preconcurrency open class AssistChatController : DrawerController.DrawerChildTableViewController, KeyBoardChangeObserver.KeyboardNotificationhandler, Orientation.OrientationHandler {
+  @_Concurrency.MainActor @preconcurrency public var isZiaEnabled: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public static var assistChatTheme: AssistChatTheme
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak open var tableView: UIKit.UITableView!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var sendButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var generateResponseButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var rephraseButton: UIKit.UIButton!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var messageTextView: GrowingTextView! {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var showBannerView: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var isRephraseToolTipShown: Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public var topPadding: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency weak public var delegate: (any AssistChatControllerDelegate)?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency required convenience public init(delegate: (any AssistChatControllerDelegate)?, chatMode: Swift.Bool? = true, isZiaEnabled: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func removeFromParent()
+  @_Concurrency.MainActor @preconcurrency open func messageTextViewHasText() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency open func setChatComponents(hidden: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency open func resetData()
+  @_Concurrency.MainActor @preconcurrency public func handleNoData()
+  @_Concurrency.MainActor @preconcurrency open func send(chat: any AssistChatProtocol)
+  @_Concurrency.MainActor @preconcurrency open func received(chat: any AssistChatProtocol)
+  @_Concurrency.MainActor @preconcurrency open func registerOther(chatActivity: OtherChatActivity)
+  @_Concurrency.MainActor @preconcurrency override open func drawerView(for drawer: DrawerController.DrawerViewController) -> UIKit.UIView
+  @_Concurrency.MainActor @preconcurrency override open func drawer(movingPosition: DrawerController.DrawerMovingPosition, drawerChangedHeight height: CoreFoundation.CGFloat, drawerMinHeight: CoreFoundation.CGFloat, drawerMaximumHeight: CoreFoundation.CGFloat, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency override open func drawer(_ drawer: DrawerController.DrawerViewController, reachedMinHeight height: CoreFoundation.CGFloat, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency override open func drawer(_ drawer: DrawerController.DrawerViewController, reachedMaximumHeight height: CoreFoundation.CGFloat, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency override open func drawerWidth(for drawer: DrawerController.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+extension AssistChatController : UIKit.UITextViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func textViewDidChange(_ textView: UIKit.UITextView)
+}
+@available(iOSApplicationExtension, unavailable)
+public protocol AssistChatParticipant {
+  var displayName: Foundation.NSAttributedString { get }
+  var uniqueId: Swift.String { get }
+}
+@available(iOSApplicationExtension, unavailable)
+public protocol AssistChatProtocol {
+  var chatText: Foundation.NSAttributedString { get }
+  var chatTime: Foundation.Date { get }
+  var chatParticipant: any AssistChatParticipant { get }
+}
+@available(iOSApplicationExtension, unavailable)
+public struct OtherChatActivity {
+  public let activityString: Foundation.NSAttributedString
+  public let date: Foundation.Date
+  public var color: UIKit.UIColor?
+  public init(activity: Foundation.NSAttributedString, date: Foundation.Date, color: UIKit.UIColor? = nil)
+}
+@available(iOSApplicationExtension, unavailable)
+public enum AssistChatActivityType {
+  case chatSent(chat: any AssistChatProtocol), chatRecieved(chat: any AssistChatProtocol), otherActivity(otherActivity: OtherChatActivity)
+}
+@objc @available(iOSApplicationExtension, unavailable)
+public class AssistChatActivity : ObjectiveC.NSObject {
+  public var showNameDateTime: Swift.Bool
+  public var activityTime: Foundation.Date {
+    get
+  }
+  public var activityType: AssistChatActivityType
+  public init(activity: AssistChatActivityType)
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+public struct AssistChatTheme {
+  public var sentChatCellTheme: AssistChatCellTheme
+  public var recievedChatCellTheme: AssistChatCellTheme
+  public var textFieldTheme: AssistChatTextFieldTheme
+  public var ziaTextFieldTheme: AssistZiaTextFieldTheme
+  public init(sentCellTheme: AssistChatCellTheme = AssistChatCellTheme.defaultSentCellTheme, recievedCellTheme: AssistChatCellTheme = AssistChatCellTheme.defaultRecievedCellTheme, textFieldTheme: AssistChatTextFieldTheme = AssistChatTextFieldTheme.defaultTextFieldTheme, textFieldButtonTheme: AssistZiaTextFieldTheme = AssistZiaTextFieldTheme.defaultTextFieldTheme)
+}
+@available(iOSApplicationExtension, unavailable)
+public struct AssistChatCellTheme {
+  public var nameColor: UIKit.UIColor
+  public var dateColor: UIKit.UIColor
+  public var chatTextColor: UIKit.UIColor
+  public var chatTintColor: UIKit.UIColor
+  public var chatBackgroundColor: UIKit.UIColor
+  public init(nameColor: UIKit.UIColor, dateColor: UIKit.UIColor, chatTextColor: UIKit.UIColor, chatBackgroundColor: UIKit.UIColor)
+  public static var defaultSentCellTheme: AssistChatCellTheme {
+    get
+  }
+  public static var defaultRecievedCellTheme: AssistChatCellTheme {
+    get
+  }
+}
+@available(iOSApplicationExtension, unavailable)
+public struct AssistChatTextFieldTheme {
+  public init(textFieldBorderColor: UIKit.UIColor, textColor: UIKit.UIColor, placeHolder: UIKit.UIColor, textFieldBackgroundColor: UIKit.UIColor)
+  public init()
+  public static var defaultTextFieldTheme: AssistChatTextFieldTheme {
+    get
+  }
+}
+@available(iOSApplicationExtension, unavailable)
+public struct AssistZiaTextFieldTheme {
+  public var generateResponseTheme: GenerateResponseTheme
+  public var rephraseTheme: RephraseTheme
+  public init(textFieldBorderColour: UIKit.UIColor, textFieldBackGroundColour: UIKit.UIColor, textFieldBorderDisableColour: UIKit.UIColor, ziaNotificationBackgroundColour: UIKit.UIColor, toolTipBackgroundColour: UIKit.UIColor, generateResponseTheme: GenerateResponseTheme = GenerateResponseTheme.defaultTheme, rephraseTheme: RephraseTheme = RephraseTheme.defaultTheme)
+  public init(generateResponseTheme: GenerateResponseTheme = GenerateResponseTheme.defaultTheme, rephraseTheme: RephraseTheme = RephraseTheme.defaultTheme)
+  public static var defaultTextFieldTheme: AssistZiaTextFieldTheme {
+    get
+  }
+}
+public struct GenerateResponseTheme {
+  public init(buttonEnableColour: UIKit.UIColor, buttonDisableColour: UIKit.UIColor, buttonBgDisableColour: UIKit.UIColor, buttonBgEnableColour: UIKit.UIColor, buttonBorderDisableColour: UIKit.UIColor)
+  public init()
+  public static var defaultTheme: GenerateResponseTheme {
+    get
+  }
+}
+public struct RephraseTheme {
+  public init(buttonEnableColour: UIKit.UIColor, buttonDisableColour: UIKit.UIColor)
+  public init()
+  public static var defaultTheme: RephraseTheme {
+    get
+  }
+}
+@available(iOSApplicationExtension, unavailable)
+public struct AssistChatNavigationBarTheme {
+  public var navBarBackgroundColor: UIKit.UIColor?
+  public var navBarTitleColor: UIKit.UIColor?
+  public init(navigationBarBackgroundColor: UIKit.UIColor? = nil, navigationTitleColor: UIKit.UIColor? = nil)
+}
+@available(iOSApplicationExtension, unavailable)
+public struct AssistChatControl {
+  public var pause: UIKit.UIImage?
+  public var resume: UIKit.UIImage?
+  public var sendChat: UIKit.UIImage?
+  public var exitSession: UIKit.UIImage?
+  public var technician: UIKit.UIImage?
+  public var permissions: UIKit.UIImage?
+  public init(pause: UIKit.UIImage? = nil, resume: UIKit.UIImage? = nil, sendChat: UIKit.UIImage? = nil, exitSession: UIKit.UIImage? = nil, technician: UIKit.UIImage? = nil, permissions: UIKit.UIImage? = nil)
+}
+@available(iOSApplicationExtension, unavailable)
+extension AssistChatController : Swift.Sendable {}

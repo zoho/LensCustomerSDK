@@ -1,0 +1,50 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/jem-8413/Library/Developer/Xcode/DerivedData/ZAUtilsFramework-ckicxhmmskzkvughqdftssjpucxw/Build/Intermediates.noindex/ArchiveIntermediates/GrowingTextView/InstallationBuildProductsLocation/Library/Frameworks/GrowingTextView.framework/GrowingTextView'
+relocations:
+  - { offset: 0x4E105, size: 0x8, addend: 0x0, symName: _GrowingTextViewVersionString, symObjAddr: 0x0, symBinAddr: 0x77C0, symSize: 0x0 }
+  - { offset: 0x4E13C, size: 0x8, addend: 0x0, symName: _GrowingTextViewVersionNumber, symObjAddr: 0x40, symBinAddr: 0x7800, symSize: 0x0 }
+  - { offset: 0x4E571, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC11placeholderSSSgvpABTK', symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x58 }
+  - { offset: 0x4E5A9, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC11placeholderSSSgvpABTk', symObjAddr: 0x58, symBinAddr: 0x4058, symSize: 0xA0 }
+  - { offset: 0x4E5FD, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC16placeholderColorSo7UIColorCvpABTK', symObjAddr: 0x300, symBinAddr: 0x4300, symSize: 0x54 }
+  - { offset: 0x4E633, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC16placeholderColorSo7UIColorCvpABTk', symObjAddr: 0x354, symBinAddr: 0x4354, symSize: 0x7C }
+  - { offset: 0x4E688, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAACMa', symObjAddr: 0x790, symBinAddr: 0x4790, symSize: 0x20 }
+  - { offset: 0x4E6C8, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAACfETo', symObjAddr: 0x12BC, symBinAddr: 0x52BC, symSize: 0x6C }
+  - { offset: 0x4E6F7, size: 0x8, addend: 0x0, symName: '_$sIeg_IeyB_TR', symObjAddr: 0x1554, symBinAddr: 0x5554, symSize: 0x2C }
+  - { offset: 0x4E71A, size: 0x8, addend: 0x0, symName: '_$ss29getContiguousArrayStorageType3fors01_bcD0CyxGmxm_tlFSo18NSLayoutConstraintC_Ttg5', symObjAddr: 0x19E0, symBinAddr: 0x5860, symSize: 0x6C }
+  - { offset: 0x4E747, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledNameV2, symObjAddr: 0x1A4C, symBinAddr: 0x58CC, symSize: 0x50 }
+  - { offset: 0x4E75B, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC12updateHeight33_0076AC68E8ACDCD316A7C93D174A0BB4LLyyFyycfU_TA', symObjAddr: 0x1AC0, symBinAddr: 0x5940, symSize: 0x34 }
+  - { offset: 0x4E78F, size: 0x8, addend: 0x0, symName: _block_copy_helper, symObjAddr: 0x1AF4, symBinAddr: 0x5974, symSize: 0x14 }
+  - { offset: 0x4E7A3, size: 0x8, addend: 0x0, symName: _block_destroy_helper, symObjAddr: 0x1B08, symBinAddr: 0x5988, symSize: 0x8 }
+  - { offset: 0x4E7B7, size: 0x8, addend: 0x0, symName: '_$sSo20NSNotificationCenterC10FoundationE9PublisherVAE7CombineAdCWl', symObjAddr: 0x1B50, symBinAddr: 0x59D0, symSize: 0x44 }
+  - { offset: 0x4E7CB, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC05setupbC033_0076AC68E8ACDCD316A7C93D174A0BB4LLyyFSbSo06UITextC0CcfU0_TA', symObjAddr: 0x1BB8, symBinAddr: 0x5A38, symSize: 0x5C }
+  - { offset: 0x4E814, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledNameAbstractV2, symObjAddr: 0x1C14, symBinAddr: 0x5A94, symSize: 0x54 }
+  - { offset: 0x4E828, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC05setupbC033_0076AC68E8ACDCD316A7C93D174A0BB4LLyyFySo06UITextC0CcfU1_TA', symObjAddr: 0x1C68, symBinAddr: 0x5AE8, symSize: 0xF0 }
+  - { offset: 0x4E88B, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC05setupbC033_0076AC68E8ACDCD316A7C93D174A0BB4LLyyFy10Foundation12NotificationVcfU2_TA', symObjAddr: 0x1D9C, symBinAddr: 0x5C1C, symSize: 0x9C }
+  - { offset: 0x4E962, size: 0x8, addend: 0x0, symName: '_$sypSgWOh', symObjAddr: 0x1E38, symBinAddr: 0x5CB8, symSize: 0x48 }
+  - { offset: 0x4EB45, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC11placeholderSSSgvg', symObjAddr: 0xF8, symBinAddr: 0x40F8, symSize: 0x54 }
+  - { offset: 0x4EB64, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC11placeholderSSSgvs', symObjAddr: 0x14C, symBinAddr: 0x414C, symSize: 0xB4 }
+  - { offset: 0x4EBA4, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC11placeholderSSSgvM', symObjAddr: 0x200, symBinAddr: 0x4200, symSize: 0x6C }
+  - { offset: 0x4EBDD, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC11placeholderSSSgvM.resume.0', symObjAddr: 0x26C, symBinAddr: 0x426C, symSize: 0x94 }
+  - { offset: 0x4ED1F, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC16placeholderColorSo7UIColorCvg', symObjAddr: 0x3D0, symBinAddr: 0x43D0, symSize: 0x40 }
+  - { offset: 0x4ED3E, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC16placeholderColorSo7UIColorCvs', symObjAddr: 0x410, symBinAddr: 0x4410, symSize: 0x8C }
+  - { offset: 0x4ED84, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC16placeholderColorSo7UIColorCvM', symObjAddr: 0x49C, symBinAddr: 0x449C, symSize: 0x6C }
+  - { offset: 0x4EDBD, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC16placeholderColorSo7UIColorCvM.resume.0', symObjAddr: 0x508, symBinAddr: 0x4508, symSize: 0x48 }
+  - { offset: 0x4EE38, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC5frame13textContainerABSo6CGRectV_So06NSTextF0CSgtcfC', symObjAddr: 0x550, symBinAddr: 0x4550, symSize: 0x6C }
+  - { offset: 0x4EE90, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC5frame13textContainerABSo6CGRectV_So06NSTextF0CSgtcfc', symObjAddr: 0x5BC, symBinAddr: 0x45BC, symSize: 0x1D4 }
+  - { offset: 0x4EF66, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC5frame13textContainerABSo6CGRectV_So06NSTextF0CSgtcfcTo', symObjAddr: 0x7B0, symBinAddr: 0x47B0, symSize: 0x60 }
+  - { offset: 0x4EF7A, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC5coderABSgSo7NSCoderC_tcfc', symObjAddr: 0x810, symBinAddr: 0x4810, symSize: 0x1AC }
+  - { offset: 0x4F03E, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC5coderABSgSo7NSCoderC_tcfcTo', symObjAddr: 0x9BC, symBinAddr: 0x49BC, symSize: 0x28 }
+  - { offset: 0x4F08B, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC05setupbC033_0076AC68E8ACDCD316A7C93D174A0BB4LLyyF', symObjAddr: 0x9E4, symBinAddr: 0x49E4, symSize: 0x49C }
+  - { offset: 0x4F101, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC05setupbC033_0076AC68E8ACDCD316A7C93D174A0BB4LLyyFSo06UITextC0CSg10Foundation12NotificationVcfU_', symObjAddr: 0xE80, symBinAddr: 0x4E80, symSize: 0x84 }
+  - { offset: 0x4F1CB, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC16setupPlaceholder33_0076AC68E8ACDCD316A7C93D174A0BB4LLyyF', symObjAddr: 0xF04, symBinAddr: 0x4F04, symSize: 0x2CC }
+  - { offset: 0x4F28C, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAACfD', symObjAddr: 0x11D0, symBinAddr: 0x51D0, symSize: 0x68 }
+  - { offset: 0x4F2E9, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAACfDTo', symObjAddr: 0x1238, symBinAddr: 0x5238, symSize: 0x84 }
+  - { offset: 0x4F346, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC27updatePlaceholderVisibilityyyF', symObjAddr: 0x1328, symBinAddr: 0x5328, symSize: 0x80 }
+  - { offset: 0x4F3BC, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC12updateHeight33_0076AC68E8ACDCD316A7C93D174A0BB4LLyyF', symObjAddr: 0x13A8, symBinAddr: 0x53A8, symSize: 0x1AC }
+  - { offset: 0x4F522, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC14layoutSubviewsyyFTo', symObjAddr: 0x15B4, symBinAddr: 0x5580, symSize: 0x5C }
+  - { offset: 0x4F563, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC4fontSo6UIFontCSgvgTo', symObjAddr: 0x1610, symBinAddr: 0x55DC, symSize: 0x44 }
+  - { offset: 0x4F5CF, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC4fontSo6UIFontCSgvsTo', symObjAddr: 0x1688, symBinAddr: 0x5620, symSize: 0xB0 }
+  - { offset: 0x4F626, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC13textAlignmentSo06NSTextE0VvgTo', symObjAddr: 0x17C0, symBinAddr: 0x56D0, symSize: 0x3C }
+  - { offset: 0x4F692, size: 0x8, addend: 0x0, symName: '_$s15GrowingTextViewAAC13textAlignmentSo06NSTextE0VvsTo', symObjAddr: 0x182C, symBinAddr: 0x570C, symSize: 0x84 }
+...

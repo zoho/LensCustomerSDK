@@ -1,0 +1,756 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "ToastView",
+    "printedName": "ToastView",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ToastView",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ToastView"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ToastTheme",
+        "printedName": "ToastTheme",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(textColor:bgColor:loaderColor:completionIconColor:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ToastTheme",
+                "printedName": "ToastView.ToastTheme",
+                "usr": "s:9ToastView0A5ThemeV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Color",
+                "printedName": "SwiftUI.Color",
+                "usr": "s:7SwiftUI5ColorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Color",
+                "printedName": "SwiftUI.Color",
+                "usr": "s:7SwiftUI5ColorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Color",
+                "printedName": "SwiftUI.Color",
+                "hasDefaultArg": true,
+                "usr": "s:7SwiftUI5ColorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Color",
+                "printedName": "SwiftUI.Color",
+                "hasDefaultArg": true,
+                "usr": "s:7SwiftUI5ColorV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9ToastView0A5ThemeV9textColor02bgE006loaderE0014completionIconE0AC7SwiftUI0E0V_A3Jtcfc",
+            "mangledName": "$s9ToastView0A5ThemeV9textColor02bgE006loaderE0014completionIconE0AC7SwiftUI0E0V_A3Jtcfc",
+            "moduleName": "ToastView",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:9ToastView0A5ThemeV",
+        "mangledName": "$s9ToastView0A5ThemeV",
+        "moduleName": "ToastView",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ToastPosition",
+        "printedName": "ToastPosition",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "top",
+            "printedName": "top",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ToastView.ToastPosition.Type) -> ToastView.ToastPosition",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ToastPosition",
+                    "printedName": "ToastView.ToastPosition",
+                    "usr": "s:9ToastView0A8PositionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ToastView.ToastPosition.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ToastPosition",
+                        "printedName": "ToastView.ToastPosition",
+                        "usr": "s:9ToastView0A8PositionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9ToastView0A8PositionO3topyA2CmF",
+            "mangledName": "$s9ToastView0A8PositionO3topyA2CmF",
+            "moduleName": "ToastView"
+          },
+          {
+            "kind": "Var",
+            "name": "bottom",
+            "printedName": "bottom",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ToastView.ToastPosition.Type) -> ToastView.ToastPosition",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ToastPosition",
+                    "printedName": "ToastView.ToastPosition",
+                    "usr": "s:9ToastView0A8PositionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ToastView.ToastPosition.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ToastPosition",
+                        "printedName": "ToastView.ToastPosition",
+                        "usr": "s:9ToastView0A8PositionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:9ToastView0A8PositionO6bottomyA2CmF",
+            "mangledName": "$s9ToastView0A8PositionO6bottomyA2CmF",
+            "moduleName": "ToastView"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ToastPosition",
+                "printedName": "ToastView.ToastPosition",
+                "usr": "s:9ToastView0A8PositionO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ToastPosition",
+                "printedName": "ToastView.ToastPosition",
+                "usr": "s:9ToastView0A8PositionO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9ToastView0A8PositionO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s9ToastView0A8PositionO2eeoiySbAC_ACtFZ",
+            "moduleName": "ToastView",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9ToastView0A8PositionO9hashValueSivp",
+            "mangledName": "$s9ToastView0A8PositionO9hashValueSivp",
+            "moduleName": "ToastView",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9ToastView0A8PositionO9hashValueSivg",
+                "mangledName": "$s9ToastView0A8PositionO9hashValueSivg",
+                "moduleName": "ToastView",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9ToastView0A8PositionO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s9ToastView0A8PositionO4hash4intoys6HasherVz_tF",
+            "moduleName": "ToastView",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:9ToastView0A8PositionO",
+        "mangledName": "$s9ToastView0A8PositionO",
+        "moduleName": "ToastView",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ToastView",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "ToastView"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ToastView",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ToastView"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ToastView"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "ToastView"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ToastPresenter",
+        "printedName": "ToastPresenter",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ToastPresenter",
+                "printedName": "ToastView.ToastPresenter",
+                "usr": "s:9ToastView0A9PresenterC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9ToastView0A9PresenterCACycfc",
+            "mangledName": "$s9ToastView0A9PresenterCACycfc",
+            "moduleName": "ToastView",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "showToast",
+            "printedName": "showToast(in:message:buttons:duration:position:theme:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[(title: Swift.String, titleColor: SwiftUI.Color, action: () -> ())]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(title: Swift.String, titleColor: SwiftUI.Color, action: () -> ())",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Color",
+                        "printedName": "SwiftUI.Color",
+                        "usr": "s:7SwiftUI5ColorV"
+                      },
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ToastPosition",
+                "printedName": "ToastView.ToastPosition",
+                "hasDefaultArg": true,
+                "usr": "s:9ToastView0A8PositionO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ToastTheme",
+                "printedName": "ToastView.ToastTheme",
+                "usr": "s:9ToastView0A5ThemeV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9ToastView0A9PresenterC04showA02in7message7buttons8duration8position5themeySo6UIViewC_SSSaySS5title_7SwiftUI5ColorV0lO0yyc6actiontGSdAA0A8PositionOAA0A5ThemeVtF",
+            "mangledName": "$s9ToastView0A9PresenterC04showA02in7message7buttons8duration8position5themeySo6UIViewC_SSSaySS5title_7SwiftUI5ColorV0lO0yyc6actiontGSdAA0A8PositionOAA0A5ThemeVtF",
+            "moduleName": "ToastView",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showActionToast",
+            "printedName": "showActionToast(in:message:buttons:position:theme:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[(title: Swift.String, titleColor: SwiftUI.Color, successMessage: Swift.String, failureMessage: Swift.String, action: () async -> Swift.Bool)]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(title: Swift.String, titleColor: SwiftUI.Color, successMessage: Swift.String, failureMessage: Swift.String, action: () async -> Swift.Bool)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Color",
+                        "printedName": "SwiftUI.Color",
+                        "usr": "s:7SwiftUI5ColorV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() async -> Swift.Bool",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ToastPosition",
+                "printedName": "ToastView.ToastPosition",
+                "hasDefaultArg": true,
+                "usr": "s:9ToastView0A8PositionO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ToastTheme",
+                "printedName": "ToastView.ToastTheme",
+                "usr": "s:9ToastView0A5ThemeV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9ToastView0A9PresenterC010showActionA02in7message7buttons8position5themeySo6UIViewC_SSSaySS5title_7SwiftUI5ColorV0lO0SS14successMessageSS07failureQ0SbyYac6actiontGAA0A8PositionOAA0A5ThemeVtF",
+            "mangledName": "$s9ToastView0A9PresenterC010showActionA02in7message7buttons8position5themeySo6UIViewC_SSSaySS5title_7SwiftUI5ColorV0lO0SS14successMessageSS07failureQ0SbyYac6actiontGAA0A8PositionOAA0A5ThemeVtF",
+            "moduleName": "ToastView",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showLoaderToast",
+            "printedName": "showLoaderToast(in:message:position:theme:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ToastPosition",
+                "printedName": "ToastView.ToastPosition",
+                "hasDefaultArg": true,
+                "usr": "s:9ToastView0A8PositionO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ToastTheme",
+                "printedName": "ToastView.ToastTheme",
+                "usr": "s:9ToastView0A5ThemeV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9ToastView0A9PresenterC010showLoaderA02in7message8position5themeySo6UIViewC_SSAA0A8PositionOAA0A5ThemeVtF",
+            "mangledName": "$s9ToastView0A9PresenterC010showLoaderA02in7message8position5themeySo6UIViewC_SSAA0A8PositionOAA0A5ThemeVtF",
+            "moduleName": "ToastView",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dismissToast",
+            "printedName": "dismissToast()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9ToastView0A9PresenterC07dismissA0yyF",
+            "mangledName": "$s9ToastView0A9PresenterC07dismissA0yyF",
+            "moduleName": "ToastView",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:9ToastView0A9PresenterC",
+        "mangledName": "$s9ToastView0A9PresenterC",
+        "moduleName": "ToastView",
+        "declAttributes": [
+          "AccessControl",
+          "Available"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ToastView",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ToastView"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit_Extention",
+        "printedName": "UIKit_Extention",
+        "declKind": "Import",
+        "moduleName": "ToastView"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/ToastView\/Views\/ToastNotification.swift",
+      "kind": "BooleanLiteral",
+      "offset": 673,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/ToastView\/Views\/ToastNotification.swift",
+      "kind": "BooleanLiteral",
+      "offset": 707,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/ToastView\/Views\/ToastNotification.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1630,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/ToastView\/Views\/ToastPresenter.swift",
+      "kind": "Array",
+      "offset": 527,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/ToastView\/Views\/ToastView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2265,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/ToastView\/Views\/ToastView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3160,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/ToastView\/Views\/ToastView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3201,
+      "length": 5,
+      "value": "false"
+    }
+  ]
+}

@@ -1,0 +1,2440 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "ZSocketHandler",
+    "printedName": "ZSocketHandler",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZSocketHandler",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZSocketHandler",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Reachability",
+        "printedName": "Reachability",
+        "declKind": "Import",
+        "moduleName": "ZSocketHandler"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SocketHandler",
+        "printedName": "SocketHandler",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "socket",
+            "printedName": "socket",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any ZSocketHandler.WebSocketProtocol)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WebSocketProtocol",
+                    "printedName": "any ZSocketHandler.WebSocketProtocol",
+                    "usr": "s:14ZSocketHandler17WebSocketProtocolP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ZSocketHandler06SocketB0C6socketAA03WebC8Protocol_pSgvp",
+            "mangledName": "$s14ZSocketHandler06SocketB0C6socketAA03WebC8Protocol_pSgvp",
+            "moduleName": "ZSocketHandler",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any ZSocketHandler.WebSocketProtocol)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WebSocketProtocol",
+                        "printedName": "any ZSocketHandler.WebSocketProtocol",
+                        "usr": "s:14ZSocketHandler17WebSocketProtocolP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler06SocketB0C6socketAA03WebC8Protocol_pSgvg",
+                "mangledName": "$s14ZSocketHandler06SocketB0C6socketAA03WebC8Protocol_pSgvg",
+                "moduleName": "ZSocketHandler",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any ZSocketHandler.WebSocketProtocol)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "WebSocketProtocol",
+                        "printedName": "any ZSocketHandler.WebSocketProtocol",
+                        "usr": "s:14ZSocketHandler17WebSocketProtocolP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler06SocketB0C6socketAA03WebC8Protocol_pSgvs",
+                "mangledName": "$s14ZSocketHandler06SocketB0C6socketAA03WebC8Protocol_pSgvs",
+                "moduleName": "ZSocketHandler",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler06SocketB0C6socketAA03WebC8Protocol_pSgvM",
+                "mangledName": "$s14ZSocketHandler06SocketB0C6socketAA03WebC8Protocol_pSgvM",
+                "moduleName": "ZSocketHandler",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timeOut",
+            "printedName": "timeOut",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ZSocketHandler06SocketB0C7timeOutSdvp",
+            "mangledName": "$s14ZSocketHandler06SocketB0C7timeOutSdvp",
+            "moduleName": "ZSocketHandler",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler06SocketB0C7timeOutSdvg",
+                "mangledName": "$s14ZSocketHandler06SocketB0C7timeOutSdvg",
+                "moduleName": "ZSocketHandler",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler06SocketB0C7timeOutSdvs",
+                "mangledName": "$s14ZSocketHandler06SocketB0C7timeOutSdvs",
+                "moduleName": "ZSocketHandler",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler06SocketB0C7timeOutSdvM",
+                "mangledName": "$s14ZSocketHandler06SocketB0C7timeOutSdvM",
+                "moduleName": "ZSocketHandler",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "reachability",
+            "printedName": "reachability",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Reachability.ZReachability?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ZReachability",
+                    "printedName": "Reachability.ZReachability",
+                    "usr": "s:12Reachability13ZReachabilityC"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ZSocketHandler06SocketB0C12reachability12Reachability13ZReachabilityCSgvp",
+            "mangledName": "$s14ZSocketHandler06SocketB0C12reachability12Reachability13ZReachabilityCSgvp",
+            "moduleName": "ZSocketHandler",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Reachability.ZReachability?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZReachability",
+                        "printedName": "Reachability.ZReachability",
+                        "usr": "s:12Reachability13ZReachabilityC"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler06SocketB0C12reachability12Reachability13ZReachabilityCSgvg",
+                "mangledName": "$s14ZSocketHandler06SocketB0C12reachability12Reachability13ZReachabilityCSgvg",
+                "moduleName": "ZSocketHandler",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Reachability.ZReachability?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ZReachability",
+                        "printedName": "Reachability.ZReachability",
+                        "usr": "s:12Reachability13ZReachabilityC"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler06SocketB0C12reachability12Reachability13ZReachabilityCSgvs",
+                "mangledName": "$s14ZSocketHandler06SocketB0C12reachability12Reachability13ZReachabilityCSgvs",
+                "moduleName": "ZSocketHandler",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler06SocketB0C12reachability12Reachability13ZReachabilityCSgvM",
+                "mangledName": "$s14ZSocketHandler06SocketB0C12reachability12Reachability13ZReachabilityCSgvM",
+                "moduleName": "ZSocketHandler",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "gateWayUrlRequest",
+            "printedName": "gateWayUrlRequest",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "Foundation.URLRequest?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URLRequest",
+                    "printedName": "Foundation.URLRequest",
+                    "usr": "s:10Foundation10URLRequestV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ZSocketHandler06SocketB0C17gateWayUrlRequest10Foundation10URLRequestVSgvp",
+            "mangledName": "$s14ZSocketHandler06SocketB0C17gateWayUrlRequest10Foundation10URLRequestVSgvp",
+            "moduleName": "ZSocketHandler",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "Foundation.URLRequest?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URLRequest",
+                        "printedName": "Foundation.URLRequest",
+                        "usr": "s:10Foundation10URLRequestV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler06SocketB0C17gateWayUrlRequest10Foundation10URLRequestVSgvg",
+                "mangledName": "$s14ZSocketHandler06SocketB0C17gateWayUrlRequest10Foundation10URLRequestVSgvg",
+                "moduleName": "ZSocketHandler",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "Foundation.URLRequest?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URLRequest",
+                        "printedName": "Foundation.URLRequest",
+                        "usr": "s:10Foundation10URLRequestV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler06SocketB0C17gateWayUrlRequest10Foundation10URLRequestVSgvs",
+                "mangledName": "$s14ZSocketHandler06SocketB0C17gateWayUrlRequest10Foundation10URLRequestVSgvs",
+                "moduleName": "ZSocketHandler",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler06SocketB0C17gateWayUrlRequest10Foundation10URLRequestVSgvM",
+                "mangledName": "$s14ZSocketHandler06SocketB0C17gateWayUrlRequest10Foundation10URLRequestVSgvM",
+                "moduleName": "ZSocketHandler",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "writeQoS",
+            "printedName": "writeQoS",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "QualityOfService",
+                "printedName": "Foundation.QualityOfService",
+                "usr": "c:@E@NSQualityOfService"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ZSocketHandler06SocketB0C8writeQoSSo18NSQualityOfServiceVvp",
+            "mangledName": "$s14ZSocketHandler06SocketB0C8writeQoSSo18NSQualityOfServiceVvp",
+            "moduleName": "ZSocketHandler",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "QualityOfService",
+                    "printedName": "Foundation.QualityOfService",
+                    "usr": "c:@E@NSQualityOfService"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler06SocketB0C8writeQoSSo18NSQualityOfServiceVvg",
+                "mangledName": "$s14ZSocketHandler06SocketB0C8writeQoSSo18NSQualityOfServiceVvg",
+                "moduleName": "ZSocketHandler",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "readQoS",
+            "printedName": "readQoS",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "QualityOfService",
+                "printedName": "Foundation.QualityOfService",
+                "usr": "c:@E@NSQualityOfService"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ZSocketHandler06SocketB0C7readQoSSo18NSQualityOfServiceVvp",
+            "mangledName": "$s14ZSocketHandler06SocketB0C7readQoSSo18NSQualityOfServiceVvp",
+            "moduleName": "ZSocketHandler",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "QualityOfService",
+                    "printedName": "Foundation.QualityOfService",
+                    "usr": "c:@E@NSQualityOfService"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler06SocketB0C7readQoSSo18NSQualityOfServiceVvg",
+                "mangledName": "$s14ZSocketHandler06SocketB0C7readQoSSo18NSQualityOfServiceVvg",
+                "moduleName": "ZSocketHandler",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "disableSSLCertValidation",
+            "printedName": "disableSSLCertValidation",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ZSocketHandler06SocketB0C24disableSSLCertValidationSbvp",
+            "mangledName": "$s14ZSocketHandler06SocketB0C24disableSSLCertValidationSbvp",
+            "moduleName": "ZSocketHandler",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler06SocketB0C24disableSSLCertValidationSbvg",
+                "mangledName": "$s14ZSocketHandler06SocketB0C24disableSSLCertValidationSbvg",
+                "moduleName": "ZSocketHandler",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler06SocketB0C24disableSSLCertValidationSbvs",
+                "mangledName": "$s14ZSocketHandler06SocketB0C24disableSSLCertValidationSbvs",
+                "moduleName": "ZSocketHandler",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler06SocketB0C24disableSSLCertValidationSbvM",
+                "mangledName": "$s14ZSocketHandler06SocketB0C24disableSSLCertValidationSbvM",
+                "moduleName": "ZSocketHandler",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isConnected",
+            "printedName": "isConnected",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ZSocketHandler06SocketB0C11isConnectedSbvp",
+            "mangledName": "$s14ZSocketHandler06SocketB0C11isConnectedSbvp",
+            "moduleName": "ZSocketHandler",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler06SocketB0C11isConnectedSbvg",
+                "mangledName": "$s14ZSocketHandler06SocketB0C11isConnectedSbvg",
+                "moduleName": "ZSocketHandler",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:writeQoS:readQoS:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SocketHandler",
+                "printedName": "ZSocketHandler.SocketHandler",
+                "usr": "s:14ZSocketHandler06SocketB0C"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "QualityOfService",
+                "printedName": "Foundation.QualityOfService",
+                "usr": "c:@E@NSQualityOfService"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "QualityOfService",
+                "printedName": "Foundation.QualityOfService",
+                "usr": "c:@E@NSQualityOfService"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14ZSocketHandler06SocketB0C_8writeQoS04readE1SAC10Foundation10URLRequestV_So18NSQualityOfServiceVAJtcfc",
+            "mangledName": "$s14ZSocketHandler06SocketB0C_8writeQoS04readE1SAC10Foundation10URLRequestV_So18NSQualityOfServiceVAJtcfc",
+            "moduleName": "ZSocketHandler",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler06SocketB0C5startyyF",
+            "mangledName": "$s14ZSocketHandler06SocketB0C5startyyF",
+            "moduleName": "ZSocketHandler",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addListerner",
+            "printedName": "addListerner(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DisposableObserver",
+                "printedName": "ZSocketHandler.DisposableObserver",
+                "usr": "s:14ZSocketHandler18DisposableObserverC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AssistSocketProtocol",
+                "printedName": "any ZSocketHandler.AssistSocketProtocol",
+                "usr": "s:14ZSocketHandler20AssistSocketProtocolP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler06SocketB0C12addListerneryAA18DisposableObserverCAA06AssistC8Protocol_pF",
+            "mangledName": "$s14ZSocketHandler06SocketB0C12addListerneryAA18DisposableObserverCAA06AssistC8Protocol_pF",
+            "moduleName": "ZSocketHandler",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeListerner",
+            "printedName": "removeListerner(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DisposableObserver",
+                "printedName": "ZSocketHandler.DisposableObserver",
+                "usr": "s:14ZSocketHandler18DisposableObserverC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler06SocketB0C15removeListerneryyAA18DisposableObserverCF",
+            "mangledName": "$s14ZSocketHandler06SocketB0C15removeListerneryyAA18DisposableObserverCF",
+            "moduleName": "ZSocketHandler",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler06SocketB0C5writeyySSSgF",
+            "mangledName": "$s14ZSocketHandler06SocketB0C5writeyySSSgF",
+            "moduleName": "ZSocketHandler",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler06SocketB0C5writeyy10Foundation4DataVSgF",
+            "mangledName": "$s14ZSocketHandler06SocketB0C5writeyy10Foundation4DataVSgF",
+            "moduleName": "ZSocketHandler",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disconnect",
+            "printedName": "disconnect()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler06SocketB0C10disconnectyyF",
+            "mangledName": "$s14ZSocketHandler06SocketB0C10disconnectyyF",
+            "moduleName": "ZSocketHandler",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "reset",
+            "printedName": "reset()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler06SocketB0C5resetyyF",
+            "mangledName": "$s14ZSocketHandler06SocketB0C5resetyyF",
+            "moduleName": "ZSocketHandler",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onConnect",
+            "printedName": "onConnect()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler06SocketB0C9onConnectyyF",
+            "mangledName": "$s14ZSocketHandler06SocketB0C9onConnectyyF",
+            "moduleName": "ZSocketHandler",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onDisconnect",
+            "printedName": "onDisconnect(error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any Swift.Error)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler06SocketB0C12onDisconnect5errorys5Error_pSg_tF",
+            "mangledName": "$s14ZSocketHandler06SocketB0C12onDisconnect5errorys5Error_pSg_tF",
+            "moduleName": "ZSocketHandler",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onTextReceive",
+            "printedName": "onTextReceive(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler06SocketB0C13onTextReceiveyySSF",
+            "mangledName": "$s14ZSocketHandler06SocketB0C13onTextReceiveyySSF",
+            "moduleName": "ZSocketHandler",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onDataReceive",
+            "printedName": "onDataReceive(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler06SocketB0C13onDataReceiveyy10Foundation0E0VF",
+            "mangledName": "$s14ZSocketHandler06SocketB0C13onDataReceiveyy10Foundation0E0VF",
+            "moduleName": "ZSocketHandler",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:14ZSocketHandler06SocketB0C",
+        "mangledName": "$s14ZSocketHandler06SocketB0C",
+        "moduleName": "ZSocketHandler",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "WebSocketCallBack",
+            "printedName": "WebSocketCallBack",
+            "usr": "s:14ZSocketHandler17WebSocketCallBackP",
+            "mangledName": "$s14ZSocketHandler17WebSocketCallBackP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZSocketHandler",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ZSocketHandler"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AssistSocketProtocol",
+        "printedName": "AssistSocketProtocol",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "didSocketConnected",
+            "printedName": "didSocketConnected()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler20AssistSocketProtocolP03didD9ConnectedyyF",
+            "mangledName": "$s14ZSocketHandler20AssistSocketProtocolP03didD9ConnectedyyF",
+            "moduleName": "ZSocketHandler",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZSocketHandler.AssistSocketProtocol>",
+            "sugared_genericSig": "<Self where Self : ZSocketHandler.AssistSocketProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didSocketDisconnected",
+            "printedName": "didSocketDisconnected(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any Swift.Error)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler20AssistSocketProtocolP03didD12Disconnectedyys5Error_pSgF",
+            "mangledName": "$s14ZSocketHandler20AssistSocketProtocolP03didD12Disconnectedyys5Error_pSgF",
+            "moduleName": "ZSocketHandler",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZSocketHandler.AssistSocketProtocol>",
+            "sugared_genericSig": "<Self where Self : ZSocketHandler.AssistSocketProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didReceive",
+            "printedName": "didReceive(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler20AssistSocketProtocolP10didReceiveyy10Foundation4DataVF",
+            "mangledName": "$s14ZSocketHandler20AssistSocketProtocolP10didReceiveyy10Foundation4DataVF",
+            "moduleName": "ZSocketHandler",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZSocketHandler.AssistSocketProtocol>",
+            "sugared_genericSig": "<Self where Self : ZSocketHandler.AssistSocketProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didReceive",
+            "printedName": "didReceive(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler20AssistSocketProtocolP10didReceiveyySSF",
+            "mangledName": "$s14ZSocketHandler20AssistSocketProtocolP10didReceiveyySSF",
+            "moduleName": "ZSocketHandler",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZSocketHandler.AssistSocketProtocol>",
+            "sugared_genericSig": "<Self where Self : ZSocketHandler.AssistSocketProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "custom_socket",
+            "printedName": "custom_socket(call_back:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any ZSocketHandler.WebSocketProtocol)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WebSocketProtocol",
+                    "printedName": "any ZSocketHandler.WebSocketProtocol",
+                    "usr": "s:14ZSocketHandler17WebSocketProtocolP"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WebSocketCallBack",
+                "printedName": "any ZSocketHandler.WebSocketCallBack",
+                "usr": "s:14ZSocketHandler17WebSocketCallBackP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler20AssistSocketProtocolP13custom_socket9call_backAA03WebdE0_pSgAA0jD8CallBack_p_tF",
+            "mangledName": "$s14ZSocketHandler20AssistSocketProtocolP13custom_socket9call_backAA03WebdE0_pSgAA0jD8CallBack_p_tF",
+            "moduleName": "ZSocketHandler",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZSocketHandler.AssistSocketProtocol>",
+            "sugared_genericSig": "<Self where Self : ZSocketHandler.AssistSocketProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "canReceiveData",
+            "printedName": "canReceiveData",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ZSocketHandler20AssistSocketProtocolP14canReceiveDataSbvp",
+            "mangledName": "$s14ZSocketHandler20AssistSocketProtocolP14canReceiveDataSbvp",
+            "moduleName": "ZSocketHandler",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler20AssistSocketProtocolP14canReceiveDataSbvg",
+                "mangledName": "$s14ZSocketHandler20AssistSocketProtocolP14canReceiveDataSbvg",
+                "moduleName": "ZSocketHandler",
+                "genericSig": "<τ_0_0 where τ_0_0 : ZSocketHandler.AssistSocketProtocol>",
+                "sugared_genericSig": "<Self where Self : ZSocketHandler.AssistSocketProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler20AssistSocketProtocolP14canReceiveDataSbvs",
+                "mangledName": "$s14ZSocketHandler20AssistSocketProtocolP14canReceiveDataSbvs",
+                "moduleName": "ZSocketHandler",
+                "genericSig": "<τ_0_0 where τ_0_0 : ZSocketHandler.AssistSocketProtocol>",
+                "sugared_genericSig": "<Self where Self : ZSocketHandler.AssistSocketProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler20AssistSocketProtocolP14canReceiveDataSbvM",
+                "mangledName": "$s14ZSocketHandler20AssistSocketProtocolP14canReceiveDataSbvM",
+                "moduleName": "ZSocketHandler",
+                "genericSig": "<τ_0_0 where τ_0_0 : ZSocketHandler.AssistSocketProtocol>",
+                "sugared_genericSig": "<Self where Self : ZSocketHandler.AssistSocketProtocol>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:14ZSocketHandler20AssistSocketProtocolP",
+        "mangledName": "$s14ZSocketHandler20AssistSocketProtocolP",
+        "moduleName": "ZSocketHandler",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "WebSocketCallBack",
+        "printedName": "WebSocketCallBack",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "onConnect",
+            "printedName": "onConnect()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler17WebSocketCallBackP9onConnectyyF",
+            "mangledName": "$s14ZSocketHandler17WebSocketCallBackP9onConnectyyF",
+            "moduleName": "ZSocketHandler",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZSocketHandler.WebSocketCallBack>",
+            "sugared_genericSig": "<Self where Self : ZSocketHandler.WebSocketCallBack>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onDisconnect",
+            "printedName": "onDisconnect(error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any Swift.Error)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler17WebSocketCallBackP12onDisconnect5errorys5Error_pSg_tF",
+            "mangledName": "$s14ZSocketHandler17WebSocketCallBackP12onDisconnect5errorys5Error_pSg_tF",
+            "moduleName": "ZSocketHandler",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZSocketHandler.WebSocketCallBack>",
+            "sugared_genericSig": "<Self where Self : ZSocketHandler.WebSocketCallBack>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onTextReceive",
+            "printedName": "onTextReceive(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler17WebSocketCallBackP13onTextReceiveyySSF",
+            "mangledName": "$s14ZSocketHandler17WebSocketCallBackP13onTextReceiveyySSF",
+            "moduleName": "ZSocketHandler",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZSocketHandler.WebSocketCallBack>",
+            "sugared_genericSig": "<Self where Self : ZSocketHandler.WebSocketCallBack>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onDataReceive",
+            "printedName": "onDataReceive(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler17WebSocketCallBackP13onDataReceiveyy10Foundation0H0VF",
+            "mangledName": "$s14ZSocketHandler17WebSocketCallBackP13onDataReceiveyy10Foundation0H0VF",
+            "moduleName": "ZSocketHandler",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZSocketHandler.WebSocketCallBack>",
+            "sugared_genericSig": "<Self where Self : ZSocketHandler.WebSocketCallBack>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:14ZSocketHandler17WebSocketCallBackP",
+        "mangledName": "$s14ZSocketHandler17WebSocketCallBackP",
+        "moduleName": "ZSocketHandler",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "WebSocketProtocol",
+        "printedName": "WebSocketProtocol",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "disableSSLCertValidation",
+            "printedName": "disableSSLCertValidation",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ZSocketHandler17WebSocketProtocolP24disableSSLCertValidationSbvp",
+            "mangledName": "$s14ZSocketHandler17WebSocketProtocolP24disableSSLCertValidationSbvp",
+            "moduleName": "ZSocketHandler",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler17WebSocketProtocolP24disableSSLCertValidationSbvg",
+                "mangledName": "$s14ZSocketHandler17WebSocketProtocolP24disableSSLCertValidationSbvg",
+                "moduleName": "ZSocketHandler",
+                "genericSig": "<τ_0_0 where τ_0_0 : ZSocketHandler.WebSocketProtocol>",
+                "sugared_genericSig": "<Self where Self : ZSocketHandler.WebSocketProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler17WebSocketProtocolP24disableSSLCertValidationSbvs",
+                "mangledName": "$s14ZSocketHandler17WebSocketProtocolP24disableSSLCertValidationSbvs",
+                "moduleName": "ZSocketHandler",
+                "genericSig": "<τ_0_0 where τ_0_0 : ZSocketHandler.WebSocketProtocol>",
+                "sugared_genericSig": "<Self where Self : ZSocketHandler.WebSocketProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler17WebSocketProtocolP24disableSSLCertValidationSbvM",
+                "mangledName": "$s14ZSocketHandler17WebSocketProtocolP24disableSSLCertValidationSbvM",
+                "moduleName": "ZSocketHandler",
+                "genericSig": "<τ_0_0 where τ_0_0 : ZSocketHandler.WebSocketProtocol>",
+                "sugared_genericSig": "<Self where Self : ZSocketHandler.WebSocketProtocol>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "is_connected",
+            "printedName": "is_connected",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ZSocketHandler17WebSocketProtocolP12is_connectedSbvp",
+            "mangledName": "$s14ZSocketHandler17WebSocketProtocolP12is_connectedSbvp",
+            "moduleName": "ZSocketHandler",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler17WebSocketProtocolP12is_connectedSbvg",
+                "mangledName": "$s14ZSocketHandler17WebSocketProtocolP12is_connectedSbvg",
+                "moduleName": "ZSocketHandler",
+                "genericSig": "<τ_0_0 where τ_0_0 : ZSocketHandler.WebSocketProtocol>",
+                "sugared_genericSig": "<Self where Self : ZSocketHandler.WebSocketProtocol>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "disconnect",
+            "printedName": "disconnect()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler17WebSocketProtocolP10disconnectyyF",
+            "mangledName": "$s14ZSocketHandler17WebSocketProtocolP10disconnectyyF",
+            "moduleName": "ZSocketHandler",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZSocketHandler.WebSocketProtocol>",
+            "sugared_genericSig": "<Self where Self : ZSocketHandler.WebSocketProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler17WebSocketProtocolP5write4datay10Foundation4DataV_tF",
+            "mangledName": "$s14ZSocketHandler17WebSocketProtocolP5write4datay10Foundation4DataV_tF",
+            "moduleName": "ZSocketHandler",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZSocketHandler.WebSocketProtocol>",
+            "sugared_genericSig": "<Self where Self : ZSocketHandler.WebSocketProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "write",
+            "printedName": "write(string:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler17WebSocketProtocolP5write6stringySS_tF",
+            "mangledName": "$s14ZSocketHandler17WebSocketProtocolP5write6stringySS_tF",
+            "moduleName": "ZSocketHandler",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZSocketHandler.WebSocketProtocol>",
+            "sugared_genericSig": "<Self where Self : ZSocketHandler.WebSocketProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "connect",
+            "printedName": "connect(websocket:delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any ZSocketHandler.WebSocketCallBack)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WebSocketCallBack",
+                    "printedName": "any ZSocketHandler.WebSocketCallBack",
+                    "usr": "s:14ZSocketHandler17WebSocketCallBackP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler17WebSocketProtocolP7connect9websocket8delegatey10Foundation10URLRequestV_AA0cD8CallBack_pSgtF",
+            "mangledName": "$s14ZSocketHandler17WebSocketProtocolP7connect9websocket8delegatey10Foundation10URLRequestV_AA0cD8CallBack_pSgtF",
+            "moduleName": "ZSocketHandler",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZSocketHandler.WebSocketProtocol>",
+            "sugared_genericSig": "<Self where Self : ZSocketHandler.WebSocketProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "lostNetwork",
+            "printedName": "lostNetwork()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler17WebSocketProtocolP11lostNetworkyyF",
+            "mangledName": "$s14ZSocketHandler17WebSocketProtocolP11lostNetworkyyF",
+            "moduleName": "ZSocketHandler",
+            "genericSig": "<τ_0_0 where τ_0_0 : ZSocketHandler.WebSocketProtocol>",
+            "sugared_genericSig": "<Self where Self : ZSocketHandler.WebSocketProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:14ZSocketHandler17WebSocketProtocolP",
+        "mangledName": "$s14ZSocketHandler17WebSocketProtocolP",
+        "moduleName": "ZSocketHandler",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ZSocketHandler",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AssistSocketErrorState",
+        "printedName": "AssistSocketErrorState",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "nointernet",
+            "printedName": "nointernet",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZSocketHandler.AssistSocketErrorState.Type) -> ZSocketHandler.AssistSocketErrorState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AssistSocketErrorState",
+                    "printedName": "ZSocketHandler.AssistSocketErrorState",
+                    "usr": "s:14ZSocketHandler22AssistSocketErrorStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZSocketHandler.AssistSocketErrorState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AssistSocketErrorState",
+                        "printedName": "ZSocketHandler.AssistSocketErrorState",
+                        "usr": "s:14ZSocketHandler22AssistSocketErrorStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14ZSocketHandler22AssistSocketErrorStateO10nointernetyA2CmF",
+            "mangledName": "$s14ZSocketHandler22AssistSocketErrorStateO10nointernetyA2CmF",
+            "moduleName": "ZSocketHandler"
+          },
+          {
+            "kind": "Var",
+            "name": "writeTimeoutError",
+            "printedName": "writeTimeoutError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZSocketHandler.AssistSocketErrorState.Type) -> ZSocketHandler.AssistSocketErrorState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AssistSocketErrorState",
+                    "printedName": "ZSocketHandler.AssistSocketErrorState",
+                    "usr": "s:14ZSocketHandler22AssistSocketErrorStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZSocketHandler.AssistSocketErrorState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AssistSocketErrorState",
+                        "printedName": "ZSocketHandler.AssistSocketErrorState",
+                        "usr": "s:14ZSocketHandler22AssistSocketErrorStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14ZSocketHandler22AssistSocketErrorStateO012writeTimeoutE0yA2CmF",
+            "mangledName": "$s14ZSocketHandler22AssistSocketErrorStateO012writeTimeoutE0yA2CmF",
+            "moduleName": "ZSocketHandler"
+          },
+          {
+            "kind": "Var",
+            "name": "invalidSSLError",
+            "printedName": "invalidSSLError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZSocketHandler.AssistSocketErrorState.Type) -> ZSocketHandler.AssistSocketErrorState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AssistSocketErrorState",
+                    "printedName": "ZSocketHandler.AssistSocketErrorState",
+                    "usr": "s:14ZSocketHandler22AssistSocketErrorStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZSocketHandler.AssistSocketErrorState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AssistSocketErrorState",
+                        "printedName": "ZSocketHandler.AssistSocketErrorState",
+                        "usr": "s:14ZSocketHandler22AssistSocketErrorStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14ZSocketHandler22AssistSocketErrorStateO15invalidSSLErroryA2CmF",
+            "mangledName": "$s14ZSocketHandler22AssistSocketErrorStateO15invalidSSLErroryA2CmF",
+            "moduleName": "ZSocketHandler"
+          },
+          {
+            "kind": "Var",
+            "name": "compressionError",
+            "printedName": "compressionError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZSocketHandler.AssistSocketErrorState.Type) -> ZSocketHandler.AssistSocketErrorState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AssistSocketErrorState",
+                    "printedName": "ZSocketHandler.AssistSocketErrorState",
+                    "usr": "s:14ZSocketHandler22AssistSocketErrorStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZSocketHandler.AssistSocketErrorState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AssistSocketErrorState",
+                        "printedName": "ZSocketHandler.AssistSocketErrorState",
+                        "usr": "s:14ZSocketHandler22AssistSocketErrorStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14ZSocketHandler22AssistSocketErrorStateO011compressionE0yA2CmF",
+            "mangledName": "$s14ZSocketHandler22AssistSocketErrorStateO011compressionE0yA2CmF",
+            "moduleName": "ZSocketHandler"
+          },
+          {
+            "kind": "Var",
+            "name": "outputStreamWriteError",
+            "printedName": "outputStreamWriteError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZSocketHandler.AssistSocketErrorState.Type) -> ZSocketHandler.AssistSocketErrorState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AssistSocketErrorState",
+                    "printedName": "ZSocketHandler.AssistSocketErrorState",
+                    "usr": "s:14ZSocketHandler22AssistSocketErrorStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZSocketHandler.AssistSocketErrorState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AssistSocketErrorState",
+                        "printedName": "ZSocketHandler.AssistSocketErrorState",
+                        "usr": "s:14ZSocketHandler22AssistSocketErrorStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14ZSocketHandler22AssistSocketErrorStateO017outputStreamWriteE0yA2CmF",
+            "mangledName": "$s14ZSocketHandler22AssistSocketErrorStateO017outputStreamWriteE0yA2CmF",
+            "moduleName": "ZSocketHandler"
+          },
+          {
+            "kind": "Var",
+            "name": "protocolError",
+            "printedName": "protocolError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZSocketHandler.AssistSocketErrorState.Type) -> ZSocketHandler.AssistSocketErrorState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AssistSocketErrorState",
+                    "printedName": "ZSocketHandler.AssistSocketErrorState",
+                    "usr": "s:14ZSocketHandler22AssistSocketErrorStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZSocketHandler.AssistSocketErrorState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AssistSocketErrorState",
+                        "printedName": "ZSocketHandler.AssistSocketErrorState",
+                        "usr": "s:14ZSocketHandler22AssistSocketErrorStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14ZSocketHandler22AssistSocketErrorStateO08protocolE0yA2CmF",
+            "mangledName": "$s14ZSocketHandler22AssistSocketErrorStateO08protocolE0yA2CmF",
+            "moduleName": "ZSocketHandler"
+          },
+          {
+            "kind": "Var",
+            "name": "upgradeError",
+            "printedName": "upgradeError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZSocketHandler.AssistSocketErrorState.Type) -> ZSocketHandler.AssistSocketErrorState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AssistSocketErrorState",
+                    "printedName": "ZSocketHandler.AssistSocketErrorState",
+                    "usr": "s:14ZSocketHandler22AssistSocketErrorStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZSocketHandler.AssistSocketErrorState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AssistSocketErrorState",
+                        "printedName": "ZSocketHandler.AssistSocketErrorState",
+                        "usr": "s:14ZSocketHandler22AssistSocketErrorStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14ZSocketHandler22AssistSocketErrorStateO07upgradeE0yA2CmF",
+            "mangledName": "$s14ZSocketHandler22AssistSocketErrorStateO07upgradeE0yA2CmF",
+            "moduleName": "ZSocketHandler"
+          },
+          {
+            "kind": "Var",
+            "name": "closeError",
+            "printedName": "closeError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZSocketHandler.AssistSocketErrorState.Type) -> ZSocketHandler.AssistSocketErrorState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AssistSocketErrorState",
+                    "printedName": "ZSocketHandler.AssistSocketErrorState",
+                    "usr": "s:14ZSocketHandler22AssistSocketErrorStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZSocketHandler.AssistSocketErrorState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AssistSocketErrorState",
+                        "printedName": "ZSocketHandler.AssistSocketErrorState",
+                        "usr": "s:14ZSocketHandler22AssistSocketErrorStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14ZSocketHandler22AssistSocketErrorStateO05closeE0yA2CmF",
+            "mangledName": "$s14ZSocketHandler22AssistSocketErrorStateO05closeE0yA2CmF",
+            "moduleName": "ZSocketHandler"
+          },
+          {
+            "kind": "Var",
+            "name": "connectionTimeOut",
+            "printedName": "connectionTimeOut",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ZSocketHandler.AssistSocketErrorState.Type) -> ZSocketHandler.AssistSocketErrorState",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AssistSocketErrorState",
+                    "printedName": "ZSocketHandler.AssistSocketErrorState",
+                    "usr": "s:14ZSocketHandler22AssistSocketErrorStateO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ZSocketHandler.AssistSocketErrorState.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AssistSocketErrorState",
+                        "printedName": "ZSocketHandler.AssistSocketErrorState",
+                        "usr": "s:14ZSocketHandler22AssistSocketErrorStateO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:14ZSocketHandler22AssistSocketErrorStateO17connectionTimeOutyA2CmF",
+            "mangledName": "$s14ZSocketHandler22AssistSocketErrorStateO17connectionTimeOutyA2CmF",
+            "moduleName": "ZSocketHandler"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AssistSocketErrorState",
+                "printedName": "ZSocketHandler.AssistSocketErrorState",
+                "usr": "s:14ZSocketHandler22AssistSocketErrorStateO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AssistSocketErrorState",
+                "printedName": "ZSocketHandler.AssistSocketErrorState",
+                "usr": "s:14ZSocketHandler22AssistSocketErrorStateO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler22AssistSocketErrorStateO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s14ZSocketHandler22AssistSocketErrorStateO2eeoiySbAC_ACtFZ",
+            "moduleName": "ZSocketHandler",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ZSocketHandler22AssistSocketErrorStateO9hashValueSivp",
+            "mangledName": "$s14ZSocketHandler22AssistSocketErrorStateO9hashValueSivp",
+            "moduleName": "ZSocketHandler",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ZSocketHandler22AssistSocketErrorStateO9hashValueSivg",
+                "mangledName": "$s14ZSocketHandler22AssistSocketErrorStateO9hashValueSivg",
+                "moduleName": "ZSocketHandler",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler22AssistSocketErrorStateO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s14ZSocketHandler22AssistSocketErrorStateO4hash4intoys6HasherVz_tF",
+            "moduleName": "ZSocketHandler",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:14ZSocketHandler22AssistSocketErrorStateO",
+        "mangledName": "$s14ZSocketHandler22AssistSocketErrorStateO",
+        "moduleName": "ZSocketHandler",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DisposableObserver",
+        "printedName": "DisposableObserver",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DisposableObserver",
+                "printedName": "ZSocketHandler.DisposableObserver",
+                "usr": "s:14ZSocketHandler18DisposableObserverC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DisposableObserver",
+                "printedName": "ZSocketHandler.DisposableObserver",
+                "usr": "s:14ZSocketHandler18DisposableObserverC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ZSocketHandler18DisposableObserverC2eeoiySbAC_ACtFZ",
+            "mangledName": "$s14ZSocketHandler18DisposableObserverC2eeoiySbAC_ACtFZ",
+            "moduleName": "ZSocketHandler",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(value:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DisposableObserver",
+                "printedName": "ZSocketHandler.DisposableObserver",
+                "usr": "s:14ZSocketHandler18DisposableObserverC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "AnyObject"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14ZSocketHandler18DisposableObserverC5valueACyXl_tcfc",
+            "mangledName": "$s14ZSocketHandler18DisposableObserverC5valueACyXl_tcfc",
+            "moduleName": "ZSocketHandler",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:14ZSocketHandler18DisposableObserverC",
+        "mangledName": "$s14ZSocketHandler18DisposableObserverC",
+        "moduleName": "ZSocketHandler",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAssistKit\/native\/SocketHandler\/SocketHandler\/URLSessionSocket.swift",
+      "kind": "BooleanLiteral",
+      "offset": 396,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAssistKit\/native\/SocketHandler\/SocketHandler\/URLSessionSocket.swift",
+      "kind": "BooleanLiteral",
+      "offset": 514,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAssistKit\/native\/SocketHandler\/SocketHandler\/SocketHandler.swift",
+      "kind": "IntegerLiteral",
+      "offset": 443,
+      "length": 2,
+      "value": "30"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAssistKit\/native\/SocketHandler\/SocketHandler\/SocketHandler.swift",
+      "kind": "BooleanLiteral",
+      "offset": 677,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAssistKit\/native\/SocketHandler\/SocketHandler\/SocketHandler.swift",
+      "kind": "BooleanLiteral",
+      "offset": 907,
+      "length": 5,
+      "value": "false"
+    }
+  ]
+}

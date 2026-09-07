@@ -1,0 +1,103 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.1 effective-5.10 (swiftlang-6.3.1.1.2 clang-2100.0.123.102)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -module-name AppBridge
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.1
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_inheritsConvenienceInitializers public class ABClientConnection : AppBridge.ABConnection {
+  public var autoReconnect: Swift.Bool
+  override public func start(completion: ((AppBridge.ABConnection.ConnectionError?) -> Swift.Void)? = nil)
+  override public func stop()
+  public func send(_ message: AppBridge.ABMessage)
+  override public init(appGroupID: Swift.String, namespace: Swift.Int = super)
+  @objc deinit
+}
+public protocol ABConnectionDelegate : AnyObject {
+  func connection(_ connection: AppBridge.ABConnection, didConnectTo id: Swift.Int32)
+  func connection(_ connection: AppBridge.ABConnection, didDisconnectFrom id: Swift.Int32)
+  func connectionStateDidChange(_ connection: AppBridge.ABConnection, to state: Swift.Bool)
+  func connection(_ connection: AppBridge.ABConnection, didDiscoverBundleIDForConnection id: Swift.Int32, name: Swift.String)
+  func connection(_ connection: AppBridge.ABConnection, didReceive message: AppBridge.ABMessage, from senderID: Swift.Int32)
+}
+extension AppBridge.ABConnectionDelegate {
+  public func connection(_ connection: AppBridge.ABConnection, didConnectTo id: Swift.Int32)
+  public func connection(_ connection: AppBridge.ABConnection, didDisconnectFrom id: Swift.Int32)
+  public func connectionStateDidChange(_ connection: AppBridge.ABConnection, to state: Swift.Bool)
+  public func connection(_ connection: AppBridge.ABConnection, didDiscoverBundleIDForConnection id: Swift.Int32, name: Swift.String)
+}
+public class ABConnection {
+  public static let reservedMessageTypeRange: Swift.ClosedRange<Swift.UInt32>
+  public enum ConnectionError : Swift.Error {
+    case bindError
+    case creationError
+    case initializationError
+    case listenError
+    case connectError
+    public static func == (a: AppBridge.ABConnection.ConnectionError, b: AppBridge.ABConnection.ConnectionError) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  weak public var delegate: (any AppBridge.ABConnectionDelegate)?
+  public var alive: Swift.Bool {
+    get
+  }
+  public var connectionID: Swift.Int32 {
+    get
+  }
+  public init(appGroupID: Swift.String, namespace: Swift.Int = 0)
+  public func bundleIDForConnection(_ id: Swift.Int32) -> Swift.String?
+  public func start(completion: ((AppBridge.ABConnection.ConnectionError?) -> Swift.Void)? = nil)
+  public func stop()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ABDarwinNotificationCenter {
+  public static let `default`: AppBridge.ABDarwinNotificationCenter
+  public var observations: [Swift.String : () -> Swift.Void] {
+    get
+  }
+  public func addObserver(forName name: Swift.String, using block: @escaping () -> Swift.Void)
+  public func removeObserver(withName name: Swift.String)
+  public func removeAllObservers()
+  public func post(name: Swift.String)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class ABServerConnection : AppBridge.ABConnection {
+  override public func start(completion: ((AppBridge.ABConnection.ConnectionError?) -> Swift.Void)? = nil)
+  override public func stop()
+  public func send(_ message: AppBridge.ABMessage, to bundleID: Swift.String)
+  public func send(_ message: AppBridge.ABMessage, to client: Swift.Int32)
+  public func broadcast(_ message: AppBridge.ABMessage)
+  override public init(appGroupID: Swift.String, namespace: Swift.Int = super)
+  @objc deinit
+}
+public struct ABMessage {
+  public let type: Swift.UInt32
+  public let content: Foundation.Data
+  public init(_ content: Foundation.Data, type: Swift.UInt32 = 0)
+}
+@objc public class ABRequest : ObjectiveC.NSObject, Foundation.NSSecureCoding {
+  @objc public static var supportsSecureCoding: Swift.Bool
+  final public let parameters: [Swift.String : Any]
+  public init(parameters: [Swift.String : Any])
+  @objc required public init?(coder: Foundation.NSCoder)
+  @objc public func encode(with coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc public class ABResponse : ObjectiveC.NSObject, Foundation.NSSecureCoding {
+  @objc public static var supportsSecureCoding: Swift.Bool
+  final public let status: Swift.Int
+  final public let fields: [Swift.String : Any]?
+  final public let body: Foundation.Data?
+  public init(status: Swift.Int, fields: [Swift.String : Any]? = nil, body: Foundation.Data? = nil)
+  @objc required public init?(coder: Foundation.NSCoder)
+  @objc public func encode(with coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension AppBridge.ABConnection.ConnectionError : Swift.Equatable {}
+extension AppBridge.ABConnection.ConnectionError : Swift.Hashable {}

@@ -1,0 +1,1319 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "HeaderAccessoryBarViewMaker",
+    "printedName": "HeaderAccessoryBarViewMaker",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "HeaderAccessoryBarViewMaker",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "HeaderAccessoryBarViewMaker"
+      },
+      {
+        "kind": "Import",
+        "name": "SnapKit",
+        "printedName": "SnapKit",
+        "declKind": "Import",
+        "moduleName": "HeaderAccessoryBarViewMaker"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HeaderAccessoryBarViewMaker",
+        "printedName": "HeaderAccessoryBarViewMaker",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "leftBarContainerView",
+            "printedName": "leftBarContainerView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:27HeaderAccessoryBarViewMakerAAP04leftc9ContainerD0So6UIViewCSgvp",
+            "mangledName": "$s27HeaderAccessoryBarViewMakerAAP04leftc9ContainerD0So6UIViewCSgvp",
+            "moduleName": "HeaderAccessoryBarViewMaker",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:27HeaderAccessoryBarViewMakerAAP04leftc9ContainerD0So6UIViewCSgvg",
+                "mangledName": "$s27HeaderAccessoryBarViewMakerAAP04leftc9ContainerD0So6UIViewCSgvg",
+                "moduleName": "HeaderAccessoryBarViewMaker",
+                "genericSig": "<τ_0_0 where τ_0_0 : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+                "sugared_genericSig": "<Self where Self : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:27HeaderAccessoryBarViewMakerAAP04leftc9ContainerD0So6UIViewCSgvs",
+                "mangledName": "$s27HeaderAccessoryBarViewMakerAAP04leftc9ContainerD0So6UIViewCSgvs",
+                "moduleName": "HeaderAccessoryBarViewMaker",
+                "genericSig": "<τ_0_0 where τ_0_0 : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+                "sugared_genericSig": "<Self where Self : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:27HeaderAccessoryBarViewMakerAAP04leftc9ContainerD0So6UIViewCSgvM",
+                "mangledName": "$s27HeaderAccessoryBarViewMakerAAP04leftc9ContainerD0So6UIViewCSgvM",
+                "moduleName": "HeaderAccessoryBarViewMaker",
+                "genericSig": "<τ_0_0 where τ_0_0 : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+                "sugared_genericSig": "<Self where Self : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rightBarContainerView",
+            "printedName": "rightBarContainerView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:27HeaderAccessoryBarViewMakerAAP05rightc9ContainerD0So6UIViewCSgvp",
+            "mangledName": "$s27HeaderAccessoryBarViewMakerAAP05rightc9ContainerD0So6UIViewCSgvp",
+            "moduleName": "HeaderAccessoryBarViewMaker",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:27HeaderAccessoryBarViewMakerAAP05rightc9ContainerD0So6UIViewCSgvg",
+                "mangledName": "$s27HeaderAccessoryBarViewMakerAAP05rightc9ContainerD0So6UIViewCSgvg",
+                "moduleName": "HeaderAccessoryBarViewMaker",
+                "genericSig": "<τ_0_0 where τ_0_0 : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+                "sugared_genericSig": "<Self where Self : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:27HeaderAccessoryBarViewMakerAAP05rightc9ContainerD0So6UIViewCSgvs",
+                "mangledName": "$s27HeaderAccessoryBarViewMakerAAP05rightc9ContainerD0So6UIViewCSgvs",
+                "moduleName": "HeaderAccessoryBarViewMaker",
+                "genericSig": "<τ_0_0 where τ_0_0 : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+                "sugared_genericSig": "<Self where Self : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:27HeaderAccessoryBarViewMakerAAP05rightc9ContainerD0So6UIViewCSgvM",
+                "mangledName": "$s27HeaderAccessoryBarViewMakerAAP05rightc9ContainerD0So6UIViewCSgvM",
+                "moduleName": "HeaderAccessoryBarViewMaker",
+                "genericSig": "<τ_0_0 where τ_0_0 : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+                "sugared_genericSig": "<Self where Self : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "leftBarViews",
+            "printedName": "leftBarViews",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[UIKit.UIView]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:27HeaderAccessoryBarViewMakerAAP04leftC5ViewsSaySo6UIViewCGvp",
+            "mangledName": "$s27HeaderAccessoryBarViewMakerAAP04leftC5ViewsSaySo6UIViewCGvp",
+            "moduleName": "HeaderAccessoryBarViewMaker",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UIKit.UIView]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:27HeaderAccessoryBarViewMakerAAP04leftC5ViewsSaySo6UIViewCGvg",
+                "mangledName": "$s27HeaderAccessoryBarViewMakerAAP04leftC5ViewsSaySo6UIViewCGvg",
+                "moduleName": "HeaderAccessoryBarViewMaker",
+                "genericSig": "<τ_0_0 where τ_0_0 : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+                "sugared_genericSig": "<Self where Self : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UIKit.UIView]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:27HeaderAccessoryBarViewMakerAAP04leftC5ViewsSaySo6UIViewCGvs",
+                "mangledName": "$s27HeaderAccessoryBarViewMakerAAP04leftC5ViewsSaySo6UIViewCGvs",
+                "moduleName": "HeaderAccessoryBarViewMaker",
+                "genericSig": "<τ_0_0 where τ_0_0 : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+                "sugared_genericSig": "<Self where Self : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:27HeaderAccessoryBarViewMakerAAP04leftC5ViewsSaySo6UIViewCGvM",
+                "mangledName": "$s27HeaderAccessoryBarViewMakerAAP04leftC5ViewsSaySo6UIViewCGvM",
+                "moduleName": "HeaderAccessoryBarViewMaker",
+                "genericSig": "<τ_0_0 where τ_0_0 : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+                "sugared_genericSig": "<Self where Self : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rightBarViews",
+            "printedName": "rightBarViews",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[UIKit.UIView]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:27HeaderAccessoryBarViewMakerAAP05rightC5ViewsSaySo6UIViewCGvp",
+            "mangledName": "$s27HeaderAccessoryBarViewMakerAAP05rightC5ViewsSaySo6UIViewCGvp",
+            "moduleName": "HeaderAccessoryBarViewMaker",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UIKit.UIView]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:27HeaderAccessoryBarViewMakerAAP05rightC5ViewsSaySo6UIViewCGvg",
+                "mangledName": "$s27HeaderAccessoryBarViewMakerAAP05rightC5ViewsSaySo6UIViewCGvg",
+                "moduleName": "HeaderAccessoryBarViewMaker",
+                "genericSig": "<τ_0_0 where τ_0_0 : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+                "sugared_genericSig": "<Self where Self : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UIKit.UIView]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:27HeaderAccessoryBarViewMakerAAP05rightC5ViewsSaySo6UIViewCGvs",
+                "mangledName": "$s27HeaderAccessoryBarViewMakerAAP05rightC5ViewsSaySo6UIViewCGvs",
+                "moduleName": "HeaderAccessoryBarViewMaker",
+                "genericSig": "<τ_0_0 where τ_0_0 : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+                "sugared_genericSig": "<Self where Self : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:27HeaderAccessoryBarViewMakerAAP05rightC5ViewsSaySo6UIViewCGvM",
+                "mangledName": "$s27HeaderAccessoryBarViewMakerAAP05rightC5ViewsSaySo6UIViewCGvM",
+                "moduleName": "HeaderAccessoryBarViewMaker",
+                "genericSig": "<τ_0_0 where τ_0_0 : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+                "sugared_genericSig": "<Self where Self : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "pinLeftBarViews",
+            "printedName": "pinLeftBarViews()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:27HeaderAccessoryBarViewMakerAAP07pinLeftC5ViewsyyF",
+            "mangledName": "$s27HeaderAccessoryBarViewMakerAAP07pinLeftC5ViewsyyF",
+            "moduleName": "HeaderAccessoryBarViewMaker",
+            "genericSig": "<τ_0_0 where τ_0_0 : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+            "sugared_genericSig": "<Self where Self : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pinRightBarViews",
+            "printedName": "pinRightBarViews()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:27HeaderAccessoryBarViewMakerAAP08pinRightC5ViewsyyF",
+            "mangledName": "$s27HeaderAccessoryBarViewMakerAAP08pinRightC5ViewsyyF",
+            "moduleName": "HeaderAccessoryBarViewMaker",
+            "genericSig": "<τ_0_0 where τ_0_0 : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+            "sugared_genericSig": "<Self where Self : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pinLeftBarViews",
+            "printedName": "pinLeftBarViews()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:27HeaderAccessoryBarViewMakerAAPAASo16UIViewControllerCRbzrlE07pinLeftC5ViewsyyF",
+            "mangledName": "$s27HeaderAccessoryBarViewMakerAAPAASo16UIViewControllerCRbzrlE07pinLeftC5ViewsyyF",
+            "moduleName": "HeaderAccessoryBarViewMaker",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController, τ_0_0 : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+            "sugared_genericSig": "<Self where Self : UIKit.UIViewController, Self : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pinRightBarViews",
+            "printedName": "pinRightBarViews()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:27HeaderAccessoryBarViewMakerAAPAASo16UIViewControllerCRbzrlE08pinRightC5ViewsyyF",
+            "mangledName": "$s27HeaderAccessoryBarViewMakerAAPAASo16UIViewControllerCRbzrlE08pinRightC5ViewsyyF",
+            "moduleName": "HeaderAccessoryBarViewMaker",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController, τ_0_0 : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+            "sugared_genericSig": "<Self where Self : UIKit.UIViewController, Self : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMaker>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:27HeaderAccessoryBarViewMakerAAP",
+        "mangledName": "$s27HeaderAccessoryBarViewMakerAAP",
+        "moduleName": "HeaderAccessoryBarViewMaker",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "HeaderAccessoryBarViewMaker",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "HeaderAccessoryBarViewMaker"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HeaderAccessoryBarViewMakerController",
+        "printedName": "HeaderAccessoryBarViewMakerController",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "leftBarContainerView",
+            "printedName": "leftBarContainerView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "UIKit.UIView?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@HeaderAccessoryBarViewMaker@objc(cs)HeaderAccessoryBarViewMakerController(py)leftBarContainerView",
+            "mangledName": "$s27HeaderAccessoryBarViewMaker0abcdE10ControllerC04leftc9ContainerD0So6UIViewCSgvp",
+            "moduleName": "HeaderAccessoryBarViewMaker",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "ReferenceOwnership",
+              "IBOutlet",
+              "ObjC"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@HeaderAccessoryBarViewMaker@objc(cs)HeaderAccessoryBarViewMakerController(im)leftBarContainerView",
+                "mangledName": "$s27HeaderAccessoryBarViewMaker0abcdE10ControllerC04leftc9ContainerD0So6UIViewCSgvg",
+                "moduleName": "HeaderAccessoryBarViewMaker",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@HeaderAccessoryBarViewMaker@objc(cs)HeaderAccessoryBarViewMakerController(im)setLeftBarContainerView:",
+                "mangledName": "$s27HeaderAccessoryBarViewMaker0abcdE10ControllerC04leftc9ContainerD0So6UIViewCSgvs",
+                "moduleName": "HeaderAccessoryBarViewMaker",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:27HeaderAccessoryBarViewMaker0abcdE10ControllerC04leftc9ContainerD0So6UIViewCSgvM",
+                "mangledName": "$s27HeaderAccessoryBarViewMaker0abcdE10ControllerC04leftc9ContainerD0So6UIViewCSgvM",
+                "moduleName": "HeaderAccessoryBarViewMaker",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rightBarContainerView",
+            "printedName": "rightBarContainerView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "UIKit.UIView?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@HeaderAccessoryBarViewMaker@objc(cs)HeaderAccessoryBarViewMakerController(py)rightBarContainerView",
+            "mangledName": "$s27HeaderAccessoryBarViewMaker0abcdE10ControllerC05rightc9ContainerD0So6UIViewCSgvp",
+            "moduleName": "HeaderAccessoryBarViewMaker",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "ReferenceOwnership",
+              "IBOutlet",
+              "ObjC"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@HeaderAccessoryBarViewMaker@objc(cs)HeaderAccessoryBarViewMakerController(im)rightBarContainerView",
+                "mangledName": "$s27HeaderAccessoryBarViewMaker0abcdE10ControllerC05rightc9ContainerD0So6UIViewCSgvg",
+                "moduleName": "HeaderAccessoryBarViewMaker",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@HeaderAccessoryBarViewMaker@objc(cs)HeaderAccessoryBarViewMakerController(im)setRightBarContainerView:",
+                "mangledName": "$s27HeaderAccessoryBarViewMaker0abcdE10ControllerC05rightc9ContainerD0So6UIViewCSgvs",
+                "moduleName": "HeaderAccessoryBarViewMaker",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:27HeaderAccessoryBarViewMaker0abcdE10ControllerC05rightc9ContainerD0So6UIViewCSgvM",
+                "mangledName": "$s27HeaderAccessoryBarViewMaker0abcdE10ControllerC05rightc9ContainerD0So6UIViewCSgvM",
+                "moduleName": "HeaderAccessoryBarViewMaker",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "leftBarViews",
+            "printedName": "leftBarViews",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[UIKit.UIView]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:27HeaderAccessoryBarViewMaker0abcdE10ControllerC04leftC5ViewsSaySo6UIViewCGvp",
+            "mangledName": "$s27HeaderAccessoryBarViewMaker0abcdE10ControllerC04leftC5ViewsSaySo6UIViewCGvp",
+            "moduleName": "HeaderAccessoryBarViewMaker",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UIKit.UIView]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:27HeaderAccessoryBarViewMaker0abcdE10ControllerC04leftC5ViewsSaySo6UIViewCGvg",
+                "mangledName": "$s27HeaderAccessoryBarViewMaker0abcdE10ControllerC04leftC5ViewsSaySo6UIViewCGvg",
+                "moduleName": "HeaderAccessoryBarViewMaker",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UIKit.UIView]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:27HeaderAccessoryBarViewMaker0abcdE10ControllerC04leftC5ViewsSaySo6UIViewCGvs",
+                "mangledName": "$s27HeaderAccessoryBarViewMaker0abcdE10ControllerC04leftC5ViewsSaySo6UIViewCGvs",
+                "moduleName": "HeaderAccessoryBarViewMaker",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:27HeaderAccessoryBarViewMaker0abcdE10ControllerC04leftC5ViewsSaySo6UIViewCGvM",
+                "mangledName": "$s27HeaderAccessoryBarViewMaker0abcdE10ControllerC04leftC5ViewsSaySo6UIViewCGvM",
+                "moduleName": "HeaderAccessoryBarViewMaker",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rightBarViews",
+            "printedName": "rightBarViews",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[UIKit.UIView]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:27HeaderAccessoryBarViewMaker0abcdE10ControllerC05rightC5ViewsSaySo6UIViewCGvp",
+            "mangledName": "$s27HeaderAccessoryBarViewMaker0abcdE10ControllerC05rightC5ViewsSaySo6UIViewCGvp",
+            "moduleName": "HeaderAccessoryBarViewMaker",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UIKit.UIView]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:27HeaderAccessoryBarViewMaker0abcdE10ControllerC05rightC5ViewsSaySo6UIViewCGvg",
+                "mangledName": "$s27HeaderAccessoryBarViewMaker0abcdE10ControllerC05rightC5ViewsSaySo6UIViewCGvg",
+                "moduleName": "HeaderAccessoryBarViewMaker",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UIKit.UIView]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:27HeaderAccessoryBarViewMaker0abcdE10ControllerC05rightC5ViewsSaySo6UIViewCGvs",
+                "mangledName": "$s27HeaderAccessoryBarViewMaker0abcdE10ControllerC05rightC5ViewsSaySo6UIViewCGvs",
+                "moduleName": "HeaderAccessoryBarViewMaker",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:27HeaderAccessoryBarViewMaker0abcdE10ControllerC05rightC5ViewsSaySo6UIViewCGvM",
+                "mangledName": "$s27HeaderAccessoryBarViewMaker0abcdE10ControllerC05rightC5ViewsSaySo6UIViewCGvM",
+                "moduleName": "HeaderAccessoryBarViewMaker",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "viewDidLoad",
+            "printedName": "viewDidLoad()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@HeaderAccessoryBarViewMaker@objc(cs)HeaderAccessoryBarViewMakerController(im)viewDidLoad",
+            "mangledName": "$s27HeaderAccessoryBarViewMaker0abcdE10ControllerC11viewDidLoadyyF",
+            "moduleName": "HeaderAccessoryBarViewMaker",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "viewDidLoad",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(nibName:bundle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HeaderAccessoryBarViewMakerController",
+                "printedName": "HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMakerController",
+                "usr": "c:@M@HeaderAccessoryBarViewMaker@objc(cs)HeaderAccessoryBarViewMakerController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Bundle?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@HeaderAccessoryBarViewMaker@objc(cs)HeaderAccessoryBarViewMakerController(im)initWithNibName:bundle:",
+            "mangledName": "$s27HeaderAccessoryBarViewMaker0abcdE10ControllerC7nibName6bundleACSSSg_So8NSBundleCSgtcfc",
+            "moduleName": "HeaderAccessoryBarViewMaker",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithNibName:bundle:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMakerController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HeaderAccessoryBarViewMakerController",
+                    "printedName": "HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMakerController",
+                    "usr": "c:@M@HeaderAccessoryBarViewMaker@objc(cs)HeaderAccessoryBarViewMakerController"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@HeaderAccessoryBarViewMaker@objc(cs)HeaderAccessoryBarViewMakerController(im)initWithCoder:",
+            "mangledName": "$s27HeaderAccessoryBarViewMaker0abcdE10ControllerC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "HeaderAccessoryBarViewMaker",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@HeaderAccessoryBarViewMaker@objc(cs)HeaderAccessoryBarViewMakerController",
+        "mangledName": "$s27HeaderAccessoryBarViewMaker0abcdE10ControllerC",
+        "moduleName": "HeaderAccessoryBarViewMaker",
+        "isOpen": true,
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UIViewController",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UIViewController",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "HeaderAccessoryBarViewMaker",
+            "printedName": "HeaderAccessoryBarViewMaker",
+            "usr": "s:27HeaderAccessoryBarViewMakerAAP",
+            "mangledName": "$s27HeaderAccessoryBarViewMakerAAP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/HeaderAccessoryBarViewMaker\/HeaderAccessoryBarViewMakerController.swift",
+      "kind": "Array",
+      "offset": 475,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/HeaderAccessoryBarViewMaker\/HeaderAccessoryBarViewMakerController.swift",
+      "kind": "Array",
+      "offset": 518,
+      "length": 2,
+      "value": "[]"
+    }
+  ]
+}

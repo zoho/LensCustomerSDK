@@ -1,0 +1,130 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.1 effective-5.10 (swiftlang-6.3.1.1.2 clang-2100.0.123.102)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -module-name TraceKitCore
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.1
+import Foundation
+import OSLog
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct ConsoleLoggingDestination : TraceKitCore.LoggingDestination {
+  public init()
+  public func log(level: TraceKitCore.Logger.Level, input: Any)
+}
+extension TraceKitCore.FileLoggingDestination {
+  public enum SegmentationBehaviour {
+    case none
+    case day(limit: Swift.Int? = nil)
+    case month(limit: Swift.Int? = nil)
+  }
+}
+public struct FileLoggingDestination : TraceKitCore.DiscardableLoggingDestination {
+  public let name: Swift.String
+  public let directoryURL: Foundation.URL
+  public let archiver: (any TraceKitCore.LogArchiver)?
+  public let segmentationBehaviour: TraceKitCore.FileLoggingDestination.SegmentationBehaviour
+  public var loggingURL: Foundation.URL {
+    get
+  }
+  public init(directory: Foundation.URL, name: Swift.String, archiver: any TraceKitCore.LogArchiver, segmentationBehaviour: TraceKitCore.FileLoggingDestination.SegmentationBehaviour = .none)
+  public func log(level: TraceKitCore.Logger.Level, input: Any)
+  public func discard()
+}
+extension TraceKitCore.FileLoggingDestination : TraceKitCore.ExportableDestination {
+  public func export(completion: @escaping (Foundation.URL?) -> Swift.Void)
+}
+@available(macOS 11.0, iOS 14.0, watchOS 7.0, tvOS 14.0, *)
+public struct OSLogLoggingDestination : TraceKitCore.LoggingDestination {
+  public func log(level: TraceKitCore.Logger.Level, input: Any)
+  public init(subsystem: Swift.String, category: Swift.String)
+}
+public protocol DiscardableLoggingDestination : TraceKitCore.LoggingDestination {
+  func discard()
+}
+public protocol ExportableDestination {
+  var archiver: (any TraceKitCore.LogArchiver)? { get }
+  func export(completion: @escaping (Foundation.URL?) -> Swift.Void)
+  static func export(from destinations: [any TraceKitCore.ExportableDestination], completion: @escaping (Foundation.URL?) -> Swift.Void)
+}
+extension TraceKitCore.ExportableDestination {
+  public static func export(from destinations: [any TraceKitCore.ExportableDestination], completion: @escaping (Foundation.URL?) -> Swift.Void)
+}
+public protocol LogArchiver {
+  func archive(files: [Foundation.URL], to destination: Foundation.URL) throws
+  func archive(directory: Foundation.URL, to destination: Foundation.URL) throws
+}
+public protocol LoggingDestination {
+  var shouldFormatInputForLogging: Swift.Bool { get }
+  func log(level: TraceKitCore.Logger.Level, input: Any)
+}
+extension TraceKitCore.LoggingDestination {
+  public var shouldFormatInputForLogging: Swift.Bool {
+    get
+  }
+  public func textualizedValue(for input: Any, jsonSerialize: Swift.Bool = false) -> Swift.String
+}
+public protocol LoggingDelegate : AnyObject {
+  func logger(_ logger: TraceKitCore.Logger, shouldLogFor level: TraceKitCore.Logger.Level) -> Swift.Bool
+  func logger(_ logger: TraceKitCore.Logger, shouldLogTo destination: any TraceKitCore.LoggingDestination, level: TraceKitCore.Logger.Level) -> Swift.Bool
+}
+extension TraceKitCore.LoggingDelegate {
+  public func logger(_ logger: TraceKitCore.Logger, shouldLogFor level: TraceKitCore.Logger.Level) -> Swift.Bool
+  public func logger(_ logger: TraceKitCore.Logger, shouldLogTo destination: any TraceKitCore.LoggingDestination, level: TraceKitCore.Logger.Level) -> Swift.Bool
+}
+extension TraceKitCore.Logger {
+  public enum Level : Swift.Equatable {
+    case info
+    case warning
+    case error
+    case success
+    case verbose
+    case custom(label: Swift.String, emoji: Swift.String = "🤖")
+    public var label: Swift.String {
+      get
+    }
+    public var emojiPrefix: Swift.String {
+      get
+    }
+    public var prefix: Swift.String {
+      get
+    }
+    public var prefixWithEmoji: Swift.String {
+      get
+    }
+    public static func == (a: TraceKitCore.Logger.Level, b: TraceKitCore.Logger.Level) -> Swift.Bool
+  }
+  public func preparedLogString(time: Foundation.Date, level: TraceKitCore.Logger.Level, input: Any, jsonSerialize: Swift.Bool = false) -> Swift.String
+  public func logJSON(level: TraceKitCore.Logger.Level, input: Any)
+  public func preparedCodeExecutionLogString(file: Swift.String, function: Swift.String, line: Swift.Int, column: Swift.Int, remark: Swift.String? = nil) -> Swift.String
+  public func logCodeExecution(level: TraceKitCore.Logger.Level, remark: Swift.String? = nil, file: Swift.String = #file, function: Swift.String = #function, line: Swift.Int = #line, column: Swift.Int = #column)
+}
+public class Logger : TraceKitCore.DiscardableLoggingDestination {
+  public static let `default`: TraceKitCore.Logger
+  public static let console: TraceKitCore.Logger
+  public var name: Swift.String
+  public var usesEmojisForLogging: Swift.Bool
+  final public let dateFormatter: Foundation.DateFormatter
+  final public let queue: Dispatch.DispatchQueue
+  weak public var delegate: (any TraceKitCore.LoggingDelegate)?
+  public init(destinations: any TraceKitCore.LoggingDestination...)
+  public init(destinations: [any TraceKitCore.LoggingDestination])
+  public func append(destination: any TraceKitCore.LoggingDestination)
+  public func log(level: TraceKitCore.Logger.Level, input: Any)
+  public func discard()
+  @objc deinit
+}
+extension TraceKitCore.Logger : TraceKitCore.ExportableDestination {
+  public var archiver: (any TraceKitCore.LogArchiver)? {
+    get
+  }
+  public func export(completion: @escaping (Foundation.URL?) -> Swift.Void)
+}
+public class TimeRecorder {
+  public static let `default`: TraceKitCore.TimeRecorder
+  final public let logger: TraceKitCore.Logger
+  public init(logger: TraceKitCore.Logger)
+  public func start(label: Swift.String, id: Swift.String)
+  public func stop(id: Swift.String)
+  @objc deinit
+}

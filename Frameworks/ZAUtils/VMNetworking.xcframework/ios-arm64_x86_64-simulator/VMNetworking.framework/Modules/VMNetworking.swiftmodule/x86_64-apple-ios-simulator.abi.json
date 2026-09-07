@@ -1,0 +1,4218 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "VMNetworking",
+    "printedName": "VMNetworking",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VMNetworking",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VMNetworking",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VMJsonManager",
+        "printedName": "VMJsonManager",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "convertToDictionary",
+            "printedName": "convertToDictionary(text:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VMNetworking13VMJsonManagerC19convertToDictionary4textSDySSypGSgSS_tFZ",
+            "mangledName": "$s12VMNetworking13VMJsonManagerC19convertToDictionary4textSDySSypGSgSS_tFZ",
+            "moduleName": "VMNetworking",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "data",
+            "printedName": "data(jsonObject:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VMNetworking13VMJsonManagerC4data10jsonObject10Foundation4DataVSgyp_tFZ",
+            "mangledName": "$s12VMNetworking13VMJsonManagerC4data10jsonObject10Foundation4DataVSgyp_tFZ",
+            "moduleName": "VMNetworking",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "formData",
+            "printedName": "formData(jsonObject:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VMNetworking13VMJsonManagerC8formData10jsonObject10Foundation0E0VSgSDySSypGSg_tFZ",
+            "mangledName": "$s12VMNetworking13VMJsonManagerC8formData10jsonObject10Foundation0E0VSgSDySSypGSg_tFZ",
+            "moduleName": "VMNetworking",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "json",
+            "printedName": "json(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VMNetworking13VMJsonManagerC4json4datayp10Foundation4DataV_tFZ",
+            "mangledName": "$s12VMNetworking13VMJsonManagerC4json4datayp10Foundation4DataV_tFZ",
+            "moduleName": "VMNetworking",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isValid",
+            "printedName": "isValid(json:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VMNetworking13VMJsonManagerC7isValid4jsonSbyp_tFZ",
+            "mangledName": "$s12VMNetworking13VMJsonManagerC7isValid4jsonSbyp_tFZ",
+            "moduleName": "VMNetworking",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:12VMNetworking13VMJsonManagerC",
+        "mangledName": "$s12VMNetworking13VMJsonManagerC",
+        "moduleName": "VMNetworking",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VMNetworking",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VMHTTPMethod",
+        "printedName": "VMHTTPMethod",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "post",
+            "printedName": "post",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VMNetworking.VMHTTPMethod.Type) -> VMNetworking.VMHTTPMethod",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VMHTTPMethod",
+                    "printedName": "VMNetworking.VMHTTPMethod",
+                    "usr": "s:12VMNetworking12VMHTTPMethodO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VMNetworking.VMHTTPMethod.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VMHTTPMethod",
+                        "printedName": "VMNetworking.VMHTTPMethod",
+                        "usr": "s:12VMNetworking12VMHTTPMethodO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12VMNetworking12VMHTTPMethodO4postyA2CmF",
+            "mangledName": "$s12VMNetworking12VMHTTPMethodO4postyA2CmF",
+            "moduleName": "VMNetworking"
+          },
+          {
+            "kind": "Var",
+            "name": "get",
+            "printedName": "get",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VMNetworking.VMHTTPMethod.Type) -> VMNetworking.VMHTTPMethod",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VMHTTPMethod",
+                    "printedName": "VMNetworking.VMHTTPMethod",
+                    "usr": "s:12VMNetworking12VMHTTPMethodO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VMNetworking.VMHTTPMethod.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VMHTTPMethod",
+                        "printedName": "VMNetworking.VMHTTPMethod",
+                        "usr": "s:12VMNetworking12VMHTTPMethodO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12VMNetworking12VMHTTPMethodO3getyA2CmF",
+            "mangledName": "$s12VMNetworking12VMHTTPMethodO3getyA2CmF",
+            "moduleName": "VMNetworking"
+          },
+          {
+            "kind": "Var",
+            "name": "put",
+            "printedName": "put",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VMNetworking.VMHTTPMethod.Type) -> VMNetworking.VMHTTPMethod",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VMHTTPMethod",
+                    "printedName": "VMNetworking.VMHTTPMethod",
+                    "usr": "s:12VMNetworking12VMHTTPMethodO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VMNetworking.VMHTTPMethod.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VMHTTPMethod",
+                        "printedName": "VMNetworking.VMHTTPMethod",
+                        "usr": "s:12VMNetworking12VMHTTPMethodO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12VMNetworking12VMHTTPMethodO3putyA2CmF",
+            "mangledName": "$s12VMNetworking12VMHTTPMethodO3putyA2CmF",
+            "moduleName": "VMNetworking"
+          },
+          {
+            "kind": "Var",
+            "name": "delete",
+            "printedName": "delete",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VMNetworking.VMHTTPMethod.Type) -> VMNetworking.VMHTTPMethod",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VMHTTPMethod",
+                    "printedName": "VMNetworking.VMHTTPMethod",
+                    "usr": "s:12VMNetworking12VMHTTPMethodO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VMNetworking.VMHTTPMethod.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VMHTTPMethod",
+                        "printedName": "VMNetworking.VMHTTPMethod",
+                        "usr": "s:12VMNetworking12VMHTTPMethodO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12VMNetworking12VMHTTPMethodO6deleteyA2CmF",
+            "mangledName": "$s12VMNetworking12VMHTTPMethodO6deleteyA2CmF",
+            "moduleName": "VMNetworking"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VMNetworking.VMHTTPMethod?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VMHTTPMethod",
+                    "printedName": "VMNetworking.VMHTTPMethod",
+                    "usr": "s:12VMNetworking12VMHTTPMethodO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12VMNetworking12VMHTTPMethodO8rawValueACSgSS_tcfc",
+            "mangledName": "$s12VMNetworking12VMHTTPMethodO8rawValueACSgSS_tcfc",
+            "moduleName": "VMNetworking",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12VMNetworking12VMHTTPMethodO8rawValueSSvp",
+            "mangledName": "$s12VMNetworking12VMHTTPMethodO8rawValueSSvp",
+            "moduleName": "VMNetworking",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VMNetworking12VMHTTPMethodO8rawValueSSvg",
+                "mangledName": "$s12VMNetworking12VMHTTPMethodO8rawValueSSvg",
+                "moduleName": "VMNetworking",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12VMNetworking12VMHTTPMethodO",
+        "mangledName": "$s12VMNetworking12VMHTTPMethodO",
+        "moduleName": "VMNetworking",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VMSessionError",
+        "printedName": "VMSessionError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "invalidURLString",
+            "printedName": "invalidURLString",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VMNetworking.VMSessionError.Type) -> VMNetworking.VMSessionError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VMSessionError",
+                    "printedName": "VMNetworking.VMSessionError",
+                    "usr": "s:12VMNetworking14VMSessionErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VMNetworking.VMSessionError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VMSessionError",
+                        "printedName": "VMNetworking.VMSessionError",
+                        "usr": "s:12VMNetworking14VMSessionErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12VMNetworking14VMSessionErrorO16invalidURLStringyA2CmF",
+            "mangledName": "$s12VMNetworking14VMSessionErrorO16invalidURLStringyA2CmF",
+            "moduleName": "VMNetworking"
+          },
+          {
+            "kind": "Var",
+            "name": "sessionNotConfigured",
+            "printedName": "sessionNotConfigured",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VMNetworking.VMSessionError.Type) -> VMNetworking.VMSessionError",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VMSessionError",
+                    "printedName": "VMNetworking.VMSessionError",
+                    "usr": "s:12VMNetworking14VMSessionErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VMNetworking.VMSessionError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VMSessionError",
+                        "printedName": "VMNetworking.VMSessionError",
+                        "usr": "s:12VMNetworking14VMSessionErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12VMNetworking14VMSessionErrorO20sessionNotConfiguredyA2CmF",
+            "mangledName": "$s12VMNetworking14VMSessionErrorO20sessionNotConfiguredyA2CmF",
+            "moduleName": "VMNetworking"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VMNetworking.VMSessionError?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VMSessionError",
+                    "printedName": "VMNetworking.VMSessionError",
+                    "usr": "s:12VMNetworking14VMSessionErrorO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12VMNetworking14VMSessionErrorO8rawValueACSgSS_tcfc",
+            "mangledName": "$s12VMNetworking14VMSessionErrorO8rawValueACSgSS_tcfc",
+            "moduleName": "VMNetworking",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12VMNetworking14VMSessionErrorO8rawValueSSvp",
+            "mangledName": "$s12VMNetworking14VMSessionErrorO8rawValueSSvp",
+            "moduleName": "VMNetworking",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VMNetworking14VMSessionErrorO8rawValueSSvg",
+                "mangledName": "$s12VMNetworking14VMSessionErrorO8rawValueSSvg",
+                "moduleName": "VMNetworking",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12VMNetworking14VMSessionErrorO",
+        "mangledName": "$s12VMNetworking14VMSessionErrorO",
+        "moduleName": "VMNetworking",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VMResponseType",
+        "printedName": "VMResponseType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "data",
+            "printedName": "data",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VMNetworking.VMResponseType.Type) -> VMNetworking.VMResponseType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VMResponseType",
+                    "printedName": "VMNetworking.VMResponseType",
+                    "usr": "s:12VMNetworking14VMResponseTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VMNetworking.VMResponseType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VMResponseType",
+                        "printedName": "VMNetworking.VMResponseType",
+                        "usr": "s:12VMNetworking14VMResponseTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12VMNetworking14VMResponseTypeO4datayA2CmF",
+            "mangledName": "$s12VMNetworking14VMResponseTypeO4datayA2CmF",
+            "moduleName": "VMNetworking"
+          },
+          {
+            "kind": "Var",
+            "name": "dictionary",
+            "printedName": "dictionary",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VMNetworking.VMResponseType.Type) -> VMNetworking.VMResponseType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VMResponseType",
+                    "printedName": "VMNetworking.VMResponseType",
+                    "usr": "s:12VMNetworking14VMResponseTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VMNetworking.VMResponseType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VMResponseType",
+                        "printedName": "VMNetworking.VMResponseType",
+                        "usr": "s:12VMNetworking14VMResponseTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12VMNetworking14VMResponseTypeO10dictionaryyA2CmF",
+            "mangledName": "$s12VMNetworking14VMResponseTypeO10dictionaryyA2CmF",
+            "moduleName": "VMNetworking"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VMResponseType",
+                "printedName": "VMNetworking.VMResponseType",
+                "usr": "s:12VMNetworking14VMResponseTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VMResponseType",
+                "printedName": "VMNetworking.VMResponseType",
+                "usr": "s:12VMNetworking14VMResponseTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VMNetworking14VMResponseTypeO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s12VMNetworking14VMResponseTypeO2eeoiySbAC_ACtFZ",
+            "moduleName": "VMNetworking",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12VMNetworking14VMResponseTypeO9hashValueSivp",
+            "mangledName": "$s12VMNetworking14VMResponseTypeO9hashValueSivp",
+            "moduleName": "VMNetworking",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VMNetworking14VMResponseTypeO9hashValueSivg",
+                "mangledName": "$s12VMNetworking14VMResponseTypeO9hashValueSivg",
+                "moduleName": "VMNetworking",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VMNetworking14VMResponseTypeO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s12VMNetworking14VMResponseTypeO4hash4intoys6HasherVz_tF",
+            "moduleName": "VMNetworking",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12VMNetworking14VMResponseTypeO",
+        "mangledName": "$s12VMNetworking14VMResponseTypeO",
+        "moduleName": "VMNetworking",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VMNetworking",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ContentType",
+        "printedName": "ContentType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "jsonType",
+            "printedName": "jsonType",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VMNetworking.ContentType.Type) -> VMNetworking.ContentType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ContentType",
+                    "printedName": "VMNetworking.ContentType",
+                    "usr": "s:12VMNetworking11ContentTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VMNetworking.ContentType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ContentType",
+                        "printedName": "VMNetworking.ContentType",
+                        "usr": "s:12VMNetworking11ContentTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12VMNetworking11ContentTypeO04jsonC0yA2CmF",
+            "mangledName": "$s12VMNetworking11ContentTypeO04jsonC0yA2CmF",
+            "moduleName": "VMNetworking"
+          },
+          {
+            "kind": "Var",
+            "name": "formType",
+            "printedName": "formType",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VMNetworking.ContentType.Type) -> VMNetworking.ContentType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ContentType",
+                    "printedName": "VMNetworking.ContentType",
+                    "usr": "s:12VMNetworking11ContentTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "VMNetworking.ContentType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ContentType",
+                        "printedName": "VMNetworking.ContentType",
+                        "usr": "s:12VMNetworking11ContentTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12VMNetworking11ContentTypeO04formC0yA2CmF",
+            "mangledName": "$s12VMNetworking11ContentTypeO04formC0yA2CmF",
+            "moduleName": "VMNetworking"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VMNetworking.ContentType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ContentType",
+                    "printedName": "VMNetworking.ContentType",
+                    "usr": "s:12VMNetworking11ContentTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12VMNetworking11ContentTypeO8rawValueACSgSS_tcfc",
+            "mangledName": "$s12VMNetworking11ContentTypeO8rawValueACSgSS_tcfc",
+            "moduleName": "VMNetworking",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12VMNetworking11ContentTypeO8rawValueSSvp",
+            "mangledName": "$s12VMNetworking11ContentTypeO8rawValueSSvp",
+            "moduleName": "VMNetworking",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VMNetworking11ContentTypeO8rawValueSSvg",
+                "mangledName": "$s12VMNetworking11ContentTypeO8rawValueSSvg",
+                "moduleName": "VMNetworking",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12VMNetworking11ContentTypeO",
+        "mangledName": "$s12VMNetworking11ContentTypeO",
+        "moduleName": "VMNetworking",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VMRequestSerialization",
+        "printedName": "VMRequestSerialization",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "timeOutInterval",
+            "printedName": "timeOutInterval",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12VMNetworking22VMRequestSerializationC15timeOutIntervalSdvp",
+            "mangledName": "$s12VMNetworking22VMRequestSerializationC15timeOutIntervalSdvp",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VMNetworking22VMRequestSerializationC15timeOutIntervalSdvg",
+                "mangledName": "$s12VMNetworking22VMRequestSerializationC15timeOutIntervalSdvg",
+                "moduleName": "VMNetworking",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VMNetworking22VMRequestSerializationC15timeOutIntervalSdvs",
+                "mangledName": "$s12VMNetworking22VMRequestSerializationC15timeOutIntervalSdvs",
+                "moduleName": "VMNetworking",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VMNetworking22VMRequestSerializationC15timeOutIntervalSdvM",
+                "mangledName": "$s12VMNetworking22VMRequestSerializationC15timeOutIntervalSdvM",
+                "moduleName": "VMNetworking",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "HTTPHeaders",
+            "printedName": "HTTPHeaders",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String?]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12VMNetworking22VMRequestSerializationC11HTTPHeadersSDyS2SSgGvp",
+            "mangledName": "$s12VMNetworking22VMRequestSerializationC11HTTPHeadersSDyS2SSgGvp",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String?]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VMNetworking22VMRequestSerializationC11HTTPHeadersSDyS2SSgGvg",
+                "mangledName": "$s12VMNetworking22VMRequestSerializationC11HTTPHeadersSDyS2SSgGvg",
+                "moduleName": "VMNetworking",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String?]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VMNetworking22VMRequestSerializationC11HTTPHeadersSDyS2SSgGvs",
+                "mangledName": "$s12VMNetworking22VMRequestSerializationC11HTTPHeadersSDyS2SSgGvs",
+                "moduleName": "VMNetworking",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VMNetworking22VMRequestSerializationC11HTTPHeadersSDyS2SSgGvM",
+                "mangledName": "$s12VMNetworking22VMRequestSerializationC11HTTPHeadersSDyS2SSgGvM",
+                "moduleName": "VMNetworking",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "contentType",
+            "printedName": "contentType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12VMNetworking22VMRequestSerializationC11contentTypeSSvp",
+            "mangledName": "$s12VMNetworking22VMRequestSerializationC11contentTypeSSvp",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VMNetworking22VMRequestSerializationC11contentTypeSSvg",
+                "mangledName": "$s12VMNetworking22VMRequestSerializationC11contentTypeSSvg",
+                "moduleName": "VMNetworking",
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VMNetworking22VMRequestSerializationC11contentTypeSSvs",
+                "mangledName": "$s12VMNetworking22VMRequestSerializationC11contentTypeSSvs",
+                "moduleName": "VMNetworking",
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VMNetworking22VMRequestSerializationC11contentTypeSSvM",
+                "mangledName": "$s12VMNetworking22VMRequestSerializationC11contentTypeSSvM",
+                "moduleName": "VMNetworking",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(timeOutInterval:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VMRequestSerialization",
+                "printedName": "VMNetworking.VMRequestSerialization",
+                "usr": "s:12VMNetworking22VMRequestSerializationC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12VMNetworking22VMRequestSerializationC15timeOutIntervalACSd_tcfc",
+            "mangledName": "$s12VMNetworking22VMRequestSerializationC15timeOutIntervalACSd_tcfc",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "setValue",
+            "printedName": "setValue(_:forHTTPField:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VMNetworking22VMRequestSerializationC8setValue_12forHTTPFieldySSSg_SStF",
+            "mangledName": "$s12VMNetworking22VMRequestSerializationC8setValue_12forHTTPFieldySSSg_SStF",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "value",
+            "printedName": "value(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VMNetworking22VMRequestSerializationC5valueySSSgSSF",
+            "mangledName": "$s12VMNetworking22VMRequestSerializationC5valueySSSgSSF",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setValues",
+            "printedName": "setValues(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VMNetworking22VMRequestSerializationC9setValuesyySDyS2SGF",
+            "mangledName": "$s12VMNetworking22VMRequestSerializationC9setValuesyySDyS2SGF",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addValue",
+            "printedName": "addValue(_:forHTTPField:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VMNetworking22VMRequestSerializationC8addValue_12forHTTPFieldySS_SStF",
+            "mangledName": "$s12VMNetworking22VMRequestSerializationC8addValue_12forHTTPFieldySS_SStF",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addValues",
+            "printedName": "addValues(_:forHttpField:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VMNetworking22VMRequestSerializationC9addValues_12forHttpFieldySaySSG_SStF",
+            "mangledName": "$s12VMNetworking22VMRequestSerializationC9addValues_12forHttpFieldySaySSG_SStF",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:12VMNetworking22VMRequestSerializationC",
+        "mangledName": "$s12VMNetworking22VMRequestSerializationC",
+        "moduleName": "VMNetworking",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VMNetworking",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VMSession",
+        "printedName": "VMSession",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(config:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VMSession",
+                "printedName": "VMNetworking.VMSession",
+                "usr": "s:12VMNetworking9VMSessionC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLSessionConfiguration",
+                "printedName": "Foundation.URLSessionConfiguration",
+                "usr": "c:objc(cs)NSURLSessionConfiguration"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12VMNetworking9VMSessionC6configACSo25NSURLSessionConfigurationC_tcfc",
+            "mangledName": "$s12VMNetworking9VMSessionC6configACSo25NSURLSessionConfigurationC_tcfc",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "invalidateAndCancel",
+            "printedName": "invalidateAndCancel()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VMNetworking9VMSessionC19invalidateAndCancelyyF",
+            "mangledName": "$s12VMNetworking9VMSessionC19invalidateAndCancelyyF",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dataTask",
+            "printedName": "dataTask(_:success:failure:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Foundation.Data, Foundation.HTTPURLResponse) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Foundation.Data, Foundation.HTTPURLResponse)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HTTPURLResponse",
+                        "printedName": "Foundation.HTTPURLResponse",
+                        "usr": "c:objc(cs)NSHTTPURLResponse"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "((any Swift.Error)?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any Swift.Error)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VMNetworking9VMSessionC8dataTask_7success7failurey10Foundation10URLRequestV_yAG4DataV_So17NSHTTPURLResponseCtcys5Error_pSgctF",
+            "mangledName": "$s12VMNetworking9VMSessionC8dataTask_7success7failurey10Foundation10URLRequestV_yAG4DataV_So17NSHTTPURLResponseCtcys5Error_pSgctF",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "uploadTask",
+            "printedName": "uploadTask()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VMNetworking9VMSessionC10uploadTaskyyF",
+            "mangledName": "$s12VMNetworking9VMSessionC10uploadTaskyyF",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "downloadTask",
+            "printedName": "downloadTask(url:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VMNetworking9VMSessionC12downloadTask3urly10Foundation3URLV_tF",
+            "mangledName": "$s12VMNetworking9VMSessionC12downloadTask3urly10Foundation3URLV_tF",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:12VMNetworking9VMSessionC",
+        "mangledName": "$s12VMNetworking9VMSessionC",
+        "moduleName": "VMNetworking",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VMNetworking",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VMSessionManager",
+        "printedName": "VMSessionManager",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "requestSerialization",
+            "printedName": "requestSerialization",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VMRequestSerialization",
+                "printedName": "VMNetworking.VMRequestSerialization",
+                "usr": "s:12VMNetworking22VMRequestSerializationC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12VMNetworking16VMSessionManagerC20requestSerializationAA09VMRequestE0Cvp",
+            "mangledName": "$s12VMNetworking16VMSessionManagerC20requestSerializationAA09VMRequestE0Cvp",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VMRequestSerialization",
+                    "printedName": "VMNetworking.VMRequestSerialization",
+                    "usr": "s:12VMNetworking22VMRequestSerializationC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VMNetworking16VMSessionManagerC20requestSerializationAA09VMRequestE0Cvg",
+                "mangledName": "$s12VMNetworking16VMSessionManagerC20requestSerializationAA09VMRequestE0Cvg",
+                "moduleName": "VMNetworking",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "responseSerialization",
+            "printedName": "responseSerialization",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VMResponseSerialization",
+                "printedName": "VMNetworking.VMResponseSerialization",
+                "usr": "s:12VMNetworking23VMResponseSerializationC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12VMNetworking16VMSessionManagerC21responseSerializationAA010VMResponseE0Cvp",
+            "mangledName": "$s12VMNetworking16VMSessionManagerC21responseSerializationAA010VMResponseE0Cvp",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VMResponseSerialization",
+                    "printedName": "VMNetworking.VMResponseSerialization",
+                    "usr": "s:12VMNetworking23VMResponseSerializationC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VMNetworking16VMSessionManagerC21responseSerializationAA010VMResponseE0Cvg",
+                "mangledName": "$s12VMNetworking16VMSessionManagerC21responseSerializationAA010VMResponseE0Cvg",
+                "moduleName": "VMNetworking",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "session",
+            "printedName": "session",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VMSession",
+                "printedName": "VMNetworking.VMSession",
+                "usr": "s:12VMNetworking9VMSessionC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12VMNetworking16VMSessionManagerC7sessionAA0B0Cvp",
+            "mangledName": "$s12VMNetworking16VMSessionManagerC7sessionAA0B0Cvp",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "Lazy",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VMSession",
+                    "printedName": "VMNetworking.VMSession",
+                    "usr": "s:12VMNetworking9VMSessionC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VMNetworking16VMSessionManagerC7sessionAA0B0Cvg",
+                "mangledName": "$s12VMNetworking16VMSessionManagerC7sessionAA0B0Cvg",
+                "moduleName": "VMNetworking",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VMSession",
+                    "printedName": "VMNetworking.VMSession",
+                    "usr": "s:12VMNetworking9VMSessionC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VMNetworking16VMSessionManagerC7sessionAA0B0Cvs",
+                "mangledName": "$s12VMNetworking16VMSessionManagerC7sessionAA0B0Cvs",
+                "moduleName": "VMNetworking",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VMNetworking16VMSessionManagerC7sessionAA0B0CvM",
+                "mangledName": "$s12VMNetworking16VMSessionManagerC7sessionAA0B0CvM",
+                "moduleName": "VMNetworking",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "manager",
+            "printedName": "manager",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VMSessionManager",
+                "printedName": "VMNetworking.VMSessionManager",
+                "usr": "s:12VMNetworking16VMSessionManagerC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12VMNetworking16VMSessionManagerC7managerACvpZ",
+            "mangledName": "$s12VMNetworking16VMSessionManagerC7managerACvpZ",
+            "moduleName": "VMNetworking",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VMSessionManager",
+                    "printedName": "VMNetworking.VMSessionManager",
+                    "usr": "s:12VMNetworking16VMSessionManagerC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VMNetworking16VMSessionManagerC7managerACvgZ",
+                "mangledName": "$s12VMNetworking16VMSessionManagerC7managerACvgZ",
+                "moduleName": "VMNetworking",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(reqSer:respSer:config:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VMSessionManager",
+                "printedName": "VMNetworking.VMSessionManager",
+                "usr": "s:12VMNetworking16VMSessionManagerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VMRequestSerialization",
+                "printedName": "VMNetworking.VMRequestSerialization",
+                "hasDefaultArg": true,
+                "usr": "s:12VMNetworking22VMRequestSerializationC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VMResponseSerialization",
+                "printedName": "VMNetworking.VMResponseSerialization",
+                "hasDefaultArg": true,
+                "usr": "s:12VMNetworking23VMResponseSerializationC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLSessionConfiguration",
+                "printedName": "Foundation.URLSessionConfiguration",
+                "hasDefaultArg": true,
+                "usr": "c:objc(cs)NSURLSessionConfiguration"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12VMNetworking16VMSessionManagerC6reqSer04respE06configAcA22VMRequestSerializationC_AA010VMResponseI0CSo25NSURLSessionConfigurationCtcfc",
+            "mangledName": "$s12VMNetworking16VMSessionManagerC6reqSer04respE06configAcA22VMRequestSerializationC_AA010VMResponseI0CSo25NSURLSessionConfigurationCtcfc",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "GET",
+            "printedName": "GET(API:requestSerialization:params:success:failure:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VMNetworking.VMRequestSerialization?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VMRequestSerialization",
+                    "printedName": "VMNetworking.VMRequestSerialization",
+                    "usr": "s:12VMNetworking22VMRequestSerializationC"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Foundation.Data?, [Swift.String : Any]?, Foundation.HTTPURLResponse) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Foundation.Data?, [Swift.String : Any]?, Foundation.HTTPURLResponse)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Foundation.Data?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Data",
+                            "printedName": "Foundation.Data",
+                            "usr": "s:10Foundation4DataV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "[Swift.String : Any]?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Dictionary",
+                            "printedName": "[Swift.String : Any]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ProtocolComposition",
+                                "printedName": "Any"
+                              }
+                            ],
+                            "usr": "s:SD"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HTTPURLResponse",
+                        "printedName": "Foundation.HTTPURLResponse",
+                        "usr": "c:objc(cs)NSHTTPURLResponse"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "((any Swift.Error)?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any Swift.Error)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VMNetworking16VMSessionManagerC3GET3API20requestSerialization6params7success7failureySS_AA09VMRequestG0CSgSDyS2SGy10Foundation4DataVSg_SDySSypGSgSo17NSHTTPURLResponseCtcys5Error_pSgctF",
+            "mangledName": "$s12VMNetworking16VMSessionManagerC3GET3API20requestSerialization6params7success7failureySS_AA09VMRequestG0CSgSDyS2SGy10Foundation4DataVSg_SDySSypGSgSo17NSHTTPURLResponseCtcys5Error_pSgctF",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "PUT",
+            "printedName": "PUT(API:requestSerialization:params:success:failure:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VMNetworking.VMRequestSerialization?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VMRequestSerialization",
+                    "printedName": "VMNetworking.VMRequestSerialization",
+                    "usr": "s:12VMNetworking22VMRequestSerializationC"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Foundation.Data?, [Swift.String : Any]?, Foundation.HTTPURLResponse) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Foundation.Data?, [Swift.String : Any]?, Foundation.HTTPURLResponse)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Foundation.Data?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Data",
+                            "printedName": "Foundation.Data",
+                            "usr": "s:10Foundation4DataV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "[Swift.String : Any]?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Dictionary",
+                            "printedName": "[Swift.String : Any]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ProtocolComposition",
+                                "printedName": "Any"
+                              }
+                            ],
+                            "usr": "s:SD"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HTTPURLResponse",
+                        "printedName": "Foundation.HTTPURLResponse",
+                        "usr": "c:objc(cs)NSHTTPURLResponse"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "((any Swift.Error)?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any Swift.Error)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VMNetworking16VMSessionManagerC3PUT3API20requestSerialization6params7success7failureySS_AA09VMRequestG0CSgSDyS2SGy10Foundation4DataVSg_SDySSypGSgSo17NSHTTPURLResponseCtcys5Error_pSgctF",
+            "mangledName": "$s12VMNetworking16VMSessionManagerC3PUT3API20requestSerialization6params7success7failureySS_AA09VMRequestG0CSgSDyS2SGy10Foundation4DataVSg_SDySSypGSgSo17NSHTTPURLResponseCtcys5Error_pSgctF",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "DELETE",
+            "printedName": "DELETE(API:requestSerialization:params:success:failure:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VMNetworking.VMRequestSerialization?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VMRequestSerialization",
+                    "printedName": "VMNetworking.VMRequestSerialization",
+                    "usr": "s:12VMNetworking22VMRequestSerializationC"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Foundation.Data?, [Swift.String : Any]?, Foundation.HTTPURLResponse) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Foundation.Data?, [Swift.String : Any]?, Foundation.HTTPURLResponse)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Foundation.Data?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Data",
+                            "printedName": "Foundation.Data",
+                            "usr": "s:10Foundation4DataV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "[Swift.String : Any]?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Dictionary",
+                            "printedName": "[Swift.String : Any]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ProtocolComposition",
+                                "printedName": "Any"
+                              }
+                            ],
+                            "usr": "s:SD"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HTTPURLResponse",
+                        "printedName": "Foundation.HTTPURLResponse",
+                        "usr": "c:objc(cs)NSHTTPURLResponse"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "((any Swift.Error)?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any Swift.Error)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VMNetworking16VMSessionManagerC6DELETE3API20requestSerialization6params7success7failureySS_AA09VMRequestG0CSgSDyS2SGy10Foundation4DataVSg_SDySSypGSgSo17NSHTTPURLResponseCtcys5Error_pSgctF",
+            "mangledName": "$s12VMNetworking16VMSessionManagerC6DELETE3API20requestSerialization6params7success7failureySS_AA09VMRequestG0CSgSDyS2SGy10Foundation4DataVSg_SDySSypGSgSo17NSHTTPURLResponseCtcys5Error_pSgctF",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "POST",
+            "printedName": "POST(API:requestSerialization:params:success:failure:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VMNetworking.VMRequestSerialization?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VMRequestSerialization",
+                    "printedName": "VMNetworking.VMRequestSerialization",
+                    "usr": "s:12VMNetworking22VMRequestSerializationC"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Foundation.Data?, [Swift.String : Any]?, Foundation.HTTPURLResponse) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Foundation.Data?, [Swift.String : Any]?, Foundation.HTTPURLResponse)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Foundation.Data?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Data",
+                            "printedName": "Foundation.Data",
+                            "usr": "s:10Foundation4DataV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "[Swift.String : Any]?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Dictionary",
+                            "printedName": "[Swift.String : Any]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ProtocolComposition",
+                                "printedName": "Any"
+                              }
+                            ],
+                            "usr": "s:SD"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HTTPURLResponse",
+                        "printedName": "Foundation.HTTPURLResponse",
+                        "usr": "c:objc(cs)NSHTTPURLResponse"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "((any Swift.Error)?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any Swift.Error)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VMNetworking16VMSessionManagerC4POST3API20requestSerialization6params7success7failureySS_AA09VMRequestG0CSgSDySSypGy10Foundation4DataVSg_AMSgSo17NSHTTPURLResponseCtcys5Error_pSgctF",
+            "mangledName": "$s12VMNetworking16VMSessionManagerC4POST3API20requestSerialization6params7success7failureySS_AA09VMRequestG0CSgSDySSypGy10Foundation4DataVSg_AMSgSo17NSHTTPURLResponseCtcys5Error_pSgctF",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hitAPI",
+            "printedName": "hitAPI(_:_:_:_:_:_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VMHTTPMethod",
+                "printedName": "VMNetworking.VMHTTPMethod",
+                "usr": "s:12VMNetworking12VMHTTPMethodO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VMNetworking.VMRequestSerialization?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VMRequestSerialization",
+                    "printedName": "VMNetworking.VMRequestSerialization",
+                    "usr": "s:12VMNetworking22VMRequestSerializationC"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Foundation.Data?, [Swift.String : Any]?, Foundation.HTTPURLResponse) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Foundation.Data?, [Swift.String : Any]?, Foundation.HTTPURLResponse)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Foundation.Data?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Data",
+                            "printedName": "Foundation.Data",
+                            "usr": "s:10Foundation4DataV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "[Swift.String : Any]?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Dictionary",
+                            "printedName": "[Swift.String : Any]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ProtocolComposition",
+                                "printedName": "Any"
+                              }
+                            ],
+                            "usr": "s:SD"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HTTPURLResponse",
+                        "printedName": "Foundation.HTTPURLResponse",
+                        "usr": "c:objc(cs)NSHTTPURLResponse"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "((any Swift.Error)?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any Swift.Error)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Foundation.URLRequest) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Foundation.URLRequest) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URLRequest",
+                        "printedName": "Foundation.URLRequest",
+                        "usr": "s:10Foundation10URLRequestV"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VMNetworking16VMSessionManagerC6hitAPIyyAA12VMHTTPMethodO_SSAA22VMRequestSerializationCSgSDySSypGy10Foundation4DataVSg_AJSgSo17NSHTTPURLResponseCtcys5Error_pSgcyAK10URLRequestVcSgtF",
+            "mangledName": "$s12VMNetworking16VMSessionManagerC6hitAPIyyAA12VMHTTPMethodO_SSAA22VMRequestSerializationCSgSDySSypGy10Foundation4DataVSg_AJSgSo17NSHTTPURLResponseCtcys5Error_pSgcyAK10URLRequestVcSgtF",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hitURLRequest",
+            "printedName": "hitURLRequest(_:_:_:_:_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VMHTTPMethod",
+                "printedName": "VMNetworking.VMHTTPMethod",
+                "usr": "s:12VMNetworking12VMHTTPMethodO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VMNetworking.VMRequestSerialization?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VMRequestSerialization",
+                    "printedName": "VMNetworking.VMRequestSerialization",
+                    "usr": "s:12VMNetworking22VMRequestSerializationC"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Foundation.Data?, [Swift.String : Any]?, Foundation.HTTPURLResponse) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Foundation.Data?, [Swift.String : Any]?, Foundation.HTTPURLResponse)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Foundation.Data?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Data",
+                            "printedName": "Foundation.Data",
+                            "usr": "s:10Foundation4DataV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "[Swift.String : Any]?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Dictionary",
+                            "printedName": "[Swift.String : Any]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ProtocolComposition",
+                                "printedName": "Any"
+                              }
+                            ],
+                            "usr": "s:SD"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HTTPURLResponse",
+                        "printedName": "Foundation.HTTPURLResponse",
+                        "usr": "c:objc(cs)NSHTTPURLResponse"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "((any Swift.Error)?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any Swift.Error)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Foundation.URLRequest) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Foundation.URLRequest) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URLRequest",
+                        "printedName": "Foundation.URLRequest",
+                        "usr": "s:10Foundation10URLRequestV"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VMNetworking16VMSessionManagerC13hitURLRequestyyAA12VMHTTPMethodO_10Foundation0E0VAA22VMRequestSerializationCSgyAG4DataVSg_SDySSypGSgSo17NSHTTPURLResponseCtcys5Error_pSgcyAIcSgtF",
+            "mangledName": "$s12VMNetworking16VMSessionManagerC13hitURLRequestyyAA12VMHTTPMethodO_10Foundation0E0VAA22VMRequestSerializationCSgyAG4DataVSg_SDySSypGSgSo17NSHTTPURLResponseCtcys5Error_pSgcyAIcSgtF",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hitUploadAPI",
+            "printedName": "hitUploadAPI(_:httpBodyData:_:_:_:_:_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VMHTTPMethod",
+                "printedName": "VMNetworking.VMHTTPMethod",
+                "usr": "s:12VMNetworking12VMHTTPMethodO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "VMNetworking.VMRequestSerialization?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VMRequestSerialization",
+                    "printedName": "VMNetworking.VMRequestSerialization",
+                    "usr": "s:12VMNetworking22VMRequestSerializationC"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Foundation.Data?, [Swift.String : Any]?, Foundation.HTTPURLResponse) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Foundation.Data?, [Swift.String : Any]?, Foundation.HTTPURLResponse)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Foundation.Data?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Data",
+                            "printedName": "Foundation.Data",
+                            "usr": "s:10Foundation4DataV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "[Swift.String : Any]?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Dictionary",
+                            "printedName": "[Swift.String : Any]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ProtocolComposition",
+                                "printedName": "Any"
+                              }
+                            ],
+                            "usr": "s:SD"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HTTPURLResponse",
+                        "printedName": "Foundation.HTTPURLResponse",
+                        "usr": "c:objc(cs)NSHTTPURLResponse"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "((any Swift.Error)?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any Swift.Error)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Foundation.URLRequest) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Foundation.URLRequest) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URLRequest",
+                        "printedName": "Foundation.URLRequest",
+                        "usr": "s:10Foundation10URLRequestV"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VMNetworking16VMSessionManagerC12hitUploadAPI_12httpBodyData______yAA12VMHTTPMethodO_10Foundation0I0VSSAA22VMRequestSerializationCSgSDySSypGyAJSg_ANSgSo17NSHTTPURLResponseCtcys5Error_pSgcyAH10URLRequestVcSgtF",
+            "mangledName": "$s12VMNetworking16VMSessionManagerC12hitUploadAPI_12httpBodyData______yAA12VMHTTPMethodO_10Foundation0I0VSSAA22VMRequestSerializationCSgSDySSypGyAJSg_ANSgSo17NSHTTPURLResponseCtcys5Error_pSgcyAH10URLRequestVcSgtF",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "invalidCancelSession",
+            "printedName": "invalidCancelSession()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12VMNetworking16VMSessionManagerC20invalidCancelSessionyyF",
+            "mangledName": "$s12VMNetworking16VMSessionManagerC20invalidCancelSessionyyF",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:12VMNetworking16VMSessionManagerC",
+        "mangledName": "$s12VMNetworking16VMSessionManagerC",
+        "moduleName": "VMNetworking",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "VMNetworking",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VMResponseSerialization",
+        "printedName": "VMResponseSerialization",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "responseType",
+            "printedName": "responseType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VMResponseType",
+                "printedName": "VMNetworking.VMResponseType",
+                "usr": "s:12VMNetworking14VMResponseTypeO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12VMNetworking23VMResponseSerializationC12responseTypeAA0bE0Ovp",
+            "mangledName": "$s12VMNetworking23VMResponseSerializationC12responseTypeAA0bE0Ovp",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VMResponseType",
+                    "printedName": "VMNetworking.VMResponseType",
+                    "usr": "s:12VMNetworking14VMResponseTypeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VMNetworking23VMResponseSerializationC12responseTypeAA0bE0Ovg",
+                "mangledName": "$s12VMNetworking23VMResponseSerializationC12responseTypeAA0bE0Ovg",
+                "moduleName": "VMNetworking",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VMResponseType",
+                    "printedName": "VMNetworking.VMResponseType",
+                    "usr": "s:12VMNetworking14VMResponseTypeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VMNetworking23VMResponseSerializationC12responseTypeAA0bE0Ovs",
+                "mangledName": "$s12VMNetworking23VMResponseSerializationC12responseTypeAA0bE0Ovs",
+                "moduleName": "VMNetworking",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12VMNetworking23VMResponseSerializationC12responseTypeAA0bE0OvM",
+                "mangledName": "$s12VMNetworking23VMResponseSerializationC12responseTypeAA0bE0OvM",
+                "moduleName": "VMNetworking",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VMResponseSerialization",
+                "printedName": "VMNetworking.VMResponseSerialization",
+                "usr": "s:12VMNetworking23VMResponseSerializationC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:12VMNetworking23VMResponseSerializationCACycfc",
+            "mangledName": "$s12VMNetworking23VMResponseSerializationCACycfc",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:12VMNetworking23VMResponseSerializationC",
+        "mangledName": "$s12VMNetworking23VMResponseSerializationC",
+        "moduleName": "VMNetworking",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "URL",
+        "printedName": "URL",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "params",
+            "printedName": "params",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[(Swift.String, Swift.String)]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.String, Swift.String)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10Foundation3URLV12VMNetworkingE6paramsSaySS_SStGvp",
+            "mangledName": "$s10Foundation3URLV12VMNetworkingE6paramsSaySS_SStGvp",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[(Swift.String, Swift.String)]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Swift.String, Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10Foundation3URLV12VMNetworkingE6paramsSaySS_SStGvg",
+                "mangledName": "$s10Foundation3URLV12VMNetworkingE6paramsSaySS_SStGvg",
+                "moduleName": "VMNetworking",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "appendNewQueryParams",
+            "printedName": "appendNewQueryParams(param:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Foundation3URLV12VMNetworkingE20appendNewQueryParams5paramACSgSDySSypG_tF",
+            "mangledName": "$s10Foundation3URLV12VMNetworkingE20appendNewQueryParams5paramACSgSDySSypG_tF",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "appendParams",
+            "printedName": "appendParams(param:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Foundation3URLV12VMNetworkingE12appendParams5paramACSgSDyS2SG_tF",
+            "mangledName": "$s10Foundation3URLV12VMNetworkingE12appendParams5paramACSgSDyS2SG_tF",
+            "moduleName": "VMNetworking",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "constructURLString",
+            "printedName": "constructURLString(API:service:protocol:domain:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Foundation3URLV12VMNetworkingE18constructURLString3API7service8protocol6domainS2S_S3StFZ",
+            "mangledName": "$s10Foundation3URLV12VMNetworkingE18constructURLString3API7service8protocol6domainS2S_S3StFZ",
+            "moduleName": "VMNetworking",
+            "static": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "constructURL",
+            "printedName": "constructURL(API:service:protocol:domain:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Foundation3URLV12VMNetworkingE09constructB03API7service8protocol6domainACSgSS_S3StFZ",
+            "mangledName": "$s10Foundation3URLV12VMNetworkingE09constructB03API7service8protocol6domainACSgSS_S3StFZ",
+            "moduleName": "VMNetworking",
+            "static": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:10Foundation3URLV",
+        "mangledName": "$s10Foundation3URLV",
+        "moduleName": "Foundation",
+        "intro_Macosx": "10.10",
+        "intro_iOS": "8.0",
+        "intro_tvOS": "9.0",
+        "intro_watchOS": "2.0",
+        "declAttributes": [
+          "Available",
+          "Available",
+          "Available",
+          "Available"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ReferenceConvertible",
+            "printedName": "ReferenceConvertible",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ReferenceType",
+                "printedName": "ReferenceType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSURL",
+                    "printedName": "Foundation.NSURL",
+                    "usr": "c:objc(cs)NSURL"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:10Foundation20ReferenceConvertibleP",
+            "mangledName": "$s10Foundation20ReferenceConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_CustomPlaygroundQuickLookable",
+            "printedName": "_CustomPlaygroundQuickLookable",
+            "usr": "s:s30_CustomPlaygroundQuickLookableP",
+            "mangledName": "$ss30_CustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ExpressibleByFileReferenceLiteral",
+            "printedName": "_ExpressibleByFileReferenceLiteral",
+            "usr": "s:s34_ExpressibleByFileReferenceLiteralP",
+            "mangledName": "$ss34_ExpressibleByFileReferenceLiteralP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSURL",
+                    "printedName": "Foundation.NSURL",
+                    "usr": "c:objc(cs)NSURL"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/VMNetworking\/VMNetworkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 242,
+      "length": 6,
+      "value": "\"POST\""
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/VMNetworking\/VMNetworkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 256,
+      "length": 5,
+      "value": "\"GET\""
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/VMNetworking\/VMNetworkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 269,
+      "length": 5,
+      "value": "\"PUT\""
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/VMNetworking\/VMNetworkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 286,
+      "length": 8,
+      "value": "\"DELETE\""
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/VMNetworking\/VMNetworkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 558,
+      "length": 20,
+      "value": "\"Invalid_URL_String\""
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/VMNetworking\/VMNetworkEnum.swift",
+      "kind": "StringLiteral",
+      "offset": 604,
+      "length": 24,
+      "value": "\"Session_Not_Configured\""
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/VMNetworking\/VMRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 286,
+      "length": 32,
+      "value": "\"application\/json;charset=UTF-8\""
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/VMNetworking\/VMRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 332,
+      "length": 49,
+      "value": "\"application\/x-www-form-urlencoded;charset=UTF-8\""
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/VMNetworking\/VMRequest.swift",
+      "kind": "Dictionary",
+      "offset": 561,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/VMNetworking\/VMRequest.swift",
+      "kind": "IntegerLiteral",
+      "offset": 952,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/VMNetworking\/VMSessionManager.swift",
+      "kind": "Dictionary",
+      "offset": 1620,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/VMNetworking\/VMSessionManager.swift",
+      "kind": "Dictionary",
+      "offset": 1927,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/VMNetworking\/VMSessionManager.swift",
+      "kind": "Dictionary",
+      "offset": 2239,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/VMNetworking\/VMSessionManager.swift",
+      "kind": "Dictionary",
+      "offset": 2790,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/VMNetworking\/VMSessionManager.swift",
+      "kind": "Dictionary",
+      "offset": 3470,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/VMNetworking\/VMSessionManager.swift",
+      "kind": "Dictionary",
+      "offset": 5414,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/VMNetworking\/VMSessionManager.swift",
+      "kind": "Dictionary",
+      "offset": 6914,
+      "length": 3,
+      "value": "[]"
+    }
+  ]
+}

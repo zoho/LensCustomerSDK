@@ -1,0 +1,123 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name VMNetworking
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension Foundation.URL {
+  public var params: [(Swift.String, Swift.String)] {
+    get
+  }
+  public func appendNewQueryParams(param: [Swift.String : Any]) -> Foundation.URL?
+  public func appendParams(param: [Swift.String : Swift.String]) -> Foundation.URL?
+  public static func constructURLString(API: Swift.String, service: Swift.String, protocol protocolString: Swift.String, domain: Swift.String) -> Swift.String
+  public static func constructURL(API: Swift.String, service: Swift.String, protocol protocolString: Swift.String, domain: Swift.String) -> Foundation.URL?
+}
+@_hasMissingDesignatedInitializers public class VMJsonManager {
+  public class func convertToDictionary(text: Swift.String) -> [Swift.String : Any]?
+  public class func data(jsonObject: Any) -> Foundation.Data?
+  public class func formData(jsonObject: [Swift.String : Any]?) -> Foundation.Data?
+  public class func json(data: Foundation.Data) -> Any
+  public class func isValid(json: Any) -> Swift.Bool
+  @objc deinit
+}
+public enum VMHTTPMethod : Swift.String {
+  case post, get, put, delete
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum VMSessionError : Swift.String, Swift.Error {
+  case invalidURLString, sessionNotConfigured
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum VMResponseType {
+  case data, dictionary
+  public static func == (a: VMNetworking.VMResponseType, b: VMNetworking.VMResponseType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ContentType : Swift.String {
+  case jsonType, formType
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class VMRequestSerialization {
+  public typealias HTTPField = Swift.String
+  public var timeOutInterval: Foundation.TimeInterval
+  public var HTTPHeaders: [Swift.String : Swift.String?]
+  public var contentType: Swift.String {
+    get
+    set(newValue)
+  }
+  public init(timeOutInterval: Foundation.TimeInterval = 60)
+  public func setValue(_ value: Swift.String?, forHTTPField: Swift.String)
+  public func value(_ forHTTPField: Swift.String) -> Swift.String?
+  public func setValues(_ values: [VMNetworking.VMRequestSerialization.HTTPField : Swift.String])
+  public func addValue(_ value: Swift.String, forHTTPField key: Swift.String)
+  public func addValues(_ values: [Swift.String], forHttpField key: Swift.String)
+  @objc deinit
+}
+public class VMSession {
+  public typealias dataSuccess = (_ data: Foundation.Data, _ response: Foundation.HTTPURLResponse) -> Swift.Void
+  public typealias datafailure = ((any Swift.Error)?) -> Swift.Void
+  public init(config: Foundation.URLSessionConfiguration)
+  public func invalidateAndCancel()
+  public func dataTask(_ request: Foundation.URLRequest, success: @escaping VMNetworking.VMSession.dataSuccess, failure: @escaping VMNetworking.VMSession.datafailure)
+  public func uploadTask()
+  public func downloadTask(url: Foundation.URL)
+  @objc deinit
+}
+public class VMSessionManager {
+  final public let requestSerialization: VMNetworking.VMRequestSerialization
+  final public let responseSerialization: VMNetworking.VMResponseSerialization
+  public typealias ApiSuccess = (_ data: Foundation.Data?, _ dictionary: [Swift.String : Any]?, _ response: Foundation.HTTPURLResponse) -> Swift.Void
+  public typealias ApiFailure = ((any Swift.Error)?) -> Swift.Void
+  public var session: VMNetworking.VMSession {
+    get
+    set
+  }
+  public static var manager: VMNetworking.VMSessionManager {
+    get
+  }
+  public init(reqSer: VMNetworking.VMRequestSerialization = VMRequestSerialization(), respSer: VMNetworking.VMResponseSerialization = VMResponseSerialization(), config: Foundation.URLSessionConfiguration = .default)
+  public func GET(API: Swift.String, requestSerialization: VMNetworking.VMRequestSerialization? = nil, params: [Swift.String : Swift.String] = [:], success: @escaping VMNetworking.VMSessionManager.ApiSuccess, failure: @escaping VMNetworking.VMSessionManager.ApiFailure)
+  public func PUT(API: Swift.String, requestSerialization: VMNetworking.VMRequestSerialization? = nil, params: [Swift.String : Swift.String] = [:], success: @escaping VMNetworking.VMSessionManager.ApiSuccess, failure: @escaping VMNetworking.VMSessionManager.ApiFailure)
+  public func DELETE(API: Swift.String, requestSerialization: VMNetworking.VMRequestSerialization? = nil, params: [Swift.String : Swift.String] = [:], success: @escaping VMNetworking.VMSessionManager.ApiSuccess, failure: @escaping VMNetworking.VMSessionManager.ApiFailure)
+  public func POST(API: Swift.String, requestSerialization: VMNetworking.VMRequestSerialization? = nil, params: [Swift.String : Any] = [:], success: @escaping VMNetworking.VMSessionManager.ApiSuccess, failure: @escaping VMNetworking.VMSessionManager.ApiFailure)
+  public func hitAPI(_ method: VMNetworking.VMHTTPMethod, _ API: Swift.String, _ requestSerialization: VMNetworking.VMRequestSerialization? = nil, _ params: [Swift.String : Any] = [:], _ success: @escaping VMNetworking.VMSessionManager.ApiSuccess, _ failure: @escaping VMNetworking.VMSessionManager.ApiFailure, _ requestConfiguration: ((Foundation.URLRequest) -> Swift.Void)? = nil)
+  public func hitURLRequest(_ method: VMNetworking.VMHTTPMethod, _ request: Foundation.URLRequest, _ requestSerialization: VMNetworking.VMRequestSerialization? = nil, _ success: @escaping VMNetworking.VMSessionManager.ApiSuccess, _ failure: @escaping VMNetworking.VMSessionManager.ApiFailure, _ requestConfiguration: ((Foundation.URLRequest) -> Swift.Void)? = nil)
+  public func hitUploadAPI(_ method: VMNetworking.VMHTTPMethod, httpBodyData: Foundation.Data, _ API: Swift.String, _ requestSerialization: VMNetworking.VMRequestSerialization? = nil, _ params: [Swift.String : Any] = [:], _ success: @escaping VMNetworking.VMSessionManager.ApiSuccess, _ failure: @escaping VMNetworking.VMSessionManager.ApiFailure, _ requestConfiguration: ((Foundation.URLRequest) -> Swift.Void)? = nil)
+  public func invalidCancelSession()
+  @objc deinit
+}
+public class VMResponseSerialization {
+  public var responseType: VMNetworking.VMResponseType
+  public init()
+  @objc deinit
+}
+extension VMNetworking.VMHTTPMethod : Swift.Equatable {}
+extension VMNetworking.VMHTTPMethod : Swift.Hashable {}
+extension VMNetworking.VMHTTPMethod : Swift.RawRepresentable {}
+extension VMNetworking.VMSessionError : Swift.Equatable {}
+extension VMNetworking.VMSessionError : Swift.Hashable {}
+extension VMNetworking.VMSessionError : Swift.RawRepresentable {}
+extension VMNetworking.VMResponseType : Swift.Equatable {}
+extension VMNetworking.VMResponseType : Swift.Hashable {}
+extension VMNetworking.ContentType : Swift.Equatable {}
+extension VMNetworking.ContentType : Swift.Hashable {}
+extension VMNetworking.ContentType : Swift.RawRepresentable {}

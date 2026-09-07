@@ -1,0 +1,52 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name Reusable
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public protocol CellResuable {
+  static var identifier: Swift.String { get }
+  static var nibName: Swift.String { get }
+  static var bundle: Foundation.Bundle { get }
+}
+extension Reusable.CellResuable where Self : UIKit.UIView {
+  public static var bundle: Foundation.Bundle {
+    get
+  }
+  public static var nibName: Swift.String {
+    get
+  }
+  public static var nib: UIKit.UINib {
+    get
+  }
+}
+public protocol ControllerReusable {
+  static var at_storyBoardId: Swift.String { get }
+  static var at_storyBoard: UIKit.UIStoryboard { get }
+}
+extension Reusable.ControllerReusable {
+  public static func at_storyBoardInstance<T>() -> T where T : UIKit.UIViewController
+}
+public protocol ViewResuable {
+  static var owner: Any? { get }
+  static var nibName: Swift.String { get }
+  static var bundle: Foundation.Bundle { get }
+}
+extension Reusable.ViewResuable where Self : UIKit.UIView {
+  public static var owner: Any? {
+    get
+  }
+  public static var bundle: Foundation.Bundle {
+    get
+  }
+  public static var nibName: Swift.String {
+    get
+  }
+  public static var view: UIKit.UIView {
+    get
+  }
+}

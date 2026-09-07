@@ -1,0 +1,21 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/jem-8413/Library/Developer/Xcode/DerivedData/ZAUtilsFramework-ckicxhmmskzkvughqdftssjpucxw/Build/Intermediates.noindex/ArchiveIntermediates/Reusable/InstallationBuildProductsLocation/Library/Frameworks/Reusable.framework/Reusable'
+relocations:
+  - { offset: 0x4E105, size: 0x8, addend: 0x0, symName: _ReusableVersionString, symObjAddr: 0x0, symBinAddr: 0x53E0, symSize: 0x0 }
+  - { offset: 0x4E13C, size: 0x8, addend: 0x0, symName: _ReusableVersionNumber, symObjAddr: 0x38, symBinAddr: 0x5418, symSize: 0x0 }
+  - { offset: 0x4E17A, size: 0x8, addend: 0x0, symName: '_$s8Reusable12CellResuablePAASo6UIViewCRbzrlE6bundleSo8NSBundleCvgZ', symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x40 }
+  - { offset: 0x4E240, size: 0x8, addend: 0x0, symName: '_$s8Reusable12CellResuablePAASo6UIViewCRbzrlE6bundleSo8NSBundleCvgZ', symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x40 }
+  - { offset: 0x4E2A5, size: 0x8, addend: 0x0, symName: '_$s8Reusable12CellResuablePAASo6UIViewCRbzrlE7nibNameSSvgZ', symObjAddr: 0x40, symBinAddr: 0x4040, symSize: 0x2C }
+  - { offset: 0x4E320, size: 0x8, addend: 0x0, symName: '_$s8Reusable12CellResuablePAASo6UIViewCRbzrlE3nibSo5UINibCvgZ', symObjAddr: 0x6C, symBinAddr: 0x406C, symSize: 0xA4 }
+  - { offset: 0x4E405, size: 0x8, addend: 0x0, symName: '_$s8Reusable010ControllerA0PAAE21at_storyBoardInstanceqd__ySo06UIViewB0CRbd__lFZ', symObjAddr: 0x0, symBinAddr: 0x4128, symSize: 0xA4 }
+  - { offset: 0x4E458, size: 0x8, addend: 0x0, symName: '_$s8Reusable010ControllerA0PAAE21at_storyBoardInstanceqd__ySo06UIViewB0CRbd__lFZ', symObjAddr: 0x0, symBinAddr: 0x4128, symSize: 0xA4 }
+  - { offset: 0x4E536, size: 0x8, addend: 0x0, symName: '_$s8Reusable12ViewResuablePAASo6UIViewCRbzrlE5ownerypSgvgZ', symObjAddr: 0x0, symBinAddr: 0x41CC, symSize: 0xC }
+  - { offset: 0x4E60E, size: 0x8, addend: 0x0, symName: '_$sypWOc', symObjAddr: 0x240, symBinAddr: 0x43A0, symSize: 0x3C }
+  - { offset: 0x4E622, size: 0x8, addend: 0x0, symName: '_$sypWOb', symObjAddr: 0x27C, symBinAddr: 0x43DC, symSize: 0x10 }
+  - { offset: 0x4E636, size: 0x8, addend: 0x0, symName: '_$sSo6UIViewCMa', symObjAddr: 0x28C, symBinAddr: 0x43EC, symSize: 0x44 }
+  - { offset: 0x4E64A, size: 0x8, addend: 0x0, symName: ___swift_project_boxed_opaque_existential_0, symObjAddr: 0x2D0, symBinAddr: 0x4430, symSize: 0x24 }
+  - { offset: 0x4E65E, size: 0x8, addend: 0x0, symName: ___swift_destroy_boxed_opaque_existential_0, symObjAddr: 0x2F4, symBinAddr: 0x4454, symSize: 0x20 }
+  - { offset: 0x4E6D6, size: 0x8, addend: 0x0, symName: '_$s8Reusable12ViewResuablePAASo6UIViewCRbzrlE5ownerypSgvgZ', symObjAddr: 0x0, symBinAddr: 0x41CC, symSize: 0xC }
+  - { offset: 0x4E787, size: 0x8, addend: 0x0, symName: '_$s8Reusable12ViewResuablePAASo6UIViewCRbzrlE4viewAEvgZ', symObjAddr: 0x78, symBinAddr: 0x41D8, symSize: 0x1C8 }
+...

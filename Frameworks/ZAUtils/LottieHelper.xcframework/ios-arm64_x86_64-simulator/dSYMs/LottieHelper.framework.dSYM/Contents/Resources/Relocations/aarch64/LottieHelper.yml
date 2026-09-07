@@ -1,0 +1,65 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/jem-8413/Library/Developer/Xcode/DerivedData/ZAUtilsFramework-ckicxhmmskzkvughqdftssjpucxw/Build/Intermediates.noindex/ArchiveIntermediates/LottieHelper/InstallationBuildProductsLocation/Library/Frameworks/LottieHelper.framework/LottieHelper'
+relocations:
+  - { offset: 0x5FE, size: 0x8, addend: 0x0, symName: _LottieHelperVersionString, symObjAddr: 0x0, symBinAddr: 0x6260, symSize: 0x0 }
+  - { offset: 0x632, size: 0x8, addend: 0x0, symName: _LottieHelperVersionNumber, symObjAddr: 0x38, symBinAddr: 0x6298, symSize: 0x0 }
+  - { offset: 0xBDE, size: 0x8, addend: 0x0, symName: '_$sSo6UIViewCMa', symObjAddr: 0xACC, symBinAddr: 0x1F5C, symSize: 0x44 }
+  - { offset: 0xC41, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewCfETo', symObjAddr: 0x2008, symBinAddr: 0x3430, symSize: 0xD0 }
+  - { offset: 0xC6E, size: 0x8, addend: 0x0, symName: '_$ss15ContiguousArrayV16_createNewBuffer14bufferIsUnique15minimumCapacity13growForAppendySb_SiSbtFSo6UIViewC_Tg5', symObjAddr: 0x20D8, symBinAddr: 0x3500, symSize: 0x1C }
+  - { offset: 0xCCB, size: 0x8, addend: 0x0, symName: '_$ss22_ContiguousArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFSo6UIViewC_Tg5', symObjAddr: 0x20F4, symBinAddr: 0x351C, symSize: 0x124 }
+  - { offset: 0xDB5, size: 0x8, addend: 0x0, symName: '_$ss29getContiguousArrayStorageType3fors01_bcD0CyxGmxm_tlFSo6UIViewC_Ttg5', symObjAddr: 0x2218, symBinAddr: 0x3640, symSize: 0x5C }
+  - { offset: 0xDEA, size: 0x8, addend: 0x0, symName: '_$ss12_ArrayBufferV19_getElementSlowPathyyXlSiFSo6UIViewC_Tg5', symObjAddr: 0x2274, symBinAddr: 0x369C, symSize: 0x1B4 }
+  - { offset: 0xE64, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewCMa', symObjAddr: 0x2428, symBinAddr: 0x3850, symSize: 0x20 }
+  - { offset: 0xE77, size: 0x8, addend: 0x0, symName: '_$sypWOc', symObjAddr: 0x2448, symBinAddr: 0x3870, symSize: 0x3C }
+  - { offset: 0xE8A, size: 0x8, addend: 0x0, symName: '_$sypWOb', symObjAddr: 0x2484, symBinAddr: 0x38AC, symSize: 0x10 }
+  - { offset: 0xE9D, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A4Type_pWOc', symObjAddr: 0x2494, symBinAddr: 0x38BC, symSize: 0x44 }
+  - { offset: 0xEB0, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A4Type_pSgWOf', symObjAddr: 0x24D8, symBinAddr: 0x3900, symSize: 0x50 }
+  - { offset: 0xEC3, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledNameV2, symObjAddr: 0x2528, symBinAddr: 0x3950, symSize: 0x50 }
+  - { offset: 0xED6, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A4Type_pSgWOh', symObjAddr: 0x2578, symBinAddr: 0x39A0, symSize: 0x48 }
+  - { offset: 0xEE9, size: 0x8, addend: 0x0, symName: ___swift_project_boxed_opaque_existential_1, symObjAddr: 0x25C0, symBinAddr: 0x39E8, symSize: 0x24 }
+  - { offset: 0xEFC, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC8instance10lottieType18messageLabelConfig06customD017isPromotionNeeded18promotionIconImage25actionButtonConfigurationAcA0aG0_p_ySo7UILabelCcSgSo6UIViewCSgSbSgSo7UIImageCSgyycSgSo8UIButtonCcSgtFZy7SnapKit15ConstraintMakerCXEfU_TA', symObjAddr: 0x25E4, symBinAddr: 0x3A0C, symSize: 0x8 }
+  - { offset: 0xF0F, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A4Type_pSgWOc', symObjAddr: 0x2908, symBinAddr: 0x3D30, symSize: 0x50 }
+  - { offset: 0x11C4, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A4TypePAAE29ALL_LOTTIE_ANIMATION_VIEW_TAGSivgZ', symObjAddr: 0x0, symBinAddr: 0x1490, symSize: 0x8 }
+  - { offset: 0x1292, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A4TypePAAE03getA08withName6bundle0A00A13AnimationViewCSS_So8NSBundleCtF', symObjAddr: 0x8, symBinAddr: 0x1498, symSize: 0x14C }
+  - { offset: 0x1394, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC06customD9ContainerSo6UIViewCSgvgTo', symObjAddr: 0x154, symBinAddr: 0x15E4, symSize: 0x20 }
+  - { offset: 0x13F2, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC06customD9ContainerSo6UIViewCSgvsTo', symObjAddr: 0x174, symBinAddr: 0x1604, symSize: 0x14 }
+  - { offset: 0x142B, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC15lottieContainerSo6UIViewCSgvM', symObjAddr: 0x1B8, symBinAddr: 0x1648, symSize: 0x84 }
+  - { offset: 0x1461, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC21lottieContainerHeightSo18NSLayoutConstraintCSgvM', symObjAddr: 0x26C, symBinAddr: 0x16FC, symSize: 0x84 }
+  - { offset: 0x1497, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC20lottieContainerWidthSo18NSLayoutConstraintCSgvM', symObjAddr: 0x320, symBinAddr: 0x17B0, symSize: 0x84 }
+  - { offset: 0x14CD, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC12messageLabelSo7UILabelCSgvM', symObjAddr: 0x3D4, symBinAddr: 0x1864, symSize: 0x84 }
+  - { offset: 0x1515, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC15messageLabelTopSo18NSLayoutConstraintCSgvgTo', symObjAddr: 0x458, symBinAddr: 0x18E8, symSize: 0x20 }
+  - { offset: 0x1569, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC15messageLabelTopSo18NSLayoutConstraintCSgvsTo', symObjAddr: 0x478, symBinAddr: 0x1908, symSize: 0x14 }
+  - { offset: 0x15B4, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC13promotionIconSo07UIImageD0CSgvgTo', symObjAddr: 0x48C, symBinAddr: 0x191C, symSize: 0x20 }
+  - { offset: 0x1608, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC13promotionIconSo07UIImageD0CSgvsTo', symObjAddr: 0x4AC, symBinAddr: 0x193C, symSize: 0x14 }
+  - { offset: 0x1641, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC12actionButtonSo8UIButtonCSgvM', symObjAddr: 0x620, symBinAddr: 0x1AB0, symSize: 0x84 }
+  - { offset: 0x1689, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC10lottieTypeAA0aF0_pSgvW', symObjAddr: 0x714, symBinAddr: 0x1BA4, symSize: 0x15C }
+  - { offset: 0x16EA, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC6lottie0A00a9AnimationD0CSgvg', symObjAddr: 0x870, symBinAddr: 0x1D00, symSize: 0x25C }
+  - { offset: 0x1A97, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC8instance10lottieType18messageLabelConfig06customD017isPromotionNeeded18promotionIconImage25actionButtonConfigurationAcA0aG0_p_ySo7UILabelCcSgSo6UIViewCSgSbSgSo7UIImageCSgyycSgSo8UIButtonCcSgtFZ', symObjAddr: 0xB10, symBinAddr: 0x1FA0, symSize: 0x4BC }
+  - { offset: 0x1DAA, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC8instance10lottieType18messageLabelConfig06customD017isPromotionNeeded18promotionIconImage25actionButtonConfigurationAcA0aG0_p_ySo7UILabelCcSgSo6UIViewCSgSbSgSo7UIImageCSgyycSgSo8UIButtonCcSgtFZy7SnapKit15ConstraintMakerCXEfU_', symObjAddr: 0xFCC, symBinAddr: 0x245C, symSize: 0x1E0 }
+  - { offset: 0x1F10, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC8instance4with0f6CustomC09lineCount06customD017isPromotionNeeded18promotionIconImage25actionButtonConfigurationAcA0A4Type_p_SSSgSiSgSo6UIViewCSgSbSgSo7UIImageCSgyycSgSo8UIButtonCcSgtFZ', symObjAddr: 0x11AC, symBinAddr: 0x263C, symSize: 0x6B8 }
+  - { offset: 0x22FB, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC8instance4with0f6CustomC09lineCount06customD017isPromotionNeeded18promotionIconImage25actionButtonConfigurationAcA0A4Type_p_SSSgSiSgSo6UIViewCSgSbSgSo7UIImageCSgyycSgSo8UIButtonCcSgtFZySo7UILabelCcfU_', symObjAddr: 0x1864, symBinAddr: 0x2CF4, symSize: 0x150 }
+  - { offset: 0x23C3, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC14layoutSubviewsyyF', symObjAddr: 0x19B4, symBinAddr: 0x2E44, symSize: 0x124 }
+  - { offset: 0x2495, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC14layoutSubviewsyyFTo', symObjAddr: 0x1AD8, symBinAddr: 0x2F68, symSize: 0x28 }
+  - { offset: 0x24BA, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC12awakeFromNibyyFTo', symObjAddr: 0x1B68, symBinAddr: 0x2F90, symSize: 0x84 }
+  - { offset: 0x2510, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC13touchupInsideyyypFTo', symObjAddr: 0x1BEC, symBinAddr: 0x3014, symSize: 0x98 }
+  - { offset: 0x2546, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC5tapedyySo8UIButtonCFTo', symObjAddr: 0x1C84, symBinAddr: 0x30AC, symSize: 0x4 }
+  - { offset: 0x257B, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC5frameACSo6CGRectV_tcfC', symObjAddr: 0x1C88, symBinAddr: 0x30B0, symSize: 0x48 }
+  - { offset: 0x258E, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC5frameACSo6CGRectV_tcfc', symObjAddr: 0x1CD0, symBinAddr: 0x30F8, symSize: 0x140 }
+  - { offset: 0x25BE, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC5frameACSo6CGRectV_tcfcTo', symObjAddr: 0x1E10, symBinAddr: 0x3238, symSize: 0x20 }
+  - { offset: 0x25D1, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC5coderACSgSo7NSCoderC_tcfC', symObjAddr: 0x1E30, symBinAddr: 0x3258, symSize: 0x3C }
+  - { offset: 0x25E4, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC5coderACSgSo7NSCoderC_tcfc', symObjAddr: 0x1E6C, symBinAddr: 0x3294, symSize: 0x144 }
+  - { offset: 0x2614, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewC5coderACSgSo7NSCoderC_tcfcTo', symObjAddr: 0x1FB0, symBinAddr: 0x33D8, symSize: 0x28 }
+  - { offset: 0x2627, size: 0x8, addend: 0x0, symName: '_$s12LottieHelper0A11MessageViewCfD', symObjAddr: 0x1FD8, symBinAddr: 0x3400, symSize: 0x30 }
+  - { offset: 0x2793, size: 0x8, addend: 0x0, symName: '_$sSo11UITableViewC12LottieHelperE013addBackgroundC0_06customB017isPromotionNeeded18promotionIconImage25actionButtonConfigurationyAC0C4Type_p_So6UIViewCSgSbSgSo7UIImageCSgyycSo8UIButtonCcSgtF', symObjAddr: 0x0, symBinAddr: 0x3D88, symSize: 0x6E8 }
+  - { offset: 0x27F9, size: 0x8, addend: 0x0, symName: '_$sSo8UIButtonCIeg_Ieggo_SgWOy', symObjAddr: 0x72C, symBinAddr: 0x4470, symSize: 0x10 }
+  - { offset: 0x2816, size: 0x8, addend: 0x0, symName: '_$sSo8UIButtonCIeg_Ieggo_ABIeg_SgIeggo_TRTA', symObjAddr: 0xA38, symBinAddr: 0x45A8, symSize: 0x20 }
+  - { offset: 0x2C1A, size: 0x8, addend: 0x0, symName: '_$sSo11UITableViewC12LottieHelperE013addBackgroundC0_06customB017isPromotionNeeded18promotionIconImage25actionButtonConfigurationyAC0C4Type_p_So6UIViewCSgSbSgSo7UIImageCSgyycSo8UIButtonCcSgtF', symObjAddr: 0x0, symBinAddr: 0x3D88, symSize: 0x6E8 }
+  - { offset: 0x2FEB, size: 0x8, addend: 0x0, symName: '_$sSo11UITableViewC12LottieHelperE013addBackgroundC0_06customB017isPromotionNeeded18promotionIconImage25actionButtonConfigurationyAC0C4Type_p_So6UIViewCSgSbSgSo7UIImageCSgyycSo8UIButtonCcSgtFy7SnapKit15ConstraintMakerCXEfU_', symObjAddr: 0x8CC, symBinAddr: 0x4480, symSize: 0x104 }
+  - { offset: 0x3033, size: 0x8, addend: 0x0, symName: '_$sSo11UITableViewC12LottieHelperE016updateBackgroundC0yyF', symObjAddr: 0xA58, symBinAddr: 0x45C8, symSize: 0x108 }
+  - { offset: 0x30A4, size: 0x8, addend: 0x0, symName: '_$sSo11UITableViewC12LottieHelperE012isBackgroundC7PlayingSbvg', symObjAddr: 0xB60, symBinAddr: 0x46D0, symSize: 0x9C }
+  - { offset: 0x30DF, size: 0x8, addend: 0x0, symName: '_$sSo11UITableViewC12LottieHelperE016removeBackgroundC0yyF', symObjAddr: 0xBFC, symBinAddr: 0x476C, symSize: 0x64 }
+  - { offset: 0x31AA, size: 0x8, addend: 0x0, symName: '_$s11_LottieStub0aB0CfD', symObjAddr: 0x0, symBinAddr: 0x47E8, symSize: 0x10 }
+  - { offset: 0x31E1, size: 0x8, addend: 0x0, symName: '_$s11_LottieStub0aB0CMa', symObjAddr: 0x10, symBinAddr: 0x47F8, symSize: 0x20 }
+  - { offset: 0x31FF, size: 0x8, addend: 0x0, symName: '_$s11_LottieStub0aB0CfD', symObjAddr: 0x0, symBinAddr: 0x47E8, symSize: 0x10 }
+...

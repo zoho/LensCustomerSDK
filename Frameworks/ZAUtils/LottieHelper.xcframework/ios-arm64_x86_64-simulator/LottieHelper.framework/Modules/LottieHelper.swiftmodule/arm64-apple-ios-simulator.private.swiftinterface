@@ -1,0 +1,48 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name LottieHelper
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import Foundation
+import Lottie
+import SnapKit_Extention
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension LottieHelper.LottieType {
+  public static var ALL_LOTTIE_ANIMATION_VIEW_TAG: Swift.Int {
+    get
+  }
+  public func getLottie(withName: Swift.String, bundle: Foundation.Bundle) -> Lottie.LottieAnimationView
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class LottieMessageView : UIKit.UIView {
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var lottieContainer: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var lottieContainerHeight: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var lottieContainerWidth: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var messageLabel: UIKit.UILabel!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var actionButton: UIKit.UIButton!
+  @_Concurrency.MainActor @preconcurrency public var lottie: Lottie.LottieAnimationView? {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public static func instance(lottieType: any LottieHelper.LottieType, messageLabelConfig: ((UIKit.UILabel) -> Swift.Void)? = nil, customView: UIKit.UIView? = nil, isPromotionNeeded: Swift.Bool? = false, promotionIconImage: UIKit.UIImage? = nil, actionButtonConfiguration: ((UIKit.UIButton) -> (() -> Swift.Void)?)? = nil) -> LottieHelper.LottieMessageView
+  @_Concurrency.MainActor @preconcurrency public static func instance(with lottieType: any LottieHelper.LottieType, withCustomMessage message: Swift.String? = nil, lineCount: Swift.Int? = -1, customView: UIKit.UIView? = nil, isPromotionNeeded: Swift.Bool? = false, promotionIconImage: UIKit.UIImage? = nil, actionButtonConfiguration: ((UIKit.UIButton) -> (() -> Swift.Void)?)? = nil) -> LottieHelper.LottieMessageView
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func awakeFromNib()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension UIKit.UITableView {
+  @_Concurrency.MainActor @preconcurrency public func addBackgroundLottie(_ lottieType: any LottieHelper.LottieType, customView: UIKit.UIView? = nil, isPromotionNeeded: Swift.Bool? = false, promotionIconImage: UIKit.UIImage? = nil, actionButtonConfiguration: ((UIKit.UIButton) -> () -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public func updateBackgroundLottie()
+  @_Concurrency.MainActor @preconcurrency public var isBackgroundLottiePlaying: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public func removeBackgroundLottie()
+}
+public protocol LottieType {
+  var lottie: Lottie.LottieAnimationView { get }
+  var size: CoreFoundation.CGSize? { get }
+  var message: Swift.String? { get }
+}

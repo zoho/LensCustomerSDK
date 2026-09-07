@@ -1,0 +1,912 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "Reusable",
+    "printedName": "Reusable",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Reusable",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "Reusable"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CellResuable",
+        "printedName": "CellResuable",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "identifier",
+            "printedName": "identifier",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8Reusable12CellResuableP10identifierSSvpZ",
+            "mangledName": "$s8Reusable12CellResuableP10identifierSSvpZ",
+            "moduleName": "Reusable",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Reusable12CellResuableP10identifierSSvgZ",
+                "mangledName": "$s8Reusable12CellResuableP10identifierSSvgZ",
+                "moduleName": "Reusable",
+                "genericSig": "<τ_0_0 where τ_0_0 : Reusable.CellResuable>",
+                "sugared_genericSig": "<Self where Self : Reusable.CellResuable>",
+                "static": true,
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "nibName",
+            "printedName": "nibName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8Reusable12CellResuableP7nibNameSSvpZ",
+            "mangledName": "$s8Reusable12CellResuableP7nibNameSSvpZ",
+            "moduleName": "Reusable",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Reusable12CellResuableP7nibNameSSvgZ",
+                "mangledName": "$s8Reusable12CellResuableP7nibNameSSvgZ",
+                "moduleName": "Reusable",
+                "genericSig": "<τ_0_0 where τ_0_0 : Reusable.CellResuable>",
+                "sugared_genericSig": "<Self where Self : Reusable.CellResuable>",
+                "static": true,
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "bundle",
+            "printedName": "bundle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bundle",
+                "printedName": "Foundation.Bundle",
+                "usr": "c:objc(cs)NSBundle"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8Reusable12CellResuableP6bundleSo8NSBundleCvpZ",
+            "mangledName": "$s8Reusable12CellResuableP6bundleSo8NSBundleCvpZ",
+            "moduleName": "Reusable",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Reusable12CellResuableP6bundleSo8NSBundleCvgZ",
+                "mangledName": "$s8Reusable12CellResuableP6bundleSo8NSBundleCvgZ",
+                "moduleName": "Reusable",
+                "genericSig": "<τ_0_0 where τ_0_0 : Reusable.CellResuable>",
+                "sugared_genericSig": "<Self where Self : Reusable.CellResuable>",
+                "static": true,
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "bundle",
+            "printedName": "bundle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bundle",
+                "printedName": "Foundation.Bundle",
+                "usr": "c:objc(cs)NSBundle"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8Reusable12CellResuablePAASo6UIViewCRbzrlE6bundleSo8NSBundleCvpZ",
+            "mangledName": "$s8Reusable12CellResuablePAASo6UIViewCRbzrlE6bundleSo8NSBundleCvpZ",
+            "moduleName": "Reusable",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Reusable12CellResuablePAASo6UIViewCRbzrlE6bundleSo8NSBundleCvgZ",
+                "mangledName": "$s8Reusable12CellResuablePAASo6UIViewCRbzrlE6bundleSo8NSBundleCvgZ",
+                "moduleName": "Reusable",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIView, τ_0_0 : Reusable.CellResuable>",
+                "sugared_genericSig": "<Self where Self : UIKit.UIView, Self : Reusable.CellResuable>",
+                "static": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "nibName",
+            "printedName": "nibName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8Reusable12CellResuablePAASo6UIViewCRbzrlE7nibNameSSvpZ",
+            "mangledName": "$s8Reusable12CellResuablePAASo6UIViewCRbzrlE7nibNameSSvpZ",
+            "moduleName": "Reusable",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Reusable12CellResuablePAASo6UIViewCRbzrlE7nibNameSSvgZ",
+                "mangledName": "$s8Reusable12CellResuablePAASo6UIViewCRbzrlE7nibNameSSvgZ",
+                "moduleName": "Reusable",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIView, τ_0_0 : Reusable.CellResuable>",
+                "sugared_genericSig": "<Self where Self : UIKit.UIView, Self : Reusable.CellResuable>",
+                "static": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "nib",
+            "printedName": "nib",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UINib",
+                "printedName": "UIKit.UINib",
+                "usr": "c:objc(cs)UINib"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8Reusable12CellResuablePAASo6UIViewCRbzrlE3nibSo5UINibCvpZ",
+            "mangledName": "$s8Reusable12CellResuablePAASo6UIViewCRbzrlE3nibSo5UINibCvpZ",
+            "moduleName": "Reusable",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UINib",
+                    "printedName": "UIKit.UINib",
+                    "usr": "c:objc(cs)UINib"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Reusable12CellResuablePAASo6UIViewCRbzrlE3nibSo5UINibCvgZ",
+                "mangledName": "$s8Reusable12CellResuablePAASo6UIViewCRbzrlE3nibSo5UINibCvgZ",
+                "moduleName": "Reusable",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIView, τ_0_0 : Reusable.CellResuable>",
+                "sugared_genericSig": "<Self where Self : UIKit.UIView, Self : Reusable.CellResuable>",
+                "static": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:8Reusable12CellResuableP",
+        "mangledName": "$s8Reusable12CellResuableP",
+        "moduleName": "Reusable",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Reusable",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "Reusable"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ControllerReusable",
+        "printedName": "ControllerReusable",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "at_storyBoardId",
+            "printedName": "at_storyBoardId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8Reusable010ControllerA0P15at_storyBoardIdSSvpZ",
+            "mangledName": "$s8Reusable010ControllerA0P15at_storyBoardIdSSvpZ",
+            "moduleName": "Reusable",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Reusable010ControllerA0P15at_storyBoardIdSSvgZ",
+                "mangledName": "$s8Reusable010ControllerA0P15at_storyBoardIdSSvgZ",
+                "moduleName": "Reusable",
+                "genericSig": "<τ_0_0 where τ_0_0 : Reusable.ControllerReusable>",
+                "sugared_genericSig": "<Self where Self : Reusable.ControllerReusable>",
+                "static": true,
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "at_storyBoard",
+            "printedName": "at_storyBoard",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIStoryboard",
+                "printedName": "UIKit.UIStoryboard",
+                "usr": "c:objc(cs)UIStoryboard"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8Reusable010ControllerA0P13at_storyBoardSo12UIStoryboardCvpZ",
+            "mangledName": "$s8Reusable010ControllerA0P13at_storyBoardSo12UIStoryboardCvpZ",
+            "moduleName": "Reusable",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIStoryboard",
+                    "printedName": "UIKit.UIStoryboard",
+                    "usr": "c:objc(cs)UIStoryboard"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Reusable010ControllerA0P13at_storyBoardSo12UIStoryboardCvgZ",
+                "mangledName": "$s8Reusable010ControllerA0P13at_storyBoardSo12UIStoryboardCvgZ",
+                "moduleName": "Reusable",
+                "genericSig": "<τ_0_0 where τ_0_0 : Reusable.ControllerReusable>",
+                "sugared_genericSig": "<Self where Self : Reusable.ControllerReusable>",
+                "static": true,
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "at_storyBoardInstance",
+            "printedName": "at_storyBoardInstance()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8Reusable010ControllerA0PAAE21at_storyBoardInstanceqd__ySo06UIViewB0CRbd__lFZ",
+            "mangledName": "$s8Reusable010ControllerA0PAAE21at_storyBoardInstanceqd__ySo06UIViewB0CRbd__lFZ",
+            "moduleName": "Reusable",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : Reusable.ControllerReusable, τ_1_0 : UIKit.UIViewController>",
+            "sugared_genericSig": "<Self, T where Self : Reusable.ControllerReusable, T : UIKit.UIViewController>",
+            "static": true,
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:8Reusable010ControllerA0P",
+        "mangledName": "$s8Reusable010ControllerA0P",
+        "moduleName": "Reusable",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Reusable",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Reusable",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "Reusable"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ViewResuable",
+        "printedName": "ViewResuable",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "owner",
+            "printedName": "owner",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Any?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8Reusable12ViewResuableP5ownerypSgvpZ",
+            "mangledName": "$s8Reusable12ViewResuableP5ownerypSgvpZ",
+            "moduleName": "Reusable",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Reusable12ViewResuableP5ownerypSgvgZ",
+                "mangledName": "$s8Reusable12ViewResuableP5ownerypSgvgZ",
+                "moduleName": "Reusable",
+                "genericSig": "<τ_0_0 where τ_0_0 : Reusable.ViewResuable>",
+                "sugared_genericSig": "<Self where Self : Reusable.ViewResuable>",
+                "static": true,
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "nibName",
+            "printedName": "nibName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8Reusable12ViewResuableP7nibNameSSvpZ",
+            "mangledName": "$s8Reusable12ViewResuableP7nibNameSSvpZ",
+            "moduleName": "Reusable",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Reusable12ViewResuableP7nibNameSSvgZ",
+                "mangledName": "$s8Reusable12ViewResuableP7nibNameSSvgZ",
+                "moduleName": "Reusable",
+                "genericSig": "<τ_0_0 where τ_0_0 : Reusable.ViewResuable>",
+                "sugared_genericSig": "<Self where Self : Reusable.ViewResuable>",
+                "static": true,
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "bundle",
+            "printedName": "bundle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bundle",
+                "printedName": "Foundation.Bundle",
+                "usr": "c:objc(cs)NSBundle"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8Reusable12ViewResuableP6bundleSo8NSBundleCvpZ",
+            "mangledName": "$s8Reusable12ViewResuableP6bundleSo8NSBundleCvpZ",
+            "moduleName": "Reusable",
+            "static": true,
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Reusable12ViewResuableP6bundleSo8NSBundleCvgZ",
+                "mangledName": "$s8Reusable12ViewResuableP6bundleSo8NSBundleCvgZ",
+                "moduleName": "Reusable",
+                "genericSig": "<τ_0_0 where τ_0_0 : Reusable.ViewResuable>",
+                "sugared_genericSig": "<Self where Self : Reusable.ViewResuable>",
+                "static": true,
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "owner",
+            "printedName": "owner",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Any?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8Reusable12ViewResuablePAASo6UIViewCRbzrlE5ownerypSgvpZ",
+            "mangledName": "$s8Reusable12ViewResuablePAASo6UIViewCRbzrlE5ownerypSgvpZ",
+            "moduleName": "Reusable",
+            "static": true,
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Reusable12ViewResuablePAASo6UIViewCRbzrlE5ownerypSgvgZ",
+                "mangledName": "$s8Reusable12ViewResuablePAASo6UIViewCRbzrlE5ownerypSgvgZ",
+                "moduleName": "Reusable",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIView, τ_0_0 : Reusable.ViewResuable>",
+                "sugared_genericSig": "<Self where Self : UIKit.UIView, Self : Reusable.ViewResuable>",
+                "static": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "bundle",
+            "printedName": "bundle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bundle",
+                "printedName": "Foundation.Bundle",
+                "usr": "c:objc(cs)NSBundle"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8Reusable12ViewResuablePAASo6UIViewCRbzrlE6bundleSo8NSBundleCvpZ",
+            "mangledName": "$s8Reusable12ViewResuablePAASo6UIViewCRbzrlE6bundleSo8NSBundleCvpZ",
+            "moduleName": "Reusable",
+            "static": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Reusable12ViewResuablePAASo6UIViewCRbzrlE6bundleSo8NSBundleCvgZ",
+                "mangledName": "$s8Reusable12ViewResuablePAASo6UIViewCRbzrlE6bundleSo8NSBundleCvgZ",
+                "moduleName": "Reusable",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIView, τ_0_0 : Reusable.ViewResuable>",
+                "sugared_genericSig": "<Self where Self : UIKit.UIView, Self : Reusable.ViewResuable>",
+                "static": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "nibName",
+            "printedName": "nibName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8Reusable12ViewResuablePAASo6UIViewCRbzrlE7nibNameSSvpZ",
+            "mangledName": "$s8Reusable12ViewResuablePAASo6UIViewCRbzrlE7nibNameSSvpZ",
+            "moduleName": "Reusable",
+            "static": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Reusable12ViewResuablePAASo6UIViewCRbzrlE7nibNameSSvgZ",
+                "mangledName": "$s8Reusable12ViewResuablePAASo6UIViewCRbzrlE7nibNameSSvgZ",
+                "moduleName": "Reusable",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIView, τ_0_0 : Reusable.ViewResuable>",
+                "sugared_genericSig": "<Self where Self : UIKit.UIView, Self : Reusable.ViewResuable>",
+                "static": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "view",
+            "printedName": "view",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:8Reusable12ViewResuablePAASo6UIViewCRbzrlE4viewAEvpZ",
+            "mangledName": "$s8Reusable12ViewResuablePAASo6UIViewCRbzrlE4viewAEvpZ",
+            "moduleName": "Reusable",
+            "static": true,
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:8Reusable12ViewResuablePAASo6UIViewCRbzrlE4viewAEvgZ",
+                "mangledName": "$s8Reusable12ViewResuablePAASo6UIViewCRbzrlE4viewAEvgZ",
+                "moduleName": "Reusable",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIView, τ_0_0 : Reusable.ViewResuable>",
+                "sugared_genericSig": "<Self where Self : UIKit.UIView, Self : Reusable.ViewResuable>",
+                "static": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:8Reusable12ViewResuableP",
+        "mangledName": "$s8Reusable12ViewResuableP",
+        "moduleName": "Reusable",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": []
+}

@@ -1,0 +1,4216 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "DrawerController",
+    "printedName": "DrawerController",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "DrawerController",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DrawerChildTableViewController",
+        "printedName": "DrawerChildTableViewController",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "scrollView",
+            "printedName": "scrollView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "UIKit.UIScrollView?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@DrawerController@objc(cs)DrawerChildTableViewController(py)scrollView",
+            "mangledName": "$s16DrawerController0a14ChildTableViewB0C06scrollE0So08UIScrollE0CSgvp",
+            "moduleName": "DrawerController",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl",
+              "IBOutlet",
+              "ObjC"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UIScrollView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIScrollView",
+                        "printedName": "UIKit.UIScrollView",
+                        "usr": "c:objc(cs)UIScrollView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerChildTableViewController(im)scrollView",
+                "mangledName": "$s16DrawerController0a14ChildTableViewB0C06scrollE0So08UIScrollE0CSgvg",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "isOpen": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UIScrollView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIScrollView",
+                        "printedName": "UIKit.UIScrollView",
+                        "usr": "c:objc(cs)UIScrollView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerChildTableViewController(im)setScrollView:",
+                "mangledName": "$s16DrawerController0a14ChildTableViewB0C06scrollE0So08UIScrollE0CSgvs",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "isOpen": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a14ChildTableViewB0C06scrollE0So08UIScrollE0CSgvM",
+                "mangledName": "$s16DrawerController0a14ChildTableViewB0C06scrollE0So08UIScrollE0CSgvM",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "canScrollView",
+            "printedName": "canScrollView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16DrawerController0a14ChildTableViewB0C09canScrollE0Sbvp",
+            "mangledName": "$s16DrawerController0a14ChildTableViewB0C09canScrollE0Sbvp",
+            "moduleName": "DrawerController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a14ChildTableViewB0C09canScrollE0Sbvg",
+                "mangledName": "$s16DrawerController0a14ChildTableViewB0C09canScrollE0Sbvg",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a14ChildTableViewB0C09canScrollE0Sbvs",
+                "mangledName": "$s16DrawerController0a14ChildTableViewB0C09canScrollE0Sbvs",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a14ChildTableViewB0C09canScrollE0SbvM",
+                "mangledName": "$s16DrawerController0a14ChildTableViewB0C09canScrollE0SbvM",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "presentWithDrawer",
+            "printedName": "presentWithDrawer(from:config:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerViewController",
+                "printedName": "DrawerController.DrawerViewController",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((DrawerController.DrawerViewController) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(DrawerController.DrawerViewController) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DrawerViewController",
+                        "printedName": "DrawerController.DrawerViewController",
+                        "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0a14ChildTableViewB0C011presentWithA04from6configAA0aeB0CSo06UIViewB0C_yAHcSgtF",
+            "mangledName": "$s16DrawerController0a14ChildTableViewB0C011presentWithA04from6configAA0aeB0CSo06UIViewB0C_yAHcSgtF",
+            "moduleName": "DrawerController",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "DiscardableResult"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "tableViewViewHandle",
+            "printedName": "tableViewViewHandle()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0a14ChildTableViewB0C05tableeE6HandleyyF",
+            "mangledName": "$s16DrawerController0a14ChildTableViewB0C05tableeE6HandleyyF",
+            "moduleName": "DrawerController",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawerView",
+            "printedName": "drawerView(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerViewController",
+                "printedName": "DrawerController.DrawerViewController",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0a14ChildTableViewB0C06drawerE03forSo6UIViewCAA0aeB0C_tF",
+            "mangledName": "$s16DrawerController0a14ChildTableViewB0C06drawerE03forSo6UIViewCAA0aeB0C_tF",
+            "moduleName": "DrawerController",
+            "isOpen": true,
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawer",
+            "printedName": "drawer(controller:movingPosition:canChangeDrawerHeight:drawerMinHeight:drawerMaximumHeight:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerViewController",
+                "printedName": "DrawerController.DrawerViewController",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerMovingPosition",
+                "printedName": "DrawerController.DrawerMovingPosition",
+                "usr": "s:16DrawerController0A14MovingPositionO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0a14ChildTableViewB0C6drawer10controller14movingPosition09canChangeA6Height0f3MinL00f7MaximumL0SbAA0aeB0C_AA0a6MovingI0O14CoreFoundation7CGFloatVA2PtF",
+            "mangledName": "$s16DrawerController0a14ChildTableViewB0C6drawer10controller14movingPosition09canChangeA6Height0f3MinL00f7MaximumL0SbAA0aeB0C_AA0a6MovingI0O12CoreGraphics7CGFloatVA2PtF",
+            "moduleName": "DrawerController",
+            "isOpen": true,
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawer",
+            "printedName": "drawer(movingPosition:drawerChangedHeight:drawerMinHeight:drawerMaximumHeight:animated:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerMovingPosition",
+                "printedName": "DrawerController.DrawerMovingPosition",
+                "usr": "s:16DrawerController0A14MovingPositionO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0a14ChildTableViewB0C6drawer14movingPosition0F13ChangedHeight0f3MinJ00f7MaximumJ08animatedyAA0a6MovingH0O_14CoreFoundation7CGFloatVA2NSbtF",
+            "mangledName": "$s16DrawerController0a14ChildTableViewB0C6drawer14movingPosition0F13ChangedHeight0f3MinJ00f7MaximumJ08animatedyAA0a6MovingH0O_12CoreGraphics7CGFloatVA2NSbtF",
+            "moduleName": "DrawerController",
+            "isOpen": true,
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawer",
+            "printedName": "drawer(_:reachedMinHeight:animated:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerViewController",
+                "printedName": "DrawerController.DrawerViewController",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0a14ChildTableViewB0C6drawer_16reachedMinHeight8animatedyAA0aeB0C_14CoreFoundation7CGFloatVSbtF",
+            "mangledName": "$s16DrawerController0a14ChildTableViewB0C6drawer_16reachedMinHeight8animatedyAA0aeB0C_12CoreGraphics7CGFloatVSbtF",
+            "moduleName": "DrawerController",
+            "isOpen": true,
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawerMaximumHieght",
+            "printedName": "drawerMaximumHieght(for:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGFloat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerViewController",
+                "printedName": "DrawerController.DrawerViewController",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIDeviceOrientation",
+                "printedName": "UIKit.UIDeviceOrientation",
+                "usr": "c:@E@UIDeviceOrientation"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0a14ChildTableViewB0C19drawerMaximumHieght3for_14CoreFoundation7CGFloatVSgAA0aeB0C_So19UIDeviceOrientationVtF",
+            "mangledName": "$s16DrawerController0a14ChildTableViewB0C19drawerMaximumHieght3for_12CoreGraphics7CGFloatVSgAA0aeB0C_So19UIDeviceOrientationVtF",
+            "moduleName": "DrawerController",
+            "isOpen": true,
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawerMinimumHieght",
+            "printedName": "drawerMinimumHieght(for:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGFloat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerViewController",
+                "printedName": "DrawerController.DrawerViewController",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIDeviceOrientation",
+                "printedName": "UIKit.UIDeviceOrientation",
+                "usr": "c:@E@UIDeviceOrientation"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0a14ChildTableViewB0C19drawerMinimumHieght3for_14CoreFoundation7CGFloatVSgAA0aeB0C_So19UIDeviceOrientationVtF",
+            "mangledName": "$s16DrawerController0a14ChildTableViewB0C19drawerMinimumHieght3for_12CoreGraphics7CGFloatVSgAA0aeB0C_So19UIDeviceOrientationVtF",
+            "moduleName": "DrawerController",
+            "isOpen": true,
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawerWidth",
+            "printedName": "drawerWidth(for:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGFloat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerViewController",
+                "printedName": "DrawerController.DrawerViewController",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIDeviceOrientation",
+                "printedName": "UIKit.UIDeviceOrientation",
+                "usr": "c:@E@UIDeviceOrientation"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0a14ChildTableViewB0C11drawerWidth3for_14CoreFoundation7CGFloatVSgAA0aeB0C_So19UIDeviceOrientationVtF",
+            "mangledName": "$s16DrawerController0a14ChildTableViewB0C11drawerWidth3for_12CoreGraphics7CGFloatVSgAA0aeB0C_So19UIDeviceOrientationVtF",
+            "moduleName": "DrawerController",
+            "isOpen": true,
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawer",
+            "printedName": "drawer(_:reachedMaximumHeight:animated:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerViewController",
+                "printedName": "DrawerController.DrawerViewController",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0a14ChildTableViewB0C6drawer_20reachedMaximumHeight8animatedyAA0aeB0C_14CoreFoundation7CGFloatVSbtF",
+            "mangledName": "$s16DrawerController0a14ChildTableViewB0C6drawer_20reachedMaximumHeight8animatedyAA0aeB0C_12CoreGraphics7CGFloatVSbtF",
+            "moduleName": "DrawerController",
+            "isOpen": true,
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawer",
+            "printedName": "drawer(dismissed:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0a14ChildTableViewB0C6drawer9dismissedySb_tF",
+            "mangledName": "$s16DrawerController0a14ChildTableViewB0C6drawer9dismissedySb_tF",
+            "moduleName": "DrawerController",
+            "isOpen": true,
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(nibName:bundle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerChildTableViewController",
+                "printedName": "DrawerController.DrawerChildTableViewController",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerChildTableViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Bundle?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@DrawerController@objc(cs)DrawerChildTableViewController(im)initWithNibName:bundle:",
+            "mangledName": "$s16DrawerController0a14ChildTableViewB0C7nibName6bundleACSSSg_So8NSBundleCSgtcfc",
+            "moduleName": "DrawerController",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithNibName:bundle:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "DrawerController.DrawerChildTableViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DrawerChildTableViewController",
+                    "printedName": "DrawerController.DrawerChildTableViewController",
+                    "usr": "c:@M@DrawerController@objc(cs)DrawerChildTableViewController"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@DrawerController@objc(cs)DrawerChildTableViewController(im)initWithCoder:",
+            "mangledName": "$s16DrawerController0a14ChildTableViewB0C5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "DrawerController",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@DrawerController@objc(cs)DrawerChildTableViewController",
+        "mangledName": "$s16DrawerController0a14ChildTableViewB0C",
+        "moduleName": "DrawerController",
+        "isOpen": true,
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UIViewController",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UIViewController",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "DrawerControllerDelegate",
+            "printedName": "DrawerControllerDelegate",
+            "usr": "s:16DrawerController0aB8DelegateP",
+            "mangledName": "$s16DrawerController0aB8DelegateP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "DrawerController",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DrawerControllerDelegate",
+        "printedName": "DrawerControllerDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "drawerView",
+            "printedName": "drawerView(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerViewController",
+                "printedName": "DrawerController.DrawerViewController",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0aB8DelegateP10drawerView3forSo6UIViewCAA0aeB0C_tF",
+            "mangledName": "$s16DrawerController0aB8DelegateP10drawerView3forSo6UIViewCAA0aeB0C_tF",
+            "moduleName": "DrawerController",
+            "genericSig": "<τ_0_0 where τ_0_0 : DrawerController.DrawerControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : DrawerController.DrawerControllerDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawerMaximumHieght",
+            "printedName": "drawerMaximumHieght(for:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGFloat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerViewController",
+                "printedName": "DrawerController.DrawerViewController",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIDeviceOrientation",
+                "printedName": "UIKit.UIDeviceOrientation",
+                "usr": "c:@E@UIDeviceOrientation"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0aB8DelegateP19drawerMaximumHieght3for_14CoreFoundation7CGFloatVSgAA0a4ViewB0C_So19UIDeviceOrientationVtF",
+            "mangledName": "$s16DrawerController0aB8DelegateP19drawerMaximumHieght3for_12CoreGraphics7CGFloatVSgAA0a4ViewB0C_So19UIDeviceOrientationVtF",
+            "moduleName": "DrawerController",
+            "genericSig": "<τ_0_0 where τ_0_0 : DrawerController.DrawerControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : DrawerController.DrawerControllerDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawerMinimumHieght",
+            "printedName": "drawerMinimumHieght(for:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGFloat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerViewController",
+                "printedName": "DrawerController.DrawerViewController",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIDeviceOrientation",
+                "printedName": "UIKit.UIDeviceOrientation",
+                "usr": "c:@E@UIDeviceOrientation"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0aB8DelegateP19drawerMinimumHieght3for_14CoreFoundation7CGFloatVSgAA0a4ViewB0C_So19UIDeviceOrientationVtF",
+            "mangledName": "$s16DrawerController0aB8DelegateP19drawerMinimumHieght3for_12CoreGraphics7CGFloatVSgAA0a4ViewB0C_So19UIDeviceOrientationVtF",
+            "moduleName": "DrawerController",
+            "genericSig": "<τ_0_0 where τ_0_0 : DrawerController.DrawerControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : DrawerController.DrawerControllerDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawerWidth",
+            "printedName": "drawerWidth(for:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGFloat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerViewController",
+                "printedName": "DrawerController.DrawerViewController",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIDeviceOrientation",
+                "printedName": "UIKit.UIDeviceOrientation",
+                "usr": "c:@E@UIDeviceOrientation"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0aB8DelegateP11drawerWidth3for_14CoreFoundation7CGFloatVSgAA0a4ViewB0C_So19UIDeviceOrientationVtF",
+            "mangledName": "$s16DrawerController0aB8DelegateP11drawerWidth3for_12CoreGraphics7CGFloatVSgAA0a4ViewB0C_So19UIDeviceOrientationVtF",
+            "moduleName": "DrawerController",
+            "genericSig": "<τ_0_0 where τ_0_0 : DrawerController.DrawerControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : DrawerController.DrawerControllerDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawer",
+            "printedName": "drawer(movingPosition:drawerChangedHeight:drawerMinHeight:drawerMaximumHeight:animated:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerMovingPosition",
+                "printedName": "DrawerController.DrawerMovingPosition",
+                "usr": "s:16DrawerController0A14MovingPositionO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0aB8DelegateP6drawer14movingPosition0D13ChangedHeight0d3MinH00d7MaximumH08animatedyAA0a6MovingF0O_14CoreFoundation7CGFloatVA2NSbtF",
+            "mangledName": "$s16DrawerController0aB8DelegateP6drawer14movingPosition0D13ChangedHeight0d3MinH00d7MaximumH08animatedyAA0a6MovingF0O_12CoreGraphics7CGFloatVA2NSbtF",
+            "moduleName": "DrawerController",
+            "genericSig": "<τ_0_0 where τ_0_0 : DrawerController.DrawerControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : DrawerController.DrawerControllerDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawer",
+            "printedName": "drawer(controller:movingPosition:canChangeDrawerHeight:drawerMinHeight:drawerMaximumHeight:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerViewController",
+                "printedName": "DrawerController.DrawerViewController",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerMovingPosition",
+                "printedName": "DrawerController.DrawerMovingPosition",
+                "usr": "s:16DrawerController0A14MovingPositionO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0aB8DelegateP6drawer10controller14movingPosition09canChangeA6Height0d3MinJ00d7MaximumJ0SbAA0a4ViewB0C_AA0a6MovingG0O14CoreFoundation7CGFloatVA2PtF",
+            "mangledName": "$s16DrawerController0aB8DelegateP6drawer10controller14movingPosition09canChangeA6Height0d3MinJ00d7MaximumJ0SbAA0a4ViewB0C_AA0a6MovingG0O12CoreGraphics7CGFloatVA2PtF",
+            "moduleName": "DrawerController",
+            "genericSig": "<τ_0_0 where τ_0_0 : DrawerController.DrawerControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : DrawerController.DrawerControllerDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawer",
+            "printedName": "drawer(_:reachedMinHeight:animated:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerViewController",
+                "printedName": "DrawerController.DrawerViewController",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0aB8DelegateP6drawer_16reachedMinHeight8animatedyAA0a4ViewB0C_14CoreFoundation7CGFloatVSbtF",
+            "mangledName": "$s16DrawerController0aB8DelegateP6drawer_16reachedMinHeight8animatedyAA0a4ViewB0C_12CoreGraphics7CGFloatVSbtF",
+            "moduleName": "DrawerController",
+            "genericSig": "<τ_0_0 where τ_0_0 : DrawerController.DrawerControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : DrawerController.DrawerControllerDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawer",
+            "printedName": "drawer(_:reachedMaximumHeight:animated:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerViewController",
+                "printedName": "DrawerController.DrawerViewController",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0aB8DelegateP6drawer_20reachedMaximumHeight8animatedyAA0a4ViewB0C_14CoreFoundation7CGFloatVSbtF",
+            "mangledName": "$s16DrawerController0aB8DelegateP6drawer_20reachedMaximumHeight8animatedyAA0a4ViewB0C_12CoreGraphics7CGFloatVSbtF",
+            "moduleName": "DrawerController",
+            "genericSig": "<τ_0_0 where τ_0_0 : DrawerController.DrawerControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : DrawerController.DrawerControllerDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawer",
+            "printedName": "drawer(dismissed:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0aB8DelegateP6drawer9dismissedySb_tF",
+            "mangledName": "$s16DrawerController0aB8DelegateP6drawer9dismissedySb_tF",
+            "moduleName": "DrawerController",
+            "genericSig": "<τ_0_0 where τ_0_0 : DrawerController.DrawerControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : DrawerController.DrawerControllerDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawerMinimumHieght",
+            "printedName": "drawerMinimumHieght(for:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGFloat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerViewController",
+                "printedName": "DrawerController.DrawerViewController",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIDeviceOrientation",
+                "printedName": "UIKit.UIDeviceOrientation",
+                "usr": "c:@E@UIDeviceOrientation"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0aB8DelegatePAASo06UIViewB0CRbzrlE19drawerMinimumHieght3for_14CoreFoundation7CGFloatVSgAA0a4ViewB0C_So19UIDeviceOrientationVtF",
+            "mangledName": "$s16DrawerController0aB8DelegatePAASo06UIViewB0CRbzrlE19drawerMinimumHieght3for_12CoreGraphics7CGFloatVSgAA0a4ViewB0C_So19UIDeviceOrientationVtF",
+            "moduleName": "DrawerController",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController, τ_0_0 : DrawerController.DrawerControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : UIKit.UIViewController, Self : DrawerController.DrawerControllerDelegate>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawerMaximumHieght",
+            "printedName": "drawerMaximumHieght(for:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGFloat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerViewController",
+                "printedName": "DrawerController.DrawerViewController",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIDeviceOrientation",
+                "printedName": "UIKit.UIDeviceOrientation",
+                "usr": "c:@E@UIDeviceOrientation"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0aB8DelegatePAASo06UIViewB0CRbzrlE19drawerMaximumHieght3for_14CoreFoundation7CGFloatVSgAA0a4ViewB0C_So19UIDeviceOrientationVtF",
+            "mangledName": "$s16DrawerController0aB8DelegatePAASo06UIViewB0CRbzrlE19drawerMaximumHieght3for_12CoreGraphics7CGFloatVSgAA0a4ViewB0C_So19UIDeviceOrientationVtF",
+            "moduleName": "DrawerController",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController, τ_0_0 : DrawerController.DrawerControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : UIKit.UIViewController, Self : DrawerController.DrawerControllerDelegate>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawerWidth",
+            "printedName": "drawerWidth(for:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreGraphics.CGFloat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerViewController",
+                "printedName": "DrawerController.DrawerViewController",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIDeviceOrientation",
+                "printedName": "UIKit.UIDeviceOrientation",
+                "usr": "c:@E@UIDeviceOrientation"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0aB8DelegatePAASo06UIViewB0CRbzrlE11drawerWidth3for_14CoreFoundation7CGFloatVSgAA0a4ViewB0C_So19UIDeviceOrientationVtF",
+            "mangledName": "$s16DrawerController0aB8DelegatePAASo06UIViewB0CRbzrlE11drawerWidth3for_12CoreGraphics7CGFloatVSgAA0a4ViewB0C_So19UIDeviceOrientationVtF",
+            "moduleName": "DrawerController",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController, τ_0_0 : DrawerController.DrawerControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : UIKit.UIViewController, Self : DrawerController.DrawerControllerDelegate>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawer",
+            "printedName": "drawer(movingPosition:drawerChangedHeight:drawerMinHeight:drawerMaximumHeight:animated:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerMovingPosition",
+                "printedName": "DrawerController.DrawerMovingPosition",
+                "usr": "s:16DrawerController0A14MovingPositionO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0aB8DelegatePAASo06UIViewB0CRbzrlE6drawer14movingPosition0E13ChangedHeight0e3MinI00e7MaximumI08animatedyAA0a6MovingG0O_14CoreFoundation7CGFloatVA2PSbtF",
+            "mangledName": "$s16DrawerController0aB8DelegatePAASo06UIViewB0CRbzrlE6drawer14movingPosition0E13ChangedHeight0e3MinI00e7MaximumI08animatedyAA0a6MovingG0O_12CoreGraphics7CGFloatVA2PSbtF",
+            "moduleName": "DrawerController",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController, τ_0_0 : DrawerController.DrawerControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : UIKit.UIViewController, Self : DrawerController.DrawerControllerDelegate>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawer",
+            "printedName": "drawer(movingPosition:canChangeDrawerHeight:drawerMinHeight:drawerMaximumHeight:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerMovingPosition",
+                "printedName": "DrawerController.DrawerMovingPosition",
+                "usr": "s:16DrawerController0A14MovingPositionO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0aB8DelegatePAASo06UIViewB0CRbzrlE6drawer14movingPosition09canChangeA6Height0e3MinJ00e7MaximumJ0SbAA0a6MovingG0O_14CoreFoundation7CGFloatVA2OtF",
+            "mangledName": "$s16DrawerController0aB8DelegatePAASo06UIViewB0CRbzrlE6drawer14movingPosition09canChangeA6Height0e3MinJ00e7MaximumJ0SbAA0a6MovingG0O_12CoreGraphics7CGFloatVA2OtF",
+            "moduleName": "DrawerController",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController, τ_0_0 : DrawerController.DrawerControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : UIKit.UIViewController, Self : DrawerController.DrawerControllerDelegate>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawer",
+            "printedName": "drawer(_:reachedMinHeight:animated:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerViewController",
+                "printedName": "DrawerController.DrawerViewController",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0aB8DelegatePAASo06UIViewB0CRbzrlE6drawer_16reachedMinHeight8animatedyAA0a4ViewB0C_14CoreFoundation7CGFloatVSbtF",
+            "mangledName": "$s16DrawerController0aB8DelegatePAASo06UIViewB0CRbzrlE6drawer_16reachedMinHeight8animatedyAA0a4ViewB0C_12CoreGraphics7CGFloatVSbtF",
+            "moduleName": "DrawerController",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController, τ_0_0 : DrawerController.DrawerControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : UIKit.UIViewController, Self : DrawerController.DrawerControllerDelegate>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawer",
+            "printedName": "drawer(_:reachedMaximumHeight:animated:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerViewController",
+                "printedName": "DrawerController.DrawerViewController",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0aB8DelegatePAASo06UIViewB0CRbzrlE6drawer_20reachedMaximumHeight8animatedyAA0a4ViewB0C_14CoreFoundation7CGFloatVSbtF",
+            "mangledName": "$s16DrawerController0aB8DelegatePAASo06UIViewB0CRbzrlE6drawer_20reachedMaximumHeight8animatedyAA0a4ViewB0C_12CoreGraphics7CGFloatVSbtF",
+            "moduleName": "DrawerController",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController, τ_0_0 : DrawerController.DrawerControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : UIKit.UIViewController, Self : DrawerController.DrawerControllerDelegate>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "drawerViewController",
+            "printedName": "drawerViewController",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "DrawerController.DrawerViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DrawerViewController",
+                    "printedName": "DrawerController.DrawerViewController",
+                    "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16DrawerController0aB8DelegatePAASo06UIViewB0CRbzrlE010drawerViewB0AA0afB0CSgvp",
+            "mangledName": "$s16DrawerController0aB8DelegatePAASo06UIViewB0CRbzrlE010drawerViewB0AA0afB0CSgvp",
+            "moduleName": "DrawerController",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "DrawerController.DrawerViewController?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DrawerViewController",
+                        "printedName": "DrawerController.DrawerViewController",
+                        "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0aB8DelegatePAASo06UIViewB0CRbzrlE010drawerViewB0AA0afB0CSgvg",
+                "mangledName": "$s16DrawerController0aB8DelegatePAASo06UIViewB0CRbzrlE010drawerViewB0AA0afB0CSgvg",
+                "moduleName": "DrawerController",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController, τ_0_0 : DrawerController.DrawerControllerDelegate>",
+                "sugared_genericSig": "<Self where Self : UIKit.UIViewController, Self : DrawerController.DrawerControllerDelegate>",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "dismissDrawer",
+            "printedName": "dismissDrawer(animated:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0aB8DelegatePAASo06UIViewB0CRbzrlE07dismissA08animated10completionS2b_yycSgtF",
+            "mangledName": "$s16DrawerController0aB8DelegatePAASo06UIViewB0CRbzrlE07dismissA08animated10completionS2b_yycSgtF",
+            "moduleName": "DrawerController",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController, τ_0_0 : DrawerController.DrawerControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : UIKit.UIViewController, Self : DrawerController.DrawerControllerDelegate>",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateDrawerHieghtByGiven",
+            "printedName": "updateDrawerHieghtByGiven(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0aB8DelegatePAASo06UIViewB0CRbzrlE06updateA13HieghtByGivenyy14CoreFoundation7CGFloatVF",
+            "mangledName": "$s16DrawerController0aB8DelegatePAASo06UIViewB0CRbzrlE06updateA13HieghtByGivenyy12CoreGraphics7CGFloatVF",
+            "moduleName": "DrawerController",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController, τ_0_0 : DrawerController.DrawerControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : UIKit.UIViewController, Self : DrawerController.DrawerControllerDelegate>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawer",
+            "printedName": "drawer(dismissed:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0aB8DelegatePAASo06UIViewB0CRbzrlE6drawer9dismissedySb_tF",
+            "mangledName": "$s16DrawerController0aB8DelegatePAASo06UIViewB0CRbzrlE6drawer9dismissedySb_tF",
+            "moduleName": "DrawerController",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController, τ_0_0 : DrawerController.DrawerControllerDelegate>",
+            "sugared_genericSig": "<Self where Self : UIKit.UIViewController, Self : DrawerController.DrawerControllerDelegate>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:16DrawerController0aB8DelegateP",
+        "mangledName": "$s16DrawerController0aB8DelegateP",
+        "moduleName": "DrawerController",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DrawerController",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "DrawerController"
+      },
+      {
+        "kind": "Import",
+        "name": "OverlayViewController",
+        "printedName": "OverlayViewController",
+        "declKind": "Import",
+        "moduleName": "DrawerController"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation_Extention",
+        "printedName": "Foundation_Extention",
+        "declKind": "Import",
+        "moduleName": "DrawerController"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit_Extention",
+        "printedName": "UIKit_Extention",
+        "declKind": "Import",
+        "moduleName": "DrawerController"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DrawerMovingPosition",
+        "printedName": "DrawerMovingPosition",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "nutral",
+            "printedName": "nutral",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DrawerController.DrawerMovingPosition.Type) -> DrawerController.DrawerMovingPosition",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DrawerMovingPosition",
+                    "printedName": "DrawerController.DrawerMovingPosition",
+                    "usr": "s:16DrawerController0A14MovingPositionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DrawerController.DrawerMovingPosition.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DrawerMovingPosition",
+                        "printedName": "DrawerController.DrawerMovingPosition",
+                        "usr": "s:16DrawerController0A14MovingPositionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16DrawerController0A14MovingPositionO6nutralyA2CmF",
+            "mangledName": "$s16DrawerController0A14MovingPositionO6nutralyA2CmF",
+            "moduleName": "DrawerController"
+          },
+          {
+            "kind": "Var",
+            "name": "up",
+            "printedName": "up",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DrawerController.DrawerMovingPosition.Type) -> DrawerController.DrawerMovingPosition",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DrawerMovingPosition",
+                    "printedName": "DrawerController.DrawerMovingPosition",
+                    "usr": "s:16DrawerController0A14MovingPositionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DrawerController.DrawerMovingPosition.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DrawerMovingPosition",
+                        "printedName": "DrawerController.DrawerMovingPosition",
+                        "usr": "s:16DrawerController0A14MovingPositionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16DrawerController0A14MovingPositionO2upyA2CmF",
+            "mangledName": "$s16DrawerController0A14MovingPositionO2upyA2CmF",
+            "moduleName": "DrawerController"
+          },
+          {
+            "kind": "Var",
+            "name": "down",
+            "printedName": "down",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DrawerController.DrawerMovingPosition.Type) -> DrawerController.DrawerMovingPosition",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DrawerMovingPosition",
+                    "printedName": "DrawerController.DrawerMovingPosition",
+                    "usr": "s:16DrawerController0A14MovingPositionO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DrawerController.DrawerMovingPosition.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DrawerMovingPosition",
+                        "printedName": "DrawerController.DrawerMovingPosition",
+                        "usr": "s:16DrawerController0A14MovingPositionO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16DrawerController0A14MovingPositionO4downyA2CmF",
+            "mangledName": "$s16DrawerController0A14MovingPositionO4downyA2CmF",
+            "moduleName": "DrawerController"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "DrawerController.DrawerMovingPosition?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DrawerMovingPosition",
+                    "printedName": "DrawerController.DrawerMovingPosition",
+                    "usr": "s:16DrawerController0A14MovingPositionO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16DrawerController0A14MovingPositionO8rawValueACSgSi_tcfc",
+            "mangledName": "$s16DrawerController0A14MovingPositionO8rawValueACSgSi_tcfc",
+            "moduleName": "DrawerController",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16DrawerController0A14MovingPositionO8rawValueSivp",
+            "mangledName": "$s16DrawerController0A14MovingPositionO8rawValueSivp",
+            "moduleName": "DrawerController",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0A14MovingPositionO8rawValueSivg",
+                "mangledName": "$s16DrawerController0A14MovingPositionO8rawValueSivg",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:16DrawerController0A14MovingPositionO",
+        "mangledName": "$s16DrawerController0A14MovingPositionO",
+        "moduleName": "DrawerController",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "positionType",
+        "printedName": "positionType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "up",
+            "printedName": "up",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DrawerController.positionType.Type) -> DrawerController.positionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "positionType",
+                    "printedName": "DrawerController.positionType",
+                    "usr": "s:16DrawerController12positionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DrawerController.positionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "positionType",
+                        "printedName": "DrawerController.positionType",
+                        "usr": "s:16DrawerController12positionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16DrawerController12positionTypeO2upyA2CmF",
+            "mangledName": "$s16DrawerController12positionTypeO2upyA2CmF",
+            "moduleName": "DrawerController"
+          },
+          {
+            "kind": "Var",
+            "name": "middle",
+            "printedName": "middle",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DrawerController.positionType.Type) -> DrawerController.positionType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "positionType",
+                    "printedName": "DrawerController.positionType",
+                    "usr": "s:16DrawerController12positionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DrawerController.positionType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "positionType",
+                        "printedName": "DrawerController.positionType",
+                        "usr": "s:16DrawerController12positionTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16DrawerController12positionTypeO6middleyA2CmF",
+            "mangledName": "$s16DrawerController12positionTypeO6middleyA2CmF",
+            "moduleName": "DrawerController"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "DrawerController.positionType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "positionType",
+                    "printedName": "DrawerController.positionType",
+                    "usr": "s:16DrawerController12positionTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16DrawerController12positionTypeO8rawValueACSgSi_tcfc",
+            "mangledName": "$s16DrawerController12positionTypeO8rawValueACSgSi_tcfc",
+            "moduleName": "DrawerController",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16DrawerController12positionTypeO8rawValueSivp",
+            "mangledName": "$s16DrawerController12positionTypeO8rawValueSivp",
+            "moduleName": "DrawerController",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController12positionTypeO8rawValueSivg",
+                "mangledName": "$s16DrawerController12positionTypeO8rawValueSivg",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:16DrawerController12positionTypeO",
+        "mangledName": "$s16DrawerController12positionTypeO",
+        "moduleName": "DrawerController",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DrawerViewController",
+        "printedName": "DrawerViewController",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "drawerDelegate",
+            "printedName": "drawerDelegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any DrawerController.DrawerControllerDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DrawerControllerDelegate",
+                    "printedName": "any DrawerController.DrawerControllerDelegate",
+                    "usr": "s:16DrawerController0aB8DelegateP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16DrawerController0a4ViewB0C14drawerDelegateAA0abE0_pSgvp",
+            "mangledName": "$s16DrawerController0a4ViewB0C14drawerDelegateAA0abE0_pSgvp",
+            "moduleName": "DrawerController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any DrawerController.DrawerControllerDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DrawerControllerDelegate",
+                        "printedName": "any DrawerController.DrawerControllerDelegate",
+                        "usr": "s:16DrawerController0aB8DelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C14drawerDelegateAA0abE0_pSgvg",
+                "mangledName": "$s16DrawerController0a4ViewB0C14drawerDelegateAA0abE0_pSgvg",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any DrawerController.DrawerControllerDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DrawerControllerDelegate",
+                        "printedName": "any DrawerController.DrawerControllerDelegate",
+                        "usr": "s:16DrawerController0aB8DelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C14drawerDelegateAA0abE0_pSgvs",
+                "mangledName": "$s16DrawerController0a4ViewB0C14drawerDelegateAA0abE0_pSgvs",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C14drawerDelegateAA0abE0_pSgvM",
+                "mangledName": "$s16DrawerController0a4ViewB0C14drawerDelegateAA0abE0_pSgvM",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "indicatorHeight",
+            "printedName": "indicatorHeight",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16DrawerController0a4ViewB0C15indicatorHeight14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s16DrawerController0a4ViewB0C15indicatorHeight12CoreGraphics7CGFloatVvp",
+            "moduleName": "DrawerController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C15indicatorHeight14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s16DrawerController0a4ViewB0C15indicatorHeight12CoreGraphics7CGFloatVvg",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C15indicatorHeight14CoreFoundation7CGFloatVvs",
+                "mangledName": "$s16DrawerController0a4ViewB0C15indicatorHeight12CoreGraphics7CGFloatVvs",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C15indicatorHeight14CoreFoundation7CGFloatVvM",
+                "mangledName": "$s16DrawerController0a4ViewB0C15indicatorHeight12CoreGraphics7CGFloatVvM",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "indicatorWidth",
+            "printedName": "indicatorWidth",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16DrawerController0a4ViewB0C14indicatorWidth14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s16DrawerController0a4ViewB0C14indicatorWidth12CoreGraphics7CGFloatVvp",
+            "moduleName": "DrawerController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C14indicatorWidth14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s16DrawerController0a4ViewB0C14indicatorWidth12CoreGraphics7CGFloatVvg",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C14indicatorWidth14CoreFoundation7CGFloatVvs",
+                "mangledName": "$s16DrawerController0a4ViewB0C14indicatorWidth12CoreGraphics7CGFloatVvs",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C14indicatorWidth14CoreFoundation7CGFloatVvM",
+                "mangledName": "$s16DrawerController0a4ViewB0C14indicatorWidth12CoreGraphics7CGFloatVvM",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "drawerIndicatorColor",
+            "printedName": "drawerIndicatorColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16DrawerController0a4ViewB0C20drawerIndicatorColorSo7UIColorCSgvp",
+            "mangledName": "$s16DrawerController0a4ViewB0C20drawerIndicatorColorSo7UIColorCSgvp",
+            "moduleName": "DrawerController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C20drawerIndicatorColorSo7UIColorCSgvg",
+                "mangledName": "$s16DrawerController0a4ViewB0C20drawerIndicatorColorSo7UIColorCSgvg",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C20drawerIndicatorColorSo7UIColorCSgvs",
+                "mangledName": "$s16DrawerController0a4ViewB0C20drawerIndicatorColorSo7UIColorCSgvs",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C20drawerIndicatorColorSo7UIColorCSgvM",
+                "mangledName": "$s16DrawerController0a4ViewB0C20drawerIndicatorColorSo7UIColorCSgvM",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "drawerBackgroundColor",
+            "printedName": "drawerBackgroundColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16DrawerController0a4ViewB0C21drawerBackgroundColorSo7UIColorCSgvp",
+            "mangledName": "$s16DrawerController0a4ViewB0C21drawerBackgroundColorSo7UIColorCSgvp",
+            "moduleName": "DrawerController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C21drawerBackgroundColorSo7UIColorCSgvg",
+                "mangledName": "$s16DrawerController0a4ViewB0C21drawerBackgroundColorSo7UIColorCSgvg",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIColor?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIColor",
+                        "printedName": "UIKit.UIColor",
+                        "usr": "c:objc(cs)UIColor"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C21drawerBackgroundColorSo7UIColorCSgvs",
+                "mangledName": "$s16DrawerController0a4ViewB0C21drawerBackgroundColorSo7UIColorCSgvs",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C21drawerBackgroundColorSo7UIColorCSgvM",
+                "mangledName": "$s16DrawerController0a4ViewB0C21drawerBackgroundColorSo7UIColorCSgvM",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "minimumSlidVelocity",
+            "printedName": "minimumSlidVelocity",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16DrawerController0a4ViewB0C19minimumSlidVelocity14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s16DrawerController0a4ViewB0C19minimumSlidVelocity12CoreGraphics7CGFloatVvp",
+            "moduleName": "DrawerController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C19minimumSlidVelocity14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s16DrawerController0a4ViewB0C19minimumSlidVelocity12CoreGraphics7CGFloatVvg",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C19minimumSlidVelocity14CoreFoundation7CGFloatVvs",
+                "mangledName": "$s16DrawerController0a4ViewB0C19minimumSlidVelocity12CoreGraphics7CGFloatVvs",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C19minimumSlidVelocity14CoreFoundation7CGFloatVvM",
+                "mangledName": "$s16DrawerController0a4ViewB0C19minimumSlidVelocity12CoreGraphics7CGFloatVvM",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "maximumSlidVelocity",
+            "printedName": "maximumSlidVelocity",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16DrawerController0a4ViewB0C19maximumSlidVelocity14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s16DrawerController0a4ViewB0C19maximumSlidVelocity12CoreGraphics7CGFloatVvp",
+            "moduleName": "DrawerController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C19maximumSlidVelocity14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s16DrawerController0a4ViewB0C19maximumSlidVelocity12CoreGraphics7CGFloatVvg",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C19maximumSlidVelocity14CoreFoundation7CGFloatVvs",
+                "mangledName": "$s16DrawerController0a4ViewB0C19maximumSlidVelocity12CoreGraphics7CGFloatVvs",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C19maximumSlidVelocity14CoreFoundation7CGFloatVvM",
+                "mangledName": "$s16DrawerController0a4ViewB0C19maximumSlidVelocity12CoreGraphics7CGFloatVvM",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "heightChangingProgress",
+            "printedName": "heightChangingProgress",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16DrawerController0a4ViewB0C22heightChangingProgress14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s16DrawerController0a4ViewB0C22heightChangingProgress12CoreGraphics7CGFloatVvp",
+            "moduleName": "DrawerController",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C22heightChangingProgress14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s16DrawerController0a4ViewB0C22heightChangingProgress12CoreGraphics7CGFloatVvg",
+                "moduleName": "DrawerController",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "updateDrawerHeight",
+            "printedName": "updateDrawerHeight(height:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0a4ViewB0C06updateA6Height6heighty14CoreFoundation7CGFloatV_tF",
+            "mangledName": "$s16DrawerController0a4ViewB0C06updateA6Height6heighty12CoreGraphics7CGFloatV_tF",
+            "moduleName": "DrawerController",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "canStopMiddle",
+            "printedName": "canStopMiddle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16DrawerController0a4ViewB0C13canStopMiddleSbvp",
+            "mangledName": "$s16DrawerController0a4ViewB0C13canStopMiddleSbvp",
+            "moduleName": "DrawerController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C13canStopMiddleSbvg",
+                "mangledName": "$s16DrawerController0a4ViewB0C13canStopMiddleSbvg",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C13canStopMiddleSbvs",
+                "mangledName": "$s16DrawerController0a4ViewB0C13canStopMiddleSbvs",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C13canStopMiddleSbvM",
+                "mangledName": "$s16DrawerController0a4ViewB0C13canStopMiddleSbvM",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "containerMiddlePoint",
+            "printedName": "containerMiddlePoint",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16DrawerController0a4ViewB0C20containerMiddlePoint14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s16DrawerController0a4ViewB0C20containerMiddlePoint12CoreGraphics7CGFloatVvp",
+            "moduleName": "DrawerController",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C20containerMiddlePoint14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s16DrawerController0a4ViewB0C20containerMiddlePoint12CoreGraphics7CGFloatVvg",
+                "moduleName": "DrawerController",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "containerMaxHeight",
+            "printedName": "containerMaxHeight",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16DrawerController0a4ViewB0C18containerMaxHeight14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s16DrawerController0a4ViewB0C18containerMaxHeight12CoreGraphics7CGFloatVvp",
+            "moduleName": "DrawerController",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C18containerMaxHeight14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s16DrawerController0a4ViewB0C18containerMaxHeight12CoreGraphics7CGFloatVvg",
+                "moduleName": "DrawerController",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "childForStatusBarHidden",
+            "printedName": "childForStatusBarHidden",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@DrawerController@objc(cs)DrawerViewController(py)childViewControllerForStatusBarHidden",
+            "mangledName": "$s16DrawerController0a4ViewB0C23childForStatusBarHiddenSo06UIViewB0CSgvp",
+            "moduleName": "DrawerController",
+            "overriding": true,
+            "objc_name": "childViewControllerForStatusBarHidden",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIViewController?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIViewController",
+                        "printedName": "UIKit.UIViewController",
+                        "usr": "c:objc(cs)UIViewController"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController(im)childViewControllerForStatusBarHidden",
+                "mangledName": "$s16DrawerController0a4ViewB0C23childForStatusBarHiddenSo06UIViewB0CSgvg",
+                "moduleName": "DrawerController",
+                "overriding": true,
+                "objc_name": "childViewControllerForStatusBarHidden",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "prefersStatusBarHidden",
+            "printedName": "prefersStatusBarHidden",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@DrawerController@objc(cs)DrawerViewController(py)prefersStatusBarHidden",
+            "mangledName": "$s16DrawerController0a4ViewB0C22prefersStatusBarHiddenSbvp",
+            "moduleName": "DrawerController",
+            "overriding": true,
+            "objc_name": "prefersStatusBarHidden",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController(im)prefersStatusBarHidden",
+                "mangledName": "$s16DrawerController0a4ViewB0C22prefersStatusBarHiddenSbvg",
+                "moduleName": "DrawerController",
+                "overriding": true,
+                "objc_name": "prefersStatusBarHidden",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hideStatusBar",
+            "printedName": "hideStatusBar",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16DrawerController0a4ViewB0C13hideStatusBarSbvp",
+            "mangledName": "$s16DrawerController0a4ViewB0C13hideStatusBarSbvp",
+            "moduleName": "DrawerController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C13hideStatusBarSbvg",
+                "mangledName": "$s16DrawerController0a4ViewB0C13hideStatusBarSbvg",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C13hideStatusBarSbvs",
+                "mangledName": "$s16DrawerController0a4ViewB0C13hideStatusBarSbvs",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16DrawerController0a4ViewB0C13hideStatusBarSbvM",
+                "mangledName": "$s16DrawerController0a4ViewB0C13hideStatusBarSbvM",
+                "moduleName": "DrawerController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerViewController",
+                "printedName": "DrawerController.DrawerViewController",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@DrawerController@objc(cs)DrawerViewController(im)init",
+            "mangledName": "$s16DrawerController0a4ViewB0CACycfc",
+            "moduleName": "DrawerController",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Convenience",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(delegate:hideStatusBar:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerViewController",
+                "printedName": "DrawerController.DrawerViewController",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerControllerDelegate",
+                "printedName": "any DrawerController.DrawerControllerDelegate",
+                "usr": "s:16DrawerController0aB8DelegateP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16DrawerController0a4ViewB0C8delegate13hideStatusBarAcA0aB8Delegate_p_Sbtcfc",
+            "mangledName": "$s16DrawerController0a4ViewB0C8delegate13hideStatusBarAcA0aB8Delegate_p_Sbtcfc",
+            "moduleName": "DrawerController",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "Convenience",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Function",
+            "name": "viewDidLoad",
+            "printedName": "viewDidLoad()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@DrawerController@objc(cs)DrawerViewController(im)viewDidLoad",
+            "mangledName": "$s16DrawerController0a4ViewB0C11viewDidLoadyyF",
+            "moduleName": "DrawerController",
+            "overriding": true,
+            "objc_name": "viewDidLoad",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "Override",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewWillAppear",
+            "printedName": "viewWillAppear(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@DrawerController@objc(cs)DrawerViewController(im)viewWillAppear:",
+            "mangledName": "$s16DrawerController0a4ViewB0C14viewWillAppearyySbF",
+            "moduleName": "DrawerController",
+            "overriding": true,
+            "objc_name": "viewWillAppear:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewWillDisappear",
+            "printedName": "viewWillDisappear(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@DrawerController@objc(cs)DrawerViewController(im)viewWillDisappear:",
+            "mangledName": "$s16DrawerController0a4ViewB0C17viewWillDisappearyySbF",
+            "moduleName": "DrawerController",
+            "overriding": true,
+            "objc_name": "viewWillDisappear:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewDidAppear",
+            "printedName": "viewDidAppear(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@DrawerController@objc(cs)DrawerViewController(im)viewDidAppear:",
+            "mangledName": "$s16DrawerController0a4ViewB0C13viewDidAppearyySbF",
+            "moduleName": "DrawerController",
+            "overriding": true,
+            "objc_name": "viewDidAppear:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewDidLayoutSubviews",
+            "printedName": "viewDidLayoutSubviews()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@DrawerController@objc(cs)DrawerViewController(im)viewDidLayoutSubviews",
+            "mangledName": "$s16DrawerController0a4ViewB0C21viewDidLayoutSubviewsyyF",
+            "moduleName": "DrawerController",
+            "overriding": true,
+            "objc_name": "viewDidLayoutSubviews",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateDrawerHieghtByGiven",
+            "printedName": "updateDrawerHieghtByGiven(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0a4ViewB0C06updateA13HieghtByGivenyy14CoreFoundation7CGFloatVF",
+            "mangledName": "$s16DrawerController0a4ViewB0C06updateA13HieghtByGivenyy12CoreGraphics7CGFloatVF",
+            "moduleName": "DrawerController",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dismiss",
+            "printedName": "dismiss(animated:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@DrawerController@objc(cs)DrawerViewController(im)dismissViewControllerAnimated:completion:",
+            "mangledName": "$s16DrawerController0a4ViewB0C7dismiss8animated10completionySb_yycSgtF",
+            "moduleName": "DrawerController",
+            "overriding": true,
+            "objc_name": "dismissViewControllerAnimated:completion:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewWillTransition",
+            "printedName": "viewWillTransition(to:with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGSize",
+                "printedName": "CoreFoundation.CGSize",
+                "usr": "c:@S@CGSize"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewControllerTransitionCoordinator",
+                "printedName": "any UIKit.UIViewControllerTransitionCoordinator",
+                "usr": "c:objc(pl)UIViewControllerTransitionCoordinator"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@DrawerController@objc(cs)DrawerViewController(im)viewWillTransitionToSize:withTransitionCoordinator:",
+            "mangledName": "$s16DrawerController0a4ViewB0C18viewWillTransition2to4withySo6CGSizeV_So06UIViewbF11Coordinator_ptF",
+            "moduleName": "DrawerController",
+            "overriding": true,
+            "objc_name": "viewWillTransitionToSize:withTransitionCoordinator:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deviceRotated",
+            "printedName": "deviceRotated(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIDeviceOrientation",
+                "printedName": "UIKit.UIDeviceOrientation",
+                "usr": "c:@E@UIDeviceOrientation"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0a4ViewB0C13deviceRotatedyySo19UIDeviceOrientationVF",
+            "mangledName": "$s16DrawerController0a4ViewB0C13deviceRotatedyySo19UIDeviceOrientationVF",
+            "moduleName": "DrawerController",
+            "overriding": true,
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setPosition",
+            "printedName": "setPosition(position:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "positionType",
+                "printedName": "DrawerController.positionType",
+                "usr": "s:16DrawerController12positionTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16DrawerController0a4ViewB0C11setPosition8positionyAA0F4TypeO_tF",
+            "mangledName": "$s16DrawerController0a4ViewB0C11setPosition8positionyAA0F4TypeO_tF",
+            "moduleName": "DrawerController",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(nibName:bundle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DrawerViewController",
+                "printedName": "DrawerController.DrawerViewController",
+                "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Bundle?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@DrawerController@objc(cs)DrawerViewController(im)initWithNibName:bundle:",
+            "mangledName": "$s16DrawerController0a4ViewB0C7nibName6bundleACSSSg_So8NSBundleCSgtcfc",
+            "moduleName": "DrawerController",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithNibName:bundle:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "DrawerController.DrawerViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DrawerViewController",
+                    "printedName": "DrawerController.DrawerViewController",
+                    "usr": "c:@M@DrawerController@objc(cs)DrawerViewController"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@DrawerController@objc(cs)DrawerViewController(im)initWithCoder:",
+            "mangledName": "$s16DrawerController0a4ViewB0C5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "DrawerController",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "gestureRecognizer",
+            "printedName": "gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIGestureRecognizer",
+                "printedName": "UIKit.UIGestureRecognizer",
+                "usr": "c:objc(cs)UIGestureRecognizer"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIGestureRecognizer",
+                "printedName": "UIKit.UIGestureRecognizer",
+                "usr": "c:objc(cs)UIGestureRecognizer"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@DrawerController@objc(cs)DrawerViewController(im)gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer:",
+            "mangledName": "$s16DrawerController0a4ViewB0C17gestureRecognizer_33shouldRecognizeSimultaneouslyWithSbSo09UIGestureE0C_AGtF",
+            "moduleName": "DrawerController",
+            "objc_name": "gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@DrawerController@objc(cs)DrawerViewController",
+        "mangledName": "$s16DrawerController0a4ViewB0C",
+        "moduleName": "DrawerController",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:@M@OverlayViewController@objc(cs)OverlayViewController",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "OverlayViewController.OverlayViewController",
+          "Orientation.OrientationHelperController",
+          "UIKit.UIViewController",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "OrientationChanger",
+            "printedName": "OrientationChanger",
+            "usr": "s:11Orientation0A7ChangerP",
+            "mangledName": "$s11Orientation0A7ChangerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "OrientationHandler",
+            "printedName": "OrientationHandler",
+            "usr": "s:11Orientation0A7HandlerP",
+            "mangledName": "$s11Orientation0A7HandlerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DrawerController",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/Drawer\/DrawerChildTableViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 344,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/Drawer\/DrawerViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 702,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/Drawer\/DrawerViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 704,
+      "length": 2,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/Drawer\/DrawerViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 707,
+      "length": 4,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/Drawer\/DrawerViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 761,
+      "length": 6,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/Drawer\/DrawerViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2203,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/Drawer\/DrawerViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2413,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/Drawer\/DrawerViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2660,
+      "length": 2,
+      "value": "30"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/Drawer\/DrawerViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3332,
+      "length": 3,
+      "value": "800"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/Drawer\/DrawerViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3442,
+      "length": 4,
+      "value": "1300"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/Drawer\/DrawerViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6594,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/Drawer\/DrawerViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8770,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/Drawer\/DrawerViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 9831,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/Drawer\/DrawerViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 10159,
+      "length": 5,
+      "value": "false"
+    }
+  ]
+}

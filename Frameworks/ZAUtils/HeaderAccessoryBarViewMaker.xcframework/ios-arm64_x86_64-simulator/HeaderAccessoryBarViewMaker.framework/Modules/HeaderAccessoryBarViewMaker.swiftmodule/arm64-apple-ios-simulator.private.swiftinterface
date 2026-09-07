@@ -1,0 +1,33 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name HeaderAccessoryBarViewMaker
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import Foundation
+import SnapKit
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public protocol HeaderAccessoryBarViewMaker {
+  var leftBarContainerView: UIKit.UIView! { get set }
+  var rightBarContainerView: UIKit.UIView! { get set }
+  var leftBarViews: [UIKit.UIView] { get set }
+  var rightBarViews: [UIKit.UIView] { get set }
+  func pinLeftBarViews()
+  func pinRightBarViews()
+}
+extension HeaderAccessoryBarViewMaker where Self : UIKit.UIViewController {
+  public func pinLeftBarViews()
+  public func pinRightBarViews()
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class HeaderAccessoryBarViewMakerController : UIKit.UIViewController, HeaderAccessoryBarViewMaker {
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var leftBarContainerView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var rightBarContainerView: UIKit.UIView!
+  @_Concurrency.MainActor @preconcurrency public var leftBarViews: [UIKit.UIView]
+  @_Concurrency.MainActor @preconcurrency public var rightBarViews: [UIKit.UIView]
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}

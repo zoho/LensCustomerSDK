@@ -1,0 +1,364 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "Preview",
+    "printedName": "Preview",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Preview",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "QuickLook",
+        "printedName": "QuickLook",
+        "declKind": "Import",
+        "moduleName": "Preview"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "QLPreviewHandler",
+        "printedName": "QLPreviewHandler",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "previewObjects",
+            "printedName": "previewObjects",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[any QuickLook.QLPreviewItem]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "QLPreviewItem",
+                    "printedName": "any QuickLook.QLPreviewItem",
+                    "usr": "c:objc(pl)QLPreviewItem"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7Preview16QLPreviewHandlerC14previewObjectsSaySo0B4Item_pGvp",
+            "mangledName": "$s7Preview16QLPreviewHandlerC14previewObjectsSaySo0B4Item_pGvp",
+            "moduleName": "Preview",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[any QuickLook.QLPreviewItem]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "QLPreviewItem",
+                        "printedName": "any QuickLook.QLPreviewItem",
+                        "usr": "c:objc(pl)QLPreviewItem"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7Preview16QLPreviewHandlerC14previewObjectsSaySo0B4Item_pGvg",
+                "mangledName": "$s7Preview16QLPreviewHandlerC14previewObjectsSaySo0B4Item_pGvg",
+                "moduleName": "Preview",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[any QuickLook.QLPreviewItem]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "QLPreviewItem",
+                        "printedName": "any QuickLook.QLPreviewItem",
+                        "usr": "c:objc(pl)QLPreviewItem"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7Preview16QLPreviewHandlerC14previewObjectsSaySo0B4Item_pGvs",
+                "mangledName": "$s7Preview16QLPreviewHandlerC14previewObjectsSaySo0B4Item_pGvs",
+                "moduleName": "Preview",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7Preview16QLPreviewHandlerC14previewObjectsSaySo0B4Item_pGvM",
+                "mangledName": "$s7Preview16QLPreviewHandlerC14previewObjectsSaySo0B4Item_pGvM",
+                "moduleName": "Preview",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(previewData:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "QLPreviewHandler",
+                "printedName": "Preview.QLPreviewHandler",
+                "usr": "s:7Preview16QLPreviewHandlerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[any QuickLook.QLPreviewItem]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "QLPreviewItem",
+                    "printedName": "any QuickLook.QLPreviewItem",
+                    "usr": "c:objc(pl)QLPreviewItem"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7Preview16QLPreviewHandlerC11previewDataACSaySo0B4Item_pG_tcfc",
+            "mangledName": "$s7Preview16QLPreviewHandlerC11previewDataACSaySo0B4Item_pG_tcfc",
+            "moduleName": "Preview",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "appendPreview",
+            "printedName": "appendPreview(_:fromIndex:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[any QuickLook.QLPreviewItem]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "QLPreviewItem",
+                    "printedName": "any QuickLook.QLPreviewItem",
+                    "usr": "c:objc(pl)QLPreviewItem"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7Preview16QLPreviewHandlerC06appendA0_9fromIndexySaySo0B4Item_pG_SiSgtF",
+            "mangledName": "$s7Preview16QLPreviewHandlerC06appendA0_9fromIndexySaySo0B4Item_pG_SiSgtF",
+            "moduleName": "Preview",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showQL",
+            "printedName": "showQL(from:index:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7Preview16QLPreviewHandlerC6showQL4from5indexySo16UIViewControllerC_SitF",
+            "mangledName": "$s7Preview16QLPreviewHandlerC6showQL4from5indexySo16UIViewControllerC_SitF",
+            "moduleName": "Preview",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "numberOfPreviewItems",
+            "printedName": "numberOfPreviewItems(in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "QLPreviewController",
+                "printedName": "QuickLook.QLPreviewController",
+                "usr": "c:objc(cs)QLPreviewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7Preview16QLPreviewHandlerC08numberOfA5Items2inSiSo0B10ControllerC_tF",
+            "mangledName": "$s7Preview16QLPreviewHandlerC08numberOfA5Items2inSiSo0B10ControllerC_tF",
+            "moduleName": "Preview",
+            "objc_name": "numberOfPreviewItemsInPreviewController:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "previewController",
+            "printedName": "previewController(_:previewItemAt:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "QLPreviewItem",
+                "printedName": "any QuickLook.QLPreviewItem",
+                "usr": "c:objc(pl)QLPreviewItem"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "QLPreviewController",
+                "printedName": "QuickLook.QLPreviewController",
+                "usr": "c:objc(cs)QLPreviewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7Preview16QLPreviewHandlerC17previewController_0D6ItemAtSo0bF0_pSo0bE0C_SitF",
+            "mangledName": "$s7Preview16QLPreviewHandlerC17previewController_0D6ItemAtSo0bF0_pSo0bE0C_SitF",
+            "moduleName": "Preview",
+            "objc_name": "previewController:previewItemAtIndex:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:7Preview16QLPreviewHandlerC",
+        "mangledName": "$s7Preview16QLPreviewHandlerC",
+        "moduleName": "Preview",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/Preview\/QLPreviewHandler.swift",
+      "kind": "IntegerLiteral",
+      "offset": 963,
+      "length": 1,
+      "value": "0"
+    }
+  ]
+}

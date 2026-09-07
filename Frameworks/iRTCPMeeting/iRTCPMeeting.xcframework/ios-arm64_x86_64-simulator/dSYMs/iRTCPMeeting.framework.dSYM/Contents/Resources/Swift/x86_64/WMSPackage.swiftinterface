@@ -1,0 +1,1017 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.1 effective-5.10 (swiftlang-6.3.1.1.2 clang-2100.0.123.102)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -module-name WMSPackage
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.1
+import Foundation
+import Foundation/*.Bundle*/
+import Foundation/*.ProcessInfo*/
+import Foundation/*.URL*/
+import Starscream
+import Swift
+import TraceKit
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_hasMissingDesignatedInitializers public class ChatTaskHandler {
+  public func sendMessage(chatId chid: Swift.String, message msg: Swift.String, messageId msgId: Swift.String? = nil, eventHandler handler: (any WMSPackage.PEXEventHandlerDelegate)?) throws
+  public func sendMessage(chatId chid: Swift.String, message msg: Swift.String, messageId msgId: Swift.String? = nil, completion: WMSPackage.PEXEventCompletionBlock?) throws
+  public func sendTask(withType taskType: WMSPackage.PEXTaskTypes, andInfo info: Any, eventHandlerDelegate handler: (any WMSPackage.PEXEventHandlerDelegate)?) throws
+  public func sendTask(withType taskType: WMSPackage.PEXTaskTypes, andInfo info: Any, completion: WMSPackage.PEXEventCompletionBlock?) throws
+  public func getBadgeNumber(eventHandlerDelegate handler: (any WMSPackage.PEXEventHandlerDelegate)?) throws
+  public func getBadgeNumber(completion: WMSPackage.PEXEventCompletionBlock?) throws
+  public func joinAndAttachSession(withChatId chid: Swift.String, eventHandlerDelegate handler: (any WMSPackage.PEXEventHandlerDelegate)?) throws
+  public func joinAndAttachSession(withChatId chid: Swift.String, completion: WMSPackage.PEXEventCompletionBlock?) throws
+  public func clearUnreadChats(chatIds chids: Swift.String, eventHandlerDelegate handler: (any WMSPackage.PEXEventHandlerDelegate)?) throws
+  public func clearUnreadChats(chatIds chids: Swift.String, completion: WMSPackage.PEXEventCompletionBlock?) throws
+  public func createChat(recipients recipientUsers: Any, isForcedNew isForced: Swift.Bool = false, isJoin join: Swift.Bool = false, chatTitle title: Swift.String?, andType type: Swift.Int, isPrivateChat isPrivate: Swift.Bool = false, eventHandler handler: (any WMSPackage.PEXEventHandlerDelegate)?) throws
+  public func createChat(recipients recipientUsers: Any, isForcedNew isForced: Swift.Bool, isJoin join: Swift.Bool, chatTitle title: Swift.String?, andType type: Swift.Int, isPrivateChat isPrivate: Swift.Bool, completion: WMSPackage.PEXEventCompletionBlock?) throws
+  public func quitChat(chatId chid: Swift.String, eventHandler handler: (any WMSPackage.PEXEventHandlerDelegate)?) throws
+  public func quitChat(chatId chid: Swift.String, completion: WMSPackage.PEXEventCompletionBlock?) throws
+  public func joinChat(chatId chid: Swift.String, userName uname: Swift.String, eventHandler handler: (any WMSPackage.PEXEventHandlerDelegate)?) throws
+  public func joinChat(chatId chid: Swift.String, userName uname: Swift.String, completion: WMSPackage.PEXEventCompletionBlock?) throws
+  public func addMember(chatId chid: Swift.String, recipients recipientUsers: Any, details detailDict: [Swift.String : Any]?, eventHandler handler: (any WMSPackage.PEXEventHandlerDelegate)?) throws
+  public func addMember(chatId chid: Swift.String, recipients recipientUsers: Any, details detailDict: [Swift.String : Any]?, completion: WMSPackage.PEXEventCompletionBlock?) throws
+  public func deleteMember(chatId chid: Swift.String, recipients recipientUsers: Any, details detailDict: [Swift.String : Any]?, eventHandler handler: (any WMSPackage.PEXEventHandlerDelegate)?) throws
+  public func deleteMember(chatId chid: Swift.String, recipients recipientUsers: Any, details detailDict: [Swift.String : Any]?, completion: WMSPackage.PEXEventCompletionBlock?) throws
+  public func blockNotifications(forChatId chid: Swift.String, withInterval interval: Swift.String, eventHandler handler: (any WMSPackage.PEXEventHandlerDelegate)?) throws
+  public func blockNotifications(forChatId chid: Swift.String, withInterval interval: Swift.String, completion: WMSPackage.PEXEventCompletionBlock?) throws
+  public func setLocation(dict: [Swift.String : Any], eventHandler handler: (any WMSPackage.PEXEventHandlerDelegate)?) throws
+  public func setLocation(dict: [Swift.String : Any], completion: WMSPackage.PEXEventCompletionBlock?) throws
+  public func sendInfoMessage(chatId chid: Swift.String, message msg: Any?, infoMsgType type: WMSPackage.ChatInfoMessageType?, eventHandler handler: (any WMSPackage.PEXEventHandlerDelegate)?) throws
+  public func sendInfoMessage(chatId chid: Swift.String, message msg: Any?, infoMsgType type: WMSPackage.ChatInfoMessageType?, completion: WMSPackage.PEXEventCompletionBlock?) throws
+  public func createGroup(withGroupId groupId: Swift.String, isPrivateGrp isPrivate: Swift.Bool, eventHandler handler: (any WMSPackage.PEXEventHandlerDelegate)?) throws
+  public func createGroup(withGroupId groupId: Swift.String, isPrivateGrp isPrivate: Swift.Bool, completion: WMSPackage.PEXEventCompletionBlock?) throws
+  public func setChatHistory(chatId chid: Swift.String, enable isEnable: Swift.Bool, eventHandler handler: (any WMSPackage.PEXEventHandlerDelegate)?) throws
+  public func setChatHistory(chatId chid: Swift.String, enable isEnable: Swift.Bool, completion: WMSPackage.PEXEventCompletionBlock?) throws
+  public func getTranscripts(withChatId chatId: Swift.String, fromTimeStamp fromTime: Swift.String?, toTimeStamp toTime: Swift.String?, lineLimit limit: Swift.String = "50", eventHandler handler: (any WMSPackage.PEXEventHandlerDelegate)?) throws
+  public func getTranscripts(withChatId chatId: Swift.String, fromTimeStamp fromTime: Swift.String?, toTimeStamp toTime: Swift.String?, lineLimit limit: Swift.String = "50", completion: WMSPackage.PEXEventCompletionBlock?) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class CustomTaskHandler {
+  public func getInsId(withEventHandler handler: (any WMSPackage.PEXEventHandlerDelegate)?) throws
+  public func getInsId(completion: WMSPackage.PEXEventCompletionBlock?) throws
+  public func getContactInfo(dict obj: [Swift.String : Any], eventHandler handler: (any WMSPackage.PEXEventHandlerDelegate)?) throws
+  public func getContactInfo(dict obj: [Swift.String : Any], completion: WMSPackage.PEXEventCompletionBlock?) throws
+  public func registerUns(dict obj: [Swift.String : Any], eventHandler handler: (any WMSPackage.PEXEventHandlerDelegate)?) throws
+  public func registerUns(dict obj: [Swift.String : Any], completion: WMSPackage.PEXEventCompletionBlock?) throws
+  public func unRegisterUns(dict obj: [Swift.String : Any], eventHandler handler: (any WMSPackage.PEXEventHandlerDelegate)?) throws
+  public func unRegisterUns(dict obj: [Swift.String : Any], completion: WMSPackage.PEXEventCompletionBlock?) throws
+  public func syncContacts(withData obj: [Swift.String : Any], eventHandler handler: (any WMSPackage.PEXEventHandlerDelegate)?) throws
+  public func syncContacts(withData obj: [Swift.String : Any], completion: WMSPackage.PEXEventCompletionBlock?) throws
+  @objc deinit
+}
+public enum WMSPEXWebSocketTrafficDirection {
+  case inbound
+  case outbound
+  public static func == (a: WMSPackage.WMSPEXWebSocketTrafficDirection, b: WMSPackage.WMSPEXWebSocketTrafficDirection) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol WMSPEXWebSocketTrafficObservationDelegate : AnyObject {
+  func websocketDidExchange(data: Any, with direction: WMSPackage.WMSPEXWebSocketTrafficDirection)
+}
+@objc open class PEXLibrary : ObjectiveC.NSObject {
+  public var connection: WMSPackage.PEXConnectionManager {
+    get
+  }
+  public var event: WMSPackage.PEXEventManager {
+    get
+  }
+  public var handlers: WMSPackage.PEXDataHandler {
+    get
+  }
+  final public let chatTask: WMSPackage.ChatTaskHandler!
+  final public let customTask: WMSPackage.CustomTaskHandler!
+  public init(url: WMSPackage.WMSUrl, prd: WMSPackage.WmsService, config: WMSPackage.WMSConfig, deviceInfo: WMSPackage.DeviceInfo, isDebugMode: Swift.Bool = false, customLogFileUrl: Foundation.URL? = nil, segmentationBehaviour: TraceKitCore.FileLoggingDestination.SegmentationBehaviour = .none, trafficObservationDelegate: (any WMSPackage.WMSPEXWebSocketTrafficObservationDelegate)? = nil, loggingDelegate: (any TraceKitCore.LoggingDelegate)? = nil, certPinner: (any Starscream.CertificatePinning)? = nil)
+  public func sendData(string: Swift.String, logMessage: Swift.String?, completion: (() -> ())? = nil)
+  @objc deinit
+}
+extension WMSPackage.PEXLibrary : TraceKitCore.LoggingDelegate {
+  final public func logger(_ logger: TraceKitCore.Logger, shouldLogFor level: TraceKitCore.Logger.Level) -> Swift.Bool
+}
+public protocol PEXChatHandlerDelegate {
+  func onJoin(chatId chid: Swift.String?, withTitle title: Swift.String?, info addInfo: Swift.String?, count pCount: Swift.String?, andUsers users: [Any]?, isHistoryStored history: Swift.String?, messageDict messageInfo: [Swift.String : Any]?)
+  func onMessage(chatId chid: Swift.String?, withTitle title: Swift.String?, senderName sender: Swift.String?, displayName dname: Swift.String?, serverTime stime: Swift.String?, isNewChat newChat: Swift.String?, info addInfo: Swift.String?, andMessage msg: Swift.String?, andMessageID msgid: Swift.String?, isHistoryStored history: Swift.String?, muteInterval mute: Swift.String?, lastMsgTime lmTime: Swift.String?, messageDict messageInfo: [Swift.String : Any], addChatInfo chatInfo: [Swift.String : Any]?)
+  func onMembersAdded(chatId chid: Swift.String?, addedBy user: Swift.String?, addedBydName dname: Swift.String?, andUsers users: [Any]?, andTime time: Swift.String?, pcount: Swift.String?)
+  func onMembersDeleted(chatId chid: Swift.String?, deletedBy user: Swift.String?, deletedBydName dname: Swift.String?, andUsers users: [Any]?, andTime time: Swift.String?, pcount: Swift.String?)
+  func onInvite(chatId chid: Swift.String?, addedBy user: Swift.String?, addedBydName dname: Swift.String?, serverTime sTime: Swift.String?)
+  func onRemove(chatId chid: Swift.String?, deletedBy user: Swift.String?, deletedBydName dname: Swift.String?, serverTime sTime: Swift.String?)
+  func onMemberIn(chatId chid: Swift.String?, wmsId wmsid: Swift.String?, displayName dname: Swift.String?, andUserStatus status: WMSPackage.UserStatus?)
+  func onMemberOut(chatId chid: Swift.String?, wmsId wmsid: Swift.String?, displayName dname: Swift.String?, andUserStatus status: WMSPackage.UserStatus?)
+  func onInfoMessage(forChatId chid: Swift.String?, senderName sender: Swift.String?, displayName dname: Swift.String?, serverTime time: Swift.String?, info addInfo: Swift.String?, andMode mode: Swift.String?, lastMsgTime lmTime: Swift.String?, messageDict messageInfo: [Swift.String : Any]?)
+  func onTyping(chatId chid: Swift.String?, wmsId wmsid: Swift.String?)
+  func onIdle(chatId chid: Swift.String?, wmsId wmsid: Swift.String?)
+  func onTextEntered(chatId chid: Swift.String?, wmsId wmsid: Swift.String?)
+  func onAttachment(chatId chid: Swift.String?, withTitle title: Swift.String?, isHistoryStored history: Swift.String?, muteInterval mute: Swift.String?, wmsId wmsid: Swift.String?, addChatInfo chatInfo: [Swift.String : Any]?, andMessage msg: [Swift.String : Any]?)
+  func onTitleChange(chatId chid: Swift.String?, wmsId wmsid: Swift.String?, andTitle title: Any?)
+  func onMembersAddedToThread(threadChatId chid: Swift.String?, addedBy user: Swift.String?, addedBydName dname: Swift.String?, andUsers users: [Any]?, andTime time: Swift.String?, pcount: Swift.String?, messageDict messageInfo: [Swift.String : Any])
+  func onMembersDeletedFromThread(threadChatId chid: Swift.String?, deletedBy user: Swift.String?, deletedBydName dname: Swift.String?, andUsers users: [Any]?, andTime time: Swift.String?, pcount: Swift.String?, messageDict messageInfo: [Swift.String : Any])
+}
+extension WMSPackage.PEXChatHandlerDelegate {
+  public func onMembersAddedToThread(threadChatId chid: Swift.String?, addedBy user: Swift.String?, addedBydName dname: Swift.String?, andUsers users: [Any]?, andTime time: Swift.String?, pcount: Swift.String?, messageDict messageInfo: [Swift.String : Any])
+  public func onMembersDeletedFromThread(threadChatId chid: Swift.String?, deletedBy user: Swift.String?, deletedBydName dname: Swift.String?, andUsers users: [Any]?, andTime time: Swift.String?, pcount: Swift.String?, messageDict messageInfo: [Swift.String : Any])
+}
+public protocol PEXContactsHandlerDelegate : AnyObject {
+  func onAdd(userId zuid: Swift.String?, displayName dname: Swift.String?, statusCode scode: Swift.String?, statusMsg statusmsg: Swift.String?, emailId emailid: Swift.String?, contactSType stype: Swift.String?)
+  func onDelete(userId zuid: Swift.String?, displayName dname: Swift.String?, statusCode scode: Swift.String?, statusMsg statusmsg: Swift.String?, emailId emailid: Swift.String?, contactSType stype: Swift.String?)
+  func onInvite(userId zuid: Swift.String?, displayName dname: Swift.String?, statusCode scode: Swift.String?, statusMsg statusmsg: Swift.String?, emailId emailid: Swift.String?, contactSType stype: Swift.String?)
+  func onUserAccept(userId zuid: Swift.String?, displayName dname: Swift.String?, statusCode scode: Swift.String?, statusMsg statusmsg: Swift.String?, emailId emailid: Swift.String?, contactSType stype: Swift.String?)
+  func onAccept(userId zuid: Swift.String?, displayName dname: Swift.String?, statusCode scode: Swift.String?, statusMsg statusmsg: Swift.String?, emailId emailid: Swift.String?, contactSType stype: Swift.String?)
+  func onRemove(userId zuid: Swift.String?, displayName dname: Swift.String?, statusCode scode: Swift.String?, statusMsg statusmsg: Swift.String?, emailId emailid: Swift.String?, contactSType stype: Swift.String?)
+  func onPendingInvites(userId zuid: Swift.String?, displayName dname: Swift.String?, statusCode scode: Swift.String?, statusMsg statusmsg: Swift.String?, emailId emailid: Swift.String?, contactSType stype: Swift.String?)
+  func onContactMessage(msg data: [Swift.String : Any]?)
+  func onStatusChange(userId zuid: Swift.String?, displayName dname: Swift.String?, statusCode scode: Swift.String?, statusMsg statusmsg: Swift.String?, contactSType stype: Swift.String?)
+  func onStatusChangeV1(userId zuid: Swift.String?, statusCode scode: Swift.String?, statusMsg statusmsg: Swift.String?, contactSType stype: Swift.String?, lastSeenTime: Swift.String?)
+  func onUpdate(dict list: [Swift.String : Any]?)
+  func onUpdate(dict list: [Swift.String : Any]?, mtype: Swift.Int)
+  func onReInit(dict list: [Swift.String : Any]?, metaData meta: [Swift.String : Any]?)
+  func contactsCheckSum(checkSum: Swift.String?)
+}
+extension WMSPackage.PEXContactsHandlerDelegate {
+  public func onStatusChangeV1(userId zuid: Swift.String?, statusCode scode: Swift.String?, statusMsg statusmsg: Swift.String?, contactSType stype: Swift.String?, lastSeenTime: Swift.String?)
+  public func onUpdate(dict list: [Swift.String : Any]?, mtype: Swift.Int)
+}
+public protocol PEXMessageHandlerDelegate : AnyObject {
+  func onMessage(message msg: Any, withType mtype: Swift.Int)
+  func onCustomMessage(message msg: Any)
+  func onCrossProductMessage(prd: WMSPackage.WmsService, message data: Any)
+  func onACSMessage(withType type: Swift.String, message data: Any)
+  func onZohoMessage(prdService prd: WMSPackage.WmsService, AndMessage message: Any?, theURL url: Swift.String?, theUrlString urlstring: Swift.String?, theCategory category: Swift.String?, senderName sender: Swift.String?, theAttachments attachments: Any?, theParams params: Swift.String?, id mid: Swift.String?, displayName dname: Swift.String?, theOrgs orgs: Swift.String?, theGroups groups: Swift.String?)
+}
+extension WMSPackage.PEXMessageHandlerDelegate {
+  public func onCrossProductMessage(prd: WMSPackage.WmsService, message data: Any)
+  public func onACSMessage(withType type: Swift.String, message data: Any)
+  public func onZohoMessage(prdService prd: WMSPackage.WmsService, AndMessage message: Any?, theURL url: Swift.String?, theUrlString urlstring: Swift.String?, theCategory category: Swift.String?, senderName sender: Swift.String?, theAttachments attachments: Any?, theParams params: Swift.String?, id mid: Swift.String?, displayName dname: Swift.String?, theOrgs orgs: Swift.String?, theGroups groups: Swift.String?)
+}
+public enum ApplicationState {
+  case foreground
+  case background
+  case sleep
+  case awake
+  case becomeActive
+  case resignActive
+  case launched
+  public static func == (a: WMSPackage.ApplicationState, b: WMSPackage.ApplicationState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PexConnectionEvent {
+  case connected(WMSPackage.PexUserDetail)
+  case disconnected(Swift.Bool, Swift.String)
+  case reconnected
+  case networkUp
+  case credential(WMSPackage.PexConnectionCredentialCompletion)
+  case customHeaders(([Swift.String : Swift.String]?) -> ())
+  case canHoldConnectionInBackground((Swift.Bool) -> ())
+}
+public typealias PexConnectionEventCompletion = (WMSPackage.PexConnectionEvent) -> ()
+public typealias PexConnectionCredentialCompletion = (WMSPackage.PEXCredentials?) -> ()
+public protocol PEXConnectionHandlerDelegate : AnyObject {
+  func onConnect(wmsId wmsid: Swift.String, sessionId sid: Swift.String?, displayName dname: Swift.String?, andXA xA: Swift.String?, andEmail email: Swift.String?, andDeprecated deprecated: Swift.String?, andMessage messageObject: Any?)
+  func onDisconnect(isManual: Swift.Bool, reason: Swift.String)
+  func onReconnect()
+  func onNetworkUp()
+  func getCredentials(completion: @escaping (_ credentials: WMSPackage.PEXCredentials?) -> Swift.Void)
+  func getCustomHeaders() -> [Swift.String : Swift.String]?
+  func canHoldConnectionInBackground() -> Swift.Bool
+}
+extension WMSPackage.PEXConnectionHandlerDelegate {
+  public func getCustomHeaders() -> [Swift.String : Swift.String]?
+  public func canHoldConnectionInBackground() -> Swift.Bool
+}
+public protocol PEXDebugLogger : AnyObject {
+  func connectionDebugLog(message: Swift.String)
+}
+@objc @_hasMissingDesignatedInitializers public class PEXConnectionManager : ObjectiveC.NSObject {
+  weak public var debugDelegate: (any WMSPackage.PEXDebugLogger)?
+  public var useNativeWebSocket: Swift.Bool
+  public var useFoundationTransportSocketFlow: Swift.Bool
+  public var isConnected: Swift.Bool {
+    get
+  }
+  public func connect(completion: @escaping WMSPackage.PexConnectionEventCompletion)
+  public func connect(delegate: any WMSPackage.PEXConnectionHandlerDelegate)
+  public func hold(completion: (() -> ())? = nil) throws
+  public func resume()
+  public func disconnect()
+  public func export(completion: @escaping (Foundation.URL?) -> Swift.Void)
+  public func forceReconnect()
+  public func updateNetworkStatus(isConnected: Swift.Bool)
+  public func setConnectionTimeoutInterval(inSeconds timeInterval: Swift.Int)
+  public func setPingTimeoutInterval(inSeconds timeInterval: Swift.Int)
+  public func setMissedPingThreshold(count: Swift.Int)
+  public func getPingTimeoutInterval() -> Foundation.TimeInterval
+  public func getConnectionTimeoutInterval() -> Foundation.TimeInterval
+  public func getMissedPingThreshold() -> Swift.Int
+  public func setDebuggingMode(isDebugMode: Swift.Bool)
+  public func updateApplicationState(state: WMSPackage.ApplicationState)
+  public func updateWMSUrl(url: WMSPackage.WMSUrl)
+  public func fetchRoundTripTime(rttCompletion: @escaping (_ rttTime: Swift.Float) -> Swift.Void)
+  @objc deinit
+}
+public typealias PEXChatHandlerActionsCompletion = (WMSPackage.PEXChatHandlerActions) -> Swift.Void
+public typealias PEXContactHandlerActionsCompletion = (WMSPackage.PEXContactHandlerActions) -> Swift.Void
+public typealias PEXMessageHandlerActionsCompletion = (WMSPackage.PEXMessageHandlerActions) -> Swift.Void
+public protocol PEXMessageDecryptionDelegate : AnyObject {
+  func decrypt(msg: Swift.String) -> Swift.AnyObject?
+}
+extension WMSPackage.PEXMessageDecryptionDelegate {
+  public func decrypt(msg: Swift.String) -> Swift.AnyObject?
+}
+@objc public class PEXDataHandler : ObjectiveC.NSObject {
+  final public let logger: (any WMSPackage.PEXLogger)?
+  public init(logger: (any WMSPackage.PEXLogger)?)
+  open func setChatHandler(types: [WMSPackage.PexChatHandlerType], completion: @escaping WMSPackage.PEXChatHandlerActionsCompletion)
+  open func setChatHandler(type: WMSPackage.PexChatHandlerType, handler: any WMSPackage.PEXChatHandlerDelegate)
+  open func setMessageHandler(completion: @escaping WMSPackage.PEXMessageHandlerActionsCompletion)
+  open func setMessageHandler(msgHandler: any WMSPackage.PEXMessageHandlerDelegate)
+  open func setDecrptionDelegate(handler: any WMSPackage.PEXMessageDecryptionDelegate)
+  open func setContactsHandler(completion: @escaping WMSPackage.PEXContactHandlerActionsCompletion)
+  open func setContactsHandler(contactHandler: any WMSPackage.PEXContactsHandlerDelegate)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class PEXEventManager : ObjectiveC.NSObject {
+  public func processTask(type: WMSPackage.PEXTaskTypes, operation: WMSPackage.PexTaskOperation = .none, object: Any? = nil, headers: [Swift.String : Swift.String]? = nil, eventId: Swift.String? = nil, completion: @escaping WMSPackage.PEXEventCompletionBlock)
+  public func process(event: WMSPackage.PEXEvent) throws
+  public func process(event: WMSPackage.PEXEvent, completion: @escaping WMSPackage.PEXEventCompletionBlock)
+  @objc deinit
+}
+public struct DeviceInfo {
+  public init(osCode: Swift.String, userAgent: Swift.String? = nil, appVersion: Swift.String?)
+}
+public struct PEXCredentials {
+  public struct UserInfo {
+    public init(zuid: Swift.String, dname: Swift.String? = nil, insId: Swift.String?, clientPortalId: Swift.String? = nil)
+  }
+  public init(auth type: WMSPackage.WMSAuthTypes, user: WMSPackage.PEXCredentials.UserInfo? = nil, url: WMSPackage.WMSUrl? = nil, publicKey: Swift.String? = nil)
+  public init(annon user: WMSPackage.PEXCredentials.UserInfo, token: Swift.String?, url: WMSPackage.WMSUrl? = nil, publicKey: Swift.String? = nil)
+}
+public struct WMSConfig : Swift.OptionSet {
+  public let rawValue: Swift.Int
+  public init(rawValue: Swift.Int)
+  public static let chat_enabled: WMSPackage.WMSConfig
+  public static let presence_chat: WMSPackage.WMSConfig
+  public static let presence_personal: WMSPackage.WMSConfig
+  public static let presence_org: WMSPackage.WMSConfig
+  public static let load_balanced: WMSPackage.WMSConfig
+  public static let multi_protocol_session_enabled: WMSPackage.WMSConfig
+  public static let cross_prd_msg_enabled: WMSPackage.WMSConfig
+  public static let md_parent: WMSPackage.WMSConfig
+  public static let md_child: WMSPackage.WMSConfig
+  public static let transient_pex: WMSPackage.WMSConfig
+  public static let app_notify: WMSPackage.WMSConfig
+  public typealias ArrayLiteralElement = WMSPackage.WMSConfig
+  public typealias Element = WMSPackage.WMSConfig
+  public typealias RawValue = Swift.Int
+}
+public struct WMSUrl {
+  public init(baseDomain: Swift.String, dclPfx: Swift.String? = nil, hostPrefix: Swift.String)
+  public func getBaseUrl() -> Swift.String
+}
+public struct PEXError : Swift.Error {
+  public let code: Swift.Int
+  public let msg: Swift.String?
+  public var error: [Swift.String : Any]? {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers public class PEXRequest : WMSPackage.PEXEvent {
+  public init(requestType: WMSPackage.PEXRequestType = .none, prd: WMSPackage.WmsService, relativeUrlString: Swift.String, method: WMSPackage.PEXRequestHTTPMethod = .GET, dict: Any?, delegate: (any WMSPackage.PEXEventHandlerDelegate)?)
+  public init(requestType: WMSPackage.PEXRequestType = .none, prd: WMSPackage.WmsService, relativeUrlString: Swift.String, method: WMSPackage.PEXRequestHTTPMethod = .GET, dict: Any?, completion: WMSPackage.PEXEventCompletionBlock?)
+  public init(route: WMSPackage.PEXRequestEndPoint, delegate: (any WMSPackage.PEXEventHandlerDelegate)?)
+  public init(route: WMSPackage.PEXRequestEndPoint, completion: WMSPackage.PEXEventCompletionBlock?)
+  public init(route: WMSPackage.PEXRequestEndPoint)
+  public func addCookie(key: Swift.String, value: Swift.String)
+  @objc deinit
+}
+public struct PEXRequestEndPoint {
+  public init(path: Swift.String, method: WMSPackage.PEXRequestHTTPMethod, query: [Swift.String : Any]? = nil, prd: WMSPackage.WmsService? = nil, requestType: WMSPackage.PEXRequestType = PEXRequestType.none)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PEXResponse : ObjectiveC.NSObject {
+  public var currentResponse: Any? {
+    get
+  }
+  public var response: [Swift.String : Any]? {
+    get
+  }
+  public var responseText: Swift.String? {
+    get
+  }
+  @objc deinit
+}
+public protocol PEXEventHandlerDelegate : AnyObject {
+  func onBeforeSend(event: WMSPackage.PEXEvent)
+  func onProgress(response: WMSPackage.PEXResponse)
+  func onCompletion(isSuccess: Swift.Bool, response: WMSPackage.PEXResponse)
+  func onTimeout(event: WMSPackage.PEXEvent)
+  func onFailure(error: WMSPackage.PEXError?)
+}
+extension WMSPackage.PEXEventHandlerDelegate {
+  public func onBeforeSend(event: WMSPackage.PEXEvent)
+  public func onProgress(response: WMSPackage.PEXResponse)
+}
+public typealias PEXEventCompletionBlock = (Swift.Result<WMSPackage.PEXResponse, WMSPackage.PEXError>) -> Swift.Void
+@objc @_hasMissingDesignatedInitializers public class PEXEvent : ObjectiveC.NSObject {
+  public func addHeader(key: Swift.String, value: Swift.String)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class PEXTask : WMSPackage.PEXEvent {
+  public init(type: WMSPackage.PEXTaskTypes, operation: WMSPackage.PexTaskOperation = .none, object: Any?, headers: [Swift.String : Swift.String]? = nil, eventId: Swift.String? = nil, delegate: (any WMSPackage.PEXEventHandlerDelegate)?, logger: (any WMSPackage.PEXLogger)?)
+  public init(type: WMSPackage.PEXTaskTypes, operation: WMSPackage.PexTaskOperation = .none, object: Any?, headers: [Swift.String : Swift.String]? = nil, eventId: Swift.String? = nil, completion: WMSPackage.PEXEventCompletionBlock?, logger: (any WMSPackage.PEXLogger)?)
+  @objc deinit
+}
+public protocol PEXLogger : AnyObject {
+  func export(completion: @escaping (Foundation.URL?) -> Swift.Void)
+  func log(message: Swift.String, level: TraceKitCore.Logger.Level)
+  func log(message: Swift.String)
+  func setDebugMode(enable: Swift.Bool)
+}
+@_inheritsConvenienceInitializers public class ChatDetails : WMSPackage.PrimaryChatDetails {
+  public var title: Swift.String?
+  public var chatDescription: Swift.String?
+  public var muteInterval: Swift.String?
+  public var isPrivate: Swift.Bool
+  public var pCount: Foundation.NSNumber?
+  public var ctype: Swift.String?
+  public var lastreadmsguid: Swift.String?
+  public var customGroup: Swift.Bool!
+  public var context: Swift.String?
+  public var creator: Swift.String?
+  public var users: [Any]?
+  public var addInfo: Swift.String?
+  public var channelData: [Swift.String : Any]?
+  public var threadDetails: WMSPackage.ThreadChatDetails?
+  public var t121tInfo: [Swift.String : Any]?
+  override public init(_ chatType: WMSPackage.PexChatHandlerType, _ msgInfo: [Swift.String : Any])
+  @objc deinit
+}
+public struct ContactDetails {
+  public var zuid: Swift.String!
+  public var dname: Swift.String?
+  public var firstName: Swift.String?
+  public var lastName: Swift.String?
+  public var displayName: Swift.String?
+  public var email: Swift.String?
+  public var checksum: Foundation.NSNumber?
+  public var usageCount: Foundation.NSNumber?
+  public var statusDetail: WMSPackage.ContactStatusDetail?
+  public init(_ zuid: Swift.String, sInfo: Swift.String?)
+  public init(_ zuid: Swift.String, msgInfo: [Swift.String : Any])
+  public init(_ msgInfo: [Swift.String : Any])
+}
+public struct ContactStatusDetail : Swift.Codable {
+  public var zuid: Swift.String!
+  public var statusCode: Swift.String!
+  public var statusMsg: Swift.String!
+  public var sType: Swift.String!
+  public var lastSeenTime: Swift.String?
+  public init(from decoder: any Swift.Decoder) throws
+  public init(zuid: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public enum MemberActionType {
+  case invite
+  case remove
+  case added
+  case deleted
+  case memberIn
+  case memberOut
+  public static func == (a: WMSPackage.MemberActionType, b: WMSPackage.MemberActionType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct UserStatus {
+  public var code: Swift.String?
+  public var message: Swift.String?
+  public init(code: Swift.String?, message: Swift.String?)
+}
+@_inheritsConvenienceInitializers public class MemberDetails : WMSPackage.PrimaryChatDetails {
+  public var time: Swift.String!
+  public var byUser: Swift.String!
+  public var byDname: Swift.String!
+  public var zuid: Swift.String!
+  public var dname: Swift.String!
+  public var users: [Any]?
+  public var userStatus: WMSPackage.UserStatus?
+  public var pCount: Swift.String?
+  override public init(_ chatType: WMSPackage.PexChatHandlerType, _ msgInfo: [Swift.String : Any])
+  public init(dataFromMType16: [Swift.String : Any], chatType: WMSPackage.PexChatHandlerType)
+  @objc deinit
+}
+public enum MessageTypes {
+  case text
+  case attachment
+  case info
+  public static func == (a: WMSPackage.MessageTypes, b: WMSPackage.MessageTypes) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public class MessageDetails {
+  public var sender: Swift.String!
+  public var time: Swift.String!
+  public var dname: Swift.String?
+  public var lmTime: Swift.String?
+  public var messageId: Swift.String?
+  public var msguid: Swift.String?
+  public var messageContent: Any!
+  public var meta: [Swift.String : Any]!
+  public var visiblity: Foundation.NSNumber?
+  public var isRead: Foundation.NSNumber?
+  public var mtype: Swift.String?
+  public var isStarred: Foundation.NSNumber?
+  public var starType: Foundation.NSNumber?
+  public var mode: Swift.String?
+  public var isThreadMsg: Swift.Bool
+  public var postInParent: Swift.Bool
+  public var includeSenderInUnread: Swift.Bool
+  public var reactions: [Swift.String : Any]?
+  public var tempInfo: [Swift.String : Any]?
+  public var notifcationDetails: WMSPackage.MessageNotificationDetails!
+  public var isModerated: Swift.Bool
+  public var dlpStatus: [Swift.String : Any]?
+  public init(_ chatType: WMSPackage.PexChatHandlerType, _ msgInfo: [Swift.String : Any], _ lastMsgTime: Swift.String?, _ mtype: Swift.String)
+  @objc deinit
+}
+public class MessageNotificationDetails {
+  public var hide: Swift.Bool
+  public var isAutomatedMsg: Swift.Bool
+  public var customGroup: Swift.Bool
+  public init(_ chatType: WMSPackage.PexChatHandlerType, _ msgInfo: [Swift.String : Any])
+  @objc deinit
+}
+public struct PexUserDetail {
+  public var wmsid: Swift.String
+  public var orgId: Swift.String?
+  public var sid: Swift.String?
+  public var dname: Swift.String?
+  public var xa: Swift.String?
+  public var email: Swift.String?
+  public var ttl: Swift.String?
+  public var time: Swift.String?
+  public var isRetry: Swift.Bool!
+  public var currentTime: Swift.String
+  public init?(dict: [Swift.String : Any]?, currentTime: Swift.String)
+}
+public enum PexChatHandlerType : Swift.Int {
+  case CHAT
+  case COLLABORATION
+  case SERVICE_CHAT
+  case CUSTOM_CHAT
+  case PRESENCE_CHAT
+  case CHANNEL
+  case TAZ
+  case ENTITYCHAT
+  case THREADCHAT
+  public func createChatConfig() -> Swift.String?
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public class PrimaryChatDetails {
+  public var chid: Swift.String!
+  public var chatType: WMSPackage.PexChatHandlerType
+  public init(_ chatType: WMSPackage.PexChatHandlerType, _ msgInfo: [Swift.String : Any])
+  @objc deinit
+}
+public class ThreadChatDetails {
+  public var isThreadFollower: Swift.Bool
+  public var parentchatid: Swift.String?
+  public var parentmsguid: Swift.String?
+  public var parentmessagesenderid: Swift.String?
+  public var isfirstthreadmessage: Swift.Bool
+  public init(_ msgInfo: [Swift.String : Any])
+  @objc deinit
+}
+@_inheritsConvenienceInitializers public class TitleChangeDetails : WMSPackage.PrimaryChatDetails {
+  public var wmsid: Swift.String!
+  public var title: Swift.String!
+  override public init(_ chatType: WMSPackage.PexChatHandlerType, _ msgInfo: [Swift.String : Any])
+  @objc deinit
+}
+public enum TypingState {
+  case typing
+  case idle
+  case textEntered
+  public static func == (a: WMSPackage.TypingState, b: WMSPackage.TypingState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers public class TypingDetails : WMSPackage.PrimaryChatDetails {
+  public var wmsid: Swift.String!
+  override public init(_ chatType: WMSPackage.PexChatHandlerType, _ msgInfo: [Swift.String : Any])
+  @objc deinit
+}
+public struct ZohoMessageDetails {
+  public var prdService: WMSPackage.WmsService!
+  public var zohoMessage: Swift.String?
+  public var zohoMsgUrl: Swift.String?
+  public var zohoMsgUrlString: Swift.String?
+  public var zohoMsgCategory: Swift.String?
+  public var zohoMsgSender: Swift.String?
+  public var zohoMsgAttachments: Swift.String?
+  public var zohoMsgParams: Swift.String?
+  public var zohoMessageId: Swift.String?
+  public var zohoMsgDisplayName: Swift.String?
+  public var zohoMsgOrganisation: Swift.String?
+  public var zohoMsgGroups: Swift.String?
+  public init(_ prdService: WMSPackage.WmsService, _ msgInfo: [Swift.String : Any])
+}
+public enum PEXChatHandlerActions {
+  case onJoin(WMSPackage.ChatDetails)
+  case onMessage(WMSPackage.MessageTypes, WMSPackage.ChatDetails, WMSPackage.MessageDetails, [Swift.String : Any])
+  case onMembersChange(WMSPackage.MemberActionType, WMSPackage.MemberDetails)
+  case onTitleChanged(WMSPackage.TitleChangeDetails)
+  case onTyping(WMSPackage.TypingState, WMSPackage.TypingDetails)
+}
+public enum ContactActionType {
+  case invite
+  case accept
+  case delete
+  case add
+  case remove
+  case pendingInvite
+  case userAccept
+  public static func == (a: WMSPackage.ContactActionType, b: WMSPackage.ContactActionType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ContactUpdateType {
+  case reInit
+  case presenceReInit(_: Swift.String)
+  case presenceUpdate(_: Swift.String, _: Swift.Int)
+  case update
+}
+public enum PEXContactHandlerActions {
+  case contactAction(WMSPackage.ContactActionType, WMSPackage.ContactDetails)
+  case onContactMessage([Swift.String : Any])
+  case onStatusChange(WMSPackage.ContactStatusDetail)
+  case onContactUpdate(WMSPackage.ContactUpdateType, [Swift.String : WMSPackage.ContactDetails], Swift.Int)
+  case contactCheckSum(Swift.String?)
+}
+public enum PEXMessageHandlerActions {
+  case onMessage(Any, Swift.Int)
+  case onCustomMessage(Any, Swift.String?)
+  case onCrossProductMessage(WMSPackage.WmsService, Any)
+  case onZohoMessage(WMSPackage.ZohoMessageDetails)
+  case onACSMessage(Swift.String, Any)
+}
+public enum WMSAuthTypes {
+  case DEFAULT
+  case AUTH_TOKEN(_: Swift.String, scope: Swift.String)
+  case PORTAL_USER
+  case SS_TICKET(_: Swift.String)
+  case ANNON_AUTH(_: Swift.String?)
+  case PEX_AUTH(_: Swift.String, bundleid: Swift.String)
+  case PEX_OAUTH(_: Swift.String, _: Swift.Int64, scope: WMSPackage.WMSAuthTypes.Scopes)
+  case RTCP(_: Swift.String, userId: Swift.String)
+  case PEX_OAUTH_WITH_MDM(_: Swift.String, _: Swift.Int64, scope: WMSPackage.WMSAuthTypes.Scopes, mdmToken: Swift.String?)
+  public struct Scopes {
+    public init(oprScope: Swift.String, userScope: Swift.String, orgScope: Swift.String)
+  }
+  public func rawValue() -> Swift.String
+}
+public enum PEXEventStatus {
+  case notSent
+  case sent
+  public static func == (a: WMSPackage.PEXEventStatus, b: WMSPackage.PEXEventStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PEXRequestHTTPMethod {
+  case GET
+  case POST
+  case PUT
+  case DELETE
+  case PATCH
+  public static func == (a: WMSPackage.PEXRequestHTTPMethod, b: WMSPackage.PEXRequestHTTPMethod) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PEXRequestType : Swift.String {
+  case none
+  case progressive
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum PexTaskOperation {
+  case none
+  case progressive
+  case oAuthUpdate
+  public static func == (a: WMSPackage.PexTaskOperation, b: WMSPackage.PexTaskOperation) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PEXTypes {
+  case UN_SUPPORTED
+  case TASK_ENGINE
+  case REQUEST
+  case PROG_REQUEST
+  case PROG_TASK
+  case REAUTH_TASK
+  public static func == (a: WMSPackage.PEXTypes, b: WMSPackage.PEXTypes) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ChatInfoMessageType {
+  case TYPING
+  case IDLE
+  case TEXT_ENTERED
+  public static func == (a: WMSPackage.ChatInfoMessageType, b: WMSPackage.ChatInfoMessageType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PEXTaskTypes {
+  case CHAT_MSG(chatId: Swift.String, msg: Swift.String, msgId: Swift.String?)
+  case ANNON_CHAT_MSG
+  case CREATE_CHAT(recipientUsers: Any, type: Swift.Int, isForced: Swift.Bool, isJoin: Swift.Bool, isPrivate: Swift.Bool, title: Swift.String?)
+  case ADD_MEMBER(chatId: Swift.String, recipientUsers: Any, details: [Swift.String : Any]?)
+  case JOIN_CHAT(chatId: Swift.String, uname: Swift.String)
+  case DELETE_MEMBER(chatId: Swift.String, recipientUsers: Any, details: [Swift.String : Any]?)
+  case QUIT_CHAT(chatId: Swift.String)
+  case CHAT_INFO_MSG(chatId: Swift.String, message: Any?, infoMsgType: WMSPackage.ChatInfoMessageType?)
+  case INFO_MSG
+  case GET_TRANSCRIPTS(chatId: Swift.String, fromTime: Swift.String?, toTime: Swift.String?, limit: Swift.String)
+  case CREATE_GROUP_CHAT(groupId: Swift.String, isPrivate: Swift.Bool)
+  case SET_HISTORY(chatId: Swift.String, enable: Swift.Bool)
+  case GET_INSID
+  case UPDATE_INSID(insId: Swift.String)
+  case REGISTER_UNS(params: [Swift.String : Any]?)
+  case ATTACHANDJOIN(chatId: Swift.String)
+  case CLEAR_UNREAD_CHATS(chatIds: Swift.String)
+  case SENDATTMSG
+  case SETUSERSTATUS
+  case SETPNSLEEP
+  case UNREGISTER_UNS(params: [Swift.String : Any]?)
+  case GET_CONTACT_INFO(params: [Swift.String : Any]?)
+  case BLOCK_CHAT_NOTIFICATIONS(chatId: Swift.String, interval: Swift.String)
+  case SYNC_CONTACTS(params: [Swift.String : Any])
+  case SET_LOCATION(params: [Swift.String : Any]?)
+  case GET_BADGE
+  case ACK_MESSAGE
+  case PEX_REAUTH(params: [Swift.String : Any]?)
+  case SETPNSLEEPV1(insId: Swift.String, timeIntervalInMins: Swift.String)
+  case RTCP_CLIENT_STATS
+}
+public enum WmsService : Swift.RawRepresentable, Swift.Equatable, Swift.Hashable {
+  public enum KnownService : Swift.String {
+    case CRM
+    case MAIL
+    case BUSSINESS
+    case PROJECTS
+    case SHEET
+    case CHAT
+    case WRITER
+    case SHOW
+    case MEETING
+    case PLANNER
+    case NOTEBOOK
+    case FORUMS
+    case ACCOUNTS
+    case EXPLORER
+    case SHARE
+    case CALENDAR
+    case CONTACTS
+    case CREATOR
+    case PEOPLE
+    case CONNECTS
+    case STORE
+    case SEARCH
+    case ZOHOFOX
+    case VIDEOS
+    case WIKI
+    case SUPPORT
+    case CAMPAIGN
+    case DESKTOP
+    case BLOGS
+    case MOBILE
+    case REMOTE_AGENT
+    case TELE_ADAPTER
+    case ISSUE_TRACKER
+    case SERVICE_DESK
+    case OPMANAGER
+    case CONTACTS_MANAGER
+    case PULSE
+    case INTRANET
+    case SITE24_7
+    case REACH
+    case AC_SERVER
+    case LIVEDESK
+    case JABBER_SERVER
+    case PAYMENTS
+    case PIE
+    case HOME
+    case SCANNER
+    case TABLES
+    case DESK
+    case EXPENSE
+    case RTCP
+    case WHITEBOARD
+    case WORKDRIVE
+    case BACKSTAGE
+    case SOLO
+    case MAPS
+    case THEFUSEAPP
+    case NILA
+    case ARATTAI
+    case WEBINAR
+    case IOT
+    case TRAINERCENTRAL
+    case CAMPFIRE
+    case VANI
+    case ZOHO_SPEND
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  case known(WMSPackage.WmsService.KnownService)
+  case custom(Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+}
+extension WMSPackage.WmsService {
+  public static var CRM: WMSPackage.WmsService {
+    get
+  }
+  public static var MAIL: WMSPackage.WmsService {
+    get
+  }
+  public static var BUSSINESS: WMSPackage.WmsService {
+    get
+  }
+  public static var PROJECTS: WMSPackage.WmsService {
+    get
+  }
+  public static var SHEET: WMSPackage.WmsService {
+    get
+  }
+  public static var CHAT: WMSPackage.WmsService {
+    get
+  }
+  public static var WRITER: WMSPackage.WmsService {
+    get
+  }
+  public static var SHOW: WMSPackage.WmsService {
+    get
+  }
+  public static var MEETING: WMSPackage.WmsService {
+    get
+  }
+  public static var PLANNER: WMSPackage.WmsService {
+    get
+  }
+  public static var NOTEBOOK: WMSPackage.WmsService {
+    get
+  }
+  public static var FORUMS: WMSPackage.WmsService {
+    get
+  }
+  public static var ACCOUNTS: WMSPackage.WmsService {
+    get
+  }
+  public static var EXPLORER: WMSPackage.WmsService {
+    get
+  }
+  public static var SHARE: WMSPackage.WmsService {
+    get
+  }
+  public static var CALENDAR: WMSPackage.WmsService {
+    get
+  }
+  public static var CONTACTS: WMSPackage.WmsService {
+    get
+  }
+  public static var CREATOR: WMSPackage.WmsService {
+    get
+  }
+  public static var PEOPLE: WMSPackage.WmsService {
+    get
+  }
+  public static var CONNECTS: WMSPackage.WmsService {
+    get
+  }
+  public static var STORE: WMSPackage.WmsService {
+    get
+  }
+  public static var SEARCH: WMSPackage.WmsService {
+    get
+  }
+  public static var ZOHOFOX: WMSPackage.WmsService {
+    get
+  }
+  public static var VIDEOS: WMSPackage.WmsService {
+    get
+  }
+  public static var WIKI: WMSPackage.WmsService {
+    get
+  }
+  public static var SUPPORT: WMSPackage.WmsService {
+    get
+  }
+  public static var CAMPAIGN: WMSPackage.WmsService {
+    get
+  }
+  public static var DESKTOP: WMSPackage.WmsService {
+    get
+  }
+  public static var BLOGS: WMSPackage.WmsService {
+    get
+  }
+  public static var MOBILE: WMSPackage.WmsService {
+    get
+  }
+  public static var REMOTE_AGENT: WMSPackage.WmsService {
+    get
+  }
+  public static var TELE_ADAPTER: WMSPackage.WmsService {
+    get
+  }
+  public static var ISSUE_TRACKER: WMSPackage.WmsService {
+    get
+  }
+  public static var SERVICE_DESK: WMSPackage.WmsService {
+    get
+  }
+  public static var OPMANAGER: WMSPackage.WmsService {
+    get
+  }
+  public static var CONTACTS_MANAGER: WMSPackage.WmsService {
+    get
+  }
+  public static var PULSE: WMSPackage.WmsService {
+    get
+  }
+  public static var INTRANET: WMSPackage.WmsService {
+    get
+  }
+  public static var SITE24_7: WMSPackage.WmsService {
+    get
+  }
+  public static var REACH: WMSPackage.WmsService {
+    get
+  }
+  public static var AC_SERVER: WMSPackage.WmsService {
+    get
+  }
+  public static var LIVEDESK: WMSPackage.WmsService {
+    get
+  }
+  public static var JABBER_SERVER: WMSPackage.WmsService {
+    get
+  }
+  public static var PAYMENTS: WMSPackage.WmsService {
+    get
+  }
+  public static var PIE: WMSPackage.WmsService {
+    get
+  }
+  public static var HOME: WMSPackage.WmsService {
+    get
+  }
+  public static var SCANNER: WMSPackage.WmsService {
+    get
+  }
+  public static var TABLES: WMSPackage.WmsService {
+    get
+  }
+  public static var DESK: WMSPackage.WmsService {
+    get
+  }
+  public static var EXPENSE: WMSPackage.WmsService {
+    get
+  }
+  public static var RTCP: WMSPackage.WmsService {
+    get
+  }
+  public static var WHITEBOARD: WMSPackage.WmsService {
+    get
+  }
+  public static var WORKDRIVE: WMSPackage.WmsService {
+    get
+  }
+  public static var BACKSTAGE: WMSPackage.WmsService {
+    get
+  }
+  public static var SOLO: WMSPackage.WmsService {
+    get
+  }
+  public static var MAPS: WMSPackage.WmsService {
+    get
+  }
+  public static var THEFUSEAPP: WMSPackage.WmsService {
+    get
+  }
+  public static var NILA: WMSPackage.WmsService {
+    get
+  }
+  public static var ARATTAI: WMSPackage.WmsService {
+    get
+  }
+  public static var WEBINAR: WMSPackage.WmsService {
+    get
+  }
+  public static var IOT: WMSPackage.WmsService {
+    get
+  }
+  public static var TRAINERCENTRAL: WMSPackage.WmsService {
+    get
+  }
+  public static var CAMPFIRE: WMSPackage.WmsService {
+    get
+  }
+  public static var VANI: WMSPackage.WmsService {
+    get
+  }
+  public static var ZOHO_SPEND: WMSPackage.WmsService {
+    get
+  }
+}
+@objc @available(macOS 10.15, iOS 13.0, watchOS 6.0, tvOS 13.0, *)
+public class ZNativeEngine : ObjectiveC.NSObject, Starscream.Engine, Foundation.URLSessionDataDelegate, Foundation.URLSessionWebSocketDelegate {
+  public init(certPinner: (any Starscream.CertificatePinning)? = nil)
+  @objc deinit
+  public func register(delegate: any Starscream.EngineDelegate)
+  public func start(request: Foundation.URLRequest)
+  public func stop(closeCode: Swift.UInt16)
+  public func forceStop()
+  public func reset()
+  public func write(string: Swift.String, completion: (() -> ())?)
+  public func write(string: Swift.String, completion: ((_ error: (any Swift.Error)?) -> ())?)
+  public func write(data: Foundation.Data, opcode: Starscream.FrameOpCode, completion: (() -> ())?)
+  @objc public func urlSession(_ session: Foundation.URLSession, webSocketTask: Foundation.URLSessionWebSocketTask, didOpenWithProtocol protocol: Swift.String?)
+  @objc public func urlSession(_ session: Foundation.URLSession, webSocketTask: Foundation.URLSessionWebSocketTask, didCloseWith closeCode: Foundation.URLSessionWebSocketTask.CloseCode, reason: Foundation.Data?)
+  @objc public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
+  @objc public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping @Sendable (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
+}
+@_inheritsConvenienceInitializers public class ZWebSocket : Starscream.WebSocket {
+  convenience public init(request: Foundation.URLRequest, certPinner: (any Starscream.CertificatePinning)? = FoundationSecurity(), compressionHandler: (any Starscream.CompressionHandler)? = nil, useCustomEngine: Swift.Bool = false, useFoundationTransportFlow: Swift.Bool = false)
+  override public init(request: Foundation.URLRequest, engine: any Starscream.Engine)
+  @objc deinit
+}
+extension WMSPackage.ZWebSocket {
+  @available(macOS 10.15, iOS 13.0, watchOS 6.0, tvOS 13.0, *)
+  public func write(string: Swift.String, completion: ((_ error: (any Swift.Error)?) -> ())?)
+}
+extension WMSPackage.WMSPEXWebSocketTrafficDirection : Swift.Equatable {}
+extension WMSPackage.WMSPEXWebSocketTrafficDirection : Swift.Hashable {}
+extension WMSPackage.ApplicationState : Swift.Equatable {}
+extension WMSPackage.ApplicationState : Swift.Hashable {}
+extension WMSPackage.MemberActionType : Swift.Equatable {}
+extension WMSPackage.MemberActionType : Swift.Hashable {}
+extension WMSPackage.MessageTypes : Swift.Equatable {}
+extension WMSPackage.MessageTypes : Swift.Hashable {}
+extension WMSPackage.PexChatHandlerType : Swift.Equatable {}
+extension WMSPackage.PexChatHandlerType : Swift.Hashable {}
+extension WMSPackage.PexChatHandlerType : Swift.RawRepresentable {}
+extension WMSPackage.TypingState : Swift.Equatable {}
+extension WMSPackage.TypingState : Swift.Hashable {}
+extension WMSPackage.ContactActionType : Swift.Equatable {}
+extension WMSPackage.ContactActionType : Swift.Hashable {}
+extension WMSPackage.PEXEventStatus : Swift.Equatable {}
+extension WMSPackage.PEXEventStatus : Swift.Hashable {}
+extension WMSPackage.PEXRequestHTTPMethod : Swift.Equatable {}
+extension WMSPackage.PEXRequestHTTPMethod : Swift.Hashable {}
+extension WMSPackage.PEXRequestType : Swift.Equatable {}
+extension WMSPackage.PEXRequestType : Swift.Hashable {}
+extension WMSPackage.PEXRequestType : Swift.RawRepresentable {}
+extension WMSPackage.PexTaskOperation : Swift.Equatable {}
+extension WMSPackage.PexTaskOperation : Swift.Hashable {}
+extension WMSPackage.PEXTypes : Swift.Equatable {}
+extension WMSPackage.PEXTypes : Swift.Hashable {}
+extension WMSPackage.ChatInfoMessageType : Swift.Equatable {}
+extension WMSPackage.ChatInfoMessageType : Swift.Hashable {}
+extension WMSPackage.WmsService.KnownService : Swift.Equatable {}
+extension WMSPackage.WmsService.KnownService : Swift.Hashable {}
+extension WMSPackage.WmsService.KnownService : Swift.RawRepresentable {}

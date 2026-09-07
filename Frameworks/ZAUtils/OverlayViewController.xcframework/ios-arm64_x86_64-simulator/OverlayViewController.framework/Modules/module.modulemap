@@ -1,0 +1,3 @@
+framework module OverlayViewController {
+  header "OverlayViewController-Swift.h"
+}

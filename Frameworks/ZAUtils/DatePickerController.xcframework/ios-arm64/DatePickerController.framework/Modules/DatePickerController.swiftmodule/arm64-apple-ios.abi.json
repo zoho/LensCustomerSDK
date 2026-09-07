@@ -1,0 +1,1968 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "DatePickerController",
+    "printedName": "DatePickerController",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "DatePickerController",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DatePickerController"
+      },
+      {
+        "kind": "Import",
+        "name": "OverlayViewController",
+        "printedName": "OverlayViewController",
+        "declKind": "Import",
+        "moduleName": "DatePickerController"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit_Extention",
+        "printedName": "UIKit_Extention",
+        "declKind": "Import",
+        "moduleName": "DatePickerController"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DatePickerController",
+        "printedName": "DatePickerController",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "Mode",
+            "printedName": "Mode",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "time",
+                "printedName": "time",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(DatePickerController.DatePickerController.Mode.Type) -> DatePickerController.DatePickerController.Mode",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Mode",
+                        "printedName": "DatePickerController.DatePickerController.Mode",
+                        "usr": "s:20DatePickerControllerAAC4ModeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "DatePickerController.DatePickerController.Mode.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Mode",
+                            "printedName": "DatePickerController.DatePickerController.Mode",
+                            "usr": "s:20DatePickerControllerAAC4ModeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:20DatePickerControllerAAC4ModeO4timeyA2DmF",
+                "mangledName": "$s20DatePickerControllerAAC4ModeO4timeyA2DmF",
+                "moduleName": "DatePickerController"
+              },
+              {
+                "kind": "Var",
+                "name": "date",
+                "printedName": "date",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(DatePickerController.DatePickerController.Mode.Type) -> DatePickerController.DatePickerController.Mode",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Mode",
+                        "printedName": "DatePickerController.DatePickerController.Mode",
+                        "usr": "s:20DatePickerControllerAAC4ModeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "DatePickerController.DatePickerController.Mode.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Mode",
+                            "printedName": "DatePickerController.DatePickerController.Mode",
+                            "usr": "s:20DatePickerControllerAAC4ModeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:20DatePickerControllerAAC4ModeO4dateyA2DmF",
+                "mangledName": "$s20DatePickerControllerAAC4ModeO4dateyA2DmF",
+                "moduleName": "DatePickerController"
+              },
+              {
+                "kind": "Var",
+                "name": "dateAndTime",
+                "printedName": "dateAndTime",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(DatePickerController.DatePickerController.Mode.Type) -> DatePickerController.DatePickerController.Mode",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Mode",
+                        "printedName": "DatePickerController.DatePickerController.Mode",
+                        "usr": "s:20DatePickerControllerAAC4ModeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "DatePickerController.DatePickerController.Mode.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Mode",
+                            "printedName": "DatePickerController.DatePickerController.Mode",
+                            "usr": "s:20DatePickerControllerAAC4ModeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:20DatePickerControllerAAC4ModeO11dateAndTimeyA2DmF",
+                "mangledName": "$s20DatePickerControllerAAC4ModeO11dateAndTimeyA2DmF",
+                "moduleName": "DatePickerController"
+              },
+              {
+                "kind": "Var",
+                "name": "originMode",
+                "printedName": "originMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Mode",
+                    "printedName": "UIKit.UIDatePicker.Mode",
+                    "usr": "c:@E@UIDatePickerMode"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:20DatePickerControllerAAC4ModeO06originD0So06UIDatebD0Vvp",
+                "mangledName": "$s20DatePickerControllerAAC4ModeO06originD0So06UIDatebD0Vvp",
+                "moduleName": "DatePickerController",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Mode",
+                        "printedName": "UIKit.UIDatePicker.Mode",
+                        "usr": "c:@E@UIDatePickerMode"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:20DatePickerControllerAAC4ModeO06originD0So06UIDatebD0Vvg",
+                    "mangledName": "$s20DatePickerControllerAAC4ModeO06originD0So06UIDatebD0Vvg",
+                    "moduleName": "DatePickerController",
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "DatePickerController.DatePickerController.Mode?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Mode",
+                        "printedName": "DatePickerController.DatePickerController.Mode",
+                        "usr": "s:20DatePickerControllerAAC4ModeO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:20DatePickerControllerAAC4ModeO8rawValueADSgSi_tcfc",
+                "mangledName": "$s20DatePickerControllerAAC4ModeO8rawValueADSgSi_tcfc",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:20DatePickerControllerAAC4ModeO8rawValueSivp",
+                "mangledName": "$s20DatePickerControllerAAC4ModeO8rawValueSivp",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:20DatePickerControllerAAC4ModeO8rawValueSivg",
+                    "mangledName": "$s20DatePickerControllerAAC4ModeO8rawValueSivg",
+                    "moduleName": "DatePickerController",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:20DatePickerControllerAAC4ModeO",
+            "mangledName": "$s20DatePickerControllerAAC4ModeO",
+            "moduleName": "DatePickerController",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "enumRawTypeName": "Int",
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "tintColor",
+            "printedName": "tintColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20DatePickerControllerAAC9tintColorSo7UIColorCvp",
+            "mangledName": "$s20DatePickerControllerAAC9tintColorSo7UIColorCvp",
+            "moduleName": "DatePickerController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC9tintColorSo7UIColorCvg",
+                "mangledName": "$s20DatePickerControllerAAC9tintColorSo7UIColorCvg",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC9tintColorSo7UIColorCvs",
+                "mangledName": "$s20DatePickerControllerAAC9tintColorSo7UIColorCvs",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC9tintColorSo7UIColorCvM",
+                "mangledName": "$s20DatePickerControllerAAC9tintColorSo7UIColorCvM",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "titleColor",
+            "printedName": "titleColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20DatePickerControllerAAC10titleColorSo7UIColorCvp",
+            "mangledName": "$s20DatePickerControllerAAC10titleColorSo7UIColorCvp",
+            "moduleName": "DatePickerController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC10titleColorSo7UIColorCvg",
+                "mangledName": "$s20DatePickerControllerAAC10titleColorSo7UIColorCvg",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC10titleColorSo7UIColorCvs",
+                "mangledName": "$s20DatePickerControllerAAC10titleColorSo7UIColorCvs",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC10titleColorSo7UIColorCvM",
+                "mangledName": "$s20DatePickerControllerAAC10titleColorSo7UIColorCvM",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "datePickerBacgroundColor",
+            "printedName": "datePickerBacgroundColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20DatePickerControllerAAC04dateB14BacgroundColorSo7UIColorCvp",
+            "mangledName": "$s20DatePickerControllerAAC04dateB14BacgroundColorSo7UIColorCvp",
+            "moduleName": "DatePickerController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC04dateB14BacgroundColorSo7UIColorCvg",
+                "mangledName": "$s20DatePickerControllerAAC04dateB14BacgroundColorSo7UIColorCvg",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC04dateB14BacgroundColorSo7UIColorCvs",
+                "mangledName": "$s20DatePickerControllerAAC04dateB14BacgroundColorSo7UIColorCvs",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC04dateB14BacgroundColorSo7UIColorCvM",
+                "mangledName": "$s20DatePickerControllerAAC04dateB14BacgroundColorSo7UIColorCvM",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "barBackgroundColor",
+            "printedName": "barBackgroundColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20DatePickerControllerAAC18barBackgroundColorSo7UIColorCvp",
+            "mangledName": "$s20DatePickerControllerAAC18barBackgroundColorSo7UIColorCvp",
+            "moduleName": "DatePickerController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC18barBackgroundColorSo7UIColorCvg",
+                "mangledName": "$s20DatePickerControllerAAC18barBackgroundColorSo7UIColorCvg",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC18barBackgroundColorSo7UIColorCvs",
+                "mangledName": "$s20DatePickerControllerAAC18barBackgroundColorSo7UIColorCvs",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC18barBackgroundColorSo7UIColorCvM",
+                "mangledName": "$s20DatePickerControllerAAC18barBackgroundColorSo7UIColorCvM",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "timeZone",
+            "printedName": "timeZone",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TimeZone",
+                "printedName": "Foundation.TimeZone",
+                "usr": "s:10Foundation8TimeZoneV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20DatePickerControllerAAC8timeZone10Foundation04TimeE0Vvp",
+            "mangledName": "$s20DatePickerControllerAAC8timeZone10Foundation04TimeE0Vvp",
+            "moduleName": "DatePickerController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TimeZone",
+                    "printedName": "Foundation.TimeZone",
+                    "usr": "s:10Foundation8TimeZoneV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC8timeZone10Foundation04TimeE0Vvg",
+                "mangledName": "$s20DatePickerControllerAAC8timeZone10Foundation04TimeE0Vvg",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TimeZone",
+                    "printedName": "Foundation.TimeZone",
+                    "usr": "s:10Foundation8TimeZoneV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC8timeZone10Foundation04TimeE0Vvs",
+                "mangledName": "$s20DatePickerControllerAAC8timeZone10Foundation04TimeE0Vvs",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC8timeZone10Foundation04TimeE0VvM",
+                "mangledName": "$s20DatePickerControllerAAC8timeZone10Foundation04TimeE0VvM",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "datePickerMode",
+            "printedName": "datePickerMode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Mode",
+                "printedName": "DatePickerController.DatePickerController.Mode",
+                "usr": "s:20DatePickerControllerAAC4ModeO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20DatePickerControllerAAC04dateB4ModeAB0E0Ovp",
+            "mangledName": "$s20DatePickerControllerAAC04dateB4ModeAB0E0Ovp",
+            "moduleName": "DatePickerController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Mode",
+                    "printedName": "DatePickerController.DatePickerController.Mode",
+                    "usr": "s:20DatePickerControllerAAC4ModeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC04dateB4ModeAB0E0Ovg",
+                "mangledName": "$s20DatePickerControllerAAC04dateB4ModeAB0E0Ovg",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Mode",
+                    "printedName": "DatePickerController.DatePickerController.Mode",
+                    "usr": "s:20DatePickerControllerAAC4ModeO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC04dateB4ModeAB0E0Ovs",
+                "mangledName": "$s20DatePickerControllerAAC04dateB4ModeAB0E0Ovs",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC04dateB4ModeAB0E0OvM",
+                "mangledName": "$s20DatePickerControllerAAC04dateB4ModeAB0E0OvM",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "minimumDate",
+            "printedName": "minimumDate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20DatePickerControllerAAC07minimumA010Foundation0A0VSgvp",
+            "mangledName": "$s20DatePickerControllerAAC07minimumA010Foundation0A0VSgvp",
+            "moduleName": "DatePickerController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC07minimumA010Foundation0A0VSgvg",
+                "mangledName": "$s20DatePickerControllerAAC07minimumA010Foundation0A0VSgvg",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC07minimumA010Foundation0A0VSgvs",
+                "mangledName": "$s20DatePickerControllerAAC07minimumA010Foundation0A0VSgvs",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC07minimumA010Foundation0A0VSgvM",
+                "mangledName": "$s20DatePickerControllerAAC07minimumA010Foundation0A0VSgvM",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "maximumDate",
+            "printedName": "maximumDate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20DatePickerControllerAAC07maximumA010Foundation0A0VSgvp",
+            "mangledName": "$s20DatePickerControllerAAC07maximumA010Foundation0A0VSgvp",
+            "moduleName": "DatePickerController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC07maximumA010Foundation0A0VSgvg",
+                "mangledName": "$s20DatePickerControllerAAC07maximumA010Foundation0A0VSgvg",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC07maximumA010Foundation0A0VSgvs",
+                "mangledName": "$s20DatePickerControllerAAC07maximumA010Foundation0A0VSgvs",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC07maximumA010Foundation0A0VSgvM",
+                "mangledName": "$s20DatePickerControllerAAC07maximumA010Foundation0A0VSgvM",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "completionHandler",
+            "printedName": "completionHandler",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Foundation.Date?, Foundation.Date?) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Foundation.Date?, Foundation.Date?) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Foundation.Date?, Foundation.Date?)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Foundation.Date?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Date",
+                                "printedName": "Foundation.Date",
+                                "usr": "s:10Foundation4DateV"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Foundation.Date?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Date",
+                                "printedName": "Foundation.Date",
+                                "usr": "s:10Foundation4DateV"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20DatePickerControllerAAC17completionHandlery10Foundation0A0VSg_AGtcSgvp",
+            "mangledName": "$s20DatePickerControllerAAC17completionHandlery10Foundation0A0VSg_AGtcSgvp",
+            "moduleName": "DatePickerController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Foundation.Date?, Foundation.Date?) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Foundation.Date?, Foundation.Date?) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(Foundation.Date?, Foundation.Date?)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Optional",
+                                "printedName": "Foundation.Date?",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Date",
+                                    "printedName": "Foundation.Date",
+                                    "usr": "s:10Foundation4DateV"
+                                  }
+                                ],
+                                "usr": "s:Sq"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Optional",
+                                "printedName": "Foundation.Date?",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Date",
+                                    "printedName": "Foundation.Date",
+                                    "usr": "s:10Foundation4DateV"
+                                  }
+                                ],
+                                "usr": "s:Sq"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC17completionHandlery10Foundation0A0VSg_AGtcSgvg",
+                "mangledName": "$s20DatePickerControllerAAC17completionHandlery10Foundation0A0VSg_AGtcSgvg",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Foundation.Date?, Foundation.Date?) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Foundation.Date?, Foundation.Date?) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(Foundation.Date?, Foundation.Date?)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Optional",
+                                "printedName": "Foundation.Date?",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Date",
+                                    "printedName": "Foundation.Date",
+                                    "usr": "s:10Foundation4DateV"
+                                  }
+                                ],
+                                "usr": "s:Sq"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Optional",
+                                "printedName": "Foundation.Date?",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Date",
+                                    "printedName": "Foundation.Date",
+                                    "usr": "s:10Foundation4DateV"
+                                  }
+                                ],
+                                "usr": "s:Sq"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC17completionHandlery10Foundation0A0VSg_AGtcSgvs",
+                "mangledName": "$s20DatePickerControllerAAC17completionHandlery10Foundation0A0VSg_AGtcSgvs",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC17completionHandlery10Foundation0A0VSg_AGtcSgvM",
+                "mangledName": "$s20DatePickerControllerAAC17completionHandlery10Foundation0A0VSg_AGtcSgvM",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "defaultDate",
+            "printedName": "defaultDate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20DatePickerControllerAAC07defaultA010Foundation0A0VSgvp",
+            "mangledName": "$s20DatePickerControllerAAC07defaultA010Foundation0A0VSgvp",
+            "moduleName": "DatePickerController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC07defaultA010Foundation0A0VSgvg",
+                "mangledName": "$s20DatePickerControllerAAC07defaultA010Foundation0A0VSgvg",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC07defaultA010Foundation0A0VSgvs",
+                "mangledName": "$s20DatePickerControllerAAC07defaultA010Foundation0A0VSgvs",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC07defaultA010Foundation0A0VSgvM",
+                "mangledName": "$s20DatePickerControllerAAC07defaultA010Foundation0A0VSgvM",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "minuteInterval",
+            "printedName": "minuteInterval",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:20DatePickerControllerAAC14minuteIntervalSivp",
+            "mangledName": "$s20DatePickerControllerAAC14minuteIntervalSivp",
+            "moduleName": "DatePickerController",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC14minuteIntervalSivg",
+                "mangledName": "$s20DatePickerControllerAAC14minuteIntervalSivg",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC14minuteIntervalSivs",
+                "mangledName": "$s20DatePickerControllerAAC14minuteIntervalSivs",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:20DatePickerControllerAAC14minuteIntervalSivM",
+                "mangledName": "$s20DatePickerControllerAAC14minuteIntervalSivM",
+                "moduleName": "DatePickerController",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "viewDidLoad",
+            "printedName": "viewDidLoad()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@DatePickerController@objc(cs)DatePickerController(im)viewDidLoad",
+            "mangledName": "$s20DatePickerControllerAAC11viewDidLoadyyF",
+            "moduleName": "DatePickerController",
+            "overriding": true,
+            "objc_name": "viewDidLoad",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewWillAppear",
+            "printedName": "viewWillAppear(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@DatePickerController@objc(cs)DatePickerController(im)viewWillAppear:",
+            "mangledName": "$s20DatePickerControllerAAC14viewWillAppearyySbF",
+            "moduleName": "DatePickerController",
+            "overriding": true,
+            "objc_name": "viewWillAppear:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewDidLayoutSubviews",
+            "printedName": "viewDidLayoutSubviews()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@DatePickerController@objc(cs)DatePickerController(im)viewDidLayoutSubviews",
+            "mangledName": "$s20DatePickerControllerAAC21viewDidLayoutSubviewsyyF",
+            "moduleName": "DatePickerController",
+            "overriding": true,
+            "objc_name": "viewDidLayoutSubviews",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(nibName:bundle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DatePickerController",
+                "printedName": "DatePickerController.DatePickerController",
+                "usr": "c:@M@DatePickerController@objc(cs)DatePickerController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Bundle?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@DatePickerController@objc(cs)DatePickerController(im)initWithNibName:bundle:",
+            "mangledName": "$s20DatePickerControllerAAC7nibName6bundleABSSSg_So8NSBundleCSgtcfc",
+            "moduleName": "DatePickerController",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithNibName:bundle:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "DatePickerController.DatePickerController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DatePickerController",
+                    "printedName": "DatePickerController.DatePickerController",
+                    "usr": "c:@M@DatePickerController@objc(cs)DatePickerController"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@DatePickerController@objc(cs)DatePickerController(im)initWithCoder:",
+            "mangledName": "$s20DatePickerControllerAAC5coderABSgSo7NSCoderC_tcfc",
+            "moduleName": "DatePickerController",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "presentDateControllerAsPopOver",
+            "printedName": "presentDateControllerAsPopOver(controller:fromView:popoverDirection:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIPopoverArrowDirection",
+                "printedName": "UIKit.UIPopoverArrowDirection",
+                "usr": "c:@E@UIPopoverArrowDirection"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:20DatePickerControllerAAC07presentaC9AsPopOver10controller8fromView16popoverDirectionySo06UIViewC0CSg_So0M0CSo014UIPopoverArrowL0VtF",
+            "mangledName": "$s20DatePickerControllerAAC07presentaC9AsPopOver10controller8fromView16popoverDirectionySo06UIViewC0CSg_So0M0CSo014UIPopoverArrowL0VtF",
+            "moduleName": "DatePickerController",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "popoverPresentationControllerDidDismissPopover",
+            "printedName": "popoverPresentationControllerDidDismissPopover(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIPopoverPresentationController",
+                "printedName": "UIKit.UIPopoverPresentationController",
+                "usr": "c:objc(cs)UIPopoverPresentationController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@DatePickerController@objc(cs)DatePickerController(im)popoverPresentationControllerDidDismissPopover:",
+            "mangledName": "$s20DatePickerControllerAAC019popoverPresentationC17DidDismissPopoveryySo09UIPopovereC0CF",
+            "moduleName": "DatePickerController",
+            "overriding": true,
+            "objc_name": "popoverPresentationControllerDidDismissPopover:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@DatePickerController@objc(cs)DatePickerController",
+        "mangledName": "$s20DatePickerControllerAAC",
+        "moduleName": "DatePickerController",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:@M@OverlayViewController@objc(cs)OverlayViewController",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "OverlayViewController.OverlayViewController",
+          "Orientation.OrientationHelperController",
+          "UIKit.UIViewController",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "OrientationChanger",
+            "printedName": "OrientationChanger",
+            "usr": "s:11Orientation0A7ChangerP",
+            "mangledName": "$s11Orientation0A7ChangerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "OrientationHandler",
+            "printedName": "OrientationHandler",
+            "usr": "s:11Orientation0A7HandlerP",
+            "mangledName": "$s11Orientation0A7HandlerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DatePickerController",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/DatePickerController\/DatePickerController.swift",
+      "kind": "StringLiteral",
+      "offset": 520,
+      "length": 25,
+      "value": "\"date_picker_common_done\""
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/DatePickerController\/DatePickerController.swift",
+      "kind": "StringLiteral",
+      "offset": 583,
+      "length": 27,
+      "value": "\"date_picker_common_cancel\""
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/DatePickerController\/DatePickerController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 750,
+      "length": 4,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/DatePickerController\/DatePickerController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 755,
+      "length": 11,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/DatePickerController\/DatePickerController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1383,
+      "length": 8,
+      "value": "0xD6D6D6"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/DatePickerController\/DatePickerController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1818,
+      "length": 1,
+      "value": "1"
+    }
+  ]
+}

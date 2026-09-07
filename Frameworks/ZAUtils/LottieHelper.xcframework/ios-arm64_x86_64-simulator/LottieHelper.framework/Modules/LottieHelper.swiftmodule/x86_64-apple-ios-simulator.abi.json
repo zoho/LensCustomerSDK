@@ -1,0 +1,1908 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "LottieHelper",
+    "printedName": "LottieHelper",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "LottieHelper",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "LottieHelper",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Lottie",
+        "printedName": "Lottie",
+        "declKind": "Import",
+        "moduleName": "LottieHelper"
+      },
+      {
+        "kind": "Import",
+        "name": "SnapKit_Extention",
+        "printedName": "SnapKit_Extention",
+        "declKind": "Import",
+        "moduleName": "LottieHelper"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LottieMessageView",
+        "printedName": "LottieMessageView",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "lottieContainer",
+            "printedName": "lottieContainer",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "UIKit.UIView?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@LottieHelper@objc(cs)LottieMessageView(py)lottieContainer",
+            "mangledName": "$s12LottieHelper0A11MessageViewC15lottieContainerSo6UIViewCSgvp",
+            "moduleName": "LottieHelper",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl",
+              "IBOutlet",
+              "ObjC"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@LottieHelper@objc(cs)LottieMessageView(im)lottieContainer",
+                "mangledName": "$s12LottieHelper0A11MessageViewC15lottieContainerSo6UIViewCSgvg",
+                "moduleName": "LottieHelper",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UIView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@LottieHelper@objc(cs)LottieMessageView(im)setLottieContainer:",
+                "mangledName": "$s12LottieHelper0A11MessageViewC15lottieContainerSo6UIViewCSgvs",
+                "moduleName": "LottieHelper",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12LottieHelper0A11MessageViewC15lottieContainerSo6UIViewCSgvM",
+                "mangledName": "$s12LottieHelper0A11MessageViewC15lottieContainerSo6UIViewCSgvM",
+                "moduleName": "LottieHelper",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "lottieContainerHeight",
+            "printedName": "lottieContainerHeight",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "UIKit.NSLayoutConstraint?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@LottieHelper@objc(cs)LottieMessageView(py)lottieContainerHeight",
+            "mangledName": "$s12LottieHelper0A11MessageViewC21lottieContainerHeightSo18NSLayoutConstraintCSgvp",
+            "moduleName": "LottieHelper",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl",
+              "IBOutlet",
+              "ObjC"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.NSLayoutConstraint?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSLayoutConstraint",
+                        "printedName": "UIKit.NSLayoutConstraint",
+                        "usr": "c:objc(cs)NSLayoutConstraint"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@LottieHelper@objc(cs)LottieMessageView(im)lottieContainerHeight",
+                "mangledName": "$s12LottieHelper0A11MessageViewC21lottieContainerHeightSo18NSLayoutConstraintCSgvg",
+                "moduleName": "LottieHelper",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.NSLayoutConstraint?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSLayoutConstraint",
+                        "printedName": "UIKit.NSLayoutConstraint",
+                        "usr": "c:objc(cs)NSLayoutConstraint"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@LottieHelper@objc(cs)LottieMessageView(im)setLottieContainerHeight:",
+                "mangledName": "$s12LottieHelper0A11MessageViewC21lottieContainerHeightSo18NSLayoutConstraintCSgvs",
+                "moduleName": "LottieHelper",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12LottieHelper0A11MessageViewC21lottieContainerHeightSo18NSLayoutConstraintCSgvM",
+                "mangledName": "$s12LottieHelper0A11MessageViewC21lottieContainerHeightSo18NSLayoutConstraintCSgvM",
+                "moduleName": "LottieHelper",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "lottieContainerWidth",
+            "printedName": "lottieContainerWidth",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "UIKit.NSLayoutConstraint?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@LottieHelper@objc(cs)LottieMessageView(py)lottieContainerWidth",
+            "mangledName": "$s12LottieHelper0A11MessageViewC20lottieContainerWidthSo18NSLayoutConstraintCSgvp",
+            "moduleName": "LottieHelper",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl",
+              "IBOutlet",
+              "ObjC"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.NSLayoutConstraint?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSLayoutConstraint",
+                        "printedName": "UIKit.NSLayoutConstraint",
+                        "usr": "c:objc(cs)NSLayoutConstraint"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@LottieHelper@objc(cs)LottieMessageView(im)lottieContainerWidth",
+                "mangledName": "$s12LottieHelper0A11MessageViewC20lottieContainerWidthSo18NSLayoutConstraintCSgvg",
+                "moduleName": "LottieHelper",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.NSLayoutConstraint?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSLayoutConstraint",
+                        "printedName": "UIKit.NSLayoutConstraint",
+                        "usr": "c:objc(cs)NSLayoutConstraint"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@LottieHelper@objc(cs)LottieMessageView(im)setLottieContainerWidth:",
+                "mangledName": "$s12LottieHelper0A11MessageViewC20lottieContainerWidthSo18NSLayoutConstraintCSgvs",
+                "moduleName": "LottieHelper",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12LottieHelper0A11MessageViewC20lottieContainerWidthSo18NSLayoutConstraintCSgvM",
+                "mangledName": "$s12LottieHelper0A11MessageViewC20lottieContainerWidthSo18NSLayoutConstraintCSgvM",
+                "moduleName": "LottieHelper",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "messageLabel",
+            "printedName": "messageLabel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "UIKit.UILabel?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@LottieHelper@objc(cs)LottieMessageView(py)messageLabel",
+            "mangledName": "$s12LottieHelper0A11MessageViewC12messageLabelSo7UILabelCSgvp",
+            "moduleName": "LottieHelper",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl",
+              "IBOutlet",
+              "ObjC"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UILabel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@LottieHelper@objc(cs)LottieMessageView(im)messageLabel",
+                "mangledName": "$s12LottieHelper0A11MessageViewC12messageLabelSo7UILabelCSgvg",
+                "moduleName": "LottieHelper",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UILabel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@LottieHelper@objc(cs)LottieMessageView(im)setMessageLabel:",
+                "mangledName": "$s12LottieHelper0A11MessageViewC12messageLabelSo7UILabelCSgvs",
+                "moduleName": "LottieHelper",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12LottieHelper0A11MessageViewC12messageLabelSo7UILabelCSgvM",
+                "mangledName": "$s12LottieHelper0A11MessageViewC12messageLabelSo7UILabelCSgvM",
+                "moduleName": "LottieHelper",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "actionButton",
+            "printedName": "actionButton",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "UIKit.UIButton?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@LottieHelper@objc(cs)LottieMessageView(py)actionButton",
+            "mangledName": "$s12LottieHelper0A11MessageViewC12actionButtonSo8UIButtonCSgvp",
+            "moduleName": "LottieHelper",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl",
+              "IBOutlet",
+              "ObjC"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UIButton?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIButton",
+                        "printedName": "UIKit.UIButton",
+                        "usr": "c:objc(cs)UIButton"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@LottieHelper@objc(cs)LottieMessageView(im)actionButton",
+                "mangledName": "$s12LottieHelper0A11MessageViewC12actionButtonSo8UIButtonCSgvg",
+                "moduleName": "LottieHelper",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UIButton?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIButton",
+                        "printedName": "UIKit.UIButton",
+                        "usr": "c:objc(cs)UIButton"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@LottieHelper@objc(cs)LottieMessageView(im)setActionButton:",
+                "mangledName": "$s12LottieHelper0A11MessageViewC12actionButtonSo8UIButtonCSgvs",
+                "moduleName": "LottieHelper",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12LottieHelper0A11MessageViewC12actionButtonSo8UIButtonCSgvM",
+                "mangledName": "$s12LottieHelper0A11MessageViewC12actionButtonSo8UIButtonCSgvM",
+                "moduleName": "LottieHelper",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "lottie",
+            "printedName": "lottie",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Lottie.LottieAnimationView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LottieAnimationView",
+                    "printedName": "Lottie.LottieAnimationView",
+                    "usr": "c:@M@Lottie@objc(cs)LottieAnimationView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12LottieHelper0A11MessageViewC6lottie0A00a9AnimationD0CSgvp",
+            "mangledName": "$s12LottieHelper0A11MessageViewC6lottie0A00a9AnimationD0CSgvp",
+            "moduleName": "LottieHelper",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Lottie.LottieAnimationView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LottieAnimationView",
+                        "printedName": "Lottie.LottieAnimationView",
+                        "usr": "c:@M@Lottie@objc(cs)LottieAnimationView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12LottieHelper0A11MessageViewC6lottie0A00a9AnimationD0CSgvg",
+                "mangledName": "$s12LottieHelper0A11MessageViewC6lottie0A00a9AnimationD0CSgvg",
+                "moduleName": "LottieHelper",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "instance",
+            "printedName": "instance(lottieType:messageLabelConfig:customView:isPromotionNeeded:promotionIconImage:actionButtonConfiguration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LottieMessageView",
+                "printedName": "LottieHelper.LottieMessageView",
+                "usr": "c:@M@LottieHelper@objc(cs)LottieMessageView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LottieType",
+                "printedName": "any LottieHelper.LottieType",
+                "usr": "s:12LottieHelper0A4TypeP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((UIKit.UILabel) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UIKit.UILabel) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((UIKit.UIButton) -> (() -> ())?)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UIKit.UIButton) -> (() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "(() -> ())?",
+                        "children": [
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "() -> ()",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              }
+                            ]
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIButton",
+                        "printedName": "UIKit.UIButton",
+                        "usr": "c:objc(cs)UIButton"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12LottieHelper0A11MessageViewC8instance10lottieType18messageLabelConfig06customD017isPromotionNeeded18promotionIconImage25actionButtonConfigurationAcA0aG0_p_ySo7UILabelCcSgSo6UIViewCSgSbSgSo7UIImageCSgyycSgSo8UIButtonCcSgtFZ",
+            "mangledName": "$s12LottieHelper0A11MessageViewC8instance10lottieType18messageLabelConfig06customD017isPromotionNeeded18promotionIconImage25actionButtonConfigurationAcA0aG0_p_ySo7UILabelCcSgSo6UIViewCSgSbSgSo7UIImageCSgyycSgSo8UIButtonCcSgtFZ",
+            "moduleName": "LottieHelper",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "instance",
+            "printedName": "instance(with:withCustomMessage:lineCount:customView:isPromotionNeeded:promotionIconImage:actionButtonConfiguration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LottieMessageView",
+                "printedName": "LottieHelper.LottieMessageView",
+                "usr": "c:@M@LottieHelper@objc(cs)LottieMessageView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LottieType",
+                "printedName": "any LottieHelper.LottieType",
+                "usr": "s:12LottieHelper0A4TypeP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((UIKit.UIButton) -> (() -> ())?)?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UIKit.UIButton) -> (() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "(() -> ())?",
+                        "children": [
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "() -> ()",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Void",
+                                "printedName": "()"
+                              }
+                            ]
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIButton",
+                        "printedName": "UIKit.UIButton",
+                        "usr": "c:objc(cs)UIButton"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12LottieHelper0A11MessageViewC8instance4with0f6CustomC09lineCount06customD017isPromotionNeeded18promotionIconImage25actionButtonConfigurationAcA0A4Type_p_SSSgSiSgSo6UIViewCSgSbSgSo7UIImageCSgyycSgSo8UIButtonCcSgtFZ",
+            "mangledName": "$s12LottieHelper0A11MessageViewC8instance4with0f6CustomC09lineCount06customD017isPromotionNeeded18promotionIconImage25actionButtonConfigurationAcA0A4Type_p_SSSgSiSgSo6UIViewCSgSbSgSo7UIImageCSgyycSgSo8UIButtonCcSgtFZ",
+            "moduleName": "LottieHelper",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "layoutSubviews",
+            "printedName": "layoutSubviews()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@LottieHelper@objc(cs)LottieMessageView(im)layoutSubviews",
+            "mangledName": "$s12LottieHelper0A11MessageViewC14layoutSubviewsyyF",
+            "moduleName": "LottieHelper",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "layoutSubviews",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "awakeFromNib",
+            "printedName": "awakeFromNib()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@LottieHelper@objc(cs)LottieMessageView(im)awakeFromNib",
+            "mangledName": "$s12LottieHelper0A11MessageViewC12awakeFromNibyyF",
+            "moduleName": "LottieHelper",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "awakeFromNib",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(frame:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LottieMessageView",
+                "printedName": "LottieHelper.LottieMessageView",
+                "usr": "c:@M@LottieHelper@objc(cs)LottieMessageView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@LottieHelper@objc(cs)LottieMessageView(im)initWithFrame:",
+            "mangledName": "$s12LottieHelper0A11MessageViewC5frameACSo6CGRectV_tcfc",
+            "moduleName": "LottieHelper",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithFrame:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "LottieHelper.LottieMessageView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LottieMessageView",
+                    "printedName": "LottieHelper.LottieMessageView",
+                    "usr": "c:@M@LottieHelper@objc(cs)LottieMessageView"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@LottieHelper@objc(cs)LottieMessageView(im)initWithCoder:",
+            "mangledName": "$s12LottieHelper0A11MessageViewC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "LottieHelper",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@LottieHelper@objc(cs)LottieMessageView",
+        "mangledName": "$s12LottieHelper0A11MessageViewC",
+        "moduleName": "LottieHelper",
+        "isOpen": true,
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UIView",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UIView",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConstraintRelatableTarget",
+            "printedName": "ConstraintRelatableTarget",
+            "usr": "s:7SnapKit25ConstraintRelatableTargetP",
+            "mangledName": "$s7SnapKit25ConstraintRelatableTargetP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LayoutConstraintItem",
+            "printedName": "LayoutConstraintItem",
+            "usr": "s:7SnapKit20LayoutConstraintItemP",
+            "mangledName": "$s7SnapKit20LayoutConstraintItemP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "LottieHelper",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "LottieHelper"
+      },
+      {
+        "kind": "Import",
+        "name": "Lottie",
+        "printedName": "Lottie",
+        "declKind": "Import",
+        "moduleName": "LottieHelper"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "LottieHelper",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Lottie",
+        "printedName": "Lottie",
+        "declKind": "Import",
+        "moduleName": "LottieHelper"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "LottieHelper"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LottieType",
+        "printedName": "LottieType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "lottie",
+            "printedName": "lottie",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LottieAnimationView",
+                "printedName": "Lottie.LottieAnimationView",
+                "usr": "c:@M@Lottie@objc(cs)LottieAnimationView"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12LottieHelper0A4TypeP6lottie0A00A13AnimationViewCvp",
+            "mangledName": "$s12LottieHelper0A4TypeP6lottie0A00A13AnimationViewCvp",
+            "moduleName": "LottieHelper",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LottieAnimationView",
+                    "printedName": "Lottie.LottieAnimationView",
+                    "usr": "c:@M@Lottie@objc(cs)LottieAnimationView"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12LottieHelper0A4TypeP6lottie0A00A13AnimationViewCvg",
+                "mangledName": "$s12LottieHelper0A4TypeP6lottie0A00A13AnimationViewCvg",
+                "moduleName": "LottieHelper",
+                "genericSig": "<τ_0_0 where τ_0_0 : LottieHelper.LottieType>",
+                "sugared_genericSig": "<Self where Self : LottieHelper.LottieType>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "size",
+            "printedName": "size",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreFoundation.CGSize?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGSize",
+                    "printedName": "CoreFoundation.CGSize",
+                    "usr": "c:@S@CGSize"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12LottieHelper0A4TypeP4sizeSo6CGSizeVSgvp",
+            "mangledName": "$s12LottieHelper0A4TypeP4sizeSo6CGSizeVSgvp",
+            "moduleName": "LottieHelper",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CoreFoundation.CGSize?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGSize",
+                        "printedName": "CoreFoundation.CGSize",
+                        "usr": "c:@S@CGSize"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12LottieHelper0A4TypeP4sizeSo6CGSizeVSgvg",
+                "mangledName": "$s12LottieHelper0A4TypeP4sizeSo6CGSizeVSgvg",
+                "moduleName": "LottieHelper",
+                "genericSig": "<τ_0_0 where τ_0_0 : LottieHelper.LottieType>",
+                "sugared_genericSig": "<Self where Self : LottieHelper.LottieType>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "message",
+            "printedName": "message",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12LottieHelper0A4TypeP7messageSSSgvp",
+            "mangledName": "$s12LottieHelper0A4TypeP7messageSSSgvp",
+            "moduleName": "LottieHelper",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12LottieHelper0A4TypeP7messageSSSgvg",
+                "mangledName": "$s12LottieHelper0A4TypeP7messageSSSgvg",
+                "moduleName": "LottieHelper",
+                "genericSig": "<τ_0_0 where τ_0_0 : LottieHelper.LottieType>",
+                "sugared_genericSig": "<Self where Self : LottieHelper.LottieType>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "ALL_LOTTIE_ANIMATION_VIEW_TAG",
+            "printedName": "ALL_LOTTIE_ANIMATION_VIEW_TAG",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12LottieHelper0A4TypePAAE29ALL_LOTTIE_ANIMATION_VIEW_TAGSivpZ",
+            "mangledName": "$s12LottieHelper0A4TypePAAE29ALL_LOTTIE_ANIMATION_VIEW_TAGSivpZ",
+            "moduleName": "LottieHelper",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12LottieHelper0A4TypePAAE29ALL_LOTTIE_ANIMATION_VIEW_TAGSivgZ",
+                "mangledName": "$s12LottieHelper0A4TypePAAE29ALL_LOTTIE_ANIMATION_VIEW_TAGSivgZ",
+                "moduleName": "LottieHelper",
+                "genericSig": "<τ_0_0 where τ_0_0 : LottieHelper.LottieType>",
+                "sugared_genericSig": "<Self where Self : LottieHelper.LottieType>",
+                "static": true,
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "getLottie",
+            "printedName": "getLottie(withName:bundle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LottieAnimationView",
+                "printedName": "Lottie.LottieAnimationView",
+                "usr": "c:@M@Lottie@objc(cs)LottieAnimationView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bundle",
+                "printedName": "Foundation.Bundle",
+                "usr": "c:objc(cs)NSBundle"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12LottieHelper0A4TypePAAE03getA08withName6bundle0A00A13AnimationViewCSS_So8NSBundleCtF",
+            "mangledName": "$s12LottieHelper0A4TypePAAE03getA08withName6bundle0A00A13AnimationViewCSS_So8NSBundleCtF",
+            "moduleName": "LottieHelper",
+            "genericSig": "<τ_0_0 where τ_0_0 : LottieHelper.LottieType>",
+            "sugared_genericSig": "<Self where Self : LottieHelper.LottieType>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:12LottieHelper0A4TypeP",
+        "mangledName": "$s12LottieHelper0A4TypeP",
+        "moduleName": "LottieHelper",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UITableView",
+        "printedName": "UITableView",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "addBackgroundLottie",
+            "printedName": "addBackgroundLottie(_:customView:isPromotionNeeded:promotionIconImage:actionButtonConfiguration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LottieType",
+                "printedName": "any LottieHelper.LottieType",
+                "usr": "s:12LottieHelper0A4TypeP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((UIKit.UIButton) -> () -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UIKit.UIButton) -> () -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIButton",
+                        "printedName": "UIKit.UIButton",
+                        "usr": "c:objc(cs)UIButton"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So11UITableViewC12LottieHelperE013addBackgroundC0_06customB017isPromotionNeeded18promotionIconImage25actionButtonConfigurationyAC0C4Type_p_So6UIViewCSgSbSgSo7UIImageCSgyycSo8UIButtonCcSgtF",
+            "mangledName": "$sSo11UITableViewC12LottieHelperE013addBackgroundC0_06customB017isPromotionNeeded18promotionIconImage25actionButtonConfigurationyAC0C4Type_p_So6UIViewCSgSbSgSo7UIImageCSgyycSo8UIButtonCcSgtF",
+            "moduleName": "LottieHelper",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateBackgroundLottie",
+            "printedName": "updateBackgroundLottie()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So11UITableViewC12LottieHelperE016updateBackgroundC0yyF",
+            "mangledName": "$sSo11UITableViewC12LottieHelperE016updateBackgroundC0yyF",
+            "moduleName": "LottieHelper",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "isBackgroundLottiePlaying",
+            "printedName": "isBackgroundLottiePlaying",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So11UITableViewC12LottieHelperE012isBackgroundC7PlayingSbvp",
+            "mangledName": "$sSo11UITableViewC12LottieHelperE012isBackgroundC7PlayingSbvp",
+            "moduleName": "LottieHelper",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So11UITableViewC12LottieHelperE012isBackgroundC7PlayingSbvg",
+                "mangledName": "$sSo11UITableViewC12LottieHelperE012isBackgroundC7PlayingSbvg",
+                "moduleName": "LottieHelper",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "removeBackgroundLottie",
+            "printedName": "removeBackgroundLottie()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So11UITableViewC12LottieHelperE016removeBackgroundC0yyF",
+            "mangledName": "$sSo11UITableViewC12LottieHelperE016removeBackgroundC0yyF",
+            "moduleName": "LottieHelper",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)UITableView",
+        "moduleName": "UIKit",
+        "isOpen": true,
+        "intro_iOS": "2.0",
+        "objc_name": "UITableView",
+        "declAttributes": [
+          "Preconcurrency",
+          "Available",
+          "ObjC",
+          "NonSendable",
+          "Custom",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)UIScrollView",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UIScrollView",
+          "UIKit.UIView",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConstraintRelatableTarget",
+            "printedName": "ConstraintRelatableTarget",
+            "usr": "s:7SnapKit25ConstraintRelatableTargetP",
+            "mangledName": "$s7SnapKit25ConstraintRelatableTargetP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LayoutConstraintItem",
+            "printedName": "LayoutConstraintItem",
+            "usr": "s:7SnapKit20LayoutConstraintItemP",
+            "mangledName": "$s7SnapKit20LayoutConstraintItemP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/LottieHelper\/LottieMessageView\/LottieMessageView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2331,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/LottieHelper\/LottieMessageView\/LottieMessageView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4321,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/LottieHelper\/LottieMessageView\/LottieMessageView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4410,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/LottieHelper\/LottieTableViewHelper.swift",
+      "kind": "BooleanLiteral",
+      "offset": 562,
+      "length": 5,
+      "value": "false"
+    }
+  ]
+}

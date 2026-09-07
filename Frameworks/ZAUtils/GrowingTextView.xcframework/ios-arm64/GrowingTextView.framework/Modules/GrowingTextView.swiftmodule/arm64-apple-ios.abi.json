@@ -1,0 +1,683 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "GrowingTextView",
+    "printedName": "GrowingTextView",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GrowingTextView",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "GrowingTextView"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GrowingTextView",
+        "printedName": "GrowingTextView",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "placeholder",
+            "printedName": "placeholder",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15GrowingTextViewAAC11placeholderSSSgvp",
+            "mangledName": "$s15GrowingTextViewAAC11placeholderSSSgvp",
+            "moduleName": "GrowingTextView",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15GrowingTextViewAAC11placeholderSSSgvg",
+                "mangledName": "$s15GrowingTextViewAAC11placeholderSSSgvg",
+                "moduleName": "GrowingTextView",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15GrowingTextViewAAC11placeholderSSSgvs",
+                "mangledName": "$s15GrowingTextViewAAC11placeholderSSSgvs",
+                "moduleName": "GrowingTextView",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15GrowingTextViewAAC11placeholderSSSgvM",
+                "mangledName": "$s15GrowingTextViewAAC11placeholderSSSgvM",
+                "moduleName": "GrowingTextView",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "placeholderColor",
+            "printedName": "placeholderColor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:15GrowingTextViewAAC16placeholderColorSo7UIColorCvp",
+            "mangledName": "$s15GrowingTextViewAAC16placeholderColorSo7UIColorCvp",
+            "moduleName": "GrowingTextView",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15GrowingTextViewAAC16placeholderColorSo7UIColorCvg",
+                "mangledName": "$s15GrowingTextViewAAC16placeholderColorSo7UIColorCvg",
+                "moduleName": "GrowingTextView",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15GrowingTextViewAAC16placeholderColorSo7UIColorCvs",
+                "mangledName": "$s15GrowingTextViewAAC16placeholderColorSo7UIColorCvs",
+                "moduleName": "GrowingTextView",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:15GrowingTextViewAAC16placeholderColorSo7UIColorCvM",
+                "mangledName": "$s15GrowingTextViewAAC16placeholderColorSo7UIColorCvM",
+                "moduleName": "GrowingTextView",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(frame:textContainer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GrowingTextView",
+                "printedName": "GrowingTextView.GrowingTextView",
+                "usr": "c:@M@GrowingTextView@objc(cs)GrowingTextView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.NSTextContainer?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSTextContainer",
+                    "printedName": "UIKit.NSTextContainer",
+                    "usr": "c:objc(cs)NSTextContainer"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@GrowingTextView@objc(cs)GrowingTextView(im)initWithFrame:textContainer:",
+            "mangledName": "$s15GrowingTextViewAAC5frame13textContainerABSo6CGRectV_So06NSTextF0CSgtcfc",
+            "moduleName": "GrowingTextView",
+            "overriding": true,
+            "objc_name": "initWithFrame:textContainer:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "updatePlaceholderVisibility",
+            "printedName": "updatePlaceholderVisibility()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:15GrowingTextViewAAC27updatePlaceholderVisibilityyyF",
+            "mangledName": "$s15GrowingTextViewAAC27updatePlaceholderVisibilityyyF",
+            "moduleName": "GrowingTextView",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "layoutSubviews",
+            "printedName": "layoutSubviews()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@GrowingTextView@objc(cs)GrowingTextView(im)layoutSubviews",
+            "mangledName": "$s15GrowingTextViewAAC14layoutSubviewsyyF",
+            "moduleName": "GrowingTextView",
+            "overriding": true,
+            "objc_name": "layoutSubviews",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "font",
+            "printedName": "font",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIFont?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIFont",
+                    "printedName": "UIKit.UIFont",
+                    "usr": "c:objc(cs)UIFont"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@GrowingTextView@objc(cs)GrowingTextView(py)font",
+            "mangledName": "$s15GrowingTextViewAAC4fontSo6UIFontCSgvp",
+            "moduleName": "GrowingTextView",
+            "overriding": true,
+            "objc_name": "font",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIFont?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIFont",
+                        "printedName": "UIKit.UIFont",
+                        "usr": "c:objc(cs)UIFont"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@GrowingTextView@objc(cs)GrowingTextView(im)font",
+                "mangledName": "$s15GrowingTextViewAAC4fontSo6UIFontCSgvg",
+                "moduleName": "GrowingTextView",
+                "overriding": true,
+                "implicit": true,
+                "objc_name": "font",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIFont?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIFont",
+                        "printedName": "UIKit.UIFont",
+                        "usr": "c:objc(cs)UIFont"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@GrowingTextView@objc(cs)GrowingTextView(im)setFont:",
+                "mangledName": "$s15GrowingTextViewAAC4fontSo6UIFontCSgvs",
+                "moduleName": "GrowingTextView",
+                "overriding": true,
+                "implicit": true,
+                "objc_name": "setFont:",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "textAlignment",
+            "printedName": "textAlignment",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSTextAlignment",
+                "printedName": "UIKit.NSTextAlignment",
+                "usr": "c:@E@NSTextAlignment"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@GrowingTextView@objc(cs)GrowingTextView(py)textAlignment",
+            "mangledName": "$s15GrowingTextViewAAC13textAlignmentSo06NSTextE0Vvp",
+            "moduleName": "GrowingTextView",
+            "overriding": true,
+            "objc_name": "textAlignment",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSTextAlignment",
+                    "printedName": "UIKit.NSTextAlignment",
+                    "usr": "c:@E@NSTextAlignment"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@GrowingTextView@objc(cs)GrowingTextView(im)textAlignment",
+                "mangledName": "$s15GrowingTextViewAAC13textAlignmentSo06NSTextE0Vvg",
+                "moduleName": "GrowingTextView",
+                "overriding": true,
+                "implicit": true,
+                "objc_name": "textAlignment",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSTextAlignment",
+                    "printedName": "UIKit.NSTextAlignment",
+                    "usr": "c:@E@NSTextAlignment"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@GrowingTextView@objc(cs)GrowingTextView(im)setTextAlignment:",
+                "mangledName": "$s15GrowingTextViewAAC13textAlignmentSo06NSTextE0Vvs",
+                "moduleName": "GrowingTextView",
+                "overriding": true,
+                "implicit": true,
+                "objc_name": "setTextAlignment:",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@GrowingTextView@objc(cs)GrowingTextView",
+        "mangledName": "$s15GrowingTextViewAAC",
+        "moduleName": "GrowingTextView",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UITextView",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UITextView",
+          "UIKit.UIScrollView",
+          "UIKit.UIView",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITextSearching",
+            "printedName": "UITextSearching",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "DocumentIdentifier",
+                "printedName": "DocumentIdentifier",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.AnyHashable?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyHashable",
+                        "printedName": "Swift.AnyHashable",
+                        "usr": "s:s11AnyHashableV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:5UIKit15UITextSearchingP",
+            "mangledName": "$s5UIKit15UITextSearchingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/CustomGrowingTextView\/GrowingTextView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 922,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/CustomGrowingTextView\/GrowingTextView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1266,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/CustomGrowingTextView\/GrowingTextView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1326,
+      "length": 5,
+      "value": "false"
+    }
+  ]
+}

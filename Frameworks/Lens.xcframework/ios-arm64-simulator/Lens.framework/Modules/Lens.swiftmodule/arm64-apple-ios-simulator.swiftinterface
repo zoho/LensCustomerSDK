@@ -1,0 +1,4131 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name Lens
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import ARKit
+import ATIcon
+import AVCommonsCore
+import AVFoundation
+import AVKit
+import AssistChatController
+import AssistSheet
+import AssistTableDataSource
+import CallKit
+import Combine
+import Contacts
+import CoreData
+import CoreGraphics
+import CoreLocation
+import CoreMedia
+import CustomAlert
+import DeveloperToolsSupport
+import DrawerController
+import Foundation
+import Foundation_Extention
+import GrowingTextView
+import KeyBoardChangeObserver
+import Lottie
+import LottieHelper
+import MapKit
+import MeetingClient
+import Network
+import NotificationView
+import Orientation
+import Photos
+import PushKit
+import QuickLook
+import Reachability
+import Reusable
+import SceneKit
+import SnapKit_Extention
+import Swift
+import SwiftUI
+import ToastView
+import UIKit
+import UIKit_Extention
+import UniformTypeIdentifiers
+import UserNotifications
+import UserNotificationsUI
+import VMNetworking
+import Vision
+import WebKit
+import WebRTC
+import ZSocketHandler
+import ZohoLensArLibrary
+import _Concurrency
+import _MapKit_SwiftUI
+import _QuickLook_SwiftUI
+import _StringProcessing
+import _SwiftConcurrencyShims
+import _WebKit_SwiftUI
+import iRTCPMeeting
+extension LensCustomerSessionController : AudioSessionProtocol {
+  @_Concurrency.MainActor @preconcurrency public func didChangeRoute(_ audioDescription: AVFAudio.AVAudioSessionRouteDescription, reason: AVFAudio.AVAudioSession.RouteChangeReason)
+}
+extension LensCustomerSessionController : OtherActionProtocol {
+  @_Concurrency.MainActor @preconcurrency public func onVideoStateChanged(status: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public var isARSupported: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var isCustomerVideoMuted: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public func onTechnicianPerform(action: TechnicianAction)
+  @_Concurrency.MainActor @preconcurrency public func onShareCameraResponse(action: ShareCameraTechAction, participant: Participant?)
+  @_Concurrency.MainActor @preconcurrency public func showLottieView(lottie: LensLottieType, show: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func showNotificationBanner(msg: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func onFreezeSuccess(fromUpstreamer: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func onFreezeFailure()
+  @_Concurrency.MainActor @preconcurrency public func onUnfreezed()
+  @_Concurrency.MainActor @preconcurrency public func didReceiveAnnotation(input: DrawingInput?, isClear: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func onCameraSwitch(isFront: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func prepareCustWaitingRoomIfNeeded()
+  @_Concurrency.MainActor @preconcurrency public func removeCustWaitingView()
+}
+extension LensCustomerSessionController : LensSignallingProtocol {
+  @_Concurrency.MainActor @preconcurrency public func onScanSuccess(scanResult: ScanModel)
+  @_Concurrency.MainActor @preconcurrency public func onScanFailure(scanError: ScanError)
+  @_Concurrency.MainActor @preconcurrency public func conferenceReceived(type: ConferenceType)
+  @_Concurrency.MainActor @preconcurrency public func refreshBottomMenu()
+  @_Concurrency.MainActor @preconcurrency public func onTechnicianPerform(draw shape: DrawingInput.DrawShape)
+  @_Concurrency.MainActor @preconcurrency public func didChangeLensConnectionState(state: AssisLensStates)
+  @_Concurrency.MainActor @preconcurrency public func didChange(_ participant: Participant)
+  @_Concurrency.MainActor @preconcurrency public func renderingView(_ view: UIKit.UIView?)
+  @_Concurrency.MainActor @preconcurrency public func showLocalIceCandidatesFailureAlert()
+  @_Concurrency.MainActor @preconcurrency public func onSessionValidationDone()
+  @_Concurrency.MainActor @preconcurrency public func newFreezeAcknowledgement()
+  @_Concurrency.MainActor @preconcurrency public func freezeToggleForNonARCameraAction()
+  @_Concurrency.MainActor @preconcurrency public func unFreezeFinalAction()
+  @_Concurrency.MainActor @preconcurrency public func showFreezedImage()
+  @_Concurrency.MainActor @preconcurrency public func didChangeARState(tracking state: ARKit.ARCamera.TrackingState)
+  @_Concurrency.MainActor @preconcurrency public func participantRejoined(clientId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func onLocationFetchRequested(by participant: Participant?, proceed: @escaping () -> Swift.Void, fail: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func onLocationFetched(customerLocation: CustomerLocation)
+  @_Concurrency.MainActor @preconcurrency public func onLocationFetchFailed(error: LocationError)
+  @_Concurrency.MainActor @preconcurrency public func dismissPresentedView()
+}
+extension Foundation.URLResponse : Swift.Error {
+}
+public class APIResponseManger {
+  public init(_ delegate: any LensUICommonDelegates, networkingDelegate: (any LensSessionNetworkProtocol)?, eventProtocol: (any LensEventProtocol)?)
+  public func updateNotes(title: Swift.String?, note: Swift.String?, sys_client_id: Swift.String, sessionToken: Swift.String, clientToken: Swift.String)
+  public func fetchNotes(sys_client_id: Swift.String, sessionToken: Swift.String, clientToken: Swift.String, completion: @escaping (Notes?) -> Swift.Void)
+  public func sendFeedbackdata(feedbackData: [Swift.String : Any], sessionToken: Swift.String, clientToken: Swift.String)
+  public func downloadScreenshot(fileId: Swift.Int, sessionToken: Swift.String, clientToken: Swift.String, completion: @escaping (UIKit.UIImage?) -> Swift.Void)
+  public func getRestoredSnapshotImage(fileId: Swift.Int, sessionToken: Swift.String, clientToken: Swift.String, completion: @escaping (UIKit.UIImage?) -> Swift.Void)
+  public func deleteScreenshot(fileId: [Swift.Int], sessionToken: Swift.String, clientToken: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
+  public func deleteAllScreenshot(sys_id: Swift.String, sessionToken: Swift.String, clientToken: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
+  @objc deinit
+}
+public struct SnapshotResult : SnapShotObject {
+  public let snapShotId: Swift.String
+  public let snapShotImage: UIKit.UIImage
+}
+extension APIResponseManger {
+  public func fetchSnapshotRestore(sessionToken: Swift.String, clientToken: Swift.String, completion: @escaping ([SnapShotEntity]?) -> Swift.Void)
+}
+extension APIResponseManger {
+  public func fetchSessionSummary(appName: LensIntegrationType, sessionToken: Swift.String, clientToken: Swift.String, completion: @escaping (SessionSummaryResponse?) -> Swift.Void)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class ATCopyLabel : UIKit.UILabel {
+  @_Concurrency.MainActor @preconcurrency public var copyClipBoardCompletion: ((Swift.String) -> Swift.String)?
+  @_Concurrency.MainActor @preconcurrency public var isCopyToClipBoardEnabled: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public struct TalkSessionSetup {
+  public var sys_id: Swift.String
+}
+public enum AssistAlertActionStyle : CustomAlert.AlertStyleConfiguration {
+  case `default`, destructive, outlined
+  public var backgroundColor: UIKit.UIColor {
+    get
+  }
+  public var titleColor: UIKit.UIColor {
+    get
+  }
+  public var borderColor: UIKit.UIColor? {
+    get
+  }
+  public var borderWidth: CoreFoundation.CGFloat {
+    get
+  }
+  public static func == (a: AssistAlertActionStyle, b: AssistAlertActionStyle) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class AnnotateColorPickViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func presentWithDrawer(controller: UIKit.UIViewController, _ completion: (() -> Swift.Void)? = nil, hideStatusBar: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension AnnotateColorPickViewController : DrawerController.DrawerControllerDelegate {
+  @_Concurrency.MainActor @preconcurrency public func drawerView(for drawerController: DrawerController.DrawerViewController) -> UIKit.UIView
+  @_Concurrency.MainActor @preconcurrency public func drawer(controller: DrawerController.DrawerViewController, movingPosition: DrawerController.DrawerMovingPosition, canChangeDrawerHeight height: CoreFoundation.CGFloat, drawerMinHeight: CoreFoundation.CGFloat, drawerMaximumHeight: CoreFoundation.CGFloat) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func drawer(_ drawer: DrawerController.DrawerViewController, reachedMinHeight height: CoreFoundation.CGFloat, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func drawerMaximumHieght(for drawer: DrawerController.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  @_Concurrency.MainActor @preconcurrency public func drawer(dismissed withAnimation: Swift.Bool)
+}
+extension AnnotateColorPickViewController : UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegateFlowLayout {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+}
+@_hasMissingDesignatedInitializers public class AnnotationNotes : Swift.Codable {
+  required public init(from decoder: any Swift.Decoder) throws
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+@_hasMissingDesignatedInitializers public class AnnotaionNote : Swift.Codable {
+  public var data: Swift.String
+  final public let triggerID: Swift.String
+  required public init(from decoder: any Swift.Decoder) throws
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+@_hasMissingDesignatedInitializers public class AnnotationNotify : Swift.Codable {
+  public var annotationObjectID: Swift.Int?
+  final public let triggerID: Swift.String?
+  public var notes: [AnnotaionNote]?
+  public var title: Swift.String {
+    get
+    set
+  }
+  public var annotationTypeHeading: Swift.String? {
+    get
+  }
+  public var measurementTypeHeading: Swift.String? {
+    get
+  }
+  public func geometricPropertyHeading(_ geometricProperty: ZohoLensArLibrary.GeometricProperty) -> Swift.String
+  public var message: Swift.String? {
+    get
+  }
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+public protocol AnnotationNotesListUIProtocol : AnyObject {
+  func onArSelectionCompleted(isSelected: Swift.Bool, annotationId: Swift.String, triggerId: Swift.String)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class AnnotationNotesListViewController : UIKit.UIViewController, KeyBoardChangeObserver.KeyboardNotificationhandler {
+  @_Concurrency.MainActor @preconcurrency weak public var arNotesListUIDelegate: (any AnnotationNotesListUIProtocol)?
+  @_Concurrency.MainActor @preconcurrency weak public var lensVC: UIKit.UIViewController?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func showEmptyStateView()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension AnnotationNotesListViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, estimatedHeightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, titleForHeaderInSection section: Swift.Int) -> Swift.String?
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplayHeaderView view: UIKit.UIView, forSection section: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func scrollViewWillBeginDragging(_ scrollView: UIKit.UIScrollView)
+}
+extension AnnotationNotesListViewController : AnnotationNotesListUIProtocol {
+  @_Concurrency.MainActor @preconcurrency public func onArSelectionCompleted(isSelected: Swift.Bool, annotationId: Swift.String, triggerId: Swift.String)
+}
+extension ZohoLensArLibrary.LensAnnotationType {
+  public static let measurementIdentifier: Swift.String
+  public var annotationTypeIdentifier: Swift.String? {
+    get
+  }
+}
+public protocol OtherActionProtocol : AnyObject {
+  func onTechnicianPerform(action: TechnicianAction)
+  var isCustomerVideoMuted: Swift.Bool { get }
+  func onShareCameraResponse(action: ShareCameraTechAction, participant: Participant?)
+  func showNotificationBanner(msg: Swift.String)
+  func onVideoStateChanged(status: Swift.Bool)
+  func onFreezeSuccess(fromUpstreamer: Swift.Bool)
+  func onFreezeFailure()
+  func onUnfreezed()
+  func didReceiveAnnotation(input: DrawingInput?, isClear: Swift.Bool)
+  func onCameraSwitch(isFront: Swift.Bool)
+  func prepareCustWaitingRoomIfNeeded()
+  func removeCustWaitingView()
+}
+extension OtherActionProtocol {
+  public func didReceiveAnnotation(input: DrawingInput?, isClear: Swift.Bool)
+}
+public struct AssistMenuTheme {
+  public var cellNormalTheme: AssistCellTheme
+  public var cellDisabledTheme: AssistCellTheme
+  public init()
+}
+public struct AssistCellTheme {
+  public var titleColor: UIKit.UIColor
+  public var iconColor: UIKit.UIColor
+  public var backgroundColor: UIKit.UIColor
+}
+public struct AssistMenu : Swift.Identifiable, Swift.Equatable {
+  public static func == (lhs: AssistMenu, rhs: AssistMenu) -> Swift.Bool
+  public var id: Swift.String
+  public var featureType: Features?
+  public var subFeatureType: SupportedTools?
+  public var icon: any ATIcon
+  public var selectedIcon: (any ATIcon)?
+  public var isEnabled: Swift.Bool
+  public var isNewActivtyAvailable: Swift.Bool
+  public var color: (Swift.Bool, UIKit.UIColor)
+  public init(id: Swift.String, icon: any ATIcon, selectedIcon: (any ATIcon)? = nil, color: (Swift.Bool, UIKit.UIColor)? = (false, UIColor.white), isSelectedInitially: Swift.Bool = false, featureType: Features? = nil, subFeatureType: SupportedTools? = nil)
+  public typealias ID = Swift.String
+}
+extension AssistMenu : AssistSheet.SheetActionData {
+  public var actionTitle: Swift.String {
+    get
+  }
+  public var actionIcon: (any ATIcon)? {
+    get
+  }
+  public var accessoryIcon: (any ATIcon)? {
+    get
+  }
+}
+public protocol AssistMenuCollectionViewDelegate : AnyObject {
+  func didSelectMenu(item: AssistMenu, hidedMenus: [AssistMenu])
+  func didDeSelectMenu(item: AssistMenu, hidedMenus: [AssistMenu])
+  func cellSizeFor(collectionView: UIKit.UICollectionView) -> CoreFoundation.CGSize
+  func assistMenuItems(collectionView: UIKit.UICollectionView) -> [AssistMenu]
+  func assistMenuMoreItem() -> AssistMenu
+  func maxWidth(collectionView: UIKit.UICollectionView) -> CoreFoundation.CGFloat
+  func isSelectedFeatureAvailable(item: AssistMenu, lensObject: Lens?) -> Swift.Bool
+  var lensObject: Lens? { get }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class AssistMenuCollectionView : UIKit.UICollectionView {
+  @_Concurrency.MainActor @preconcurrency weak public var assistMenuDelegate: (any AssistMenuCollectionViewDelegate)? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var isErrorOccured: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public static var theme: AssistMenuTheme
+  @_Concurrency.MainActor @preconcurrency public func has_action_menu(_ menu: AssistMenu) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func awakeFromNib()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect, collectionViewLayout layout: UIKit.UICollectionViewLayout)
+  @_Concurrency.MainActor @preconcurrency public func refreshAllData()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func reloadData()
+  @_Concurrency.MainActor @preconcurrency public func updateSelectionState(menu: AssistMenu, isSelected: Swift.Bool, trigger_select_delegate: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency public func select(menu: AssistMenu, trigger_select_delegate: Swift.Bool = true)
+  @_Concurrency.MainActor @preconcurrency public func deSelect(menu: AssistMenu, trigger_select_delegate: Swift.Bool = true)
+  @_Concurrency.MainActor @preconcurrency public func hasMenuItem(menu: AssistMenu) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func isSelected(menu: AssistMenu) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func set(enabled isEnable: Swift.Bool, for menu: [AssistMenu], isSelected: Swift.Bool = false)
+  @_Concurrency.MainActor @preconcurrency public func isEnabled(menu: AssistMenu) -> Swift.Bool
+  @objc deinit
+}
+extension AssistMenuCollectionView : UIKit.UICollectionViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didSelectItemAt indexPath: Foundation.IndexPath)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, didDeselectItemAt indexPath: Foundation.IndexPath)
+}
+extension AssistMenuCollectionView : UIKit.UICollectionViewDataSource, UIKit.UICollectionViewDelegateFlowLayout {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, layout collectionViewLayout: UIKit.UICollectionViewLayout, sizeForItemAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, numberOfItemsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func collectionView(_ collectionView: UIKit.UICollectionView, cellForItemAt indexPath: Foundation.IndexPath) -> UIKit.UICollectionViewCell
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AudioSessionHandler : ObjectiveC.NSObject {
+  weak public var delegate: (any AudioSessionProtocol)?
+  convenience public init(with delegate: any AudioSessionProtocol)
+  public func set(_ port: AVFAudio.AVAudioSession.PortOverride, completion: @escaping (Swift.Bool) -> ())
+  @objc deinit
+}
+extension AudioSessionHandler : WebRTC.RTCAudioSessionDelegate {
+  @objc dynamic public func audioSessionDidChangeRoute(_ session: WebRTC.RTCAudioSession, reason: AVFAudio.AVAudioSession.RouteChangeReason, previousRoute: AVFAudio.AVAudioSessionRouteDescription)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class BaseParser : ObjectiveC.NSObject {
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc public class ChatData : ObjectiveC.NSObject {
+  final public let chat: Chat
+  final public let chatTime: Foundation.Date
+  public var isShowNameAndDate: Swift.Bool
+  public init(chat: Chat)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class Chat : BaseParser {
+  public var clientID: Foundation.NSNumber?
+  final public let message: Swift.String?
+  public var participant: Participant?
+  final public let date: Foundation.Date
+  public init(with chatMsg: Swift.String?)
+  @objc deinit
+}
+@objc @_Concurrency.MainActor @preconcurrency open class ChatletViewController : UIKit.UIViewController, WebKit.WKDownloadDelegate, WebKit.WKNavigationDelegate, WebKit.WKUIDelegate {
+  @_Concurrency.MainActor @preconcurrency public var new_chat_notification: LensBind<Swift.Bool>
+  @_Concurrency.MainActor @preconcurrency public var chat_open_request: LensBind<Swift.Bool>
+  @_Concurrency.MainActor @preconcurrency public init(connection_param: any CommonConnectionParams)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency public func load_chatlet_if_not_loaded_already()
+  @_Concurrency.MainActor @preconcurrency public func logout_user()
+  @objc deinit
+}
+extension ChatletViewController {
+  @_Concurrency.MainActor @preconcurrency public func send_chat(_ chat_text: Swift.String)
+}
+extension ChatletViewController {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, didCommit navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, didStartProvisionalNavigation navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  @available(iOS 13.0, *)
+  @_Concurrency.MainActor @preconcurrency public func webView(_ webView: WebKit.WKWebView, navigationAction: WebKit.WKNavigationAction, preferences: WebKit.WKWebpagePreferences, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy, WebKit.WKWebpagePreferences) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationResponse: WebKit.WKNavigationResponse, decisionHandler: @escaping (WebKit.WKNavigationResponsePolicy) -> Swift.Void)
+}
+extension ChatletViewController : WebKit.WKScriptMessageHandler {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+}
+extension ChatletViewController {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, createWebViewWith configuration: WebKit.WKWebViewConfiguration, for navigationAction: WebKit.WKNavigationAction, windowFeatures: WebKit.WKWindowFeatures) -> WebKit.WKWebView?
+  @available(iOS 14.5, *)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func webView(_ webView: WebKit.WKWebView, navigationAction: WebKit.WKNavigationAction, didBecome download: WebKit.WKDownload)
+  @available(iOS 14.5, *)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func download(_ download: WebKit.WKDownload, decideDestinationUsing response: Foundation.URLResponse, suggestedFilename: Swift.String, completionHandler: @escaping (Foundation.URL?) -> Swift.Void)
+  @available(iOS 14.5, *)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func downloadDidFinish(_ download: WebKit.WKDownload)
+  @available(iOS 14.5, *)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func download(_ download: WebKit.WKDownload, didFailWithError error: any Swift.Error, resumeData: Foundation.Data?)
+}
+extension SwiftUICore.Color {
+  public static let lensPrimary: SwiftUICore.Color
+  public static let lensBackground: SwiftUICore.Color
+  public static let lensDarkBackground: SwiftUICore.Color
+  public static let lensCloseRed: SwiftUICore.Color
+  public static let lensDarkRed: SwiftUICore.Color
+  public static let lensRecommendedDefaultBackground: SwiftUICore.Color
+  public static let lensSublabelOrange: SwiftUICore.Color
+  public static let lensSubheadingTextGray: SwiftUICore.Color
+  public static let bannerAction: SwiftUICore.Color
+  public static let lensSystemBackground: SwiftUICore.Color
+  public static let lensSecondarySystemBackground: SwiftUICore.Color
+  public static let lensBottomSheetBG: SwiftUICore.Color
+}
+public enum SessionValidationResponse {
+  case validTechnician(any TechnicianSessionParams)
+  case validCustomer(any CustomerSessionParams)
+  case error((any Swift.Error)?)
+  public enum SessionValidationError : Swift.Error {
+    case invalidKey
+    case invalidLicence
+    case sessionExpired
+    case unknowError
+    case internalError
+    case invalidOrgAcess
+    case differentOrg
+    case appUpgrade
+    case customer_already_active_in_session
+    case parameterMissing
+    case unauthorized
+    case userActionNotAllowed
+    case clientAlreadyActiveInSession
+    case linkExpired
+    case invalidClientFlag
+    public static func == (a: SessionValidationResponse.SessionValidationError, b: SessionValidationResponse.SessionValidationError) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public enum Edition : Swift.String {
+  case FREE, STANDARD, PROFESSIONAL
+  public var features: [Features] {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum Features : Swift.String {
+  case INSTANT_CHAT, USER_MANAGEMENT, ZOOM, ACTION_LOG_VIEWER, SESSION_NOTES, CAPTURE_SCREEN_SHOT, SMS_INVITATION, ANNOTATION_TECHNICIAN, FREEZE_CAMERA_STREAM, DEPARTMENT, OFFLINE_RECORDING, ADVANCED_CHAT, SECONDARY_TECHNICIAN, FLASH, RECORDING, AR_NOTES, LIVE_TEXT, QR_BARCODE, SHARE_CAMERA, EXTERNAL_TECHNICIAN, AR_MEASURE, ANNOTATION_CUSTOMER, WORKFLOW
+  case ANNOTATION
+  case SESSION_DETAILS
+  case NETWORK_PERFORMANCE
+  case KNOWLEDGE_BASE
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum AssisLensStates {
+  case socketConnected, localPeerHandShakeInitated, localPeerHandShakeDone, remotePeerHandshakeInitated, remotePeerHandshakeDone, connectionCompleted, localIceCandidatesConnectionFailure, remoteIceCandidatesConnectionFailure
+  case disconnected((any Swift.Error)?)
+  public enum AssistLensDisconnectState : Swift.Error {
+    case noInternet, customerEndSession, technicianEndSession, timeout, invalid_client, invalid_key, session_expired, localPeerHandShakeError, remotePeerHandShakeError, serverEndedSession, openedInDifferentLocation, customer_already_active_in_session, secTechEntryRejected
+    case conferenceJoinFailure, conferenceInitError, conferenceInitHostNotAvailable, internalRtcpFailure
+    public static func == (a: AssisLensStates.AssistLensDisconnectState, b: AssisLensStates.AssistLensDisconnectState) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+public enum SessionValidation : Swift.String {
+  case valid_session, invalid_session, invalid_client, session_expired, duplicate_client
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ConnectionProcessType : Swift.String {
+  case REINIT, INIT, RESTART
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum TechnicianAction : Swift.String {
+  case snapshot_taken, video_pause, video_play, audio_muted, audio_unmuted, record_start, record_stop
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum RecodingStatus : Swift.String {
+  case ENABLED, STORAGE_FULL, NOT_CONFIGURED, NOT_AVAILABLE
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum RecordingControlMode : Swift.String {
+  case FULL_SESSION_REC, IN_SESSION_REC
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum CustomerAction : Swift.String {
+  case muteAudio
+  case muteVideo
+  case unmuteAudio
+  case unmuteVideo
+  case appResignActive
+  case appBecomeActive
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ConferenceType : Swift.String {
+  case smart_conference
+  case peer_to_peer
+  case rtcp
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum LensOpreationError : Swift.Error {
+  case featureNotExist, messageNotSent, scopeError, dataCorrupted
+  public static func == (a: LensOpreationError, b: LensOpreationError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ShareCameraActionType : Swift.String {
+  case request
+  case response
+  case videoOff
+  case cameraStreamChange
+  case cameraStreamRemoved
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ShareCameraTechAction : Swift.String {
+  case cameraStreamChange, cameraStreamRemoved, RequestApproved, RequestRejected, RequestWaiting
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum SnapShotAction : Swift.String, Swift.Codable {
+  case freeze, freeze_request, unfreeze, unfreeze_request
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ScanType : Swift.String {
+  case OCR
+  case QR
+  case BARCODE
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum RoleEnum : Swift.String {
+  case Customer
+  case PrimaryTechnician
+  case SecondaryTechnician
+  case ExternalTechnician
+  public func isCustomer() -> Swift.Bool
+  public func isTechnician() -> Swift.Bool
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ScanRequestType : Swift.Equatable {
+  case LOCAL
+  case REMOTE(trigger_id: Swift.String)
+  public static func == (a: ScanRequestType, b: ScanRequestType) -> Swift.Bool
+}
+public enum ScanState {
+  case REQUESTED(scanType: ScanType, scanRequestType: ScanRequestType)
+  case COMPLETED(model: ScanModel)
+  case ERROR(scanError: ScanError)
+}
+public enum ScanModel {
+  case OCR(ocrText: Swift.String, confidence: Swift.String)
+  case QR(qrText: Swift.String)
+  case BARCODE(barcodeText: Swift.String)
+}
+public struct ScanError : Swift.Error {
+  public let scanType: ScanType
+  public let scanRequestType: ScanRequestType
+  public let errorMessage: Swift.String
+}
+public enum MonitorActionEnum : Swift.String {
+  case OPEN, UPDATE, SELECT, DESELECT, DELETE, TURN_ON, TURN_OFF, ARROW, PENCIL, RECTANGLE, ELLIPSE, POINTER_3D, TYPE_ERROR, MEASUREMENT_LINE, MEASUREMENT_POLYGON, MEASUREMENT_CIRCLE
+  public static func convertLensAnnotationType(typeString: Swift.String) -> MonitorActionEnum
+  public static func convertLensAnnotationType(type: ZohoLensArLibrary.LensAnnotationType) -> MonitorActionEnum
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum MonitorFeatureEnum {
+  case AR_NOTES, OCR, QR, FLASH, ANNOTATE(triggerId: Swift.String), MEASUREMENT
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum AnnotationObjectType : Swift.String {
+  case pencil, ellipse, rectangle, arrow, pointer
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ClearAction : Swift.String {
+  case clear_ar, clearall_ar, clearall_2d, clearall, add_ar
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum AnnotationSelection : Swift.String {
+  case ar_selected, ar_deselected
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum AR_TrackingState {
+  case normal, excessiveMotion, initializing, relocalizing, insufficientFeatures, notAvailable
+  public static func == (a: AR_TrackingState, b: AR_TrackingState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum SupportedTools : Swift.String {
+  case ARROW, PENCIL, RECTANGLE, ELLIPSE, AR_NOTES, POINTER, FLASH, SELECT, LINE_MEASUREMENT, POLYGON_MEASUREMENT, CIRCLE_MEASUREMENT, HD_SNAPSHOT
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum MexType : Swift.Int32 {
+  case PIN_PAGE_DETAILS
+  case PIN_USER_VIDEO_RECEIVE
+  public init?(rawValue: Swift.Int32)
+  public typealias RawValue = Swift.Int32
+  public var rawValue: Swift.Int32 {
+    get
+  }
+}
+public enum SessionJoinParamType {
+  case sessionKeyBased(_: Swift.String)
+  case digestBased(_: Swift.String)
+  case sessionTokenBased(_: Swift.String)
+}
+public enum LensIntegrationType : Swift.String {
+  case LENS
+  case DESK
+  case RADAR
+  case SDP
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct SessionSummaryResponse : Swift.Codable {
+  public let representation: SessionSummaryRepresentation
+  public let resourceType: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SessionSummaryRepresentation : Swift.Codable {
+  public let map: SessionSummaryMap
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SessionSummaryMap : Swift.Codable {
+  public let sessionKey: Swift.String
+  public let sessionTopic: Swift.String
+  public let startTime: Swift.String
+  public let endTime: Swift.String?
+  public let duration: Swift.String?
+  public let sessionNotes: Swift.String?
+  public let screenshotDownloadLink: Swift.String?
+  public let recordingDownloadLink: Swift.String?
+  public let chatDownloadLink: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension SessionSummaryMap {
+  public var parsedStartDate: Foundation.Date? {
+    get
+  }
+  public var parsedEndDate: Foundation.Date? {
+    get
+  }
+}
+public struct SnapshotRestore : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum CustomerLocation {
+  case local(location: _LocationEssentials.CLLocation, placemark: CoreLocation.CLPlacemark?)
+  case remote(location: _LocationEssentials.CLLocation, address: Swift.String?)
+}
+extension Foundation.Data {
+  public var utf8String: Swift.String? {
+    get
+  }
+  public var asciiString: Swift.String? {
+    get
+  }
+  public var isoLatin1: Swift.String? {
+    get
+  }
+  public var jsonData: JSON? {
+    get
+  }
+  public func getInt64(startIndex: Swift.Int) -> Swift.Int64
+  public func getInt32(startIndex: Swift.Int) -> Swift.Int32
+  public func getInt16(startIndex: Swift.Int) -> Swift.Int16
+  public func getInt8(startIndex: Swift.Int) -> Swift.Int8
+  public func getString(startIndex: Swift.Int, length: Swift.Int) -> Swift.String?
+  public func get<T>(startIndex: Swift.Int, _: T.Type) -> T
+  public mutating func appendValue<T>(_ value: T)
+  public mutating func appendValue(_ value: Swift.String)
+}
+extension Swift.Dictionary {
+  public var jsonData: Foundation.Data? {
+    get
+  }
+}
+extension Foundation.Bundle {
+  public static var lensBundle: Foundation.Bundle {
+    get
+  }
+  public static func lensImage(named name: Swift.String) -> UIKit.UIImage?
+}
+extension Swift.String {
+  public static let EMPTY: Swift.String
+  public static let SPACE: Swift.String
+  public static let ZERO: Swift.String
+  public static let ONE: Swift.String
+  public static let MINUS_ONE: Swift.String!
+  public static let UNDERSCORE: Swift.String!
+  public static let HASH: Swift.String!
+  public static let NEW_LINE: Swift.String!
+  public static let LESS_THAN: Swift.String!
+  public static let GREATER_THAN: Swift.String!
+  public static let EQUALS: Swift.String!
+  public static let PLUS: Swift.String!
+  public static let HYPHEN: Swift.String!
+  public static let COMMA: Swift.String!
+  public static let COLON: Swift.String!
+  public static let SEMI_COLON: Swift.String!
+  public static let AMPERSAND: Swift.String!
+  public static let ASTERISK: Swift.String!
+  public static let DOT: Swift.String!
+  public static let SINGLE_QUOTE: Swift.String
+  public static let DOUBLE_QUOTE: Swift.String
+  public static let FORWARD_SLASH: Swift.String
+  public static let BACK_SLASH: Swift.String
+  public static let HTML_AMPERSAND_1: Swift.String
+  public static let HTML_AMPERSAND_2: Swift.String
+  public static let HTML_LESS_THAN: Swift.String
+  public static let HTML_GREATER_THAN: Swift.String
+  public static let HTML_SINGLE_QUOTE_1: Swift.String
+  public static let HTML_SINGLE_QUOTE_2: Swift.String
+  public static let HTML_DOUBLE_QUOTE: Swift.String
+  public static let HTML_NEW_LINE: Swift.String
+  public static let BOOL_TRUE: Swift.String
+  public static let BOOL_FALSE: Swift.String
+  public static let ZST_ERROR_PLACEHOLDER: Swift.String
+  public func jsonStringParse() -> Any?
+  public func heightWithConstrainedWidth(width: CoreFoundation.CGFloat, font: UIKit.UIFont) -> CoreFoundation.CGFloat
+}
+public class DrawingShapes {
+  public static var arrowHeight: CoreFoundation.CGFloat {
+    get
+  }
+  final public let superShapeLayer: QuartzCore.CAShapeLayer
+  weak public var view: UIKit.UIView?
+  public init(with view: UIKit.UIView, within rect: CoreFoundation.CGRect)
+  public func draw(with drawParm: DrawingInput, lineDashPattern: [Foundation.NSNumber]? = nil)
+  public func clearPath(for id: Swift.String)
+  public func clearAll()
+  @objc deinit
+}
+public struct DrawingInput {
+  public enum DrawShape : Swift.String {
+    case ellipse, pencil, rectangle, arrow, pointer
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var id: Swift.String
+  public var triggerId: Swift.String
+  public var annotationType: DrawingInput.DrawShape
+  public var storkeColor: UIKit.UIColor
+  public var start: CoreFoundation.CGPoint!
+  public var end: CoreFoundation.CGPoint!
+  public var arrowNumber: Swift.Int
+  public var fillColor: UIKit.UIColor
+  public var fadeOutDelay: Swift.Int
+  public var name: Swift.String
+  public var isLocal: Swift.Bool
+  public enum FreeStyleState : Swift.String {
+    case mouse_move, mouse_up
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var freeStyleState: DrawingInput.FreeStyleState?
+  public var size: CoreFoundation.CGSize {
+    get
+  }
+  public var frame: CoreFoundation.CGRect {
+    get
+    set
+  }
+  public var line_width: CoreFoundation.CGFloat
+}
+public struct EvidenceItem : Swift.Equatable {
+  public var evidenceId: Swift.String
+  public var zfsFileID: Swift.String
+  public var title: Swift.String
+  public var description: Swift.String?
+  public var imageURL: Swift.String?
+  public var attachment: UIKit.UIImage?
+  public static func == (lhs: EvidenceItem, rhs: EvidenceItem) -> Swift.Bool
+}
+public enum ExternalApp : Swift.String {
+  case camera, photo, microphone
+  public enum Permission : Swift.String {
+    case denied, restricted, authorized
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class EventTracker {
+  final public var events: [[Swift.String : Any]] {
+    get
+    set
+  }
+  final public var clientRole: Swift.Int
+  final public func trackEvent(feature: any EventTypeProtocol)
+  @objc deinit
+}
+public protocol EventTypeProtocol {
+  var description: Swift.String { get }
+}
+public enum InviteTechnicianAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  public var description: Swift.String {
+    get
+  }
+  case open
+  case internalOpen
+  case internalInvite
+  case internalCopyLink
+  case internalShareLink
+  case externalOpen
+  case externalInvite
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [InviteTechnicianAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [InviteTechnicianAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum InviteCustomerAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case sendSMS
+  case sendEmail
+  case shareLink
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [InviteCustomerAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [InviteCustomerAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum SnapshotAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case open
+  case upload
+  case delete
+  case download
+  case deleteSelected
+  case downloadSelected
+  case freeze
+  case unFreeze
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [SnapshotAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [SnapshotAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum HDSnapshotAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case upload
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [HDSnapshotAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [HDSnapshotAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ChatAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case open
+  case sendMessage
+  case sendFile
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [ChatAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [ChatAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum NotesAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case open
+  case update
+  case afterSessionOpen
+  case afterSessionUpdate
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [NotesAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [NotesAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum AnnotateAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case open
+  case arrow2D
+  case pencil2D
+  case ellipse2D
+  case rectangle2D
+  case arrow3D
+  case pencil3D
+  case ellipse3D
+  case rectangle3D
+  case partialMeasure
+  case fullMeasure
+  case colorPickerCode
+  case clear
+  case clearAll
+  case undo
+  case planeEnable
+  case planeDisable
+  case featurePointsEnable
+  case featurePointsDisable
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [AnnotateAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [AnnotateAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum MeasurementAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case open
+  case line
+  case polygon
+  case circle
+  case typeError
+  public var description: Swift.String {
+    get
+  }
+  public static func convertLensAnnotationType(type: ZohoLensArLibrary.LensAnnotationType) -> MeasurementAction
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [MeasurementAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [MeasurementAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ARNotesAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case open
+  case update
+  case delete
+  case selectedWithNotes
+  case selectedWithoutNotes
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [ARNotesAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [ARNotesAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum VideoStateAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case pause
+  case play
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [VideoStateAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [VideoStateAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum AudioStateAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case mute
+  case unmute
+  case source
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [AudioStateAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [AudioStateAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum RecordAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case fullSession
+  case inSessionStart
+  case inSessionStop
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [RecordAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [RecordAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ShareCameraAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case open
+  case shareAutoApproved
+  case shareRequested
+  case shareApproved
+  case shareDeclined
+  case stop
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [ShareCameraAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [ShareCameraAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum OCRAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case open
+  case scan
+  case copy
+  case sendViaChat
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [OCRAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [OCRAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum QRAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case scan
+  case copy
+  case sendViaChat
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [QRAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [QRAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ZoomAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case open
+  case zoomIn
+  case zoomOut
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [ZoomAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [ZoomAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum MagnifyAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case open
+  case magnifyIn
+  case magnifyOut
+  case sliderDrag
+  case viewboxDrag
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [MagnifyAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [MagnifyAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ToggleScreenModeAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case fullScreen
+  case restoreScreen
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [ToggleScreenModeAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [ToggleScreenModeAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum SessionDetailsAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case open
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [SessionDetailsAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [SessionDetailsAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum FlashAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case turnOff
+  case turnOn
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [FlashAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [FlashAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum MoreAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case open
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [MoreAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [MoreAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum HDAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case enable
+  case disable
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [HDAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [HDAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum SwapCameraAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case front
+  case rear
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [SwapCameraAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [SwapCameraAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum FeedbackAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case open
+  case send
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [FeedbackAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [FeedbackAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum ARModeAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case supported
+  case notSupported
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [ARModeAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [ARModeAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum GeoLocationAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case requestLocation
+  case shareLocation
+  case viewInMaps
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [GeoLocationAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [GeoLocationAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum WorkflowEventAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case open
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [WorkflowEventAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [WorkflowEventAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum NetworkPerformanceEventAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case networkPerformanceOpened
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [NetworkPerformanceEventAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [NetworkPerformanceEventAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum SmartBotEventAction : Swift.String, Swift.CaseIterable, EventTypeProtocol {
+  case smartBotOpened
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [SmartBotEventAction]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [SmartBotEventAction] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum LensFlashError : Swift.String, Swift.Error {
+  case unable_to_turn_on_the_flash
+  case unable_to_turn_off_the_flash
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct LensFlashNotification {
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class LensFlashCoordinator : ObjectiveC.NSObject {
+  public typealias FlashChangeNotification = (LensFlashNotification) -> ()
+  public func reset_upstreamer_flash_info()
+  public func update_upstreamer_flash_info(is_supported: Swift.Bool, is_On: Swift.Bool, notify_needed: Swift.Bool)
+  public func force_stop_the_flashlight()
+  public func current_device_has_flash(is_front_camera: Swift.Bool = false) -> Swift.Bool
+  public func current_device_flash_status() -> Swift.Bool
+  public func current_device_flash_toggle(trigger_Id: Foundation.NSNumber?)
+  @objc deinit
+}
+public class FloatingButtonManager {
+  public init(in view: UIKit.UIView, closure: @escaping () -> Swift.Void)
+  public func remove()
+  public func repositionFloatingButton()
+  @objc deinit
+}
+public struct FloatingMenuItem : Swift.Equatable {
+  public static func == (lhs: FloatingMenuItem, rhs: FloatingMenuItem) -> Swift.Bool
+  public var id: Swift.String
+  public var icon: (any ATIcon)?
+  public var isSelectionNeeded: Swift.Bool
+  public var handler: ((_ menuItem: FloatingMenuItem, _ isSelected: Swift.Bool) -> ())?
+  public var iconSize: CoreFoundation.CGFloat?
+  public init(id: Swift.String, icon: (any ATIcon)?, handler: ((_ menuItem: FloatingMenuItem, _ isSelected: Swift.Bool) -> ())?)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class FloatingMenu : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public var collapseIcon: (any ATIcon)? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var revielIcon: (any ATIcon)? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var floatingMenuToggleButton: UIKit.UIButton?
+  @_Concurrency.MainActor @preconcurrency public var floatingMenuItems: [FloatingMenuItem]
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var isHidden: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor @preconcurrency public init(collapse cicon: any ATIcon, reviel ricon: any ATIcon)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class FreezeHandler : FreezeProtocol {
+  public func onFreezeCancelled(id: Swift.String)
+  public func onFreezeCompleted(id: Swift.String)
+  public func onFreezeStart(id: Swift.String)
+  public func progress(id: Swift.String, sendBytes: Swift.Int, totalBytes: Swift.Int)
+  public func liveStreamingPaused(_ freezeBy: FreezeCurrentStatus.FreezeBy)
+  public func onUnfreezed(_ unFreezeBy: FreezeCurrentStatus.FreezeBy)
+  public func freezeConfiguration(status: RecodingStatus?)
+  @objc deinit
+}
+public enum StoredImageType : Swift.String {
+  case snapshot
+  case file
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class ImageStorageManager {
+  public static let shared: ImageStorageManager
+  final public func save(_ image: UIKit.UIImage, type: StoredImageType, id: Swift.Int)
+  final public func load(type: StoredImageType, id: Swift.Int) -> UIKit.UIImage?
+  final public func remove(type: StoredImageType)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class ImageScrollView : UIKit.UIScrollView, UIKit.UIScrollViewDelegate {
+  public enum ContentMode : Swift.Int {
+    case aspectFill
+    case aspectFit
+    case widthFill
+    case heightFill
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum Offset : Swift.Int {
+    case begining
+    case center
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  @_Concurrency.MainActor @preconcurrency public var isImageInZoomState: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency open var imageContentMode: ImageScrollView.ContentMode
+  @_Concurrency.MainActor @preconcurrency open var initialOffset: ImageScrollView.Offset
+  @_Concurrency.MainActor @preconcurrency weak public var zoomView: UIKit.UIView?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var frame: CoreFoundation.CGRect {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency public func adjustFrameToCenter()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor @preconcurrency open func display(image res: CoreFoundation.CGSize)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func removeFromSuperview()
+  @_Concurrency.MainActor @preconcurrency @objc public func viewForZooming(in scrollView: UIKit.UIScrollView) -> UIKit.UIView?
+  @_Concurrency.MainActor @preconcurrency @objc public func scrollViewDidZoom(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor @preconcurrency @objc public func scrollViewDidEndZooming(_ scrollView: UIKit.UIScrollView, with view: UIKit.UIView?, atScale scale: CoreFoundation.CGFloat)
+}
+public protocol InstructionBottomViewDelegate : AnyObject {
+  func didPressedStatus(workflowSessionID: Swift.String, instructionItem: InstructionItem, evidenceImageSet: [EvidenceItem], remarks: Swift.String, status: Swift.Bool, closure: @escaping ([EvidenceItem], Swift.String) -> Swift.Void)
+  func didPressedSubmit(workflowID: Swift.String, isFromTech: Swift.Bool)
+  func didPressedSnapshot(isExpanded: Swift.Bool)
+  func didPressMinmise()
+  func didPressCaptureButton() -> UIKit.UIImage?
+  func deleteEvidenceImage(workflowSessionId: Swift.String, instructionId: Swift.String, evidenceId: Swift.String)
+  func saveEvidenceImage(workflowSessionID: Swift.String, activityID: Swift.String, instructionID: Swift.String, evidenceItem: EvidenceItem, closure: @escaping () -> Swift.Void)
+  func handleTapOnSnapshotView(_ gestureRecognizer: UIKit.UITapGestureRecognizer)
+  func handlePanOnSnapshotView(_ gestureRecognizer: UIKit.UIPanGestureRecognizer)
+  func undoMarkers()
+  func clearAllMarking()
+  func clearMarking()
+  func loadMoreInstruction(index: Swift.Int, closure: @escaping () -> Swift.Void)
+  func getImageFromFileID(isAttachment: Swift.Bool, fileId: Swift.String, completion: @escaping (UIKit.UIImage) -> Swift.Void)
+  func deleteWorkflowSession(workflowSessionID: Swift.String)
+  func didPressCaptureARButton(completion: @escaping (UIKit.UIImage?) -> Swift.Void)
+  func exitWorkInstruction()
+}
+@_Concurrency.MainActor @preconcurrency public struct InstructionBottomViewContainer : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(delegate: any InstructionBottomViewDelegate, viewModel: InstructionViewModel)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s4Lens30InstructionBottomViewContainerV4bodyQrvp", 0) __
+}
+public protocol InstructionDetailViewDelegate : AnyObject {
+  func didTapOnStartWorkflow(workflowId: Swift.String, workflowSessionId: Swift.String)
+  func didSelectWorkflow(workflowId: Swift.String, workflowTitle: Swift.String, isFromOffSession: Swift.Bool, closure: (() -> Swift.Void)?)
+  func reloadData()
+  func didPressedQRButton()
+  func didTapProfileAvatar()
+}
+extension InstructionDetailViewDelegate {
+  public func didTapProfileAvatar()
+}
+@_Concurrency.MainActor @preconcurrency public struct InstructionDetailView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(title: Swift.String, description: Swift.String, steps: [InstructionStep], delegate: (any InstructionBottomViewDelegate)?, isShowCLoseButton: Swift.Bool, viewModel: InstructionViewModel)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s4Lens21InstructionDetailViewV4bodyQrvp", 0) __
+}
+public struct InstructionStep : Swift.Identifiable, Swift.Equatable {
+  public let id: Foundation.UUID
+  public var evidences: [EvidenceItem]?
+  public static func == (lhs: InstructionStep, rhs: InstructionStep) -> Swift.Bool
+  public typealias ID = Foundation.UUID
+}
+public class InstructionViewModel : Foundation.ObservableObject {
+  @Combine.Published<Swift.Int> @_projectedValueProperty($currentIndex) public var currentIndex: Swift.Int {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $currentIndex: Combine.Published<Swift.Int>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<[InstructionStep]> @_projectedValueProperty($instructionStep) public var instructionStep: [InstructionStep] {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $instructionStep: Combine.Published<[InstructionStep]>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<InstructionRepresentation?> @_projectedValueProperty($instructionData) public var instructionData: InstructionRepresentation? {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $instructionData: Combine.Published<InstructionRepresentation?>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<Workflow?> @_projectedValueProperty($workflowDetails) public var workflowDetails: Workflow? {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $workflowDetails: Combine.Published<Workflow?>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($isShowCloseButton) public var isShowCloseButton: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $isShowCloseButton: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($showInstructionView) public var showInstructionView: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $showInstructionView: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($showOffSessionInstructionDetailView) public var showOffSessionInstructionDetailView: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $showOffSessionInstructionDetailView: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($showInSessionInstructionDetailView) public var showInSessionInstructionDetailView: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $showInSessionInstructionDetailView: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<Swift.Int> @_projectedValueProperty($instructionCount) public var instructionCount: Swift.Int {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $instructionCount: Combine.Published<Swift.Int>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($isInstructionLightMode) public var isInstructionLightMode: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $isInstructionLightMode: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($isFromTech) public var isFromTech: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $isFromTech: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<[EvidenceItem]> @_projectedValueProperty($evidenceImageSets) public var evidenceImageSets: [EvidenceItem] {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $evidenceImageSets: Combine.Published<[EvidenceItem]>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($isFlashOn) public var isFlashOn: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $isFlashOn: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($isFromOffSession) public var isFromOffSession: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $isFromOffSession: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<[Workflow]?> @_projectedValueProperty($workflowList) public var workflowList: [Workflow]? {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $workflowList: Combine.Published<[Workflow]?>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<[SessionSet]?> @_projectedValueProperty($completedWorkflowList) public var completedWorkflowList: [SessionSet]? {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $completedWorkflowList: Combine.Published<[SessionSet]?>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<[OngoingSet]?> @_projectedValueProperty($ongoingWorkflowList) public var ongoingWorkflowList: [OngoingSet]? {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $ongoingWorkflowList: Combine.Published<[OngoingSet]?>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($isCompletedTab) public var isCompletedTab: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $isCompletedTab: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($isAnnotationSelected) public var isAnnotationSelected: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $isAnnotationSelected: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($isOngoingInstruction) public var isOngoingInstruction: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $isOngoingInstruction: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($isFromOffSessionInstruction) public var isFromOffSessionInstruction: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $isFromOffSessionInstruction: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($isStartedOngoingOffSessionInstruction) public var isStartedOngoingOffSessionInstruction: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $isStartedOngoingOffSessionInstruction: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($isFromNonAR) public var isFromNonAR: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $isFromNonAR: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($isInSessionNonAR) public var isInSessionNonAR: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $isInSessionNonAR: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($isWorkflowSubmitted) public var isWorkflowSubmitted: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $isWorkflowSubmitted: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($isDarkMode) public var isDarkMode: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $isDarkMode: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published<Swift.Bool> @_projectedValueProperty($isNetworkConnected) public var isNetworkConnected: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $isNetworkConnected: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  public var workflowId: Swift.String
+  public var workflowSessionId: Swift.String
+  public var userImage: UIKit.UIImage?
+  public var emptyState: Swift.Bool
+  public var delegate: (any InstructionBottomViewDelegate)?
+  public init()
+  public func convertToInstructionSteps() -> [InstructionStep]
+  @objc deinit
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+}
+public struct SessionDetails : Swift.Decodable {
+  public var session_token: Swift.String?
+  public let zsoid: Swift.String
+  public let customer_join_link: Swift.String
+  public let session_key: Swift.String
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ConfigDetails : Swift.Decodable {
+  public let is_audio_mute_preference_enabled: Swift.Bool?
+  public let is_knowledge_base_enabled: Swift.Bool?
+  public let bot_config_details: BotConfigDetails?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct BotConfigDetails : Swift.Decodable {
+  public let is_configured: Swift.Bool?
+  public let is_active: Swift.Bool?
+  public let name: Swift.String?
+  public let welcome_message: Swift.String?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GatewayDetails : Swift.Decodable {
+  public let web_socket_path: Swift.String
+  public let group: Swift.String
+  public let gateway_servers: [Swift.String]
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ClientDetails : Swift.Decodable {
+  public let client_id: Swift.String
+  public let client_role: Swift.Int
+  public let client_token: Swift.String
+  public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class InviteTechnicianViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class InviteViewController : UIKit.UIViewController {
+  public struct InviteVCData {
+    public let title: Swift.String
+    public let titleDescription: Swift.String?
+    public let textViewPlaceHolder: Swift.String
+    public let linkDescription: Swift.String?
+    public let copyTextTitle: Swift.String
+    public let copyURL: Foundation.URL
+    public let inviteButtonTitle: Swift.String
+    public var controllerTitle: Swift.String?
+    public init(title: Swift.String, titleDescription: Swift.String?, textViewPlaceHolder: Swift.String, linkDescription: Swift.String?, inviteButtonTitle: Swift.String, copyTextTitle: Swift.String, copyURL: Foundation.URL)
+  }
+  @_Concurrency.MainActor @preconcurrency public static var at_storyBoardId: Swift.String
+  @_Concurrency.MainActor @preconcurrency public static var at_storyBoard: UIKit.UIStoryboard
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var inviteTextView: UIKit.UITextField!
+  @_Concurrency.MainActor @preconcurrency public var inviteData: InviteViewController.InviteVCData?
+  @_Concurrency.MainActor @preconcurrency public var onInvite: ((Swift.String) -> ())?
+  @_Concurrency.MainActor @preconcurrency public var customerEmail: Swift.String?
+  @_Concurrency.MainActor @preconcurrency public var copyClipBoardCompletion: ((Swift.String) -> Swift.String)?
+  @_Concurrency.MainActor @preconcurrency public static func inviteVC() -> InviteViewController?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func didReceiveMemoryWarning()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension InviteViewController : UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+}
+extension InviteViewController : KeyBoardChangeObserver.KeyboardNotificationhandler {
+}
+extension InviteViewController : Reusable.ControllerReusable {
+}
+public typealias JSON = [Swift.String : Any]
+public typealias JSONKey = Swift.String
+public struct JsonParser {
+  public var json: JSON
+  public init?(json: JSON?)
+  public subscript<DataType>(key: JSONKey) -> DataType? {
+    get
+  }
+  public func jsonParser(forKey key: JSONKey) -> JsonParser?
+  public func jsonParsers(forKey key: JSONKey) -> [JsonParser]?
+}
+public struct KBBotInferenceResponse : Swift.Codable {
+  public let request_id: Swift.String?
+  public let status: Swift.String?
+  public let summary: Swift.String?
+  public let documents: [KBBotDocument]?
+  public let message: Swift.String?
+  public init(request_id: Swift.String? = nil, status: Swift.String? = nil, summary: Swift.String? = nil, documents: [KBBotDocument]? = nil, message: Swift.String? = nil)
+  public enum Status : Swift.String {
+    case success
+    case failure
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var isSuccess: Swift.Bool {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct KBBotDocument : Swift.Codable, Swift.Identifiable, Swift.Hashable {
+  public let document_id: Swift.String?
+  public let preview_url: Swift.String?
+  public let zfs_file_id: Swift.Int?
+  public let title: Swift.String?
+  public var id: Swift.String {
+    get
+  }
+  public init(document_id: Swift.String? = nil, preview_url: Swift.String? = nil, zfs_file_id: Swift.Int? = nil, title: Swift.String? = nil)
+  public static func == (a: KBBotDocument, b: KBBotDocument) -> Swift.Bool
+  public typealias ID = Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct KBBotChatHistoryItem : Swift.Codable {
+  public let r: Swift.String
+  public let c: Swift.String
+  public init(r: Swift.String, c: Swift.String)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct KBBotInferenceRequest : Swift.Codable {
+  public let request_id: Swift.String
+  public let query: Swift.String
+  public let chat_history: [KBBotChatHistoryItem]?
+  public init(request_id: Swift.String, query: Swift.String, chat_history: [KBBotChatHistoryItem]?)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct KBBotMessage : Swift.Identifiable {
+  public let id: Foundation.UUID
+  public let role: KBBotMessage.Role
+  public let content: Swift.String
+  public let documents: [KBBotDocument]
+  public let timestamp: Foundation.Date
+  public var isFailed: Swift.Bool
+  public var isError: Swift.Bool
+  public var isSending: Swift.Bool
+  public enum Role {
+    case user, bot
+    public static func == (a: KBBotMessage.Role, b: KBBotMessage.Role) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(role: KBBotMessage.Role, content: Swift.String, documents: [KBBotDocument] = [], timestamp: Foundation.Date = Date(), isFailed: Swift.Bool = false, isError: Swift.Bool = false, isSending: Swift.Bool = false)
+  public typealias ID = Foundation.UUID
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public func showToast(message: Swift.String, show duration: Foundation.TimeInterval = 3, dismissOnTap: Swift.Bool = true, lottie type: (any LottieHelper.LottieType)? = nil, onTap: ((Toast) -> Swift.Void)? = nil, completion: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public func dismissToastView()
+  @_Concurrency.MainActor @preconcurrency public func makeCircular()
+}
+public protocol OtherActionsProtocol : AnyObject {
+  func onCustomer(performs action: CustomerAction)
+  func onSwitchCameraChanged(isFrontCam: Swift.Bool)
+}
+public protocol FreezeProtocol : AnyObject {
+  func onFreezeStart(id: Swift.String)
+  func onFreezeCompleted(id: Swift.String)
+  func onFreezeCancelled(id: Swift.String)
+  func progress(id: Swift.String, sendBytes: Swift.Int, totalBytes: Swift.Int)
+  func liveStreamingPaused(_ freezeBy: FreezeCurrentStatus.FreezeBy)
+  func onUnfreezed(_ unFreezeBy: FreezeCurrentStatus.FreezeBy)
+  func freezeConfiguration(status: RecodingStatus?)
+}
+public protocol OtherTechnicianAction : AnyObject {
+  func unlockFreeze(by: Participant?)
+  func freezeRunningStream()
+  func freezedSnapshotInitiated()
+  func snapshotDownloadProgress(totalReceived: Swift.Int, totalSize: Swift.Int)
+  func snapshotFreezeCompleted()
+  func snapshotFreezeCancel()
+  func updateNote()
+}
+public protocol TechnicianCommonProtocol : AnyObject {
+  func onCameraSwitch(isFront: Swift.Bool)
+  func onSessionRecordingStateChanged(isRecording: Swift.Bool)
+  func onSessionRecordResponseCompletion()
+  func onReceiveShareCameraRequest(participant: Participant?)
+  func onShareCameraResponse(action: ShareCameraTechAction, participant: Participant?)
+  func notifyUserWith(msg: Swift.String)
+  func refreshBottomMenu()
+  func showLottieView(lottie: LensLottieType, show: Swift.Bool)
+  func showStatusBarNotifyBanner(msg: Swift.String, show: Foundation.TimeInterval)
+  func onCustomerAction(action: CustomerAction)
+  func onAudioMuteStateRestored(isMuted: Swift.Bool)
+  func secondaryTechnicianApprovalRequest(email: Swift.String, clientId: Swift.String)
+  func secondaryTechnicianApprovalResponse(isAccepted: Swift.Bool, email: Swift.String, clientId: Swift.String)
+  func seconderyTechWaitingForCustomerUIUpdate()
+  func onSnapshotReceived(image: FreezeData, isNewHDFlow: Swift.Bool)
+  func onSnapshotRequestFailed(error: SnapshotCaptureError)
+}
+public enum StreamingType : Swift.String {
+  case none
+  case down
+  case up
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum QRRetryMode {
+  case NONE
+  case RETRY_CONTINOUSLY
+  case RETRY_UNTIL_TIME_LIMIT
+  public static func == (a: QRRetryMode, b: QRRetryMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class Lens {
+  public var hasAnonymousTechnicianEmail: Swift.Bool
+  weak public var lensSignallingDelegate: (any LensSignallingProtocol)? {
+    get
+    set
+  }
+  public static var isVerbose: Swift.Bool
+  public var isCameraFacingFront: Swift.Bool
+  weak public var chatDelegate: (any ChatProtocol)?
+  public var eventTracker: EventTracker?
+  public var participants: [Participant] {
+    get
+  }
+  public var sessionKey: Swift.String {
+    get
+  }
+  public var clientRoleType: RoleEnum {
+    get
+  }
+  public var clientRole: Swift.Int {
+    get
+  }
+  public var clientToken: Swift.String {
+    get
+  }
+  public var clientID: Swift.String? {
+    get
+  }
+  public var displayName: Swift.String? {
+    get
+  }
+  public var customerObject: Participant? {
+    get
+  }
+  public var creatorZUID: Foundation.NSNumber? {
+    get
+  }
+  public var technicianObjects: [Participant] {
+    get
+  }
+  public var selfEmail: Swift.String {
+    get
+  }
+  public var selfName: Swift.String {
+    get
+  }
+  public var edition: Edition? {
+    get
+  }
+  public var supportedfeatures: [Features]? {
+    get
+  }
+  public var connectionParam: any CommonConnectionParams {
+    get
+  }
+  public var isFreezedState: Swift.Bool {
+    get
+    set
+  }
+  public var isSnapshotFreezeEnabled: Swift.Bool
+  public var isARSupported: Swift.Bool {
+    get
+    set
+  }
+  public var isFrontCamAvailable: Swift.Bool {
+    get
+  }
+  @discardableResult
+  public func swapToFrontCamera() -> Swift.Bool
+  @discardableResult
+  public func swapToBackCamera() -> Swift.Bool
+  weak public var lens_protocol_delegate: (any LensSessionProtocolDelegate)?
+  public var arRenderView: ZohoLensArLibrary.ARRenderView? {
+    get
+  }
+  public var videoResolution: CoreFoundation.CGSize?
+  public var arNodesNotifyList: [AnnotationNotify] {
+    get
+  }
+  weak public var arDelegate: (any ARProtocol)?
+  @objc deinit
+}
+extension Lens {
+  public func onArNewNodeCreationReceived(annotationId: Swift.String)
+  public func onArNodeRemovedReceived(annotationId: Swift.String)
+  public func annotationSelected(annotationId: Swift.String, state: AnnotationSelection, triggerId: Swift.String)
+}
+extension Lens : ZohoLensArLibrary.AnnotationSelectionListener, ZohoLensArLibrary.AnchorStateListener {
+  public func onAnnotationSelected(id: Swift.String, triggerId: Swift.String)
+  public func onAnnotationDeselected(id: Swift.String, triggerId: Swift.String)
+  public func onAnchorPlaced(annotationId: Swift.String, annotationColor: UIKit.UIColor, annotationType: ZohoLensArLibrary.LensAnnotationType, annotationNumber: Swift.Int, triggerId: Swift.String, geometricProperties: [ZohoLensArLibrary.GeometricProperty : CoreFoundation.CGFloat]? = nil)
+  public func onAnchorRemoved(annotationId: Swift.String)
+}
+extension Lens {
+  public func isToolSupported(tool: SupportedTools) -> Swift.Bool
+}
+extension Lens {
+  public func requestLocation()
+  public func requestLocation(from triggerId: Swift.String?)
+}
+extension LensBaseSessionController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
+}
+extension LensBaseSessionController : InstructionDetailViewDelegate {
+  @_Concurrency.MainActor @preconcurrency public func didTapOnStartWorkflow(workflowId: Swift.String, workflowSessionId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func didSelectWorkflow(workflowId: Swift.String, workflowTitle: Swift.String, isFromOffSession: Swift.Bool, closure: (() -> Swift.Void)?)
+  @_Concurrency.MainActor @preconcurrency public func reloadData()
+  @_Concurrency.MainActor @preconcurrency public func didPressedQRButton()
+}
+extension LensBaseSessionController : InstructionBottomViewDelegate {
+  @_Concurrency.MainActor @preconcurrency public func getImageFromFileID(isAttachment: Swift.Bool, fileId: Swift.String, completion: @escaping (UIKit.UIImage) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func loadMoreInstruction(index: Swift.Int, closure: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func undoMarkers()
+  @_Concurrency.MainActor @preconcurrency public func clearAllMarking()
+  @_Concurrency.MainActor @preconcurrency public func clearMarking()
+  @_Concurrency.MainActor @preconcurrency public func handleTapOnSnapshotView(_ gestureRecognizer: UIKit.UITapGestureRecognizer)
+  @_Concurrency.MainActor @preconcurrency public func handlePanOnSnapshotView(_ gestureRecognizer: UIKit.UIPanGestureRecognizer)
+  @_Concurrency.MainActor @preconcurrency public func saveEvidenceImage(workflowSessionID: Swift.String, activityID: Swift.String, instructionID: Swift.String, evidenceItem: EvidenceItem, closure: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func deleteEvidenceImage(workflowSessionId: Swift.String, instructionId: Swift.String, evidenceId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func didPressCaptureButton() -> UIKit.UIImage?
+  @_Concurrency.MainActor @preconcurrency public func didPressedSnapshot(isExpanded: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func didPressMinmise()
+  @_Concurrency.MainActor @preconcurrency public func didPressedStatus(workflowSessionID: Swift.String, instructionItem: InstructionItem, evidenceImageSet: [EvidenceItem], remarks: Swift.String, status: Swift.Bool, closure: @escaping ([EvidenceItem], Swift.String) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func uploadEvidence(workflowSessionID: Swift.String, activityID: Swift.String, instructionID: Swift.String, evidenceImageSet: [EvidenceItem], status: Swift.Bool, remarks: Swift.String, closure: @escaping ([EvidenceItem]) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func uploadImage(activityID: Swift.String, evidenceItem: EvidenceItem, completion: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func didPressedSubmit(workflowID: Swift.String, isFromTech: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func deleteWorkflowSession(workflowSessionID: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func didPressCaptureARButton(completion: @escaping (UIKit.UIImage?) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func exitWorkInstruction()
+}
+extension LensBaseSessionController : ZohoLensArLibrary.AnnotationSelectionListener {
+  @_Concurrency.MainActor @preconcurrency public func onAnnotationSelected(id: Swift.String, triggerId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func onAnnotationDeselected(id: Swift.String, triggerId: Swift.String)
+}
+extension LensBaseSessionController : UIKit.UIGestureRecognizerDelegate {
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class LensBaseSessionController : Orientation.OrientationHelperController {
+  @_Concurrency.MainActor @preconcurrency public var sessionID: Swift.String? {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var combinedToolPanAnnotation: CanvasBoardSettings
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency override public func deviceRotated(_ currentOrientation: UIKit.UIDeviceOrientation)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency public func showNotificationView(message: Swift.String, interval: Foundation.TimeInterval = 4)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension LensBaseSessionController : AssistMenuCollectionViewDelegate {
+  @_Concurrency.MainActor @preconcurrency public var lensObject: Lens? {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public func cellSizeFor(collectionView: UIKit.UICollectionView) -> CoreFoundation.CGSize
+  @_Concurrency.MainActor @preconcurrency public func maxWidth(collectionView: UIKit.UICollectionView) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency public func assistMenuItems(collectionView: UIKit.UICollectionView) -> [AssistMenu]
+  @_Concurrency.MainActor @preconcurrency public func assistMenuMoreItem() -> AssistMenu
+  @_Concurrency.MainActor @preconcurrency public func didSelectMenu(item: AssistMenu, hidedMenus: [AssistMenu])
+  @_Concurrency.MainActor @preconcurrency public func didDeSelectMenu(item: AssistMenu, hidedMenus: [AssistMenu])
+  @_Concurrency.MainActor @preconcurrency public func isSelectedFeatureAvailable(item: AssistMenu, lensObject: Lens?) -> Swift.Bool
+}
+extension LensBaseSessionController {
+  @_Concurrency.MainActor @preconcurrency public var measurementPlusButton_View: UIKit.UIView? {
+    get
+  }
+}
+extension LensBaseSessionController {
+  @_Concurrency.MainActor @preconcurrency public func getTopMostViewController() -> UIKit.UIViewController
+  @_Concurrency.MainActor @preconcurrency public func openCustomerLocationInMap()
+}
+extension LensBaseSessionController {
+  @_Concurrency.MainActor @preconcurrency public func handleTapView(_ gestureRecognizer: UIKit.UITapGestureRecognizer)
+  @_Concurrency.MainActor @preconcurrency public func handlePanOnView(_ gestureRecognizer: UIKit.UIPanGestureRecognizer)
+  @_Concurrency.MainActor @preconcurrency public func handlePinchOnView(_ gestureRecognizer: UIKit.UIPinchGestureRecognizer)
+}
+public class LensBind<T> {
+  public typealias Listener = (T) -> Swift.Void
+  public var value: T {
+    get
+    set
+  }
+  public init(_ value: T)
+  public func bind(listener: LensBind<T>.Listener?)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class LensChatController : AssistChatController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency override open func drawerView(for drawer: DrawerController.DrawerViewController) -> UIKit.UIView
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension LensChatController : AssistChatControllerDelegate {
+  @_Concurrency.MainActor @preconcurrency public func scrollViewShouldScroll() -> Swift.Bool?
+  @_Concurrency.MainActor @preconcurrency public func assistChatControllerZiaGenerateResponseTitle() -> Swift.String
+  @_Concurrency.MainActor @preconcurrency public func assistChatControllerZiaGenerateResponseMinimumConvoMessage() -> Swift.String
+  @_Concurrency.MainActor @preconcurrency public func assistChatControllerZiaRephraseMessage() -> Swift.String
+  @_Concurrency.MainActor @preconcurrency public func rephase(message: Swift.String, completion: @escaping (Swift.String) -> (), failure: @escaping (Swift.String) -> ())
+  @_Concurrency.MainActor @preconcurrency public func chatCompletion(jsonArray: [[Swift.String : Any]], completion: @escaping (Swift.String) -> (), failure: @escaping (Swift.String) -> ())
+  @_Concurrency.MainActor @preconcurrency public func assistChatController(send message: Swift.String, completion: @escaping (AssistChatResponse<any AssistChatProtocol>) -> ())
+  @_Concurrency.MainActor @preconcurrency public func assistChatController(configureExitButton: UIKit.UIButton) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func assistChatController(configureSendButton: UIKit.UIButton)
+  @_Concurrency.MainActor @preconcurrency public func assistChatController(configureOneTapScrollDown: UIKit.UIButton)
+  @_Concurrency.MainActor @preconcurrency public func assistChatController(configureRephraseButton: UIKit.UIButton)
+  @_Concurrency.MainActor @preconcurrency public func assistChatController(configureGenerateResponseButton: UIKit.UIButton)
+  @_Concurrency.MainActor @preconcurrency public func assistChatController(placeHolderTextFor: UIKit.UITextView) -> Swift.String?
+  @_Concurrency.MainActor @preconcurrency public func assistChatController(needTitle for: AssistChatController) -> Swift.String?
+  @_Concurrency.MainActor @preconcurrency public func assistChatController(noDataView for: AssistChatController) -> UIKit.UIView?
+  @_Concurrency.MainActor @preconcurrency public func assistChatController(bannerView for: AssistChatController) -> UIKit.UIView?
+}
+public enum FreezeCurrentStatus {
+  case freezeRunningStream(FreezeCurrentStatus.FreezeBy), freezeSnapshot(FreezeCurrentStatus.FreezeBy), unfreeze(FreezeCurrentStatus.FreezeBy)
+  public enum FreezeBy {
+    case me, other
+    public static func == (a: FreezeCurrentStatus.FreezeBy, b: FreezeCurrentStatus.FreezeBy) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var isFreeze: Swift.Bool {
+    get
+  }
+}
+extension LensCustomerSessionController : ARProtocol {
+  @_Concurrency.MainActor @preconcurrency public func onAnchorSelectionChanged(annotationId: Swift.String, state: AnnotationSelection, triggerId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func onAnchorRemoved(annotationId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func onAnchorPlaced(annotationId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func onArCommentsReceived(annotationNode: AnnotationNotify)
+  @_Concurrency.MainActor @preconcurrency public func onArNewNodeCreated()
+  @_Concurrency.MainActor @preconcurrency public func onArNodeRemoved()
+  @_Concurrency.MainActor @preconcurrency public func updateAnnotationNotesListViewControllerifPresenting()
+}
+extension LensCustomerSessionController {
+  @_Concurrency.MainActor @preconcurrency public func onSupportedMeasurementActionsChanged(_ supportedActions: [ZohoLensArLibrary.ShapeAction])
+}
+@_hasMissingDesignatedInitializers public class LensCustomer : Lens {
+  weak public var otherActionDelegate: (any OtherActionProtocol)?
+  public var isRemoteFrontCamera: Swift.Bool {
+    get
+  }
+  public var isSessionRecording: Swift.Bool {
+    get
+  }
+  public var getStreamType: StreamingType? {
+    get
+  }
+  public init(connectionParam: any CustomerSessionParams, name: Swift.String, email: Swift.String, isARSupported: Swift.Bool = false)
+  public func startSession()
+  public static func validateSessionForSDK(sessionKey key: Swift.String, token: Swift.String, completion: @escaping (SessionValidationResponse) -> Swift.Void)
+  @objc deinit
+}
+extension LensCustomer {
+  @discardableResult
+  public func muteAudio() -> Swift.Bool
+  @discardableResult
+  public func unmuteAudio() -> Swift.Bool
+  @discardableResult
+  public func muteVideo() -> Swift.Bool
+  @discardableResult
+  public func unmuteVideo() -> Swift.Bool
+  public func speakerOn()
+  public func speakerOff()
+  public func closeRoom()
+}
+extension Lens : AudioSessionProtocol {
+  public func didChangeRoute(_ audioDescription: AVFAudio.AVAudioSessionRouteDescription, reason: AVFAudio.AVAudioSession.RouteChangeReason)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class LensCustomerSessionController : LensBaseSessionController {
+  @_Concurrency.MainActor @preconcurrency weak public var delegate: (any LensEventProtocol)?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var prefersStatusBarHidden: Swift.Bool {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency weak public var activityProtocol: (any LensEventProtocol)?
+  @_Concurrency.MainActor @preconcurrency public static func validateSession(sessionid id: Swift.String, base url: Foundation.URL? = nil, completion: @escaping (SessionValidationResponse) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public static func fetchTechnicianDisplayInfo(sessionToken: Swift.String, clientToken: Swift.String, completion: @escaping (_ name: Swift.String?, _ avatarURL: Foundation.URL?) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func setInitialAudioMuted(_ isMuted: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency convenience public init(connectionParam param: any CustomerSessionParams, customer name: Swift.String, is_arMode: Swift.Bool, remoteConfigConferenceType: ConferenceType, remoteConfigAutoMinimizeEnabled: Swift.Bool, customerEmail: Swift.String)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency override public func deviceRotated(_ currentOrientation: UIKit.UIDeviceOrientation)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var preferredStatusBarStyle: UIKit.UIStatusBarStyle {
+    @objc get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func dismiss(animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public func exitLensSession()
+  @_Concurrency.MainActor @preconcurrency public func endCurrentAppCallKit()
+  @_Concurrency.MainActor @preconcurrency public func alertJoinAnotherSession()
+  @_Concurrency.MainActor @preconcurrency public func selectedOption(option: AssistMenu)
+}
+extension LensCustomerSessionController {
+  @objc @IBAction @_Concurrency.MainActor @preconcurrency dynamic public func exit(_ sender: UIKit.UIButton?)
+}
+extension LensCustomerSessionController : LensUICommonDelegates {
+  @_Concurrency.MainActor @preconcurrency public func dismissWithError(message: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func show(lottie type: LensLottieType, message: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func set(loader enabled: Swift.Bool, text: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency public func dismissLottie()
+  @_Concurrency.MainActor @preconcurrency public func showStatusBar(message: Swift.String, interval: Foundation.TimeInterval = 4)
+}
+extension Lens {
+  @discardableResult
+  public func send(_ message: Swift.String) -> Swift.Bool
+  @discardableResult
+  public func send(_ chat: Chat) -> Swift.Bool
+}
+extension Lens {
+  public func requestOCR()
+  public func requestQR(retryMode: QRRetryMode)
+}
+public protocol LensEventProtocol : AnyObject {
+  func summary(sessionInfo: SessionDescription, snapshots: [SnapShotEntity]?, isNotesAvailable: Swift.Bool, chat: [Chat]?)
+  func sessionEvents(_ event: SessionEvents)
+  func showFeedback()
+  func showPricingPlans()
+  var sessionType: Participant.Role! { get set }
+}
+public enum SessionEvents {
+  case freeze, unfreeze, freezeFailed, chatRecived, chatSent, clearAnnotaion
+  case flash_request(ison: Swift.Bool)
+  case flash_failed(ison: Swift.Bool)
+  case sessionState(AssisLensStates)
+  case isVideoMuted(Swift.Bool)
+  case isAudioMuted(Swift.Bool)
+  case isARAvailable(Swift.Bool)
+  case customer_action(CustomerAction)
+  case audioRouteDescription(AVFAudio.AVAudioSessionRouteDescription?)
+  case annotation(DrawingInput.DrawShape)
+  case participantState(Participant)
+  case notesAdded(SessionEvents.FileAction, (any Swift.Error)?)
+  case inviteCustomer((any Swift.Error)?)
+  case inviteTechnician((any Swift.Error)?)
+  case snapshotActions(SessionEvents.FileAction, (any Swift.Error)?)
+  case arTrackingState(AR_TrackingState)
+  public enum FileAction : Swift.Int {
+    case created, deleted, downloaded
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  case locationRequestClicked
+  case locationShareClicked
+  case viewInMapsClicked
+  case customerLocationFetchRequested(participant: Participant?)
+  case customerLocationFetchSuccessful
+  case customerLocationFetchFailed(LocationError)
+  case measurement(ZohoLensArLibrary.Shape)
+}
+public struct LensSessionContent {
+  public enum Session : Swift.String {
+    case Invite
+    case noChat
+    case invalid_client
+    case invalid_key
+    case Nointernet
+    case oopsWrong
+    case sessionExpired
+    case timeout
+    case leaveSession
+    case planError_Standard_Above
+    case planError_Professional
+    case planError_Annotation
+    case customerJoined
+    case customerLeft
+    case exitWarning
+    case clearAnnotaionConfirmation
+    case diffLocation
+    case inviteTechnician
+    case inviteTechnicianDescription
+    case inviteInternalTechnicianDescription
+    case inviteExternalTechnicianDescription
+    case shareCopyInviteTechnician
+    case share
+    case copy
+    case customer_already_active_join_as_technician
+    case customer_already_active_signin_as_technician
+    case secTechEntryRequestTitle
+    case secTechEntryRequestDesc
+    case secTechEntryRequestAccept
+    case secTechEntryRequestReject
+    case emailInviteFailedTitle
+    case emailInviteFailedDesc
+    case inviteeNotInOrgTitle
+    case inviteeNotInOrgDesc
+    case inviteSentSuccess
+    case shareSessionLink
+    case sessionLinkCopied
+    case retry
+    public var localized: Swift.String {
+      get
+    }
+    public enum Scan : Swift.String {
+      case scanError
+      public var localized: Swift.String {
+        get
+      }
+      public init?(rawValue: Swift.String)
+      public typealias RawValue = Swift.String
+      public var rawValue: Swift.String {
+        get
+      }
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Chat : Swift.String {
+    case placeHolder
+    case title
+    case loading_chat
+    case download_completed
+    case downloaded_files_can_be_viewed_in_FilesApp
+    case starting_download
+    case wait_until_previous_download_finishes
+    case download_failed
+    case download_error_description
+    public var localized: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum InviteUser : Swift.String {
+    case inviteCustomerTitle
+    case inviteTechnicianTitle
+    case enterCustomerid
+    case inviteCustomerDescription
+    case linkDescription
+    case invitationSentToCustomer
+    case copiedInviteLink
+    public var localized: Swift.String {
+      get
+    }
+    public enum Error : Swift.String {
+      case failed
+      public var localized: Swift.String {
+        get
+      }
+      public static func invalidEmail() -> Swift.String
+      public init?(rawValue: Swift.String)
+      public typealias RawValue = Swift.String
+      public var rawValue: Swift.String {
+        get
+      }
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ErrorMsg : Swift.String {
+    case accessDeniedMsgForPhotos
+    public var localized: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Notes : Swift.String {
+    case noteUpdate
+    case noteUpdateFailed
+    case noteFetchFailed
+    public var localized: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Common : Swift.String {
+    case loading
+    case connecting
+    case joining
+    case deleting
+    case invalidEmail
+    case guest
+    case exit
+    case cancel
+    case end
+    case reply
+    case send
+    case ok
+    case settings
+    case capturing
+    case wait
+    case yes
+    case no
+    case customer
+    case deny
+    case allow
+    case view_now
+    case refresh
+    case close
+    public var localized: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ARErroMessage : Swift.String {
+    case excessiveMotion
+    case insufficientFeatures
+    case notAvailable
+    case relocalizing
+    case initializing
+    public var localized: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Snapshot : Swift.String {
+    case failure
+    case success
+    case deleteSuccess
+    case deleteFailure
+    case deleteConfirmation
+    case freezeSuccess
+    case freezeInprogress
+    case unfreezed
+    case streamPaused
+    case recodingEnabled
+    case recordingStopped
+    case storageExceeded
+    case recordingNotEnabled
+    case selectAll
+    case view
+    case clear
+    case screenshotDownloadFailed
+    case freezeAlert
+    case freezeAlertHeader
+    case freezeAnnotateDownstreamer
+    public var localized: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum CustomerActionContent : Swift.String {
+    case muteAudio
+    case unmuteAudio
+    case pauseVideo
+    case resumeVideo
+    case lockDevice
+    case unlockDevice
+    public var localized: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ShareCamera : Swift.String {
+    case share
+    case shareMsgDescription
+    case shareMsgDescByPrimaryTech
+    case stopShareCamera
+    case stopShareCameraDescription
+    case shareCameraTechRequestTitle
+    case shareCameraTechRequestDesc
+    case noneSharing
+    public var localized: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Flash : Swift.String {
+    case flash_title
+    case flash_light_on
+    case flash_light_off
+    case flash_light_on_failed
+    case flash_light_off_failed
+    public var localized: Swift.String {
+      get
+    }
+    public static func flash_light_on(by_participant: Swift.String) -> Swift.String
+    public static func flash_light_off(by_participant: Swift.String) -> Swift.String
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class LensSessionController : LensBaseSessionController, Reusable.ControllerReusable {
+  @_Concurrency.MainActor @preconcurrency public static var at_storyBoardId: Swift.String
+  @_Concurrency.MainActor @preconcurrency public static var at_storyBoard: UIKit.UIStoryboard
+  @_Concurrency.MainActor @preconcurrency public var networkDelegate: (any LensSessionNetworkProtocol)? {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency weak public var activityProtocol: (any LensEventProtocol)?
+  @_Concurrency.MainActor @preconcurrency public var sessionTitle: Swift.String
+  @_Concurrency.MainActor @preconcurrency public var isSessionHost: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var lensTechnician: LensTechnician?
+  @_Concurrency.MainActor @preconcurrency public var talkSetup: TalkSessionSetup
+  @_Concurrency.MainActor @preconcurrency public var snapShotView: SnapShotView?
+  @_Concurrency.MainActor @preconcurrency public var apiResponseManager: APIResponseManger? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var freezeManager: FreezeHandler? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var isARSupported: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public var preferredStatusBarStyle: UIKit.UIStatusBarStyle {
+    @objc get
+  }
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency public static func getLensController(connection param: any TechnicianSessionParams, technician email: Swift.String, customer cutemail: Swift.String? = nil, techName: Swift.String, sys_id: Swift.String, isCxAlreadyInSession: Swift.Bool = false, isARMode: Swift.Bool, remoteConfigConferenceType: ConferenceType, remoteConfigAutoMinimizeEnabled: Swift.Bool, zuid: Swift.String) -> LensSessionController?
+  @_Concurrency.MainActor @preconcurrency override public func deviceRotated(_ currentOrientation: UIKit.UIDeviceOrientation)
+  @_Concurrency.MainActor @preconcurrency public func alertForJoinAnotherTechSession()
+  @_Concurrency.MainActor @preconcurrency public func selectedOption(option: AssistMenu)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+extension LensSessionController : LensUICommonDelegates {
+  @_Concurrency.MainActor @preconcurrency public func showStatusBar(message: Swift.String, interval: Foundation.TimeInterval = 4)
+  @_Concurrency.MainActor @preconcurrency public func dismissWithError(message: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func show(lottie type: LensLottieType, message: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func set(loader enabled: Swift.Bool, text: Swift.String?)
+  @_Concurrency.MainActor @preconcurrency public func dismissLottie()
+}
+extension LensSessionController {
+  @_Concurrency.MainActor @preconcurrency public func participantRejoined(clientId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func onLocationFetchRequested(by participant: Participant?, proceed: @escaping () -> Swift.Void, fail: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func onLocationFetched(customerLocation: CustomerLocation)
+  @_Concurrency.MainActor @preconcurrency public func onLocationFetchFailed(error: LocationError)
+}
+extension LensSessionController : TechnicianCommonProtocol {
+  @_Concurrency.MainActor @preconcurrency public func onSnapshotReceived(image: FreezeData, isNewHDFlow: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func onSnapshotRequestFailed(error: SnapshotCaptureError)
+  @_Concurrency.MainActor @preconcurrency public func seconderyTechWaitingForCustomerUIUpdate()
+  @_Concurrency.MainActor @preconcurrency public func secondaryTechnicianApprovalRequest(email: Swift.String, clientId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func secondaryTechnicianApprovalResponse(isAccepted: Swift.Bool, email: Swift.String, clientId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func onReceiveShareCameraRequest(participant: Participant?)
+  @_Concurrency.MainActor @preconcurrency public func onCameraSwitch(isFront: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func onSessionRecordResponseCompletion()
+  @_Concurrency.MainActor @preconcurrency public func onSessionRecordingStateChanged(isRecording: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func onAudioMuteStateRestored(isMuted: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func onShareCameraResponse(action: ShareCameraTechAction, participant: Participant?)
+  @_Concurrency.MainActor @preconcurrency public func notifyUserWith(msg: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func refreshBottomMenu()
+  @_Concurrency.MainActor @preconcurrency public func showLottieView(lottie: LensLottieType, show: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func showStatusBarNotifyBanner(msg: Swift.String, show: Foundation.TimeInterval)
+  @_Concurrency.MainActor @preconcurrency public func onCustomerAction(action: CustomerAction)
+}
+extension LensSessionController {
+  @_Concurrency.MainActor @preconcurrency public func endCurrentAppCallKit()
+}
+extension LensSessionController {
+  @_Concurrency.MainActor @preconcurrency public func getCurrentState() -> [Swift.String : Any]
+}
+public enum AnnotateIcon {
+  case delete, rectangle, pencil, circle, ellipse, close, annotateMenu, arrow, deleteAll, selectionAnnotation, color, pointer, selectedPointer
+  case selectedRectangle, selectedPencil, selectedEllipse, selectedArrow, selectedAnnotation
+  case measurementAdd, measurementTick
+  case measurement, measurementSelected
+  case lineMeasurement, lineMeasurementSelected
+  case circleMeasurement, circleMeasurementSelected
+  case polygonMeasurementSelected, polygonMeasurement
+  public var svgName: Swift.String? {
+    get
+  }
+  public var iconString: Swift.String {
+    get
+  }
+  public var iconSize: CoreFoundation.CGFloat {
+    get
+  }
+  public var description: Swift.String? {
+    get
+  }
+  public var iconNormalColor: UIKit.UIColor? {
+    get
+  }
+  public var iconSelectedColor: UIKit.UIColor? {
+    get
+  }
+  public var iconDisabledColor: UIKit.UIColor? {
+    get
+  }
+  public func iconFont(size: CoreFoundation.CGFloat) -> UIKit.UIFont
+  public static func == (a: AnnotateIcon, b: AnnotateIcon) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum LensLottieType : LottieHelper.LottieType {
+  case noNetwork, loader, nochat, oopsWrong, noSearch, waitingForJoin, shareStopped, sessionClosed, sessionExpired, noTechSessionSummary, noCustSessionSummary, secTechWaitingRoom, noneScreenSharing, no_arnotes_cust, no_arnotes_tech, arNotesFreezedState
+  case surfaceDetection, anotateTurorial
+  case slide1
+  public var lottie: Lottie.LottieAnimationView {
+    get
+  }
+  public var lottieName: Swift.String {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public var size: CoreFoundation.CGSize? {
+    get
+  }
+  public static func == (a: LensLottieType, b: LensLottieType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol LensSessionProtocolDelegate : AnyObject {
+  func flash_change(is_supported: Swift.Bool?, current_flash_status: Swift.Bool)
+  func flash_change_triggered(by_participant_name: Swift.String?, isOn: Swift.Bool)
+  func flash_change_failed(error_message: Swift.String, isOn: Swift.Bool)
+  func chatlet_feature_status(is_enabled: Swift.Bool, role: Swift.Int?)
+  func handleReceivedWorkflow(workflowInfo: WorkflowParser)
+}
+extension LensSessionController : ARProtocol {
+  @_Concurrency.MainActor @preconcurrency public func onAnchorSelectionChanged(annotationId: Swift.String, state: AnnotationSelection, triggerId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func onAnchorRemoved(annotationId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func onAnchorPlaced(annotationId: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func onArCommentsReceived(annotationNode: AnnotationNotify)
+  @_Concurrency.MainActor @preconcurrency public func onArNewNodeCreated()
+  @_Concurrency.MainActor @preconcurrency public func onArNodeRemoved()
+  @_Concurrency.MainActor @preconcurrency public func updateAnnotationNotesListViewControllerifPresenting()
+  @_Concurrency.MainActor @preconcurrency public func onSupportedMeasurementActionsChanged(_ supportedActions: [ZohoLensArLibrary.ShapeAction])
+}
+extension AssistMenu : AssistSheet.SheetSelectionData {
+  public var uniqueIdentifier: Swift.String {
+    get
+  }
+  public var title: Swift.String {
+    get
+  }
+}
+extension LensSessionController : AudioSessionProtocol {
+  @_Concurrency.MainActor @preconcurrency public func didChangeRoute(_ audioDescription: AVFAudio.AVAudioSessionRouteDescription, reason: AVFAudio.AVAudioSession.RouteChangeReason)
+}
+extension LensSessionController : NotesViewDelegate {
+  @_Concurrency.MainActor @preconcurrency public func getNotes(completion: @escaping (Notes?) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func updateNotes(noteTitle: Swift.String, notes: Swift.String)
+}
+extension LensSessionController : SnapShotViewDelegate {
+  @_Concurrency.MainActor @preconcurrency public func snapShotClick()
+  @_Concurrency.MainActor @preconcurrency public func deleteSnapShot(_ snapshots: [any SnapShotObject], completion: @escaping (Swift.Bool) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func freeze(snapShot: any SnapShotObject, completion: @escaping (Swift.Bool) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func downloadImage(fileId: Swift.Int, completion: @escaping (UIKit.UIImage?) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func downloadSnapShot(_ snapShots: [any SnapShotObject]?, sender: UIKit.UIButton, completion: @escaping (Swift.Bool) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func unfreezeSnapShot(completion: @escaping (Swift.Bool) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func addSnapShotUI()
+  @_Concurrency.MainActor @preconcurrency public func hideSnapShotUI(flag: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func newsnapShotFreeze(fileId: Swift.String, image: UIKit.UIImage)
+  @_Concurrency.MainActor @preconcurrency public func newsnapShotUnFreeze()
+  @_Concurrency.MainActor @preconcurrency public func alertForFreezeSnapshot()
+}
+public protocol LensSessionNetworkProtocol : AnyObject {
+  var departmentID: Swift.String { get }
+  var baseURL: Foundation.URL { get }
+  var multiOrgEnabled: Swift.Bool { get }
+  var orgId: Swift.Int { get }
+  var integrationType: LensIntegrationType { get }
+  func setAuthorizationHeader(requestSerializer: VMNetworking.VMRequestSerialization, completion: @escaping (Swift.Bool) -> ())
+  func getOAuthToken(_ completion: @escaping (_ response: Swift.Result<Swift.String, any Swift.Error>) -> Swift.Void)
+}
+@_hasMissingDesignatedInitializers final public class LensTechNetworking {
+  weak public static var delegete: (any LensSessionNetworkProtocol)?
+  public static func updateNotes(title: Swift.String?, note: Swift.String?, sysID: Swift.String, sessionToken: Swift.String, clientToken: Swift.String, completion: @escaping VMNetworking.VMSessionManager.ApiSuccess, failure: @escaping VMNetworking.VMSessionManager.ApiFailure)
+  public static func fetchNote(sysID: Swift.String, sessionToken: Swift.String, clientToken: Swift.String, completion: @escaping VMNetworking.VMSessionManager.ApiSuccess, failure: @escaping VMNetworking.VMSessionManager.ApiFailure)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class LensTechnician : Lens {
+  weak public var freezeProtocol: (any FreezeProtocol)?
+  weak public var actionProtocol: (any OtherActionsProtocol)?
+  weak public var otherTechnicianAction: (any OtherTechnicianAction)?
+  weak public var technicianCommonProtocol: (any TechnicianCommonProtocol)?
+  final public let currentUserZuid: Swift.String
+  public var recording_status: RecodingStatus? {
+    get
+  }
+  public var recording_control_mode: RecordingControlMode? {
+    get
+  }
+  public var technicianConnectionParam: any TechnicianSessionParams {
+    get
+  }
+  public init(connectionParam: any TechnicianSessionParams, name: Swift.String, email: Swift.String, zuid: Swift.String, isARSupported: Swift.Bool)
+  public static func validateSession(joinType originalJoinType: SessionJoinParamType, is_scheduled: Swift.Bool, role: RoleEnum, networkDelegate: (any LensSessionNetworkProtocol)?, completion: @escaping (SessionValidationResponse) -> Swift.Void)
+  public func startSession()
+  public func screenShot() -> FreezeData?
+  public func isInSessionRecording() -> Swift.Bool
+  public func startInSessionRecording()
+  public func stopInSessionRecording()
+  @discardableResult
+  public func freeze() -> Swift.Bool
+  public func set(freeze buffer: FreezeData) -> Swift.Bool
+  public func unfreeze() -> Swift.Bool
+  @objc deinit
+}
+extension LensTechnician {
+  @discardableResult
+  public func muteAudio() -> Swift.Bool?
+  @discardableResult
+  public func unmuteAudio() -> Swift.Bool?
+  @discardableResult
+  public func exitSession() -> Swift.Bool
+}
+extension LensTechnician {
+  public func getSnapShotImage(fileDigestId: Swift.String, completion: @escaping (UIKit.UIImage?) -> Swift.Void)
+}
+extension Chat : AssistChatProtocol {
+  public var chatText: Foundation.NSAttributedString {
+    get
+  }
+  public var chatTime: Foundation.Date {
+    get
+  }
+  public var chatParticipant: any AssistChatParticipant {
+    get
+  }
+}
+extension Chat : AssistChatParticipant {
+  public var displayName: Foundation.NSAttributedString {
+    get
+  }
+  public var uniqueId: Swift.String {
+    get
+  }
+}
+extension Participant : AssistChatParticipant {
+  public var displayName: Foundation.NSAttributedString {
+    get
+  }
+  public var uniqueId: Swift.String {
+    get
+  }
+}
+public struct NoteResource : Swift.Codable {
+  public let notes: Notes?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Notes : Swift.Codable {
+  public var notes: Swift.String?
+  public var context_title: Swift.String?
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case notes
+    case file_name
+    case notes_last_edit_time
+    case notes_added_time
+    case notes_owner_name
+    case notes_edited_user_name
+    case notes_owner_email
+    case notes_edited_user_email
+    case context_identity
+    case context_title
+    case context_edited_time
+    case context_added_time
+    case department_id
+    case context_owner_name
+    case context_edited_user_name
+    case context_owner_email
+    case context_edited_user_email
+    case notes_edit_permission
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SnapShotEntity : SnapShotObject {
+  public let uploadID: Swift.String
+  public var isRestored: Swift.Bool
+  public var snapShotId: Swift.String {
+    get
+  }
+  public var snapShotImage: UIKit.UIImage {
+    get
+  }
+}
+public struct SessionDescription {
+  public var sessionID: Swift.String
+  public var sys_id: Swift.String?
+  public var startDate: Foundation.Date?
+  public var endDate: Foundation.Date?
+  public var duration: Foundation.TimeInterval? {
+    get
+  }
+  public let sessionToken: Swift.String
+  public let clientToken: Swift.String
+  public let hasAnonymousTechnicianEmail: Swift.Bool
+  public var sessionTopic: Swift.String?
+  public var sessionNotes: Swift.String?
+  public var screenshotDownloadLink: Swift.String?
+  public var recordingDownloadLink: Swift.String?
+  public var chatDownloadLink: Swift.String?
+  public var participantsParticipant: Participant?
+}
+public enum LocationActionType : Swift.String {
+  case request
+  case response
+  case share
+  case failure
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum LocationError : Swift.String {
+  case locationCustomPermissionDenied
+  case locationSystemPermissionDenied
+  case locationServiceDisabled
+  case locationUnavailable
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol LocationManagerDelegate : AnyObject {
+  func onLocationFetchRequested(by participant: Participant?, proceed: @escaping () -> Swift.Void, fail: @escaping () -> Swift.Void)
+  func onLocationFetched(customerLocation: CustomerLocation)
+  func onLocationFetchFailed(error: LocationError)
+}
+public protocol LocationProtocolDelegate : AnyObject {
+  @discardableResult
+  func sendLocationRequest() -> Swift.Bool
+  @discardableResult
+  func shareLocation(_ customerLocation: CustomerLocation) -> Swift.Bool
+  @discardableResult
+  func sendLocationResponse(_ customerLocation: CustomerLocation) -> Swift.Bool
+  @discardableResult
+  func sendLocationFailureResponse(error: LocationError, clientId: Swift.String) -> Swift.Bool
+}
+public enum MeasurementUnitSystem : Swift.String, Swift.CaseIterable {
+  case metric
+  case imperial
+  public static let storageKey: Swift.String
+  public static var current: MeasurementUnitSystem {
+    get
+    set
+  }
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [MeasurementUnitSystem]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [MeasurementUnitSystem] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct MultiTechSessionDetails {
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class MultipleTechDetailsViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func prepopulateData(participant: [Participant], hostZuid: Foundation.NSNumber, isHost: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func setOnCustomerLocationRequest(_ request: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func setOnOpenInMapRequest(_ request: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func updateCustomerLocation()
+  @_Concurrency.MainActor @preconcurrency public func presentWithDrawer(controller: UIKit.UIViewController, _ completion: (() -> Swift.Void)? = nil, hideStatusBar: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension MultipleTechDetailsViewController : UIKit.UITableViewDelegate, UIKit.UITableViewDataSource {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, estimatedHeightForRowAt indexPath: Foundation.IndexPath) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, heightForHeaderInSection section: Swift.Int) -> CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, titleForHeaderInSection section: Swift.Int) -> Swift.String?
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, willDisplayHeaderView view: UIKit.UIView, forSection section: Swift.Int)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+}
+extension MultipleTechDetailsViewController : DrawerController.DrawerControllerDelegate {
+  @_Concurrency.MainActor @preconcurrency public func drawerView(for drawerController: DrawerController.DrawerViewController) -> UIKit.UIView
+  @_Concurrency.MainActor @preconcurrency public func drawer(controller: DrawerController.DrawerViewController, movingPosition: DrawerController.DrawerMovingPosition, canChangeDrawerHeight height: CoreFoundation.CGFloat, drawerMinHeight: CoreFoundation.CGFloat, drawerMaximumHeight: CoreFoundation.CGFloat) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func drawer(_ drawer: DrawerController.DrawerViewController, reachedMinHeight height: CoreFoundation.CGFloat, animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func drawerMaximumHieght(for drawer: DrawerController.DrawerViewController, _ orientation: UIKit.UIDeviceOrientation) -> CoreFoundation.CGFloat?
+  @_Concurrency.MainActor @preconcurrency public func drawer(dismissed withAnimation: Swift.Bool)
+}
+@objc @_inheritsConvenienceInitializers final public class NetworkManager : ObjectiveC.NSObject {
+  public static let APP_VERSION: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension NetworkManager {
+  public static func fetchWorkflowInstructionList(baseURL: Foundation.URL? = nil, isFromOffSession: Swift.Bool = false, search: Swift.String, index: Swift.Int, departmentId: Swift.String? = nil, client_token: Swift.String?, session_token: Swift.String?, completion: @escaping (Swift.Result<WorkflowResponse, any Swift.Error>) -> Swift.Void)
+  public static func fetchWorkflowDetails(baseURL: Foundation.URL? = nil, isFromOffSession: Swift.Bool = false, workflow_id: Swift.String, client_token: Swift.String?, session_token: Swift.String?, completion: @escaping (Swift.Result<WorkflowInstructionResponse, any Swift.Error>) -> Swift.Void)
+  public static func fetchEvidenceImage(baseURL: Foundation.URL? = nil, isFromOffSession: Swift.Bool = false, fileId: Swift.String, clientToken: Swift.String?, sessionToken: Swift.String?, completion: @escaping (Swift.Result<UIKit.UIImage, any Swift.Error>) -> Swift.Void)
+  public static func fetchAttachmentImage(baseURL: Foundation.URL? = nil, isFromOffSession: Swift.Bool = false, fileId: Swift.String, clientToken: Swift.String?, sessionToken: Swift.String?, completion: @escaping (Swift.Result<UIKit.UIImage, any Swift.Error>) -> Swift.Void)
+  public static func instructionFetchAll(baseURL: Foundation.URL? = nil, isFromOffSession: Swift.Bool = false, workflow_id: Swift.String, index: Swift.Int, client_token: Swift.String?, session_token: Swift.String?, completion: @escaping (Swift.Result<InstructionResponse, any Swift.Error>) -> Swift.Void)
+  public static func completedInstructionFetch(baseURL: Foundation.URL? = nil, index: Swift.Int, workflow_id: Swift.String, workflow_session_id: Swift.String, completion: @escaping (Swift.Result<InstructionResponse, any Swift.Error>) -> Swift.Void)
+  public static func ongoingInstructionFetch(baseURL: Foundation.URL? = nil, index: Swift.Int, workflow_id: Swift.String, workflow_session_id: Swift.String, completion: @escaping (Swift.Result<InstructionResponse, any Swift.Error>) -> Swift.Void)
+  public static func fetchOngoingInstruction(index: Swift.Int, client_token: Swift.String, session_token: Swift.String, completion: @escaping (Swift.Result<InstructionResponse, any Swift.Error>) -> Swift.Void)
+  public static func instructionCompletedFetchAll(baseURL: Foundation.URL? = nil, index: Swift.Int, departmentId: Swift.String, completion: @escaping (Swift.Result<WorkflowCompletedListResponse, any Swift.Error>) -> Swift.Void)
+  public static func instructionOngoingFetchAll(baseURL: Foundation.URL? = nil, index: Swift.Int, departmentId: Swift.String, completion: @escaping (Swift.Result<WorkflowOngoingListResponse, any Swift.Error>) -> Swift.Void)
+  public static func startWorkflow(baseURL: Foundation.URL? = nil, isFromOffSession: Swift.Bool = false, workflow_id: Swift.String = "", workflow_session_id: Swift.String, session_token: Swift.String?, client_token: Swift.String?, completion: @escaping (Swift.Result<WorkflowStartResponse?, any Swift.Error>) -> Swift.Void)
+  public static func completeWorkflow(baseURL: Foundation.URL? = nil, isFromOffSession: Swift.Bool = false, workflow_session_id: Swift.String, session_token: Swift.String?, client_token: Swift.String?, completion: ((Swift.Bool) -> ())? = nil)
+  public static func updateWorkflowStatus(baseURL: Foundation.URL? = nil, isFromOffSession: Swift.Bool = false, workflow_session_id: Swift.String, instruction_id: Swift.String, evaluation_status: Swift.String, remarks: Swift.String, session_token: Swift.String?, client_token: Swift.String?, completion: @escaping (Swift.Result<WorkflowStatus, any Swift.Error>) -> Swift.Void)
+  public static func uploadOrEditWorkflowEvidence(baseURL: Foundation.URL? = nil, isFromOffSession: Swift.Bool = false, param: [Swift.String : Any], fieldName: Swift.String, fileName: Swift.String, imageData: Foundation.Data, imageType: Swift.String, mimeType: Swift.String, session_token: Swift.String?, client_token: Swift.String?, isEdit: Swift.Bool, completion: @escaping (Swift.Result<EvidenceResponse?, any Swift.Error>) -> Swift.Void)
+  public static func deleteWorkflowEvidence(baseURL: Foundation.URL? = nil, isFromOffSession: Swift.Bool = false, evidence_id: Swift.String, session_token: Swift.String?, client_token: Swift.String?, completion: ((Swift.Bool) -> ())? = nil)
+  public static func deleteWorkflow(baseURL: Foundation.URL? = nil, workflow_session_id: Swift.String, completion: ((Swift.Bool) -> ())? = nil)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class NetworkStatsBroadcastParser : BaseParser {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class NetworkTransitionParser : BaseParser {
+  @objc deinit
+}
+public struct NetworkStats {
+}
+@_Concurrency.MainActor @preconcurrency public struct StatItemView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s4Lens12StatItemViewV4bodyQrvp", 0) __
+}
+@_Concurrency.MainActor @preconcurrency public struct NetworkSectionCard : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s4Lens18NetworkSectionCardV4bodyQrvp", 0) __
+}
+@_Concurrency.MainActor @preconcurrency public struct NetworkStatisticsView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(viewModel: NetworkStatsViewModel)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s4Lens21NetworkStatisticsViewV4bodyQrvp", 0) __
+}
+final public class NetworkStatsViewModel : Foundation.ObservableObject {
+  public init(selfClientId: @escaping () -> Swift.String?, spotlightUserId: @escaping () -> Swift.String?, conferenceType: @escaping () -> Swift.String? = { nil }, isCustomer: @escaping () -> Swift.Bool = { false })
+  @objc deinit
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+}
+extension NetworkStatsViewModel {
+  public enum NetworkQuality {
+    case excellent, good, average, poor
+    public static func == (a: NetworkStatsViewModel.NetworkQuality, b: NetworkStatsViewModel.NetworkQuality) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public protocol NotesViewDelegate : AnyObject {
+  func getNotes(completion: @escaping (Notes?) -> Swift.Void)
+  func updateNotes(noteTitle: Swift.String, notes: Swift.String)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class NotesViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency weak public var delegate: (any NotesViewDelegate)?
+  @_Concurrency.MainActor @preconcurrency public static func getNotesController() -> NotesViewController
+  @_Concurrency.MainActor @preconcurrency public var dismissCallBack: (() -> ())?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class NotificationHandler {
+  public static func removeAllNotificaion()
+  public static func register(categories: [UserNotificationCategory])
+  public static func schedule(notification configuration: UserNotificationScheduleConfiguration, completion: ((Swift.Bool) -> Swift.Void)?)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class Participant : BaseParser {
+  public enum Role : Swift.String {
+    case technician, customer, secondary_technician, external_technician
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Status : Swift.String {
+    case UP, DOWN
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ParticpantOSType : Swift.String {
+    case ios, android
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var clientId: Foundation.NSNumber?
+  final public let role: Participant.Role?
+  final public let email: Swift.String?
+  public var status: Participant.Status?
+  final public let zuid: Foundation.NSNumber?
+  public var name: Swift.String? {
+    get
+  }
+  public var time: Swift.Int?
+  public var platformType: Participant.ParticpantOSType?
+  final public let app_version: Swift.String?
+  public init(selfEmail: Swift.String?, role: Participant.Role, status: Participant.Status?, zuid: Foundation.NSNumber?, display_name: Swift.String?, app_version: Swift.String?, joiningTime: Swift.Int?)
+  public static func == (lhs: Participant, rhs: Participant) -> Swift.Bool
+  @objc deinit
+}
+public protocol AudioSessionProtocol : AnyObject {
+  func didChangeRoute(_ audioDescription: AVFAudio.AVAudioSessionRouteDescription, reason: AVFAudio.AVAudioSession.RouteChangeReason)
+}
+public protocol LensSignallingProtocol : LocationManagerDelegate {
+  func renderingView(_ view: UIKit.UIView?)
+  func didChangeLensConnectionState(state: AssisLensStates)
+  func didChange(_ participant: Participant)
+  func refreshBottomMenu()
+  func didChangeARState(tracking state: ARKit.ARCamera.TrackingState)
+  func participantRejoined(clientId: Swift.String)
+  func onScanSuccess(scanResult: ScanModel)
+  func onScanFailure(scanError: ScanError)
+  func onSessionValidationDone()
+  func onTechnicianPerform(draw shape: DrawingInput.DrawShape)
+  func conferenceReceived(type: ConferenceType)
+  func newFreezeAcknowledgement()
+  func unFreezeFinalAction()
+  func showFreezedImage()
+  func showLocalIceCandidatesFailureAlert()
+  func dismissPresentedView()
+  func freezeToggleForNonARCameraAction()
+  func onStageConferenceWatchdogTimeout()
+  func activateStageConferenceSession(startedTime: Foundation.NSNumber?, spotlightUserId: Swift.String?)
+}
+extension LensSignallingProtocol {
+  public func onSessionValidationDone()
+  public func onTechnicianPerform(draw shape: DrawingInput.DrawShape)
+  public func conferenceReceived(type: ConferenceType)
+  public func newFreezeAcknowledgement()
+  public func unFreezeFinalAction()
+  public func showFreezedImage()
+  public func participantRejoined(clientId: Swift.String)
+  public func onStageConferenceWatchdogTimeout()
+  public func activateStageConferenceSession(startedTime: Foundation.NSNumber?, spotlightUserId: Swift.String?)
+}
+public protocol ChatProtocol : AnyObject {
+  func didReceive(_ chat: Chat)
+}
+public protocol CommonConnectionParams {
+  var key: Swift.String { get }
+  var session_details: SessionDetails { get set }
+  var gateway_details: GatewayDetails { get }
+  var client_details: ClientDetails { get }
+}
+public protocol CustomerSessionParams : CommonConnectionParams {
+}
+public protocol TechnicianSessionParams : CommonConnectionParams {
+  var isSessionHost: Swift.Bool { get }
+  var config_details: ConfigDetails? { get }
+}
+public enum VariacType : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  case int(Swift.Int)
+  case string(Swift.String)
+  public init(from decoder: any Swift.Decoder) throws
+}
+public protocol ARProtocol : AnyObject {
+  func onArCommentsReceived(annotationNode: AnnotationNotify)
+  func onAnchorSelectionChanged(annotationId: Swift.String, state: AnnotationSelection, triggerId: Swift.String)
+  func onAnchorPlaced(annotationId: Swift.String)
+  func onAnchorRemoved(annotationId: Swift.String)
+  var isARSupported: Swift.Bool { get }
+  func onSupportedMeasurementActionsChanged(_ supportedActions: [ZohoLensArLibrary.ShapeAction])
+}
+public class ResolutionHandler {
+  public var videoFrame: CoreFoundation.CGRect?
+  public var videoRes: CoreFoundation.CGSize? {
+    get
+    set
+  }
+  public var viewRect: CoreFoundation.CGRect
+  public init(fromView rect: CoreFoundation.CGRect)
+  public func getVideoFrame(for input: DrawingInput) -> CoreFoundation.CGRect
+  @objc deinit
+}
+public struct SnapshotState {
+}
+public enum SDKLensLottieType : LottieHelper.LottieType {
+  case loader
+  public var lottie: Lottie.LottieAnimationView {
+    get
+  }
+  public var lottieName: Swift.String {
+    get
+  }
+  public var message: Swift.String? {
+    get
+  }
+  public var size: CoreFoundation.CGSize? {
+    get
+  }
+  public static func == (a: SDKLensLottieType, b: SDKLensLottieType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct OCRData {
+  public var ocrText: Swift.String
+  public var confidence: Swift.String
+}
+public struct QRData {
+  public var qrText: Swift.String
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class ScanResultSheet : UIKit.UIViewController, KeyBoardChangeObserver.KeyboardNotificationhandler {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func removeFromParent()
+  @_Concurrency.MainActor @preconcurrency public func updateScannedText(text: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func setSendButtonCallback(sendCallback: @escaping (_ resultText: Swift.String) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func setCopyButtonCallback(sendCallback: @escaping (_ text: Swift.String) -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency public func setCloseButtonCallback(sendCallback: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension ScanResultSheet : UIKit.UITextViewDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func textView(_ textView: UIKit.UITextView, shouldInteractWith URL: Foundation.URL, in characterRange: Foundation.NSRange, interaction: UIKit.UITextItemInteraction) -> Swift.Bool
+}
+@_Concurrency.MainActor @preconcurrency public struct SessionDetailsView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public func updateLocation(_ location: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func locationFetchFailed(error: LocationError)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s4Lens18SessionDetailsViewV4bodyQrvp", 0) __
+}
+public protocol LensUICommonDelegates : AnyObject {
+  func set(loader enabled: Swift.Bool, text: Swift.String?)
+  func show(lottie type: LensLottieType, message: Swift.String)
+  func dismissLottie()
+  func showStatusBar(message: Swift.String, interval: Foundation.TimeInterval)
+  func dismissWithError(message: Swift.String)
+}
+
+public protocol SnapShotObject {
+  var snapShotId: Swift.String { get }
+  var snapShotImage: UIKit.UIImage { get }
+}
+public protocol SnapShotViewDelegate : AnyObject {
+  func snapShotClick()
+  func downloadSnapShot(_ snapShots: [any SnapShotObject]?, sender: UIKit.UIButton, completion: @escaping (_ isDownloadSuccess: Swift.Bool) -> Swift.Void)
+  func freeze(snapShot: any SnapShotObject, completion: @escaping (_ isFreezeSuccess: Swift.Bool) -> Swift.Void)
+  func unfreezeSnapShot(completion: @escaping (_ isUnfreezeSuccess: Swift.Bool) -> Swift.Void)
+  func deleteSnapShot(_ snapshots: [any SnapShotObject], completion: @escaping (_ isDownloadSuccess: Swift.Bool) -> Swift.Void)
+  func newsnapShotFreeze(fileId: Swift.String, image: UIKit.UIImage)
+  func newsnapShotUnFreeze()
+  func alertForFreezeSnapshot()
+  func downloadImage(fileId: Swift.Int, completion: @escaping (UIKit.UIImage?) -> Swift.Void)
+}
+@objc @_Concurrency.MainActor @preconcurrency public class SnapShotView : UIKit.UIView, Reusable.ViewResuable {
+  @_Concurrency.MainActor @preconcurrency public static var bundle: Foundation.Bundle {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency weak public var delegate: (any SnapShotViewDelegate)?
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
+  @objc deinit
+}
+public enum SnapshotCaptureError : Swift.String {
+  case cameraFrameCaptureError
+  case currentUserNotInSpotlight
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct SnapshotUtil {
+  public static func updateCompressionFormat(isHDSnapshotEnabled: Swift.Bool)
+  public static func compress(_ snapshot: UIKit.UIImage) -> Foundation.Data?
+}
+public struct FreezeData {
+  public let freezeImage: UIKit.UIImage
+  public var id: Swift.Int
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class VisualEffectView : UIKit.UIVisualEffectView {
+  @_Concurrency.MainActor @preconcurrency open var colorTint: UIKit.UIColor? {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency open var colorTintAlpha: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency open var blurRadius: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency open var scale: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(effect: UIKit.UIVisualEffect?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class Toast : UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency required convenience public init(message: Swift.String, lottie type: (any LottieHelper.LottieType)? = nil)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc required convenience dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func removeFromSuperview()
+  @objc deinit
+}
+public enum FlashActionType : Swift.String {
+  case turn_On, turn_Off
+  public init(boolean: Swift.Bool)
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class FlashSupportEvent : BaseParser {
+  public var is_flash_supported: Swift.Bool
+  public var current_flash_status: FlashActionType
+  @objc deinit
+}
+public struct UserNotificationScheduleConfiguration {
+  public let body: Swift.String
+  public let title: Swift.String?
+  public var uniqueID: Swift.String
+  public let scheduleDate: Foundation.Date
+  public var category: NotificationCategoryIdentifier?
+}
+public struct NotificationCategoryIdentifier : Swift.RawRepresentable {
+  public var rawValue: Swift.String
+  public static var chat: NotificationCategoryIdentifier
+  public init(rawValue: Swift.String)
+  public init(_ rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+}
+public struct UserNotificationCategory {
+  public static var chat: UserNotificationCategory {
+    get
+  }
+  public var categoryId: NotificationCategoryIdentifier
+  public var actions: [UserNotificationAction]
+  public init(_ cid: NotificationCategoryIdentifier, actions: [UserNotificationAction])
+}
+public struct UserNotificationAction {
+  public enum ActionType {
+    case actionButton(title: Swift.String)
+    case inputField(title: Swift.String, textFieldplaceHolder: Swift.String, inputActionTitle: Swift.String)
+  }
+  public let actionType: UserNotificationAction.ActionType
+  public let actionID: Swift.String
+}
+public enum CanvasBoardSettings : Swift.String {
+  case ellipse, pencil, rectangle, arrow, pointer, undo, none
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency public func show(title: Swift.String, alert message: Swift.String? = nil, dismissOnTapOutside isEnable: Swift.Bool = true, actions: [CustomAlert.AssistAlertAction] = [])
+  @_Concurrency.MainActor @preconcurrency public func accessDenideRedirectToAppSettings(_ message: Swift.String)
+  @_Concurrency.MainActor @preconcurrency public func showInputAlert(message: Swift.String, actions: [CustomAlert.AssistAlertAction] = [], completion: ((_ controller: CustomAlert.AssistBlurAlertController, _ text: Swift.String?, _ action: CustomAlert.AssistAlertAction) -> Swift.Bool)? = nil)
+  @_Concurrency.MainActor @preconcurrency public func networkConnectionAvailable() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func alertToOpenAppstore()
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency public func addLottie(type: LensLottieType) -> Lottie.LottieAnimationView
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public func showNotificationBanner(message: Swift.String, show duration: Foundation.TimeInterval = 4, actionTitle: Swift.String? = nil, action: (() -> Swift.Void)? = nil, completion: (() -> Swift.Void)? = nil)
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public func showLottie(lottie type: any LottieHelper.LottieType, onTap: ((UIKit.UIButton) -> (() -> Swift.Void)?)? = nil, lottieBackgroundColor: UIKit.UIColor = UIColor.white, subViewIndex: Swift.Int = -1, tag: Swift.Int? = 43566534)
+  @_Concurrency.MainActor @preconcurrency public func dismissLottieView()
+  @_Concurrency.MainActor @preconcurrency public func at_showLoader(with size: CoreFoundation.CGSize = CGSize.init(width: 100, height: 100), overViewColor: UIKit.UIColor = UIColor.black.withAlphaComponent(0.5), text: Swift.String = "", textColor: UIKit.UIColor = .white)
+  @_Concurrency.MainActor @preconcurrency public var at_isLoaderHidden: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public func at_hideLoader()
+}
+extension ObjectiveC.NSObject {
+  public func hapticMediumImpact()
+  public func hapticWarningImpact()
+  public func hapticSuccessImpact()
+  public func hapticErrorImpact()
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class WaitingRoomViewController : UIKit.UIViewController, Reusable.ControllerReusable {
+  @_Concurrency.MainActor @preconcurrency public static var at_storyBoardId: Swift.String
+  @_Concurrency.MainActor @preconcurrency public static var at_storyBoard: UIKit.UIStoryboard
+  @_Concurrency.MainActor @preconcurrency public static func waitingVC() -> WaitingRoomViewController?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLayoutSubviews()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidDisappear(_ animated: Swift.Bool)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func didReceiveMemoryWarning()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+public struct RoomCredential {
+}
+public struct TalkSettings {
+}
+@_Concurrency.MainActor @preconcurrency public struct WorkInstructionCompletedSetsView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(viewModel: InstructionViewModel, delegate: any InstructionDetailViewDelegate)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s4Lens32WorkInstructionCompletedSetsViewV4bodyQrvp", 0) __
+}
+@_Concurrency.MainActor @preconcurrency public struct ARWorkflowSetView : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public let workflows: [Workflow]
+  @_Concurrency.MainActor @preconcurrency public let completedWorkflows: [SessionSet]
+  @_Concurrency.MainActor @preconcurrency public var delegate: any InstructionDetailViewDelegate
+  @_Concurrency.MainActor @preconcurrency public init(workflows: [Workflow], completedWorkflows: [SessionSet], delegate: any InstructionDetailViewDelegate, workflowViewModel: InstructionViewModel)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var workflowListView: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s4Lens17ARWorkflowSetViewV4bodyQrvp", 0) __
+}
+public struct WorkflowResponse : Swift.Codable {
+  public let workflowRepresentation: WorkflowRepresentation?
+  public let resourceType: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WorkflowRepresentation : Swift.Codable {
+  public let hasMore: Swift.Bool?
+  public let workflows: [Workflow]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Workflow : Swift.Codable {
+  public let workflowID: Swift.String?
+  public let title: Swift.String?
+  public let description: Swift.String?
+  public let instructionCount: Swift.Int?
+  public let createdByDisplayName: Swift.String?
+  public let createdTime: Swift.String?
+  public let editedByDisplayName: Swift.String?
+  public let editedTime: Swift.String?
+  public let completionStatus: Swift.Int?
+  public let creatorProfileURL: Swift.String?
+  public let editorProfileURL: Swift.String?
+  public let editedByZuid: Swift.Int?
+  public let createdByZuid: Swift.Int?
+  public let departmentID: Swift.Double?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct InstructionResponse : Swift.Codable {
+  public let representation: InstructionRepresentation
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct InstructionRepresentation : Swift.Codable {
+  public let isOngoing: Swift.Bool?
+  public let workflowSessionID: Swift.String?
+  public let hasMore: Swift.Bool
+  public let instructionSet: [InstructionItem]
+  public init(isOngoing: Swift.Bool? = nil, workflowSessionID: Swift.String? = nil, hasMore: Swift.Bool, instructionSet: [InstructionItem])
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct InstructionItem : Swift.Codable {
+  public let instructionID: Swift.String
+  public let workflowID: Swift.String
+  public let instruction: Swift.String
+  public let position: Swift.Double
+  public let isEvaluationMandatory: Swift.Bool?
+  public let isEvidenceMandatory: Swift.Bool?
+  public let imageAttachments: [Attachment]?
+  public let workflowActivity: WorkflowActivity?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WorkflowActivity : Swift.Codable {
+  public let workflowSessionID: Swift.String
+  public let instructionID: Swift.String
+  public let evaluationStatus: Swift.Int
+  public let remarks: Swift.String
+  public let evidences: [Evidence]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Evidence : Swift.Codable {
+  public let evidenceID: Swift.String
+  public let activityID: Swift.String
+  public let zfsFileID: Swift.String
+  public let fileType: Swift.Int
+  public let fileName: Swift.String
+  public let fileSize: Swift.Int
+  public let comments: Swift.String
+  public let position: Swift.Double
+  public let thumbnailGenerated: Swift.Bool
+  public let zfsLatestVersion: Swift.Double
+  public let previewURL: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Attachment : Swift.Codable {
+  public let attachmentID: Swift.String
+  public let instructionID: Swift.String
+  public let zfsFileID: Swift.String
+  public let fileType: Swift.Int
+  public let fileName: Swift.String
+  public let fileSize: Swift.Int
+  public let comments: Swift.String
+  public let thumbnailGenerated: Swift.Bool
+  public let zfsLatestVersion: Swift.Double
+  public let previewURL: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WorkflowStatus : Swift.Codable {
+  public let representation: WorkflowStatusRepresentation
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WorkflowStatusRepresentation : Swift.Codable {
+  public let map: ActivityMap
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct ActivityMap : Swift.Codable {
+  public let activityID: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WorkflowStartResponse : Swift.Codable {
+  public let representation: WorkflowStartRepresentation
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WorkflowStartRepresentation : Swift.Codable {
+  public let map: WorkflowMap
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WorkflowMap : Swift.Codable {
+  public let workflowSessionID: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EvidenceResponse : Swift.Codable {
+  public let representation: EvidenceRepresentation
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EvidenceRepresentation : Swift.Codable {
+  public let map: EvidenceMap
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct EvidenceMap : Swift.Codable {
+  public let zfsFileID: Swift.String
+  public let evidenceID: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WorkflowInstructionResponse : Swift.Codable {
+  public let representation: Workflow
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WorkflowCompletedListResponse : Swift.Codable {
+  public let representation: CompletedRepresentation
+  public let resourceType: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CompletedRepresentation : Swift.Codable {
+  public let hasMore: Swift.Bool
+  public let sessionSet: [SessionSet]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SessionSet : Swift.Codable {
+  public let workflowSessionID: Swift.Int, workflowID: Swift.Int
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct WorkflowOngoingListResponse : Swift.Codable {
+  public let representation: OngoingRepresentation
+  public let resourceType: Swift.String
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct OngoingRepresentation : Swift.Codable {
+  public let hasMore: Swift.Bool
+  public let sessionSet: [OngoingSet]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct OngoingSet : Swift.Codable {
+  public let workflowSessionID: Swift.Int, workflowID: Swift.Int
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class WorkflowParser : BaseParser {
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @available(iOS 14, *)
+@_Concurrency.MainActor @preconcurrency public class ZLInviteTechnicianController : UIKit.UIViewController {
+  @_Concurrency.MainActor @preconcurrency public var technicianInviteCallBack: ((_ external: Swift.Bool, _ Email: Swift.String) -> ())?
+  @_Concurrency.MainActor @preconcurrency public var segmentTapCallBack: ((_ external: Swift.Bool) -> ())?
+  @_Concurrency.MainActor @preconcurrency public init(techJoinUrl: Foundation.URL?, sessionKey: Swift.String)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func viewDidLoad()
+  @objc deinit
+}
+@available(iOS 14, *)
+extension ZLInviteTechnicianController : Orientation.OrientationHandler {
+  @_Concurrency.MainActor @preconcurrency public func supportedOrientation() -> Orientation.At_Orientation
+}
+public class ZoomHandler {
+  public init(captureDevice: AVFoundation.AVCaptureDevice? = nil)
+  public func setDefaultBackCaptureDevice()
+  public func setCaptureDevice(_ device: AVFoundation.AVCaptureDevice, resetZoom: Swift.Bool = true)
+  public func setZoom(factor: CoreFoundation.CGFloat, animated: Swift.Bool = true)
+  public func handlePinchGesture(_ gesture: UIKit.UIPinchGestureRecognizer)
+  @objc deinit
+}
+extension AssistAlertActionStyle : Swift.Equatable {}
+extension AssistAlertActionStyle : Swift.Hashable {}
+extension CanvasBoardSettings : Swift.Equatable {}
+extension CanvasBoardSettings : Swift.Hashable {}
+extension CanvasBoardSettings : Swift.RawRepresentable {}
+extension SessionValidationResponse.SessionValidationError : Swift.Equatable {}
+extension SessionValidationResponse.SessionValidationError : Swift.Hashable {}
+extension Edition : Swift.Equatable {}
+extension Edition : Swift.Hashable {}
+extension Edition : Swift.RawRepresentable {}
+extension Features : Swift.Equatable {}
+extension Features : Swift.Hashable {}
+extension Features : Swift.RawRepresentable {}
+extension AssisLensStates.AssistLensDisconnectState : Swift.Equatable {}
+extension AssisLensStates.AssistLensDisconnectState : Swift.Hashable {}
+extension SessionValidation : Swift.Equatable {}
+extension SessionValidation : Swift.Hashable {}
+extension SessionValidation : Swift.RawRepresentable {}
+extension ConnectionProcessType : Swift.Equatable {}
+extension ConnectionProcessType : Swift.Hashable {}
+extension ConnectionProcessType : Swift.RawRepresentable {}
+extension TechnicianAction : Swift.Equatable {}
+extension TechnicianAction : Swift.Hashable {}
+extension TechnicianAction : Swift.RawRepresentable {}
+extension RecodingStatus : Swift.Equatable {}
+extension RecodingStatus : Swift.Hashable {}
+extension RecodingStatus : Swift.RawRepresentable {}
+extension RecordingControlMode : Swift.Equatable {}
+extension RecordingControlMode : Swift.Hashable {}
+extension RecordingControlMode : Swift.RawRepresentable {}
+extension CustomerAction : Swift.Equatable {}
+extension CustomerAction : Swift.Hashable {}
+extension CustomerAction : Swift.RawRepresentable {}
+extension ConferenceType : Swift.Equatable {}
+extension ConferenceType : Swift.Hashable {}
+extension ConferenceType : Swift.RawRepresentable {}
+extension LensOpreationError : Swift.Equatable {}
+extension LensOpreationError : Swift.Hashable {}
+extension ShareCameraActionType : Swift.Equatable {}
+extension ShareCameraActionType : Swift.Hashable {}
+extension ShareCameraActionType : Swift.RawRepresentable {}
+extension ShareCameraTechAction : Swift.Equatable {}
+extension ShareCameraTechAction : Swift.Hashable {}
+extension ShareCameraTechAction : Swift.RawRepresentable {}
+extension SnapShotAction : Swift.Equatable {}
+extension SnapShotAction : Swift.Hashable {}
+extension SnapShotAction : Swift.RawRepresentable {}
+extension ScanType : Swift.Equatable {}
+extension ScanType : Swift.Hashable {}
+extension ScanType : Swift.RawRepresentable {}
+extension RoleEnum : Swift.Equatable {}
+extension RoleEnum : Swift.Hashable {}
+extension RoleEnum : Swift.RawRepresentable {}
+extension MonitorActionEnum : Swift.Equatable {}
+extension MonitorActionEnum : Swift.Hashable {}
+extension MonitorActionEnum : Swift.RawRepresentable {}
+extension AnnotationObjectType : Swift.Equatable {}
+extension AnnotationObjectType : Swift.Hashable {}
+extension AnnotationObjectType : Swift.RawRepresentable {}
+extension ClearAction : Swift.Equatable {}
+extension ClearAction : Swift.Hashable {}
+extension ClearAction : Swift.RawRepresentable {}
+extension AnnotationSelection : Swift.Equatable {}
+extension AnnotationSelection : Swift.Hashable {}
+extension AnnotationSelection : Swift.RawRepresentable {}
+extension AR_TrackingState : Swift.Equatable {}
+extension AR_TrackingState : Swift.Hashable {}
+extension SupportedTools : Swift.Equatable {}
+extension SupportedTools : Swift.Hashable {}
+extension SupportedTools : Swift.RawRepresentable {}
+extension MexType : Swift.Equatable {}
+extension MexType : Swift.Hashable {}
+extension MexType : Swift.RawRepresentable {}
+extension LensIntegrationType : Swift.Equatable {}
+extension LensIntegrationType : Swift.Hashable {}
+extension LensIntegrationType : Swift.RawRepresentable {}
+extension DrawingInput.DrawShape : Swift.Equatable {}
+extension DrawingInput.DrawShape : Swift.Hashable {}
+extension DrawingInput.DrawShape : Swift.RawRepresentable {}
+extension DrawingInput.FreeStyleState : Swift.Equatable {}
+extension DrawingInput.FreeStyleState : Swift.Hashable {}
+extension DrawingInput.FreeStyleState : Swift.RawRepresentable {}
+extension ExternalApp : Swift.Equatable {}
+extension ExternalApp : Swift.Hashable {}
+extension ExternalApp : Swift.RawRepresentable {}
+extension ExternalApp.Permission : Swift.Equatable {}
+extension ExternalApp.Permission : Swift.Hashable {}
+extension ExternalApp.Permission : Swift.RawRepresentable {}
+extension InviteTechnicianAction : Swift.Equatable {}
+extension InviteTechnicianAction : Swift.Hashable {}
+extension InviteTechnicianAction : Swift.RawRepresentable {}
+extension InviteCustomerAction : Swift.Equatable {}
+extension InviteCustomerAction : Swift.Hashable {}
+extension InviteCustomerAction : Swift.RawRepresentable {}
+extension SnapshotAction : Swift.Equatable {}
+extension SnapshotAction : Swift.Hashable {}
+extension SnapshotAction : Swift.RawRepresentable {}
+extension HDSnapshotAction : Swift.Equatable {}
+extension HDSnapshotAction : Swift.Hashable {}
+extension HDSnapshotAction : Swift.RawRepresentable {}
+extension ChatAction : Swift.Equatable {}
+extension ChatAction : Swift.Hashable {}
+extension ChatAction : Swift.RawRepresentable {}
+extension NotesAction : Swift.Equatable {}
+extension NotesAction : Swift.Hashable {}
+extension NotesAction : Swift.RawRepresentable {}
+extension AnnotateAction : Swift.Equatable {}
+extension AnnotateAction : Swift.Hashable {}
+extension AnnotateAction : Swift.RawRepresentable {}
+extension MeasurementAction : Swift.Equatable {}
+extension MeasurementAction : Swift.Hashable {}
+extension MeasurementAction : Swift.RawRepresentable {}
+extension ARNotesAction : Swift.Equatable {}
+extension ARNotesAction : Swift.Hashable {}
+extension ARNotesAction : Swift.RawRepresentable {}
+extension VideoStateAction : Swift.Equatable {}
+extension VideoStateAction : Swift.Hashable {}
+extension VideoStateAction : Swift.RawRepresentable {}
+extension AudioStateAction : Swift.Equatable {}
+extension AudioStateAction : Swift.Hashable {}
+extension AudioStateAction : Swift.RawRepresentable {}
+extension RecordAction : Swift.Equatable {}
+extension RecordAction : Swift.Hashable {}
+extension RecordAction : Swift.RawRepresentable {}
+extension ShareCameraAction : Swift.Equatable {}
+extension ShareCameraAction : Swift.Hashable {}
+extension ShareCameraAction : Swift.RawRepresentable {}
+extension OCRAction : Swift.Equatable {}
+extension OCRAction : Swift.Hashable {}
+extension OCRAction : Swift.RawRepresentable {}
+extension QRAction : Swift.Equatable {}
+extension QRAction : Swift.Hashable {}
+extension QRAction : Swift.RawRepresentable {}
+extension ZoomAction : Swift.Equatable {}
+extension ZoomAction : Swift.Hashable {}
+extension ZoomAction : Swift.RawRepresentable {}
+extension MagnifyAction : Swift.Equatable {}
+extension MagnifyAction : Swift.Hashable {}
+extension MagnifyAction : Swift.RawRepresentable {}
+extension ToggleScreenModeAction : Swift.Equatable {}
+extension ToggleScreenModeAction : Swift.Hashable {}
+extension ToggleScreenModeAction : Swift.RawRepresentable {}
+extension SessionDetailsAction : Swift.Equatable {}
+extension SessionDetailsAction : Swift.Hashable {}
+extension SessionDetailsAction : Swift.RawRepresentable {}
+extension FlashAction : Swift.Equatable {}
+extension FlashAction : Swift.Hashable {}
+extension FlashAction : Swift.RawRepresentable {}
+extension MoreAction : Swift.Equatable {}
+extension MoreAction : Swift.Hashable {}
+extension MoreAction : Swift.RawRepresentable {}
+extension HDAction : Swift.Equatable {}
+extension HDAction : Swift.Hashable {}
+extension HDAction : Swift.RawRepresentable {}
+extension SwapCameraAction : Swift.Equatable {}
+extension SwapCameraAction : Swift.Hashable {}
+extension SwapCameraAction : Swift.RawRepresentable {}
+extension FeedbackAction : Swift.Equatable {}
+extension FeedbackAction : Swift.Hashable {}
+extension FeedbackAction : Swift.RawRepresentable {}
+extension ARModeAction : Swift.Equatable {}
+extension ARModeAction : Swift.Hashable {}
+extension ARModeAction : Swift.RawRepresentable {}
+extension GeoLocationAction : Swift.Equatable {}
+extension GeoLocationAction : Swift.Hashable {}
+extension GeoLocationAction : Swift.RawRepresentable {}
+extension WorkflowEventAction : Swift.Equatable {}
+extension WorkflowEventAction : Swift.Hashable {}
+extension WorkflowEventAction : Swift.RawRepresentable {}
+extension NetworkPerformanceEventAction : Swift.Equatable {}
+extension NetworkPerformanceEventAction : Swift.Hashable {}
+extension NetworkPerformanceEventAction : Swift.RawRepresentable {}
+extension SmartBotEventAction : Swift.Equatable {}
+extension SmartBotEventAction : Swift.Hashable {}
+extension SmartBotEventAction : Swift.RawRepresentable {}
+extension LensFlashError : Swift.Equatable {}
+extension LensFlashError : Swift.Hashable {}
+extension LensFlashError : Swift.RawRepresentable {}
+extension StoredImageType : Swift.Equatable {}
+extension StoredImageType : Swift.Hashable {}
+extension StoredImageType : Swift.RawRepresentable {}
+extension ImageScrollView.ContentMode : Swift.Equatable {}
+extension ImageScrollView.ContentMode : Swift.Hashable {}
+extension ImageScrollView.ContentMode : Swift.RawRepresentable {}
+extension ImageScrollView.Offset : Swift.Equatable {}
+extension ImageScrollView.Offset : Swift.Hashable {}
+extension ImageScrollView.Offset : Swift.RawRepresentable {}
+extension InstructionBottomViewContainer : Swift.Sendable {}
+extension InstructionDetailView : Swift.Sendable {}
+extension KBBotInferenceResponse.Status : Swift.Equatable {}
+extension KBBotInferenceResponse.Status : Swift.Hashable {}
+extension KBBotInferenceResponse.Status : Swift.RawRepresentable {}
+extension KBBotMessage.Role : Swift.Equatable {}
+extension KBBotMessage.Role : Swift.Hashable {}
+extension StreamingType : Swift.Equatable {}
+extension StreamingType : Swift.Hashable {}
+extension StreamingType : Swift.RawRepresentable {}
+extension QRRetryMode : Swift.Equatable {}
+extension QRRetryMode : Swift.Hashable {}
+extension LensBaseSessionController : Swift.Sendable {}
+extension FreezeCurrentStatus.FreezeBy : Swift.Equatable {}
+extension FreezeCurrentStatus.FreezeBy : Swift.Hashable {}
+extension SessionEvents.FileAction : Swift.Equatable {}
+extension SessionEvents.FileAction : Swift.Hashable {}
+extension SessionEvents.FileAction : Swift.RawRepresentable {}
+extension LensSessionContent.Session : Swift.Equatable {}
+extension LensSessionContent.Session : Swift.Hashable {}
+extension LensSessionContent.Session : Swift.RawRepresentable {}
+extension LensSessionContent.Session.Scan : Swift.Equatable {}
+extension LensSessionContent.Session.Scan : Swift.Hashable {}
+extension LensSessionContent.Session.Scan : Swift.RawRepresentable {}
+extension LensSessionContent.Chat : Swift.Equatable {}
+extension LensSessionContent.Chat : Swift.Hashable {}
+extension LensSessionContent.Chat : Swift.RawRepresentable {}
+extension LensSessionContent.InviteUser : Swift.Equatable {}
+extension LensSessionContent.InviteUser : Swift.Hashable {}
+extension LensSessionContent.InviteUser : Swift.RawRepresentable {}
+extension LensSessionContent.InviteUser.Error : Swift.Equatable {}
+extension LensSessionContent.InviteUser.Error : Swift.Hashable {}
+extension LensSessionContent.InviteUser.Error : Swift.RawRepresentable {}
+extension LensSessionContent.ErrorMsg : Swift.Equatable {}
+extension LensSessionContent.ErrorMsg : Swift.Hashable {}
+extension LensSessionContent.ErrorMsg : Swift.RawRepresentable {}
+extension LensSessionContent.Notes : Swift.Equatable {}
+extension LensSessionContent.Notes : Swift.Hashable {}
+extension LensSessionContent.Notes : Swift.RawRepresentable {}
+extension LensSessionContent.Common : Swift.Equatable {}
+extension LensSessionContent.Common : Swift.Hashable {}
+extension LensSessionContent.Common : Swift.RawRepresentable {}
+extension LensSessionContent.ARErroMessage : Swift.Equatable {}
+extension LensSessionContent.ARErroMessage : Swift.Hashable {}
+extension LensSessionContent.ARErroMessage : Swift.RawRepresentable {}
+extension LensSessionContent.Snapshot : Swift.Equatable {}
+extension LensSessionContent.Snapshot : Swift.Hashable {}
+extension LensSessionContent.Snapshot : Swift.RawRepresentable {}
+extension LensSessionContent.CustomerActionContent : Swift.Equatable {}
+extension LensSessionContent.CustomerActionContent : Swift.Hashable {}
+extension LensSessionContent.CustomerActionContent : Swift.RawRepresentable {}
+extension LensSessionContent.ShareCamera : Swift.Equatable {}
+extension LensSessionContent.ShareCamera : Swift.Hashable {}
+extension LensSessionContent.ShareCamera : Swift.RawRepresentable {}
+extension LensSessionContent.Flash : Swift.Equatable {}
+extension LensSessionContent.Flash : Swift.Hashable {}
+extension LensSessionContent.Flash : Swift.RawRepresentable {}
+extension LensSessionController : LocationManagerDelegate {}
+extension AnnotateIcon : ATIcon {}
+extension AnnotateIcon : Swift.Equatable {}
+extension AnnotateIcon : Swift.Hashable {}
+extension LensLottieType : Swift.Equatable {}
+extension LensLottieType : Swift.Hashable {}
+extension Notes.CodingKeys : Swift.Equatable {}
+extension Notes.CodingKeys : Swift.Hashable {}
+extension Notes.CodingKeys : Swift.RawRepresentable {}
+extension LocationActionType : Swift.Equatable {}
+extension LocationActionType : Swift.Hashable {}
+extension LocationActionType : Swift.RawRepresentable {}
+extension LocationError : Swift.Equatable {}
+extension LocationError : Swift.Hashable {}
+extension LocationError : Swift.RawRepresentable {}
+extension MeasurementUnitSystem : Swift.Equatable {}
+extension MeasurementUnitSystem : Swift.Hashable {}
+extension MeasurementUnitSystem : Swift.RawRepresentable {}
+extension StatItemView : Swift.Sendable {}
+extension NetworkSectionCard : Swift.Sendable {}
+extension NetworkStatisticsView : Swift.Sendable {}
+extension NetworkStatsViewModel.NetworkQuality : Swift.Equatable {}
+extension NetworkStatsViewModel.NetworkQuality : Swift.Hashable {}
+extension Participant.Role : Swift.Equatable {}
+extension Participant.Role : Swift.Hashable {}
+extension Participant.Role : Swift.RawRepresentable {}
+extension Participant.Status : Swift.Equatable {}
+extension Participant.Status : Swift.Hashable {}
+extension Participant.Status : Swift.RawRepresentable {}
+extension Participant.ParticpantOSType : Swift.Equatable {}
+extension Participant.ParticpantOSType : Swift.Hashable {}
+extension Participant.ParticpantOSType : Swift.RawRepresentable {}
+extension SDKLensLottieType : Swift.Equatable {}
+extension SDKLensLottieType : Swift.Hashable {}
+extension SessionDetailsView : Swift.Sendable {}
+extension SnapshotCaptureError : Swift.Equatable {}
+extension SnapshotCaptureError : Swift.Hashable {}
+extension SnapshotCaptureError : Swift.RawRepresentable {}
+extension FlashActionType : Swift.Equatable {}
+extension FlashActionType : Swift.Hashable {}
+extension FlashActionType : Swift.RawRepresentable {}
+extension WorkInstructionCompletedSetsView : Swift.Sendable {}
+extension ARWorkflowSetView : Swift.Sendable {}

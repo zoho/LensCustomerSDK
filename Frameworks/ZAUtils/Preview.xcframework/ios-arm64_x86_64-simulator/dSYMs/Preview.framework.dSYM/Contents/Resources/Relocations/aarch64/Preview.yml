@@ -1,0 +1,45 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/jem-8413/Library/Developer/Xcode/DerivedData/ZAUtilsFramework-ckicxhmmskzkvughqdftssjpucxw/Build/Intermediates.noindex/ArchiveIntermediates/Preview/InstallationBuildProductsLocation/Library/Frameworks/Preview.framework/Preview'
+relocations:
+  - { offset: 0x4EDF9, size: 0x8, addend: 0x0, symName: _PreviewVersionString, symObjAddr: 0x0, symBinAddr: 0x3880, symSize: 0x0 }
+  - { offset: 0x4EE30, size: 0x8, addend: 0x0, symName: _PreviewVersionNumber, symObjAddr: 0x38, symBinAddr: 0x38B8, symSize: 0x0 }
+  - { offset: 0x4F0BD, size: 0x8, addend: 0x0, symName: '_$s7Preview16QLPreviewHandlerC14previewObjectsSaySo0B4Item_pGvpACTK', symObjAddr: 0x70, symBinAddr: 0x11C0, symSize: 0x48 }
+  - { offset: 0x4F0F3, size: 0x8, addend: 0x0, symName: '_$s7Preview16QLPreviewHandlerC14previewObjectsSaySo0B4Item_pGvpACTk', symObjAddr: 0xB8, symBinAddr: 0x1208, symSize: 0x6C }
+  - { offset: 0x4F24A, size: 0x8, addend: 0x0, symName: '_$sSa20_reserveCapacityImpl07minimumB013growForAppendySi_SbtFSo13QLPreviewItem_p_Tg5', symObjAddr: 0x7A0, symBinAddr: 0x18F0, symSize: 0xB0 }
+  - { offset: 0x4F31C, size: 0x8, addend: 0x0, symName: '_$ss12_ArrayBufferV20_consumeAndCreateNew14bufferIsUnique15minimumCapacity13growForAppendAByxGSb_SiSbtFSo13QLPreviewItem_p_Tg5', symObjAddr: 0x850, symBinAddr: 0x19A0, symSize: 0x128 }
+  - { offset: 0x4F43E, size: 0x8, addend: 0x0, symName: '_$ss22_ContiguousArrayBufferV19_uninitializedCount15minimumCapacityAByxGSi_SitcfCSo13QLPreviewItem_p_Tt1g5', symObjAddr: 0x978, symBinAddr: 0x1AC8, symSize: 0x80 }
+  - { offset: 0x4F4B6, size: 0x8, addend: 0x0, symName: '_$ss12_ArrayBufferV13_copyContents8subRange12initializingSpyxGSnySiG_AFtFSo13QLPreviewItem_p_Tg5', symObjAddr: 0x9F8, symBinAddr: 0x1B48, symSize: 0x124 }
+  - { offset: 0x4F596, size: 0x8, addend: 0x0, symName: '_$ss29getContiguousArrayStorageType3fors01_bcD0CyxGmxm_tlFSo13QLPreviewItem_p_Ttg5', symObjAddr: 0xB1C, symBinAddr: 0x1C6C, symSize: 0x14 }
+  - { offset: 0x4F5C4, size: 0x8, addend: 0x0, symName: '_$ss12_ArrayBufferV19_getElementSlowPathyyXlSiFSo13QLPreviewItem_p_Tg5', symObjAddr: 0xB30, symBinAddr: 0x1C80, symSize: 0x1B0 }
+  - { offset: 0x4F692, size: 0x8, addend: 0x0, symName: '_$sSa13_copyContents12initializings16IndexingIteratorVySayxGG_SitSryxG_tFSo13QLPreviewItem_p_Tg5', symObjAddr: 0xCE0, symBinAddr: 0x1E30, symSize: 0x164 }
+  - { offset: 0x4F875, size: 0x8, addend: 0x0, symName: '_$ss12_ArrayBufferV010withUnsafeB17Pointer_nonNativeyqd__qd__SRyxGqd_0_YKXEqd_0_YKs5ErrorRd_0_r0_lFSo13QLPreviewItem_p_ytsAE_pTg5076$sSa32withContiguousStorageIfAvailableyqd__Sgqd__SRyxGKXEKlFqd__ACKXEfU_So13iJ8_p_ytTG5ADq_sAE_pRi_zRi0_zRi__Ri0__r0_lySoAF_pytIsgyrzo_Tf1ncn_n', symObjAddr: 0xE44, symBinAddr: 0x1F94, symSize: 0x5C }
+  - { offset: 0x4F91C, size: 0x8, addend: 0x0, symName: '_$ss12_ArrayBufferV029getOrAllocateAssociatedObjectB0s011_ContiguousaB0VyxGyFSo13QLPreviewItem_p_Tg5', symObjAddr: 0xEA0, symBinAddr: 0x1FF0, symSize: 0xB8 }
+  - { offset: 0x4F9C5, size: 0x8, addend: 0x0, symName: '_$ss32_copyCollectionToContiguousArrayys0dE0Vy7ElementQzGxSlRzlFs01_E6BufferVySo13QLPreviewItem_pG_Tg5', symObjAddr: 0xF58, symBinAddr: 0x20A8, symSize: 0x98 }
+  - { offset: 0x4FA66, size: 0x8, addend: 0x0, symName: '_$sSa15replaceSubrange_4withySnySiG_qd__nt7ElementQyd__RszSlRd__lFSo13QLPreviewItem_p_SaySoAF_pGTg5', symObjAddr: 0xFF0, symBinAddr: 0x2140, symSize: 0x100 }
+  - { offset: 0x4FBAB, size: 0x8, addend: 0x0, symName: '_$sSo19QLPreviewControllerCSgSgWOe', symObjAddr: 0x10F0, symBinAddr: 0x2240, symSize: 0x10 }
+  - { offset: 0x4FBBF, size: 0x8, addend: 0x0, symName: '_$s7Preview16QLPreviewHandlerCMa', symObjAddr: 0x1100, symBinAddr: 0x2250, symSize: 0x20 }
+  - { offset: 0x4FC6B, size: 0x8, addend: 0x0, symName: '_$ss20_ArrayBufferProtocolPsE15replaceSubrange_4with10elementsOfySnySiG_Siqd__ntSlRd__7ElementQyd__AGRtzlFs01_aB0VySo13QLPreviewItem_pG_SaySoAL_pGTg5', symObjAddr: 0x1170, symBinAddr: 0x22C0, symSize: 0x194 }
+  - { offset: 0x4FE17, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledNameV2, symObjAddr: 0x1304, symBinAddr: 0x2454, symSize: 0x50 }
+  - { offset: 0x4FE2B, size: 0x8, addend: 0x0, symName: '_$ss20_ArrayBufferProtocolPsE15replaceSubrange_4with10elementsOfySnySiG_Siqd__ntSlRd__7ElementQyd__AGRtzlFySRyAIGXEfU_s01_aB0VySo13QLPreviewItem_pG_SaySoAM_pGTg5', symObjAddr: 0x1354, symBinAddr: 0x24A4, symSize: 0x70 }
+  - { offset: 0x4FE7C, size: 0x8, addend: 0x0, symName: '_$ss20_ArrayBufferProtocolPsE15replaceSubrange_4with10elementsOfySnySiG_Siqd__ntSlRd__7ElementQyd__AGRtzlFySRyAIGXEfU_s01_aB0VySo13QLPreviewItem_pG_SaySoAM_pGTg5TA', symObjAddr: 0x13C4, symBinAddr: 0x2514, symSize: 0x18 }
+  - { offset: 0x4FE9B, size: 0x8, addend: 0x0, symName: '_$ss12_ArrayBufferV13_copyContents12initializings16IndexingIteratorVyAByxGG_SitSryxG_tFSo13QLPreviewItem_p_Tg5', symObjAddr: 0x13DC, symBinAddr: 0x252C, symSize: 0xC8 }
+  - { offset: 0x4FF3C, size: 0x8, addend: 0x0, symName: '_$ss18_CocoaArrayWrapperV13_copyContents12initializings16IndexingIteratorVyABG_SitSryyXlG_tF', symObjAddr: 0x14A4, symBinAddr: 0x25F4, symSize: 0xA8 }
+  - { offset: 0x4FF82, size: 0x8, addend: 0x0, symName: '_$sSo19QLPreviewControllerCSgSgWOy', symObjAddr: 0x154C, symBinAddr: 0x269C, symSize: 0x10 }
+  - { offset: 0x50129, size: 0x8, addend: 0x0, symName: '_$s7Preview16QLPreviewHandlerC02qlA2VC33_ECA8C17392CC9870B5171E038E389B7ALLSo0B10ControllerCSgvg', symObjAddr: 0x0, symBinAddr: 0x1150, symSize: 0x70 }
+  - { offset: 0x5023E, size: 0x8, addend: 0x0, symName: '_$s7Preview16QLPreviewHandlerC14previewObjectsSaySo0B4Item_pGvg', symObjAddr: 0x124, symBinAddr: 0x1274, symSize: 0x34 }
+  - { offset: 0x5025B, size: 0x8, addend: 0x0, symName: '_$s7Preview16QLPreviewHandlerC14previewObjectsSaySo0B4Item_pGvs', symObjAddr: 0x158, symBinAddr: 0x12A8, symSize: 0x60 }
+  - { offset: 0x502A1, size: 0x8, addend: 0x0, symName: '_$s7Preview16QLPreviewHandlerC14previewObjectsSaySo0B4Item_pGvM', symObjAddr: 0x1B8, symBinAddr: 0x1308, symSize: 0x80 }
+  - { offset: 0x502D4, size: 0x8, addend: 0x0, symName: '_$s7Preview16QLPreviewHandlerC14previewObjectsSaySo0B4Item_pGvM.resume.0', symObjAddr: 0x238, symBinAddr: 0x1388, symSize: 0x90 }
+  - { offset: 0x50381, size: 0x8, addend: 0x0, symName: '_$s7Preview16QLPreviewHandlerC11previewDataACSaySo0B4Item_pG_tcfC', symObjAddr: 0x2C8, symBinAddr: 0x1418, symSize: 0x34 }
+  - { offset: 0x503BC, size: 0x8, addend: 0x0, symName: '_$s7Preview16QLPreviewHandlerC11previewDataACSaySo0B4Item_pG_tcfc', symObjAddr: 0x2FC, symBinAddr: 0x144C, symSize: 0x10 }
+  - { offset: 0x503FE, size: 0x8, addend: 0x0, symName: '_$s7Preview16QLPreviewHandlerC06appendA0_9fromIndexySaySo0B4Item_pG_SiSgtF', symObjAddr: 0x30C, symBinAddr: 0x145C, symSize: 0xE0 }
+  - { offset: 0x50503, size: 0x8, addend: 0x0, symName: '_$sSa6append10contentsOfyqd__n_t7ElementQyd__RszSTRd__lFSo13QLPreviewItem_p_SaySoAE_pGTg5', symObjAddr: 0x3EC, symBinAddr: 0x153C, symSize: 0xEC }
+  - { offset: 0x506D5, size: 0x8, addend: 0x0, symName: '_$s7Preview16QLPreviewHandlerC6showQL4from5indexySo16UIViewControllerC_SitF', symObjAddr: 0x4D8, symBinAddr: 0x1628, symSize: 0x60 }
+  - { offset: 0x507A2, size: 0x8, addend: 0x0, symName: '_$s7Preview16QLPreviewHandlerCfd', symObjAddr: 0x538, symBinAddr: 0x1688, symSize: 0x30 }
+  - { offset: 0x507F8, size: 0x8, addend: 0x0, symName: '_$s7Preview16QLPreviewHandlerCfD', symObjAddr: 0x568, symBinAddr: 0x16B8, symSize: 0x38 }
+  - { offset: 0x50856, size: 0x8, addend: 0x0, symName: '_$s7Preview16QLPreviewHandlerC08numberOfA5Items2inSiSo0B10ControllerC_tF', symObjAddr: 0x5A0, symBinAddr: 0x16F0, symSize: 0x54 }
+  - { offset: 0x50907, size: 0x8, addend: 0x0, symName: '_$s7Preview16QLPreviewHandlerC08numberOfA5Items2inSiSo0B10ControllerC_tFTo', symObjAddr: 0x5F4, symBinAddr: 0x1744, symSize: 0x60 }
+  - { offset: 0x509B0, size: 0x8, addend: 0x0, symName: '_$s7Preview16QLPreviewHandlerC17previewController_0D6ItemAtSo0bF0_pSo0bE0C_SitF', symObjAddr: 0x654, symBinAddr: 0x17A4, symSize: 0x98 }
+  - { offset: 0x50AB3, size: 0x8, addend: 0x0, symName: '_$s7Preview16QLPreviewHandlerC17previewController_0D6ItemAtSo0bF0_pSo0bE0C_SitFTo', symObjAddr: 0x6EC, symBinAddr: 0x183C, symSize: 0xB4 }
+...

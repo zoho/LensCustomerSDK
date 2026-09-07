@@ -1,0 +1,69 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name PagingController
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import AssistTableDataSource
+import Foundation
+import HeaderAccessoryBarViewMaker
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class ATBarViewCell : UIKit.UICollectionViewCell {
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var isSelected: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor @preconcurrency open func cellSelected(_ flag: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+public struct BarViewStyleConfigure {
+  public var barViewHeight: CoreFoundation.CGFloat
+  public var barViewBackgroundColor: UIKit.UIColor
+}
+@_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class ATCustomPageController<CellDataType, CellType> : HeaderAccessoryBarViewMaker.HeaderAccessoryBarViewMakerController where CellType : PagingController.ATBarViewCell {
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak open var barView: UIKit.UICollectionView!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak open var barViewHeightConstraint: UIKit.NSLayoutConstraint!
+  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency weak public var middleViewContainer: UIKit.UIView!
+  @_Concurrency.MainActor @preconcurrency public var barViewStyle: PagingController.BarViewStyleConfigure {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var middleView: UIKit.UIView?
+  @_Concurrency.MainActor @preconcurrency public var cellIdentifier: Swift.String?
+  @_Concurrency.MainActor @preconcurrency public var cellNib: UIKit.UINib?
+  @_Concurrency.MainActor @preconcurrency public var cellItems: [CellDataType]
+  @_Concurrency.MainActor @preconcurrency public var cellConfigure: ((_ item: CellDataType, _ cell: CellType, _ indexPath: Foundation.IndexPath) -> Swift.Void)?
+  @_Concurrency.MainActor @preconcurrency public var cellSizeFor: ((_ item: CellDataType, _ indexPath: Foundation.IndexPath) -> CoreFoundation.CGSize)?
+  @_Concurrency.MainActor @preconcurrency public var viewControllers: [UIKit.UIViewController]
+  @_Concurrency.MainActor @preconcurrency public var currentIndex: Swift.Int
+  @_Concurrency.MainActor @preconcurrency public var didChangeController: ((_ currentPageIndex: Swift.Int, _ currentPage: UIKit.UIViewController) -> ())?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func didReceiveMemoryWarning()
+  @_Concurrency.MainActor @preconcurrency public func setController(controllerIndex: Swift.Int, animated: Swift.Bool = true)
+  @objc deinit
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class ATPageViewController : UIKit.UIPageViewController {
+  @_Concurrency.MainActor @preconcurrency public var pages: [UIKit.UIViewController]
+  @_Concurrency.MainActor @preconcurrency public var didChangePage: ((_ currentPageIndex: Swift.Int, _ currentPage: UIKit.UIViewController) -> ())?
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public func setViewControllers(_ viewControllers: [UIKit.UIViewController]?, direction: UIKit.UIPageViewController.NavigationDirection, animated: Swift.Bool, completion: ((Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(transitionStyle style: UIKit.UIPageViewController.TransitionStyle, navigationOrientation: UIKit.UIPageViewController.NavigationOrientation, options: [UIKit.UIPageViewController.OptionsKey : Any]? = nil)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension PagingController.ATPageViewController : UIKit.UIPageViewControllerDataSource {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, viewControllerAfter viewController: UIKit.UIViewController) -> UIKit.UIViewController?
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, viewControllerBefore viewController: UIKit.UIViewController) -> UIKit.UIViewController?
+}
+extension PagingController.ATPageViewController : UIKit.UIPageViewControllerDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, willTransitionTo pendingViewControllers: [UIKit.UIViewController])
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func pageViewController(_ pageViewController: UIKit.UIPageViewController, didFinishAnimating finished: Swift.Bool, previousViewControllers: [UIKit.UIViewController], transitionCompleted completed: Swift.Bool)
+}

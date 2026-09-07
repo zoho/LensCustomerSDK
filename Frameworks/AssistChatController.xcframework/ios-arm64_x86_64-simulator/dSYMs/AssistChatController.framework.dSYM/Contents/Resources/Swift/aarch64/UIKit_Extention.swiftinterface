@@ -1,0 +1,220 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name UIKit_Extention
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import Foundation
+import Foundation_Extention
+import SnapKit_Extention
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension UIKit.UIBarButtonItem {
+  @_Concurrency.MainActor @preconcurrency public var frame: CoreFoundation.CGRect {
+    get
+  }
+}
+extension UIKit.UIButton {
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var disabledTitle: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var disabledTitleColor: UIKit.UIColor {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var paddingX: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var paddingY: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+}
+extension UIKit.UIButton {
+  @_Concurrency.MainActor @preconcurrency public func setDefaultTitle(_ title: Swift.String, controlState states: [UIKit.UIControl.State] = [.normal, .highlighted])
+  @_Concurrency.MainActor @preconcurrency public func setDefaultAttributtedTitle(_ title: Foundation.NSAttributedString, controlState states: [UIKit.UIControl.State] = [.normal, .highlighted])
+}
+extension UIKit.UIColor {
+  convenience public init(red: Swift.Int, green: Swift.Int, blue: Swift.Int)
+  convenience public init(rgb: Swift.Int)
+  public class func color(dark: UIKit.UIColor, light: UIKit.UIColor) -> UIKit.UIColor
+}
+extension SwiftUICore.Color {
+  public static var alertBackground: SwiftUICore.Color {
+    get
+  }
+}
+extension UIKit.UIDevice {
+  @_Concurrency.MainActor @preconcurrency public var isIPad: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var isHighResIPad: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var modelName: Swift.String {
+    get
+  }
+}
+extension UIKit.UIDevice {
+  @_Concurrency.MainActor @preconcurrency public var isIPhone5: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor @preconcurrency public var isMaxOrPlusDevice: Swift.Bool {
+    get
+  }
+  public enum ScreenType : Swift.String {
+    case iPhone4_4S
+    case iPhones_5_5s_5c_SE
+    case iPhones_6_6s_7_8
+    case iPhones_6Plus_6sPlus_7Plus_8Plus
+    case iPhoneXR
+    case iPhoneX_iPhoneXS
+    case iPhoneXSMax
+    case unknown
+    public init?(rawValue: Swift.String)
+    @available(iOS 2.0, *)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  @_Concurrency.MainActor @preconcurrency public var screenType: UIKit.UIDevice.ScreenType {
+    get
+  }
+}
+extension UIKit.UIScreen {
+  @_Concurrency.MainActor @preconcurrency public var screenSizeBasedOnOrientaion: CoreFoundation.CGSize {
+    get
+  }
+}
+extension UIKit.UIImage {
+  convenience public init?(color: UIKit.UIColor, size: CoreFoundation.CGSize = CGSize(width: 1, height: 1))
+}
+extension UIKit.UINavigationController {
+  @_Concurrency.MainActor @preconcurrency public var prefersLargeTitles: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public func makeTransparantNavigationBar(_ flag: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func makeColorNavigationBar(color: UIKit.UIColor, hideShadowImage: Swift.Bool = true)
+}
+extension UIKit.UIScrollView {
+  @_Concurrency.MainActor @preconcurrency public func didScrollToEnd() -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency public func tryingToViewMore(_ range: CoreFoundation.CGFloat = 50) -> Swift.Bool
+}
+extension UIKit.UIScrollView {
+  public enum ATViewSide {
+    case left, right, bottom, top
+    public static func == (a: UIKit.UIScrollView.ATViewSide, b: UIKit.UIScrollView.ATViewSide) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @_Concurrency.MainActor @preconcurrency public func contentSize(withSafeArea side: UIKit.UIScrollView.ATViewSide) -> CoreFoundation.CGSize
+}
+extension UIKit.UISearchBar {
+  @_Concurrency.MainActor @preconcurrency public var at_searchTextField: UIKit.UITextField? {
+    get
+  }
+}
+extension UIKit.UITableView {
+  @_Concurrency.MainActor @preconcurrency public func adjustTableViewHeaderFrameIfNeeded()
+}
+extension UIKit.UITableView {
+  @_Concurrency.MainActor @preconcurrency public func scrollToLastIndexPath()
+}
+extension UIKit.UITableView {
+  @_Concurrency.MainActor @preconcurrency public var isTableEmpty: Swift.Bool {
+    get
+  }
+}
+extension UIKit.UITableView {
+  @_Concurrency.MainActor @preconcurrency public func addNoDataView(noDataView: UIKit.UIView)
+  @_Concurrency.MainActor @preconcurrency public func removenoDataView()
+}
+extension UIKit.UITextField {
+  @_Concurrency.MainActor @preconcurrency public var leftPading: CoreFoundation.CGFloat {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public var placeHolderColor: UIKit.UIColor {
+    get
+    set
+  }
+}
+extension UIKit.UIPopoverArrowDirection {
+  public func defaultSourceRect(from view: UIKit.UIView) -> CoreFoundation.CGRect?
+  public var isVerticalDirection: Swift.Bool {
+    get
+  }
+}
+extension UIKit.UIViewController {
+  @objc @_Concurrency.MainActor @preconcurrency dynamic public func openShareSheet(_ data: [Any], popFromView view: UIKit.UIView, completionHandler completionBlock: ((Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public func openShareSheet(_ data: [Any], popFromView barbutton: UIKit.UIBarButtonItem, completionHandler completionBlock: ((Swift.Bool) -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public func prepareAsPopoverController(from view: UIKit.UIView, soruceRect: CoreFoundation.CGRect?, preferedSize contentSize: CoreFoundation.CGSize = .zero, permittedArrowDirections directions: UIKit.UIPopoverArrowDirection = .down)
+  @_Concurrency.MainActor @preconcurrency public func prepareAsPopoverController(from barButton: UIKit.UIBarButtonItem, soruceRect: CoreFoundation.CGRect?, preferedSize contentSize: CoreFoundation.CGSize = .zero, permittedArrowDirections directions: UIKit.UIPopoverArrowDirection = .down)
+  @_Concurrency.MainActor @preconcurrency public func dismissPopoverIfExist()
+}
+extension UIKit.UIViewController : UIKit.UIPopoverPresentationControllerDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic open func popoverPresentationController(_ popoverPresentationController: UIKit.UIPopoverPresentationController, willRepositionPopoverTo rect: Swift.UnsafeMutablePointer<CoreFoundation.CGRect>, in view: Swift.AutoreleasingUnsafeMutablePointer<UIKit.UIView>)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic open func prepareForPopoverPresentation(_ popoverPresentationController: UIKit.UIPopoverPresentationController)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic open func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIKit.UIPopoverPresentationController)
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public func makeCornerRadius(with value: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency public func makeBlendEdge(withPoint: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency public func makeBlendEdge(heightDevideBy: CoreFoundation.CGFloat = 06)
+  @_Concurrency.MainActor @preconcurrency public var isCircle: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor @preconcurrency public func layoutIfNeededWithAnimation()
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public var safeAreaInsets_Below11Also: UIKit.UIEdgeInsets {
+    get
+  }
+}
+extension UIKit.UIView {
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var atCornerRadius: CoreFoundation.CGFloat {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var atBorderColor: UIKit.UIColor? {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var borderWidth: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var shadowRadius: CoreFoundation.CGFloat {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var shadowColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var shadowOpacity: Swift.Float {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor @preconcurrency dynamic public var shadowOffset: CoreFoundation.CGSize {
+    @objc get
+    @objc set
+  }
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor @preconcurrency public func makeSecure()
+}
+extension UIKit.UIDevice.ScreenType : Swift.Equatable {}
+extension UIKit.UIDevice.ScreenType : Swift.Hashable {}
+extension UIKit.UIDevice.ScreenType : Swift.RawRepresentable {}
+extension UIKit.UIScrollView.ATViewSide : Swift.Equatable {}
+extension UIKit.UIScrollView.ATViewSide : Swift.Hashable {}

@@ -1,0 +1,3 @@
+framework module TechAppticsEventModel {
+  header "TechAppticsEventModel-Swift.h"
+}

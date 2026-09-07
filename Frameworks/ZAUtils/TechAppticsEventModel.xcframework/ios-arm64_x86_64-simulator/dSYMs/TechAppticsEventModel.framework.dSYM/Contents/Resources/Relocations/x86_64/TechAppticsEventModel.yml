@@ -1,0 +1,18 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     '/Users/jem-8413/Library/Developer/Xcode/DerivedData/ZAUtilsFramework-ckicxhmmskzkvughqdftssjpucxw/Build/Intermediates.noindex/ArchiveIntermediates/TechAppticsEventModel/InstallationBuildProductsLocation/Library/Frameworks/TechAppticsEventModel.framework/TechAppticsEventModel'
+relocations:
+  - { offset: 0x2AFDB, size: 0x8, addend: 0x0, symName: _TechAppticsEventModelVersionString, symObjAddr: 0x0, symBinAddr: 0x1E20, symSize: 0x0 }
+  - { offset: 0x2B012, size: 0x8, addend: 0x0, symName: _TechAppticsEventModelVersionNumber, symObjAddr: 0x40, symBinAddr: 0x1E60, symSize: 0x0 }
+  - { offset: 0x2B0C8, size: 0x8, addend: 0x0, symName: '_$s21TechAppticsEventModel16SDKAppticsEventsC04sendF0_WZ', symObjAddr: 0x0, symBinAddr: 0xC90, symSize: 0x40 }
+  - { offset: 0x2B1A3, size: 0x8, addend: 0x0, symName: '_$s21TechAppticsEventModel16SDKAppticsEventsC04sendF07Combine18PassthroughSubjectCyAA0C8Protocol_ps5NeverOGvpZACmTK', symObjAddr: 0x170, symBinAddr: 0xE00, symSize: 0x60 }
+  - { offset: 0x2B1C8, size: 0x8, addend: 0x0, symName: '_$s21TechAppticsEventModel16SDKAppticsEventsC04sendF07Combine18PassthroughSubjectCyAA0C8Protocol_ps5NeverOGvpZACmTk', symObjAddr: 0x1D0, symBinAddr: 0xE60, symSize: 0x70 }
+  - { offset: 0x2B1ED, size: 0x8, addend: 0x0, symName: '_$s21TechAppticsEventModel16SDKAppticsEventsCMa', symObjAddr: 0x270, symBinAddr: 0xF00, symSize: 0x20 }
+  - { offset: 0x2B201, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledNameV2, symObjAddr: 0x2C0, symBinAddr: 0xF50, symSize: 0x3E }
+  - { offset: 0x2B25C, size: 0x8, addend: 0x0, symName: '_$s21TechAppticsEventModel16SDKAppticsEventsC04sendF07Combine18PassthroughSubjectCyAA0C8Protocol_ps5NeverOGvgZ', symObjAddr: 0x40, symBinAddr: 0xCD0, symSize: 0x60 }
+  - { offset: 0x2B294, size: 0x8, addend: 0x0, symName: '_$s21TechAppticsEventModel16SDKAppticsEventsC04sendF07Combine18PassthroughSubjectCyAA0C8Protocol_ps5NeverOGvsZ', symObjAddr: 0xA0, symBinAddr: 0xD30, symSize: 0x60 }
+  - { offset: 0x2B2D1, size: 0x8, addend: 0x0, symName: '_$s21TechAppticsEventModel16SDKAppticsEventsC04sendF07Combine18PassthroughSubjectCyAA0C8Protocol_ps5NeverOGvMZ', symObjAddr: 0x100, symBinAddr: 0xD90, symSize: 0x60 }
+  - { offset: 0x2B2FE, size: 0x8, addend: 0x0, symName: '_$s21TechAppticsEventModel16SDKAppticsEventsC04sendF07Combine18PassthroughSubjectCyAA0C8Protocol_ps5NeverOGvMZ.resume.0', symObjAddr: 0x160, symBinAddr: 0xDF0, symSize: 0x10 }
+  - { offset: 0x2B31F, size: 0x8, addend: 0x0, symName: '_$s21TechAppticsEventModel16SDKAppticsEventsCfd', symObjAddr: 0x240, symBinAddr: 0xED0, symSize: 0x10 }
+  - { offset: 0x2B344, size: 0x8, addend: 0x0, symName: '_$s21TechAppticsEventModel16SDKAppticsEventsCfD', symObjAddr: 0x250, symBinAddr: 0xEE0, symSize: 0x20 }
+...

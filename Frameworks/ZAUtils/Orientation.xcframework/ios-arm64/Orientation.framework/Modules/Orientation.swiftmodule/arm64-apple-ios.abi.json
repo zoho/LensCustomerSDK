@@ -1,0 +1,1158 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "Orientation",
+    "printedName": "Orientation",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Orientation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "Orientation"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OrientationChanger",
+        "printedName": "OrientationChanger",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "changeOriantaion",
+            "printedName": "changeOriantaion(atoriantation:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "At_Orientation",
+                "printedName": "Orientation.At_Orientation",
+                "usr": "s:11Orientation03At_A0O"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11Orientation0A7ChangerPAAE16changeOriantaion13atoriantationyAA03At_A0O_tF",
+            "mangledName": "$s11Orientation0A7ChangerPAAE16changeOriantaion13atoriantationyAA03At_A0O_tF",
+            "moduleName": "Orientation",
+            "genericSig": "<τ_0_0 where τ_0_0 : Orientation.OrientationChanger>",
+            "sugared_genericSig": "<Self where Self : Orientation.OrientationChanger>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "changeOriantaion",
+            "printedName": "changeOriantaion(deviceOriantation:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIDeviceOrientation",
+                "printedName": "UIKit.UIDeviceOrientation",
+                "usr": "c:@E@UIDeviceOrientation"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11Orientation0A7ChangerPAAE16changeOriantaion17deviceOriantationySo08UIDeviceA0V_tF",
+            "mangledName": "$s11Orientation0A7ChangerPAAE16changeOriantaion17deviceOriantationySo08UIDeviceA0V_tF",
+            "moduleName": "Orientation",
+            "genericSig": "<τ_0_0 where τ_0_0 : Orientation.OrientationChanger>",
+            "sugared_genericSig": "<Self where Self : Orientation.OrientationChanger>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "changeOriantaion",
+            "printedName": "changeOriantaion(oriantationMask:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIInterfaceOrientationMask",
+                "printedName": "UIKit.UIInterfaceOrientationMask",
+                "usr": "c:@E@UIInterfaceOrientationMask"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11Orientation0A7ChangerPAAE16changeOriantaion15oriantationMaskySo011UIInterfaceaF0V_tF",
+            "mangledName": "$s11Orientation0A7ChangerPAAE16changeOriantaion15oriantationMaskySo011UIInterfaceaF0V_tF",
+            "moduleName": "Orientation",
+            "genericSig": "<τ_0_0 where τ_0_0 : Orientation.OrientationChanger>",
+            "sugared_genericSig": "<Self where Self : Orientation.OrientationChanger>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:11Orientation0A7ChangerP",
+        "mangledName": "$s11Orientation0A7ChangerP",
+        "moduleName": "Orientation",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OrientationHandler",
+        "printedName": "OrientationHandler",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "supportedOrientation",
+            "printedName": "supportedOrientation()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "At_Orientation",
+                "printedName": "Orientation.At_Orientation",
+                "usr": "s:11Orientation03At_A0O"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11Orientation0A7HandlerP09supportedA0AA03At_A0OyF",
+            "mangledName": "$s11Orientation0A7HandlerP09supportedA0AA03At_A0OyF",
+            "moduleName": "Orientation",
+            "genericSig": "<τ_0_0 where τ_0_0 : Orientation.OrientationHandler>",
+            "sugared_genericSig": "<Self where Self : Orientation.OrientationHandler>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "supportedOrientation",
+            "printedName": "supportedOrientation()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "At_Orientation",
+                "printedName": "Orientation.At_Orientation",
+                "usr": "s:11Orientation03At_A0O"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11Orientation0A7HandlerPAASo16UIViewControllerCRbzrlE09supportedA0AA03At_A0OyF",
+            "mangledName": "$s11Orientation0A7HandlerPAASo16UIViewControllerCRbzrlE09supportedA0AA03At_A0OyF",
+            "moduleName": "Orientation",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController, τ_0_0 : Orientation.OrientationHandler>",
+            "sugared_genericSig": "<Self where Self : UIKit.UIViewController, Self : Orientation.OrientationHandler>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "currentOrientation",
+            "printedName": "currentOrientation",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "At_Orientation",
+                "printedName": "Orientation.At_Orientation",
+                "usr": "s:11Orientation03At_A0O"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11Orientation0A7HandlerPAASo16UIViewControllerCRbzrlE07currentA0AA03At_A0Ovp",
+            "mangledName": "$s11Orientation0A7HandlerPAASo16UIViewControllerCRbzrlE07currentA0AA03At_A0Ovp",
+            "moduleName": "Orientation",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "At_Orientation",
+                    "printedName": "Orientation.At_Orientation",
+                    "usr": "s:11Orientation03At_A0O"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11Orientation0A7HandlerPAASo16UIViewControllerCRbzrlE07currentA0AA03At_A0Ovg",
+                "mangledName": "$s11Orientation0A7HandlerPAASo16UIViewControllerCRbzrlE07currentA0AA03At_A0Ovg",
+                "moduleName": "Orientation",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UIViewController, τ_0_0 : Orientation.OrientationHandler>",
+                "sugared_genericSig": "<Self where Self : UIKit.UIViewController, Self : Orientation.OrientationHandler>",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:11Orientation0A7HandlerP",
+        "mangledName": "$s11Orientation0A7HandlerP",
+        "moduleName": "Orientation",
+        "genericSig": "<τ_0_0 : Orientation.OrientationChanger>",
+        "sugared_genericSig": "<Self : Orientation.OrientationChanger>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "OrientationChanger",
+            "printedName": "OrientationChanger",
+            "usr": "s:11Orientation0A7ChangerP",
+            "mangledName": "$s11Orientation0A7ChangerP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Orientation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "Orientation"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "At_Orientation",
+        "printedName": "At_Orientation",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "landscape",
+            "printedName": "landscape",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Orientation.At_Orientation.Type) -> Orientation.At_Orientation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "At_Orientation",
+                    "printedName": "Orientation.At_Orientation",
+                    "usr": "s:11Orientation03At_A0O"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Orientation.At_Orientation.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "At_Orientation",
+                        "printedName": "Orientation.At_Orientation",
+                        "usr": "s:11Orientation03At_A0O"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11Orientation03At_A0O9landscapeyA2CmF",
+            "mangledName": "$s11Orientation03At_A0O9landscapeyA2CmF",
+            "moduleName": "Orientation"
+          },
+          {
+            "kind": "Var",
+            "name": "landscapeLeft",
+            "printedName": "landscapeLeft",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Orientation.At_Orientation.Type) -> Orientation.At_Orientation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "At_Orientation",
+                    "printedName": "Orientation.At_Orientation",
+                    "usr": "s:11Orientation03At_A0O"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Orientation.At_Orientation.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "At_Orientation",
+                        "printedName": "Orientation.At_Orientation",
+                        "usr": "s:11Orientation03At_A0O"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11Orientation03At_A0O13landscapeLeftyA2CmF",
+            "mangledName": "$s11Orientation03At_A0O13landscapeLeftyA2CmF",
+            "moduleName": "Orientation"
+          },
+          {
+            "kind": "Var",
+            "name": "landscapeRight",
+            "printedName": "landscapeRight",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Orientation.At_Orientation.Type) -> Orientation.At_Orientation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "At_Orientation",
+                    "printedName": "Orientation.At_Orientation",
+                    "usr": "s:11Orientation03At_A0O"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Orientation.At_Orientation.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "At_Orientation",
+                        "printedName": "Orientation.At_Orientation",
+                        "usr": "s:11Orientation03At_A0O"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11Orientation03At_A0O14landscapeRightyA2CmF",
+            "mangledName": "$s11Orientation03At_A0O14landscapeRightyA2CmF",
+            "moduleName": "Orientation"
+          },
+          {
+            "kind": "Var",
+            "name": "portrait",
+            "printedName": "portrait",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Orientation.At_Orientation.Type) -> Orientation.At_Orientation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "At_Orientation",
+                    "printedName": "Orientation.At_Orientation",
+                    "usr": "s:11Orientation03At_A0O"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Orientation.At_Orientation.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "At_Orientation",
+                        "printedName": "Orientation.At_Orientation",
+                        "usr": "s:11Orientation03At_A0O"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11Orientation03At_A0O8portraityA2CmF",
+            "mangledName": "$s11Orientation03At_A0O8portraityA2CmF",
+            "moduleName": "Orientation"
+          },
+          {
+            "kind": "Var",
+            "name": "all",
+            "printedName": "all",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Orientation.At_Orientation.Type) -> Orientation.At_Orientation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "At_Orientation",
+                    "printedName": "Orientation.At_Orientation",
+                    "usr": "s:11Orientation03At_A0O"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Orientation.At_Orientation.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "At_Orientation",
+                        "printedName": "Orientation.At_Orientation",
+                        "usr": "s:11Orientation03At_A0O"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11Orientation03At_A0O3allyA2CmF",
+            "mangledName": "$s11Orientation03At_A0O3allyA2CmF",
+            "moduleName": "Orientation"
+          },
+          {
+            "kind": "Var",
+            "name": "allButUpsideDown",
+            "printedName": "allButUpsideDown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Orientation.At_Orientation.Type) -> Orientation.At_Orientation",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "At_Orientation",
+                    "printedName": "Orientation.At_Orientation",
+                    "usr": "s:11Orientation03At_A0O"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Orientation.At_Orientation.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "At_Orientation",
+                        "printedName": "Orientation.At_Orientation",
+                        "usr": "s:11Orientation03At_A0O"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:11Orientation03At_A0O16allButUpsideDownyA2CmF",
+            "mangledName": "$s11Orientation03At_A0O16allButUpsideDownyA2CmF",
+            "moduleName": "Orientation"
+          },
+          {
+            "kind": "Var",
+            "name": "orientationMask",
+            "printedName": "orientationMask",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIInterfaceOrientationMask",
+                "printedName": "UIKit.UIInterfaceOrientationMask",
+                "usr": "c:@E@UIInterfaceOrientationMask"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11Orientation03At_A0O15orientationMaskSo011UIInterfaceaD0Vvp",
+            "mangledName": "$s11Orientation03At_A0O15orientationMaskSo011UIInterfaceaD0Vvp",
+            "moduleName": "Orientation",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIInterfaceOrientationMask",
+                    "printedName": "UIKit.UIInterfaceOrientationMask",
+                    "usr": "c:@E@UIInterfaceOrientationMask"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11Orientation03At_A0O15orientationMaskSo011UIInterfaceaD0Vvg",
+                "mangledName": "$s11Orientation03At_A0O15orientationMaskSo011UIInterfaceaD0Vvg",
+                "moduleName": "Orientation",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "at_orientaion",
+            "printedName": "at_orientaion(deviceOrientation:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "At_Orientation",
+                "printedName": "Orientation.At_Orientation",
+                "usr": "s:11Orientation03At_A0O"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIDeviceOrientation",
+                "printedName": "UIKit.UIDeviceOrientation",
+                "usr": "c:@E@UIDeviceOrientation"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11Orientation03At_A0O13at_orientaion06deviceA0ACSo08UIDeviceA0V_tFZ",
+            "mangledName": "$s11Orientation03At_A0O13at_orientaion06deviceA0ACSo08UIDeviceA0V_tFZ",
+            "moduleName": "Orientation",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "at_orientaion",
+            "printedName": "at_orientaion(orientationMask:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "At_Orientation",
+                "printedName": "Orientation.At_Orientation",
+                "usr": "s:11Orientation03At_A0O"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIInterfaceOrientationMask",
+                "printedName": "UIKit.UIInterfaceOrientationMask",
+                "usr": "c:@E@UIInterfaceOrientationMask"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11Orientation03At_A0O13at_orientaion15orientationMaskACSo011UIInterfaceaF0V_tFZ",
+            "mangledName": "$s11Orientation03At_A0O13at_orientaion15orientationMaskACSo011UIInterfaceaF0V_tFZ",
+            "moduleName": "Orientation",
+            "static": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "interfaceOrientation",
+            "printedName": "interfaceOrientation",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIInterfaceOrientation",
+                "printedName": "UIKit.UIInterfaceOrientation",
+                "usr": "c:@E@UIInterfaceOrientation"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11Orientation03At_A0O09interfaceA0So011UIInterfaceA0Vvp",
+            "mangledName": "$s11Orientation03At_A0O09interfaceA0So011UIInterfaceA0Vvp",
+            "moduleName": "Orientation",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIInterfaceOrientation",
+                    "printedName": "UIKit.UIInterfaceOrientation",
+                    "usr": "c:@E@UIInterfaceOrientation"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11Orientation03At_A0O09interfaceA0So011UIInterfaceA0Vvg",
+                "mangledName": "$s11Orientation03At_A0O09interfaceA0So011UIInterfaceA0Vvg",
+                "moduleName": "Orientation",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "At_Orientation",
+                "printedName": "Orientation.At_Orientation",
+                "usr": "s:11Orientation03At_A0O"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "At_Orientation",
+                "printedName": "Orientation.At_Orientation",
+                "usr": "s:11Orientation03At_A0O"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11Orientation03At_A0O2eeoiySbAC_ACtFZ",
+            "mangledName": "$s11Orientation03At_A0O2eeoiySbAC_ACtFZ",
+            "moduleName": "Orientation",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11Orientation03At_A0O9hashValueSivp",
+            "mangledName": "$s11Orientation03At_A0O9hashValueSivp",
+            "moduleName": "Orientation",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11Orientation03At_A0O9hashValueSivg",
+                "mangledName": "$s11Orientation03At_A0O9hashValueSivg",
+                "moduleName": "Orientation",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11Orientation03At_A0O4hash4intoys6HasherVz_tF",
+            "mangledName": "$s11Orientation03At_A0O4hash4intoys6HasherVz_tF",
+            "moduleName": "Orientation",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:11Orientation03At_A0O",
+        "mangledName": "$s11Orientation03At_A0O",
+        "moduleName": "Orientation",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "Orientation",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OrientationHelperController",
+        "printedName": "OrientationHelperController",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "viewDidLoad",
+            "printedName": "viewDidLoad()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@Orientation@objc(cs)OrientationHelperController(im)viewDidLoad",
+            "mangledName": "$s11Orientation0A16HelperControllerC11viewDidLoadyyF",
+            "moduleName": "Orientation",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "viewDidLoad",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewWillAppear",
+            "printedName": "viewWillAppear(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@Orientation@objc(cs)OrientationHelperController(im)viewWillAppear:",
+            "mangledName": "$s11Orientation0A16HelperControllerC14viewWillAppearyySbF",
+            "moduleName": "Orientation",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "viewWillAppear:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "viewWillDisappear",
+            "printedName": "viewWillDisappear(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@Orientation@objc(cs)OrientationHelperController(im)viewWillDisappear:",
+            "mangledName": "$s11Orientation0A16HelperControllerC17viewWillDisappearyySbF",
+            "moduleName": "Orientation",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "viewWillDisappear:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deviceRotated",
+            "printedName": "deviceRotated(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIDeviceOrientation",
+                "printedName": "UIKit.UIDeviceOrientation",
+                "usr": "c:@E@UIDeviceOrientation"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11Orientation0A16HelperControllerC13deviceRotatedyySo08UIDeviceA0VF",
+            "mangledName": "$s11Orientation0A16HelperControllerC13deviceRotatedyySo08UIDeviceA0VF",
+            "moduleName": "Orientation",
+            "isOpen": true,
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "supportedOrientation",
+            "printedName": "supportedOrientation()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "At_Orientation",
+                "printedName": "Orientation.At_Orientation",
+                "usr": "s:11Orientation03At_A0O"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11Orientation0A16HelperControllerC09supportedA0AA03At_A0OyF",
+            "mangledName": "$s11Orientation0A16HelperControllerC09supportedA0AA03At_A0OyF",
+            "moduleName": "Orientation",
+            "isOpen": true,
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(nibName:bundle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OrientationHelperController",
+                "printedName": "Orientation.OrientationHelperController",
+                "usr": "c:@M@Orientation@objc(cs)OrientationHelperController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Bundle?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@Orientation@objc(cs)OrientationHelperController(im)initWithNibName:bundle:",
+            "mangledName": "$s11Orientation0A16HelperControllerC7nibName6bundleACSSSg_So8NSBundleCSgtcfc",
+            "moduleName": "Orientation",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithNibName:bundle:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Orientation.OrientationHelperController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OrientationHelperController",
+                    "printedName": "Orientation.OrientationHelperController",
+                    "usr": "c:@M@Orientation@objc(cs)OrientationHelperController"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@Orientation@objc(cs)OrientationHelperController(im)initWithCoder:",
+            "mangledName": "$s11Orientation0A16HelperControllerC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "Orientation",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@Orientation@objc(cs)OrientationHelperController",
+        "mangledName": "$s11Orientation0A16HelperControllerC",
+        "moduleName": "Orientation",
+        "isOpen": true,
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UIViewController",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UIViewController",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "OrientationHandler",
+            "printedName": "OrientationHandler",
+            "usr": "s:11Orientation0A7HandlerP",
+            "mangledName": "$s11Orientation0A7HandlerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "OrientationChanger",
+            "printedName": "OrientationChanger",
+            "usr": "s:11Orientation0A7ChangerP",
+            "mangledName": "$s11Orientation0A7ChangerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": []
+}

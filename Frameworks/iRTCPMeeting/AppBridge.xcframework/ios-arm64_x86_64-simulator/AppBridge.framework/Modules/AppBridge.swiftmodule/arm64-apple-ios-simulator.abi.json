@@ -1,0 +1,3289 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "AppBridge",
+    "printedName": "AppBridge",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppBridge",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ABClientConnection",
+        "printedName": "ABClientConnection",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "autoReconnect",
+            "printedName": "autoReconnect",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AppBridge18ABClientConnectionC13autoReconnectSbvp",
+            "mangledName": "$s9AppBridge18ABClientConnectionC13autoReconnectSbvp",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AppBridge18ABClientConnectionC13autoReconnectSbvg",
+                "mangledName": "$s9AppBridge18ABClientConnectionC13autoReconnectSbvg",
+                "moduleName": "AppBridge",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AppBridge18ABClientConnectionC13autoReconnectSbvs",
+                "mangledName": "$s9AppBridge18ABClientConnectionC13autoReconnectSbvs",
+                "moduleName": "AppBridge",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AppBridge18ABClientConnectionC13autoReconnectSbvM",
+                "mangledName": "$s9AppBridge18ABClientConnectionC13autoReconnectSbvM",
+                "moduleName": "AppBridge",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((AppBridge.ABConnection.ConnectionError?) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AppBridge.ABConnection.ConnectionError?) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "AppBridge.ABConnection.ConnectionError?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ConnectionError",
+                            "printedName": "AppBridge.ABConnection.ConnectionError",
+                            "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AppBridge18ABClientConnectionC5start10completionyyAA12ABConnectionC0D5ErrorOSgcSg_tF",
+            "mangledName": "$s9AppBridge18ABClientConnectionC5start10completionyyAA12ABConnectionC0D5ErrorOSgcSg_tF",
+            "moduleName": "AppBridge",
+            "overriding": true,
+            "declAttributes": [
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stop",
+            "printedName": "stop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AppBridge18ABClientConnectionC4stopyyF",
+            "mangledName": "$s9AppBridge18ABClientConnectionC4stopyyF",
+            "moduleName": "AppBridge",
+            "overriding": true,
+            "declAttributes": [
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "send",
+            "printedName": "send(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ABMessage",
+                "printedName": "AppBridge.ABMessage",
+                "usr": "s:9AppBridge9ABMessageV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AppBridge18ABClientConnectionC4sendyyAA9ABMessageVF",
+            "mangledName": "$s9AppBridge18ABClientConnectionC4sendyyAA9ABMessageVF",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(appGroupID:namespace:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ABClientConnection",
+                "printedName": "AppBridge.ABClientConnection",
+                "usr": "s:9AppBridge18ABClientConnectionC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9AppBridge18ABClientConnectionC10appGroupID9namespaceACSS_Sitcfc",
+            "mangledName": "$s9AppBridge18ABClientConnectionC10appGroupID9namespaceACSS_Sitcfc",
+            "moduleName": "AppBridge",
+            "overriding": true,
+            "implicit": true,
+            "declAttributes": [
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:9AppBridge18ABClientConnectionC",
+        "mangledName": "$s9AppBridge18ABClientConnectionC",
+        "moduleName": "AppBridge",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "superclassUsr": "s:9AppBridge12ABConnectionC",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "AppBridge.ABConnection"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppBridge",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AppBridge"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ABConnectionDelegate",
+        "printedName": "ABConnectionDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "connection",
+            "printedName": "connection(_:didConnectTo:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ABConnection",
+                "printedName": "AppBridge.ABConnection",
+                "usr": "s:9AppBridge12ABConnectionC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AppBridge20ABConnectionDelegateP10connection_12didConnectToyAA0C0C_s5Int32VtF",
+            "mangledName": "$s9AppBridge20ABConnectionDelegateP10connection_12didConnectToyAA0C0C_s5Int32VtF",
+            "moduleName": "AppBridge",
+            "genericSig": "<τ_0_0 where τ_0_0 : AppBridge.ABConnectionDelegate>",
+            "sugared_genericSig": "<Self where Self : AppBridge.ABConnectionDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "connection",
+            "printedName": "connection(_:didDisconnectFrom:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ABConnection",
+                "printedName": "AppBridge.ABConnection",
+                "usr": "s:9AppBridge12ABConnectionC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AppBridge20ABConnectionDelegateP10connection_17didDisconnectFromyAA0C0C_s5Int32VtF",
+            "mangledName": "$s9AppBridge20ABConnectionDelegateP10connection_17didDisconnectFromyAA0C0C_s5Int32VtF",
+            "moduleName": "AppBridge",
+            "genericSig": "<τ_0_0 where τ_0_0 : AppBridge.ABConnectionDelegate>",
+            "sugared_genericSig": "<Self where Self : AppBridge.ABConnectionDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "connectionStateDidChange",
+            "printedName": "connectionStateDidChange(_:to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ABConnection",
+                "printedName": "AppBridge.ABConnection",
+                "usr": "s:9AppBridge12ABConnectionC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AppBridge20ABConnectionDelegateP24connectionStateDidChange_2toyAA0C0C_SbtF",
+            "mangledName": "$s9AppBridge20ABConnectionDelegateP24connectionStateDidChange_2toyAA0C0C_SbtF",
+            "moduleName": "AppBridge",
+            "genericSig": "<τ_0_0 where τ_0_0 : AppBridge.ABConnectionDelegate>",
+            "sugared_genericSig": "<Self where Self : AppBridge.ABConnectionDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "connection",
+            "printedName": "connection(_:didDiscoverBundleIDForConnection:name:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ABConnection",
+                "printedName": "AppBridge.ABConnection",
+                "usr": "s:9AppBridge12ABConnectionC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AppBridge20ABConnectionDelegateP10connection_32didDiscoverBundleIDForConnection4nameyAA0C0C_s5Int32VSStF",
+            "mangledName": "$s9AppBridge20ABConnectionDelegateP10connection_32didDiscoverBundleIDForConnection4nameyAA0C0C_s5Int32VSStF",
+            "moduleName": "AppBridge",
+            "genericSig": "<τ_0_0 where τ_0_0 : AppBridge.ABConnectionDelegate>",
+            "sugared_genericSig": "<Self where Self : AppBridge.ABConnectionDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "connection",
+            "printedName": "connection(_:didReceive:from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ABConnection",
+                "printedName": "AppBridge.ABConnection",
+                "usr": "s:9AppBridge12ABConnectionC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ABMessage",
+                "printedName": "AppBridge.ABMessage",
+                "usr": "s:9AppBridge9ABMessageV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AppBridge20ABConnectionDelegateP10connection_10didReceive4fromyAA0C0C_AA9ABMessageVs5Int32VtF",
+            "mangledName": "$s9AppBridge20ABConnectionDelegateP10connection_10didReceive4fromyAA0C0C_AA9ABMessageVs5Int32VtF",
+            "moduleName": "AppBridge",
+            "genericSig": "<τ_0_0 where τ_0_0 : AppBridge.ABConnectionDelegate>",
+            "sugared_genericSig": "<Self where Self : AppBridge.ABConnectionDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "connection",
+            "printedName": "connection(_:didConnectTo:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ABConnection",
+                "printedName": "AppBridge.ABConnection",
+                "usr": "s:9AppBridge12ABConnectionC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AppBridge20ABConnectionDelegatePAAE10connection_12didConnectToyAA0C0C_s5Int32VtF",
+            "mangledName": "$s9AppBridge20ABConnectionDelegatePAAE10connection_12didConnectToyAA0C0C_s5Int32VtF",
+            "moduleName": "AppBridge",
+            "genericSig": "<τ_0_0 where τ_0_0 : AppBridge.ABConnectionDelegate>",
+            "sugared_genericSig": "<Self where Self : AppBridge.ABConnectionDelegate>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "connection",
+            "printedName": "connection(_:didDisconnectFrom:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ABConnection",
+                "printedName": "AppBridge.ABConnection",
+                "usr": "s:9AppBridge12ABConnectionC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AppBridge20ABConnectionDelegatePAAE10connection_17didDisconnectFromyAA0C0C_s5Int32VtF",
+            "mangledName": "$s9AppBridge20ABConnectionDelegatePAAE10connection_17didDisconnectFromyAA0C0C_s5Int32VtF",
+            "moduleName": "AppBridge",
+            "genericSig": "<τ_0_0 where τ_0_0 : AppBridge.ABConnectionDelegate>",
+            "sugared_genericSig": "<Self where Self : AppBridge.ABConnectionDelegate>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "connectionStateDidChange",
+            "printedName": "connectionStateDidChange(_:to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ABConnection",
+                "printedName": "AppBridge.ABConnection",
+                "usr": "s:9AppBridge12ABConnectionC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AppBridge20ABConnectionDelegatePAAE24connectionStateDidChange_2toyAA0C0C_SbtF",
+            "mangledName": "$s9AppBridge20ABConnectionDelegatePAAE24connectionStateDidChange_2toyAA0C0C_SbtF",
+            "moduleName": "AppBridge",
+            "genericSig": "<τ_0_0 where τ_0_0 : AppBridge.ABConnectionDelegate>",
+            "sugared_genericSig": "<Self where Self : AppBridge.ABConnectionDelegate>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "connection",
+            "printedName": "connection(_:didDiscoverBundleIDForConnection:name:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ABConnection",
+                "printedName": "AppBridge.ABConnection",
+                "usr": "s:9AppBridge12ABConnectionC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AppBridge20ABConnectionDelegatePAAE10connection_32didDiscoverBundleIDForConnection4nameyAA0C0C_s5Int32VSStF",
+            "mangledName": "$s9AppBridge20ABConnectionDelegatePAAE10connection_32didDiscoverBundleIDForConnection4nameyAA0C0C_s5Int32VSStF",
+            "moduleName": "AppBridge",
+            "genericSig": "<τ_0_0 where τ_0_0 : AppBridge.ABConnectionDelegate>",
+            "sugared_genericSig": "<Self where Self : AppBridge.ABConnectionDelegate>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:9AppBridge20ABConnectionDelegateP",
+        "mangledName": "$s9AppBridge20ABConnectionDelegateP",
+        "moduleName": "AppBridge",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ABConnection",
+        "printedName": "ABConnection",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "reservedMessageTypeRange",
+            "printedName": "reservedMessageTypeRange",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ClosedRange",
+                "printedName": "Swift.ClosedRange<Swift.UInt32>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt32",
+                    "printedName": "Swift.UInt32",
+                    "usr": "s:s6UInt32V"
+                  }
+                ],
+                "usr": "s:SN"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AppBridge12ABConnectionC24reservedMessageTypeRangeSNys6UInt32VGvpZ",
+            "mangledName": "$s9AppBridge12ABConnectionC24reservedMessageTypeRangeSNys6UInt32VGvpZ",
+            "moduleName": "AppBridge",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "Final",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ClosedRange",
+                    "printedName": "Swift.ClosedRange<Swift.UInt32>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UInt32",
+                        "printedName": "Swift.UInt32",
+                        "usr": "s:s6UInt32V"
+                      }
+                    ],
+                    "usr": "s:SN"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AppBridge12ABConnectionC24reservedMessageTypeRangeSNys6UInt32VGvgZ",
+                "mangledName": "$s9AppBridge12ABConnectionC24reservedMessageTypeRangeSNys6UInt32VGvgZ",
+                "moduleName": "AppBridge",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "ConnectionError",
+            "printedName": "ConnectionError",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "bindError",
+                "printedName": "bindError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AppBridge.ABConnection.ConnectionError.Type) -> AppBridge.ABConnection.ConnectionError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConnectionError",
+                        "printedName": "AppBridge.ABConnection.ConnectionError",
+                        "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "AppBridge.ABConnection.ConnectionError.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ConnectionError",
+                            "printedName": "AppBridge.ABConnection.ConnectionError",
+                            "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO04bindE0yA2EmF",
+                "mangledName": "$s9AppBridge12ABConnectionC15ConnectionErrorO04bindE0yA2EmF",
+                "moduleName": "AppBridge"
+              },
+              {
+                "kind": "Var",
+                "name": "creationError",
+                "printedName": "creationError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AppBridge.ABConnection.ConnectionError.Type) -> AppBridge.ABConnection.ConnectionError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConnectionError",
+                        "printedName": "AppBridge.ABConnection.ConnectionError",
+                        "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "AppBridge.ABConnection.ConnectionError.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ConnectionError",
+                            "printedName": "AppBridge.ABConnection.ConnectionError",
+                            "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO08creationE0yA2EmF",
+                "mangledName": "$s9AppBridge12ABConnectionC15ConnectionErrorO08creationE0yA2EmF",
+                "moduleName": "AppBridge"
+              },
+              {
+                "kind": "Var",
+                "name": "initializationError",
+                "printedName": "initializationError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AppBridge.ABConnection.ConnectionError.Type) -> AppBridge.ABConnection.ConnectionError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConnectionError",
+                        "printedName": "AppBridge.ABConnection.ConnectionError",
+                        "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "AppBridge.ABConnection.ConnectionError.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ConnectionError",
+                            "printedName": "AppBridge.ABConnection.ConnectionError",
+                            "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO014initializationE0yA2EmF",
+                "mangledName": "$s9AppBridge12ABConnectionC15ConnectionErrorO014initializationE0yA2EmF",
+                "moduleName": "AppBridge"
+              },
+              {
+                "kind": "Var",
+                "name": "listenError",
+                "printedName": "listenError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AppBridge.ABConnection.ConnectionError.Type) -> AppBridge.ABConnection.ConnectionError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConnectionError",
+                        "printedName": "AppBridge.ABConnection.ConnectionError",
+                        "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "AppBridge.ABConnection.ConnectionError.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ConnectionError",
+                            "printedName": "AppBridge.ABConnection.ConnectionError",
+                            "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO06listenE0yA2EmF",
+                "mangledName": "$s9AppBridge12ABConnectionC15ConnectionErrorO06listenE0yA2EmF",
+                "moduleName": "AppBridge"
+              },
+              {
+                "kind": "Var",
+                "name": "connectError",
+                "printedName": "connectError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AppBridge.ABConnection.ConnectionError.Type) -> AppBridge.ABConnection.ConnectionError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ConnectionError",
+                        "printedName": "AppBridge.ABConnection.ConnectionError",
+                        "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "AppBridge.ABConnection.ConnectionError.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ConnectionError",
+                            "printedName": "AppBridge.ABConnection.ConnectionError",
+                            "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO07connectE0yA2EmF",
+                "mangledName": "$s9AppBridge12ABConnectionC15ConnectionErrorO07connectE0yA2EmF",
+                "moduleName": "AppBridge"
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConnectionError",
+                    "printedName": "AppBridge.ABConnection.ConnectionError",
+                    "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConnectionError",
+                    "printedName": "AppBridge.ABConnection.ConnectionError",
+                    "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO2eeoiySbAE_AEtFZ",
+                "mangledName": "$s9AppBridge12ABConnectionC15ConnectionErrorO2eeoiySbAE_AEtFZ",
+                "moduleName": "AppBridge",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO9hashValueSivp",
+                "mangledName": "$s9AppBridge12ABConnectionC15ConnectionErrorO9hashValueSivp",
+                "moduleName": "AppBridge",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO9hashValueSivg",
+                    "mangledName": "$s9AppBridge12ABConnectionC15ConnectionErrorO9hashValueSivg",
+                    "moduleName": "AppBridge",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO4hash4intoys6HasherVz_tF",
+                "mangledName": "$s9AppBridge12ABConnectionC15ConnectionErrorO4hash4intoys6HasherVz_tF",
+                "moduleName": "AppBridge",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO",
+            "mangledName": "$s9AppBridge12ABConnectionC15ConnectionErrorO",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Error",
+                "printedName": "Error",
+                "usr": "s:s5ErrorP",
+                "mangledName": "$ss5ErrorP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Sendable",
+                "printedName": "Sendable",
+                "usr": "s:s8SendableP",
+                "mangledName": "$ss8SendableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "SendableMetatype",
+                "printedName": "SendableMetatype",
+                "usr": "s:s16SendableMetatypeP",
+                "mangledName": "$ss16SendableMetatypeP"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "delegate",
+            "printedName": "delegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "(any AppBridge.ABConnectionDelegate)?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AppBridge12ABConnectionC8delegateAA0C8Delegate_pSgvp",
+            "mangledName": "$s9AppBridge12ABConnectionC8delegateAA0C8Delegate_pSgvp",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any AppBridge.ABConnectionDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ABConnectionDelegate",
+                        "printedName": "any AppBridge.ABConnectionDelegate",
+                        "usr": "s:9AppBridge20ABConnectionDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AppBridge12ABConnectionC8delegateAA0C8Delegate_pSgvg",
+                "mangledName": "$s9AppBridge12ABConnectionC8delegateAA0C8Delegate_pSgvg",
+                "moduleName": "AppBridge",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any AppBridge.ABConnectionDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ABConnectionDelegate",
+                        "printedName": "any AppBridge.ABConnectionDelegate",
+                        "usr": "s:9AppBridge20ABConnectionDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AppBridge12ABConnectionC8delegateAA0C8Delegate_pSgvs",
+                "mangledName": "$s9AppBridge12ABConnectionC8delegateAA0C8Delegate_pSgvs",
+                "moduleName": "AppBridge",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AppBridge12ABConnectionC8delegateAA0C8Delegate_pSgvM",
+                "mangledName": "$s9AppBridge12ABConnectionC8delegateAA0C8Delegate_pSgvM",
+                "moduleName": "AppBridge",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "alive",
+            "printedName": "alive",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AppBridge12ABConnectionC5aliveSbvp",
+            "mangledName": "$s9AppBridge12ABConnectionC5aliveSbvp",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AppBridge12ABConnectionC5aliveSbvg",
+                "mangledName": "$s9AppBridge12ABConnectionC5aliveSbvg",
+                "moduleName": "AppBridge",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "connectionID",
+            "printedName": "connectionID",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AppBridge12ABConnectionC12connectionIDs5Int32Vvp",
+            "mangledName": "$s9AppBridge12ABConnectionC12connectionIDs5Int32Vvp",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AppBridge12ABConnectionC12connectionIDs5Int32Vvg",
+                "mangledName": "$s9AppBridge12ABConnectionC12connectionIDs5Int32Vvg",
+                "moduleName": "AppBridge",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(appGroupID:namespace:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ABConnection",
+                "printedName": "AppBridge.ABConnection",
+                "usr": "s:9AppBridge12ABConnectionC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9AppBridge12ABConnectionC10appGroupID9namespaceACSS_Sitcfc",
+            "mangledName": "$s9AppBridge12ABConnectionC10appGroupID9namespaceACSS_Sitcfc",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "bundleIDForConnection",
+            "printedName": "bundleIDForConnection(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AppBridge12ABConnectionC21bundleIDForConnectionySSSgs5Int32VF",
+            "mangledName": "$s9AppBridge12ABConnectionC21bundleIDForConnectionySSSgs5Int32VF",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((AppBridge.ABConnection.ConnectionError?) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AppBridge.ABConnection.ConnectionError?) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "AppBridge.ABConnection.ConnectionError?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ConnectionError",
+                            "printedName": "AppBridge.ABConnection.ConnectionError",
+                            "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AppBridge12ABConnectionC5start10completionyyAC15ConnectionErrorOSgcSg_tF",
+            "mangledName": "$s9AppBridge12ABConnectionC5start10completionyyAC15ConnectionErrorOSgcSg_tF",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stop",
+            "printedName": "stop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AppBridge12ABConnectionC4stopyyF",
+            "mangledName": "$s9AppBridge12ABConnectionC4stopyyF",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:9AppBridge12ABConnectionC",
+        "mangledName": "$s9AppBridge12ABConnectionC",
+        "moduleName": "AppBridge",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppBridge",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ABDarwinNotificationCenter",
+        "printedName": "ABDarwinNotificationCenter",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "default",
+            "printedName": "default",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ABDarwinNotificationCenter",
+                "printedName": "AppBridge.ABDarwinNotificationCenter",
+                "usr": "s:9AppBridge26ABDarwinNotificationCenterC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AppBridge26ABDarwinNotificationCenterC7defaultACvpZ",
+            "mangledName": "$s9AppBridge26ABDarwinNotificationCenterC7defaultACvpZ",
+            "moduleName": "AppBridge",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ABDarwinNotificationCenter",
+                    "printedName": "AppBridge.ABDarwinNotificationCenter",
+                    "usr": "s:9AppBridge26ABDarwinNotificationCenterC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AppBridge26ABDarwinNotificationCenterC7defaultACvgZ",
+                "mangledName": "$s9AppBridge26ABDarwinNotificationCenterC7defaultACvgZ",
+                "moduleName": "AppBridge",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "observations",
+            "printedName": "observations",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : () -> ()]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AppBridge26ABDarwinNotificationCenterC12observationsSDySSyycGvp",
+            "mangledName": "$s9AppBridge26ABDarwinNotificationCenterC12observationsSDySSyycGvp",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : () -> ()]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AppBridge26ABDarwinNotificationCenterC12observationsSDySSyycGvg",
+                "mangledName": "$s9AppBridge26ABDarwinNotificationCenterC12observationsSDySSyycGvg",
+                "moduleName": "AppBridge",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "addObserver",
+            "printedName": "addObserver(forName:using:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "() -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AppBridge26ABDarwinNotificationCenterC11addObserver7forName5usingySS_yyctF",
+            "mangledName": "$s9AppBridge26ABDarwinNotificationCenterC11addObserver7forName5usingySS_yyctF",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeObserver",
+            "printedName": "removeObserver(withName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AppBridge26ABDarwinNotificationCenterC14removeObserver8withNameySS_tF",
+            "mangledName": "$s9AppBridge26ABDarwinNotificationCenterC14removeObserver8withNameySS_tF",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeAllObservers",
+            "printedName": "removeAllObservers()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AppBridge26ABDarwinNotificationCenterC18removeAllObserversyyF",
+            "mangledName": "$s9AppBridge26ABDarwinNotificationCenterC18removeAllObserversyyF",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "post",
+            "printedName": "post(name:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AppBridge26ABDarwinNotificationCenterC4post4nameySS_tF",
+            "mangledName": "$s9AppBridge26ABDarwinNotificationCenterC4post4nameySS_tF",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:9AppBridge26ABDarwinNotificationCenterC",
+        "mangledName": "$s9AppBridge26ABDarwinNotificationCenterC",
+        "moduleName": "AppBridge",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppBridge",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ABServerConnection",
+        "printedName": "ABServerConnection",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((AppBridge.ABConnection.ConnectionError?) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(AppBridge.ABConnection.ConnectionError?) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "AppBridge.ABConnection.ConnectionError?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ConnectionError",
+                            "printedName": "AppBridge.ABConnection.ConnectionError",
+                            "usr": "s:9AppBridge12ABConnectionC15ConnectionErrorO"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AppBridge18ABServerConnectionC5start10completionyyAA12ABConnectionC0D5ErrorOSgcSg_tF",
+            "mangledName": "$s9AppBridge18ABServerConnectionC5start10completionyyAA12ABConnectionC0D5ErrorOSgcSg_tF",
+            "moduleName": "AppBridge",
+            "overriding": true,
+            "declAttributes": [
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stop",
+            "printedName": "stop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AppBridge18ABServerConnectionC4stopyyF",
+            "mangledName": "$s9AppBridge18ABServerConnectionC4stopyyF",
+            "moduleName": "AppBridge",
+            "overriding": true,
+            "declAttributes": [
+              "Override",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "send",
+            "printedName": "send(_:to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ABMessage",
+                "printedName": "AppBridge.ABMessage",
+                "usr": "s:9AppBridge9ABMessageV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AppBridge18ABServerConnectionC4send_2toyAA9ABMessageV_SStF",
+            "mangledName": "$s9AppBridge18ABServerConnectionC4send_2toyAA9ABMessageV_SStF",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "send",
+            "printedName": "send(_:to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ABMessage",
+                "printedName": "AppBridge.ABMessage",
+                "usr": "s:9AppBridge9ABMessageV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AppBridge18ABServerConnectionC4send_2toyAA9ABMessageV_s5Int32VtF",
+            "mangledName": "$s9AppBridge18ABServerConnectionC4send_2toyAA9ABMessageV_s5Int32VtF",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "broadcast",
+            "printedName": "broadcast(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ABMessage",
+                "printedName": "AppBridge.ABMessage",
+                "usr": "s:9AppBridge9ABMessageV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:9AppBridge18ABServerConnectionC9broadcastyyAA9ABMessageVF",
+            "mangledName": "$s9AppBridge18ABServerConnectionC9broadcastyyAA9ABMessageVF",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(appGroupID:namespace:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ABServerConnection",
+                "printedName": "AppBridge.ABServerConnection",
+                "usr": "s:9AppBridge18ABServerConnectionC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9AppBridge18ABServerConnectionC10appGroupID9namespaceACSS_Sitcfc",
+            "mangledName": "$s9AppBridge18ABServerConnectionC10appGroupID9namespaceACSS_Sitcfc",
+            "moduleName": "AppBridge",
+            "overriding": true,
+            "implicit": true,
+            "declAttributes": [
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:9AppBridge18ABServerConnectionC",
+        "mangledName": "$s9AppBridge18ABServerConnectionC",
+        "moduleName": "AppBridge",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "superclassUsr": "s:9AppBridge12ABConnectionC",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "AppBridge.ABConnection"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppBridge",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ABMessage",
+        "printedName": "ABMessage",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "type",
+            "printedName": "type",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UInt32",
+                "printedName": "Swift.UInt32",
+                "usr": "s:s6UInt32V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AppBridge9ABMessageV4types6UInt32Vvp",
+            "mangledName": "$s9AppBridge9ABMessageV4types6UInt32Vvp",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt32",
+                    "printedName": "Swift.UInt32",
+                    "usr": "s:s6UInt32V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AppBridge9ABMessageV4types6UInt32Vvg",
+                "mangledName": "$s9AppBridge9ABMessageV4types6UInt32Vvg",
+                "moduleName": "AppBridge",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "content",
+            "printedName": "content",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AppBridge9ABMessageV7content10Foundation4DataVvp",
+            "mangledName": "$s9AppBridge9ABMessageV7content10Foundation4DataVvp",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AppBridge9ABMessageV7content10Foundation4DataVvg",
+                "mangledName": "$s9AppBridge9ABMessageV7content10Foundation4DataVvg",
+                "moduleName": "AppBridge",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(_:type:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ABMessage",
+                "printedName": "AppBridge.ABMessage",
+                "usr": "s:9AppBridge9ABMessageV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt32",
+                "printedName": "Swift.UInt32",
+                "hasDefaultArg": true,
+                "usr": "s:s6UInt32V"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9AppBridge9ABMessageV_4typeAC10Foundation4DataV_s6UInt32Vtcfc",
+            "mangledName": "$s9AppBridge9ABMessageV_4typeAC10Foundation4DataV_s6UInt32Vtcfc",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:9AppBridge9ABMessageV",
+        "mangledName": "$s9AppBridge9ABMessageV",
+        "moduleName": "AppBridge",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppBridge",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppBridge",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AppBridge",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ABRequest",
+        "printedName": "ABRequest",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "supportsSecureCoding",
+            "printedName": "supportsSecureCoding",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AppBridge@objc(cs)ABRequest(cpy)supportsSecureCoding",
+            "mangledName": "$s9AppBridge9ABRequestC20supportsSecureCodingSbvpZ",
+            "moduleName": "AppBridge",
+            "static": true,
+            "objc_name": "supportsSecureCoding",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "ObjC",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AppBridge@objc(cs)ABRequest(cm)supportsSecureCoding",
+                "mangledName": "$s9AppBridge9ABRequestC20supportsSecureCodingSbvgZ",
+                "moduleName": "AppBridge",
+                "static": true,
+                "implicit": true,
+                "objc_name": "supportsSecureCoding",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AppBridge@objc(cs)ABRequest(cm)setSupportsSecureCoding:",
+                "mangledName": "$s9AppBridge9ABRequestC20supportsSecureCodingSbvsZ",
+                "moduleName": "AppBridge",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AppBridge9ABRequestC20supportsSecureCodingSbvMZ",
+                "mangledName": "$s9AppBridge9ABRequestC20supportsSecureCodingSbvMZ",
+                "moduleName": "AppBridge",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "parameters",
+            "printedName": "parameters",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AppBridge9ABRequestC10parametersSDySSypGvp",
+            "mangledName": "$s9AppBridge9ABRequestC10parametersSDySSypGvp",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AppBridge9ABRequestC10parametersSDySSypGvg",
+                "mangledName": "$s9AppBridge9ABRequestC10parametersSDySSypGvg",
+                "moduleName": "AppBridge",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(parameters:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ABRequest",
+                "printedName": "AppBridge.ABRequest",
+                "usr": "c:@M@AppBridge@objc(cs)ABRequest"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9AppBridge9ABRequestC10parametersACSDySSypG_tcfc",
+            "mangledName": "$s9AppBridge9ABRequestC10parametersACSDySSypG_tcfc",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AppBridge.ABRequest?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ABRequest",
+                    "printedName": "AppBridge.ABRequest",
+                    "usr": "c:@M@AppBridge@objc(cs)ABRequest"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AppBridge@objc(cs)ABRequest(im)initWithCoder:",
+            "mangledName": "$s9AppBridge9ABRequestC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "AppBridge",
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AppBridge@objc(cs)ABRequest(im)encodeWithCoder:",
+            "mangledName": "$s9AppBridge9ABRequestC6encode4withySo7NSCoderC_tF",
+            "moduleName": "AppBridge",
+            "objc_name": "encodeWithCoder:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ABRequest",
+                "printedName": "AppBridge.ABRequest",
+                "usr": "c:@M@AppBridge@objc(cs)ABRequest"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AppBridge@objc(cs)ABRequest(im)init",
+            "mangledName": "$s9AppBridge9ABRequestCACycfc",
+            "moduleName": "AppBridge",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@AppBridge@objc(cs)ABRequest",
+        "mangledName": "$s9AppBridge9ABRequestC",
+        "moduleName": "AppBridge",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ABResponse",
+        "printedName": "ABResponse",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "supportsSecureCoding",
+            "printedName": "supportsSecureCoding",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@AppBridge@objc(cs)ABResponse(cpy)supportsSecureCoding",
+            "mangledName": "$s9AppBridge10ABResponseC20supportsSecureCodingSbvpZ",
+            "moduleName": "AppBridge",
+            "static": true,
+            "objc_name": "supportsSecureCoding",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "ObjC",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AppBridge@objc(cs)ABResponse(cm)supportsSecureCoding",
+                "mangledName": "$s9AppBridge10ABResponseC20supportsSecureCodingSbvgZ",
+                "moduleName": "AppBridge",
+                "static": true,
+                "implicit": true,
+                "objc_name": "supportsSecureCoding",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AppBridge@objc(cs)ABResponse(cm)setSupportsSecureCoding:",
+                "mangledName": "$s9AppBridge10ABResponseC20supportsSecureCodingSbvsZ",
+                "moduleName": "AppBridge",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AppBridge10ABResponseC20supportsSecureCodingSbvMZ",
+                "mangledName": "$s9AppBridge10ABResponseC20supportsSecureCodingSbvMZ",
+                "moduleName": "AppBridge",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "status",
+            "printedName": "status",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AppBridge10ABResponseC6statusSivp",
+            "mangledName": "$s9AppBridge10ABResponseC6statusSivp",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AppBridge10ABResponseC6statusSivg",
+                "mangledName": "$s9AppBridge10ABResponseC6statusSivg",
+                "moduleName": "AppBridge",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "fields",
+            "printedName": "fields",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AppBridge10ABResponseC6fieldsSDySSypGSgvp",
+            "mangledName": "$s9AppBridge10ABResponseC6fieldsSDySSypGSgvp",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Any]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Any]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AppBridge10ABResponseC6fieldsSDySSypGSgvg",
+                "mangledName": "$s9AppBridge10ABResponseC6fieldsSDySSypGSgvg",
+                "moduleName": "AppBridge",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "body",
+            "printedName": "body",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:9AppBridge10ABResponseC4body10Foundation4DataVSgvp",
+            "mangledName": "$s9AppBridge10ABResponseC4body10Foundation4DataVSgvp",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Data?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Data",
+                        "printedName": "Foundation.Data",
+                        "usr": "s:10Foundation4DataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:9AppBridge10ABResponseC4body10Foundation4DataVSgvg",
+                "mangledName": "$s9AppBridge10ABResponseC4body10Foundation4DataVSgvg",
+                "moduleName": "AppBridge",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(status:fields:body:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ABResponse",
+                "printedName": "AppBridge.ABResponse",
+                "usr": "c:@M@AppBridge@objc(cs)ABResponse"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:9AppBridge10ABResponseC6status6fields4bodyACSi_SDySSypGSg10Foundation4DataVSgtcfc",
+            "mangledName": "$s9AppBridge10ABResponseC6status6fields4bodyACSi_SDySSypGSg10Foundation4DataVSgtcfc",
+            "moduleName": "AppBridge",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AppBridge.ABResponse?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ABResponse",
+                    "printedName": "AppBridge.ABResponse",
+                    "usr": "c:@M@AppBridge@objc(cs)ABResponse"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AppBridge@objc(cs)ABResponse(im)initWithCoder:",
+            "mangledName": "$s9AppBridge10ABResponseC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "AppBridge",
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AppBridge@objc(cs)ABResponse(im)encodeWithCoder:",
+            "mangledName": "$s9AppBridge10ABResponseC6encode4withySo7NSCoderC_tF",
+            "moduleName": "AppBridge",
+            "objc_name": "encodeWithCoder:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ABResponse",
+                "printedName": "AppBridge.ABResponse",
+                "usr": "c:@M@AppBridge@objc(cs)ABResponse"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@AppBridge@objc(cs)ABResponse(im)init",
+            "mangledName": "$s9AppBridge10ABResponseCACycfc",
+            "moduleName": "AppBridge",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@AppBridge@objc(cs)ABResponse",
+        "mangledName": "$s9AppBridge10ABResponseC",
+        "moduleName": "AppBridge",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/harrish-21397\/Desktop\/Salesiq_Frameworks\/Packages\/6.3.2\/irtcpmeeting\/build\/xcframeworks_out\/work\/appbridge\/Sources\/AppBridge\/AppBridge\/AppBridge.swift",
+      "kind": "BooleanLiteral",
+      "offset": 158,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/harrish-21397\/Desktop\/Salesiq_Frameworks\/Packages\/6.3.2\/irtcpmeeting\/build\/xcframeworks_out\/work\/appbridge\/Sources\/AppBridge\/Connection\/ABClientConnection.swift",
+      "kind": "BooleanLiteral",
+      "offset": 203,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/harrish-21397\/Desktop\/Salesiq_Frameworks\/Packages\/6.3.2\/irtcpmeeting\/build\/xcframeworks_out\/work\/appbridge\/Sources\/AppBridge\/Connection\/ABConnection.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1596,
+      "length": 4,
+      "value": "7000"
+    },
+    {
+      "filePath": "\/Users\/harrish-21397\/Desktop\/Salesiq_Frameworks\/Packages\/6.3.2\/irtcpmeeting\/build\/xcframeworks_out\/work\/appbridge\/Sources\/AppBridge\/Connection\/ABConnection.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1603,
+      "length": 4,
+      "value": "8000"
+    },
+    {
+      "filePath": "\/Users\/harrish-21397\/Desktop\/Salesiq_Frameworks\/Packages\/6.3.2\/irtcpmeeting\/build\/xcframeworks_out\/work\/appbridge\/Sources\/AppBridge\/Connection\/ABConnection.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1881,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/harrish-21397\/Desktop\/Salesiq_Frameworks\/Packages\/6.3.2\/irtcpmeeting\/build\/xcframeworks_out\/work\/appbridge\/Sources\/AppBridge\/Connection\/ABConnection.swift",
+      "kind": "Dictionary",
+      "offset": 1950,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/harrish-21397\/Desktop\/Salesiq_Frameworks\/Packages\/6.3.2\/irtcpmeeting\/build\/xcframeworks_out\/work\/appbridge\/Sources\/AppBridge\/Connection\/ABConnection.swift",
+      "kind": "Dictionary",
+      "offset": 2006,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/harrish-21397\/Desktop\/Salesiq_Frameworks\/Packages\/6.3.2\/irtcpmeeting\/build\/xcframeworks_out\/work\/appbridge\/Sources\/AppBridge\/Connection\/ABConnection.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2115,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/harrish-21397\/Desktop\/Salesiq_Frameworks\/Packages\/6.3.2\/irtcpmeeting\/build\/xcframeworks_out\/work\/appbridge\/Sources\/AppBridge\/Connection\/ABConnection.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2425,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/harrish-21397\/Desktop\/Salesiq_Frameworks\/Packages\/6.3.2\/irtcpmeeting\/build\/xcframeworks_out\/work\/appbridge\/Sources\/AppBridge\/Connection\/ABConnection.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2518,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/harrish-21397\/Desktop\/Salesiq_Frameworks\/Packages\/6.3.2\/irtcpmeeting\/build\/xcframeworks_out\/work\/appbridge\/Sources\/AppBridge\/Connection\/ABConnection.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6119,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/harrish-21397\/Desktop\/Salesiq_Frameworks\/Packages\/6.3.2\/irtcpmeeting\/build\/xcframeworks_out\/work\/appbridge\/Sources\/AppBridge\/Connection\/ABDarwinNotificationUtility.swift",
+      "kind": "Dictionary",
+      "offset": 294,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/harrish-21397\/Desktop\/Salesiq_Frameworks\/Packages\/6.3.2\/irtcpmeeting\/build\/xcframeworks_out\/work\/appbridge\/Sources\/AppBridge\/Connection\/ABServerConnection.swift",
+      "kind": "Array",
+      "offset": 215,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/harrish-21397\/Desktop\/Salesiq_Frameworks\/Packages\/6.3.2\/irtcpmeeting\/build\/xcframeworks_out\/work\/appbridge\/Sources\/AppBridge\/Connection\/ABServerConnection.swift",
+      "kind": "Dictionary",
+      "offset": 281,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/harrish-21397\/Desktop\/Salesiq_Frameworks\/Packages\/6.3.2\/irtcpmeeting\/build\/xcframeworks_out\/work\/appbridge\/Sources\/AppBridge\/Connection\/ABServerConnection.swift",
+      "kind": "IntegerLiteral",
+      "offset": 403,
+      "length": 4,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/harrish-21397\/Desktop\/Salesiq_Frameworks\/Packages\/6.3.2\/irtcpmeeting\/build\/xcframeworks_out\/work\/appbridge\/Sources\/AppBridge\/Connection\/ABServerConnection.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8682,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/harrish-21397\/Desktop\/Salesiq_Frameworks\/Packages\/6.3.2\/irtcpmeeting\/build\/xcframeworks_out\/work\/appbridge\/Sources\/AppBridge\/DataFraming\/ABMessage.swift",
+      "kind": "IntegerLiteral",
+      "offset": 240,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/harrish-21397\/Desktop\/Salesiq_Frameworks\/Packages\/6.3.2\/irtcpmeeting\/build\/xcframeworks_out\/work\/appbridge\/Sources\/AppBridge\/Models\/ABInternalMessageType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 182,
+      "length": 4,
+      "value": "7001"
+    },
+    {
+      "filePath": "\/Users\/harrish-21397\/Desktop\/Salesiq_Frameworks\/Packages\/6.3.2\/irtcpmeeting\/build\/xcframeworks_out\/work\/appbridge\/Sources\/AppBridge\/Models\/ABInternalMessageType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 206,
+      "length": 4,
+      "value": "7002"
+    },
+    {
+      "filePath": "\/Users\/harrish-21397\/Desktop\/Salesiq_Frameworks\/Packages\/6.3.2\/irtcpmeeting\/build\/xcframeworks_out\/work\/appbridge\/Sources\/AppBridge\/Models\/ABInternalMessageType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 231,
+      "length": 4,
+      "value": "7003"
+    },
+    {
+      "filePath": "\/Users\/harrish-21397\/Desktop\/Salesiq_Frameworks\/Packages\/6.3.2\/irtcpmeeting\/build\/xcframeworks_out\/work\/appbridge\/Sources\/AppBridge\/Models\/ABRequestResponse.swift",
+      "kind": "BooleanLiteral",
+      "offset": 212,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/harrish-21397\/Desktop\/Salesiq_Frameworks\/Packages\/6.3.2\/irtcpmeeting\/build\/xcframeworks_out\/work\/appbridge\/Sources\/AppBridge\/Models\/ABRequestResponse.swift",
+      "kind": "BooleanLiteral",
+      "offset": 717,
+      "length": 4,
+      "value": "true"
+    }
+  ]
+}

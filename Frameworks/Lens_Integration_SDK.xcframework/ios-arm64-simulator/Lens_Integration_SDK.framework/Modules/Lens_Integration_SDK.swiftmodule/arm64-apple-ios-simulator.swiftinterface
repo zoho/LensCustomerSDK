@@ -1,0 +1,118 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name Lens_Integration_SDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import CoreText
+import Foundation
+import Foundation_Extention
+import Lens
+import Swift
+import SwiftUI
+import UIKit
+import VMNetworking
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum LensSDKError : Swift.Error, Foundation.LocalizedError {
+  case accountVerificationRequired
+  case deviceVerificationFailed((any Swift.Error)?)
+  case sessionCreationFailed(Swift.String?)
+  case sessionValidationFailed(SessionValidationResponse.SessionValidationError?)
+  case scheduledSessionCreationFailed(Swift.String?)
+  case scheduleSessionFailed(Swift.String?)
+  case userInfoFetchFailed(Swift.String?)
+  case noteUpdateFailed(Swift.String?)
+  case noteFetchFailed(Swift.String?)
+  case internalError(Swift.String?)
+}
+@_hasMissingDesignatedInitializers final public class LensSDK {
+  public static let shared: LensSDK
+  final public func instantiate(integrationType: LensIntegrationType, ssoProvider: (any SSOProviderProtocol)? = nil)
+  final public func joinSessionAsCustomer(sessionKey: Swift.String, completion: @escaping (Swift.Result<any CustomerSessionParams, LensSDKError>) -> Swift.Void)
+  final public func presentCustomerSession(params: any CustomerSessionParams, customerName: Swift.String, customerEmail: Swift.String, isARMode: Swift.Bool, from presenter: UIKit.UIViewController, delegate: (any LensEventProtocol)? = nil)
+  final public func customerSessionView(params: any CustomerSessionParams, customerName: Swift.String, customerEmail: Swift.String, isARMode: Swift.Bool, delegate: (any LensEventProtocol)? = nil) -> some SwiftUICore.View
+  
+  @objc deinit
+}
+public struct ScheduledSession : Swift.Codable {
+  public let sessionID: Swift.Int?
+  public let contextTitle: Swift.String?
+  public let contextIdentity: Swift.String?
+  public let contextScheduleTime: Swift.Int?
+  public let contextEditedTime: Swift.Int?
+  public let contextEditedUserEmail: Swift.String?
+  public let delStatus: Swift.Bool?
+  public let scheduleID: Swift.String?
+  public let sessionType: Swift.String?
+  public let sessionStatus: Swift.String?
+  public let contextCustomerEmail: Swift.String?
+  public let sysID: Swift.String?
+  public let viewerOS: Swift.String?
+  public let agentEmail: Swift.String?
+  public let agentIpaddress: Swift.String?
+  public let sessionOwnerEmail: Swift.String?
+  public let endTime: Swift.Int?
+  public let displayName: Swift.String?
+  public let tsid: Swift.String?
+  public let favourite: Swift.Bool?
+  public let videoAvailable: Swift.Bool?
+  public let agentOS: Swift.String?
+  public let duration: Swift.Int?
+  public let startTime: Swift.Int?
+  public let sessionTitle: Swift.String?
+  public let viewerEmail: Swift.String?
+  public let viewerIpaddress: Swift.String?
+  public let authkey: VariacType?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct UserInfo : Swift.Codable {
+  public let zuid: Swift.String?
+  public let userRole: Swift.Int?
+  public let orgDetails: OrgDetails?
+  public let license: License?
+  public let departments: [Department]?
+  public let multiOrgEnabled: Swift.Bool?
+  public let workflowEnabled: Swift.Bool?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct OrgDetails : Swift.Codable {
+  public let zsoid: Swift.Int?
+  public let orgName: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct License : Swift.Codable {
+  public let licenseType: Swift.String?
+  public let lensLicense: LensLicense?
+  public let daysLeft: Swift.Int?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct LensLicense : Swift.Codable {
+  public let edition: Swift.String?
+  public let count: Swift.Int?
+  public let isEnabled: Swift.Bool?
+  public let features: [Swift.String]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Department : Swift.Codable {
+  public let departmentID: Swift.String?
+  public let departmentName: Swift.String?
+  public let displayName: Swift.String?
+  public let isSystemGenerated: Swift.Bool?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public protocol SSOProviderProtocol {
+  var userZUID: Swift.String? { get }
+  var domainString: Swift.String { get }
+  func getOAuthToken(completion: @escaping (Swift.Result<Swift.String, any Swift.Error>) -> Swift.Void)
+  func getTransformedURL(url: Swift.String) -> Swift.String
+  func verifyDevice(completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+}
+extension Foundation.URL {
+  public static func constructURLString(API: Swift.String, service: Swift.String, protocol protocolString: Swift.String, domain: Swift.String) -> Swift.String
+}

@@ -1,0 +1,59 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/jem-8413/Library/Developer/Xcode/DerivedData/ZAUtilsFramework-ckicxhmmskzkvughqdftssjpucxw/Build/Intermediates.noindex/ArchiveIntermediates/Orientation/InstallationBuildProductsLocation/Library/Frameworks/Orientation.framework/Orientation'
+relocations:
+  - { offset: 0x4E105, size: 0x8, addend: 0x0, symName: _OrientationVersionString, symObjAddr: 0x0, symBinAddr: 0x61B0, symSize: 0x0 }
+  - { offset: 0x4E13C, size: 0x8, addend: 0x0, symName: _OrientationVersionNumber, symObjAddr: 0x38, symBinAddr: 0x61E8, symSize: 0x0 }
+  - { offset: 0x4E17A, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A7ChangerPAAE16changeOriantaion13atoriantationyAA03At_A0O_tF', symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x14 }
+  - { offset: 0x4E349, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A7ChangerPAAE16changeOriantaion13atoriantationyAA03At_A0O_tF', symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x14 }
+  - { offset: 0x4E36B, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A7ChangerPAAE16changeOriantaion13atoriantationyAA03At_A0O_tF', symObjAddr: 0x0, symBinAddr: 0x4000, symSize: 0x14 }
+  - { offset: 0x4E3A7, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A7ChangerPAAE16changeOriantaion15oriantationMaskySo011UIInterfaceaF0V_tF', symObjAddr: 0x14, symBinAddr: 0x4014, symSize: 0x4 }
+  - { offset: 0x4E3F8, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A7ChangerPAAE16changeOriantaion17deviceOriantationySo08UIDeviceA0V_tF', symObjAddr: 0x18, symBinAddr: 0x4018, symSize: 0x24 }
+  - { offset: 0x4E436, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A7ChangerPAAE16changeOriantaion17deviceOriantationySo08UIDeviceA0V_tF', symObjAddr: 0x18, symBinAddr: 0x4018, symSize: 0x24 }
+  - { offset: 0x4E491, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A7HandlerPAASo16UIViewControllerCRbzrlE09supportedA0AA03At_A0OyF', symObjAddr: 0x3C, symBinAddr: 0x403C, symSize: 0xC }
+  - { offset: 0x4E4BC, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A7HandlerPAASo16UIViewControllerCRbzrlE07currentA0AA03At_A0Ovg', symObjAddr: 0x48, symBinAddr: 0x4048, symSize: 0x74 }
+  - { offset: 0x4E505, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A7ChangerPAAE16changeOriantaion15oriantationMaskySo011UIInterfaceaF0V_tFTf4nd_n', symObjAddr: 0xBC, symBinAddr: 0x40BC, symSize: 0xB4 }
+  - { offset: 0x4E652, size: 0x8, addend: 0x0, symName: '_$s11Orientation03At_A0O15orientationMaskSo011UIInterfaceaD0Vvg', symObjAddr: 0x0, symBinAddr: 0x4178, symSize: 0x14 }
+  - { offset: 0x4E77D, size: 0x8, addend: 0x0, symName: '_$s11Orientation03At_A0OSHAASQWb', symObjAddr: 0x1D0, symBinAddr: 0x42C8, symSize: 0x4 }
+  - { offset: 0x4E791, size: 0x8, addend: 0x0, symName: '_$s11Orientation03At_A0OACSQAAWl', symObjAddr: 0x1D4, symBinAddr: 0x42CC, symSize: 0x40 }
+  - { offset: 0x4E7A5, size: 0x8, addend: 0x0, symName: ___swift_memcpy1_1, symObjAddr: 0x214, symBinAddr: 0x430C, symSize: 0xC }
+  - { offset: 0x4E7B9, size: 0x8, addend: 0x0, symName: ___swift_noop_void_return, symObjAddr: 0x220, symBinAddr: 0x4318, symSize: 0x4 }
+  - { offset: 0x4E7CD, size: 0x8, addend: 0x0, symName: '_$s11Orientation03At_A0Owet', symObjAddr: 0x224, symBinAddr: 0x431C, symSize: 0x90 }
+  - { offset: 0x4E7E1, size: 0x8, addend: 0x0, symName: '_$s11Orientation03At_A0Owst', symObjAddr: 0x2B4, symBinAddr: 0x43AC, symSize: 0xB0 }
+  - { offset: 0x4E7F5, size: 0x8, addend: 0x0, symName: '_$s11Orientation03At_A0Owug', symObjAddr: 0x364, symBinAddr: 0x445C, symSize: 0x8 }
+  - { offset: 0x4E809, size: 0x8, addend: 0x0, symName: '_$s11Orientation03At_A0Owup', symObjAddr: 0x36C, symBinAddr: 0x4464, symSize: 0x4 }
+  - { offset: 0x4E81D, size: 0x8, addend: 0x0, symName: '_$s11Orientation03At_A0Owui', symObjAddr: 0x370, symBinAddr: 0x4468, symSize: 0x8 }
+  - { offset: 0x4E831, size: 0x8, addend: 0x0, symName: '_$s11Orientation03At_A0OMa', symObjAddr: 0x378, symBinAddr: 0x4470, symSize: 0x10 }
+  - { offset: 0x4E85F, size: 0x8, addend: 0x0, symName: '_$s11Orientation03At_A0O15orientationMaskSo011UIInterfaceaD0Vvg', symObjAddr: 0x0, symBinAddr: 0x4178, symSize: 0x14 }
+  - { offset: 0x4E88C, size: 0x8, addend: 0x0, symName: '_$s11Orientation03At_A0O13at_orientaion06deviceA0ACSo08UIDeviceA0V_tFZ', symObjAddr: 0x14, symBinAddr: 0x418C, symSize: 0x28 }
+  - { offset: 0x4E8BC, size: 0x8, addend: 0x0, symName: '_$s11Orientation03At_A0O13at_orientaion15orientationMaskACSo011UIInterfaceaF0V_tFZ', symObjAddr: 0x3C, symBinAddr: 0x41B4, symSize: 0x30 }
+  - { offset: 0x4E8EC, size: 0x8, addend: 0x0, symName: '_$s11Orientation03At_A0O09interfaceA0So011UIInterfaceA0Vvg', symObjAddr: 0x6C, symBinAddr: 0x41E4, symSize: 0x24 }
+  - { offset: 0x4E9A1, size: 0x8, addend: 0x0, symName: '_$s11Orientation03At_A0O2eeoiySbAC_ACtFZ', symObjAddr: 0x90, symBinAddr: 0x4208, symSize: 0x14 }
+  - { offset: 0x4E9E6, size: 0x8, addend: 0x0, symName: '_$s11Orientation03At_A0O4hash4intoys6HasherVz_tF', symObjAddr: 0xA4, symBinAddr: 0x421C, symSize: 0x28 }
+  - { offset: 0x4EA6A, size: 0x8, addend: 0x0, symName: '_$s11Orientation03At_A0O9hashValueSivg', symObjAddr: 0xCC, symBinAddr: 0x4244, symSize: 0x44 }
+  - { offset: 0x4EB69, size: 0x8, addend: 0x0, symName: '_$s11Orientation03At_A0OSHAASH13_rawHashValue4seedS2i_tFTW', symObjAddr: 0x190, symBinAddr: 0x4288, symSize: 0x40 }
+  - { offset: 0x4EEDA, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A16HelperControllerCMa', symObjAddr: 0xA8, symBinAddr: 0x4480, symSize: 0x20 }
+  - { offset: 0x4EEEE, size: 0x8, addend: 0x0, symName: '_$sIeg_IeyB_TR', symObjAddr: 0x774, symBinAddr: 0x4A50, symSize: 0x2C }
+  - { offset: 0x4EF06, size: 0x8, addend: 0x0, symName: '_$sSo17OS_dispatch_queueCMa', symObjAddr: 0xBC8, symBinAddr: 0x4E94, symSize: 0x44 }
+  - { offset: 0x4EF1A, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A16HelperControllerC14_deviceRotated33_0AD588687E249AB005B9602A2EF24399LLyyFyyScMYccfU_TA', symObjAddr: 0xC30, symBinAddr: 0x4EFC, symSize: 0x8 }
+  - { offset: 0x4EF2E, size: 0x8, addend: 0x0, symName: _block_copy_helper, symObjAddr: 0xC38, symBinAddr: 0x4F04, symSize: 0x14 }
+  - { offset: 0x4EF42, size: 0x8, addend: 0x0, symName: _block_destroy_helper, symObjAddr: 0xC4C, symBinAddr: 0x4F18, symSize: 0x8 }
+  - { offset: 0x4EF56, size: 0x8, addend: 0x0, symName: '_$s8Dispatch0A13WorkItemFlagsVACs10SetAlgebraAAWl', symObjAddr: 0xC54, symBinAddr: 0x4F20, symSize: 0x44 }
+  - { offset: 0x4EF6A, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledNameV2, symObjAddr: 0xC98, symBinAddr: 0x4F64, symSize: 0x50 }
+  - { offset: 0x4EF7E, size: 0x8, addend: 0x0, symName: '_$sSay8Dispatch0A13WorkItemFlagsVGSayxGSTsWl', symObjAddr: 0xCE8, symBinAddr: 0x4FB4, symSize: 0x50 }
+  - { offset: 0x4EF92, size: 0x8, addend: 0x0, symName: ___swift_instantiateConcreteTypeFromMangledNameAbstractV2, symObjAddr: 0xD38, symBinAddr: 0x5004, symSize: 0x54 }
+  - { offset: 0x4F09E, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A16HelperControllerC11viewDidLoadyyFTo', symObjAddr: 0xC8, symBinAddr: 0x44A0, symSize: 0xC4 }
+  - { offset: 0x4F14F, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A16HelperControllerC14viewWillAppearyySbFTo', symObjAddr: 0x210, symBinAddr: 0x4564, symSize: 0xA8 }
+  - { offset: 0x4F1A6, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A16HelperControllerC17viewWillDisappearyySbFTo', symObjAddr: 0x330, symBinAddr: 0x460C, symSize: 0x94 }
+  - { offset: 0x4F231, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A16HelperControllerC14_deviceRotated33_0AD588687E249AB005B9602A2EF24399LLyyF', symObjAddr: 0x3C4, symBinAddr: 0x46A0, symSize: 0x26C }
+  - { offset: 0x4F27F, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A16HelperControllerC14_deviceRotated33_0AD588687E249AB005B9602A2EF24399LLyyFyyScMYccfU_', symObjAddr: 0x630, symBinAddr: 0x490C, symSize: 0x144 }
+  - { offset: 0x4F34F, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A16HelperControllerC14_deviceRotated33_0AD588687E249AB005B9602A2EF24399LLyyFTo', symObjAddr: 0x7A0, symBinAddr: 0x4A7C, symSize: 0x28 }
+  - { offset: 0x4F388, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A16HelperControllerC7nibName6bundleACSSSg_So8NSBundleCSgtcfC', symObjAddr: 0x7D8, symBinAddr: 0x4AA4, symSize: 0x74 }
+  - { offset: 0x4F39C, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A16HelperControllerC7nibName6bundleACSSSg_So8NSBundleCSgtcfc', symObjAddr: 0x84C, symBinAddr: 0x4B18, symSize: 0x9C }
+  - { offset: 0x4F42D, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A16HelperControllerC7nibName6bundleACSSSg_So8NSBundleCSgtcfcTo', symObjAddr: 0x8E8, symBinAddr: 0x4BB4, symSize: 0xDC }
+  - { offset: 0x4F462, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A16HelperControllerC5coderACSgSo7NSCoderC_tcfC', symObjAddr: 0x9C4, symBinAddr: 0x4C90, symSize: 0x3C }
+  - { offset: 0x4F476, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A16HelperControllerC5coderACSgSo7NSCoderC_tcfc', symObjAddr: 0xA00, symBinAddr: 0x4CCC, symSize: 0x84 }
+  - { offset: 0x4F4C2, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A16HelperControllerC5coderACSgSo7NSCoderC_tcfcTo', symObjAddr: 0xA84, symBinAddr: 0x4D50, symSize: 0x98 }
+  - { offset: 0x4F4F9, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A16HelperControllerCfD', symObjAddr: 0xB1C, symBinAddr: 0x4DE8, symSize: 0x30 }
+  - { offset: 0x4F51C, size: 0x8, addend: 0x0, symName: '_$s11Orientation0A16HelperControllerCAA0A7HandlerA2aDP09supportedA0AA03At_A0OyFTW', symObjAddr: 0xB4C, symBinAddr: 0x4E18, symSize: 0x38 }
+...

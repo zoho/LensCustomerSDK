@@ -1,0 +1,2227 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "GenericOnBoard",
+    "printedName": "GenericOnBoard",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GenericOnBoard",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Lottie",
+        "printedName": "Lottie",
+        "declKind": "Import",
+        "moduleName": "GenericOnBoard"
+      },
+      {
+        "kind": "Import",
+        "name": "Orientation",
+        "printedName": "Orientation",
+        "declKind": "Import",
+        "moduleName": "GenericOnBoard"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit_Extention",
+        "printedName": "UIKit_Extention",
+        "declKind": "Import",
+        "moduleName": "GenericOnBoard"
+      },
+      {
+        "kind": "Import",
+        "name": "SnapKit_Extention",
+        "printedName": "SnapKit_Extention",
+        "declKind": "Import",
+        "moduleName": "GenericOnBoard"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GenericLottieOnBoardDesciptionController",
+        "printedName": "GenericLottieOnBoardDesciptionController",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "CellDescription",
+            "printedName": "CellDescription",
+            "children": [
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(nib:identifier:cofiguration:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CellDescription",
+                    "printedName": "GenericOnBoard.GenericLottieOnBoardDesciptionController<τ_0_0>.CellDescription",
+                    "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC15CellDescriptionC"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UINib",
+                    "printedName": "UIKit.UINib",
+                    "usr": "c:objc(cs)UINib"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((τ_0_0, Foundation.IndexPath) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(τ_0_0, Foundation.IndexPath) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(τ_0_0, Foundation.IndexPath)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "GenericTypeParam",
+                                "printedName": "τ_0_0"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "IndexPath",
+                                "printedName": "Foundation.IndexPath",
+                                "usr": "s:10Foundation9IndexPathV"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC15CellDescriptionC3nib10identifier12cofigurationAEyx_GSo5UINibC_SSyx_10Foundation9IndexPathVtcSgtcfc",
+                "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC15CellDescriptionC3nib10identifier12cofigurationAEyx_GSo5UINibC_SSyx_10Foundation9IndexPathVtcSgtcfc",
+                "moduleName": "GenericOnBoard",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+                "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              }
+            ],
+            "declKind": "Class",
+            "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC15CellDescriptionC",
+            "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC15CellDescriptionC",
+            "moduleName": "GenericOnBoard",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+            "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "numberOfScenes",
+            "printedName": "numberOfScenes",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC14numberOfScenesSivp",
+            "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC14numberOfScenesSivp",
+            "moduleName": "GenericOnBoard",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC14numberOfScenesSivg",
+                "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC14numberOfScenesSivg",
+                "moduleName": "GenericOnBoard",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+                "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC14numberOfScenesSivs",
+                "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC14numberOfScenesSivs",
+                "moduleName": "GenericOnBoard",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+                "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC14numberOfScenesSivM",
+                "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC14numberOfScenesSivM",
+                "moduleName": "GenericOnBoard",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+                "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "cellDescription",
+            "printedName": "cellDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "GenericOnBoard.GenericLottieOnBoardDesciptionController<τ_0_0>.CellDescription?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CellDescription",
+                    "printedName": "GenericOnBoard.GenericLottieOnBoardDesciptionController<τ_0_0>.CellDescription",
+                    "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC15CellDescriptionC"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC15cellDescriptionAC04CellH0Cyx_GSgvp",
+            "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC15cellDescriptionAC04CellH0Cyx_GSgvp",
+            "moduleName": "GenericOnBoard",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "GenericOnBoard.GenericLottieOnBoardDesciptionController<τ_0_0>.CellDescription?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CellDescription",
+                        "printedName": "GenericOnBoard.GenericLottieOnBoardDesciptionController<τ_0_0>.CellDescription",
+                        "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC15CellDescriptionC"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC15cellDescriptionAC04CellH0Cyx_GSgvg",
+                "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC15cellDescriptionAC04CellH0Cyx_GSgvg",
+                "moduleName": "GenericOnBoard",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+                "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "GenericOnBoard.GenericLottieOnBoardDesciptionController<τ_0_0>.CellDescription?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CellDescription",
+                        "printedName": "GenericOnBoard.GenericLottieOnBoardDesciptionController<τ_0_0>.CellDescription",
+                        "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC15CellDescriptionC"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC15cellDescriptionAC04CellH0Cyx_GSgvs",
+                "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC15cellDescriptionAC04CellH0Cyx_GSgvs",
+                "moduleName": "GenericOnBoard",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+                "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC15cellDescriptionAC04CellH0Cyx_GSgvM",
+                "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC15cellDescriptionAC04CellH0Cyx_GSgvM",
+                "moduleName": "GenericOnBoard",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+                "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "animationSpeed",
+            "printedName": "animationSpeed",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC14animationSpeed14CoreFoundation7CGFloatVvp",
+            "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC14animationSpeed12CoreGraphics7CGFloatVvp",
+            "moduleName": "GenericOnBoard",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC14animationSpeed14CoreFoundation7CGFloatVvg",
+                "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC14animationSpeed12CoreGraphics7CGFloatVvg",
+                "moduleName": "GenericOnBoard",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+                "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC14animationSpeed14CoreFoundation7CGFloatVvs",
+                "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC14animationSpeed12CoreGraphics7CGFloatVvs",
+                "moduleName": "GenericOnBoard",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+                "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC14animationSpeed14CoreFoundation7CGFloatVvM",
+                "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC14animationSpeed12CoreGraphics7CGFloatVvM",
+                "moduleName": "GenericOnBoard",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+                "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "lottieAnimationView",
+            "printedName": "lottieAnimationView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Lottie.LottieAnimationView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LottieAnimationView",
+                    "printedName": "Lottie.LottieAnimationView",
+                    "usr": "c:@M@Lottie@objc(cs)LottieAnimationView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC19lottieAnimationView0D00dhI0CSgvp",
+            "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC19lottieAnimationView0D00dhI0CSgvp",
+            "moduleName": "GenericOnBoard",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Lottie.LottieAnimationView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LottieAnimationView",
+                        "printedName": "Lottie.LottieAnimationView",
+                        "usr": "c:@M@Lottie@objc(cs)LottieAnimationView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC19lottieAnimationView0D00dhI0CSgvg",
+                "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC19lottieAnimationView0D00dhI0CSgvg",
+                "moduleName": "GenericOnBoard",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+                "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Lottie.LottieAnimationView?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LottieAnimationView",
+                        "printedName": "Lottie.LottieAnimationView",
+                        "usr": "c:@M@Lottie@objc(cs)LottieAnimationView"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC19lottieAnimationView0D00dhI0CSgvs",
+                "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC19lottieAnimationView0D00dhI0CSgvs",
+                "moduleName": "GenericOnBoard",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+                "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC19lottieAnimationView0D00dhI0CSgvM",
+                "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC19lottieAnimationView0D00dhI0CSgvM",
+                "moduleName": "GenericOnBoard",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+                "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "enablePageController",
+            "printedName": "enablePageController",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((UIKit.UIPageControl) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UIKit.UIPageControl) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIPageControl",
+                        "printedName": "UIKit.UIPageControl",
+                        "usr": "c:objc(cs)UIPageControl"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC010enablePageF0ySo13UIPageControlCcSgvp",
+            "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC010enablePageF0ySo13UIPageControlCcSgvp",
+            "moduleName": "GenericOnBoard",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((UIKit.UIPageControl) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(UIKit.UIPageControl) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UIPageControl",
+                            "printedName": "UIKit.UIPageControl",
+                            "usr": "c:objc(cs)UIPageControl"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC010enablePageF0ySo13UIPageControlCcSgvg",
+                "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC010enablePageF0ySo13UIPageControlCcSgvg",
+                "moduleName": "GenericOnBoard",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+                "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((UIKit.UIPageControl) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(UIKit.UIPageControl) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UIPageControl",
+                            "printedName": "UIKit.UIPageControl",
+                            "usr": "c:objc(cs)UIPageControl"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC010enablePageF0ySo13UIPageControlCcSgvs",
+                "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC010enablePageF0ySo13UIPageControlCcSgvs",
+                "moduleName": "GenericOnBoard",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+                "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC010enablePageF0ySo13UIPageControlCcSgvM",
+                "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC010enablePageF0ySo13UIPageControlCcSgvM",
+                "moduleName": "GenericOnBoard",
+                "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+                "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(lottie:numberOfScenes:cellDescription:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericLottieOnBoardDesciptionController",
+                "printedName": "GenericOnBoard.GenericLottieOnBoardDesciptionController<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LottieAnimationView",
+                "printedName": "Lottie.LottieAnimationView",
+                "usr": "c:@M@Lottie@objc(cs)LottieAnimationView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CellDescription",
+                "printedName": "GenericOnBoard.GenericLottieOnBoardDesciptionController<τ_0_0>.CellDescription",
+                "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC15CellDescriptionC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC6lottie14numberOfScenes15cellDescriptionACyxG0D00D13AnimationViewC_SiAC04CellL0Cyx_Gtcfc",
+            "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC6lottie14numberOfScenes15cellDescriptionACyxG0D00D13AnimationViewC_SiAC04CellL0Cyx_Gtcfc",
+            "moduleName": "GenericOnBoard",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+            "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "Convenience",
+              "AccessControl"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Function",
+            "name": "viewDidLoad",
+            "printedName": "viewDidLoad()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC11viewDidLoadyyF",
+            "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC11viewDidLoadyyF",
+            "moduleName": "GenericOnBoard",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+            "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+            "overriding": true,
+            "objc_name": "viewDidLoad",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "Override",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deviceRotated",
+            "printedName": "deviceRotated(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIDeviceOrientation",
+                "printedName": "UIKit.UIDeviceOrientation",
+                "usr": "c:@E@UIDeviceOrientation"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC13deviceRotatedyySo19UIDeviceOrientationVF",
+            "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC13deviceRotatedyySo19UIDeviceOrientationVF",
+            "moduleName": "GenericOnBoard",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+            "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+            "overriding": true,
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "numberOfSections",
+            "printedName": "numberOfSections(in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UICollectionView",
+                "printedName": "UIKit.UICollectionView",
+                "usr": "c:objc(cs)UICollectionView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC16numberOfSections2inSiSo16UICollectionViewC_tF",
+            "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC16numberOfSections2inSiSo16UICollectionViewC_tF",
+            "moduleName": "GenericOnBoard",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+            "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+            "objc_name": "numberOfSectionsInCollectionView:",
+            "declAttributes": [
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "collectionView",
+            "printedName": "collectionView(_:numberOfItemsInSection:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UICollectionView",
+                "printedName": "UIKit.UICollectionView",
+                "usr": "c:objc(cs)UICollectionView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC14collectionView_22numberOfItemsInSectionSiSo012UICollectionH0C_SitF",
+            "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC14collectionView_22numberOfItemsInSectionSiSo012UICollectionH0C_SitF",
+            "moduleName": "GenericOnBoard",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+            "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+            "objc_name": "collectionView:numberOfItemsInSection:",
+            "declAttributes": [
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "collectionView",
+            "printedName": "collectionView(_:cellForItemAt:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UICollectionViewCell",
+                "printedName": "UIKit.UICollectionViewCell",
+                "usr": "c:objc(cs)UICollectionViewCell"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UICollectionView",
+                "printedName": "UIKit.UICollectionView",
+                "usr": "c:objc(cs)UICollectionView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IndexPath",
+                "printedName": "Foundation.IndexPath",
+                "usr": "s:10Foundation9IndexPathV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC14collectionView_13cellForItemAtSo012UICollectionH4CellCSo0mH0C_10Foundation9IndexPathVtF",
+            "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC14collectionView_13cellForItemAtSo012UICollectionH4CellCSo0mH0C_10Foundation9IndexPathVtF",
+            "moduleName": "GenericOnBoard",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+            "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+            "objc_name": "collectionView:cellForItemAtIndexPath:",
+            "declAttributes": [
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "collectionView",
+            "printedName": "collectionView(_:layout:sizeForItemAt:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGSize",
+                "printedName": "CoreFoundation.CGSize",
+                "usr": "c:@S@CGSize"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UICollectionView",
+                "printedName": "UIKit.UICollectionView",
+                "usr": "c:objc(cs)UICollectionView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UICollectionViewLayout",
+                "printedName": "UIKit.UICollectionViewLayout",
+                "usr": "c:objc(cs)UICollectionViewLayout"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IndexPath",
+                "printedName": "Foundation.IndexPath",
+                "usr": "s:10Foundation9IndexPathV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC14collectionView_6layout13sizeForItemAtSo6CGSizeVSo012UICollectionH0C_So0oH6LayoutC10Foundation9IndexPathVtF",
+            "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC14collectionView_6layout13sizeForItemAtSo6CGSizeVSo012UICollectionH0C_So0oH6LayoutC10Foundation9IndexPathVtF",
+            "moduleName": "GenericOnBoard",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+            "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+            "objc_name": "collectionView:layout:sizeForItemAtIndexPath:",
+            "declAttributes": [
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "scrollViewWillBeginDragging",
+            "printedName": "scrollViewWillBeginDragging(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIScrollView",
+                "printedName": "UIKit.UIScrollView",
+                "usr": "c:objc(cs)UIScrollView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC27scrollViewWillBeginDraggingyySo08UIScrollH0CF",
+            "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC27scrollViewWillBeginDraggingyySo08UIScrollH0CF",
+            "moduleName": "GenericOnBoard",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+            "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+            "objc_name": "scrollViewWillBeginDragging:",
+            "declAttributes": [
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "scrollViewDidEndDecelerating",
+            "printedName": "scrollViewDidEndDecelerating(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIScrollView",
+                "printedName": "UIKit.UIScrollView",
+                "usr": "c:objc(cs)UIScrollView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC28scrollViewDidEndDeceleratingyySo08UIScrollH0CF",
+            "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC28scrollViewDidEndDeceleratingyySo08UIScrollH0CF",
+            "moduleName": "GenericOnBoard",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+            "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+            "objc_name": "scrollViewDidEndDecelerating:",
+            "declAttributes": [
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "scrollViewDidScroll",
+            "printedName": "scrollViewDidScroll(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIScrollView",
+                "printedName": "UIKit.UIScrollView",
+                "usr": "c:objc(cs)UIScrollView"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC19scrollViewDidScrollyySo08UIScrollH0CF",
+            "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC19scrollViewDidScrollyySo08UIScrollH0CF",
+            "moduleName": "GenericOnBoard",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+            "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+            "objc_name": "scrollViewDidScroll:",
+            "declAttributes": [
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "reloadData",
+            "printedName": "reloadData()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC10reloadDatayyF",
+            "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC10reloadDatayyF",
+            "moduleName": "GenericOnBoard",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+            "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(nibName:bundle:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericLottieOnBoardDesciptionController",
+                "printedName": "GenericOnBoard.GenericLottieOnBoardDesciptionController<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Bundle?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC7nibName6bundleACyxGSSSg_So8NSBundleCSgtcfc",
+            "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC7nibName6bundleACyxGSSSg_So8NSBundleCSgtcfc",
+            "moduleName": "GenericOnBoard",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+            "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithNibName:bundle:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "GenericOnBoard.GenericLottieOnBoardDesciptionController<τ_0_0>?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericLottieOnBoardDesciptionController",
+                    "printedName": "GenericOnBoard.GenericLottieOnBoardDesciptionController<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC5coderACyxGSgSo7NSCoderC_tcfc",
+            "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC5coderACyxGSgSo7NSCoderC_tcfc",
+            "moduleName": "GenericOnBoard",
+            "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+            "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:14GenericOnBoard0a6LottiebC20DesciptionControllerC",
+        "mangledName": "$s14GenericOnBoard0a6LottiebC20DesciptionControllerC",
+        "moduleName": "GenericOnBoard",
+        "genericSig": "<τ_0_0 where τ_0_0 : UIKit.UICollectionViewCell>",
+        "sugared_genericSig": "<CellType where CellType : UIKit.UICollectionViewCell>",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl"
+        ],
+        "superclassUsr": "c:@M@Orientation@objc(cs)OrientationHelperController",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "Orientation.OrientationHelperController",
+          "UIKit.UIViewController",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "OrientationChanger",
+            "printedName": "OrientationChanger",
+            "usr": "s:11Orientation0A7ChangerP",
+            "mangledName": "$s11Orientation0A7ChangerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "OrientationHandler",
+            "printedName": "OrientationHandler",
+            "usr": "s:11Orientation0A7HandlerP",
+            "mangledName": "$s11Orientation0A7HandlerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GenericOnBoard",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GenericOnBoard",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Reusable",
+        "printedName": "Reusable",
+        "declKind": "Import",
+        "moduleName": "GenericOnBoard"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GenericOnBoardingDescriptiorCell",
+        "printedName": "GenericOnBoardingDescriptiorCell",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "identifier",
+            "printedName": "identifier",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14GenericOnBoard0aB23BoardingDescriptiorCellC10identifierSSvpZ",
+            "mangledName": "$s14GenericOnBoard0aB23BoardingDescriptiorCellC10identifierSSvpZ",
+            "moduleName": "GenericOnBoard",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14GenericOnBoard0aB23BoardingDescriptiorCellC10identifierSSvgZ",
+                "mangledName": "$s14GenericOnBoard0aB23BoardingDescriptiorCellC10identifierSSvgZ",
+                "moduleName": "GenericOnBoard",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14GenericOnBoard0aB23BoardingDescriptiorCellC10identifierSSvsZ",
+                "mangledName": "$s14GenericOnBoard0aB23BoardingDescriptiorCellC10identifierSSvsZ",
+                "moduleName": "GenericOnBoard",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14GenericOnBoard0aB23BoardingDescriptiorCellC10identifierSSvMZ",
+                "mangledName": "$s14GenericOnBoard0aB23BoardingDescriptiorCellC10identifierSSvMZ",
+                "moduleName": "GenericOnBoard",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "GenericOnBoardBundle",
+            "printedName": "GenericOnBoardBundle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bundle",
+                "printedName": "Foundation.Bundle",
+                "usr": "c:objc(cs)NSBundle"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14GenericOnBoard0aB23BoardingDescriptiorCellC0abC6BundleSo8NSBundleCvpZ",
+            "mangledName": "$s14GenericOnBoard0aB23BoardingDescriptiorCellC0abC6BundleSo8NSBundleCvpZ",
+            "moduleName": "GenericOnBoard",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14GenericOnBoard0aB23BoardingDescriptiorCellC0abC6BundleSo8NSBundleCvgZ",
+                "mangledName": "$s14GenericOnBoard0aB23BoardingDescriptiorCellC0abC6BundleSo8NSBundleCvgZ",
+                "moduleName": "GenericOnBoard",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14GenericOnBoard0aB23BoardingDescriptiorCellC0abC6BundleSo8NSBundleCvsZ",
+                "mangledName": "$s14GenericOnBoard0aB23BoardingDescriptiorCellC0abC6BundleSo8NSBundleCvsZ",
+                "moduleName": "GenericOnBoard",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14GenericOnBoard0aB23BoardingDescriptiorCellC0abC6BundleSo8NSBundleCvMZ",
+                "mangledName": "$s14GenericOnBoard0aB23BoardingDescriptiorCellC0abC6BundleSo8NSBundleCvMZ",
+                "moduleName": "GenericOnBoard",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "moduleLabel",
+            "printedName": "moduleLabel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "UIKit.UILabel?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@GenericOnBoard@objc(cs)GenericOnBoardingDescriptiorCell(py)moduleLabel",
+            "mangledName": "$s14GenericOnBoard0aB23BoardingDescriptiorCellC11moduleLabelSo7UILabelCSgvp",
+            "moduleName": "GenericOnBoard",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl",
+              "IBOutlet",
+              "ObjC"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UILabel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@GenericOnBoard@objc(cs)GenericOnBoardingDescriptiorCell(im)moduleLabel",
+                "mangledName": "$s14GenericOnBoard0aB23BoardingDescriptiorCellC11moduleLabelSo7UILabelCSgvg",
+                "moduleName": "GenericOnBoard",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UILabel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@GenericOnBoard@objc(cs)GenericOnBoardingDescriptiorCell(im)setModuleLabel:",
+                "mangledName": "$s14GenericOnBoard0aB23BoardingDescriptiorCellC11moduleLabelSo7UILabelCSgvs",
+                "moduleName": "GenericOnBoard",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14GenericOnBoard0aB23BoardingDescriptiorCellC11moduleLabelSo7UILabelCSgvM",
+                "mangledName": "$s14GenericOnBoard0aB23BoardingDescriptiorCellC11moduleLabelSo7UILabelCSgvM",
+                "moduleName": "GenericOnBoard",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "descriptionLabel",
+            "printedName": "descriptionLabel",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "UIKit.UILabel?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@GenericOnBoard@objc(cs)GenericOnBoardingDescriptiorCell(py)descriptionLabel",
+            "mangledName": "$s14GenericOnBoard0aB23BoardingDescriptiorCellC16descriptionLabelSo7UILabelCSgvp",
+            "moduleName": "GenericOnBoard",
+            "declAttributes": [
+              "HasInitialValue",
+              "Preconcurrency",
+              "Custom",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl",
+              "IBOutlet",
+              "ObjC"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UILabel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@GenericOnBoard@objc(cs)GenericOnBoardingDescriptiorCell(im)descriptionLabel",
+                "mangledName": "$s14GenericOnBoard0aB23BoardingDescriptiorCellC16descriptionLabelSo7UILabelCSgvg",
+                "moduleName": "GenericOnBoard",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ImplicitlyUnwrappedOptional",
+                    "printedName": "UIKit.UILabel?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UILabel",
+                        "printedName": "UIKit.UILabel",
+                        "usr": "c:objc(cs)UILabel"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@GenericOnBoard@objc(cs)GenericOnBoardingDescriptiorCell(im)setDescriptionLabel:",
+                "mangledName": "$s14GenericOnBoard0aB23BoardingDescriptiorCellC16descriptionLabelSo7UILabelCSgvs",
+                "moduleName": "GenericOnBoard",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14GenericOnBoard0aB23BoardingDescriptiorCellC16descriptionLabelSo7UILabelCSgvM",
+                "mangledName": "$s14GenericOnBoard0aB23BoardingDescriptiorCellC16descriptionLabelSo7UILabelCSgvM",
+                "moduleName": "GenericOnBoard",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "awakeFromNib",
+            "printedName": "awakeFromNib()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@GenericOnBoard@objc(cs)GenericOnBoardingDescriptiorCell(im)awakeFromNib",
+            "mangledName": "$s14GenericOnBoard0aB23BoardingDescriptiorCellC12awakeFromNibyyF",
+            "moduleName": "GenericOnBoard",
+            "overriding": true,
+            "objc_name": "awakeFromNib",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(frame:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericOnBoardingDescriptiorCell",
+                "printedName": "GenericOnBoard.GenericOnBoardingDescriptiorCell",
+                "usr": "c:@M@GenericOnBoard@objc(cs)GenericOnBoardingDescriptiorCell"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@GenericOnBoard@objc(cs)GenericOnBoardingDescriptiorCell(im)initWithFrame:",
+            "mangledName": "$s14GenericOnBoard0aB23BoardingDescriptiorCellC5frameACSo6CGRectV_tcfc",
+            "moduleName": "GenericOnBoard",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithFrame:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(coder:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "GenericOnBoard.GenericOnBoardingDescriptiorCell?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericOnBoardingDescriptiorCell",
+                    "printedName": "GenericOnBoard.GenericOnBoardingDescriptiorCell",
+                    "usr": "c:@M@GenericOnBoard@objc(cs)GenericOnBoardingDescriptiorCell"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSCoder",
+                "printedName": "Foundation.NSCoder",
+                "usr": "c:objc(cs)NSCoder"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@GenericOnBoard@objc(cs)GenericOnBoardingDescriptiorCell(im)initWithCoder:",
+            "mangledName": "$s14GenericOnBoard0aB23BoardingDescriptiorCellC5coderACSgSo7NSCoderC_tcfc",
+            "moduleName": "GenericOnBoard",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "initWithCoder:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Preconcurrency",
+              "Custom",
+              "Required"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@GenericOnBoard@objc(cs)GenericOnBoardingDescriptiorCell",
+        "mangledName": "$s14GenericOnBoard0aB23BoardingDescriptiorCellC",
+        "moduleName": "GenericOnBoard",
+        "declAttributes": [
+          "Preconcurrency",
+          "Custom",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)UICollectionViewCell",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UICollectionViewCell",
+          "UIKit.UICollectionReusableView",
+          "UIKit.UIView",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CellResuable",
+            "printedName": "CellResuable",
+            "usr": "s:8Reusable12CellResuableP",
+            "mangledName": "$s8Reusable12CellResuableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ConstraintRelatableTarget",
+            "printedName": "ConstraintRelatableTarget",
+            "usr": "s:7SnapKit25ConstraintRelatableTargetP",
+            "mangledName": "$s7SnapKit25ConstraintRelatableTargetP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LayoutConstraintItem",
+            "printedName": "LayoutConstraintItem",
+            "usr": "s:7SnapKit20LayoutConstraintItemP",
+            "mangledName": "$s7SnapKit20LayoutConstraintItemP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "UITraitChangeObservable",
+            "printedName": "UITraitChangeObservable",
+            "usr": "s:5UIKit23UITraitChangeObservableP",
+            "mangledName": "$s5UIKit23UITraitChangeObservableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Bundle",
+        "printedName": "Bundle",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "onboardBundle",
+            "printedName": "onboardBundle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bundle",
+                "printedName": "Foundation.Bundle",
+                "usr": "c:objc(cs)NSBundle"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So8NSBundleC14GenericOnBoardE13onboardBundleABvpZ",
+            "mangledName": "$sSo8NSBundleC14GenericOnBoardE13onboardBundleABvpZ",
+            "moduleName": "GenericOnBoard",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So8NSBundleC14GenericOnBoardE13onboardBundleABvgZ",
+                "mangledName": "$sSo8NSBundleC14GenericOnBoardE13onboardBundleABvgZ",
+                "moduleName": "GenericOnBoard",
+                "static": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)NSBundle",
+        "moduleName": "Foundation",
+        "isOpen": true,
+        "objc_name": "NSBundle",
+        "declAttributes": [
+          "ObjC",
+          "SynthesizedProtocol",
+          "NonSendable",
+          "Sendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/GenericOnBoard\/GenericLottieOnBoardDesciptionController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1712,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/GenericOnBoard\/GenericLottieOnBoardDesciptionController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2079,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/GenericOnBoard\/GenericLottieOnBoardDesciptionController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5130,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/jem-8413\/Desktop\/Projects\/Current\/ZAUtils\/native\/RJFrameWork\/RJFrameWork\/GenericOnBoard\/GenericOnBoardingDescriptiorCell.swift",
+      "kind": "StringLiteral",
+      "offset": 346,
+      "length": 25,
+      "value": "\"onboard_collection_cell\""
+    }
+  ]
+}
