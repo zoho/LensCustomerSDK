@@ -15,8 +15,8 @@
 		C24E1CA524B5CF9100ACE8D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E1CA424B5CF9100ACE8D3 /* SceneDelegate.swift */; };
 		C24E1CAC24B5CF9200ACE8D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C24E1CAB24B5CF9200ACE8D3 /* Assets.xcassets */; };
 		C24E1CAF24B5CF9200ACE8D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24E1CAD24B5CF9200ACE8D3 /* LaunchScreen.storyboard */; };
-		F5E030B2304ED1F900A738FC /* CustomerSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E030B1304ED1F900A738FC /* CustomerSessionDelegate.swift */; };
 		F5E030A4304ED1F900A738FC /* Lens_Integration_SDK in Frameworks */ = {isa = PBXBuildFile; productRef = F5E030A3304ED1F900A738FC /* Lens_Integration_SDK */; };
+		F5E030B2304ED1F900A738FC /* CustomerSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E030B1304ED1F900A738FC /* CustomerSessionDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,18 +72,50 @@
 		C24E1CA124B5CF9100ACE8D3 /* Sample_SDK */ = {
 			isa = PBXGroup;
 			children = (
+				F5E030C5304ED1F900A738FC /* App */,
+				F5E030C6304ED1F900A738FC /* Shared */,
+				F5E030C7304ED1F900A738FC /* UIKit */,
 				3F8575402A25CCEF0022FBD9 /* SwiftUI */,
-				C24E1CA224B5CF9100ACE8D3 /* AppDelegate.swift */,
-				C24E1CA424B5CF9100ACE8D3 /* SceneDelegate.swift */,
-				3F8575472A25CDA80022FBD9 /* InitialViewController.swift */,
-				3FBF369A2A9E038900177B3F /* SessionJoinViewController.swift */,
-				F5E030B1304ED1F900A738FC /* CustomerSessionDelegate.swift */,
-				C24E1CAB24B5CF9200ACE8D3 /* Assets.xcassets */,
-				3F8575482A25CDA80022FBD9 /* Main.storyboard */,
-				C24E1CAD24B5CF9200ACE8D3 /* LaunchScreen.storyboard */,
-				C24E1CB024B5CF9200ACE8D3 /* Info.plist */,
+				F5E030C8304ED1F900A738FC /* Resources */,
 			);
 			path = Sample_SDK;
+			sourceTree = "<group>";
+		};
+		F5E030C5304ED1F900A738FC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C24E1CA224B5CF9100ACE8D3 /* AppDelegate.swift */,
+				C24E1CA424B5CF9100ACE8D3 /* SceneDelegate.swift */,
+				C24E1CB024B5CF9200ACE8D3 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F5E030C6304ED1F900A738FC /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F5E030B1304ED1F900A738FC /* CustomerSessionDelegate.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		F5E030C7304ED1F900A738FC /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				3F8575472A25CDA80022FBD9 /* InitialViewController.swift */,
+				3FBF369A2A9E038900177B3F /* SessionJoinViewController.swift */,
+				3F8575482A25CDA80022FBD9 /* Main.storyboard */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		F5E030C8304ED1F900A738FC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C24E1CAB24B5CF9200ACE8D3 /* Assets.xcassets */,
+				C24E1CAD24B5CF9200ACE8D3 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,12 +339,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 7VPXG96P25;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TZ824L8Y37;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = Sample_SDK/Info.plist;
+				INFOPLIST_FILE = Sample_SDK/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -321,7 +351,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jambav.lenstest.Sample-SDK1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Wildcard Development Profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -333,12 +362,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 7VPXG96P25;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TZ824L8Y37;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = Sample_SDK/Info.plist;
+				INFOPLIST_FILE = Sample_SDK/App/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -347,7 +374,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jambav.lenstest.Sample-SDK1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Wildcard Development Profile";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
