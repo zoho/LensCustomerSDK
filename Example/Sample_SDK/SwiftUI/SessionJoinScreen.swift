@@ -15,7 +15,7 @@ private struct CustomerSessionPresentation: Identifiable {
 
 struct SessionJoinScreen: View {
     @State private var sessionKey = ""
-    @State private var sdkToken = UserDefaults.standard.string(forKey: "sdk_token") ?? ""
+    @State private var sdkToken = UserDefaults.standard.string(forKey: SampleConstants.sdkTokenStorageKey) ?? ""
     @State private var isARMode = true
     @State private var isLoading = false
     @State private var errorMessage: String?
@@ -62,8 +62,8 @@ struct SessionJoinScreen: View {
         .fullScreenCover(item: $presentation) { item in
             LensSDK.shared.customerSessionView(
                 params: item.params,
-                customerName: "Jane Customer",
-                customerEmail: "jane@example.com",
+                customerName: SampleConstants.customerName,
+                customerEmail: SampleConstants.customerEmail,
                 isARMode: isARMode,
                 delegate: sessionDelegate
             )
@@ -78,7 +78,7 @@ struct SessionJoinScreen: View {
 
     private func joinSession() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-        UserDefaults.standard.set(sdkToken, forKey: "sdk_token")
+        UserDefaults.standard.set(sdkToken, forKey: SampleConstants.sdkTokenStorageKey)
         isLoading = true
 
         LensSDK.shared.joinSessionAsCustomer(sessionKey: sessionKey, sdkToken: sdkToken) { result in

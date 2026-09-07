@@ -15,14 +15,9 @@ final class SessionJoinViewController: UIViewController {
     private let sessionDelegate = CustomerSessionDelegate()
     private var isJoining = false
 
-    private var storedSDKToken: String {
-        get { UserDefaults.standard.string(forKey: "sdk_token") ?? "" }
-        set { UserDefaults.standard.set(newValue, forKey: "sdk_token") }
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        sdkTokenField.text = storedSDKToken
+        sdkTokenField.text = UserDefaults.standard.string(forKey: SampleConstants.sdkTokenStorageKey) ?? ""
     }
 
     @IBAction func joinButtonAction(_ sender: UIButton) {
@@ -47,7 +42,7 @@ final class SessionJoinViewController: UIViewController {
             return
         }
 
-        storedSDKToken = sdkToken
+        UserDefaults.standard.set(sdkToken, forKey: SampleConstants.sdkTokenStorageKey)
         isJoining = true
 
         LensSDK.shared.joinSessionAsCustomer(sessionKey: sessionKey, sdkToken: sdkToken) { [weak self] result in
@@ -58,8 +53,8 @@ final class SessionJoinViewController: UIViewController {
                 case .success(let params):
                     LensSDK.shared.presentCustomerSession(
                         params: params,
-                        customerName: "Jane Customer",
-                        customerEmail: "jane@example.com",
+                        customerName: SampleConstants.customerName,
+                        customerEmail: SampleConstants.customerEmail,
                         isARMode: self.arSwitch.isOn,
                         from: self,
                         delegate: self.sessionDelegate

@@ -17,6 +17,8 @@
 		C24E1CAF24B5CF9200ACE8D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24E1CAD24B5CF9200ACE8D3 /* LaunchScreen.storyboard */; };
 		F5E030A4304ED1F900A738FC /* Lens_Integration_SDK in Frameworks */ = {isa = PBXBuildFile; productRef = F5E030A3304ED1F900A738FC /* Lens_Integration_SDK */; };
 		F5E030B2304ED1F900A738FC /* CustomerSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E030B1304ED1F900A738FC /* CustomerSessionDelegate.swift */; };
+		F5E030C2304ED1F900A738FC /* SampleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E030C1304ED1F900A738FC /* SampleConstants.swift */; };
+		F5E030C4304ED1F900A738FC /* CustomerSDKErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E030C3304ED1F900A738FC /* CustomerSDKErrorMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		C24E1CAE24B5CF9200ACE8D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C24E1CB024B5CF9200ACE8D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5E030B1304ED1F900A738FC /* CustomerSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerSessionDelegate.swift; sourceTree = "<group>"; };
+		F5E030C1304ED1F900A738FC /* SampleConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleConstants.swift; sourceTree = "<group>"; };
+		F5E030C3304ED1F900A738FC /* CustomerSDKErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerSDKErrorMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				F5E030B1304ED1F900A738FC /* CustomerSessionDelegate.swift */,
+				F5E030C3304ED1F900A738FC /* CustomerSDKErrorMessage.swift */,
+				F5E030C1304ED1F900A738FC /* SampleConstants.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -197,6 +203,8 @@
 				3FBF369B2A9E038900177B3F /* SessionJoinViewController.swift in Sources */,
 				3F8575492A25CDA80022FBD9 /* InitialViewController.swift in Sources */,
 				F5E030B2304ED1F900A738FC /* CustomerSessionDelegate.swift in Sources */,
+				F5E030C2304ED1F900A738FC /* SampleConstants.swift in Sources */,
+				F5E030C4304ED1F900A738FC /* CustomerSDKErrorMessage.swift in Sources */,
 				C24E1CA524B5CF9100ACE8D3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
