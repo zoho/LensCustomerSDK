@@ -15,11 +15,12 @@ private struct CustomerSessionPresentation: Identifiable {
 
 struct SessionJoinScreen: View {
     @State private var sessionKey = ""
+    @AppStorage("sdk_token") private var sdkToken = ""
     @State private var isARMode = true
     @State private var isLoading = false
     @State private var errorMessage: String?
     @State private var presentation: CustomerSessionPresentation?
-    @State private var sessionDelegate = LensSessionDelegate()
+    @State private var sessionDelegate = CustomerSessionDelegate()
 
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
@@ -27,11 +28,16 @@ struct SessionJoinScreen: View {
                 .textFieldStyle(.roundedBorder)
                 .keyboardType(.numberPad)
 
+            TextField("Enter SDK token", text: $sdkToken)
+                .textFieldStyle(.roundedBorder)
+                .textInputAutocapitalization(.never)
+                .autocorrectionDisabled()
+
             Toggle("AR Mode", isOn: $isARMode)
 
             Button("Join Session", action: joinSession)
                 .buttonStyle(.borderedProminent)
-                .disabled(sessionKey.isEmpty || isLoading)
+                .disabled(sessionKey.isEmpty || sdkToken.isEmpty || isLoading)
                 .frame(maxWidth: .infinity)
 
             if isLoading {
@@ -56,8 +62,8 @@ struct SessionJoinScreen: View {
         .fullScreenCover(item: $presentation) { item in
             LensSDK.shared.customerSessionView(
                 params: item.params,
-                customerName: "Sample Customer",
-                customerEmail: "customer@example.com",
+                customerName: "Jane Customer",
+                customerEmail: "jane@example.com",
                 isARMode: isARMode,
                 delegate: sessionDelegate
             )
@@ -74,14 +80,14 @@ struct SessionJoinScreen: View {
         hideKeyboard()
         isLoading = true
 
-        LensSDK.shared.joinSessionAsCustomer(sessionKey: sessionKey) { result in
+        LensSDK.shared.joinSessionAsCustomer(sessionKey: sessionKey, sdkToken: sdkToken) { result in
             DispatchQueue.main.async {
                 isLoading = false
                 switch result {
                 case .success(let params):
                     presentation = CustomerSessionPresentation(params: params)
                 case .failure(let error):
-                    errorMessage = error.localizedDescription
+                    errorMessage = CustomerSDKErrorMessage.message(for: error)
                 }
             }
         }

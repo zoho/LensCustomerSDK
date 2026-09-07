@@ -15,7 +15,7 @@
 		C24E1CA524B5CF9100ACE8D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E1CA424B5CF9100ACE8D3 /* SceneDelegate.swift */; };
 		C24E1CAC24B5CF9200ACE8D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C24E1CAB24B5CF9200ACE8D3 /* Assets.xcassets */; };
 		C24E1CAF24B5CF9200ACE8D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24E1CAD24B5CF9200ACE8D3 /* LaunchScreen.storyboard */; };
-		F5E030B2304ED1F900A738FC /* LensSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E030B1304ED1F900A738FC /* LensSessionDelegate.swift */; };
+		F5E030B2304ED1F900A738FC /* CustomerSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E030B1304ED1F900A738FC /* CustomerSessionDelegate.swift */; };
 		F5E030A4304ED1F900A738FC /* Lens_Integration_SDK in Frameworks */ = {isa = PBXBuildFile; productRef = F5E030A3304ED1F900A738FC /* Lens_Integration_SDK */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +30,7 @@
 		C24E1CAB24B5CF9200ACE8D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C24E1CAE24B5CF9200ACE8D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C24E1CB024B5CF9200ACE8D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F5E030B1304ED1F900A738FC /* LensSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LensSessionDelegate.swift; sourceTree = "<group>"; };
+		F5E030B1304ED1F900A738FC /* CustomerSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerSessionDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 				C24E1CA424B5CF9100ACE8D3 /* SceneDelegate.swift */,
 				3F8575472A25CDA80022FBD9 /* InitialViewController.swift */,
 				3FBF369A2A9E038900177B3F /* SessionJoinViewController.swift */,
-				F5E030B1304ED1F900A738FC /* LensSessionDelegate.swift */,
+				F5E030B1304ED1F900A738FC /* CustomerSessionDelegate.swift */,
 				C24E1CAB24B5CF9200ACE8D3 /* Assets.xcassets */,
 				3F8575482A25CDA80022FBD9 /* Main.storyboard */,
 				C24E1CAD24B5CF9200ACE8D3 /* LaunchScreen.storyboard */,
@@ -164,7 +164,7 @@
 				C24E1CA324B5CF9100ACE8D3 /* AppDelegate.swift in Sources */,
 				3FBF369B2A9E038900177B3F /* SessionJoinViewController.swift in Sources */,
 				3F8575492A25CDA80022FBD9 /* InitialViewController.swift in Sources */,
-				F5E030B2304ED1F900A738FC /* LensSessionDelegate.swift in Sources */,
+				F5E030B2304ED1F900A738FC /* CustomerSessionDelegate.swift in Sources */,
 				C24E1CA524B5CF9100ACE8D3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

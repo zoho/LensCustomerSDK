@@ -25,8 +25,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter SDK token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XI4-1A-9hV">
+                                <rect key="frame" x="57" y="196" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="1gc-5i-FZn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="none" autocorrectionType="no"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvE-Gv-yRc">
-                                <rect key="frame" x="157" y="196" width="100" height="36"/>
+                                <rect key="frame" x="157" y="250" width="100" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="IJH-U6-nKW"/>
                                 </constraints>
@@ -38,13 +46,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AR Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC7-1Y-cIM">
-                                <rect key="frame" x="57" y="273" width="69" height="21"/>
+                                <rect key="frame" x="57" y="327" width="69" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch toolTip="AR Mode" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="AR" translatesAutoresizingMaskIntoConstraints="NO" id="wZz-oA-Trs">
-                                <rect key="frame" x="146" y="268" width="51" height="31"/>
+                                <rect key="frame" x="146" y="322" width="51" height="31"/>
                             </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -54,7 +62,9 @@
                             <constraint firstItem="HC7-1Y-cIM" firstAttribute="leading" secondItem="MWn-Cd-5bh" secondAttribute="leading" id="S2X-Ma-ahx"/>
                             <constraint firstItem="MWn-Cd-5bh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="T0x-Wp-clO"/>
                             <constraint firstItem="wZz-oA-Trs" firstAttribute="top" secondItem="RvE-Gv-yRc" secondAttribute="bottom" constant="36" id="UGx-mo-uZ8"/>
-                            <constraint firstItem="RvE-Gv-yRc" firstAttribute="top" secondItem="MWn-Cd-5bh" secondAttribute="bottom" constant="20" id="Vrh-PC-gck"/>
+                            <constraint firstItem="RvE-Gv-yRc" firstAttribute="top" secondItem="XI4-1A-9hV" secondAttribute="bottom" constant="20" id="Vrh-PC-gck"/>
+                            <constraint firstItem="XI4-1A-9hV" firstAttribute="top" secondItem="MWn-Cd-5bh" secondAttribute="bottom" constant="20" id="pWC-5x-fQR"/>
+                            <constraint firstItem="XI4-1A-9hV" firstAttribute="leading" secondItem="MWn-Cd-5bh" secondAttribute="leading" id="sVU-dp-zFd"/>
                             <constraint firstItem="wZz-oA-Trs" firstAttribute="leading" secondItem="HC7-1Y-cIM" secondAttribute="trailing" constant="20" id="o7f-ie-v2S"/>
                             <constraint firstItem="MWn-Cd-5bh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yVA-JT-W9y"/>
                             <constraint firstItem="HC7-1Y-cIM" firstAttribute="centerY" secondItem="wZz-oA-Trs" secondAttribute="centerY" id="ysh-Sd-1OI"/>
@@ -63,6 +73,7 @@
                     <navigationItem key="navigationItem" title="Join as Customer" id="fLB-BC-zCg"/>
                     <connections>
                         <outlet property="arSwitch" destination="wZz-oA-Trs" id="UU2-8V-fgx"/>
+                        <outlet property="sdkTokenField" destination="XI4-1A-9hV" id="McZ-9F-OKy"/>
                         <outlet property="sessionID" destination="MWn-Cd-5bh" id="dUB-IH-fEi"/>
                     </connections>
                 </viewController>

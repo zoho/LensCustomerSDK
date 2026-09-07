@@ -10,9 +10,20 @@ import Lens_Integration_SDK
 final class SessionJoinViewController: UIViewController {
 
     @IBOutlet weak var sessionID: UITextField!
+    @IBOutlet weak var sdkTokenField: UITextField!
     @IBOutlet weak var arSwitch: UISwitch!
 
-    private let sessionDelegate = LensSessionDelegate()
+    private let sessionDelegate = CustomerSessionDelegate()
+
+    private var storedSDKToken: String {
+        get { UserDefaults.standard.string(forKey: "sdk_token") ?? "" }
+        set { UserDefaults.standard.set(newValue, forKey: "sdk_token") }
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        sdkTokenField.text = storedSDKToken
+    }
 
     @IBAction func start(_ sender: Any) {
         joinSession()
@@ -24,27 +35,38 @@ final class SessionJoinViewController: UIViewController {
 
     private func joinSession() {
         sessionID.resignFirstResponder()
+        sdkTokenField.resignFirstResponder()
 
         guard let sessionKey = sessionID.text, !sessionKey.isEmpty else {
             presentAlert(title: "Session Key Required", message: "Enter a session key to join.")
             return
         }
 
-        LensSDK.shared.joinSessionAsCustomer(sessionKey: sessionKey) { [weak self] result in
+        guard let sdkToken = sdkTokenField.text, !sdkToken.isEmpty else {
+            presentAlert(title: "SDK Token Required", message: "Enter a Mobile SDK token from lens.zoho.com.")
+            return
+        }
+
+        storedSDKToken = sdkToken
+
+        LensSDK.shared.joinSessionAsCustomer(sessionKey: sessionKey, sdkToken: sdkToken) { [weak self] result in
             DispatchQueue.main.async {
                 guard let self else { return }
                 switch result {
                 case .success(let params):
                     LensSDK.shared.presentCustomerSession(
                         params: params,
-                        customerName: "Sample Customer",
-                        customerEmail: "customer@example.com",
+                        customerName: "Jane Customer",
+                        customerEmail: "jane@example.com",
                         isARMode: self.arSwitch.isOn,
                         from: self,
                         delegate: self.sessionDelegate
                     )
                 case .failure(let error):
-                    self.presentAlert(title: "Unable to Join Session", message: error.localizedDescription)
+                    self.presentAlert(
+                        title: "Unable to Join Session",
+                        message: CustomerSDKErrorMessage.message(for: error)
+                    )
                 }
             }
         }
