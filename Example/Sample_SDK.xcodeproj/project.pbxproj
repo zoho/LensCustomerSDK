@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,7 +15,7 @@
 		C24E1CA524B5CF9100ACE8D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E1CA424B5CF9100ACE8D3 /* SceneDelegate.swift */; };
 		C24E1CAC24B5CF9200ACE8D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C24E1CAB24B5CF9200ACE8D3 /* Assets.xcassets */; };
 		C24E1CAF24B5CF9200ACE8D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C24E1CAD24B5CF9200ACE8D3 /* LaunchScreen.storyboard */; };
-		F5E030A4304ED1F900A738FC /* Lens_Integration_SDK in Frameworks */ = {isa = PBXBuildFile; productRef = F5E030A3304ED1F900A738FC /* Lens_Integration_SDK */; };
+		F556F28E305400C1006BE7DC /* Lens_Integration_SDK in Frameworks */ = {isa = PBXBuildFile; productRef = F556F28D305400C1006BE7DC /* Lens_Integration_SDK */; };
 		F5E030B2304ED1F900A738FC /* CustomerSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E030B1304ED1F900A738FC /* CustomerSessionDelegate.swift */; };
 		F5E030C2304ED1F900A738FC /* SampleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E030C1304ED1F900A738FC /* SampleConstants.swift */; };
 		F5E030C4304ED1F900A738FC /* CustomerSDKErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E030C3304ED1F900A738FC /* CustomerSDKErrorMessage.swift */; };
@@ -42,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5E030A4304ED1F900A738FC /* Lens_Integration_SDK in Frameworks */,
+				F556F28E305400C1006BE7DC /* Lens_Integration_SDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,7 +169,7 @@
 			);
 			mainGroup = C24E1C9624B5CF9100ACE8D3;
 			packageReferences = (
-				F5E030A2304ED1F900A738FC /* XCLocalSwiftPackageReference "../../LensCustomerSDK" */,
+				F556F28C305400C1006BE7DC /* XCRemoteSwiftPackageReference "LensCustomerSDK" */,
 			);
 			productRefGroup = C24E1CA024B5CF9100ACE8D3 /* Products */;
 			projectDirPath = "";
@@ -410,16 +410,21 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		F5E030A2304ED1F900A738FC /* XCLocalSwiftPackageReference "../../LensCustomerSDK" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../LensCustomerSDK;
+/* Begin XCRemoteSwiftPackageReference section */
+		F556F28C305400C1006BE7DC /* XCRemoteSwiftPackageReference "LensCustomerSDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zoho/LensCustomerSDK";
+			requirement = {
+				branch = xcframeworks_test;
+				kind = branch;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F5E030A3304ED1F900A738FC /* Lens_Integration_SDK */ = {
+		F556F28D305400C1006BE7DC /* Lens_Integration_SDK */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = F556F28C305400C1006BE7DC /* XCRemoteSwiftPackageReference "LensCustomerSDK" */;
 			productName = Lens_Integration_SDK;
 		};
 /* End XCSwiftPackageProductDependency section */
