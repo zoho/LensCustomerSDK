@@ -3,3 +3,4 @@ Sample_SDK.xcworkspace
 Example/Pods
 xcschememanagement.plist
 /.build
+/Example/build
