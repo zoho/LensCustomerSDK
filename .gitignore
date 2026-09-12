@@ -4,3 +4,5 @@ Example/Pods
 xcschememanagement.plist
 /.build
 /Example/build
+Example/Sample_SDK.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+Example/Sample_SDK.xcodeproj/project.xcworkspace/xcuserdata/jem-8413.xcuserdatad/UserInterfaceState.xcuserstate
